@@ -4,12 +4,13 @@
 
 ## Quickstart
 
-* [Get Started with Inference](quickstart/get-started-with-inference.md)
+* [Setting Up](quickstart/setting-up.md)
 * [OpenAI SDK](quickstart/openai-sdk.md)
 
 ## Examples
 
-* [Model options](examples/model-options.md)
+* [API Reference](examples/api-reference.md)
+* [Parameters](examples/parameters.md)
 * [Models comparsion](examples/models-comparsion.md)
 * [Using Assistants & Threads](examples/using-assistants-and-threads.md)
 
@@ -19,8 +20,8 @@
   * [Image Models](api-overview/models/image-models.md)
   * [Code Models](api-overview/models/code-models.md)
   * [Chat Models](api-overview/models/chat-models.md)
+  * [Speech Models](api-overview/models/speech-models.md)
   * [Model Request](api-overview/models/model-request.md)
-* [API Key Management](api-overview/api-key-management.md)
 * [Assistants](api-overview/assistants.md)
 * [Threads](api-overview/threads/README.md)
   * [Runs](api-overview/threads/runs.md)
