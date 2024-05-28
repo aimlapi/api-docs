@@ -1,0 +1,657 @@
+---
+openapi: 3.0.0
+info:
+  title: AI/ML API
+  description: 'The AI/ML API. Please see https://docs.aimlapi.com/'
+  version: '1.0'
+  contact: {}
+tags: []
+security:
+  - bearerAuth: []
+servers:
+  - url: https://api.aimlapi.com
+paths:
+  '/chat/completions':
+    post:
+      operationId: ServiceController_chatCompletion
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/ChatCompletionDTO'
+      responses:
+        '201':
+          description: ''
+  '/images/generations':
+    post:
+      operationId: ServiceController_generateImage
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/GenerateImageDTO'
+      responses:
+        '201':
+          description: ''
+  '/images/generations/with-url':
+    post:
+      operationId: ServiceController_generateImageWithURL
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/GenerateImageDTO'
+      responses:
+        '201':
+          description: ''
+  '/embeddings':
+    post:
+      operationId: ServiceController_createEmbeddings
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateEmbeddingsDTO'
+      responses:
+        '201':
+          description: ''
+  '/api-keys':
+    post:
+      operationId: ServiceController_createAPIKey
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateAPIKeyDTO'
+      responses:
+        '201':
+          description: ''
+    get:
+      operationId: ServiceController_getAPIKeys
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  '/api-keys/{id}/disable':
+    put:
+      operationId: ServiceController_disableAPIKey
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+  '/api-keys/{id}/enable':
+    put:
+      operationId: ServiceController_enableAPIKey
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+  '/models':
+    get:
+      operationId: ModelsController_getModels
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  '/assistants':
+    post:
+      operationId: AssistantsController_createAssistant
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateAssistantDTO'
+      responses:
+        '201':
+          description: ''
+    get:
+      operationId: AssistantsController_getAssistants
+      parameters:
+        - name: limit
+          required: false
+          in: query
+          schema:
+            type: number
+        - name: order
+          required: false
+          in: query
+          schema:
+            type: string
+        - name: before
+          required: false
+          in: query
+          schema:
+            type: string
+        - name: after
+          required: false
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  '/assistants/{assistantId}':
+    get:
+      operationId: AssistantsController_getAssistant
+      parameters:
+        - name: assistantId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: AssistantsController_updateAssistant
+      parameters:
+        - name: assistantId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/UpdateAssistantDTO'
+      responses:
+        '201':
+          description: ''
+    delete:
+      operationId: AssistantsController_deleteAssistant
+      parameters:
+        - name: assistantId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  '/threads/{threadId}':
+    get:
+      operationId: ThreadsController_getThread
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: ThreadsController_updateThread
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/UpdateThreadDTO'
+      responses:
+        '201':
+          description: ''
+    delete:
+      operationId: ThreadsController_deleteThread
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  '/threads':
+    post:
+      operationId: ThreadsController_createThread
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateThreadDTO'
+      responses:
+        '201':
+          description: ''
+  '/threads/{threadId}/runs':
+    get:
+      operationId: RunsController_getThreadRuns
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: RunsController_createRun
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateThreadRunDTO'
+      responses:
+        '201':
+          description: ''
+  '/threads/{threadId}/runs/{runId}':
+    get:
+      operationId: RunsController_getThreadRun
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: runId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: RunsController_updateThreadRun
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: runId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/UpdateThreadRunDTO'
+      responses:
+        '201':
+          description: ''
+  '/threads/{threadId}/messages':
+    get:
+      operationId: ThreadMessagesController_getThreadMessages
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: limit
+          required: false
+          in: query
+          schema:
+            type: number
+        - name: order
+          required: false
+          in: query
+          schema:
+            type: string
+        - name: before
+          required: false
+          in: query
+          schema:
+            type: string
+        - name: after
+          required: false
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: ThreadMessagesController_createThreadMessage
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CreateThreadMessageDTO'
+      responses:
+        '201':
+          description: ''
+  '/threads/{threadId}/messages/{messageId}':
+    get:
+      operationId: ThreadMessagesController_getThreadMessage
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: messageId
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    post:
+      operationId: ThreadMessagesController_updateThreadMessage
+      parameters:
+        - name: threadId
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: messageId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/UpdateThreadMessageDTO'
+      responses:
+        '201':
+          description: ''
+  '/stt':
+    post:
+      operationId: VoiceModelsController_speechToText
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/SpeechToTextDTO'
+      responses:
+        '201':
+          description: ''
+  '/tts':
+    post:
+      operationId: VoiceModelsController_textToSpeech
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/TextToSpeechDTO'
+      responses:
+        '201':
+          description: ''
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: 'bearer'
+  schemas:
+    GenerateImageDTO:
+      type: object
+      properties:
+        model:
+          type: string
+        prompt:
+          type: string
+        'n':
+          type: number
+        steps:
+          type: number
+        size:
+          type: string
+      required:
+        - model
+        - prompt
+    ChatCompletionDTO:
+      type: object
+      properties:
+        model:
+          type: string
+        messages:
+          type: array
+          items:
+            type: string
+        max_tokens:
+          type: number
+        stream:
+          type: boolean
+        frequency_penalty:
+          type: number
+        top_p:
+          type: number
+        temperature:
+          type: number
+      required:
+        - model
+        - messages
+    CreateEmbeddingsDTO:
+      type: object
+      properties:
+        model:
+          type: string
+        input:
+          type: string
+        encoding_format:
+          type: string
+      required:
+        - model
+        - input
+        - encoding_format
+    CreateAPIKeyDTO:
+      type: object
+      properties: {}
+    CreateAssistantDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        model:
+          type: string
+        instructions:
+          type: string
+        metadata:
+          type: object
+      required:
+        - name
+        - description
+        - model
+    UpdateAssistantDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        model:
+          type: string
+        instructions:
+          type: string
+        metadata:
+          type: object
+    CreateThreadDTO:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            type: string
+        metadata:
+          type: object
+      required:
+        - messages
+    UpdateThreadDTO:
+      type: object
+      properties:
+        metadata:
+          type: object
+    CreateThreadRunDTO:
+      type: object
+      properties:
+        assistant_id:
+          type: string
+        stream:
+          type: boolean
+        metadata:
+          type: object
+      required:
+        - assistant_id
+    UpdateThreadRunDTO:
+      type: object
+      properties:
+        metadata:
+          type: object
+    CreateThreadMessageDTO:
+      type: object
+      properties:
+        role:
+          type: string
+        content:
+          type: string
+        metadata:
+          type: object
+      required:
+        - role
+        - content
+    UpdateThreadMessageDTO:
+      type: object
+      properties:
+        metadata:
+          type: object
+    SpeechToTextDTO:
+      type: object
+      properties:
+        model:
+          type: string
+        url:
+          type: string
+        audio:
+          type: object
+        custom_intent:
+          type: object
+        custom_topic:
+          type: object
+        custom_intent_mode:
+          type: string
+        custom_topic_mode:
+          type: string
+        detect_language:
+          type: boolean
+        detect_entities:
+          type: boolean
+        detect_topics:
+          type: boolean
+        diarize:
+          type: boolean
+        dictation:
+          type: boolean
+        diarize_version:
+          type: string
+        extra:
+          type: string
+        filler_words:
+          type: boolean
+        intents:
+          type: boolean
+        keywords:
+          type: string
+        language:
+          type: string
+        measurements:
+          type: boolean
+        multi_channel:
+          type: boolean
+        numerals:
+          type: boolean
+        paragraphs:
+          type: boolean
+        profanity_filter:
+          type: boolean
+        punctuate:
+          type: boolean
+        search:
+          type: string
+        sentiment:
+          type: boolean
+        smart_format:
+          type: boolean
+        summarize:
+          type: string
+        tag:
+          type: array
+          items:
+            type: string
+        topics:
+          type: boolean
+        utterances:
+          type: boolean
+        utt_split:
+          type: number
+      required:
+        - model
+    TextToSpeechDTO:
+      type: object
+      properties:
+        model:
+          type: string
+        text:
+          type: string
+        container:
+          type: string
+        encoding:
+          type: string
+        sample_rate:
+          type: string
+      required:
+        - model
+        - text
+
