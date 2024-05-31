@@ -1,6 +1,6 @@
 # Introduction
 
-delcome to the AI/ML API!
+Welcome to the AI/ML API!
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/openai-sdk.md">openai-sdk.md</a></td><td></td><td><a href=".gitbook/assets/1icon.png">1icon.png</a></td></tr><tr><td><a data-mention href="examples/api-reference.md">api-reference.md</a></td><td><a data-mention href="examples/parameters.md">parameters.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td></tr><tr><td><a data-mention href="api-overview/models/">models</a></td><td><a data-mention href="api-overview/chat.md">chat.md</a></td><td><a data-mention href="api-overview/image.md">image.md</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td></tr></tbody></table>
 
