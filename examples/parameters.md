@@ -4,7 +4,7 @@ description: >-
   requests
 ---
 
-# Model options
+# Parameters
 
 ### **Maximum Tokens**
 
@@ -72,15 +72,3 @@ repetition_penalty = 1.2  # Applies a penalty to discourage repetition.
 
 ```
 
-### **Logit Bias**
-
-Logit bias allows you to increase or decrease the likelihood of specific tokens appearing in the output. This advanced feature can help guide the model's output more granularly.
-
-#### **Example Usage:**
-
-```python
-logit_bias = {"token_index": 2.5}  # Increases the likelihood of the token at the specified index.
-
-```
-
-By adjusting these parameters, you can tailor the model's behavior to better suit your application's needs, whether you're after brevity, creativity, or precision in the generated output.
