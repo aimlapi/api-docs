@@ -1,16 +1,21 @@
 # Setting Up
 
+**Generating an API Key**
 
+To use the AI/ML API, you need to create an account and generate an API key. Follow these steps:
 
-* Visit [AI/ML API](https://aimlapi.com/app) and create an account&#x20;
-* **Generate an API Key**: Obtain your API key from the account dashboard.
-* **Configure Base URL**: Set the base URL for API requests:
+1. [**Create an Account**](https://aimlapi.com/app/sign-up)**:** Visit the AI/ML API website and create an account.
+2. [**Generate an API Key**](https://aimlapi.com/app/keys)**:** After logging in, navigate to your account dashboard and generate your API key.
 
-```
+**Configure Base URL**
+
+Set the base URL for API requests as follows:
+
+```arduino
 https://api.aimlapi.com
 ```
 
-## **Making Your First API Call**
+**Making Your First API Call**
 
 **Example in Python**
 
@@ -62,3 +67,17 @@ const openai = new OpenAI({
   console.log("AI/ML API:\n", chatCompletion.choices[0].message.content);
 })();
 ```
+
+**Versioned URLs**
+
+The AI/ML API supports both versioned and non-versioned URLs, providing flexibility in your API requests. You can use either of the following formats:
+
+**Non-versioned URL:**
+
+`https://api.aimlapi.com/chat/completions`
+
+**Versioned URL:**
+
+`https://api.aimlapi.com/v1/chat/completions`
+
+Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
