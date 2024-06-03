@@ -9,18 +9,31 @@
 
 **Example Request in Python and JS**
 
-<pre class="language-python"><code class="lang-python"><strong>import openai
-</strong>
-openai.api_key = "YOUR_API_KEY"
-openai.api_base = "https://api.aimlapi.com/"
+```python
+from openai import OpenAI
 
-response = openai.Completion.create(
-    model="mistralai/Mistral-7B-Instruct-v0.2",
-    prompt="Tell me a joke",
-    max_tokens=50
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://api.aimlapi.com",
 )
-print(response.choices[0].text)
-</code></pre>
+
+response = client.chat.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    messages=[
+        {
+            "role": "system",
+            "content": "You are an AI assistant who knows everything.",
+        },
+        {
+            "role": "user",
+            "content": "Tell me, why is the sky blue?"
+        },
+    ],
+)
+
+message = response.choices[0].message.content
+print(f"Assistant: {message}")
+```
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>const { Configuration, OpenAIApi } = require("openai");
 </strong>
@@ -51,19 +64,31 @@ run();
 
 ```python
 import requests
+import base64
 
-url = "https://api.aimlapi.com/images/generate"
-headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
-    "Content-Type": "application/json"
-}
-payload = {
-    "model": "dalle-mini",
-    "prompt": "A sunset over a mountain range"
-}
-response = requests.post(url, json=payload, headers=headers)
-with open("output.png", "wb") as file:
-    file.write(response.content)
+
+def main():
+    headers = {
+        "Authorization": "Bearer YOUR_API_KEY",
+    }
+
+    payload = {
+        "prompt": "Hyperrealistic art featuring a cat in costume.",
+        "model": "stabilityai/stable-diffusion-2-1",
+    }
+
+    response = requests.post(
+        "https://api.aimlapi.com/images/generations", headers=headers, json=payload
+    )
+
+    image_base64 = response.json()["output"]["choices"][0]["image_base64"]
+    image_data = base64.b64decode(image_base64)
+
+    with open("./image.png", "wb") as file:
+        file.write(image_data)
+
+
+main()
 ```
 
 ```javascript
@@ -129,7 +154,7 @@ headers = {
     "Content-Type": "application/json"
 }
 payload = {
-    "model": "g1_nova-2-general",
+    "model": "#g1_nova-2-general",
     "url": "https://audio-samples.github.io/samples/mp3/blizzard_unconditional/sample-0.mp3"
 }
 response = requests.post(url, json=payload, headers=headers)
@@ -175,7 +200,7 @@ headers = {
     "Content-Type": "application/json"
 }
 payload = {
-    "model": "g1_aura-asteria-en",
+    "model": "#g1_aura-asteria-en",
     "text": "Hi! I'm your friendly assistant."
 }
 response = requests.post(url, json=payload, headers=headers)
