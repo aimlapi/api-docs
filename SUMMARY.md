@@ -5,7 +5,7 @@
 ## Quickstart
 
 * [Setting Up](quickstart/setting-up.md)
-* [OpenAI SDK](quickstart/openai-sdk.md)
+* [Supported SDKs](quickstart/supported-sdks.md)
 
 ## Examples
 
@@ -22,10 +22,10 @@
   * [Chat Models](api-overview/models/chat-models.md)
   * [Speech Models](api-overview/models/speech-models.md)
   * [Model Request](api-overview/models/model-request.md)
-* [Assistants](api-overview/assistants.md)
-* [Threads](api-overview/threads/README.md)
-  * [Runs](api-overview/threads/runs.md)
-  * [Messages](api-overview/threads/messages.md)
+* [Managing Assistants and Threads](api-overview/managing-assistants-and-threads/README.md)
+  * [Threads](api-overview/managing-assistants-and-threads/threads/README.md)
+    * [Runs](api-overview/managing-assistants-and-threads/threads/runs.md)
+    * [Messages](api-overview/managing-assistants-and-threads/threads/messages.md)
 * [Chat](api-overview/chat.md)
 * [Image](api-overview/image.md)
 * [Speech](api-overview/speech.md)

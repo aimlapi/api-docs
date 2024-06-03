@@ -8,7 +8,7 @@ description: >-
 
 You can refer to the [Models](https://aimlapi.com/models) documentation to understand what models are available and the differences between them. It also possible to list all LLM models through API.
 
-### List all LLM models
+### List all available models
 
 {% swagger src="../../.gitbook/assets/aimlapi.yaml" path="/models" method="get" %}
 [aimlapi.yaml](../../.gitbook/assets/aimlapi.yaml)

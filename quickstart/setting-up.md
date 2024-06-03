@@ -74,10 +74,14 @@ The AI/ML API supports both versioned and non-versioned URLs, providing flexibil
 
 **Non-versioned URL:**
 
-`https://api.aimlapi.com/chat/completions`
+```
+https://api.aimlapi.com/chat/completions
+```
 
 **Versioned URL:**
 
-`https://api.aimlapi.com/v1/chat/completions`
+```
+https://api.aimlapi.com/v1/chat/completions
+```
 
 Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
