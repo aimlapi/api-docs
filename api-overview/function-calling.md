@@ -12,7 +12,7 @@ When using the API, you can define functions that the model can choose to call, 
 
 The latest models (gpt-4o, gpt-4-turbo, and gpt-3.5-turbo) are designed to detect when a function should be called based on the input and to produce JSON that closely matches the function signature. However, this functionality comes with potential risks. We strongly recommend implementing user confirmation steps before performing actions that could impact the real world (e.g., sending an email, posting online, making a purchase).
 
-This guide focuses on function calling with the Chat Completions API. For details on function calling in the Assistants API, please see the Assistants Tools page.
+This guide focuses on function calling with the Chat Completions API.
 
 #### Common Use Cases
 
