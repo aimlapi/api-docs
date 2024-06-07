@@ -27,6 +27,7 @@
     * [Runs](api-overview/managing-assistants-and-threads/threads/runs.md)
     * [Messages](api-overview/managing-assistants-and-threads/threads/messages.md)
 * [Function calling](api-overview/function-calling.md)
+* [Embeddings](api-overview/embeddings.md)
 * [Chat](api-overview/chat.md)
 * [Image](api-overview/image.md)
 * [Speech](api-overview/speech.md)
