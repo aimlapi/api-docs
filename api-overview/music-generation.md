@@ -68,7 +68,7 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 
 ```
 
-## **Generate Custom Mode Music**
+## **Generate Music in Custom Mode**
 
 **Endpoint**: `POST /custom_generate`
 
@@ -165,7 +165,7 @@ print(response.content)
 ```javascript
 const axios = require('axios');
 
-const url = 'https://api.aimlapi.com/api/extend_audio';
+const url = 'https://api.aimlapi.com/extend_audio';
 const headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
