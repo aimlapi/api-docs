@@ -17,7 +17,7 @@ description: Music Generation with Suno v3.5
 
 **Description**: Generate music based on a given text prompt using the Suno v3.5 model. Available models include `chirp-v3-5` and `chirp-v3-0`. This endpoint will automatically fill in the lyrics.
 
-* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 10 credits.
+* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 15000 AI/ML Tokens.
 * **wait\_audio**:
   * By default (`false`), the request operates in background mode, returning only audio task information. You must call the get API to retrieve detailed audio information.
   * If set to `true`, it simulates synchronous mode, waiting up to 100 seconds for audio generation, and directly returns the audio link and other information. Recommended for use in GPTs and other agents.
@@ -74,7 +74,7 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 
 **Description**: Generate music with custom settings using the Suno v3.5 model. Available models include `chirp-v3-5` and `chirp-v3-0`.
 
-* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 10 credits.
+* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 15000 AI/ML Tokens.
 *   **wait\_audio**:
 
     * By default (`false`), the request operates in background mode, returning only audio task information. You must call the get API to retrieve detailed audio information.
