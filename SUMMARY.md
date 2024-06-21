@@ -21,6 +21,7 @@
   * [Image Models](api-overview/models/image-models.md)
   * [Code Models](api-overview/models/code-models.md)
   * [Chat Models](api-overview/models/chat-models.md)
+  * [Vision Modles](api-overview/models/vision-modles.md)
   * [Speech Models](api-overview/models/speech-models.md)
   * [Model Request](api-overview/models/model-request.md)
 * [Managing Assistants and Threads](api-overview/managing-assistants-and-threads/README.md)
