@@ -87,7 +87,7 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 ```python
 import requests
 
-url = "https://api.aimlapi.com/generate/custom_mode"
+url = "https://api.aimlapi.com/generate/custom-mode"
 headers = {
     "Authorization": "Bearer YOUR_API_KEY",
     "Content-Type": "application/json"
@@ -109,7 +109,7 @@ print(response.content)
 ```javascript
 const axios = require('axios');
 
-const url = 'https://api.aimlapi.com/custom_generate';
+const url = 'https://api.aimlapi.com/generate/custom-mode';
 const headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
@@ -143,7 +143,7 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 ```python
 import requests
 
-url = "https://api.aimlapi.com/extend_audio"
+url = "https://api.aimlapi.com/extend"
 headers = {
     "Authorization": "Bearer YOUR_API_KEY",
     "Content-Type": "application/json"
