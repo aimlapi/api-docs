@@ -132,6 +132,22 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 
 ```
 
+In order to generate music with your own lyrics use \[Verse], \[Chorus], \[Bridge] indicators in the prompt as shown in the example below
+
+{% code overflow="wrap" %}
+```json
+
+{
+    "prompt": "[Verse 1]\nCruel flames of war engulf this land\nBattlefields filled with death and dread\nInnocent souls in darkness, they rest\nMy heart trembles in this silent test\n\n[Verse 2]\nPeople weep for loved ones lost\nBattered bodies bear the cost\nSeeking peace and hope once known\nOur grief transforms to hearts of stone\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Bridge]\nThrough the ashes, we will rise\nHand in hand, towards peaceful skies\nNo more sorrow, no more pain\nTogether, we'll break these chains\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Outro]\nIn unity, our strength will grow\nA brighter future, we'll soon know\nFrom the ruins, hope will spring\nA new dawn, we'll together bring",
+    "tags": "pop metal male melancholic",
+    "title": "Silent Battlefield",
+    "make_instrumental": false,
+    "wait_audio": true
+}
+
+```
+{% endcode %}
+
 ## **Extend Audio Length**
 
 **Endpoint**: `POST /extend_audio`
