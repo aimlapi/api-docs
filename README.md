@@ -2,7 +2,7 @@
 
 Welcome to the AI/ML API!
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="examples/api-reference.md">api-reference.md</a></td><td><a data-mention href="examples/parameters.md">parameters.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/models/">models</a></td><td><a data-mention href="api-overview/chat.md">chat.md</a></td><td><a data-mention href="api-overview/image.md">image.md</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="api-reference/examples.md">examples.md</a></td><td><a data-mention href="api-reference/parameters.md">parameters.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/models/">models</a></td><td><a data-mention href="api-overview/chat.md">chat.md</a></td><td><a data-mention href="api-overview/image.md">image.md</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
 **Overview of the API**
 
@@ -24,10 +24,29 @@ To start using the AI/ML API, follow the Quickstart guide to set up your environ
 
 To use the AI/ML API, you need an API key. Generate and manage your API keys from your account dashboard.
 
-**Example of Authentication**
+**Sending your first request**
 
 Include your API key in the `Authorization` header as a Bearer token:
 
 ```http
 Authorization: Bearer YOUR_API_KEY
 ```
+
+```javascript
+curl --location --globoff 'api.aimlapi.com/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_API_KEY' \
+--data '{
+    "model": "gpt-3.5-turbo",
+    "messages": [
+        {
+            "role": "user",
+            "content": "What's API?"
+        },
+    ],
+    "max_tokens": 512,
+    "stream": false,
+    
+}'
+```
+

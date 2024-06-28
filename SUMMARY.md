@@ -7,12 +7,12 @@
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
-## Examples
+## API Reference
 
-* [API Reference](examples/api-reference.md)
-* [Parameters](examples/parameters.md)
-* [Models comparsion](examples/models-comparsion.md)
-* [Using Assistants & Threads](examples/using-assistants-and-threads.md)
+* [Examples](api-reference/examples.md)
+* [Parameters](api-reference/parameters.md)
+* [Models comparsion](api-reference/models-comparsion.md)
+* [Using Assistants & Threads](api-reference/using-assistants-and-threads.md)
 
 ## API Overview
 
@@ -21,7 +21,7 @@
   * [Image Models](api-overview/models/image-models.md)
   * [Code Models](api-overview/models/code-models.md)
   * [Chat Models](api-overview/models/chat-models.md)
-  * [Vision Modles](api-overview/models/vision-modles.md)
+  * [Vision Models](api-overview/models/vision-models.md)
   * [Speech Models](api-overview/models/speech-models.md)
   * [Model Request](api-overview/models/model-request.md)
 * [Managing Assistants and Threads](api-overview/managing-assistants-and-threads/README.md)

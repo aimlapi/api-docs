@@ -1,4 +1,4 @@
-# API Reference
+# Examples
 
 **Endpoints**
 
@@ -9,6 +9,8 @@
 
 **Example Request in Python and JS**
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 from openai import OpenAI
 
@@ -34,7 +36,9 @@ response = client.chat.completions.create(
 message = response.choices[0].message.content
 print(f"Assistant: {message}")
 ```
+{% endtab %}
 
+{% tab title="JS" %}
 <pre class="language-javascript"><code class="lang-javascript"><strong>const { Configuration, OpenAIApi } = require("openai");
 </strong>
 const configuration = new Configuration({
@@ -54,6 +58,8 @@ async function run() {
 
 run();
 </code></pre>
+{% endtab %}
+{% endtabs %}
 
 #### Image Generation
 
@@ -62,6 +68,8 @@ run();
 
 **Example Request in Python and JS**
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import requests
 import base64
@@ -90,7 +98,9 @@ def main():
 
 main()
 ```
+{% endtab %}
 
+{% tab title="JS" %}
 ```javascript
 const axios = require('axios');
 const fs = require('fs');
@@ -113,14 +123,34 @@ axios.post(url, payload, { headers: headers })
     console.error(error);
   });
 ```
+{% endtab %}
+{% endtabs %}
 
 **Speech to Text**
 
 * Endpoint: `POST api.aimlapi.com/stt`
 * Description: Convert audio files to text.
 
-Example Request (JS):
+{% tabs %}
+{% tab title="Python" %}
+```python
+import requests
 
+url = "https://api.aimlapi.com/stt"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "model": "#g1_nova-2-general",
+    "url": "https://audio-samples.github.io/samples/mp3/blizzard_unconditional/sample-0.mp3"
+}
+response = requests.post(url, json=payload, headers=headers)
+print(response.json())
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
 ```javascript
 const axios = require('axios');
 
@@ -142,24 +172,8 @@ axios.post(url, payload, { headers: headers })
     console.error(error);
   });
 ```
-
-Example Request (Python):
-
-```python
-import requests
-
-url = "https://api.aimlapi.com/stt"
-headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
-    "Content-Type": "application/json"
-}
-payload = {
-    "model": "#g1_nova-2-general",
-    "url": "https://audio-samples.github.io/samples/mp3/blizzard_unconditional/sample-0.mp3"
-}
-response = requests.post(url, json=payload, headers=headers)
-print(response.json())
-```
+{% endtab %}
+{% endtabs %}
 
 **Text to Speech**
 
@@ -167,6 +181,26 @@ print(response.json())
 * Description: Convert text to audio.
 * Example Request (JS):
 
+{% tabs %}
+{% tab title="Python" %}
+<pre class="language-python"><code class="lang-python"><strong>import requests
+</strong>
+url = "https://api.aimlapi.com/tts"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "model": "#g1_aura-asteria-en",
+    "text": "Hi! I'm your friendly assistant."
+}
+response = requests.post(url, json=payload, headers=headers)
+with open("output.wav", "wb") as file:
+    file.write(response.content)
+</code></pre>
+{% endtab %}
+
+{% tab title="JS" %}
 ```javascript
 const axios = require('axios');
 const fs = require('fs');
@@ -189,24 +223,10 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
     console.error(error);
   });
 ```
+{% endtab %}
+{% endtabs %}
 
-Example Request (Python):
 
-<pre class="language-python"><code class="lang-python"><strong>import requests
-</strong>
-url = "https://api.aimlapi.com/tts"
-headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
-    "Content-Type": "application/json"
-}
-payload = {
-    "model": "#g1_aura-asteria-en",
-    "text": "Hi! I'm your friendly assistant."
-}
-response = requests.post(url, json=payload, headers=headers)
-with open("output.wav", "wb") as file:
-    file.write(response.content)
-</code></pre>
 
 **Response Structure**
 
@@ -229,7 +249,7 @@ Example Response (Chat Completion):
   "model": "mistralai/Mistral-7B-Instruct-v0.2",
   "choices": [
     {
-      "text": "\n\nSure! Here's a joke for you: Why don't scientists trust atoms? Because they make up everything!",
+          "text": "\n\nSure! Here's a joke for you: Why don't scientists trust atoms? Because they make up everything!",
       "index": 0,
       "logprobs": null,
       "finish_reason": "length"

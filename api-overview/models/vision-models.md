@@ -5,7 +5,7 @@ description: >-
   models.
 ---
 
-# Vision Modles
+# Vision Models
 
 #### Key Features
 
@@ -16,6 +16,8 @@ description: >-
 #### Quick Start
 
 Images can be provided to the model in two main ways: by passing an image URL or by passing the base64 encoded image directly in the request.
+
+**Currently we support `gpt-4o` vision and `gpt-4-turbo` vision.**&#x20;
 
 **Example: What's in this image?**
 
