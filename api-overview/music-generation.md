@@ -148,62 +148,6 @@ In order to generate music with your own lyrics use \[Verse], \[Chorus], \[Bridg
 ```
 {% endcode %}
 
-## **Extend Audio Length**
-
-**Endpoint**: `POST /extend_audio`
-
-**Description**: Extend the length of an existing audio file using the Suno v3.5 model.
-
-**Example Request (Python)**
-
-```python
-import requests
-
-url = "https://api.aimlapi.com/extend"
-headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
-    "Content-Type": "application/json"
-}
-payload = {
-    "audio_id": "ID",
-    "prompt": "Continue the relaxing ambient music",
-    "continue_at": "109.96",
-    "title": "Extended Ambient Track",
-    "tags": "ambient, relaxing"
-}
-response = requests.post(url, json=payload, headers=headers)
-print(response.content)
-
-```
-
-**Example Request (Node.js)**
-
-```javascript
-const axios = require('axios');
-
-const url = 'https://api.aimlapi.com/extend';
-const headers = {
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
-};
-const payload = {
-  'audio_id': 'ID',
-  'prompt': 'Continue the relaxing ambient music',
-  'continue_at': '109.96',
-  'title': 'Extended Ambient Track',
-  'tags': 'ambient, relaxing'
-};
-
-axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
-
-```
-
 ## Fetch Music Generation Details
 
 **Endpoint**: `GET /`
