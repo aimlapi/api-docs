@@ -150,7 +150,7 @@ print(response.json())
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="JS" %}
 ```javascript
 const axios = require('axios');
 

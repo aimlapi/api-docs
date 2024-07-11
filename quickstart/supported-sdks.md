@@ -2,7 +2,7 @@
 description: OpenAI API structure support
 ---
 
-# OpenAI SDK
+# Supported SDKs
 
 AI/ML API fully supports the OpenAI API structure, ensuring easy integration into systems already using OpenAI's standards.
 
@@ -15,17 +15,17 @@ import openai
 system_content = "You are a travel agent. Be descriptive and helpful."
 user_content = "Tell me about San Francisco"
 client = openai.OpenAI(
-    api_key="{{token}}",
-    base_url="{{baseUrl}}",
+    api_key="YOUR API TOKEN",
+    base_url="https://api.aimlapi.com/",
     )
 chat_completion = client.chat.completions.create(
-    model="{{llmModel}}",
+    model="your-model-string-here",
     messages=[
         {"role": "system", "content": system_content},
         {"role": "user", "content": user_content},
     ],
     temperature=0.7,
-    max_tokens=128,
+    max_tokens=512,
 )
 response = chat_completion.choices[0].message.content
 print("AI/ML API:\n", response)
@@ -41,10 +41,11 @@ To enable streaming of responses, simply add `stream=True` to the chat completio
 stream = client.chat.completions.create(
     model="your-model-string-here",
     messages=[
-        # ... (your messages)
+        {"role": "system", "content": system_content},
+        {"role": "user", "content": user_content},
     ],
     stream=True,
-    max_tokens=1024,
+    max_tokens=512,
 )
 for chunk in stream:
     print(chunk.choices[0].message.content or "", end="", flush=True)
@@ -58,8 +59,8 @@ If you're using Node.js, you can similarly switch to AI/ML API by updating the a
 ```javascript
 const { OpenAI } = require("openai");
 const openai = new OpenAI({
-  apiKey: "{{token}}",
-  baseUr;: "{{baseUrl}}",
+  apiKey: "YOUR API TOKEN",
+  baseUr;: "https://api.aimlapi.com/",
 });
 // ... (your async function to run the code)
 
@@ -83,7 +84,7 @@ const stream = await openai.chat.completions.create({
         "content": "Tell me about San Francisco"
       }
     ],
-    max_tokens: 1024,
+    max_tokens: 512,
     stream: true,
 });
 stream.on('data', (data) => {
