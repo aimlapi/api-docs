@@ -2,13 +2,13 @@
 
 ## Features
 
-* **Document Processing:** Handle text-based tasks efficiently.
-* **Function Calling:** Utilize tools for specific tasks like getting weather information.
+* **Text completions:** Build advanced chat bots or text processors
+* **Function Calling:** Utilize tools for specific tasks and API calling.
 * **Vision Tasks:**  Process and analyze images.
 
 ## Example Requests
 
-**Document Processing and Function Calling**
+**Function Calling**
 
 To process text and use function calling, follow the examples below:
 
@@ -90,8 +90,6 @@ model="claude-3-5-sonnet-20240620",
     ]
 ```
 
-
-
 ## Vision Tasks
 
 **Example Request: Image Analysis**
@@ -167,11 +165,7 @@ payload = {
       "role": "user",
       "content": "What is the weather like in San Francisco?"
     }
-  ],API Endpoints
-
-    Endpoint for Messages: https://api.aimlapi.com/messages
-
-
+  ]
 ```
 
 ## Example Response
@@ -204,7 +198,10 @@ The responses from the AI/ML API for Anthropic models will typically include the
 
 ## API Endpoints
 
-* **Endpoint for Messages:** `https://api.aimlapi.com/messages  and https://api.aimlapi.com/v1/messages`
+**Endpoint for Messages:**&#x20;
+
+* `https://api.aimlapi.com/messages`
+* `https://api.aimlapi.com/v1/messages`
 
 ## Response Structure
 
