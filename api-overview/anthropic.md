@@ -86,11 +86,16 @@ print(response.json())
 
 ```
 
-#### Vision Tasks
+## Vision Tasks
 
 **Example Request: Image Analysis**
 
 **Please note that API only support BASE64 String as Image input.**&#x20;
+
+```
+possible media types:
+'image/jpeg' 'image/png' 'image/gif' 'image/webp'
+```
 
 To process and analyze images, use the following example:
 
