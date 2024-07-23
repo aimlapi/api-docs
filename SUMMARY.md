@@ -16,6 +16,7 @@
 
 ## API Overview
 
+* [Anthropic](api-overview/anthropic.md)
 * [Music Generation](api-overview/music-generation.md)
 * [Models](api-overview/models/README.md)
   * [Image Models](api-overview/models/image-models.md)
