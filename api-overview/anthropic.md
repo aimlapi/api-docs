@@ -6,13 +6,6 @@
 * **Function Calling:** Utilize tools for specific tasks like getting weather information.
 * **Vision Tasks:**  Process and analyze images.
 
-## Quickstart
-
-**Get Started with Anthropic Models**
-
-1. **Register for an Account:** Sign up to generate your API key and start with free trial tokens.
-2. **Run Your First Model:**
-
 ## Example Requests
 
 **Document Processing and Function Calling**
@@ -85,6 +78,19 @@ response = requests.post(url, json=payload, headers=headers)
 print(response.json())
 
 ```
+
+**Pro tip: you can assign a system role to the Claude models by using "system" parameter outside of messages array.**&#x20;
+
+```json
+model="claude-3-5-sonnet-20240620",
+    max_tokens=2048,
+    system="You are a seasoned data scientist at a Fortune 500 company.", # <-- role prompt
+    messages=[
+        {"role": "user", "content": "Analyze this dataset for anomalies: <dataset>{{DATASET}}</dataset>"}
+    ]
+```
+
+
 
 ## Vision Tasks
 
