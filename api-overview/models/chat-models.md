@@ -23,6 +23,9 @@
 | Meta                   | Code Llama Instruct (70B)                | codellama/CodeLlama-70b-Instruct-hf            | 4096           |
 | Meta                   | Code Llama Instruct (7B)                 | codellama/CodeLlama-7b-Instruct-hf             | 16384          |
 | Meta                   | LLaMA-2 Chat (70B)                       | meta-llama/Llama-2-70b-chat-hf                 | 4096           |
+| Meta                   | LLaMA-3.1 Chat (405B)                    | meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo  | 128000         |
+| Meta                   | LLaMA-3.1 Chat (70B)                     | meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo   | 128000         |
+| Meta                   | LLaMA-3.1 Chat (8B)                      | meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo    | 128000         |
 | Meta                   | LLaMA-2 Chat (13B)                       | meta-llama/Llama-2-13b-chat-hf                 | 4096           |
 | Meta                   | LLaMA-2 Chat (7B)                        | meta-llama/Llama-2-7b-chat-hf                  | 4096           |
 | Mistralai              | Mistral (7B) Instruct                    | mistralai/Mistral-7B-Instruct-v0.1             | 4096           |
@@ -70,6 +73,7 @@
 | OpenAI                 | GPT-3.5 Turbo 0613                       | gpt-3.5-turbo-0613                             | 4096           |
 | OpenAI                 | GPT-3.5 Turbo 16K 0613                   | gpt-3.5-turbo-16k-0613                         | 16384          |
 | OpenAI                 | GPT-4o                                   | gpt-4o                                         | 8192           |
+| OpenAI                 | GPT-4o-mini                              | gpt-4o-mini                                    | 128000         |
 | Anthropic              | Claude 3 Opus (20240229)                 | claude-3-opus-20240229                         | 8192           |
 | Anthropic              | Claude 3 Sonnet (20240229)               | claude-3-sonnet-20240229                       | 8192           |
 | Anthropic              | Claude 3 Haiku (20240307)                | claude-3-haiku-20240307                        | 8192           |
