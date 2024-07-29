@@ -23,7 +23,7 @@
 | Meta                   | Code Llama Instruct (70B)                | codellama/CodeLlama-70b-Instruct-hf            | 4096           |
 | Meta                   | Code Llama Instruct (7B)                 | codellama/CodeLlama-7b-Instruct-hf             | 16384          |
 | Meta                   | LLaMA-2 Chat (70B)                       | meta-llama/Llama-2-70b-chat-hf                 | 4096           |
-| Meta                   | LLaMA-3.1 Chat (405B)                    | meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo  | 128000         |
+| Meta                   | LLaMA-3.1 Chat (405B)                    | meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo  | 4096           |
 | Meta                   | LLaMA-3.1 Chat (70B)                     | meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo   | 128000         |
 | Meta                   | LLaMA-3.1 Chat (8B)                      | meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo    | 128000         |
 | Meta                   | LLaMA-2 Chat (13B)                       | meta-llama/Llama-2-13b-chat-hf                 | 4096           |
