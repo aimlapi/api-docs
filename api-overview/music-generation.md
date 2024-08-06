@@ -74,7 +74,7 @@ axios.post(url, payload, { headers: headers, responseType: 'arraybuffer' })
 
 **Description**: Generate music with custom settings using the Suno v3.5 model. Available models include `chirp-v3-5` and `chirp-v3-0`.
 
-* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 15000 AI/ML Tokens.
+* **Audio Files**: 2 audio files will be generated for each request, consuming a total of 200 000 AI/ML Tokens.
 *   **wait\_audio**:
 
     * By default (`false`), the request operates in background mode, returning only audio task information. You must call the get API to retrieve detailed audio information.
