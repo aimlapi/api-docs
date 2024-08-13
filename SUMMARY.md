@@ -16,6 +16,7 @@
 
 ## API Overview
 
+* [Generating Images with FLUX](api-overview/generating-images-with-flux.md)
 * [Luma AI Text-to-Video](api-overview/luma-ai-text-to-video.md)
 * [Anthropic](api-overview/anthropic.md)
 * [Music Generation](api-overview/music-generation.md)
