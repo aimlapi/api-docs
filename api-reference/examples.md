@@ -63,7 +63,7 @@ run();
 
 #### Image Generation
 
-**Endpoint**: `POST /images/generate`\
+**Endpoint**: `POST /images/generations`\
 **Description**: Generate images based on given prompts.
 
 **Example Request in Python and JS**
