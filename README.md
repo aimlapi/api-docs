@@ -33,20 +33,20 @@ Authorization: Bearer YOUR_API_KEY
 ```
 
 ```javascript
-curl --location --globoff 'api.aimlapi.com/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_API_KEY' \
---data '{
-    "model": "gpt-3.5-turbo",
+curl --request POST \
+  --url https://api.aimlapi.com/chat/completions \
+  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --header 'content-type: application/json' \
+  --data '{
+    "model": "gpt-4o,
     "messages": [
         {
             "role": "user",
-            "content": "What is an API?"
-        },
+            "content": "What kind of model are you?"
+        }
     ],
-    "max_tokens": 512,
-    "stream": false,
-    
+    max_tokens: 512,
+    "stream": true
 }'
 ```
 
