@@ -41,7 +41,7 @@ curl --location --globoff 'api.aimlapi.com/chat/completions' \
     "messages": [
         {
             "role": "user",
-            "content": "What's API?"
+            "content": "What is an API?"
         },
     ],
     "max_tokens": 512,
