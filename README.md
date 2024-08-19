@@ -32,13 +32,13 @@ Include your API key in the `Authorization` header as a Bearer token:
 Authorization: Bearer YOUR_API_KEY
 ```
 
-```javascript
+```json
 curl --request POST \
   --url https://api.aimlapi.com/chat/completions \
   --header 'Authorization: Bearer YOUR_API_KEY' \
   --header 'content-type: application/json' \
   --data '{
-    "model": "gpt-4o,
+    "model": "gpt-4o",
     "messages": [
         {
             "role": "user",
@@ -46,7 +46,7 @@ curl --request POST \
         }
     ],
     max_tokens: 512,
-    "stream": true
+    "stream": false
 }'
 ```
 
