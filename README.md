@@ -45,7 +45,7 @@ curl --request POST \
             "content": "What kind of model are you?"
         }
     ],
-    max_tokens: 512,
+    "max_tokens": 512,
     "stream": false
 }'
 ```
