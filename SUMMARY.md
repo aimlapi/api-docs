@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Contact Us](https://calendly.com/kate-hqe6/aimlapi/?month=2024-07)
 * [Introduction](README.md)
 
 ## Quickstart
