@@ -60,7 +60,7 @@ If you're using Node.js, you can similarly switch to AI/ML API by updating the a
 const { OpenAI } = require("openai");
 const openai = new OpenAI({
   apiKey: "YOUR API TOKEN",
-  baseUr;: "https://api.aimlapi.com/",
+  baseURL: "https://api.aimlapi.com/",
 });
 // ... (your async function to run the code)
 
