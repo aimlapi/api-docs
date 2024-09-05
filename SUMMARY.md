@@ -7,13 +7,7 @@
 
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
-
-## API Reference
-
-* [Examples](api-reference/examples.md)
-* [Parameters](api-reference/parameters.md)
-* [Models comparsion](api-reference/models-comparsion.md)
-* [Using Assistants & Threads](api-reference/using-assistants-and-threads.md)
+* [Raw HTTP API access](quickstart/raw-http-api-access.md)
 
 ## API Overview
 
@@ -37,3 +31,24 @@
 * [Chat](api-overview/chat.md)
 * [Image](api-overview/image.md)
 * [Speech](api-overview/speech.md)
+
+## API Reference
+
+* [Examples](api-reference/examples.md)
+* [Parameters](api-reference/parameters.md)
+* [Models comparsion](api-reference/models-comparsion.md)
+* [Using Assistants & Threads](api-reference/using-assistants-and-threads.md)
+
+## FAQ
+
+* [Can I use API in Python?](faq/can-i-use-api-in-python.md)
+* [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
+* [Pro Models?](faq/pro-models.md)
+* [Free Tier?](faq/free-tier.md)
+* [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
+* [My requests are cropped?](faq/my-requests-are-cropped.md)
+* [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
+
+## Glossary
+
+* [Concepts](glossary/concepts.md)
