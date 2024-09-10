@@ -1,10 +1,10 @@
 ---
-description: OpenAI API structure support
+icon: satellite-dish
 ---
 
 # Supported SDKs
 
-### OpenAI
+## OpenAI
 
 In the [setting up article](setting-up.md), we showed an example of how to use the OpenAI SDK with the AI/ML API. We configured the environment from the very beginning and executed our request to the AI/ML API.
 
@@ -26,10 +26,10 @@ This support provides easy integration into systems already using OpenAI's stand
 [How do I configure the base URL and API key?](../faq/openai-sdk-doesnt-work.md)
 {% endhint %}
 
-### Raw HTTP
+## Raw HTTP
 
 Because we support the OpenAI API structure, our API can be used with the same endpoints as OpenAI. You can call them from any environment.
 
-### Next Steps
+## Next Steps
 
 * [Learn how to access the API without any SDK](raw-http-api-access.md)

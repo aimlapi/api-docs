@@ -1,6 +1,10 @@
-# Raw HTTP API access
+---
+icon: book-open
+---
 
-### Authorization
+# Raw HTTP API Access
+
+## Authorization
 
 AI/ML API authorization is based on a Bearer token. You need to include it in the `Authorization` HTTP header within the request. Example header:
 
@@ -8,7 +12,7 @@ AI/ML API authorization is based on a Bearer token. You need to include it in th
 Authorization: Bearer abc_api_key_xyz
 ```
 
-### Send Request
+## Send Request
 
 Next, you need to send an HTTP request to our server. One straightforward way is to send a `CURL` request in the following format:
 

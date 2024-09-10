@@ -1,6 +1,10 @@
+---
+icon: hand-wave
+---
+
 # Setting Up
 
-### G**enerating an API Key**
+## G**enerating an API Key**
 
 {% hint style="info" %}
 [What is an API Key?](../glossary/concepts.md#api-key)
@@ -13,7 +17,7 @@ To use the AI/ML API, you need to create an account and generate an API key. Fol
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
 
-### **Configure Base URL**
+## **Configure Base URL**
 
 {% hint style="info" %}
 [What is a base URL?](../glossary/concepts.md#base-url)
@@ -32,7 +36,7 @@ The AI/ML API supports both versioned and non-versioned URLs, providing flexibil
 
 Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
 
-### Making Your First API Call
+## Making Your First API Call
 
 Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: Python and NodeJS.
 
@@ -40,7 +44,9 @@ Based on your environment, you will call our API differently. Below are two comm
 In the examples below, we use the OpenAI SDK. This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
 
-#### **Example in Python**
+<details>
+
+<summary>Example in Python</summary>
 
 Let's start from very beginning. We assume you already installed Python (with venv), if not, here a [guide for the beginners](../faq/can-i-use-api-in-python.md).
 
@@ -135,7 +141,11 @@ The city's famous hills offer stunning views of the bay and the cityscape. Lomba
 San Francisco's diverse neighborhoods each have their unique character. The historic Chinatown is the oldest in North America, while the colorful streets of the Mission District are known for their murals and Latin American culture. The Castro District is famous for its LGBTQ+ community and vibrant nightlife.
 ```
 
-#### Example in NodeJS
+</details>
+
+<details>
+
+<summary>Example in NodeJS</summary>
 
 As in the example from Python, we start from the very beginning too. We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
 
@@ -220,43 +230,51 @@ AI: San Francisco, located in the northern part of California, USA, is a vibrant
 The city is famous for its iconic Golden Gate Bridge, an engineering marvel and one of the most recognized structures in the world. Spanning the Golden Gate Strait, this red-orange suspension bridge connects San Francisco to Marin County and offers breathtaking views of the San Francisco Bay and the Pacific Ocean.
 ```
 
-### Code Explanation
+</details>
+
+
+
+## Code Explanation
 
 Both examples are written in different programming languages, but despite that, they look very similar. Let's break down the code step by step and see what's going on.
 
 In the examples above, we are using the OpenAI SDK. The OpenAI SDK is a nice module that allows us to use the AI/ML API without dealing with repetitive boilerplate code for handling HTTP requests. Before we can use the OpenAI SDK, it needs to be imported. The import happens in the following places:
 
-{% code title="travel.py" %}
-```python
-from openai import OpenAI
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const { OpenAI } = require("openai");
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+from openai import OpenAI
+```
+{% endtab %}
+{% endtabs %}
 
 Simple as it is. The next step is to initialize variables that our code will use. The two main ones are: the base URL and the API key. We already discussed them at the beginning of the article.
 
-{% code title="travel.py" %}
-```python
-base_url = "https://api.aimlapi.com/v1"
-api_key = "my_key"
-system_prompt = "You are a travel agent. Be descriptive and helpful."
-user_prompt = "Tell me about San Francisco"
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const baseURL = "https://api.aimlapi.com/v1";
 const apiKey = "my_key";
 const systemPrompt = "You are a travel agent. Be descriptive and helpful";
 const userPrompt = "Tell me about San Francisco";
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+base_url = "https://api.aimlapi.com/v1"
+api_key = "my_key"
+system_prompt = "You are a travel agent. Be descriptive and helpful."
+user_prompt = "Tell me about San Francisco"
+```
+{% endtab %}
+{% endtabs %}
 
 To communicate with LLM models, users use texts. These texts are usually called "Prompts." Inside our code, we have prompts with two roles: the system and the user. The system prompt is designed to be the main source of instruction for LLM generation, while the user prompt is designed to be user input, the subject of the system prompt. Despite that many models can operate differently, this behavior usually applies to chat LLM models, currently one of the most useful and popular ones.
 
@@ -264,20 +282,22 @@ Inside the code, the prompts are called in variables `systemPrompt`, `userPrompt
 
 Before we use the API, we need to create an instance of the OpenAI SDK class. It allows us to use all their methods. The instance is created with our imported package, and here we forward two main parameters: the base URL and the API key.
 
-{% code title="travel.py" %}
-```python
-api = OpenAI(api_key=api_key, base_url=base_url)
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const api = new OpenAI({
   apiKey,
   baseURL,
 });
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+api = OpenAI(api_key=api_key, base_url=base_url)
+```
+{% endtab %}
+{% endtabs %}
 
 Because of notation, these two parameters are called slightly differently in these different languages (camel case in JS and snake case in Python), but their functionality is the same.
 
@@ -291,25 +311,12 @@ The OpenAI SDK provides us with methods to communicate with chat models. It is p
 
 `messages` is an array of objects with a `content` field as prompt and a `role` string that can be one of `system`, `user`, `tool`, `assistant`. With the role, the model can understand what to do with this prompt: Is this an instruction? Is this a user message? Is this an example of how to answer? Is this the result of code execution? The tool role is used for more complex behavior and will be discussed in another article.
 
-In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](../api-reference/parameters.md).&#x20;
+In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](../api-overview/text-models-llm/parameters.md).&#x20;
 
 With that knowledge, we can now send our request like the following:
 
-{% code title="travel.py" %}
-```python
-completion = api.chat.completions.create(
-    model="mistralai/Mistral-7B-Instruct-v0.2",
-    messages=[
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_prompt},
-    ],
-    temperature=0.7,
-    max_tokens=256,
-)
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const completion = await api.chat.completions.create({
   model: "mistralai/Mistral-7B-Instruct-v0.2",
@@ -327,45 +334,64 @@ const completion = await api.chat.completions.create({
   max_tokens: 256,
 });
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+completion = api.chat.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ],
+    temperature=0.7,
+    max_tokens=256,
+)
+```
+{% endtab %}
+{% endtabs %}
 
 The response from the function `chat.completions.create` contains a completion. Completion is a fundamental part of LLM models' logic. Every LLM model is some sort of word autocomplete engine, trained by huge amounts of data. The chat models are designed to autocomplete large chunks of messages with prompts and certain roles, but other models can have their own custom logic without even roles.
 
 Inside this completion, we are interested in the text of the generation. We can get it by getting the result from the completion variable:
 
-{% code title="travel.py" %}
-```python
-response = completion.choices[0].message.content
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const response = completion.choices[0].message.content;
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+response = completion.choices[0].message.content
+```
+{% endtab %}
+{% endtabs %}
 
 In certain cases, completion can have multiple results. These results are called choices. Every choice has a message, the product of generation. The string content is placed inside the `content` variable, which we placed inside our response variable above.
 
-In the next steps, we can finally see the results. In both examples, we print the user prompt and response like it was a conversation.
+In the next steps, we can finally see the results. In both examples, we print the user prompt and response like it was a conversation:
 
-{% code title="travel.py" %}
-```python
-print("User:", user_prompt)
-print("AI:", response)
-```
-{% endcode %}
-
-{% code title="travel.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 console.log("User:", userPrompt);
 console.log("AI:", response);
 ```
-{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+print("User:", user_prompt)
+print("AI:", response)
+```
+{% endtab %}
+{% endtabs %}
 
 Voila! Using AI/ML API models is the simplest and most productive way to get into the world of Machine Learning and Artificial Intelligence.
 
-### Future Steps
+## Future Steps
 
 * [Know more about OpenAI SDK inside AI/ML API](supported-sdks.md)
 
