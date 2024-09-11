@@ -7,11 +7,11 @@
 
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
-* [Raw HTTP API Access](quickstart/raw-http-api-access.md)
 
 ## API Overview
 
 * [Text Models (LLM)](api-overview/text-models-llm/README.md)
+  * [Completion or Chat Models](api-overview/text-models-llm/completion-or-chat-models.md)
   * [Parameters](api-overview/text-models-llm/parameters.md)
   * [Chat Completion](api-overview/text-models-llm/chat-completion.md)
   * [Function Calling](api-overview/text-models-llm/function-calling/README.md)
@@ -21,7 +21,6 @@
     * [Threads](api-overview/text-models-llm/managing-assistants-and-threads/threads/README.md)
       * [Runs](api-overview/text-models-llm/managing-assistants-and-threads/threads/runs.md)
       * [Messages](api-overview/text-models-llm/managing-assistants-and-threads/threads/messages.md)
-  * [Using Assistants & Threads](api-overview/text-models-llm/using-assistants-and-threads.md)
   * [Embeddings](api-overview/text-models-llm/embeddings.md)
 * [Image Models](api-overview/image-models/README.md)
   * [Generate an Image](api-overview/image-models/generate-an-image.md)
@@ -45,9 +44,7 @@
 * [Video Models](api-overview/video-models/README.md)
   * [Luma AI Text-to-Video](api-overview/video-models/luma-ai-text-to-video.md)
 * [Model Database](api-overview/model-database/README.md)
-  * [Text Models](api-overview/model-database/text-models/README.md)
-    * [Chat Models](api-overview/model-database/text-models/chat-models.md)
-    * [Code Models](api-overview/model-database/text-models/code-models.md)
+  * [Text Models](api-overview/model-database/text-models.md)
   * [Video Models](api-overview/model-database/video-models.md)
   * [Image Models](api-overview/model-database/image-models.md)
   * [Vision Models](api-overview/model-database/vision-models.md)
@@ -57,6 +54,7 @@
 ## Recipes
 
 * [Models comparsion](recipes/models-comparsion.md)
+* [Using Assistants & Threads](recipes/using-assistants-and-threads.md)
 
 ## FAQ
 
