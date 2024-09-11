@@ -122,4 +122,4 @@ curl --request POST \
 
 ## Next Steps
 
-* [Learn how to access the API without any SDK](broken-reference)
+* [Learn how to use text models](../api-overview/text-models-llm/)

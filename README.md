@@ -4,9 +4,9 @@
 
 Welcome to the AI/ML API!
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="recipes/models-comparsion.md">models-comparsion.md</a></td><td><a data-mention href="api-overview/text-models-llm/parameters.md">parameters.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/model-database/">model-database</a></td><td><a data-mention href="api-overview/text-models-llm/chat-completion.md">chat-completion.md</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="recipes/models-comparsion.md">models-comparsion.md</a></td><td><a data-mention href="api-overview/text-models-llm/parameters.md">parameters.md</a></td><td><a data-mention href="recipes/using-assistants-and-threads.md">using-assistants-and-threads.md</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/model-database/">model-database</a></td><td><a data-mention href="api-overview/text-models-llm/chat-completion.md">chat-completion.md</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
-## Features
+## Featured Models
 
 {% content-ref url="api-overview/text-models-llm/" %}
 [text-models-llm](api-overview/text-models-llm/)
@@ -45,4 +45,3 @@ AI/ML API provides a suite of powerful AI functionalities, including text comple
 ## Getting Started
 
 To start using the AI/ML API, follow the [Quickstart guide](quickstart/setting-up.md) to set up your environment and make your first API call.
-
