@@ -538,7 +538,7 @@ paths:
           description: ''
       tags:
         - Voice Models
-  /v1/audio/generate/custom-mode:
+  /v1/generate/custom-mode:
     post:
       operationId: SunoAiController_generateAudioWithCustomMode_v1
       summary: Generate audio with custom mode in Suno AI.
@@ -563,7 +563,7 @@ paths:
                 $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /audio/generate/custom-mode:
+  /generate/custom-mode:
     post:
       operationId: SunoAiController_generateAudioWithCustomMode
       summary: Generate audio with custom mode in Suno AI.
@@ -588,7 +588,7 @@ paths:
                 $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /v1/audio/generate:
+  /v1/generate:
     post:
       operationId: SunoAiController_generateAudioByPrompt_v1
       summary: Generate audio using Suno AI.
@@ -613,7 +613,7 @@ paths:
                   $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /audio/generate:
+  /generate:
     post:
       operationId: SunoAiController_generateAudioByPrompt
       summary: Generate audio using Suno AI.
@@ -638,7 +638,7 @@ paths:
                   $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /v1/audio/extend:
+  /v1/extend:
     post:
       operationId: SunoAiController_extendAudio_v1
       summary: Extend an audio clip using Suno AI.
@@ -663,7 +663,7 @@ paths:
                   $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /audio/extend:
+  /extend:
     post:
       operationId: SunoAiController_extendAudio
       summary: Extend an audio clip using Suno AI.
@@ -688,7 +688,7 @@ paths:
                   $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /v1/audio:
+  /v1:
     get:
       operationId: SunoAiController_getAudioInformation_v1
       summary: Get information about generated audio in Suno AI.
@@ -714,7 +714,7 @@ paths:
                   $ref: '#/components/schemas/GeneratedAudioDTO'
       tags:
         - Suno AI
-  /audio:
+  /:
     get:
       operationId: SunoAiController_getAudioInformation
       summary: Get information about generated audio in Suno AI.

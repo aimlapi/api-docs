@@ -4,7 +4,7 @@ icon: code
 
 # Custom Audio Generation
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/audio/generate/custom-mode" method="post" %}
+{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/generate/custom-mode" method="post" %}
 [docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 

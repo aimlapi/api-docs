@@ -25,3 +25,7 @@ Currently, we support only SunoAI to generate audio.
 {% content-ref url="custom-audio-generation.md" %}
 [custom-audio-generation.md](custom-audio-generation.md)
 {% endcontent-ref %}
+
+{% content-ref url="fetch-generations.md" %}
+[fetch-generations.md](fetch-generations.md)
+{% endcontent-ref %}
