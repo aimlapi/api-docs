@@ -1,8 +1,8 @@
 ---
+icon: image-landscape
 description: >-
   Explore creative boundaries with our Image Models, perfect for generating or
   editing visuals
-icon: image-landscape
 ---
 
 # Image Models
@@ -21,3 +21,5 @@ icon: image-landscape
 | BFL          | FLUX IMG2IMG            | flux/dev/image-to-image                  |
 | BFL          | FLUX Realism LoRA       | flux-realism                             |
 | Stability AI | Stable Diffusion 3      | stable-diffusion-v3-medium               |
+| OpenAI       | DALLe 3                 | dall-e-3                                 |
+| OpenAI       | DALLe 2                 | dall-e-2                                 |
