@@ -35,7 +35,7 @@ Because we support the OpenAI API structure, our API can be used with the same e
 AI/ML API authorization is based on a Bearer token. You need to include it in the `Authorization` HTTP header within the request, on example:
 
 ```http
-Authorization: Bearer abc_api_key_xyz
+Authorization: Bearer my_key
 ```
 
 ### Request Example
@@ -48,7 +48,7 @@ When your token is ready you can call our API through HTTP.
 fetch("https://api.aimlapi.com/chat/completions", {
   method: "POST",
   headers: {
-    Authorization: "Bearer abc_api_key_xyz",
+    Authorization: "Bearer my_key",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({

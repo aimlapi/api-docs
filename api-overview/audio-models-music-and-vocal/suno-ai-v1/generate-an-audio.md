@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/generate" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/generate" method="post" %}
+[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 
 ## Examples

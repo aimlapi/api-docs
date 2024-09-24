@@ -4,8 +4,8 @@ icon: code
 
 # Custom Audio Generation
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/generate/custom-mode" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/generate/custom-mode" method="post" %}
+[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 
 Our API allows you to generate music with custom settings using the Suno v3.5 model. Available models include `chirp-v3-5` and `chirp-v3-0`.
