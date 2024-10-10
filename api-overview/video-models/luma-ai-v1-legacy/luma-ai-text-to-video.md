@@ -1,6 +1,6 @@
 ---
-description: Generate Videos from Text or Images
 icon: code
+description: Generate Videos from Text or Images
 ---
 
 # Luma AI Text-to-Video
@@ -23,8 +23,8 @@ Each generation costs 500 000 AI/ML Tokens
 Ensure you replace `"your-api-key"` with your actual API key before running the code.
 {% endhint %}
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations" method="post" %}
+[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 
 ### Example
@@ -78,8 +78,8 @@ axios.post(url, payload, { headers })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generation" method="get" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generation" method="get" %}
+[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 
 ### Example
@@ -128,59 +128,8 @@ axios.get(url, { headers, params })
 {% endtab %}
 {% endtabs %}
 
-
-
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations/file-upload" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
-{% endswagger %}
-
-### Example
-
-{% tabs %}
-{% tab title="Python" %}
-```python
-import requests
-
-url = "https://api.aimlapi.com/luma-ai/generations/file-upload"
-
-payload = { "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDozQhfHZ0SUoYPxSsIp7FXZmwHcSBijueGg&s" }
-headers = {
-  "Authorization": "Bearer your-api-key",
-  "content-type": "application/json"
-}
-
-response = requests.post(url, json=payload, headers=headers)
-
-print(response.json())
-
-```
-{% endtab %}
-
-{% tab title="JS" %}
-```javascript
-const axios = require('axios');
-
-const url = "https://api.aimlapi.com/luma-ai/generations/file-upload";
-
-const payload = { 
-  url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDozQhfHZ0SUoYPxSsIp7FXZmwHcSBijueGg&s" 
-};
-
-const headers = {
-  "Authorization": "Bearer your-api-key",
-  "content-type": "application/json"
-};
-
-axios.post(url, payload, { headers })
-  .then(response => console.log(response.data))
-  .catch(error => console.error(error));
-
-```
-{% endtab %}
-{% endtabs %}
-
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations/{taskId}/extend" method="post" %}
+[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
 {% endswagger %}
 
 ### Example
