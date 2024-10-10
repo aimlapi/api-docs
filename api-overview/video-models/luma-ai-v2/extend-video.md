@@ -43,6 +43,10 @@ Or, in the case of using a previously generated video:
 
 ## Examples
 
+{% hint style="info" %}
+Ensure you replace `"my_key"` with your actual API key before running the code.
+{% endhint %}
+
 ### Extension with the Image
 
 {% tabs %}

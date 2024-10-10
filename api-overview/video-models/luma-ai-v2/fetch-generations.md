@@ -24,6 +24,10 @@ You cannot wait for an `failed` state.
 
 ## Example
 
+{% hint style="info" %}
+Ensure you replace `"my_key"` with your actual API key before running the code.
+{% endhint %}
+
 ### Fetch Single Generation
 
 For example, if you are waiting for video dreaming (when the video is popped from the queue and generation is in processing), then you can send the following request:

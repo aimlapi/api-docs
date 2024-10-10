@@ -16,6 +16,10 @@ Our AI/ML API fully supports video generation using Luma AI models. Below are so
 [generate-video.md](generate-video.md)
 {% endcontent-ref %}
 
+{% content-ref url="fetch-generations.md" %}
+[fetch-generations.md](fetch-generations.md)
+{% endcontent-ref %}
+
 {% content-ref url="extend-video.md" %}
 [extend-video.md](extend-video.md)
 {% endcontent-ref %}
