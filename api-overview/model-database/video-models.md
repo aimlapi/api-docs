@@ -6,6 +6,6 @@ icon: video
 
 We currently support single model provided by Luma AI.
 
-{% content-ref url="../video-models/luma-ai-v1-legacy/luma-ai-text-to-video.md" %}
-[luma-ai-text-to-video.md](../video-models/luma-ai-v1-legacy/luma-ai-text-to-video.md)
+{% content-ref url="../video-models/luma-ai-v2/" %}
+[luma-ai-v2](../video-models/luma-ai-v2/)
 {% endcontent-ref %}
