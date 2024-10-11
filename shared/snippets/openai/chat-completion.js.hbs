@@ -1,0 +1,27 @@
+const { OpenAI } = require('openai');
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const result = await api.chat.completions.create({
+    model: '{{model}}',
+    messages: [
+      {
+        role: 'system',
+        content: 'You are an AI assistant who knows everything.',
+      },
+      {
+        role: 'user',
+        content: 'Tell me, why is the sky blue?'
+      }
+    ],
+  });
+
+  const message = result.choices[0].message.content;
+  console.log(`Assistant: ${message}`);
+};
+
+main();
