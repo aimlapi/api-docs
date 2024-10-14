@@ -14,18 +14,18 @@ Currently, we support only SunoAI to generate audio.
 
 ## Examples
 
-{% content-ref url="suno-ai-v1/generate-an-audio.md" %}
-[generate-an-audio.md](suno-ai-v1/generate-an-audio.md)
+{% content-ref url="suno-ai-v1-legacy/generate-an-audio.md" %}
+[generate-an-audio.md](suno-ai-v1-legacy/generate-an-audio.md)
 {% endcontent-ref %}
 
-{% content-ref url="suno-ai-v1/extend-an-audio.md" %}
-[extend-an-audio.md](suno-ai-v1/extend-an-audio.md)
+{% content-ref url="suno-ai-v1-legacy/extend-an-audio.md" %}
+[extend-an-audio.md](suno-ai-v1-legacy/extend-an-audio.md)
 {% endcontent-ref %}
 
-{% content-ref url="suno-ai-v1/custom-audio-generation.md" %}
-[custom-audio-generation.md](suno-ai-v1/custom-audio-generation.md)
+{% content-ref url="suno-ai-v1-legacy/custom-audio-generation.md" %}
+[custom-audio-generation.md](suno-ai-v1-legacy/custom-audio-generation.md)
 {% endcontent-ref %}
 
-{% content-ref url="suno-ai-v1/fetch-generations.md" %}
-[fetch-generations.md](suno-ai-v1/fetch-generations.md)
+{% content-ref url="suno-ai-v1-legacy/fetch-generations.md" %}
+[fetch-generations.md](suno-ai-v1-legacy/fetch-generations.md)
 {% endcontent-ref %}

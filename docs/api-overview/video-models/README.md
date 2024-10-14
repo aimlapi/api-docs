@@ -14,6 +14,6 @@ Currently we supports only LumaAI.
 
 ## Getting Started
 
-{% content-ref url="luma-ai-text-to-video.md" %}
-[luma-ai-text-to-video.md](luma-ai-text-to-video.md)
+{% content-ref url="luma-ai-v1-legacy/luma-ai-text-to-video.md" %}
+[luma-ai-text-to-video.md](luma-ai-v1-legacy/luma-ai-text-to-video.md)
 {% endcontent-ref %}

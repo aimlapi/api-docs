@@ -16,7 +16,7 @@ Each status has its own priority, described below:
 
 If the clip status reaches any higher-priority status than you requested, then the result is immediately returned. For example, if you are waiting for the `completed` status and your request fails (reaching the `error` status), then the result is immediately returned with the current error status.
 
-If clip generation takes too long, it can reach a timeout of 3 minutes. In such cases, the result returns with the current actual status. This polling allows you to request it again and wait for the needed status.
+If clip generation takes too long, it can reach a timeout of 2 minutes. In such cases, the result returns with the current actual status. This polling allows you to request it again and wait for the needed status.
 
 {% hint style="info" %}
 You cannot wait for an `error` status.
