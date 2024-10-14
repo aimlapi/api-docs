@@ -1,0 +1,10 @@
+.snippet-viewer-content {
+  background-color: #24292e;
+}
+
+.snippet-viewer-content > pre {
+  padding: 1rem;
+  border-radius: 0px 0px 4px 4px;
+  margin: 0;
+  overflow-x: auto;
+}
