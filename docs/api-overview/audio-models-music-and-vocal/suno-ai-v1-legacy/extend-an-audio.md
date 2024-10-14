@@ -1,6 +1,6 @@
 ---
-icon: brackets-curly
 hidden: true
+icon: brackets-curly
 ---
 
 # Extend an Audio

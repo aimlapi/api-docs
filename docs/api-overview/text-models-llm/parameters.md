@@ -1,8 +1,8 @@
 ---
-icon: book-open
 description: >-
   Learn how you can tweak results of your AI/ML API responses with tailored
   requests
+icon: book-open
 ---
 
 # Parameters

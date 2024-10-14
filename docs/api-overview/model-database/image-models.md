@@ -1,8 +1,8 @@
 ---
-icon: image-landscape
 description: >-
   Explore creative boundaries with our Image Models, perfect for generating or
   editing visuals
+icon: image-landscape
 ---
 
 # Image Models
