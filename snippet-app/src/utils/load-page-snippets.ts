@@ -1,19 +1,19 @@
 import { PageSnippet } from '../types/snippet';
 
 export const loadPageSnippets = () => {
-  const elements = document.querySelectorAll('snippet[data-snippet]');
+  const elements = document.querySelectorAll('snippet[data-name]');
   const byKey: Record<string, PageSnippet> = {};
   elements.forEach((element) => {
     if (element instanceof HTMLElement) {
-      const { snippet, ...payload } = element.dataset;
-      if (!snippet) {
+      const { name, ...payload } = element.dataset;
+      if (!name) {
         console.warn('No snippet provided:', element);
         return;
       }
 
-      byKey[snippet] = {
+      byKey[name] = {
         id: Math.random().toFixed(10).slice(2),
-        key: snippet || '',
+        key: name || '',
         payload: (payload as Record<string, string>) || {},
         element,
       };
