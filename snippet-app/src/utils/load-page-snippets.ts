@@ -1,7 +1,7 @@
 import { PageSnippet } from '../types/snippet';
 
 export const loadPageSnippets = () => {
-  const elements = document.querySelectorAll('code[data-snippet]');
+  const elements = document.querySelectorAll('snippet[data-snippet]');
   const byKey: Record<string, PageSnippet> = {};
   elements.forEach((element) => {
     if (element instanceof HTMLElement) {
