@@ -6,11 +6,19 @@
   border-radius: 0px 0px 4px 4px;
 }
 
+.snippet-viewer button {
+  line-height: 1.6;
+  font-family: Inter, sans-serif;
+  user-select: none;
+}
+
 .snippet-viewer__header {
   display: flex;
   align-items: center;
   background-color: #30363b;
   border-radius: 4px 4px 0px 0px;
+
+  font-family: monospace;
 }
 
 .snippet-viewer__header-title {
@@ -29,4 +37,15 @@
   margin: 0rem 0.5rem;
   cursor: pointer;
   font-size: 12px;
+
+  transform: scale(1);
+  transition: transform 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
+}
+
+.snippet-viewer__header-copy:hover {
+  color: #24292e;
+  background-color: #9ecbff;
+}
+.snippet-viewer__header-copy:active {
+  transform: scale(0.95);
 }
