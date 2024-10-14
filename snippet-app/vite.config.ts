@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: 'src/main.tsx',
+      input: 'src/main.ts',
       output: {
         entryFileNames: 'bundle.js',
         assetFileNames: 'bundle.css',

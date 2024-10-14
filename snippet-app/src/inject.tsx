@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import App from './components/app';
 
-const inject = () => {
+export const inject = () => {
   const element = document.createElement('div');
 
   document.body.append(element);
@@ -14,9 +14,3 @@ const inject = () => {
     </StrictMode>,
   );
 };
-
-if (['complete', 'loaded', 'interactive'].includes(document.readyState)) {
-  inject();
-} else {
-  document.addEventListener('DOMContentLoaded', () => inject());
-}
