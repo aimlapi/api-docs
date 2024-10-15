@@ -3,12 +3,12 @@ import { CompiledSnippet, PageSnippet, SnippetOption, TemplateSnippet } from '..
 
 export const compileSnippets = (templates: Record<string, TemplateSnippet>, snippets: Record<string, PageSnippet>) => {
   const compiledById: Record<string, CompiledSnippet> = {};
-  for (const key in snippets) {
-    const snippet = snippets[key];
-    const template = templates[key];
+  for (const id in snippets) {
+    const snippet = snippets[id];
+    const template = templates[snippet.key];
 
     if (!template) {
-      console.warn(`Snippet '${key}' not found`);
+      console.warn(`Snippet '${snippet.key}' not found`);
       continue;
     }
 

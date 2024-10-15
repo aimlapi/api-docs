@@ -8,7 +8,10 @@ export type PageSnippet = {
 };
 
 export type TemplateSnippet = {
-  title: string;
+  config: {
+    title: string;
+    docs?: string;
+  };
   payload: Record<string, unknown>;
   key: string;
   options: SnippetOption[];

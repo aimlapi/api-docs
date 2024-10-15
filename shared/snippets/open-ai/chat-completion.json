@@ -1,0 +1,8 @@
+{
+  "title": "Create an chat completion",
+  "docs": "https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v1",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}

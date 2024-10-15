@@ -1,0 +1,27 @@
+import asyncio
+from anthropic import AsyncAnthropic
+
+client = Anthropic(
+    base_url="{{baseUrl}}",
+    auth_token="{{apiKey}}",
+)
+
+
+def main():
+    message = client.messages.create(
+        model="{{model}}",
+        max_tokens=2048,
+        system="You are an AI assistant who knows everything.",
+        messages=[
+            {
+                "role": "user",
+                "content": "Hello, Claude",
+            }
+        ],
+    )
+
+    print("Message:", message.content)
+
+
+if __name__ == "__main__":
+    main()

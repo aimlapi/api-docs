@@ -2,7 +2,7 @@ import { PageSnippet } from '../types/snippet';
 
 export const loadPageSnippets = () => {
   const elements = document.querySelectorAll('snippet[data-name]');
-  const byKey: Record<string, PageSnippet> = {};
+  const byId: Record<string, PageSnippet> = {};
   elements.forEach((element) => {
     if (element instanceof HTMLElement) {
       const { name, ...payload } = element.dataset;
@@ -11,8 +11,10 @@ export const loadPageSnippets = () => {
         return;
       }
 
-      byKey[name] = {
-        id: Math.random().toFixed(10).slice(2),
+      const id = Math.random().toFixed(10).slice(2);
+
+      byId[id] = {
+        id,
         key: name || '',
         payload: (payload as Record<string, string>) || {},
         element,
@@ -20,5 +22,5 @@ export const loadPageSnippets = () => {
     }
   });
 
-  return byKey;
+  return byId;
 };
