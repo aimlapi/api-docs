@@ -1,0 +1,16 @@
+const { OpenAI } = require('openai');
+
+const main = async () => {
+  const api = new OpenAI({ apiKey: '{{apiKey}}', baseURL: '{{baseUrl}}' });
+
+  const text = 'Your text string goes here';
+  const response = await api.embeddings.create({
+    input: text,
+    model: '{{model}}',
+  });
+  const embedding = response.data[0].embedding;
+
+  console.log(embedding);
+};
+
+main();            

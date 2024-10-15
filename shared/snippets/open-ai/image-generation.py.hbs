@@ -1,0 +1,26 @@
+import requests
+import base64
+
+
+def main():
+    headers = {
+        "Authorization": "Bearer {{apiKey}}",
+    }
+
+    payload = {
+        "prompt": "Hyperrealistic art featuring a cat in costume.",
+        "model": "{{model}}",
+    }
+
+    response = requests.post(
+        "{{baseUrl}}/images/generations", headers=headers, json=payload
+    )
+
+    image_base64 = response.json()["output"]["choices"][0]["image_base64"]
+    image_data = base64.b64decode(image_base64)
+
+    with open("./image.png", "wb") as file:
+        file.write(image_data)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,36 @@
+const main = async () => {
+  const result = await fetch('{{baseUrl}}/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      max_tokens: 1024,
+      messages: [
+        {
+          role: 'user',
+          content: [
+            {
+              type: 'text',
+              text: 'What’s in this image?',
+            },
+            {
+              role: 'user',
+              type: 'image_url',
+              image_url: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg',
+              },
+            },
+          ],
+        },
+      ],
+    }),
+  }).then((res) => res.json());
+
+  const message = result.choices[0].message.content;
+  console.log(\`Assistant: \${message}\`);
+};
+
+main();

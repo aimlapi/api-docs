@@ -2,6 +2,7 @@
   "title": "Generate an mesh base on an image",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v1",
-    "apiKey": "<YOUR_API_KEY>"
+    "apiKey": "<YOUR_API_KEY>",
+    "model": "triposr"
   }
 }

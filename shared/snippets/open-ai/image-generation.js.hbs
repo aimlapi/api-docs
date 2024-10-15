@@ -1,0 +1,21 @@
+const axios = require('axios').default;
+const fs = require('fs');
+
+const main = async () => {
+  const result = await axios.post(
+    '{{baseUrl}}/images/generations',
+    {
+      prompt: 'Hyperrealistic art featuring a cat in costume.',
+      model: '{{model}}'
+    },
+    {
+      headers: {
+        Authorization: 'Bearer {{apiKey}}',
+      },
+    },
+  );
+
+  fs.writeFileSync('./image.png', result.data.output.choices[0].image_base64, 'base64');
+};
+
+main();

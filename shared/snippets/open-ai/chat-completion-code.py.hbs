@@ -1,0 +1,29 @@
+import os
+from openai import OpenAI
+
+
+def main():
+    client = OpenAI(
+        api_key="{{apiKey}}",
+        base_url="{{baseUrl}}",
+    )
+
+    response = client.chat.completions.create(
+        model="{{model}}",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are SQL code assistant.",
+            },
+            {
+                "role": "user",
+                "content": "Could you please provide me with an example of a database structure that I could use for a project in MySQL?",
+            },
+        ],
+    )
+
+    message = response.choices[0].message.content
+    print(f"Assistant: {message}")   
+    
+if __name__ == "__main__":
+    main()

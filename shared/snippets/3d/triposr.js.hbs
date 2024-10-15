@@ -12,7 +12,7 @@ const main = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'triposr',
+      model: '{{model}}',
       image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png',
     }),
   }).then((res) => res.json());

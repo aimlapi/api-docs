@@ -1,0 +1,8 @@
+{
+  "title": "Speech to Text",
+  "docs": "https://docs.aimlapi.com/api-overview/speech-models/speech-to-text-stt",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v1",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}
