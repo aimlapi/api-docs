@@ -1,0 +1,21 @@
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="{{baseUrl}}",
+    base_url="{{apiKey}}",
+)
+
+response = client.chat.completions.create(
+    model="{{model}}",
+    messages=[
+        {
+            "role": "user",
+            "content": "Tell me, why is the sky blue?"
+        },
+    ],
+)
+
+message = response.choices[0].message.content
+
+print(f"Assistant: {message}")
