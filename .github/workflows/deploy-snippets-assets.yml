@@ -60,4 +60,4 @@ jobs:
           curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
           -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
           -H "Content-Type: application/json" \
-          --data "{\"files\": [\"$CDN_PREFIX/$S3_PREFIX/bundle.js\", \"$CDN_PREFIX/$S3_PREFIX/bundle.css\"]}"
+          --data "{\"files\": [\"$CDN_PREFIX/bundle.js\", \"$CDN_PREFIX/bundle.css\"]}"
