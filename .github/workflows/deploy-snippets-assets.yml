@@ -56,7 +56,6 @@ jobs:
           CDN_PREFIX: ${{ secrets.SNIPPETS_CDN_PREFIX }}
           S3_PREFIX: ${{ secrets.SNIPPETS_S3_PREFIX }}
         run: |
-          echo "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache"
           curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
           -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
           -H "Content-Type: application/json" \
