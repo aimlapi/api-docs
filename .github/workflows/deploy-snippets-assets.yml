@@ -1,0 +1,52 @@
+name: Deploy Snippets Assets
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        working-directory: ./packages/snippets
+        run: pnpm install
+
+      - name: Build project
+        working-directory: ./packages/snippets
+        run: pnpm run build
+
+      - name: Install AWS CLI
+        run: sudo apt-get update && sudo apt-get install awscli -y
+
+      - name: Configure AWS for MinIO
+        env:
+          S3_ACCESS_KEY_ID: ${{ secrets.SNIPPETS_S3_ACCESS_KEY_ID }}
+          S3_SECRET_ACCESS_KEY: ${{ secrets.SNIPPETS_S3_SECRET_ACCESS_KEY }}
+
+        run: |
+          aws configure set aws_access_key_id "$S3_ACCESS_KEY_ID"
+          aws configure set aws_secret_access_key "$S3_SECRET_ACCESS_KEY"
+          aws configure set default.region "us-east-1"
+
+      - name: Upload to MinIO S3 using AWS CLI
+        env:
+          S3_BUCKET: ${{ secrets.SNIPPETS_S3_BUCKET }}
+          S3_PREFIX: ${{ secrets.SNIPPETS_S3_PREFIX }}
+          S3_ENDPOINT: ${{ secrets.SNIPPETS_S3_ENDPOINT }}
+
+        run: |
+          aws --endpoint-url ${S3_ENDPOINT} s3 sync ./packages/snippets/dist s3://${S3_BUCKET}/${S3_PREFIX}/ --delete --exact-timestamps
