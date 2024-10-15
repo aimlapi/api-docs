@@ -29,9 +29,6 @@ jobs:
         working-directory: ./packages/snippets
         run: pnpm run build
 
-      - name: Install AWS CLI
-        run: sudo apt-get update && sudo apt-get install awscli -y
-
       - name: Configure AWS for MinIO
         env:
           S3_ACCESS_KEY_ID: ${{ secrets.SNIPPETS_S3_ACCESS_KEY_ID }}
