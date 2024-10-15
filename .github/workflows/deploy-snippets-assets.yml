@@ -27,6 +27,8 @@ jobs:
 
       - name: Build project
         working-directory: ./packages/snippets
+        env:
+          SNIPPETS_CDN_PREFIX: ${{ secrets.SNIPPETS_CDN_PREFIX }}
         run: pnpm run build
 
       - name: Configure AWS for MinIO
