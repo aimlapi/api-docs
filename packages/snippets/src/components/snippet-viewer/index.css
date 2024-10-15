@@ -7,6 +7,7 @@ snippet[name] {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  max-width: 100vw;
 }
 
 .snippet-viewer pre[tabindex],
