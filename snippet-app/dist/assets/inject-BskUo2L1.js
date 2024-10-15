@@ -255,8 +255,8 @@ main();`,m_=`import os
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="{{baseUrl}}",
-    base_url="{{apiKey}}",
+    base_url="{{baseUrl}}",
+    api_key="{{apiKey}}",    
 )
 
 response = client.chat.completions.create(
@@ -301,8 +301,8 @@ main();`,v_=`import os
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="{{baseUrl}}",
     base_url="{{apiKey}}",
+    api_key="{{baseUrl}}",    
 )
 
 response = client.chat.completions.create(
