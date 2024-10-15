@@ -53,10 +53,9 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.SNIPPETS_CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.SNIPPETS_CLOUDFLARE_ZONE_ID }}
-          CDN_PREFIX: ${{ secrets.SNIPPETS_CDN_PREFIX }}
-          S3_PREFIX: ${{ secrets.SNIPPETS_S3_PREFIX }}
+          CDN_PURGE_PAYLOAD: ${{ secrets.SNIPPETS_CDN_PURGE_PAYLOAD }}
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
           -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
           -H "Content-Type: application/json" \
-          --data "{\"files\": [\"$CDN_PREFIX/bundle.js\", \"$CDN_PREFIX/bundle.css\"]}"
+          --data "$CDN_PURGE_PAYLOAD"
