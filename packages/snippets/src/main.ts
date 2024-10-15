@@ -1,5 +1,6 @@
 const run = async () => {
   const app = await import('./inject');
+  console.log('inject.');
   app.inject();
 };
 
