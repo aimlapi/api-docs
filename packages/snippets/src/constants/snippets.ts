@@ -14,8 +14,7 @@ const configById = Object.keys(configByName).reduce((byKey, key) => {
   const next = { ...byKey };
 
   const [, path] = key.split('/snippets/');
-  const [group, file] = path.split('/');
-  const [name] = file.split('.');
+  const [group, name] = path.split('/');
 
   next[`${group}.${name}`] = JSON.parse(configByName[key]);
 
@@ -26,8 +25,8 @@ export const snippets = Object.keys(contentByName).reduce((byKey, key) => {
   const next = { ...byKey };
 
   const [, path] = key.split('/snippets/');
-  const [group, file] = path.split('/');
-  const [name, language] = file.split('.');
+  const [group, name, file] = path.split('/');
+  const [language] = file.split('.');
 
   const config = configById[`${group}.${name}`]!;
 

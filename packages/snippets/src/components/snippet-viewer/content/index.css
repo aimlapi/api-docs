@@ -7,8 +7,11 @@
   border-radius: 0px 0px 4px 4px;
 }
 
-.snippet-viewer-content > pre {
+.snippet-viewer-content__inner {
   padding: 1rem;
   margin: 0;
-  overflow-x: auto;
+}
+
+.snippet-viewer-content__inner .shiki {
+  margin: 0;
 }
