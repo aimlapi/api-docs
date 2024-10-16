@@ -28,7 +28,7 @@ const Content: FC<Props> = (props) => {
     return [];
   }, [loading, option.content]);
 
-  const scrollbar = useMemo<ScrollbarProps>(() => ({ style: { minHeight: 300 } }), []);
+  const scrollbar = useMemo<ScrollbarProps>(() => ({ autoHeight: true, autoHeightMax: 648 }), []);
 
   return (
     <>

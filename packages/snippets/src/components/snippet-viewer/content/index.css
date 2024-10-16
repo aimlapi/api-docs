@@ -1,6 +1,7 @@
 .snippet-viewer-content {
   background-color: #24292e;
-  overflow: hidden;
+  font-weight: 14px;
+  line-height: 1.7;
 }
 
 .snippet-viewer-content:last-child {
