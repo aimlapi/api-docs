@@ -1,0 +1,55 @@
+const main = async () => {
+  const prompt = `
+    [Verse]
+    Silver cities shine brightly
+    Skies are painted blue
+    Hopes and dreams take flight
+    Future starts anew
+
+    [Verse 2]
+    Machines hum a new tune
+    Worlds we’ve never seen
+    Chasing stars so far
+    Building our own dream
+
+    [Chorus]
+    Future dreams so high
+    Touch the endless sky
+    Live beyond the now
+    Make the future wow
+
+    [Verse 3]
+    We create the world
+    Technology our guide
+    Hearts and minds as one
+    Infinite the ride
+
+    [Chorus]
+    Future dreams so high
+    Touch the endless sky
+    Live beyond the now
+    Make the future wow
+
+    [Bridge]
+    With every beat we rise
+    See through wiser eyes
+    The places we can go
+    A brilliance that will grow
+    `;
+  const { clip_ids } = await fetch('{{baseUrl}}/generate/audio/suno-ai/clip', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt,
+      title: 'The Future',
+      tags: ['rock'],
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generated clip ids:', clip_ids);
+};
+
+main();
