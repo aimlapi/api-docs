@@ -1,8 +1,9 @@
 ---
 icon: satellite-dish
+hidden: true
 ---
 
-# Suno AI v1 (legacy)
+# Suno AI v1 (deprecated)
 
 
 

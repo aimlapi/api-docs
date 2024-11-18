@@ -1,5 +1,6 @@
 ---
 icon: guitar
+hidden: true
 ---
 
 # Audio Models (Music & Vocal)
