@@ -1,0 +1,71 @@
+import requests
+
+url = "{{baseUrl}}/generate/video/runway/generation"
+headers = {
+    "Authorization": f"Bearer {{apiKey}}",
+    "Content-Type": "application/json"
+}
+
+
+def generate(prompt, image_url, duration):
+    """
+    Generates a video based on a text prompt and an initial image.
+
+    Args:
+        prompt (str): The text prompt describing the content or style of the video.
+        image_url (str): The URL of the starting image for video generation.
+        duration (str): The duration of the generated video in seconds (e.g., "5" or "10").
+
+    Returns:
+        dict: The JSON response from the FAL-AI API containing the generated video data.
+        {
+            "id": "999a9a99-a999-9999-99a9-9aa9a99a9aa9:runway-gen3/turbo/image-to-video",
+            "status": "generating"
+        }
+
+    Example:
+        response = generate("A bunny eating a carrot in the field.", "https://example.com/image.jpg", "10")
+    """
+
+    payload = {
+        "provider": "fal-ai",
+        "model": "{{model}}",
+        "prompt": prompt,
+        "image_url": image_url,
+        "last_image_url": image_url,
+        "duration": duration
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    return response.json()
+
+
+def get_gen_video(generation_id):
+    """
+    Retrieves the status or result of a video generation request.
+
+    Args:
+        generation_id (str): The unique identifier for the video generation request.
+
+    Returns:
+        None: Prints the JSON response containing the status or result of the video generation request.
+        {
+            "id": "904a1d52-f470-4823-85c4-2fb0b84c4bb8:runway-gen3/turbo/image-to-video",
+            "status": "completed",
+            "video": {
+                "url": "https://cdn.aimlapi.com/fal/files/zebra/example_output.mp4",
+                "content_type": "video/mp4",
+                "file_name": "output.mp4",
+                "file_size": 941676
+            }
+        }
+        OR
+	    {
+		    "status": "generating"
+	    }
+
+    Example:
+        get_gen_video("999a9a99-a999-9999-99a9-9aa9a99a9aa9:runway-gen3/turbo/image-to-video")
+"""
+    payload = {'generation_id': generation_id}
+    response = requests.get(url, params=payload, headers=headers)
+    print(response.json())

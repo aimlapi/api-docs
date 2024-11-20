@@ -1,0 +1,7 @@
+{
+    "title": "Generate a video",
+    "payload": {
+        "baseUrl": "https://api.aimlapi.com/v2/generate/video/runway/generation",
+        "apiKey": "<YOUR_API_KEY>"
+    }
+}
