@@ -1,5 +1,5 @@
 ---
-icon: text-size
+icon: books
 ---
 
 # Embedding Models
