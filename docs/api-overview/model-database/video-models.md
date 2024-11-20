@@ -4,7 +4,7 @@ icon: video
 
 # Video Models
 
-| id                                     | provider |
-| -------------------------------------- | -------- |
-| runway-gen3/turbo/image-to-video       | runway   |
-| [luma-ai](../video-models/luma-ai-v2/) | luma-ai  |
+| ID                                                          | Provider |
+| ----------------------------------------------------------- | -------- |
+| [runway-gen3/turbo/image-to-video](../video-models/runway/) | runway   |
+| [luma-ai](../video-models/luma-ai-v2/)                      | luma-ai  |

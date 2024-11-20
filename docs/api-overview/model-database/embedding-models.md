@@ -4,7 +4,7 @@ icon: books
 
 # Embedding Models
 
-| id                                             | provider    |
+| ID                                             | Provider    |
 | ---------------------------------------------- | ----------- |
 | text-embedding-3-small                         | openai      |
 | text-embedding-3-large                         | openai      |
