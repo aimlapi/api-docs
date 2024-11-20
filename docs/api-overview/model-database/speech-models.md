@@ -4,33 +4,40 @@ icon: waveform
 
 # Speech Models
 
-| Organization | Model Name               | Model String for API        |
-| ------------ | ------------------------ | --------------------------- |
-| Deepgram     | Nova 2 General           | g1\_nova-2-general          |
-| Deepgram     | Nova 2 Meeting           | g1\_nova-2-meeting          |
-| Deepgram     | Nova 2 Phonecall         | g1\_nova-2-phonecall        |
-| Deepgram     | Nova 2 Voicemail         | g1\_nova-2-voicemail        |
-| Deepgram     | Nova 2 Finance           | g1\_nova-2-finance          |
-| Deepgram     | Nova 2 Conversational AI | g1\_nova-2-conversationalai |
-| Deepgram     | Nova 2 Video             | g1\_nova-2-video            |
-| Deepgram     | Nova 2 Medical           | g1\_nova-2-medical          |
-| Deepgram     | Nova 2 DriveThru         | g1\_nova-2-drivethru        |
-| Deepgram     | Nova 2 Automotive        | g1\_nova-2-automotive       |
-| Deepgram     | Whisper Large            | g1\_whisper-large           |
-| Deepgram     | Whisper Medium           | g1\_whisper-medium          |
-| Deepgram     | Whisper Small            | g1\_whisper-small           |
-| Deepgram     | Whisper Tiny             | g1\_whisper-tiny            |
-| Deepgram     | Whisper Base             | g1\_whisper-base            |
-| Deepgram     | Redaction                | g1\_redaction               |
-| Deepgram     | Aura Asteria EN          | g1\_aura-asteria-en         |
-| Deepgram     | Aura Hera EN             | g1\_aura-hera-en            |
-| Deepgram     | Aura Luna EN             | g1\_aura-luna-en            |
-| Deepgram     | Aura Stella EN           | g1\_aura-stella-en          |
-| Deepgram     | Aura Athena EN           | g1\_aura-athena-en          |
-| Deepgram     | Aura Zeus EN             | g1\_aura-zeus-en            |
-| Deepgram     | Aura Orion EN            | g1\_aura-orion-en           |
-| Deepgram     | Aura Arcas EN            | g1\_aura-arcas-en           |
-| Deepgram     | Aura Perseus EN          | g1\_aura-perseus-en         |
-| Deepgram     | Aura Angus EN            | g1\_aura-angus-en           |
-| Deepgram     | Aura Orpheus EN          | g1\_aura-orpheus-en         |
-| Deepgram     | Aura Helios EN           | g1\_aura-helios-en          |
+## Text To Speech
+
+| id                  | provider |
+| ------------------- | -------- |
+| #g1_aura-asteria-en | deepgram |
+| #g1_aura-hera-en    | deepgram |
+| #g1_aura-luna-en    | deepgram |
+| #g1_aura-stella-en  | deepgram |
+| #g1_aura-athena-en  | deepgram |
+| #g1_aura-zeus-en    | deepgram |
+| #g1_aura-orion-en   | deepgram |
+| #g1_aura-arcas-en   | deepgram |
+| #g1_aura-perseus-en | deepgram |
+| #g1_aura-angus-en   | deepgram |
+| #g1_aura-orpheus-en | deepgram |
+| #g1_aura-helios-en  | deepgram |
+
+## Speech To Text
+
+| id                          | provider |
+| --------------------------- | -------- |
+| #g1_nova-2-general          | deepgram |
+| #g1_nova-2-meeting          | deepgram |
+| #g1_nova-2-phonecall        | deepgram |
+| #g1_nova-2-voicemail        | deepgram |
+| #g1_nova-2-finance          | deepgram |
+| #g1_nova-2-conversationalai | deepgram |
+| #g1_nova-2-video            | deepgram |
+| #g1_nova-2-medical          | deepgram |
+| #g1_nova-2-drivethru        | deepgram |
+| #g1_nova-2-automotive       | deepgram |
+| #g1_whisper-large           | deepgram |
+| #g1_whisper-medium          | deepgram |
+| #g1_whisper-small           | deepgram |
+| #g1_whisper-tiny            | deepgram |
+| #g1_whisper-base            | deepgram |
+| #g1_redaction               | deepgram |
