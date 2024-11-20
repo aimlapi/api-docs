@@ -6,7 +6,7 @@ icon: text-size
 
 ## Chat Completion Models
 
-| id                                             | provider    |
+| ID                                             | Provider    |
 | ---------------------------------------------- | ----------- |
 | gpt-4o                                         | openai      |
 | gpt-4o-2024-08-06                              | openai      |
@@ -135,7 +135,7 @@ icon: text-size
 | huggyllama/llama-30b                     | open-source |
 | allenai/OLMo-7B                          | open-source |
 | Qwen/Qwen1.5-32B                         | open-source |
-| EleutherAI/llemma_7b                     | open-source |
+| EleutherAI/llemma\_7b                    | open-source |
 | meta-llama/Meta-Llama-3-70B              | open-source |
 | meta-llama/Llama-3-8b-hf                 | open-source |
 | zero-one-ai/Yi-6B                        | open-source |

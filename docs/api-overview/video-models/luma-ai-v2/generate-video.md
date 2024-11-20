@@ -63,7 +63,7 @@ main();
 import requests
 
 
-def main()
+def main():
   url = "https://api.aimlapi.com/v2/generate/video/luma-ai/generation"
   payload = {
     "prompt": "Flying jellyfish",

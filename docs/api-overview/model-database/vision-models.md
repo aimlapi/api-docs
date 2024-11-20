@@ -1,9 +1,9 @@
 ---
+icon: eye
 description: >-
   Welcome to the Vision Models API documentation! The AI/ML API allows you to
   leverage vision capabilities to analyze and understand images through our
   models.
-icon: eye
 ---
 
 # Vision Models
@@ -17,8 +17,6 @@ icon: eye
 #### Quick Start
 
 Images can be provided to the model in two main ways: by passing an image URL or by passing the base64 encoded image directly in the request.
-
-**Currently we support `gpt-4o` vision and `gpt-4-turbo` vision.**&#x20;
 
 **Example: What's in this image?**
 

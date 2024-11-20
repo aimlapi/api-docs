@@ -50,6 +50,10 @@
   * [Speech-to-Text (STT)](api-overview/speech-models/speech-to-text-stt.md)
   * [Text-to-Speech (TTS)](api-overview/speech-models/text-to-speech-tts.md)
 * [Video Models](api-overview/video-models/README.md)
+  * [Runway](api-overview/video-models/runway/README.md)
+    * [Overview](api-overview/video-models/runway/overview.md)
+    * [Generate Video](api-overview/video-models/runway/generate-video.md)
+    * [Fetch Generation](api-overview/video-models/runway/generate-video-1.md)
   * [Luma AI v2](api-overview/video-models/luma-ai-v2/README.md)
     * [Overview](api-overview/video-models/luma-ai-v2/overview.md)
     * [Generate Video](api-overview/video-models/luma-ai-v2/generate-video.md)
@@ -64,6 +68,7 @@
   * [Vision Models](api-overview/model-database/vision-models.md)
   * [Speech Models](api-overview/model-database/speech-models.md)
   * [Music & Vocal Models](api-overview/model-database/music-and-vocal-models.md)
+  * [Embedding Models](api-overview/model-database/embedding-models.md)
   * [Model Request](api-overview/model-database/model-request.md)
 
 ## Recipes
