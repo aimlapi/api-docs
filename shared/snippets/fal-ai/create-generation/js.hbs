@@ -1,0 +1,19 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/audio', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'lo-fi pop hip-hop ambient music',
+      steps: 100,
+      seconds_total: 10,
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
