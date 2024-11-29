@@ -7,10 +7,7 @@ const main = async () => {
     },
     body: JSON.stringify({
       prompt: 'A jellyfish in the ocean',
-      aspect_ratio: '16:9',
       model: '{{model}}',
-      image_size: 'landscape_4_3',
-      style: 'digital_illustration/pixel_art',
     }),
   }).then((res) => res.json());
 
