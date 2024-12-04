@@ -23,7 +23,7 @@ icon: code
 ```python
 import requests
 
-url = "https://api.aimlapi.com/vision"
+url = "https://api.aimlapi.com/v1/chat/completions"
 headers = {
     "Authorization": "Bearer YOUR_API_KEY",
     "Content-Type": "application/json"
