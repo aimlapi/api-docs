@@ -1,5 +1,6 @@
 {
   "title": "Generate an image",
+  "docs": "https://docs.aimlapi.com/api-overview/image-models/generate-an-image",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v1",
     "apiKey": "<YOUR_API_KEY>"
