@@ -1,0 +1,18 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      image_url: 'https://cdn.prod.website-files.com/6600e1eab90de089c2d9c9cd/669726ef5242a23882952518_663fc2a1da49d30b9a44e774_image_3cN5ZzSm_1715403464233_raw.jpeg',
+      prompt: 'A cat dressed as a wizard with a background of a mystic forest.',
+      model: '{{model}}',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main();
