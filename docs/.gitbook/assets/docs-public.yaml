@@ -538,6 +538,49 @@ paths:
           description: ''
       tags:
         - Voice Models
+  /v2/generate/audio:
+    post:
+      operationId: AudioController_generateAudioByPrompt_v2
+      summary: Generate audio using audio models.
+      description: >-
+        Generates audio based on a text prompt using audio models, useful for
+        creating audio content or responses.
+      parameters: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateAudioByPromptDTO'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneratedAudioDTO'
+      tags:
+        - Generate an audio
+    get:
+      operationId: AudioController_getAudioInformation_v2
+      summary: Get information about generated audio.
+      description: >-
+        Retrieves information about audio generated.
+      parameters:
+        - name: generation_id
+          required: true
+          in: query
+          schema:
+            type: string
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FetchAudioDTO'
+      tags:
+        - Fetch generated audio
   /v1/generate/custom-mode:
     post:
       operationId: SunoAiController_generateAudioWithCustomMode_v1
@@ -560,7 +603,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GeneratedAudioDTO'
+                $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /generate/custom-mode:
@@ -585,7 +628,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GeneratedAudioDTO'
+                $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /v1/generate:
@@ -601,7 +644,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GenerateAudioByPromptDTO'
+              $ref: '#/components/schemas/GenerateAudioSunoByPromptDTO'
       responses:
         '201':
           description: ''
@@ -610,7 +653,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /generate:
@@ -626,7 +669,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GenerateAudioByPromptDTO'
+              $ref: '#/components/schemas/GenerateAudioSunoByPromptDTO'
       responses:
         '201':
           description: ''
@@ -635,7 +678,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /v1/extend:
@@ -660,7 +703,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /extend:
@@ -685,7 +728,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /v1:
@@ -711,7 +754,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /:
@@ -737,7 +780,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/GeneratedAudioDTO'
+                  $ref: '#/components/schemas/GeneratedAudioSunoDTO'
       tags:
         - Suno AI
   /v1/messages:
@@ -2208,7 +2251,7 @@ components:
         - title
         - make_instrumental
         - wait_audio
-    GeneratedAudioDTO:
+    GeneratedAudioSunoDTO:
       type: object
       properties:
         image_url:
@@ -2224,7 +2267,7 @@ components:
         - image_url
         - audio_url
         - video_url
-    GenerateAudioByPromptDTO:
+    GenerateAudioSunoByPromptDTO:
       type: object
       properties:
         prompt:
@@ -2256,6 +2299,73 @@ components:
         - continue_at
         - title
         - tags
+    GenerateAudioByPromptDTO:
+      type: object
+      properties:
+        model:
+          type: string
+          enum:
+            - stable-audio
+            - minimax-music
+        steps:
+          type: number
+          description: Only for stable-audio
+          minimum: 1
+          maximum: 100
+          default: 100
+        seconds_start:
+          type: number
+          minimum: 1
+          maximum: 47
+          description: Only for stable-audio
+        seconds_total:
+          type: number
+          minimum: 1
+          maximum: 47
+          default: 30
+          description: Only for stable-audio
+        prompt:
+          type: string
+        reference_audio_url:
+          type: string
+          format: uri
+          description: Required for minimax-music
+          example: https://cdn.aimlapi.com/squirrel/files/kangaroo/w3jfjrn8Yr2YkbGoAR6.mp3
+      required:
+        - model
+        - prompt
+    GeneratedAudioDTO:
+      type: object
+      properties:
+        generation_id:
+          type: string
+      required:
+        - generation_id
+    FetchAudioDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          enum:
+            - generating
+            - queued
+            - completed
+        audio_file:
+          type: object
+          properties:
+            url:
+              type: string
+              format: uri
+            content_type:
+              type: string
+            file_name:
+              type: string
+            file_size:
+              type: number
+      required:
+        - id
+        - status
     CreateMessageDTO:
       type: object
       properties:

@@ -1,20 +1,20 @@
 ---
-icon: guitar
+icon: satellite-dish
 hidden: true
 ---
 
-# Audio Models (Music & Vocal)
+# MinimMax music
 
 ## Overview
 
 Our API features the capability to generate audio. With this API, you can create your own music, speech, and any audio experience from your prompt and imagination.
 
-## Providers
+### Key features
 
-{% content-ref url="minimax-music/README.md" %}
-[README.md](minimax-music/README.md)
+{% content-ref url="generate-an-audio.md" %}
+[generate-an-audio.md](generate-an-audio.md)
 {% endcontent-ref %}
 
-{% content-ref url="minimax-music/README.md" %}
-[README.md](stable-audio/README.md)
+{% content-ref url="generate-an-audio.md" %}
+[fetch-generations.md](fetch-generations.md)
 {% endcontent-ref %}
