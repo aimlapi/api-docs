@@ -3,7 +3,7 @@ icon: satellite-dish
 hidden: true
 ---
 
-# MinimMax music
+# Minimax Music
 
 ## Overview
 
@@ -15,6 +15,6 @@ Our API features the capability to generate audio. With this API, you can create
 [generate-an-audio.md](generate-an-audio.md)
 {% endcontent-ref %}
 
-{% content-ref url="generate-an-audio.md" %}
+{% content-ref url="fetch-generations.md" %}
 [fetch-generations.md](fetch-generations.md)
 {% endcontent-ref %}

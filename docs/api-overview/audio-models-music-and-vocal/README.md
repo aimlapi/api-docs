@@ -11,6 +11,10 @@ Our API features the capability to generate audio. With this API, you can create
 
 ## Providers
 
-{% include "../../.gitbook/includes/untitled.md" %}
+{% content-ref url="stable-audio/" %}
+[stable-audio](stable-audio/)
+{% endcontent-ref %}
 
-{% include "../../.gitbook/includes/untitled (1).md" %}
+{% content-ref url="minimax-music/" %}
+[minimax-music](minimax-music/)
+{% endcontent-ref %}
