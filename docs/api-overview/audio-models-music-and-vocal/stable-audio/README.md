@@ -1,6 +1,5 @@
 ---
 icon: satellite-dish
-hidden: true
 ---
 
 # Stable Audio
