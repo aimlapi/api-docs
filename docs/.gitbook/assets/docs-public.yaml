@@ -2309,7 +2309,7 @@ components:
             - minimax-music
         steps:
           type: number
-          description: Only for stable-audio
+          description: The number of steps to denoise the audio (Only for stable-audio)
           minimum: 1
           maximum: 100
           default: 100
@@ -2317,19 +2317,19 @@ components:
           type: number
           minimum: 1
           maximum: 47
-          description: Only for stable-audio
+          description: The start point of the audio clip to generate (Only for stable-audio)
         seconds_total:
           type: number
           minimum: 1
           maximum: 47
           default: 30
-          description: Only for stable-audio
+          description: The duration of the audio clip to generate (Only for stable-audio)
         prompt:
           type: string
         reference_audio_url:
           type: string
           format: uri
-          description: Required for minimax-music
+          description: Reference song, should contain music and vocals. Must be a .wav or .mp3 file longer than 15 seconds( Required for minimax-music)
           example: https://cdn.aimlapi.com/squirrel/files/kangaroo/w3jfjrn8Yr2YkbGoAR6.mp3
       required:
         - model
