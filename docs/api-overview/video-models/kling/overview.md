@@ -12,4 +12,10 @@ All API requests require a Bearer token for authentication. Include your token i
 
 ## Pricing
 
-Each generation costs 525 000 AI/ML Tokens
+### Standard plan
+
+Each generation costs 63 000 AI/ML Tokens per second
+
+### Pro plan
+
+Each generation costs 262 500 AI/ML Tokens per second

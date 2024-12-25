@@ -558,7 +558,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GeneratedAudioDTO'
+                $ref: '#/components/schemas/GenerateAudioOrVideoResponseDTO'
       tags:
         - Generate an audio
     get:
@@ -1049,6 +1049,48 @@ paths:
                 $ref: '#/components/schemas/UploadImageResultDTO'
       tags:
         - Luma AI
+  /v2/generate/video/kling/generation:
+    post:
+      operationId: videoKlingGeneration
+      summary: Create a video by kling
+      description: >-
+        Create a video from text or image using Kling
+      parameters: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateVideoByTextOrImageKlingDTO'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateAudioOrVideoResponseDTO'
+      tags:
+        - Generate a video by Kling
+    get:
+      operationId: VideoController_getVideoInformation_v2
+      summary: Get information about generated Kling video.
+      description: >-
+        Retrieves information about video generated.
+      parameters:
+        - name: generation_id
+          required: true
+          in: query
+          schema:
+            type: string
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FetchVideoDTO'
+      tags:
+        - Fetch generated video
   /v1/ocr:
     post:
       operationId: DocumentModelsController_processOCRRequest_v1
@@ -2299,6 +2341,63 @@ components:
         - continue_at
         - title
         - tags
+    GenerateVideoByTextOrImageKlingDTO:
+      type: object
+      properties:
+        model:
+          type: string
+          enum:
+            - kling-video/v1/standard/text-to-video
+            - kling-video/v1/pro/text-to-video
+            - kling-video/v1/standard/image-to-video
+            - kling-video/v1/pro/image-to-video
+        prompt:
+          type: string
+        image_url:
+          type: string
+          format: uri
+          example: https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg
+        aspect_ratio:
+          type: string
+          enum:
+            - 16:9
+            - 9:16
+            - 1:1
+          default: 16:9
+        duration:
+          type: string
+          enum:
+            - 5
+            - 10
+          default: 5
+      required:
+        - model
+        - prompt
+    FetchVideoDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          enum:
+            - generating
+            - queued
+            - completed
+        video:
+          type: object
+          properties:
+            url:
+              type: string
+              format: uri
+            content_type:
+              type: string
+            file_name:
+              type: string
+            file_size:
+              type: number
+      required:
+        - id
+        - status
     GenerateAudioByPromptDTO:
       type: object
       properties:
@@ -2334,7 +2433,7 @@ components:
       required:
         - model
         - prompt
-    GeneratedAudioDTO:
+    GenerateAudioOrVideoResponseDTO:
       type: object
       properties:
         generation_id:
