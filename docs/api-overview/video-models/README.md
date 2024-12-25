@@ -10,12 +10,12 @@ With our API you can generate videos from your prompt and imagination.
 
 ## Providers
 
-{% content-ref url="runway/overview.md" %}
-[README.md](runway/overview.md)
+{% content-ref url="runway/" %}
+[runway](runway/)
 {% endcontent-ref %}
 
-{% content-ref url="kling/overview.md" %}
-[README.md](kling/overview.md)
+{% content-ref url="kling/" %}
+[kling](kling/)
 {% endcontent-ref %}
 
 {% content-ref url="luma-ai-v1-legacy/luma-ai-text-to-video.md" %}

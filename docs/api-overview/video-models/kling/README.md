@@ -2,7 +2,7 @@
 icon: satellite-dish
 ---
 
-# Runway
+# Kling
 
 ## Overview
 
@@ -20,6 +20,6 @@ The Kling API allows developers to generate, retrieve, and extend AI-generated c
 [generate-image-to-video.md](generate-image-to-video.md)
 {% endcontent-ref %}
 
-{% content-ref url="generate-video-1.md" %}
+{% content-ref url="fetch-generation.md" %}
 [fetch-generation.md](fetch-generation.md)
 {% endcontent-ref %}
