@@ -15,7 +15,7 @@ With our API you can generate videos from your prompt and imagination.
 {% endcontent-ref %}
 
 {% content-ref url="kling/README.md" %}
-[README.md](kling/)
+[README.md](kling/README.md)
 {% endcontent-ref %}
 
 {% content-ref url="luma-ai-v1-legacy/luma-ai-text-to-video.md" %}
