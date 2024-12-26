@@ -72,6 +72,7 @@
     * [Extend Video](api-overview/video-models/luma-ai-v2/extend-video.md)
   * [Luma AI v1 (legacy)](api-overview/video-models/luma-ai-v1-legacy/README.md)
     * [Luma AI Text-to-Video](api-overview/video-models/luma-ai-v1-legacy/luma-ai-text-to-video.md)
+* [Guard models](api-overview/guard-models/README.md)
 * [Model Database](api-overview/model-database/README.md)
   * [Text Models](api-overview/model-database/text-models.md)
   * [Video Models](api-overview/model-database/video-models.md)

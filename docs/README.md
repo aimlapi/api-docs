@@ -32,6 +32,10 @@ Welcome to the AI/ML API!
 [video-models](api-overview/video-models/)
 {% endcontent-ref %}
 
+{% content-ref url="api-overview/guard-models/README.md" %}
+[guard-models](api-overview/guard-models/README.md)
+{% endcontent-ref %}
+
 ## **Overview of the API**
 
 AI/ML API provides a suite of powerful AI functionalities, including text completion, image inference, speech to text, and text to speech. Our API ensures effortless integration, robust performance, and secure API key management.
