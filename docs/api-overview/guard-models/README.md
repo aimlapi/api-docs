@@ -1,8 +1,8 @@
 ---
-icon: eye
+icon: shield
 ---
 
-# Guard Models
+# Guard models
 
 ## Overview
 
@@ -10,12 +10,12 @@ With our API, you can use guard models to classify input content as safe or unsa
 
 ## Support models
 
-| ID                                         | Provider    |
-| -------------------------------------------| ----------- |
-| meta-llama/Meta-Llama-Guard-3-8B           | open-source |
-| Meta-Llama/Llama-Guard-7b                  | open-source |
-| meta-llama/Llama-Guard-3-11B-Vision-Turbo  | open-source |
-| meta-llama/LlamaGuard-2-8b                 | open-source |
+| ID                                        | Provider    |
+| ----------------------------------------- | ----------- |
+| meta-llama/Meta-Llama-Guard-3-8B          | open-source |
+| Meta-Llama/Llama-Guard-7b                 | open-source |
+| meta-llama/Llama-Guard-3-11B-Vision-Turbo | open-source |
+| meta-llama/LlamaGuard-2-8b                | open-source |
 
 ### Key Features
 
@@ -86,9 +86,10 @@ if __name__ == "__main__":
 
 This request returns either "safe" or "unsafe" depending on the input content.
 
-Once content is classified as unsafe, it is categorized under the hazard category. This process is unique to each model. 
+Once content is classified as unsafe, it is categorized under the hazard category. This process is unique to each model.
 
-#### For example: 
+#### For example:
+
 unsafe \n 04
 
 ### Guard models are perfect for scenarios where content safety is crucial
