@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/v2/generate/audio" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="stable-audio-docs.yaml" path="/v2/generate/audio" method="post" %}
+[stable-audio-docs.yaml](stable-audio-docs.yaml)
 {% endswagger %}
 
 ## Examples
