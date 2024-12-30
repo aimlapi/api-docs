@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/v2/generate/audio" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="minimax-docs.yaml" path="/v2/generate/audio" method="post" %}
+[minimax-docs.yaml](minimax-docs.yaml)
 {% endswagger %}
 
 ## Examples
