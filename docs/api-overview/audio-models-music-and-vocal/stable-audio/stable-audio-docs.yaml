@@ -123,3 +123,4 @@ components:
     GenerateAudioByPromptDTO:
       type: object
       $ref: '#/components/schemas/GenerateAudioByPromptStableAudioDTO'
+      

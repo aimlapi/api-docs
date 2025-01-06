@@ -95,6 +95,7 @@ icon: text-size
 | gemini-1.5-flash                               | gemini      |
 | gemini-1.5-pro                                 | gemini      |
 | gemini-pro                                     | gemini      |
+| gemini-2.0-flash-exp                           | gemini      |
 | mistralai/mistral-tiny                         | openrouter  |
 | x-ai/grok-beta                                 | openrouter  |
 | mistralai/mistral-nemo                         | openrouter  |
@@ -104,6 +105,8 @@ icon: text-size
 | eva-unit-01/eva-qwen-2.5-14b                   | openrouter  |
 | cohere/command-r-plus                          | openrouter  |
 | ai21/jamba-1-5-mini                            | openrouter  |
+| deepseek/deepseek-chat                         | openrouter  |
+| qwen/qvq-72b-preview                           | openrouter  |
 
 ## Completion Models
 
