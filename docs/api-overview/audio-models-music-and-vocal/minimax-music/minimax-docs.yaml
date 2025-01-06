@@ -100,6 +100,8 @@ components:
             - minimax-music
         prompt:
           type: string
+          description: Lyrics with optional formatting. You can use a newline to separate each line of lyrics. You can use two newlines to add a pause between lines. You can use double hash marks (##) at the beginning and end of the lyrics to add accompaniment. Maximum 600 characters.
+          example: "##Swift and Boundless \n In the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.\n##"
         reference_audio_url:
           type: string
           format: uri

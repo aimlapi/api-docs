@@ -27,6 +27,7 @@ description: >-
 | claude-3-opus-latest                           | anthropic   |
 | claude-3-sonnet-latest                         | anthropic   |
 | claude-3-5-haiku-latest                        | anthropic   |
+| qwen/qvq-72b-preview                           | openrouter  |
 
 #### Key Features
 
