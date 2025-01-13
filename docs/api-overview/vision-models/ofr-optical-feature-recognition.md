@@ -6,6 +6,6 @@ icon: brackets-curly
 
 Our API provides a feature to extract visual features from images.
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/vision" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/vision" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}

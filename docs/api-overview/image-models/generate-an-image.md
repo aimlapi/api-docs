@@ -1,10 +1,11 @@
 ---
-description: Learn how to generate image with AI/ML API.
 icon: code
+description: Learn how to generate image with AI/ML API.
 ---
 
 # Generate an Image
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/images/generations" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/images/generations" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
+

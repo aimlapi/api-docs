@@ -1,28 +1,28 @@
 ---
+icon: brackets-curly
 description: >-
   The Threads API is very useful for creating a chat-like experience with a
   relatively large message history
-icon: brackets-curly
 ---
 
 # Threads
 
 ## API Reference
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}" method="delete" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="delete" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}" method="get" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Example

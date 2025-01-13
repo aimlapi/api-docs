@@ -10,22 +10,23 @@ Threads and Messages represent a conversation session between an Assistant and a
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="delete" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/assistants/{assistantId}" method="delete" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/assistants" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/assistants" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/assistants/{assistantId}" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants/{assistantId}" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
+

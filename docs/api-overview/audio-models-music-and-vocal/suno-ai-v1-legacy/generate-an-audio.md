@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/generate" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/generate" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Examples
@@ -68,6 +68,3 @@ print(response.content)
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

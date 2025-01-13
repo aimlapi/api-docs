@@ -8,8 +8,8 @@ icon: code
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. Here are the API to fetch the generations.
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/v2/generate/video/kling/generation" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/video/kling/generation" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Example

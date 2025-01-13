@@ -6,20 +6,20 @@ icon: brackets-curly
 
 ## API Reference
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages" method="get" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}/messages" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}/messages" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages/{messageId}" method="get" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}/messages/{messageId}" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages/{messageId}" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}/messages/{messageId}" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}

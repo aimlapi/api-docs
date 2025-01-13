@@ -8,12 +8,12 @@ icon: code
 
 * **Text completions:** Build advanced chat bots or text processors
 * **Function Calling:** Utilize tools for specific tasks and API calling.
-* **Vision Tasks:**  Process and analyze images.
+* **Vision Tasks:** Process and analyze images.
 
 ## Example Requests
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/messages" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/messages" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## **Function Calling**
@@ -88,7 +88,7 @@ print(response.json())
 ```
 
 {% hint style="info" %}
-**Pro tip:** you can assign a system role to the Claude models by using "system" parameter outside of messages array.&#x20;
+**Pro tip:** you can assign a system role to the Claude models by using "system" parameter outside of messages array.
 {% endhint %}
 
 ```json
@@ -166,4 +166,3 @@ payload = {
     }
   ]
 ```
-

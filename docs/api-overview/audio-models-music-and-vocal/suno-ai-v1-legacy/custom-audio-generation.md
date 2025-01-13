@@ -4,8 +4,8 @@ icon: code
 
 # Custom Audio Generation
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/generate/custom-mode" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/generate/custom-mode" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 Our API allows you to generate music with custom settings using the Suno v3.5 model. Available models include `chirp-v3-5` and `chirp-v3-0`.
@@ -85,4 +85,3 @@ In order to generate music with your own lyrics use `[Verse]`, `[Chorus]`, `[Bri
 }
 ```
 {% endcode %}
-

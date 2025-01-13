@@ -4,6 +4,6 @@ icon: brackets-curly
 
 # Text-to-Speech (TTS)
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/tts" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/tts" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}

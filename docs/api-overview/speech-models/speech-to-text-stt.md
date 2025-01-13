@@ -4,6 +4,6 @@ icon: brackets-curly
 
 # Speech-to-Text (STT)
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/stt" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/stt" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}

@@ -1,10 +1,10 @@
 ---
-hidden: true
 icon: brackets-curly
+hidden: true
 ---
 
 # Extend an Audio
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/extend" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/extend" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
