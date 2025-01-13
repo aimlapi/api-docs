@@ -6,7 +6,7 @@ icon: code
 
 ### Create chat completion
 
-{% swagger src="broken-reference" path="/chat/completions" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/v1/chat/completions" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
