@@ -16,7 +16,7 @@ icon: code
 ## API Reference
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/generate" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ## Examples

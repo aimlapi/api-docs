@@ -24,7 +24,7 @@ Ensure you replace `"your-api-key"` with your actual API key before running the 
 {% endhint %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generations" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example
@@ -79,7 +79,7 @@ axios.post(url, payload, { headers })
 {% endtabs %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generation" method="get" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example
@@ -129,7 +129,7 @@ axios.get(url, { headers, params })
 {% endtabs %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example

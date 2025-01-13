@@ -7,17 +7,17 @@ icon: brackets-curly
 ## API Reference
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}/runs" method="get" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}/runs" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}/runs/{runId}" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}/runs/{runId}" method="get" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}

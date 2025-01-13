@@ -13,7 +13,7 @@ icon: code
 ## Example Requests
 
 {% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/messages" method="post" %}
-[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ## **Function Calling**
