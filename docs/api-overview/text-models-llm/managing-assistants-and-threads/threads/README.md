@@ -9,20 +9,20 @@ description: >-
 
 ## API Reference
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}" method="delete" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="delete" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}" method="get" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/threads/{threadId}" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Example

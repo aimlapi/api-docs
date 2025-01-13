@@ -12,8 +12,8 @@ icon: code
 
 ## Example Requests
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/messages" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/messages" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## **Function Calling**

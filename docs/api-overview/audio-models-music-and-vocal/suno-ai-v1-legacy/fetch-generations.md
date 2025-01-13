@@ -6,8 +6,8 @@ icon: brackets-curly
 
 ## API Reference
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/" method="get" %}
-[https://api-staging.aimlapi.com/docs-public-yaml](https://api-staging.aimlapi.com/docs-public-yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Examples
