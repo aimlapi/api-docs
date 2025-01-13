@@ -1,12 +1,33 @@
 ---
+icon: eye
 description: >-
   Welcome to the Vision Models API documentation! The AI/ML API allows you to
   leverage vision capabilities to analyze and understand images through our
   models.
-icon: eye
 ---
 
 # Vision Models
+
+| ID                                             | Provider    |
+| ---------------------------------------------- | ----------- |
+| gpt-4o                                         | open-ai     |
+| gpt-4o-2024-08-06                              | open-ai     |
+| gpt-4o-2024-05-13                              | open-ai     |
+| gpt-4o-mini                                    | open-ai     |
+| gpt-4o-mini-2024-07-18                         | open-ai     |
+| gpt-4-turbo                                    | open-ai     |
+| gpt-4-turbo-2024-04-09                         | open-ai     |
+| meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo | open-source |
+| meta-llama/Llama-Vision-Free                   | open-source |
+| meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo | open-source |
+| gemini-1.5-flash                               | google      |
+| gemini-1.5-pro                                 | google      |
+| claude-3-5-sonnet-latest                       | anthropic   |
+| claude-3-haiku-latest                          | anthropic   |
+| claude-3-opus-latest                           | anthropic   |
+| claude-3-sonnet-latest                         | anthropic   |
+| claude-3-5-haiku-latest                        | anthropic   |
+| qwen/qvq-72b-preview                           | openrouter  |
 
 #### Key Features
 
@@ -17,8 +38,6 @@ icon: eye
 #### Quick Start
 
 Images can be provided to the model in two main ways: by passing an image URL or by passing the base64 encoded image directly in the request.
-
-**Currently we support `gpt-4o` vision and `gpt-4-turbo` vision.**&#x20;
 
 **Example: What's in this image?**
 

@@ -1,0 +1,25 @@
+const fs = require('fs');
+const { Readable } = require('stream');
+const { finished } = require('stream/promises');
+
+const main = async () => {
+  const {
+    model_mesh: { url, file_name },
+  } = await fetch('{{baseUrl}}/image/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png',
+    }),
+  }).then((res) => res.json());
+
+  const { body } = await fetch(url);
+  const stream = fs.createWriteStream(`./${file_name}`);
+  await finished(Readable.fromWeb(body).pipe(stream));
+};
+
+main();

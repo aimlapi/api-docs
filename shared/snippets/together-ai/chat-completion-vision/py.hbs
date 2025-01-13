@@ -1,0 +1,32 @@
+import os
+from together import Together
+
+client = Together(base_url="{{baseUrl}}", api_key="{{apiKey}}")
+
+def main():
+  response = client.chat.completions.create(
+      model="{{model}}",
+      messages=[
+          {
+              "role": "user",
+              "content": [
+                  {
+                      "type": "text",
+                      "text": "What sort of animal is in this picture? What is its usual diet? What area is the animal native to? And isn’t there some AI model that’s related to the image?",
+                  },
+                  {
+                      "type": "image_url",
+                      "image_url": {
+                          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/LLama.jpg/444px-LLama.jpg?20050123205659",
+                      },
+                  },
+              ],
+          }
+      ],
+      max_tokens=1024,
+  )
+
+  print("Assistant: ", response.choices[0].message.content)
+
+if __name__ == '__main__':
+  main()

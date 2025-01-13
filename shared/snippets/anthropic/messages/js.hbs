@@ -1,0 +1,24 @@
+const Anthropic = require('@anthropic-ai/sdk');
+
+const api = new Anthropic({
+  baseURL: '{{baseUrl}}',
+  authToken: '{{apiKey}}',
+});
+
+const main = async () => {
+  const message = await api.messages.create({
+    model: '{{model}}',
+    max_tokens: 2048,
+    system: 'You are an AI assistant who knows everything.',
+    messages: [
+      {
+        role: 'user',
+        content: 'Tell me, why is the sky blue?',
+      },
+    ],
+  });
+
+  console.log('Message:', message);
+};
+
+main();

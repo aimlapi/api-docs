@@ -1,0 +1,8 @@
+{
+  "title": "Fetch an audio",
+  "docs": "https://docs.aimlapi.com/api-overview/audio-models-music-and-vocal/stable-audio/fetch-generations",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v2",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}

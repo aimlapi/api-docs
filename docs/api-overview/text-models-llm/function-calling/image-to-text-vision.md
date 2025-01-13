@@ -23,7 +23,7 @@ icon: code
 ```python
 import requests
 
-url = "https://api.aimlapi.com/vision"
+url = "https://api.aimlapi.com/v1/chat/completions"
 headers = {
     "Authorization": "Bearer YOUR_API_KEY",
     "Content-Type": "application/json"
@@ -40,10 +40,19 @@ payload = {
           "source": {
             "type": "base64",
             "media_type": "image/jpeg",
-            "data": "/9j/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAABXigAwAEAAAAAQAAAxkAAAAA/+EA+mh0
+            "data": "/9j/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAABXigAwAEAAAAAQAAAxkAAAAA/+EA+mh0"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Extract all of the fields from this image and return in a JSON format"
+        }
+      ]
+    }
+  ]
+}
 
 response = requests.post(url, json=payload, headers=headers)
 print(response.json())
 
 ```
-

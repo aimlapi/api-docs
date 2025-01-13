@@ -1,0 +1,27 @@
+import os
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/tts"
+    headers = {
+        "Authorization": "Bearer {{apiKey}}",
+    }
+    payload = {
+        "model": "{{model}}",
+        "text": "Hi! What are you doing today?",
+    }
+
+    response = requests.post(url, headers=headers, json=payload, stream=True)
+    dist = os.path.join(os.path.dirname(__file__), "audio.wav")
+
+    with open(dist, "wb") as write_stream:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                write_stream.write(chunk)
+
+    print("Audio saved to:", dist)
+
+
+main()
+    

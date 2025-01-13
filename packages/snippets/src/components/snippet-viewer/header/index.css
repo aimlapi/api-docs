@@ -1,0 +1,24 @@
+.snippet-viewer-header {
+  display: flex;
+  align-items: center;
+  background-color: #30363b;
+  border-radius: 4px 4px 0px 0px;
+
+  font-family: monospace;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.snippet-viewer-header__title {
+  color: white;
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-size: 14px;
+  font-family: monospace;
+
+  margin: 0 0.5rem;
+}

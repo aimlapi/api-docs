@@ -1,0 +1,20 @@
+const { OpenAI } = require('openai');
+
+const api = new OpenAI({ apiKey: '{{apiKey}}', baseURL: '{{baseUrl}}' });
+
+const main = async () => {
+  const prompt = `
+All of the states in the USA:
+- Alabama, Mongomery;
+- Arkansas, Little Rock;
+`;
+  const response = await api.completions.create({
+    prompt,
+    model: '{{model}}',
+  });
+  const text = response.choices[0].text;
+
+  console.log('Completion:', text);
+};
+
+main();

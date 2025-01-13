@@ -1,0 +1,21 @@
+.snippet-viewer-content {
+  background-color: #24292e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.snippet-viewer-content:last-child {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.snippet-viewer-content__inner {
+  padding: 1rem;
+  margin: 0;
+  overflow: visible;
+  max-width: 0;
+}
+
+.snippet-viewer-content__inner .shiki {
+  margin: 0;
+  overflow: visible;
+}

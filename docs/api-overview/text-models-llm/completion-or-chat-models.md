@@ -17,7 +17,10 @@ A long time ago, there were three princesses in a distant kingdom:
 Running the model might yield the following output:
 
 ```
-A long time ago, there were three princesses in a distant kingdom: Princess Narcissa, who was beautiful but vain, Princess Rosa, who was kind and gentle, and Princess Aurora, who was strong and brave. The three sisters lived in a beautiful palace with their parents, the king and queen.
+A long time ago, there were three princesses in a distant kingdom: 
+Princess Narcissa, who was beautiful but vain, Princess Rosa, who was kind and gentle, 
+and Princess Aurora, who was strong and brave. 
+The three sisters lived in a beautiful palace with their parents, the king and queen.
 ```
 
 This is a simple text completion. However, when training datasets become larger and are refined by human alignments, we can achieve truly AI-like results that even researchers did not initially anticipate.

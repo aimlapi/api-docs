@@ -7,19 +7,24 @@ description: >-
 
 # Image Models
 
-| Organization | Model Name              | Model String for API                     |
-| ------------ | ----------------------- | ---------------------------------------- |
-| Prompt Hero  | Openjourney v4          | prompthero/openjourney                   |
-| Runway ML    | Stable Diffusion 1.5    | runwayml/stable-diffusion-v1-5           |
-| SG161222     | Realistic Vision 3.0    | SG161222/Realistic\_Vision\_V3.0\_VAE    |
-| Stability AI | Stable Diffusion 2.1    | stabilityai/stable-diffusion-2-1         |
-| Stability AI | Stable Diffusion XL 1.0 | stabilityai/stable-diffusion-xl-base-1.0 |
-| Wavymulder   | Analog Diffusion        | wavymulder/Analog-Diffusion              |
-| BFL          | FLUX Schnell            | flux/schnell                             |
-| BFL          | FLUX PRO                | flux-pro                                 |
-| BFL          | FLUX DEV                | flux/dev                                 |
-| BFL          | FLUX IMG2IMG            | flux/dev/image-to-image                  |
-| BFL          | FLUX Realism LoRA       | flux-realism                             |
-| Stability AI | Stable Diffusion 3      | stable-diffusion-v3-medium               |
-| OpenAI       | DALLe 3                 | dall-e-3                                 |
-| OpenAI       | DALLe 2                 | dall-e-2                                 |
+| ID                                       | Provider    |
+| ---------------------------------------- | ----------- |
+| dall-e-3                                 | openai      |
+| dall-e-2                                 | openai      |
+| prompthero/openjourney                   | open-source |
+| runwayml/stable-diffusion-v1-5           | open-source |
+| SG161222/Realistic\_Vision\_V3.0\_VAE    | open-source |
+| stabilityai/stable-diffusion-2-1         | open-source |
+| stabilityai/stable-diffusion-xl-base-1.0 | open-source |
+| wavymulder/Analog-Diffusion              | open-source |
+| flux/schnell                             | open-source |
+| flux-pro                                 | open-source |
+| flux-pro/v1.1                            | open-source |
+| flux-pro/v1.1-ultra                      | open-source |
+| flux/dev                                 | open-source |
+| flux/dev/image-to-image                  | open-source |
+| stable-diffusion-v3-medium               | open-source |
+| stable-diffusion-v35-large               | open-source |
+| flux-realism                             | open-source |
+| recraft-v3                               | open-source |
+| triposr                                  | open-source |

@@ -1,0 +1,17 @@
+const axios = require('axios').default;
+
+const api = new axios.create({
+  baseURL: '{{baseUrl}}',
+  headers: { Authorization: 'Bearer {{apiKey}}' },
+});
+
+const main = async () => {
+  const response = await api.post('/stt', {
+    model: '{{model}}',
+    url: 'https://audio-samples.github.io/samples/mp3/blizzard_unconditional/sample-0.mp3',
+  });
+
+  console.log('[transcription]', response.data.results.channels[0].alternatives[0].transcript);
+};
+
+main();

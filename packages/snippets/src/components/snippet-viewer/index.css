@@ -1,0 +1,36 @@
+snippet[name] {
+  display: block;
+  max-width: 100vw;
+}
+
+.snippet-viewer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+.snippet-viewer pre[tabindex],
+.snippet-viewer a {
+  transition: outline 0.1s ease-out;
+  outline: 1.5px solid transparent;
+  outline-offset: -1.5px;
+}
+.snippet-viewer button {
+  outline: 1.5px solid transparent;
+  outline-offset: -1.5px;
+}
+
+.snippet-viewer pre[tabindex]:focus-visible,
+.snippet-viewer button:focus-visible {
+  outline: 2px solid #637f9e;
+  outline-offset: -2px;
+}
+
+.snippet-viewer button,
+.snippet-viewer a[type='button'] {
+  line-height: 1.6;
+  font-family: Inter, sans-serif;
+  user-select: none;
+
+  text-decoration: none;
+}

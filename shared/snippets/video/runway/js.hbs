@@ -1,0 +1,58 @@
+const url = "{{baseUrl}}/generate/video/runway/generation";
+
+const headers = {
+    "Authorization": `Bearer {{apiKey}}`,
+    "Content-Type": "application/json"
+};
+
+const generate = async(prompt, imageUrl, duration) => {
+    /**
+     * Generates a video based on a text prompt and an initial image.
+     *
+     * @param {string} prompt - The text prompt describing the content or style of the video.
+     * @param {string} imageUrl - The URL of the starting image for video generation.
+     * @param {string} duration - The duration of the generated video in seconds (e.g., "5" or "10").
+     * @returns {Promise<Object>} - The JSON response from the FAL-AI API containing the generated video data.
+     * Example:
+     * const response = await generate("A bunny eating a carrot in the field.", "https://example.com/image.jpg", "10");
+     */
+
+    const payload = {
+        provider: "fal-ai",
+        model: "{{model}}",
+        prompt: prompt,
+        image_url: imageUrl,
+        last_image_url: imageUrl,
+        duration: duration
+    };
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(payload)
+    });
+
+    return response.json();
+}
+
+async function getGenVideo(generationId) {
+    /**
+     * Retrieves the status or result of a video generation request.
+     *
+     * @param {string} generationId - The unique identifier for the video generation request.
+     * @returns {Promise<void>} - Prints the JSON response containing the status or result of the video generation request.
+     * Example:
+     * await getGenVideo("999a9a99-a999-9999-99a9-9aa9a99a9aa9:runway-gen3/turbo/image-to-video");
+     */
+
+    const payload = {
+        generation_id: generationId
+    };
+
+    const response = await fetch(url + '?' + new URLSearchParams(payload), {
+        method: 'GET',
+        headers: headers
+    });
+
+    console.log(await response.json());
+}

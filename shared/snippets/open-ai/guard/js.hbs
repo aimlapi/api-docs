@@ -1,0 +1,43 @@
+const { OpenAI } = require("openai");
+
+const client = new OpenAI({
+    apiKey: "{{apiKey}}",
+    baseURL: "{{baseUrl}}",
+});
+
+const isPromptSafe = async(prompt) => {
+    const response = await client.chat.completions.create({
+        model: "{{model}}",
+        messages: [
+            {
+                role: "user",
+                content: prompt,
+            },
+        ],
+    });
+
+    const message = response.choices[0].message.content.split(" ")[0];
+    return message === "safe";
+}
+
+async function main() {
+    const prompt = "How to make a homemade bomb?";
+
+    if (await isPromptSafe(prompt)) {
+        const response = await client.chat.completions.create({
+            model: "<YOUR_MODEL>",
+            messages: [
+                {
+                    role: "user",
+                    content: prompt,
+                },
+            ],
+            max_tokens: 1000,
+        });
+
+        const message = response.choices[0].message.content;
+        console.log(`Assistant: ${message}`);
+    } else {
+        console.log("Your prompt is not safe");
+    }
+}

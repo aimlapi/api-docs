@@ -1,0 +1,26 @@
+import requests
+
+
+headers = {"Authorization": "Bearer {{apiKey}}"}
+
+
+def main():
+    url = f"{{baseUrl}}/stt"
+    data = {
+        "model": "{{model}}",
+        "url": "https://audio-samples.github.io/samples/mp3/blizzard_unconditional/sample-0.mp3",
+    }
+
+    response = requests.post(url, json=data, headers=headers)
+
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        transcript = response_data["results"]["channels"][0]["alternatives"][0][
+            "transcript"
+        ]
+        print("[transcription]", transcript)
+
+if __name__ == "__main__":
+    main()

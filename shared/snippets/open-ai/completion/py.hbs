@@ -1,0 +1,23 @@
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="{{apiKey}}",
+    base_url="{{baseUrl}}",
+)
+
+
+def main():
+    response = client.completions.create(
+        model="{{model}}",
+        prompt="""
+  All of the states in the USA:
+  - Alabama, Mongomery;
+  - Arkansas, Little Rock;
+  """,
+    )
+
+    completion = response.choices[0].text
+    print(f"Completion: {completion}")
+
+
+main()

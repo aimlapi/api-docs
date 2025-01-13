@@ -1,0 +1,8 @@
+{
+  "title": "Create an embedding",
+  "docs": "https://docs.aimlapi.com/api-overview/text-models-llm/embeddings",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v1",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}

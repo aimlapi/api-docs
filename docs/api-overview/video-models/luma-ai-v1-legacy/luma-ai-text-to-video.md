@@ -1,6 +1,6 @@
 ---
-icon: code
 description: Generate Videos from Text or Images
+icon: code
 ---
 
 # Luma AI Text-to-Video

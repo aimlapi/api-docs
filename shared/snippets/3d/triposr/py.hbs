@@ -1,0 +1,30 @@
+import requests
+
+
+def main():
+    response = requests.post(
+        "{{baseUrl}}/images/generations",
+        headers={
+            "Authorization": "Bearer {{apiKey}}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": "{{model}}",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png",
+        },
+    )
+
+    response.raise_for_status()
+    data = response.json()
+    url = data["model_mesh"]["url"]
+    file_name = data["model_mesh"]["file_name"]
+
+    mesh_response = requests.get(url, stream=True)
+
+    with open(file_name, "wb") as file:
+        for chunk in mesh_response.iter_content(chunk_size=8192):
+            file.write(chunk)
+
+
+if __name__ == "__main__":
+    main()

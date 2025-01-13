@@ -1,0 +1,18 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/audio', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: '##Swift and Boundless \n In the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.\n##',
+      reference_audio_url: 'https://cdn.aimlapi.com/squirrel/files/zebra/WzNbqH7vR20MNTOD1Ec7k_output.mp3',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()

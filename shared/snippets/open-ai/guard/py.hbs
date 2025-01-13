@@ -1,0 +1,42 @@
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="{{apiKey}}",
+    base_url="{{baseUrl}}",
+)
+
+
+def is_prompt_safe(prompt):
+    response = client.chat.completions.create(
+        model="{{model}}",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            },
+        ],
+    )
+
+    message = response.choices[0].message.content.split()[0]
+    return True if message == "safe" else False
+
+
+def main():
+    prompt = "How to make a homemade bomb?"
+
+    if is_prompt_safe(prompt):
+        response = client.chat.completions.create(
+            model="<YOUR_MODEL>",
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                },
+            ],
+            max_tokens=1000,
+        )
+
+        message = response.choices[0].message.content
+        print(f"Assistant: {message}")
+    else:
+        print('Your prompt is not safety')

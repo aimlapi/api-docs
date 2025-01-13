@@ -4,92 +4,152 @@ icon: text-size
 
 # Text Models
 
-## Code Models
+## Chat Completion Models
 
-| Organization | Model Name                    | Model String for API                 | Context length |
-| ------------ | ----------------------------- | ------------------------------------ | -------------- |
-| Meta         | Code Llama Python (70B)       | codellama/CodeLlama-70b-Python-hf    | 4096           |
-| Meta         | Code Llama Python (34B)       | codellama/CodeLlama-34b-Python-hf    | 16384          |
-| Meta         | Code Llama Python (13B)       | codellama/CodeLlama-13b-Python-hf    | 16384          |
-| Meta         | Code Llama Python (7B)        | codellama/CodeLlama-7b-Python-hf     | 16384          |
-| Phind        | Phind Code LLaMA v2 (34B)     | Phind/Phind-CodeLlama-34B-v2         | 16384          |
-| WizardLM     | WizardCoder Python v1.0 (34B) | WizardLM/WizardCoder-Python-34B-V1.0 | 8192           |
-| WizardLM     | WizardCoder v1.0 (15B)        | WizardLM/WizardCoder-15B-V1.0        | 8192           |
+| ID                                             | Provider    |
+| ---------------------------------------------- | ----------- |
+| gpt-4o                                         | openai      |
+| gpt-4o-2024-08-06                              | openai      |
+| gpt-4o-2024-05-13                              | openai      |
+| gpt-4o-mini                                    | openai      |
+| gpt-4o-mini-2024-07-18                         | openai      |
+| chatgpt-4o-latest                              | openai      |
+| gpt-4-turbo                                    | openai      |
+| gpt-4-turbo-2024-04-09                         | openai      |
+| gpt-4                                          | openai      |
+| gpt-4-0125-preview                             | openai      |
+| gpt-4-1106-preview                             | openai      |
+| gpt-3.5-turbo                                  | openai      |
+| gpt-3.5-turbo-0125                             | openai      |
+| gpt-3.5-turbo-1106                             | openai      |
+| o1-preview                                     | openai      |
+| o1-preview-2024-09-12                          | openai      |
+| o1-mini                                        | openai      |
+| o1-mini-2024-09-12                             | openai      |
+| codellama/CodeLlama-34b-Instruct-hf            | open-source |
+| upstage/SOLAR-10.7B-Instruct-v1.0              | open-source |
+| meta-llama/Meta-Llama-Guard-3-8B               | open-source |
+| google/gemma-2b-it                             | open-source |
+| Gryphe/MythoMax-L2-13b                         | open-source |
+| meta-llama/LlamaGuard-2-8b                     | open-source |
+| mistralai/Mistral-7B-Instruct-v0.1             | open-source |
+| mistralai/Mistral-7B-Instruct-v0.2             | open-source |
+| deepseek-ai/deepseek-llm-67b-chat              | open-source |
+| Qwen/Qwen2-72B-Instruct                        | open-source |
+| mistralai/Mistral-7B-Instruct-v0.3             | open-source |
+| meta-llama/Llama-2-13b-chat-hf                 | open-source |
+| Meta-Llama/Llama-Guard-7b                      | open-source |
+| meta-llama/Meta-Llama-3-70B-Instruct-Lite      | open-source |
+| google/gemma-2-27b-it                          | open-source |
+| meta-llama/Llama-3-8b-chat-hf                  | open-source |
+| mistralai/Mixtral-8x7B-Instruct-v0.1           | open-source |
+| microsoft/WizardLM-2-8x22B                     | open-source |
+| meta-llama/Llama-3-70b-chat-hf                 | open-source |
+| llava-hf/llava-v1.6-mistral-7b-hf              | open-source |
+| databricks/dbrx-instruct                       | open-source |
+| NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO    | open-source |
+| meta-llama/Meta-Llama-3-8B-Instruct-Turbo      | open-source |
+| meta-llama/Meta-Llama-3-8B-Instruct-Lite       | open-source |
+| Gryphe/MythoMax-L2-13b-Lite                    | open-source |
+| Qwen/Qwen1.5-110B-Chat                         | open-source |
+| meta-llama/Meta-Llama-3-70B-Instruct-Turbo     | open-source |
+| meta-llama/Llama-2-7b-chat-hf                  | open-source |
+| meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo  | open-source |
+| Qwen/Qwen1.5-72B-Chat                          | open-source |
+| meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo | open-source |
+| Qwen/Qwen2.5-7B-Instruct-Turbo                 | open-source |
+| meta-llama/Llama-Vision-Free                   | open-source |
+| Qwen/Qwen2.5-72B-Instruct-Turbo                | open-source |
+| google/gemma-2-9b-it                           | open-source |
+| meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo   | open-source |
+| mistralai/Mixtral-8x22B-Instruct-v0.1          | open-source |
+| meta-llama/Llama-Guard-3-11B-Vision-Turbo      | open-source |
+| meta-llama/Llama-3.2-3B-Instruct-Turbo         | open-source |
+| meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo    | open-source |
+| meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo | open-source |
+| togethercomputer/CodeLlama-34b-Instruct        | open-source |
+| togethercomputer/llama-2-13b-chat              | open-source |
+| togethercomputer/llama-2-7b-chat               | open-source |
+| claude-3-opus-20240229                         | anthropic   |
+| claude-3-sonnet-20240229                       | anthropic   |
+| claude-3-haiku-20240307                        | anthropic   |
+| claude-3-5-sonnet-20240620                     | anthropic   |
+| claude-3-5-sonnet-20241022                     | anthropic   |
+| claude-3-5-haiku-20241022                      | anthropic   |
+| anthropic/claude-3.5-sonnet-20240620           | anthropic   |
+| anthropic/claude-3.5-sonnet-20241022           | anthropic   |
+| anthropic/claude-3.5-sonnet                    | anthropic   |
+| claude-3-5-sonnet-latest                       | anthropic   |
+| anthropic/claude-3-haiku-20240307              | anthropic   |
+| anthropic/claude-3-haiku                       | anthropic   |
+| claude-3-haiku-latest                          | anthropic   |
+| anthropic/claude-3-opus-20240229               | anthropic   |
+| anthropic/claude-3-opus                        | anthropic   |
+| claude-3-opus-latest                           | anthropic   |
+| anthropic/claude-3-sonnet-20240229             | anthropic   |
+| anthropic/claude-3-sonnet                      | anthropic   |
+| claude-3-sonnet-latest                         | anthropic   |
+| anthropic/claude-3-5-haiku-20241022            | anthropic   |
+| anthropic/claude-3-5-haiku                     | anthropic   |
+| claude-3-5-haiku-latest                        | anthropic   |
+| gemini-1.5-flash                               | gemini      |
+| gemini-1.5-pro                                 | gemini      |
+| gemini-pro                                     | gemini      |
+| gemini-2.0-flash-exp                           | gemini      |
+| mistralai/mistral-tiny                         | openrouter  |
+| x-ai/grok-beta                                 | openrouter  |
+| mistralai/mistral-nemo                         | openrouter  |
+| neversleep/llama-3.1-lumimaid-70b              | openrouter  |
+| anthracite-org/magnum-v4-72b                   | openrouter  |
+| nvidia/llama-3.1-nemotron-70b-instruct         | openrouter  |
+| eva-unit-01/eva-qwen-2.5-14b                   | openrouter  |
+| cohere/command-r-plus                          | openrouter  |
+| ai21/jamba-1-5-mini                            | openrouter  |
+| deepseek/deepseek-chat                         | openrouter  |
+| qwen/qvq-72b-preview                           | openrouter  |
 
-## Chat Models
+## Completion Models
 
-| Organization           | Model Name                               | Model String for API                           | Context Length |
-| ---------------------- | ---------------------------------------- | ---------------------------------------------- | -------------- |
-| 01.AI                  | 01-ai Yi Chat (34B)                      | zero-one-ai/Yi-34B-Chat                        | 4096           |
-| Allen AI               | OLMo-7B-Instruct                         | allenai/OLMo-7B-Instruct                       | 4096           |
-| Allen AI               | OLMo-7B-Twin-2T                          | allenai/OLMo-7B-Twin-2T                        | 4096           |
-| Allen AI               | OLMo-7B                                  | allenai/OLMo-7B                                | 4096           |
-| Austism                | Chronos Hermes (13B)                     | Austism/chronos-hermes-13b                     | 2048           |
-| Cognitive Computations | Dolphin-2.5 Mixtral (8x7B)               | cognitivecomputations/dolphin-2.5-mixtral-8x7b | 4096           |
-| DeepSeek               | Deepseek Coder Instruct (33B)            | deepseek-ai/deepseek-coder-33b-instruct        | 16384          |
-| DeepSeek               | Deepseek LLM (67B) Chat                  | deepseek-ai/deepseek-llm-67b-chat              | 4096           |
-| garage-bAInd           | Platypus2 Instruct (70B)                 | garage-bAInd/Platypus2-70B-instruct            | 4096           |
-| Google                 | Gemma Instruct (2B)                      | google/gemma-2b-it                             | 8192           |
-| Google                 | Gemma Instruct (7B)                      | google/gemma-7b-it                             | 8192           |
-| Gryphe                 | MythoMax-L2 (13B)                        | Gryphe/MythoMax-L2-13b                         | 4096           |
-| LM Sys                 | Vicuna v1.5 (13B)                        | lmsys/vicuna-13b-v1.5                          | 4096           |
-| LM Sys                 | Vicuna v1.5 (7B)                         | lmsys/vicuna-7b-v1.5                           | 4096           |
-| Meta                   | Code Llama Instruct (13B)                | codellama/CodeLlama-13b-Instruct-hf            | 16384          |
-| Meta                   | Code Llama Instruct (34B)                | codellama/CodeLlama-34b-Instruct-hf            | 16384          |
-| Meta                   | Code Llama Instruct (70B)                | codellama/CodeLlama-70b-Instruct-hf            | 4096           |
-| Meta                   | Code Llama Instruct (7B)                 | codellama/CodeLlama-7b-Instruct-hf             | 16384          |
-| Meta                   | LLaMA-2 Chat (70B)                       | meta-llama/Llama-2-70b-chat-hf                 | 4096           |
-| Meta                   | LLaMA-3.1 Chat (405B)                    | meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo  | 4096           |
-| Meta                   | LLaMA-3.1 Chat (70B)                     | meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo   | 128000         |
-| Meta                   | LLaMA-3.1 Chat (8B)                      | meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo    | 128000         |
-| Meta                   | LLaMA-2 Chat (13B)                       | meta-llama/Llama-2-13b-chat-hf                 | 4096           |
-| Meta                   | LLaMA-2 Chat (7B)                        | meta-llama/Llama-2-7b-chat-hf                  | 4096           |
-| Mistralai              | Mistral (7B) Instruct                    | mistralai/Mistral-7B-Instruct-v0.1             | 4096           |
-| Mistralai              | Mistral (7B) Instruct v0.2               | mistralai/Mistral-7B-Instruct-v0.2             | 32768          |
-| Mistralai              | Mixtral-8x7B Instruct (46.7B)            | mistralai/Mixtral-8x7B-Instruct-v0.1           | 32768          |
-| NousResearch           | Nous Capybara v1.9 (7B)                  | NousResearch/Nous-Capybara-7B-V1p9             | 8192           |
-| NousResearch           | Nous Hermes 2 - Mixtral 8x7B-DPO (46.7B) | NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO    | 32768          |
-| NousResearch           | Nous Hermes 2 - Mixtral 8x7B-SFT (46.7B) | NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT    | 32768          |
-| NousResearch           | Nous Hermes LLaMA-2 (7B)                 | NousResearch/Nous-Hermes-llama-2-7b            | 4096           |
-| NousResearch           | Nous Hermes Llama-2 (13B)                | NousResearch/Nous-Hermes-Llama2-13b            | 4096           |
-| NousResearch           | Nous Hermes-2 Yi (34B)                   | NousResearch/Nous-Hermes-2-Yi-34B              | 4096           |
-| OpenChat               | OpenChat 3.5 (7B)                        | openchat/openchat-3.5-1210                     | 8192           |
-| OpenOrca               | OpenOrca Mistral (7B) 8K                 | Open-Orca/Mistral-7B-OpenOrca                  | 8192           |
-| Qwen                   | Qwen-Chat (7B)                           | togethercomputer/Qwen-7B-Chat                  | 8192           |
-| Qwen                   | Qwen 1.5 Chat (0.5B)                     | Qwen/Qwen1.5-0.5B-Chat                         | 32768          |
-| Qwen                   | Qwen 1.5 Chat (1.8B)                     | Qwen/Qwen1.5-1.8B-Chat                         | 32768          |
-| Qwen                   | Qwen 1.5 Chat (4B)                       | Qwen/Qwen1.5-4B-Chat                           | 32768          |
-| Qwen                   | Qwen 1.5 Chat (7B)                       | Qwen/Qwen1.5-7B-Chat                           | 32768          |
-| Qwen                   | Qwen 1.5 Chat (14B)                      | Qwen/Qwen1.5-14B-Chat                          | 32768          |
-| Qwen                   | Qwen 1.5 Chat (72B)                      | Qwen/Qwen1.5-72B-Chat                          | 4096           |
-| Snorkel AI             | Snorkel Mistral PairRM DPO (7B)          | snorkelai/Snorkel-Mistral-PairRM-DPO           | 32768          |
-| Stanford               | Alpaca (7B)                              | togethercomputer/alpaca-7b                     | 2048           |
-| Teknium                | OpenHermes-2-Mistral (7B)                | teknium/OpenHermes-2-Mistral-7B                | 8192           |
-| Teknium                | OpenHermes-2.5-Mistral (7B)              | teknium/OpenHermes-2p5-Mistral-7B              | 8192           |
-| TII UAE                | Falcon Instruct (40B)                    | togethercomputer/falcon-40b-instruct           | 2048           |
-| TII UAE                | Falcon Instruct (7B)                     | togethercomputer/falcon-7b-instruct            | 2048           |
-| Together               | LLaMA-2-7B-32K-Instruct (7B)             | togethercomputer/Llama-2-7B-32K-Instruct       | 32768          |
-| Together               | RedPajama-INCITE Chat (3B)               | togethercomputer/RedPajama-INCITE-Chat-3B-v1   | 2048           |
-| Together               | RedPajama-INCITE Chat (7B)               | togethercomputer/RedPajama-INCITE-7B-Chat      | 2048           |
-| Together               | StripedHyena Nous (7B)                   | togethercomputer/StripedHyena-Nous-7B          | 32768          |
-| Undi95                 | ReMM SLERP L2 (13B)                      | Undi95/ReMM-SLERP-L2-13B                       | 4096           |
-| Undi95                 | Toppy M (7B)                             | Undi95/Toppy-M-7B                              | 4096           |
-| WizardLM               | WizardLM v1.2 (13B)                      | WizardLM/WizardLM-13B-V1.2                     | 4096           |
-| upstage                | Upstage SOLAR Instruct v1 (11B)          | upstage/SOLAR-10.7B-Instruct-v1.0              | 4096           |
-| OpenAI                 | GPT-4                                    | gpt-4                                          | 8192           |
-| OpenAI                 | GPT-4 Turbo                              | gpt-4-turbo                                    | 8192           |
-| OpenAI                 | GPT-4 0613                               | gpt-4-0613                                     | 8192           |
-| OpenAI                 | GPT-4 32K                                | gpt-4-32k                                      | 32768          |
-| OpenAI                 | GPT-4 32K 0613                           | gpt-4-32k-0613                                 | 32768          |
-| OpenAI                 | GPT-3.5 Turbo 0125                       | gpt-3.5-turbo-0125                             | 4096           |
-| OpenAI                 | GPT-3.5 Turbo                            | gpt-3.5-turbo                                  | 4096           |
-| OpenAI                 | GPT-3.5 Turbo 1106                       | gpt-3.5-turbo-1106                             | 4096           |
-| OpenAI                 | GPT-3.5 Turbo Instruct                   | gpt-3.5-turbo-instruct                         | 4096           |
-| OpenAI                 | GPT-3.5 Turbo 16K                        | gpt-3.5-turbo-16k                              | 16384          |
-| OpenAI                 | GPT-3.5 Turbo 0613                       | gpt-3.5-turbo-0613                             | 4096           |
-| OpenAI                 | GPT-3.5 Turbo 16K 0613                   | gpt-3.5-turbo-16k-0613                         | 16384          |
-| OpenAI                 | GPT-4o                                   | gpt-4o                                         | 8192           |
-| OpenAI                 | GPT-4o-mini                              | gpt-4o-mini                                    | 128000         |
-| Anthropic              | Claude 3 Opus (20240229)                 | claude-3-opus-20240229                         | 8192           |
-| Anthropic              | Claude 3 Sonnet (20240229)               | claude-3-sonnet-20240229                       | 8192           |
-| Anthropic              | Claude 3 Haiku (20240307)                | claude-3-haiku-20240307                        | 8192           |
+| id                                       | provider    |
+| ---------------------------------------- | ----------- |
+| gpt-3.5-turbo-instruct                   | openai      |
+| mistralai/Mixtral-8x7B-v0.1              | open-source |
+| meta-llama/Meta-Llama-3-8B               | open-source |
+| mistralai/Mistral-7B-v0.1                | open-source |
+| meta-llama/Llama-2-70b-hf                | open-source |
+| Nexusflow/NexusRaven-V2-13B              | open-source |
+| google/gemma-7b                          | open-source |
+| zero-one-ai/Yi-34B                       | open-source |
+| togethercomputer/StripedHyena-Hessian-7B | open-source |
+| NousResearch/Nous-Hermes-13b             | open-source |
+| togethercomputer/llama-2-7b              | open-source |
+| huggyllama/llama-7b                      | open-source |
+| WizardLM/WizardLM-70B-V1.0               | open-source |
+| huggyllama/llama-65b                     | open-source |
+| Qwen/Qwen1.5-0.5B                        | open-source |
+| Qwen/Qwen1.5-1.8B                        | open-source |
+| Qwen/Qwen1.5-4B                          | open-source |
+| Qwen/Qwen1.5-7B                          | open-source |
+| Qwen/Qwen1.5-72B                         | open-source |
+| togethercomputer/llama-2-13b             | open-source |
+| togethercomputer/llama-2-70b             | open-source |
+| meta-llama/Llama-2-13b-hf                | open-source |
+| huggyllama/llama-13b                     | open-source |
+| huggyllama/llama-30b                     | open-source |
+| allenai/OLMo-7B                          | open-source |
+| Qwen/Qwen1.5-32B                         | open-source |
+| EleutherAI/llemma\_7b                    | open-source |
+| meta-llama/Meta-Llama-3-70B              | open-source |
+| meta-llama/Llama-3-8b-hf                 | open-source |
+| zero-one-ai/Yi-6B                        | open-source |
+| meta-llama/Llama-2-7b-hf                 | open-source |
+| meta-llama/Llama-3-70b-hf                | open-source |
+| togethercomputer/LLaMA-2-7B-32K          | open-source |
+| microsoft/phi-2                          | open-source |
+| togethercomputer/evo-1-131k-base         | open-source |
+| togethercomputer/evo-1-8k-base           | open-source |
+| Qwen/Qwen1.5-14B                         | open-source |
+| google/gemma-2b                          | open-source |
+| mistralai/Mixtral-8x22B                  | open-source |
+| meta-llama/Meta-Llama-3.1-8B-Reference   | open-source |
+| meta-llama/Meta-Llama-3.1-70B-Reference  | open-source |

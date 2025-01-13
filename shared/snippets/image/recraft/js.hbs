@@ -1,0 +1,20 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt: 'A jellyfish in the ocean',
+      aspect_ratio: '16:9',
+      model: '{{model}}',
+      image_size: 'landscape_4_3',
+      style: 'digital_illustration/pixel_art',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main();
