@@ -5,6 +5,6 @@ hidden: true
 
 # Extend an Audio
 
-{% swagger src="broken-reference" path="/extend" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/extend" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}

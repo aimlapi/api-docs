@@ -6,8 +6,8 @@ icon: brackets-curly
 
 ## API Reference
 
-{% swagger src="broken-reference" path="/v2/generate/audio" method="get" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/v2/generate/audio" method="get" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ## Examples

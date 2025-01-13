@@ -8,8 +8,8 @@ icon: code
 
 You can generate a video using the AI/ML API. In the basic setup, you need only a prompt and image url.
 
-{% swagger src="broken-reference" path="/v2/generate/video/kling/generation" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/v2/generate/video/kling/generation" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ## Example

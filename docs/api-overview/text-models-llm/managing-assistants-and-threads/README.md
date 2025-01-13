@@ -10,22 +10,22 @@ Threads and Messages represent a conversation session between an Assistant and a
 
 ## API Reference
 
-{% swagger src="broken-reference" path="/assistants/{assistantId}" method="delete" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants/{assistantId}" method="delete" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
-{% swagger src="broken-reference" path="/assistants" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
-{% swagger src="broken-reference" path="/assistants" method="get" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants" method="get" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
-{% swagger src="broken-reference" path="/assistants/{assistantId}" method="get" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants/{assistantId}" method="get" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
-{% swagger src="broken-reference" path="/assistants/{assistantId}" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/assistants/{assistantId}" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}

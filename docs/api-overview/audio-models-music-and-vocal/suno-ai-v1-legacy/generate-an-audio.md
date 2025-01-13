@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="broken-reference" path="/generate" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/generate" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ## Examples

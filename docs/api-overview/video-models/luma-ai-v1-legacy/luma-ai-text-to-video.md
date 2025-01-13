@@ -23,8 +23,8 @@ Each generation costs 500 000 AI/ML Tokens
 Ensure you replace `"your-api-key"` with your actual API key before running the code.
 {% endhint %}
 
-{% swagger src="broken-reference" path="/luma-ai/generations" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generations" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example
@@ -78,8 +78,8 @@ axios.post(url, payload, { headers })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="broken-reference" path="/luma-ai/generation" method="get" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generation" method="get" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example
@@ -128,8 +128,8 @@ axios.get(url, { headers, params })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="broken-reference" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[Broken link](broken-reference)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml" path="/luma-ai/generations/{taskId}/extend" method="post" %}
+[docs-public.yaml](https://api-staging.aimlapi.com/docs-public-yaml)
 {% endswagger %}
 
 ### Example
