@@ -10,22 +10,22 @@ Threads and Messages represent a conversation session between an Assistant and a
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="delete" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/assistants/{assistantId}" method="delete" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/assistants" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/assistants" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/assistants/{assistantId}" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/assistants/{assistantId}" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/assistants/{assistantId}" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

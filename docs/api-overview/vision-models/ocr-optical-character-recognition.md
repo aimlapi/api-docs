@@ -6,6 +6,6 @@ icon: brackets-curly
 
 Our API provides a feature to extract characters from images.
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/ocr" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/ocr" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

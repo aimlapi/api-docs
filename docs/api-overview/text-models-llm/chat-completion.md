@@ -6,6 +6,7 @@ icon: code
 
 ### Create chat completion
 
-{% swagger src="../../.gitbook/assets/aimlapi.yaml" path="/chat/completions" method="post" %}
-[aimlapi.yaml](../../.gitbook/assets/aimlapi.yaml)
+{% swagger src="broken-reference" path="/chat/completions" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
+

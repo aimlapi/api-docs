@@ -1,10 +1,11 @@
 ---
-description: Learn how to generate image with AI/ML API.
 icon: code
+description: Learn how to generate image with AI/ML API.
 ---
 
 # Generate an Image
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/images/generations" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="https://166d-193-124-44-156.ngrok-free.app/docs-public-json" path="/v1/images/generations" method="post" %}
+[https://166d-193-124-44-156.ngrok-free.app/docs-public-json](https://166d-193-124-44-156.ngrok-free.app/docs-public-json)
 {% endswagger %}
+

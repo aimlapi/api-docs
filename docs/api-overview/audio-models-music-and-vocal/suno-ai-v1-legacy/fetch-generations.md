@@ -6,8 +6,8 @@ icon: brackets-curly
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ## Examples

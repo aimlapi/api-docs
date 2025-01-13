@@ -1,6 +1,6 @@
 ---
-description: Generate Videos from Text or Images
 icon: code
+description: Generate Videos from Text or Images
 ---
 
 # Luma AI Text-to-Video
@@ -23,8 +23,8 @@ Each generation costs 500 000 AI/ML Tokens
 Ensure you replace `"your-api-key"` with your actual API key before running the code.
 {% endhint %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/luma-ai/generations" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Example
@@ -78,8 +78,8 @@ axios.post(url, payload, { headers })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generation" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/luma-ai/generation" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Example
@@ -128,8 +128,8 @@ axios.get(url, { headers, params })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/luma-ai/generations/{taskId}/extend" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Example
@@ -182,4 +182,3 @@ axios.post(url, payload, { headers })
 ```
 {% endtab %}
 {% endtabs %}
-

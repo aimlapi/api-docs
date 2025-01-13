@@ -15,8 +15,8 @@ icon: code
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/generate" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/generate" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ## Examples
@@ -68,6 +68,3 @@ print(response.content)
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

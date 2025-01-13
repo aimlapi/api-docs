@@ -2,12 +2,12 @@
 icon: brackets-curly
 ---
 
-# Fetch Generations
+# Fetch an audio (Stable Audio)
 
 ## API Reference
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/v2/generate/audio" method="get" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/v2/generate/audio" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ## Examples

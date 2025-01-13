@@ -6,20 +6,18 @@ icon: brackets-curly
 
 ## API Reference
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages" method="get" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/threads/{threadId}/messages" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-
-
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/threads/{threadId}/messages" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages/{messageId}" method="get" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/threads/{threadId}/messages/{messageId}" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
-{% swagger src="../../../../.gitbook/assets/docs-public.yaml" path="/threads/{threadId}/messages/{messageId}" method="post" %}
-[docs-public.yaml](../../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/threads/{threadId}/messages/{messageId}" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

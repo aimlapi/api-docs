@@ -6,6 +6,6 @@ icon: brackets-curly
 
 Our API provides a feature to extract visual features from images.
 
-{% swagger src="../../.gitbook/assets/docs-public.yaml" path="/vision" method="post" %}
-[docs-public.yaml](../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/vision" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

@@ -2,14 +2,14 @@
 icon: code
 ---
 
-# Generate a Video
+# Generate Text to Video
 
 ## Overview
 
 You can generate a video using the AI/ML API. In the basic setup, you need only a prompt.
 
-{% swagger src="../../../.gitbook/assets/docs-public.yaml" path="/v2/generate/video/kling/generation" method="post" %}
-[docs-public.yaml](../../../.gitbook/assets/docs-public.yaml)
+{% swagger src="broken-reference" path="/v2/generate/video/kling/generation" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ## Example
