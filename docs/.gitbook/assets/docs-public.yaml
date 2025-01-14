@@ -581,6 +581,44 @@ paths:
                 $ref: '#/components/schemas/FetchAudioDTO'
       tags:
         - Fetch generated audio
+  /v2/generate/audio/minimax/upload: 
+    post: 
+      operationId: "MinimaxControllerV2_uploadGeneration_v2"
+      parameters: [ ]
+      requestBody: 
+        required: true
+        content: 
+          application/json: 
+            schema: 
+              $ref: "#/components/schemas/Upload_Audio_Minimax"
+      responses: 
+        default: 
+          description: ""
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Upload_Audio_Minimax_Response"
+      tags: 
+      - "Minimax"
+  /v2/generate/audio/minimax/generate: 
+    post: 
+      operationId: "MinimaxControllerV2_createGeneration_v2"
+      parameters: [ ]
+      requestBody: 
+        required: true
+        content: 
+          application/json: 
+            schema: 
+              $ref: "#/components/schemas/Generate_Audio_Minimax"
+      responses: 
+        default: 
+          description: ""
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Generate_Audio_Minimax_Response"
+      tags: 
+      - "Minimax"
   /v1/generate/custom-mode:
     post:
       operationId: SunoAiController_generateAudioWithCustomMode_v1
@@ -2446,6 +2484,169 @@ components:
       anyOf:
         - $ref: '#/components/schemas/GenerateAudioByPromptStableAudioDTO'
         - $ref: '#/components/schemas/GenerateAudioByPromptMinimaxDTO'
+    Upload_Audio_Minimax: 
+      type: "object"
+      properties: 
+        file: 
+          description: "Audio file path, supports WAV and MP3 formats. The audio duration must be longer than 10s and no more than 10 minutes."
+        purpose: 
+          type: "string"
+          enum: 
+          - "song"
+          - "voice"
+          - "instrumental"
+          description: |
+            1. If purpose is song:
+              - You need to upload a music file containing both acapella (vocals) and accompaniment.
+              - The acapella must be in singing form; normal speech is not supported.
+              - Outputs: voice_id and instrumental_id.
+            2. If purpose is voice:
+              - You need to upload a file containing only acapella in singing form (normal speech audio is not supported).
+              - Output: voice_id.
+            3. If purpose is instrumental:
+              - You need to upload a file containing only accompaniment.
+              - Output: instrumental_id.
+      required: 
+      - "purpose"
+    Upload_Audio_Minimax_Response: 
+      type: "object"
+      properties: 
+        voice_id: 
+          type: "string"
+          description: "The voice_id will only be returned when the purpose is song or voice."
+          example: "vocal-2025011003141025-d5ZEMxmp"
+        instrumental_id: 
+          type: "string"
+          description: "The instrumental_id will only be returned when the purpose is song or instrumental."
+          example: "instrumental-2025011003141125-Akz9eWnD"
+        base_resp: 
+          type: "object"
+          properties: 
+            status_code: 
+              type: "integer"
+            status_msg: 
+              type: "string"
+          required: 
+          - "status_code"
+          - "status_msg"
+      required: 
+      - "base_resp"
+      additionalProperties: false
+    Generate_Audio_Minimax: 
+      type: "object"
+      properties: 
+        refer_voice: 
+          type: "string"
+          description: "At least one of refer_voice or refer_instrumental is required. When only refer_voice is provided, the system can still output music data. The generated music will be an a cappella vocal hum that aligns with the provided refer_voice and the generated lyrics, without any instrumental accompaniment."
+          example: "vocal-2025010100000000-a0AAAaaa"
+        refer_instrumental: 
+          type: "string"
+          description: "At least one of refer_voice or refer_instrumental is required. When only refer_instrumental is provided, the system can still output music data. The generated music will be a purely instrumental track that aligns with the provided refer_instrumental, without any vocals."
+          example: "instrumental-2025010100000000-Aaa0aAaA"
+        lyrics: 
+          type: "string"
+          description: |
+            "You can use a newline character (\n) to separate each line of lyrics.
+            You can use two consecutive newline characters (\n\n) to add a pause between lines.
+            You can use double hash marks (##) at the beginning and end of the lyrics to add accompaniment."
+          example: "##Swift and Boundless \nIn the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.##"
+        model: 
+          type: "string"
+          enum: 
+          - "music-01"
+          description: "Model id"
+        audio_setting: 
+          type: "object"
+          properties: 
+            sample_rate: 
+              anyOf: 
+              - type: "number"
+                enum: 
+                - "16000"
+              - type: "number"
+                enum: 
+                - "24000"
+              - type: "number"
+                enum: 
+                - "32000"
+              - type: "number"
+                enum: 
+                - "44100"
+              description: "The sampling rate of the generated music"
+            bitrate: 
+              anyOf: 
+              - type: "number"
+                enum: 
+                - "32000"
+              - type: "number"
+                enum: 
+                - "64000"
+              - type: "number"
+                enum: 
+                - "128000"
+              - type: "number"
+                enum: 
+                - "256000"
+              description: "The bit rate of the generated music"
+            format: 
+              type: "string"
+              enum: 
+              - "mp3"
+              - "wav"
+              - "pcm"
+              description: "The format of the generated music"
+          required: 
+          - "sample_rate"
+          - "bitrate"
+          - "format"
+      required: 
+      - "lyrics"
+      - "model"
+    Generate_Audio_Minimax_Response: 
+      type: "object"
+      properties: 
+        data: 
+          type: "object"
+          properties: 
+            status: 
+              type: "integer"
+              description: "Music generation status. 1: In progress; 2: Completed."
+            audio: 
+              type: "string"
+              description: "Hex-encoded audio data. Currently, can generate music with a duration of no more than 1 minute."
+          required: 
+          - "status"
+          - "audio"
+        extra_info: 
+          type: "object"
+          properties: 
+            audio_length: 
+              type: "integer"
+            audio_size: 
+              type: "integer"
+            audio_bitrate: 
+              type: "integer"
+            audio_sample_rate: 
+              type: "integer"
+          required: 
+          - "audio_length"
+          - "audio_size"
+          - "audio_bitrate"
+          - "audio_sample_rate"
+        trace_id: 
+          type: "string"
+        base_resp: 
+          type: "object"
+          properties: 
+            status_code: 
+              type: "integer"
+            status_msg: 
+              type: "string"
+          required: 
+          - "status_code"
+          - "status_msg"
+      required: 
+      - "base_resp"
     GenerateAudioOrVideoResponseDTO:
       type: object
       properties:
@@ -3068,13 +3269,9 @@ components:
             model:
               type: string
               enum:
-                - Nexusflow/NexusRaven-V2-13B
                 - WizardLM/WizardLM-13B-V1.2
                 - codellama/CodeLlama-34b-Instruct-hf
-                - google/gemma-7b
                 - upstage/SOLAR-10.7B-Instruct-v1.0
-                - zero-one-ai/Yi-34B
-                - togethercomputer/StripedHyena-Hessian-7B
                 - meta-llama/Llama-3-70b-chat-hf
                 - teknium/OpenHermes-2-Mistral-7B
                 - mistralai/Mixtral-8x7B-v0.1
@@ -3086,16 +3283,9 @@ components:
                 - meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo
                 - openchat/openchat-3.5-1210
                 - Austism/chronos-hermes-13b
-                - microsoft/phi-2
-                - Qwen/Qwen1.5-0.5B
-                - Qwen/Qwen1.5-1.8B
-                - Qwen/Qwen1.5-4B
-                - Qwen/Qwen1.5-7B
                 - snorkelai/Snorkel-Mistral-PairRM-DPO
                 - Qwen/Qwen1.5-7B-Chat
-                - Qwen/Qwen1.5-14B
                 - Qwen/Qwen1.5-14B-Chat
-                - Qwen/Qwen1.5-72B
                 - Qwen/Qwen1.5-1.8B-Chat
                 - Snowflake/snowflake-arctic-instruct
                 - codellama/CodeLlama-13b-Python-hf
@@ -3112,7 +3302,6 @@ components:
                 - codellama/CodeLlama-13b-Instruct-hf
                 - meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
                 - togethercomputer/Llama-3-8b-chat-hf-int4
-                - meta-llama/Llama-2-13b-hf
                 - teknium/OpenHermes-2p5-Mistral-7B
                 - NousResearch/Nous-Capybara-7B-V1p9
                 - WizardLM/WizardCoder-Python-34B-V1.0
@@ -3120,11 +3309,8 @@ components:
                 - togethercomputer/StripedHyena-Nous-7B
                 - togethercomputer/alpaca-7b
                 - garage-bAInd/Platypus2-70B-instruct
-                - google/gemma-2b
                 - google/gemma-2b-it
                 - google/gemma-7b-it
-                - meta-llama/Llama-2-7b-chat-hf
-                - allenai/OLMo-7B
                 - allenai/OLMo-7B-Instruct
                 - Qwen/Qwen1.5-4B-Chat
                 - Gryphe/MythoMax-L2-13b
@@ -3135,22 +3321,16 @@ components:
                 - meta-llama/Meta-Llama-3-8B
                 - mistralai/Mistral-7B-v0.1
                 - Open-Orca/Mistral-7B-OpenOrca
-                - Qwen/Qwen1.5-32B
                 - NousResearch/Nous-Hermes-llama-2-7b
                 - Qwen/Qwen1.5-32B-Chat
-                - mistralai/Mixtral-8x22B
                 - Qwen/Qwen2-72B-Instruct
                 - Qwen/Qwen1.5-72B-Chat
-                - meta-llama/Meta-Llama-3-70B
-                - meta-llama/Llama-3-8b-hf
                 - deepseek-ai/deepseek-llm-67b-chat
-                - zero-one-ai/Yi-6B
                 - lmsys/vicuna-7b-v1.5
                 - microsoft/WizardLM-2-8x22B
                 - togethercomputer/Llama-3-8b-chat-hf-int8
                 - mistralai/Mistral-7B-Instruct-v0.3
                 - Qwen/Qwen1.5-110B-Chat
-                - meta-llama/Llama-2-7b-hf
                 - meta-llama/Llama-2-13b-chat-hf
                 - google/gemma-2-27b-it
                 - zero-one-ai/Yi-34B-Chat
@@ -3160,17 +3340,14 @@ components:
                 - meta-llama/Llama-3-8b-chat-hf
                 - mistralai/Mixtral-8x7B-Instruct-v0.1
                 - codellama/CodeLlama-70b-hf
-                - togethercomputer/LLaMA-2-7B-32K
                 - codellama/CodeLlama-70b-Instruct-hf
                 - meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo
                 - databricks/dbrx-instruct
                 - meta-llama/Meta-Llama-3-8B-Instruct-Turbo
                 - cognitivecomputations/dolphin-2.5-mixtral-8x7b
                 - mistralai/Mixtral-8x22B-Instruct-v0.1
-                - togethercomputer/evo-1-131k-base
                 - meta-llama/Llama-2-70b-hf
                 - meta-llama/Meta-Llama-3-8B-Instruct-Lite
-                - togethercomputer/evo-1-8k-base
                 - meta-llama/Llama-2-70b-chat-hf
                 - codellama/CodeLlama-7b-Python-hf
                 - Meta-Llama/Llama-Guard-7b
@@ -4701,12 +4878,7 @@ components:
             model:
               type: string
               enum:
-                - prompthero/openjourney
-                - runwayml/stable-diffusion-v1-5
-                - SG161222/Realistic_Vision_V3.0_VAE
-                - stabilityai/stable-diffusion-2-1
                 - stabilityai/stable-diffusion-xl-base-1.0
-                - wavymulder/Analog-Diffusion
             steps:
               type: string
               default: '25'
@@ -5207,11 +5379,8 @@ components:
                 - togethercomputer/m2-bert-80M-2k-retrieval
                 - togethercomputer/m2-bert-80M-8k-retrieval
                 - togethercomputer/m2-bert-80M-32k-retrieval
-                - WhereIsAI/UAE-Large-V1
                 - BAAI/bge-large-en-v1.5
                 - BAAI/bge-base-en-v1.5
-                - sentence-transformers/msmarco-bert-base-dot-v5
-                - bert-base-uncased
           required:
             - input
             - model

@@ -1,0 +1,25 @@
+import requests
+
+def main():
+    url = '{{baseUrl}}/generate/audio/minimax/upload'
+    file_name = 'file_name.mp3'
+    # Your path to the song
+    file_path = 'file_path.mp3'
+
+    purpose = 'song'
+
+    payload = {
+        'purpose': purpose,
+    }
+    files = [
+        ('file', (file_name, open(file_path, 'rb'), 'audio/mpeg'))
+    ]
+    headers = {
+        'authorization': 'Bearer {{apiKey}}',
+    }
+
+    response = requests.request('POST', url, headers=headers, data=payload, files=files)
+    print(response.json())
+
+if __name__ == '__main__':
+    main()
