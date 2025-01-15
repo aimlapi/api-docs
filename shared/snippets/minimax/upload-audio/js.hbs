@@ -1,0 +1,41 @@
+import fs from "fs";
+import path from "path";
+import fetch from "node-fetch";
+import FormData from "form-data";
+
+const main = async () => {
+  const url = "{{baseUrl}}/generate/audio/minimax/upload";
+  const fileName = "filename.mp3";
+  const filePath = path.resolve(fileName);
+
+  const purpose = "song";
+
+  const formData = new FormData();
+  formData.append("purpose", purpose);
+  formData.append("file", fs.createReadStream(filePath), {
+    filename: fileName,
+    contentType: "audio/mpeg",
+  });
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer {{apiKey}}`,
+        ...formData.getHeaders(),
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log("Upload successful:", data);
+    } else {
+      console.error("Upload failed:", response.status, await response.text());
+    }
+  } catch (error) {
+    console.error("Error during upload:", error.message);
+  }
+}
+
+main();

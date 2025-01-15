@@ -11,12 +11,12 @@ icon: code
 
 ## Consumption
 
-1 audio file will be generated for each request, consuming a total of 73 500 AI/ML Tokens.
+1 audio file will be generated for each request, consuming a total of 63 000 AI/ML Tokens.
 
 ## API Reference
 
-{% swagger src="minimax-docs.yaml" path="/v2/generate/audio" method="post" %}
-[minimax-docs.yaml](minimax-docs.yaml)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/audio/minimax/generate" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
 
 ## Examples
@@ -24,24 +24,72 @@ icon: code
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const main = async () => {
-  const response = await fetch("https://api.aimlapi.com/v2/generate/audio", {
-    method: "POST",
-    headers: {
-      Authorization: "Bearer <YOUR_API_KEY>",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "minimax-music",
-      prompt: "## Fast and Limitless. In the heart of the code, where dreams collide, FALs the name, taking tech for a ride. Generative media, blazing the trail, Fast inference power, we'll never fail.##",
-      reference_audio_url: "https://cdn.aimlapi.com/squirrel/files/zebra/WzNbqH7vR20MNTOD1Ec7k_output.mp3",
-    })
-  }).then((res) => res.json());
+// npm install node-fetch form-data
+import fs from "fs";
+import fetch from "node-fetch";
 
-  console.log("Generation:", response);
-};
+const generateMusic = async () => {
+  const url = "https://api.aimlapi.com/v2/generate/audio/minimax/generate";
+  const voiceId = "vocal-2025010100000000-a0AAAaaa";
+  const referInstrumental = "instrumental-2025010100000000-Aaa0aAaA";
 
-main()
+  // Sample lyrics
+  const lyrics = `
+  ##
+  I see a skyline painted in dreams,
+  The colors shift, nothing's as it seems.
+  You’re the whisper in a crowded night,
+  The only constant in a world of flight.
+
+  And I wonder, where the road will go,
+  Through the chaos, you’re the one I know.
+
+  In the future, there’s a place for us,
+  Where time will fade, but not our trust.
+  Through the echoes of what’s yet to be,
+  You’re my forever, my destiny.
+  ##
+  `;
+
+  const payload = {
+    refer_voice: voiceId,
+    refer_instrumental: referInstrumental,
+    lyrics: lyrics,
+    model: "music-01",
+  };
+
+  const apiKey = "<YOUR_API_KEY>"; 
+
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${apiKey}`,
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      const audioHex = data.data.audio;
+      const decodedHex = Buffer.from(audioHex, "hex");
+
+      // Convert to mp3
+      fs.writeFileSync("generated_audio.mp3", decodedHex);
+      console.log("Audio file saved as generated_audio.mp3");
+    } else {
+      console.error("Failed to generate music:", data);
+    }
+  } catch (error) {
+    console.error("Error during API request:", error);
+  }
+}
+
+generateMusic();
 
 ```
 {% endtab %}
@@ -50,22 +98,53 @@ main()
 ```python
 import requests
 
+def generate_music():
+    api_key = '<YOUR_API_KEY>'
+    url = 'https://api.aimlapi.com/v2/generate/audio/minimax/generate'
 
-def main():
-    url = "https://api.aimlapi.com/v2/generate/audio"
+    voice_id = 'vocal-2025010100000000-a0AAAaaa'
+    refer_instrumental = 'instrumental-2025010100000000-Aaa0aAaA'
+
+    #Sample lyrics
+    lyrics = '''
+    ##
+    I see a skyline painted in dreams,
+    The colors shift, nothing's as it seems.
+    You’re the whisper in a crowded night,
+    The only constant in a world of flight.
+
+    And I wonder, where the road will go,
+    Through the chaos, you’re the one I know.
+
+    In the future, there’s a place for us,
+    Where time will fade, but not our trust.
+    Through the echoes of what’s yet to be,
+    You’re my forever, my destiny.
+    ##
+    '''
+
     payload = {
-        "model": "minimax-music",
-        "prompt": "## Fast and Limitless. In the heart of the code, where dreams collide, FALs the name, taking tech for a ride. Generative media, blazing the trail, Fast inference power, we'll never fail.##",
-        "reference_audio_url": "https://cdn.aimlapi.com/squirrel/files/zebra/WzNbqH7vR20MNTOD1Ec7k_output.mp3",
+        'refer_voice': voice_id,
+        'refer_instrumental': refer_instrumental,
+        'lyrics':  lyrics,
+        'model': 'music-01',
+        }
+    headers = {
+        'Content-Type': 'application/json',
+        'authorization': 'Bearer ' + api_key,
     }
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
 
-    response = requests.post(url, json=payload, headers=headers)
-    print("Generation:", response.json())
+    response = requests.post(url, headers=headers, json=payload)
 
+    audio_hex = response.json()['data']['audio']
+    decoded_hex = bytes.fromhex(audio_hex)
 
-if __name__ == "__main__":
-    main()
+    # convert to mp3
+    with open('generated_audio.mp3', 'wb') as f:
+        f.write(decoded_hex)
+
+if __name__ == '__main__':
+    generate_music()
 
 ```
 {% endtab %}
