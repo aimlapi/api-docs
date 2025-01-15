@@ -17,3 +17,7 @@ Our API features the capability to generate audio. With this API, you can create
 {% content-ref url="minimax-music/README.md" %}
 [README.md](minimax-music/README.md)
 {% endcontent-ref %}
+
+{% content-ref url="minimax-music-legacy/README.md" %}
+[README.md](minimax-music-legacy/README.md)
+{% endcontent-ref %}
