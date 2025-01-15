@@ -1,0 +1,34 @@
+import requests
+
+def main():
+    url = '{{baseUrl}}/generate/audio/minimax/generate'
+
+    voice_id = 'vocal-2025010100000000-a0AAAaaa'
+    refer_instrumental = 'instrumental-2025010100000000-Aaa0aAaA'
+
+    lyrics = '''
+        ##Swift and Boundless \n In the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. 
+        \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.\n##
+    '''
+
+    payload = {
+        'refer_voice': voice_id,
+        'refer_instrumental': refer_instrumental,
+        'lyrics':  lyrics,
+        'model': {{model}},
+        }
+    headers = {
+        'Content-Type': 'application/json',
+        'authorization': 'Bearer {{apiKey}}',
+    }
+
+    response = requests.post(url, headers=headers, json=payload)
+
+    audio_hex = response.json()['data']['audio']
+    decoded_hex = bytes.fromhex(audio_hex)
+
+    with open('generated_audio.mp3', 'wb') as f:
+        f.write(decoded_hex)
+
+if __name__ == '__main__':
+    main()

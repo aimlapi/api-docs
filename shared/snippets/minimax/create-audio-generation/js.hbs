@@ -1,0 +1,47 @@
+import fs from "fs";
+import fetch from "node-fetch";
+
+const main = async () => {
+  const url = "{{baseUrl}}/generate/audio/minimax/generate";
+  const voiceId = "vocal-2025010100000000-a0AAAaaa";
+  const referInstrumental = "instrumental-2025010100000000-Aaa0aAaA";
+
+  const lyrics = `##Swift and Boundless \n In the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. 
+  \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.\n##`;
+
+  const payload = {
+    refer_voice: voiceId,
+    refer_instrumental: referInstrumental,
+    lyrics: lyrics,
+    model: {{model}},
+  };
+
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer {{apiKey}}`,
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      const audioHex = data.data.audio;
+      const decodedHex = Buffer.from(audioHex, "hex");
+
+      fs.writeFileSync("generated_audio.mp3", decodedHex);
+      console.log("Audio file saved as generated_audio.mp3");
+    } else {
+      console.error("Failed to generate music:", data);
+    }
+  } catch (error) {
+    console.error("Error during API request:", error);
+  }
+}
+
+main();
