@@ -2,7 +2,7 @@
 icon: satellite-dish
 ---
 
-# Minimax Music
+# Minimax Music (legacy)
 
 ## Overview
 
