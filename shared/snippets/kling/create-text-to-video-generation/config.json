@@ -1,5 +1,6 @@
 {
   "title": "Generate a video",
+  "docs": "https://docs.aimlapi.com/api-overview/video-models/kling/generate-text-to-video",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v2",
     "apiKey": "<YOUR_API_KEY>"

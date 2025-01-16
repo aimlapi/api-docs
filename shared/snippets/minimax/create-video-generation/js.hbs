@@ -1,0 +1,18 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/video/minimax/generation', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'Mona Lisa puts on glasses with her hands.',
+      first_frame_image: 'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
