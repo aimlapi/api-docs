@@ -1,10 +1,8 @@
 # 🤖 Introduction
 
-## Welcome
+## Welcome to the AI/ML API!
 
-Welcome to the AI/ML API!
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="recipes/models-comparsion.md">models-comparsion.md</a></td><td><a data-mention href="api-overview/text-models-llm/parameters.md">parameters.md</a></td><td><a data-mention href="recipes/using-assistants-and-threads.md">using-assistants-and-threads.md</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/model-database/">model-database</a></td><td><a data-mention href="api-overview/text-models-llm/chat-completion.md">chat-completion.md</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><a data-mention href="recipes/models-comparsion.md">models-comparsion.md</a></td><td><a data-mention href="api-overview/text-models-llm/parameters.md">parameters.md</a></td><td><a data-mention href="recipes/using-assistants-and-threads.md">using-assistants-and-threads.md</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><a data-mention href="api-overview/model-database/">model-database</a></td><td><a data-mention href="api-overview/text-models-llm/chat-completion.md">chat-completion.md</a></td><td><a data-mention href="broken-reference/">broken-reference</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
 ## Featured Models
 
@@ -32,8 +30,8 @@ Welcome to the AI/ML API!
 [video-models](api-overview/video-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-overview/guard-models/README.md" %}
-[guard-models](api-overview/guard-models/README.md)
+{% content-ref url="api-overview/guard-models/" %}
+[guard-models](api-overview/guard-models/)
 {% endcontent-ref %}
 
 ## **Overview of the API**
