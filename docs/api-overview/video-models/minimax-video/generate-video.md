@@ -8,8 +8,8 @@ icon: code
 
 You can generate a video using the AI/ML API. In the basic setup, you need a prompt and an image URL.
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/video/minimax/generation" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/v2/generate/video/minimax/generation" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
 ## Example: Create video based on first frame and prompt

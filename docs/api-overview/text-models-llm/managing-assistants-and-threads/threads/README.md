@@ -9,20 +9,20 @@ description: >-
 
 ## API Reference
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="delete" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/threads/{threadId}" method="delete" %}
+[https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/threads" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="get" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/threads/{threadId}" method="get" %}
+[https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/threads/{threadId}" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger src="https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/threads/{threadId}" method="post" %}
+[https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
 ## Example
