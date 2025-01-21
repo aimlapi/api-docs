@@ -16,6 +16,58 @@ icon: code
 [https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api-staging.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
 {% endswagger %}
 
+## **Vision**
+
+{% hint style="info" %}
+**Note:** API only support BASE64 String as Image input.&#x20;
+{% endhint %}
+
+### Possible Media Types
+
+* `image/png`
+* `image/gif`
+* `image/webp`
+
+```python
+import httpx
+import base64
+from openai import OpenAI
+
+client = OpenAI(
+    base_url='https://api.aimlapi.com',
+    api_key='<YOUR_API_KEY>'    
+)  
+
+image_url = "https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg"
+image_media_type = "image/jpeg"
+image_data = base64.standard_b64encode(httpx.get(image_url).content).decode("utf-8")
+
+response = client.chat.completions.create(
+    model="claude-3-5-sonnet-latest",
+    messages=[
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": image_media_type,
+                    "data": imag1_data,
+                },
+            },
+            {
+                "type": "text",
+                "text": "Describe this image."
+            }
+        ],
+    }
+],
+)
+print(response)
+
+```
+
 ## **Function Calling**
 
 To process text and use function calling, follow the examples below:
