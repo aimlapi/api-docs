@@ -76,12 +76,15 @@ const main = async () => {
 
   console.log('Generation:', response);
 };
+
 main()
 ```
 {% endtab %}
 {% tab title="Python" %}
 ```python
 import requests
+
+
 def main():
     url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
     payload = {
@@ -91,3 +94,13 @@ def main():
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
     }
     headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers)
+    print("Generation:", response.json())
+
+if __name__ == "__main__":
+    main()
+
+```
+{% endtab %}
+{% endtabs %}
