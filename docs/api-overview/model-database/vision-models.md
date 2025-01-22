@@ -29,19 +29,21 @@ description: >-
 | claude-3-5-haiku-latest                        | anthropic   |
 | qwen/qvq-72b-preview                           | openrouter  |
 
-#### Key Features
+## Key Features
 
 * **Image Analysis**: Understand and describe the content of images.
 * **Flexible Input Methods**: Supports both image URLs and base64 encoded images.
 * **Multiple Image Inputs**: Analyze multiple images in a single request.
 
-#### Quick Start
+## Quick Start
 
 Images can be provided to the model in two main ways: by passing an image URL or by passing the base64 encoded image directly in the request.
 
-**Example: What's in this image?**
+### **Uploading Images by URL**
 
-**Python Example**
+<details>
+
+<summary>Python Example</summary>
 
 ```python
 import requests
@@ -78,11 +80,19 @@ print(response.json())
 
 ```
 
-Uploading Base64 Encoded Images
+</details>
+
+{% hint style="info" %}
+In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../text-models-llm/function-calling/anthropic.md).
+{% endhint %}
+
+### Uploading Base64 Encoded Images
 
 For local images, you can pass the base64 encoded image to the model.
 
-**Python Example**
+<details>
+
+<summary>Python Example</summary>
 
 ```python
 import base64
@@ -121,7 +131,13 @@ print(response.json())
 
 ```
 
-#### Multiple Image Inputs
+</details>
+
+{% hint style="info" %}
+In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../text-models-llm/function-calling/anthropic.md).
+{% endhint %}
+
+### Multiple Image Inputs
 
 The API can process multiple images in a single request.
 
