@@ -12,19 +12,38 @@ You can generate a video using the AI/ML API. In the basic setup, you need only 
 
 * **Type:** String
 * **Key:** `ratio`
-* **Allowed Values:**  `16:9`, `9:16`
+* **Allowed Values:**  `1280:768`, `768:1280`
 
 ### Prompt
 
 * **Type:** String
-* **Key:** `prompt`
-* **Character Limit:** 2048 characters
+* **Key:** `promptText`
+* **Character Limit:** 512 characters
 
-### Image URL
+### Image
 
-* **Type:** URL
-* **Key:** `image_url`
+* **Type:** URL | Array of objects
+* **Key:** `promptImage`
 * **Description:** Base image URL for the generation
+
+### Watermark
+
+* **Type:** Boolean
+* **Key:** `watermark`
+* **Description:** A boolean indicating whether or not the output video will contain a Runway watermark
+
+### Duration
+
+* **Type:** Integer
+* **Key:** `duration`
+* **Allowed Values:**  `5`, `10`
+* **Description:** The number of seconds of duration for the output video
+
+### Seed
+
+* **Type:** Integer
+* **Key:** `seed`
+* **Description:** If unspecified, a random number is chosen. Varying the seed integer is a way to get different results for the same other request parameters. Using the same seed integer for an identical request will produce similar results.
 
 ## Example
 
@@ -43,10 +62,19 @@ const main = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'runway-gen3/turbo/image-to-video',
-      prompt: 'A jellyfish in the ocean',
-      ratio: '16:9',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
+      model: 'gen3a_turbo',
+      promptText: 'A jellyfish in the ocean',
+      ratio: '768:1280"',
+      promptImage: [
+        {
+          'uri': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
+          'position': 'first'
+        },
+        {
+          'uri': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
+          'position': 'last'
+        },
+      ],
     }),
   }).then((res) => res.json());
 
@@ -65,10 +93,19 @@ import requests
 def main():
     url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
     payload = {
-        "model": "runway-gen3/turbo/image-to-video",
-        "prompt": "A jellyfish in the ocean",
-        "ratio": "16:9",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+        "model": "gen3a_turbo",
+        "promptText": "A jellyfish in the ocean",
+        "ratio": "768:1280",
+        "promptImage": [
+            {
+                "uri": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+                "position": "first"
+            },
+            {
+                "uri": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+                "position": "last"
+            },
+        ],
     }
     headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
 

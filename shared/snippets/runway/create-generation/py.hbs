@@ -5,9 +5,9 @@ def main():
     url = "{{baseUrl}}/generate/video/runway/generation"
     payload = {
         "model": "{{model}}",
-        "prompt": "A jellyfish in the ocean",
-        "ratio": "16:9",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+        "promptText": "A jellyfish in the ocean",
+        "ratio": "768:1280",
+        "promptImage": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
     }
     headers = {"Authorization": "Bearer {{apiKey}}", "Content-Type": "application/json"}
 

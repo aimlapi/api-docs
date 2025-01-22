@@ -23,7 +23,7 @@ You can send the following request:
 ```javascript
 const main = async () => {
   const url = new URL('https://api.aimlapi.com/v2/generate/video/runway/generation');
-  url.searchParams.set('generation_id', '755f9bbb-d99b-4880-992b-f05244ddba61:runway-gen3/turbo/image-to-video');
+  url.searchParams.set('generation_id', 'aa1234aa-a109-4334-9407-f7f6a9306584');
 
   const data = await fetch(url, {
     method: 'GET',
@@ -50,7 +50,7 @@ def main():
     response = requests.get(
         "https://api.aimlapi.com/v2/generate/video/runway/generation",
         params={
-            "generation_id": "755f9bbb-d99b-4880-992b-f05244ddba61:runway-gen3/turbo/image-to-video"
+            "generation_id": "aa1234aa-a109-4334-9407-f7f6a9306584"
         },
         headers={
             "Authorization": "Bearer my_key",
