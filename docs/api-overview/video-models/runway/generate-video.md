@@ -18,13 +18,37 @@ You can generate a video using the AI/ML API. In the basic setup, you need only 
 
 * **Type:** String
 * **Key:** `prompt`
-* **Character Limit:** 2048 characters
+* **Character Limit:** 512 characters
 
 ### Image URL
 
 * **Type:** URL
 * **Key:** `image_url`
-* **Description:** Base image URL for the generation
+* **Description:** A HTTPS URL or data URI containing an encoded image to be used as the first frame of the generated
+
+### Last Image URL
+
+* **Type:** URL
+* **Key:** `last_image_url`
+* **Description:** A HTTPS URL or data URI containing an encoded image to be used as the last frame of the generated
+
+### Duration
+
+* **Type:** Integer
+* **Key:** `duration`
+* **Allowed Values:**  `5`, `10`
+
+### Seed
+
+* **Type:** Integer
+* **Key:** `seed`
+* **Description:**  If unspecified, a random number is chosen. Varying the seed integer is a way to get different results for the same other request parameters. Using the same seed integer for an identical request will produce similar results
+
+### Watermark
+
+* **Type:** Boolean
+* **Key:** `watermark`
+* **Description:**  A boolean indicating whether or not the output video will contain a Runway watermark
 
 ## Example
 
@@ -43,7 +67,7 @@ const main = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'runway-gen3/turbo/image-to-video',
+      model: 'gen3a_turbo',
       prompt: 'A jellyfish in the ocean',
       ratio: '16:9',
       image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
@@ -56,7 +80,6 @@ const main = async () => {
 main()
 ```
 {% endtab %}
-
 {% tab title="Python" %}
 ```python
 import requests
@@ -65,7 +88,7 @@ import requests
 def main():
     url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
     payload = {
-        "model": "runway-gen3/turbo/image-to-video",
+        "model": "gen3a_turbo",
         "prompt": "A jellyfish in the ocean",
         "ratio": "16:9",
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
@@ -75,11 +98,9 @@ def main():
     response = requests.post(url, json=payload, headers=headers)
     print("Generation:", response.json())
 
-
 if __name__ == "__main__":
     main()
 
 ```
 {% endtab %}
 {% endtabs %}
-
