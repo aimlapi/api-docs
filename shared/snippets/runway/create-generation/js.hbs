@@ -7,9 +7,9 @@ const main = async () => {
     },
     body: JSON.stringify({
       model: '{{model}}',
-      promptText: 'A jellyfish in the ocean',
-      ratio: '768:1280',
-      promptImage: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
+      prompt: 'A jellyfish in the ocean',
+      ratio: '16:9',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
     }),
   }).then((res) => res.json());
 
