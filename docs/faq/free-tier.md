@@ -4,11 +4,62 @@ icon: circle-question
 
 # Free Tier?
 
-## What models are included
+## Which models are included
 
-You can use every model listed in the API, including Pro models.
+### **In AI Playground**
 
-## Request cap
+Some models can be tested in the [AI Playground](https://aimlapi.com/app/) available on our official website. There, you will find a list of models ready to be launched.&#x20;
 
-In the Free Tier, requests are limited to 10 requests per hour.
+<figure><img src="../.gitbook/assets/playground-model-list.png" alt=""><figcaption></figcaption></figure>
 
+The following rules apply:
+
+* Regular models come with 50 free requests per day.
+* You can execute only one request at a time.
+* [Pro models](pro-models.md) have a limit of 10,000 AI/ML API tokens per day.
+
+### **Via API**
+
+Using our API on the Free Tier, you can access:
+
+* [Chat completion text models](../api-overview/text-models-llm/chat-completion.md),
+* [Embedding models](../api-overview/text-models-llm/embeddings.md),
+* [Image models](../api-overview/image-models/).
+
+The following Free Tier rules apply:
+
+* You are allowed 10 free requests per hour.
+* When using Chat Completion text models, the maximum output is limited to 512 tokens. Image attachments in messages are not supported.
+* You can generate up to 10 images per hour.&#x20;
+* Using the following image models, you can only 1 image generated at a time:
+
+<details>
+
+<summary>Model list</summary>
+
+* flux/schnell&#x20;
+* flux-pro&#x20;
+* flux-pro/v1.1&#x20;
+* flux-pro/v1.1-ultra
+* flux/dev
+* flux/dev/image-to-image
+* flux-realism
+* stable-diffusion-v3-medium&#x20;
+* stable-diffusion-v35-large
+* recraft-v3
+
+</details>
+
+* For the following models generated images are limited to a resolution of 512x512 pixels:
+
+<details>
+
+<summary>Model list</summary>
+
+* dall-e-2
+* dall-e-3
+* stabilityai/stable-diffusion-xl-base-1.0
+
+</details>
+
+* If image generation requires more than 512 AI/ML API tokens, the request will not be processed.
