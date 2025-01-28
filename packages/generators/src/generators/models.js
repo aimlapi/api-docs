@@ -3,9 +3,7 @@ const PageGenerator = require('./common/page');
 
 class ModelsGenerator extends PageGenerator {
   async fetchModels() {
-    return await fetch(this.config.url)
-      .then((res) => res.json())
-      .then((res) => res.slice(0, 2));
+    return await fetch(this.config.url).then((res) => res.json());
   }
 
   async fetchSwagger() {
