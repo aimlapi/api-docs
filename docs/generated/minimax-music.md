@@ -1,5 +1,5 @@
 [#generator:start]: <> ({ "template": "openapi" })
-{% openapi src="./minimax-music.json" path="/v2/generate/audio" method="post" %}
+{% swagger src="./minimax-music.json" path="/v2/generate/audio" method="post" %}
 [./minimax-music.json](./minimax-music.json)
 {% endswagger %}
 [#generator:end]: <> ({})

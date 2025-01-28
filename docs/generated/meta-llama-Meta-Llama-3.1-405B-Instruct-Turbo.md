@@ -1,5 +1,5 @@
 [#generator:start]: <> ({ "template": "openapi" })
-{% openapi src="./meta-llama-Meta-Llama-3.1-405B-Instruct-Turbo.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./meta-llama-Meta-Llama-3.1-405B-Instruct-Turbo.json" path="/v2/chat/completions" method="post" %}
 [./meta-llama-Meta-Llama-3.1-405B-Instruct-Turbo.json](./meta-llama-Meta-Llama-3.1-405B-Instruct-Turbo.json)
 {% endswagger %}
 [#generator:end]: <> ({})

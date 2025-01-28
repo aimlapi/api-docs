@@ -1,5 +1,5 @@
 [#generator:start]: <> ({ "template": "openapi" })
-{% openapi src="./anthropic-claude-3-haiku.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./anthropic-claude-3-haiku.json" path="/v2/chat/completions" method="post" %}
 [./anthropic-claude-3-haiku.json](./anthropic-claude-3-haiku.json)
 {% endswagger %}
 [#generator:end]: <> ({})

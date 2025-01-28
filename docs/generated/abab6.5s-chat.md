@@ -1,5 +1,5 @@
 [#generator:start]: <> ({ "template": "openapi" })
-{% openapi src="./abab6.5s-chat.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./abab6.5s-chat.json" path="/v2/chat/completions" method="post" %}
 [./abab6.5s-chat.json](./abab6.5s-chat.json)
 {% endswagger %}
 [#generator:end]: <> ({})
