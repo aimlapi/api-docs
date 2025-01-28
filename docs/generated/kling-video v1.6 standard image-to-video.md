@@ -1,4 +1,2 @@
-{% swagger generated="true" src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/video/kling/generation" method="post"
-%}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+{% swagger generated="true" src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/video/kling/generation" method="post" %} [https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
 {% endswagger %}
