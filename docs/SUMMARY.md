@@ -89,12 +89,10 @@
   * [Embedding Models](api-overview/model-database/embedding-models.md)
   * [Model Request](api-overview/model-database/model-request.md)
 
-[#generator:start]: <> ({ "template": "summary" })
 ## Generated
 * [Generated](generated/README.md)
   * [gpt-4o](generated/gpt-4o)
   * [gpt-4o-2024-08-06](generated/gpt-4o-2024-08-06)
-[#generator:end]: <> ( )
 
 ## Recipess
 
