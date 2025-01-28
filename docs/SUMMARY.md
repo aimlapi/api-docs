@@ -90,8 +90,8 @@
   * [Model Request](api-overview/model-database/model-request.md)
 
 ## Generated
-* [gpt-4o](generated/gpt-4o)
-* [gpt-4o-2024-08-06](generated/gpt-4o-2024-08-06)
+* [gpt-4o](generated/gpt-4o.md)
+* [gpt-4o-2024-08-06](generated/gpt-4o-2024-08-06.md)
 
 ## Recipess
 
