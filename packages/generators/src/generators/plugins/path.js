@@ -7,7 +7,10 @@ class PathPlugin extends GeneratorPlugin {
   }
 
   static get path() {
-    return (config) => PathPlugin.locate(config.plugins).state(config).path;
+    return (config) => {
+      const state = PathPlugin.locate(config.plugins).state(config);
+      return path.join(state.root, state.path);
+    };
   }
 
   static get root() {
@@ -16,7 +19,7 @@ class PathPlugin extends GeneratorPlugin {
 
   apply(ctx, config, payload) {
     const state = this.state(ctx);
-    state.path = path.join(state.root || '.', state.path || '.', payload);
+    state.path = path.join(state.path || '.', payload);
   }
 }
 

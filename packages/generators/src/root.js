@@ -34,6 +34,15 @@ const root = {
           })),
         ],
       }),
+      HandlebarsPageGenerator.build({
+        content: readTemplate(TEMPLATE.models),
+        effects: [
+          StorePlugin.store((...args) => ({
+            path: `${PathPlugin.path(...args)}/README.md`,
+            transform: replaceTemplate(TEMPLATE.models),
+          })),
+        ],
+      }),
     ],
   }),
   plugins: [new PathPlugin(), new StorePlugin()],

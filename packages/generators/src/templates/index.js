@@ -25,6 +25,7 @@ const replaceTemplate = (name) => (prev, next) => {
 const TEMPLATE = {
   swagger: 'swagger',
   summary: 'summary',
+  models: 'models',
 };
 
 module.exports = { readTemplate, replaceTemplate, TEMPLATE };
