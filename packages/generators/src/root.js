@@ -25,28 +25,17 @@ const root = {
                   return next;
                 }
 
-                const expr = /{% swagger generated.+{% endswagger %}/gs;
+                const expr = /{% swagger generated="true".+{% endswagger %}/gs;
 
                 const isHas = expr.test(prev);
                 if (isHas) {
-                  return prev.replace(/{% swagger generated.+{% endswagger %}/gs, next);
+                  return prev.replace(/{% swagger generated="true".+{% endswagger %}/gs, next);
                 } else {
                   return prev + '\n' + next;
                 }
               },
             })),
           ],
-        }),
-        CustomGenerator.build({
-          *generate(config) {
-            return { content: config.swagger.schema };
-          },
-          effects: [
-            StorePlugin.store((...args) => ({
-              path: `${PathPlugin.path(...args)}.json`,
-            })),
-          ],
-          content: 'ho',
         }),
       ],
     }),

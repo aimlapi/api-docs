@@ -41,7 +41,7 @@ class ModelPageGenerator extends PageGenerator {
         },
         model: this.config.model.name,
       },
-      PathPlugin.traverse(`/${this.config.model.name}`),
+      PathPlugin.traverse(`/${this.config.model.name.replaceAll('/', ' ')}`),
     );
   }
 }
