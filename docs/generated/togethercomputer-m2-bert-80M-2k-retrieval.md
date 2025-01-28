@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v1/embeddings" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./togethercomputer-m2-bert-80M-2k-retrieval.json" path="/embeddings" method="post" %}
+[./togethercomputer-m2-bert-80M-2k-retrieval.json](./togethercomputer-m2-bert-80M-2k-retrieval.json)
 {% endswagger %}
 [#generator:end]: <> ({})

@@ -7,18 +7,18 @@ class ModelsGenerator extends PageGenerator {
   }
 
   async fetchSwagger() {
-    return await fetch(this.config.swagger.url).then((res) => res.json());
+    return await fetch(this.config.openapi.url).then((res) => res.json());
   }
 
   async *generate() {
-    const swagger = parseOpenapi(await this.fetchSwagger());
+    const openapi = parseOpenapi(await this.fetchSwagger());
     const models = await this.fetchModels();
 
     for (const model of models) {
       model.key = model.name.replace(/[\/#]/g, ' ').trim().replace(/\s+/g, '-');
     }
 
-    yield this.done({ models, swagger });
+    yield this.done({ models, openapi });
   }
 }
 

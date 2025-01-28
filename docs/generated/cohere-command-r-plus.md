@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/chat/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./cohere-command-r-plus.json" path="/v2/chat/completions" method="post" %}
+[./cohere-command-r-plus.json](./cohere-command-r-plus.json)
 {% endswagger %}
 [#generator:end]: <> ({})

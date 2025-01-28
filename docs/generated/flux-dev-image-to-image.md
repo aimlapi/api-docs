@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/images/generations/with-url" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./flux-dev-image-to-image.json" path="/images/generations/with-url" method="post" %}
+[./flux-dev-image-to-image.json](./flux-dev-image-to-image.json)
 {% endswagger %}
 [#generator:end]: <> ({})

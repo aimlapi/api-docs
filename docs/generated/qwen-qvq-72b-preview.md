@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/chat/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./qwen-qvq-72b-preview.json" path="/v2/chat/completions" method="post" %}
+[./qwen-qvq-72b-preview.json](./qwen-qvq-72b-preview.json)
 {% endswagger %}
 [#generator:end]: <> ({})

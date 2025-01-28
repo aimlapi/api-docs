@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/generate/video/kling/generation" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./kling-video-v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
+[./kling-video-v1-standard-image-to-video.json](./kling-video-v1-standard-image-to-video.json)
 {% endswagger %}
 [#generator:end]: <> ({})

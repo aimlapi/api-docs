@@ -27,7 +27,10 @@ const extractModels = (schema, schemaById) => {
 const extractUnion = (model, schema, schemaById) => {
   if (schema.properties?.model?.enum) {
     if (schema.properties.model.enum.includes(model)) {
-      return _.set({ ...schema }, 'properties.model.enum', [model]);
+      const cloned = _.cloneDeep(schema);
+      cloned.properties.model.enum = [model];
+
+      return cloned;
     }
   }
 
@@ -35,7 +38,7 @@ const extractUnion = (model, schema, schemaById) => {
     for (const inner of schema.anyOf) {
       const extracted = extractUnion(model, inner, schemaById);
       if (extracted) {
-        return;
+        return extracted;
       }
     }
   }
@@ -44,7 +47,7 @@ const extractUnion = (model, schema, schemaById) => {
     for (const inner of schema.oneOf) {
       const extracted = extractUnion(model, inner, schemaById);
       if (extracted) {
-        return;
+        return extracted;
       }
     }
   }
@@ -70,6 +73,8 @@ const parseOpenapi = (openapi) => {
         continue;
       }
 
+      const operation = openapi.paths[path][method];
+
       const refId = openapi.paths[path][method].requestBody?.content?.['application/json']?.schema?.$ref
         .split('/')
         .at(-1);
@@ -77,7 +82,13 @@ const parseOpenapi = (openapi) => {
       const models = extractModels(schema, schemaById);
 
       for (const model of models) {
-        byModel[model] = { path, schema: extractUnion(model, schema, schemaById) };
+        const union = extractUnion(model, schema, schemaById);
+
+        const { paths, ...rest } = openapi;
+
+        const transformed = { paths: [{ [path]: { [method]: { ...operation, requestBody: union } } }], ...rest };
+
+        byModel[model] = { path, schema: transformed };
       }
     }
   }

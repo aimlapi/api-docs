@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v1/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./meta-llama-Meta-Llama-3.1-8B-Reference.json" path="/completions" method="post" %}
+[./meta-llama-Meta-Llama-3.1-8B-Reference.json](./meta-llama-Meta-Llama-3.1-8B-Reference.json)
 {% endswagger %}
 [#generator:end]: <> ({})

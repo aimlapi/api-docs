@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/chat/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./anthropic-claude-3.5-sonnet.json" path="/v2/chat/completions" method="post" %}
+[./anthropic-claude-3.5-sonnet.json](./anthropic-claude-3.5-sonnet.json)
 {% endswagger %}
 [#generator:end]: <> ({})

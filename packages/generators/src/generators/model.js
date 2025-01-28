@@ -4,8 +4,8 @@ const PathPlugin = require('./plugins/path');
 
 class ModelPageGenerator extends PageGenerator {
   *generate() {
-    const { models, swagger, ...rest } = this.config;
-    const { byModel } = swagger;
+    const { models, openapi, ...rest } = this.config;
+    const { byModel } = openapi;
 
     for (const model of models) {
       const { path, schema } = byModel[model.name];
@@ -17,9 +17,9 @@ class ModelPageGenerator extends PageGenerator {
       yield this.done(
         {
           ...rest,
-          swagger: {
-            ...swagger,
-            url: OPENAPI_URL,
+          openapi: {
+            ...openapi,
+            url: `./${model.key}.json`,
             path,
             method: 'post',
             schema,

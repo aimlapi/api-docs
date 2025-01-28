@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/chat/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./deepseek-ai-deepseek-llm-67b-chat.json" path="/v2/chat/completions" method="post" %}
+[./deepseek-ai-deepseek-llm-67b-chat.json](./deepseek-ai-deepseek-llm-67b-chat.json)
 {% endswagger %}
 [#generator:end]: <> ({})

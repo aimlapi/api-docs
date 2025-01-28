@@ -14,7 +14,10 @@ class StorePlugin extends GeneratorPlugin {
     }
 
     const transform = payload.transform ?? ((_, n) => n);
-    const content = transform(fs.existsSync(payload.path) ? fs.readFileSync(payload.path, 'utf8') : '', config.content);
+    const content = transform(
+      fs.existsSync(payload.path) ? fs.readFileSync(payload.path, 'utf8') : '',
+      payload.content ? payload.content(config) : config.content,
+    );
 
     fs.writeFileSync(payload.path, content);
   }

@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v2/chat/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./neversleep-llama-3.1-lumimaid-70b.json" path="/v2/chat/completions" method="post" %}
+[./neversleep-llama-3.1-lumimaid-70b.json](./neversleep-llama-3.1-lumimaid-70b.json)
 {% endswagger %}
 [#generator:end]: <> ({})

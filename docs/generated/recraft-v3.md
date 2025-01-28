@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/images/generations/with-url" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./recraft-v3.json" path="/images/generations/with-url" method="post" %}
+[./recraft-v3.json](./recraft-v3.json)
 {% endswagger %}
 [#generator:end]: <> ({})

@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/v1/completions" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./mistralai-Mixtral-8x7B-v0.1.json" path="/completions" method="post" %}
+[./mistralai-Mixtral-8x7B-v0.1.json](./mistralai-Mixtral-8x7B-v0.1.json)
 {% endswagger %}
 [#generator:end]: <> ({})

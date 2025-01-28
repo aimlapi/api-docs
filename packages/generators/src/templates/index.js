@@ -23,7 +23,7 @@ const replaceTemplate = (name) => (prev, next) => {
 };
 
 const TEMPLATE = {
-  swagger: 'swagger',
+  openapi: 'openapi',
   summary: 'summary',
   models: 'models',
 };

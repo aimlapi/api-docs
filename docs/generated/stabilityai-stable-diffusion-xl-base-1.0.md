@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/images/generations/with-url" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./stabilityai-stable-diffusion-xl-base-1.0.json" path="/images/generations/with-url" method="post" %}
+[./stabilityai-stable-diffusion-xl-base-1.0.json](./stabilityai-stable-diffusion-xl-base-1.0.json)
 {% endswagger %}
 [#generator:end]: <> ({})

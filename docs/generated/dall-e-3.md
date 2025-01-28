@@ -1,5 +1,5 @@
-[#generator:start]: <> ({ "template": "swagger" })
-{% swagger src="https://api-staging.aimlapi.com/docs-public-json" path="/images/generations/with-url" method="post" %}
-[https://api-staging.aimlapi.com/docs-public-json](https://api-staging.aimlapi.com/docs-public-json)
+[#generator:start]: <> ({ "template": "openapi" })
+{% openapi src="./dall-e-3.json" path="/images/generations/with-url" method="post" %}
+[./dall-e-3.json](./dall-e-3.json)
 {% endswagger %}
 [#generator:end]: <> ({})
