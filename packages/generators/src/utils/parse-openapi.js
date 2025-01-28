@@ -86,7 +86,24 @@ const parseOpenapi = (openapi) => {
 
         const { paths, ...rest } = openapi;
 
-        const transformed = { paths: [{ [path]: { [method]: { ...operation, requestBody: union } } }], ...rest };
+        const transformed = {
+          paths: {
+            [path]: {
+              [method]: {
+                ...operation,
+                requestBody: {
+                  ...operation.requestBody,
+                  content: {
+                    ['application/json']: {
+                      schema: union,
+                    },
+                  },
+                },
+              },
+            },
+          },
+          ...rest,
+        };
 
         byModel[model] = { path, schema: transformed };
       }
