@@ -10,9 +10,13 @@ class PathPlugin extends GeneratorPlugin {
     return (config) => PathPlugin.locate(config.plugins).state(config).path;
   }
 
+  static get root() {
+    return (config) => PathPlugin.locate(config.plugins).state(config).root;
+  }
+
   apply(ctx, config, payload) {
     const state = this.state(ctx);
-    state.path = path.join(state.path || '.', payload);
+    state.path = path.join(state.root || '.', state.path || '.', payload);
   }
 }
 

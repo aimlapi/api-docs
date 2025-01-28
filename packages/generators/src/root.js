@@ -3,7 +3,7 @@ const ModelPageGenerator = require('./generators/model');
 const HandlebarsPageGenerator = require('./generators/common/handlebars');
 const PathPlugin = require('./generators/plugins/path');
 const StorePlugin = require('./generators/plugins/store');
-const { TEMPLATE, readTemplate } = require('./templates');
+const { TEMPLATE, readTemplate, replaceTemplate } = require('./templates');
 const { MODELS_URL, OPENAPI_URL: SWAGGER_URL } = require('./config');
 const CustomGenerator = require('./generators/custom');
 
@@ -13,32 +13,28 @@ const root = {
     swagger: {
       url: SWAGGER_URL,
     },
-    next: ModelPageGenerator.build({
-      content: readTemplate(TEMPLATE.swagger),
-      next: [
-        HandlebarsPageGenerator.build({
+    next: [
+      ModelPageGenerator.build({
+        next: HandlebarsPageGenerator.build({
+          content: readTemplate(TEMPLATE.swagger),
           effects: [
             StorePlugin.store((...args) => ({
               path: `${PathPlugin.path(...args)}.md`,
-              transform: (prev, next) => {
-                if (!prev.trim()) {
-                  return next;
-                }
-
-                const expr = /{% swagger generated="true".+{% endswagger %}/gs;
-
-                const isHas = expr.test(prev);
-                if (isHas) {
-                  return prev.replace(/{% swagger generated="true".+{% endswagger %}/gs, next);
-                } else {
-                  return prev + '\n' + next;
-                }
-              },
+              transform: replaceTemplate(TEMPLATE.swagger),
             })),
           ],
         }),
-      ],
-    }),
+      }),
+      HandlebarsPageGenerator.build({
+        content: readTemplate(TEMPLATE.summary),
+        effects: [
+          StorePlugin.store((...args) => ({
+            path: `${PathPlugin.root(...args)}/SUMMARY.md`,
+            transform: replaceTemplate(TEMPLATE.summary),
+          })),
+        ],
+      }),
+    ],
   }),
   plugins: [new PathPlugin(), new StorePlugin()],
 };

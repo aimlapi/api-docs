@@ -6,7 +6,7 @@ const { root } = require('./root');
 const PathPlugin = require('./generators/plugins/path');
 
 const generate = (ctx) => {
-  PathPlugin.locate(root.plugins).update(ctx, { path: ctx.path });
+  PathPlugin.locate(root.plugins).update(ctx, { root: ctx.path, path: '/generated' });
 
   const step = async (ctx, iterable = [root]) => {
     for await (const item of iterable) {

@@ -12,9 +12,9 @@ class ModelsGenerator extends PageGenerator {
 
   async *generate() {
     const swagger = parseOpenapi(await this.fetchSwagger());
-    for (const model of await this.fetchModels()) {
-      yield this.done({ model, swagger });
-    }
+    const models = await this.fetchModels();
+
+    yield this.done({ models, swagger });
   }
 }
 
