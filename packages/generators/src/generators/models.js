@@ -15,7 +15,7 @@ class ModelsGenerator extends PageGenerator {
     const models = await this.fetchModels();
 
     for (const model of models) {
-      model.key = model.name.replace(/[\/#]/g, ' ').trim().replace(/\s+/, '-');
+      model.key = model.name.replace(/[\/#]/g, ' ').trim().replace(/\s+/g, '-');
     }
 
     yield this.done({ models, swagger });
