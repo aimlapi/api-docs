@@ -88,9 +88,12 @@
   * [Music & Vocal Models](api-overview/model-database/music-and-vocal-models.md)
   * [Embedding Models](api-overview/model-database/embedding-models.md)
   * [Model Request](api-overview/model-database/model-request.md)
-* [Model Request](generated/#g1_aura-arcas-en.md)
 
-## Recipes
+## Generated
+* [Generated](generated/README.md)
+  * [DALL-e-3](generated/dall-e-3.md)
+
+## Recipess
 
 * [Models comparsion](recipes/models-comparsion.md)
 * [Using Assistants & Threads](recipes/using-assistants-and-threads.md)
