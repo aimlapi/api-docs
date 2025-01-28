@@ -1,2 +1,0 @@
-# x-ai/grok-beta
-

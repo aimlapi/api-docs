@@ -1,6 +1,0 @@
----
-icon: crystal-ball
----
-
-# Generated
-

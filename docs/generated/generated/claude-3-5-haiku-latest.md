@@ -1,2 +1,0 @@
-# claude-3-5-haiku-latest
-

@@ -1,2 +1,0 @@
-# MiniMax-Text-01
-

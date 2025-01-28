@@ -1,2 +1,0 @@
-# minimax-music
-

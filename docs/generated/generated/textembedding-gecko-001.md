@@ -1,2 +1,0 @@
-# textembedding-gecko@001
-
