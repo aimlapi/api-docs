@@ -282,7 +282,7 @@
 * [gen3a_turbo](generated/gen3a_turbo.md)
 * [MiniMax-Text-01](generated/MiniMax-Text-01.md)
 * [abab6.5s-chat](generated/abab6.5s-chat.md)
-[#generator:end]: <> ( )
+[#generator:end]: <> ({})
 
 ## Recipess
 

@@ -6,7 +6,7 @@ const readTemplate = (name) => {
 
   return `[#generator:start]: <> ({ "template": "${name}" })
 ${content}
-[#generator:end]: <> ( )`;
+[#generator:end]: <> ({})`;
 };
 
 const replaceTemplate = (name) => (prev, next) => {

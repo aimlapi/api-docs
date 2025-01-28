@@ -26,7 +26,7 @@ class ModelPageGenerator extends PageGenerator {
           },
           model,
         },
-        PathPlugin.traverse(`/${model.name.replaceAll('/', ' ')}`),
+        PathPlugin.traverse(`/${model.key}`),
       );
     }
   }
