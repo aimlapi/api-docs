@@ -6,14 +6,14 @@ const { root } = require('./root');
 const PathPlugin = require('./generators/plugins/path');
 
 const generate = (ctx) => {
-  PathPlugin.locate(root.plugins).update(ctx, { root: ctx.path, path: '/generated' });
+  PathPlugin.locate(root.plugins).update(ctx, { root: ctx.path, path: '/' });
 
   const step = async (ctx, iterable = [root]) => {
     for await (const item of iterable) {
       const updated = { plugins: root.plugins, ..._.cloneDeep(ctx) };
 
       for (const applier of item.effects || []) {
-        applier(updated, item.next?.config ?? {});
+        await applier(updated, item.next?.config ?? {});
       }
 
       if (!item.next) {

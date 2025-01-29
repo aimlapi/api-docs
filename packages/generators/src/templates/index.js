@@ -9,17 +9,42 @@ ${content}
 [#generator:end]: <> ({})`;
 };
 
-const replaceTemplate = (name) => (prev, next) => {
-  if (!prev.trim()) {
-    return next;
-  }
+const replaceTemplate =
+  (name, replacer = (match, next) => match.replace(match, next)) =>
+  (prev, next) => {
+    if (!prev.trim()) {
+      return next;
+    }
 
-  const expr = /^\[#generator:start\]:\s<>\s\(({.+?})\)(.+?)\[#generator:end\].+?$/gms;
+    const expr = /^\[#generator:start\]:\s<>\s\(({.+?})\)(.+)\[#generator:end\].+?$/gms;
 
-  return prev.replace(expr, (match, payload, content) => {
-    const config = JSON.parse(payload);
-    return config.template === name ? match.replace(match, next) : content;
-  });
+    return prev.replace(expr, (match, payload, content) => {
+      const config = JSON.parse(payload);
+      const replaced =
+        config.template === name ? match.replace(content, '\n' + replacer(content, next) + '\n') : content;
+      return replaced;
+    });
+  };
+
+const summaryReplacer = (match, next) => {
+  const { path, provider } = next;
+
+  const summary = SummaryParserMap.parse(match);
+
+  summary[provider] = {
+    ...summary[provider],
+    key: provider,
+    value: path,
+    children: { ...summary[provider]?.children },
+  };
+
+  const stringified = SummaryParserMap.stringify(summary);
+
+  return `## Generated\n${stringified}`;
+};
+
+const escapeRegExp = (str) => {
+  return str.replace(/\$/g, '$$$$');
 };
 
 const TEMPLATE = {

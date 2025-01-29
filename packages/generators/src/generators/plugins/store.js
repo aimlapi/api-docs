@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs').promises;
 const GeneratorPlugin = require('./plugin');
 
 class StorePlugin extends GeneratorPlugin {
@@ -7,19 +7,22 @@ class StorePlugin extends GeneratorPlugin {
     return StorePlugin.apply(payload);
   }
 
-  apply(ctx, config, payload) {
+  async apply(ctx, config, payload) {
     const dirname = path.dirname(payload.path);
-    if (!fs.existsSync(dirname)) {
-      fs.mkdirSync(dirname, { recursive: true });
+    const isDirExists = await fs.stat(dirname).catch(() => false);
+
+    if (!isDirExists) {
+      await fs.mkdir(dirname, { recursive: true });
     }
 
+    const isFileExists = await fs.stat(payload.path).catch(() => false);
     const transform = payload.transform ?? ((_, n) => n);
     const content = transform(
-      fs.existsSync(payload.path) ? fs.readFileSync(payload.path, 'utf8') : '',
-      payload.content ? payload.content(config) : config.content,
+      isFileExists ? await fs.readFile(payload.path, 'utf8') : '',
+      payload.content ? payload.content(ctx, config) : config.content,
     );
 
-    fs.writeFileSync(payload.path, content);
+    await fs.writeFile(payload.path, content);
   }
 }
 

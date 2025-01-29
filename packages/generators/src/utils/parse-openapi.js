@@ -28,7 +28,10 @@ const extractUnion = (model, schema, schemaById) => {
   if (schema.properties?.model?.enum) {
     if (schema.properties.model.enum.includes(model)) {
       const cloned = _.cloneDeep(schema);
-      cloned.properties.model.enum = [model];
+      cloned.properties = {
+        ...cloned.properties,
+        model: { ...cloned.properties.model, enum: [model] },
+      };
 
       return cloned;
     }

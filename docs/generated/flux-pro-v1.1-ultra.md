@@ -1,5 +1,0 @@
-[#generator:start]: <> ({ "template": "openapi" })
-{% swagger src="./flux-pro-v1.1-ultra.json" path="/images/generations/with-url" method="post" %}
-[./flux-pro-v1.1-ultra.json](./flux-pro-v1.1-ultra.json)
-{% endswagger %}
-[#generator:end]: <> ({})

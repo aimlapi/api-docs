@@ -26,7 +26,7 @@ class GeneratorPlugin {
     Object.assign(this.state(ctx), payload);
   }
 
-  apply(ctx, config, payload) {
+  async apply(ctx, config, payload) {
     throw new Error('Method not implemented');
   }
 }

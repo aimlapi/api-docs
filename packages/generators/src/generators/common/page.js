@@ -17,7 +17,7 @@ class PageGenerator {
   }
 
   done(next, ...newEffects) {
-    const effects = [...(this.config.effects ?? []), ...newEffects];
+    const effects = [...newEffects, ...(this.config.effects ?? [])];
 
     if (!next || next instanceof PageGenerator) {
       return { next, effects };
