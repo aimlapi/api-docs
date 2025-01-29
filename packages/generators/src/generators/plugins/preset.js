@@ -17,7 +17,7 @@ const summary = (name) =>
       const key = file.split(`/`).at(-1);
       const tags = PathPlugin.tags(...args);
 
-      return { key, tags, file: name ? path.join(path.dirname(file), name) : file };
+      return { key, tags, file: name ? path.join(file, name) : file };
     },
     path: `${PathPlugin.root(...args)}/SUMMARY.md`,
     transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
