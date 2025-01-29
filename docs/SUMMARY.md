@@ -91,7 +91,6 @@
 
 [#generator:start]: <> ({ "template": "summary" })
 ## Generated
-* [gpt-4o](generated/openai/gpt-4o.md)
 * [openai](generated/README.md)
   * [gpt-4o](generated/openai/gpt-4o.md)
   * [gpt-4o-2024-08-06](generated/openai/gpt-4o-2024-08-06.md)
