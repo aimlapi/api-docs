@@ -98,12 +98,17 @@
 
 * [Can I use API in Python?](faq/can-i-use-api-in-python.md)
 * [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
-* [Pro Models?](faq/pro-models.md)
-* [Free Tier?](faq/free-tier.md)
+* [What are the Pro Models?](faq/pro-models.md)
+* [How to use the Free Tier?](faq/free-tier.md)
 * [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
-* [My requests are cropped?](faq/my-requests-are-cropped.md)
+* [Are my requests cropped?](faq/my-requests-are-cropped.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 
 ## Glossary
 
 * [Concepts](glossary/concepts.md)
+
+## Integrations
+
+* [About](integrations/about.md)
+* [Langflow](integrations/langflow.md)

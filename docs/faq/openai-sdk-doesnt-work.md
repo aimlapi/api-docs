@@ -1,5 +1,17 @@
 ---
 icon: circle-question
+description: FAQ section with several possible reasons of the problem with OpenAI SDK.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # OpenAI SDK doesn't work?

@@ -1,6 +1,6 @@
 ---
-description: Example of using the threads API
 icon: code
+description: Example of using the threads API.
 ---
 
 # Using Assistants & Threads

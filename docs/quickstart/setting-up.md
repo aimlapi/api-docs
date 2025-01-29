@@ -1,5 +1,20 @@
 ---
 icon: hand-wave
+description: >-
+  A step-by-step guide to setting up and making a test call to the AI model,
+  including generating an API key, configuring the Base URL, and running the
+  first request.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Setting Up

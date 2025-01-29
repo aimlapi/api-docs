@@ -1,8 +1,24 @@
 ---
 icon: circle-question
+description: FAQ section about AI/ML API Free Tier option.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Free Tier?
+# How to use the Free Tier?
+
+## About
+
+The Free Tier allows users to use the service with certain limits at no cost. This helps them test the product and see if it works for their goals before making any payments.
 
 ## Which models are included
 

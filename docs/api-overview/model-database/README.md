@@ -1,8 +1,17 @@
 ---
 icon: crystal-ball
-description: >-
-  AI/ML API provides a suite of powerful, serverless models for seamless
-  integration into your applications
+description: A full list of available models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Model Database

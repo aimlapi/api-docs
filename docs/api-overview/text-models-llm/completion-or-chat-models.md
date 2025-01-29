@@ -1,5 +1,17 @@
 ---
 icon: book-open
+description: An explanation of completion and chat completion terms.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Completion or Chat Models

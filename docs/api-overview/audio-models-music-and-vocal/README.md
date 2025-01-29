@@ -1,5 +1,17 @@
 ---
 icon: guitar
+description: Overview of the capabilities of AIML API audio models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Audio Models (Music & Vocal)
@@ -10,14 +22,14 @@ Our API features the capability to generate audio. With this API, you can create
 
 ## Providers
 
-{% content-ref url="stable-audio/README.md" %}
-[README.md](stable-audio/README.md)
+{% content-ref url="stable-audio/" %}
+[stable-audio](stable-audio/)
 {% endcontent-ref %}
 
-{% content-ref url="minimax-music/README.md" %}
-[README.md](minimax-music/README.md)
+{% content-ref url="minimax-music/" %}
+[minimax-music](minimax-music/)
 {% endcontent-ref %}
 
-{% content-ref url="minimax-music-legacy/README.md" %}
-[README.md](minimax-music-legacy/README.md)
+{% content-ref url="minimax-music-legacy/" %}
+[minimax-music-legacy](minimax-music-legacy/)
 {% endcontent-ref %}

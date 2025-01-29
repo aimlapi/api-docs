@@ -1,5 +1,6 @@
 ---
 icon: image-landscape
+description: A description of image generation process using AIML API image models.
 ---
 
 # Image Models

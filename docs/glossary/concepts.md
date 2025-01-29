@@ -1,5 +1,17 @@
 ---
 icon: book-open
+description: A glossary page with some important API terms explained.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Concepts

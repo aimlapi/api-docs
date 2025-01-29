@@ -1,5 +1,19 @@
 ---
 icon: circle-question
+description: >-
+  Quick guide about how to configure Python on different operational systems to
+  use AI/ML API with it.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Can I use API in Python?
