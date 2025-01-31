@@ -54,4 +54,4 @@ Only 1-2 key parameters are usually displayed directly on the model component bo
 | `text`  | String        | Chat model response.                                                |
 | `model` | LanguageModel | An instance of ChatOpenAI configured with the specified parameters. |
 
-For further information about the framework, please check the [official Langflow documentation.](../quickstart/supported-sdks.md)
+For further information about the framework, please check the [official Langflow documentation.](https://docs.langflow.org/)
