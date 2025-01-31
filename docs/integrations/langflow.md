@@ -19,7 +19,7 @@ layout:
 
 ## About
 
-Langflow is a new visual framework for building multi-agent and RAG applications. It is open-source, Python-powered, fully customizable, and LLM and vector store agnostic.
+[Langflow](https://www.langflow.org/) is a new visual framework for building multi-agent and RAG applications. It is open-source, Python-powered, fully customizable, and LLM and vector store agnostic.
 
 Its intuitive interface allows for easy manipulation of AI building blocks, enabling developers to quickly prototype and turn their ideas into powerful, real-world solutions.
 
@@ -27,14 +27,14 @@ Its intuitive interface allows for easy manipulation of AI building blocks, enab
 
 A user of the Langflow framework can create a working AI pipeline (a _flow_) by simply adding visual components, connecting their inputs and outputs in the required order, and setting various available parameters in each component.&#x20;
 
-At the center of such a flow is one or more sequential **model components** that generate text using LLMs. Choose **Models > AIML** in the sidebar, then click the "+" button or simply drag and drop the model element onto the work area. After that connect it to your input and output elements:
+At the center of such a flow is one or more sequential **model components** that generate text using LLMs. Choose **Models > AIML** in the sidebar, then click the "+" button or simply drag and drop the model element onto the work area. After that, connect it to your input and output elements:
 
-<figure><img src="../.gitbook/assets/langflow aimlapi flow.png" alt=""><figcaption><p>The component at the center creates a chat model instance using the AIML API.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/langflow aimlapi flow.png" alt=""><figcaption><p>The component at the center creates a chat model instance powered by AIML API.</p></figcaption></figure>
 
 ### Inputs <a href="#inputs" id="inputs"></a>
 
 {% hint style="info" %}
-Only 1-2 key parameters are usually displayed directly on the model component body. To configure most parameters, you need to click on the model element and then click the Controls button that appears above the model component.
+Only 1-2 key parameters are usually displayed directly on the model component body. To configure most parameters, you need to click on the model element and then click the **Controls** button that appears above the model component.
 {% endhint %}
 
 | Name            | Type         | Description                                                                               |
@@ -53,3 +53,5 @@ Only 1-2 key parameters are usually displayed directly on the model component bo
 | ------- | ------------- | ------------------------------------------------------------------- |
 | `text`  | String        | Chat model response.                                                |
 | `model` | LanguageModel | An instance of ChatOpenAI configured with the specified parameters. |
+
+For further information about the framework, please check the [official Langflow documentation.](../quickstart/supported-sdks.md)
