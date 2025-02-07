@@ -19,13 +19,29 @@ layout:
 
 # Setting Up
 
-## G**enerating an API Key**
+Here, you'll learn how to start using our API in your code:&#x20;
 
-{% hint style="info" %}
-[What is an API Key?](../glossary/concepts.md#api-key)
-{% endhint %}
+* generating an AIML API Key,&#x20;
+* configuring the base URL,&#x20;
+* walking through an example of connecting to the **mistralai/Mistral-7B-Instruct-v0.2** model via OpenAI SDK.&#x20;
 
-To use the AI/ML API, you need to create an account and generate an API key. Follow these steps:
+This guide is suitable even for complete beginners.
+
+## G**enerating an AIML API Key**
+
+<details>
+
+<summary><mark style="color:blue;">What is an API Key?</mark></summary>
+
+You can find your AIML API key on the [account page](https://aimlapi.com/app/keys).&#x20;
+
+An AIML API Key is a credential that grants you access to our API from within your code. It is a sensitive string of characters that should be kept confidential. Do not share this API key with anyone else, as it could be misused without your knowledge.
+
+⚠️ <mark style="color:orange;">Note that API keys from third-party organizations cannot be used with our API: you need an AIML API Key.</mark>
+
+</details>
+
+To use the AIML API, you need to create an account and generate an API key. Follow these steps:
 
 1. [**Create an Account**](https://aimlapi.com/app/sign-up)**:** Visit the AI/ML API website and create an account.
 2. [**Generate an API Key**](https://aimlapi.com/app/keys)**:** After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
@@ -34,9 +50,13 @@ To use the AI/ML API, you need to create an account and generate an API key. Fol
 
 ## **Configure Base URL**
 
-{% hint style="info" %}
-[What is a base URL?](../glossary/concepts.md#base-url)
-{% endhint %}
+<details>
+
+<summary><mark style="color:blue;">What is a Base URL?</mark></summary>
+
+The **Base URL** is the first part of the URL (including the protocol, domain, and pathname) that determines the server responsible for handling your request. It’s crucial to configure the correct Base URL in your application, especially if you are using SDKs from OpenAI, Azure, or other providers. By default, these SDKs are set to point to their servers, which are not compatible with our API keys and do not support many of the models we offer.
+
+</details>
 
 Depending on your environment and application, you will set the base URL differently. Below is a universal string that you can use to access our API. Copy it or return here later when you are ready with your environment or app.
 
@@ -46,22 +66,110 @@ https://api.aimlapi.com
 
 The AI/ML API supports both versioned and non-versioned URLs, providing flexibility in your API requests. You can use either of the following formats:
 
-* `https://api.aimlapi.com`
-* `https://api.aimlapi.com/v1`
+* <kbd>https://api.aimlapi.com</kbd>
+* <kbd>https://api.aimlapi.com/v1</kbd>
 
+{% hint style="success" %}
 Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
+{% endhint %}
 
-## Making Your First API Call
+## Let's Use a Real AI Model: Make Your First API Call
 
-Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: Python and NodeJS.
+Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: **Python** and **NodeJS**.
 
 {% hint style="info" %}
-In the examples below, we use the OpenAI SDK. This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
+In the examples below, we use the [**OpenAI SDK**](https://docs.aimlapi.com/quickstart/supported-sdks#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
+
+If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `my_key` in the second line with your AIML API Key obtained from your account.\
+However, below, we will still go through these examples step by step in both languages explaining every single line.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+
+base_url = "https://api.aimlapi.com/v1"
+
+# Insert your AIML API Key in the quotation marks instead of my_key:
+api_key = "my_key" 
+
+system_prompt = "You are a travel agent. Be descriptive and helpful."
+user_prompt = "Tell me about San Francisco"
+
+api = OpenAI(api_key=api_key, base_url=base_url)
+
+
+def main():
+    completion = api.chat.completions.create(
+        model="mistralai/Mistral-7B-Instruct-v0.2",
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.7,
+        max_tokens=256,
+    )
+
+    response = completion.choices[0].message.content
+
+    print("User:", user_prompt)
+    print("AI:", response)
+
+
+if __name__ 
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="NodeJS" %}
+<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
+</strong>
+const baseURL = "https://api.aimlapi.com/v1";
+
+// Insert your AIML API Key in the quotation marks instead of my_key:
+const apiKey = "my_key"; 
+
+const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const userPrompt = "Tell me about San Francisco";
+
+const api = new OpenAI({
+  apiKey,
+  baseURL,
+});
+
+const main = async () => {
+  const completion = await api.chat.completions.create({
+    model: "mistralai/Mistral-7B-Instruct-v0.2",
+    messages: [
+      {
+        role: "system",
+        content: systemPrompt,
+      },
+      {
+        role: "user",
+        content: userPrompt,
+      },
+    ],
+    temperature: 0.7,
+    max_tokens: 256,
+  });
+
+  const response = completion.choices[0].message.content;
+
+  console.log("User:", userPrompt);
+  console.log("AI:", response);
+};
+
+main();
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 <details>
 
-<summary>Example in Python</summary>
+<summary>Step-by-step example in Python</summary>
 
 Let's start from very beginning. We assume you already installed Python (with venv), if not, here a [guide for the beginners](../faq/can-i-use-api-in-python.md).
 
@@ -160,7 +268,7 @@ San Francisco's diverse neighborhoods each have their unique character. The hist
 
 <details>
 
-<summary>Example in NodeJS</summary>
+<summary>Step-by-step example in NodeJS</summary>
 
 As in the example from Python, we start from the very beginning too. We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
 
@@ -197,9 +305,8 @@ touch ./index.js
 
 And paste the following content:
 
-```javascript
-const { OpenAI } = require("openai");
-
+<pre class="language-javascript"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
+</strong>
 const baseURL = "https://api.aimlapi.com/v1";
 const apiKey = "my_key";
 const systemPrompt = "You are a travel agent. Be descriptive and helpful";
@@ -234,7 +341,7 @@ const main = async () => {
 };
 
 main();
-```
+</code></pre>
 
 You will see a response that looks like this:
 
@@ -246,8 +353,6 @@ The city is famous for its iconic Golden Gate Bridge, an engineering marvel and 
 ```
 
 </details>
-
-
 
 ## Code Explanation
 

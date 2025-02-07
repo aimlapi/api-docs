@@ -10,6 +10,7 @@ icon: code
 
 ## Example
 
+{% code overflow="wrap" %}
 ```python
 import requests
 import json
@@ -44,3 +45,4 @@ response = requests.post(url, headers=headers, data=payload)
 print(response.json())
 
 ```
+{% endcode %}
