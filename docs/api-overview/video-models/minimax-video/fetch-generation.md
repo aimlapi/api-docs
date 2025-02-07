@@ -8,8 +8,8 @@ icon: code
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. Here are the API to fetch the generations.
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27" path="/v2/generate/video/minimax/generation" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27](https://api.aimlapi.com/docs-public-yaml?key=3b878a3c71a785f13366e9be96bacb27)
+{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/minimax/generation" method="get" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endswagger %}
 
 ## Example: Fetch Single Generation
