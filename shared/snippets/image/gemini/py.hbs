@@ -1,0 +1,26 @@
+import requests
+
+
+def main():
+    response = requests.post(
+        "{{baseUrl}}/images/generations",
+        headers={
+            "Authorization": "Bearer {{apiKey}}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "prompt": "A jellyfish in the ocean",
+            "model": "{{model}}",
+        },
+    )
+
+    response.raise_for_status()
+    data = response.json()
+
+    for i, image in enumerate(data["data"]):
+        with open(f"image_{i+1}.png", "wb") as f:
+            f.write(base64.b64decode(image["url"]))
+
+
+if __name__ == "__main__":
+    main()

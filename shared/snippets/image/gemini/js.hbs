@@ -1,0 +1,23 @@
+const fs = require('fs');
+const path = require('path');
+
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt: 'A jellyfish in the ocean',
+      model: '{{model}}',
+    }),
+  }).then((res) => res.json());
+
+  response['data'].forEach((image, i) => {
+    const buffer = Buffer.from(image['url'], 'base64');
+    fs.writeFileSync(path.join(__dirname, `image_${i + 1}.png`), buffer);
+});
+};
+
+main();
