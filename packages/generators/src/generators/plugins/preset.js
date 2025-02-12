@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { replaceTemplate, TEMPLATE } = require('../../templates');
+const { replaceTemplate, TEMPLATE, SECTION } = require('../../templates');
 const { SummaryParserMap } = require('../../templates/parser');
 
 const PathPlugin = require('./path');
@@ -22,16 +22,22 @@ const summary = (name) =>
       return { key, tags, file: name ? path.join(file, name) : file };
     },
     path: `${PathPlugin.root(...args)}${path.sep}SUMMARY.md`,
-    transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
+    transform: replaceTemplate(TEMPLATE.summary, SECTION.reference, (match, next) => {
       const { file, tags, key } = next;
 
       const summary = SummaryParserMap.parse(match);
 
       let children = summary;
+      // console.log('@@@##', tags)
+      // console.log('summary@#summary', summary)
       for (const tag of tags.slice(0, tags.length - 1)) {
-        children = children[tag].children;
+        console.log(' children[tag]',  children[tag])
+        console.log(' children[tag].children', children[tag]?.children)
+        console.log(' TAG', tag)
+        if(children[tag]?.children)
+        children = children[tag]?.children;
       }
-
+      console.log('key', key)
       children[key] = {
         ...children[key],
         key: key,

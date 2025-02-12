@@ -6,19 +6,19 @@ class ProviderPageGenerator extends PageGenerator {
   *generate() {
     const { models, ...rest } = this.config;
 
-    const byProvider = {};
+    const byVendor = {};
     for (const model of models) {
-      byProvider[model.provider] = [...(byProvider[model.provider] ?? []), model];
+      byVendor[model.vendor] = [...(byVendor[model.vendor] ?? []), model];
     }
 
-    for (const provider in byProvider) {
-      const providerModels = byProvider[provider];
+    for (const vendor in byVendor) {
+      const vendorModels = byVendor[vendor];
       yield this.done(
         {
           ...rest,
-          models: providerModels,
+          models: vendorModels,
         },
-        PathPlugin.traverse(`/${provider}`, provider),
+        PathPlugin.traverse(`/${vendor}`, vendor),
       );
     }
   }

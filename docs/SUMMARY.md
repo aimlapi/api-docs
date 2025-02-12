@@ -89,8 +89,8 @@
   * [Embedding Models](api-overview/model-database/embedding-models.md)
   * [Model Request](api-overview/model-database/model-request.md)
 
-[#api-references:start]: <> ({ "template": "summary" })
-## API REFERENCES
+[#references:start]: <> ({ "template": "summary" })
+## Generated
 
 * [Text Models (LLM)](api-overview/text-models-llm/README.md)
   * [Completion or Chat Models](api-overview/text-models-llm/completion-or-chat-models.md)
@@ -170,7 +170,8 @@
   * [Music & Vocal Models](api-overview/model-database/music-and-vocal-models.md)
   * [Embedding Models](api-overview/model-database/embedding-models.md)
   * [Model Request](api-overview/model-database/model-request.md)
-[#api-references:end]: <> ({})
+
+[#references:end]: <> ({})
 
 [#generator:start]: <> ({ "template": "summary" })
 ## Generated

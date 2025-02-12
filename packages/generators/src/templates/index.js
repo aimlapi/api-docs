@@ -1,22 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
-const readTemplate = (name) => {
+const readTemplate = (name, section) => {
   const content = fs.readFileSync(path.join(__dirname, `./${name}.hbs`), 'utf8');
 
-  return `[#generator:start]: <> ({ "template": "${name}" })
+  return `[#references:start]: <> ({ "template": "${name}" })
 ${content}
-[#generator:end]: <> ({})`;
+[#references:end]: <> ({})`;
 };
 
 const replaceTemplate =
-  (name, replacer = (match, next) => match.replace(match, next)) =>
+  (name, section, replacer = (match, next) => match.replace(match, next)) =>
   (prev, next) => {
     if (!prev.trim()) {
       return next;
     }
-
-    const expr = /^\[#generator:start\]:\s<>\s\(({.+?})\)(.+)\[#generator:end\].+?$/gms;
+    
+    // const expr = new RegExp(
+    //   `^\\[#${section}:start\\]:\\s<>\\s\\(({.+?})\\)(.+?)\\[#${section}:end\\].+?$`,
+    //   "gms"
+    // );
+    const expr = /^\[#references:start\]:\s<>\s\(({.+?})\)(.+)\[#references:end\].+?$/gms;
 
     return prev.replace(expr, (match, payload, content) => {
       const config = JSON.parse(payload);
@@ -53,8 +57,23 @@ const TEMPLATE = {
   models: 'models',
 };
 
-const CATEGORY = {
-  
+const SECTION = {
+  references: 'references',
+  generator: 'generator',
 }
 
-module.exports = { readTemplate, replaceTemplate, TEMPLATE };
+CATEGORY_MAPPING = {
+  "text-models-llm": "Text Models (LLM)",//"Text/Chat Models (LLM)", 
+  "image-models": "Image Models",
+  "video-models": "Video Models",
+  "embedding-models": "Embedding Models",
+  "speech-voice-models/stt": "Voice/Speech Models" / "STT",
+  "speech-voice-models/tts": "Voice/Speech Models" / "TTS",
+  "music-models": "Music Models",
+  "ocr": "Vision Models" / "OCR",
+  "ofr": "Vision Models" / "OFR",
+  "moderation-safety-models": "Content Moderation/Safety Models",
+  "3d-generating-models": "3D-Generating Models"
+}
+
+module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION };
