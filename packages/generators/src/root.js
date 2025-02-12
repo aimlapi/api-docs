@@ -9,12 +9,13 @@ const CustomGenerator = require('./generators/custom');
 const ProviderPageGenerator = require('./generators/provider');
 const { SummaryParserMap } = require('./templates/parser');
 const { summary } = require('./generators/plugins/preset');
+const path = require('path');
 
-const DOCS_PATH = '/generated';
+const DOCS_PATH = '/generated1';
 
 const root = {
   next: ModelsGenerator.build({
-    url: MODELS_URL,
+    url: path.join(__dirname, "json_for-docs_generation_20250211_v2.json"), //MODELS_URL,
     openapi: {
       url: OPENAPI_URL,
     },
@@ -26,7 +27,7 @@ const root = {
             content: readTemplate(TEMPLATE.models),
             effects: [
               StorePlugin.store((...args) => ({
-                path: `${PathPlugin.path(...args)}/README.md`,
+                path: `${PathPlugin.path(...args)}${path.sep}README.md`,
                 transform: replaceTemplate(TEMPLATE.models),
               })),
               summary('README'),

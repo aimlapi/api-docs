@@ -53,4 +53,8 @@ const TEMPLATE = {
   models: 'models',
 };
 
+const CATEGORY = {
+  
+}
+
 module.exports = { readTemplate, replaceTemplate, TEMPLATE };

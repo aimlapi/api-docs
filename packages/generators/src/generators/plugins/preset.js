@@ -10,16 +10,18 @@ const summary = (name) =>
   StorePlugin.store((...args) => ({
     content: (...args) => {
       const root = PathPlugin.root(...args);
-      const file = PathPlugin.path(...args)
-        .split(`${root}/`)
-        .at(1);
+      const file = path.relative(root, PathPlugin.path(...args))
+      //  PathPlugin.path(...args)
+      //   .split(`${root}${path.sep}`)
+      //   .at(1);
+       
 
-      const key = file.split(`/`).at(-1);
+      const key = file.split(`${path.sep}`).at(-1);
       const tags = PathPlugin.tags(...args);
 
       return { key, tags, file: name ? path.join(file, name) : file };
     },
-    path: `${PathPlugin.root(...args)}/SUMMARY.md`,
+    path: `${PathPlugin.root(...args)}${path.sep}SUMMARY.md`,
     transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
       const { file, tags, key } = next;
 
