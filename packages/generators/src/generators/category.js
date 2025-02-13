@@ -9,7 +9,7 @@ class CategoryPageGenerator extends PageGenerator {
 
     const byCategory = {};
     for (const model of models) {
-        byCategory[CATEGORY_MAPPING[model.category]] = [...(byCategory[CATEGORY_MAPPING[model.category]] ?? []), model];
+        byCategory[model.category] = [...(byCategory[model.category] ?? []), model];
     }
 
     for (const category in byCategory) {

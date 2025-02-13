@@ -63,12 +63,12 @@ const SECTION = {
 }
 
 CATEGORY_MAPPING = {
-  "text-models-llm": "Text Models (LLM)",//"Text/Chat Models (LLM)", 
+  "text-models-llm": "Text Models (LLM)", 
   "image-models": "Image Models",
   "video-models": "Video Models",
   "embedding-models": "Embedding Models",
-  "speech-voice-models/stt": "Voice/Speech Models" / "STT",
-  "speech-voice-models/tts": "Voice/Speech Models" / "TTS",
+  "speech-voice-models/stt": 'Speech Models', //"Voice/Speech Models" / "STT",
+  "speech-voice-models/tts": 'Speech Models', //"Voice/Speech Models" / "TTS",
   "music-models": "Music Models",
   "ocr": "Vision Models" / "OCR",
   "ofr": "Vision Models" / "OFR",
@@ -76,4 +76,6 @@ CATEGORY_MAPPING = {
   "3d-generating-models": "3D-Generating Models"
 }
 
-module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION };
+const CATEGORY_SET = new Set(["Text Models (LLM)", "Image Models", "Video Models", "Embedding Models", "Voice/Speech Models", "STT", 'Speech Models', "Voice/Speech Models", "TTS", "Music Models", "Vision Models", "Vision Models" ,  "Content Moderation/Safety Models", "3D-Generating Models"])
+
+module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET };

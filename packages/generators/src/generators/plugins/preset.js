@@ -11,10 +11,6 @@ const summary = (name) =>
     content: (...args) => {
       const root = PathPlugin.root(...args);
       const file = path.relative(root, PathPlugin.path(...args))
-      //  PathPlugin.path(...args)
-      //   .split(`${root}${path.sep}`)
-      //   .at(1);
-       
 
       const key = file.split(`${path.sep}`).at(-1);
       const tags = PathPlugin.tags(...args);
@@ -26,18 +22,19 @@ const summary = (name) =>
       const { file, tags, key } = next;
 
       const summary = SummaryParserMap.parse(match);
+      const childrenObject = transformToObject(summary?.children)
 
-      let children = summary;
-      // console.log('@@@##', tags)
-      // console.log('summary@#summary', summary)
-      for (const tag of tags.slice(0, tags.length - 1)) {
-        console.log(' children[tag]',  children[tag])
-        console.log(' children[tag].children', children[tag]?.children)
-        console.log(' TAG', tag)
-        if(children[tag]?.children)
-        children = children[tag]?.children;
+      let children = childrenObject;
+
+      for (const tag of tags.slice(0, tags.length -1)) {       
+        if(CATEGORY_MAPPING[tag]){
+          if(children[CATEGORY_MAPPING[tag]]?.children)
+          children = children[CATEGORY_MAPPING[tag]]?.children;
+        } else {
+          if(children[tag]?.children)
+          children = children[tag]?.children;
+        }
       }
-      console.log('key', key)
       children[key] = {
         ...children[key],
         key: key,
@@ -45,10 +42,26 @@ const summary = (name) =>
         children: { ...children[key]?.children },
       };
 
-      const stringified = SummaryParserMap.stringify(summary);
+      const stringified = SummaryParserMap.stringify(childrenObject);
 
-      return `## Generated\n${stringified}`;
+      return `## API REFERENCES\n${stringified}`;
     }),
   }));
+
+  function transformToObject(childrenArray) {
+    const result = {};
+    for (const item of childrenArray) {
+      const transformedItem = {
+        key: item.key,
+        value: item.value,
+        children: item.children && item.children.length > 0 
+                  ? transformToObject(item.children) 
+                  : {},
+        level: item.level
+      };
+      result[item.key] = transformedItem;
+    }
+    return result;
+  }
 
 module.exports = { summary };
