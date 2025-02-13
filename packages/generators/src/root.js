@@ -12,7 +12,7 @@ const { summary } = require('./generators/plugins/preset');
 const path = require('path');
 const CategoryPageGenerator = require('./generators/category');
 
-const DOCS_PATH = '/generated1';
+const DOCS_PATH = '/api-references';
 
 const root = {
   next: ModelsGenerator.build({
