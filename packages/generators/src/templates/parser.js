@@ -1,5 +1,3 @@
-const { CATEGORY_MAPPING, CATEGORY_SET } = require(".");
-
 class SummaryParserList {
   static parse(text) {
     const expr = /^(\s*?)\*\s\[(.+)\]\((.+)\)/gm;

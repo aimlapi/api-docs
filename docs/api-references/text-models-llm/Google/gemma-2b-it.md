@@ -1,0 +1,5 @@
+[#references:start]: <> ({ "template": "openapi" })
+{% swagger src="./gemma-2b-it.json" path="/v2/chat/completions" method="post" %}
+[./gemma-2b-it.json](./gemma-2b-it.json)
+{% endswagger %}
+[#references:end]: <> ({})

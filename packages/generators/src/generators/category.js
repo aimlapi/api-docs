@@ -1,5 +1,3 @@
-const { OPENAPI_URL } = require('../config');
-const { CATEGORY_MAPPING } = require('../templates');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 

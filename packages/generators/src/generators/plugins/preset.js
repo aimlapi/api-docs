@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { replaceTemplate, TEMPLATE, SECTION } = require('../../templates');
+const { replaceTemplate, TEMPLATE, SECTION, CATEGORY_MAPPING } = require('../../templates');
 const { SummaryParserMap } = require('../../templates/parser');
 
 const PathPlugin = require('./path');
@@ -26,10 +26,19 @@ const summary = (name) =>
 
       let children = childrenObject;
 
-      for (const tag of tags.slice(0, tags.length -1)) {       
+      for (const tag of tags.slice(0, tags.length -1)) {           
         if(CATEGORY_MAPPING[tag]){
-          if(children[CATEGORY_MAPPING[tag]]?.children)
-          children = children[CATEGORY_MAPPING[tag]]?.children;
+          if(tag === 'speech-voice-models/stt' || tag === 'speech-voice-models/tts') {
+            const arr = tag.split('/')
+            children = children[CATEGORY_MAPPING[arr[0]]]?.children;
+            children = children[CATEGORY_MAPPING[arr[1]]]?.children;
+          } else if (tag === 'ocr' || tag === 'ofr') {
+            children = children[CATEGORY_MAPPING["vision-modle"]]?.children;
+            children = children[CATEGORY_MAPPING[tag]]?.children;
+          } else {
+            if(children[CATEGORY_MAPPING[tag]]?.children)
+              children = children[CATEGORY_MAPPING[tag]]?.children;
+          }
         } else {
           if(children[tag]?.children)
           children = children[tag]?.children;

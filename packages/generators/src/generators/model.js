@@ -17,14 +17,14 @@ class ModelPageGenerator extends PageGenerator {
           ...rest,
           openapi: {
             ...openapi,
-            url: `./${model.key}.json`,
+            url: `./${model.alias}.json`,
             path,
             method: 'post',
             schema,
           },
           model,
         },
-        PathPlugin.traverse(`/${model.key}`, model.key),
+        PathPlugin.traverse(`/${model.alias}`, model.alias),
       );
     }
   }

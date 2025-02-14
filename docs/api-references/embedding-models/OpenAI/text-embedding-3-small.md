@@ -1,7 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 {% swagger src="./text-embedding-3-small.json" path="/embeddings" method="post" %}
 [./text-embedding-3-small.json](./text-embedding-3-small.json)
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

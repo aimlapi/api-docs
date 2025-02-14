@@ -12,13 +12,14 @@ class ProviderPageGenerator extends PageGenerator {
     }
 
     for (const vendor in byVendor) {
+      const replaceVendor = vendor.replace(' ', '-')
       const vendorModels = byVendor[vendor];
       yield this.done(
         {
           ...rest,
           models: vendorModels,
         },
-        PathPlugin.traverse(`/${vendor}`, vendor),
+        PathPlugin.traverse(`/${replaceVendor}`, replaceVendor),
       );
     }
   }

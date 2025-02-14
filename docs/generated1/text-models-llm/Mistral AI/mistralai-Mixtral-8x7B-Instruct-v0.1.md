@@ -1,7 +1,0 @@
-[#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
-{% swagger src="./mistralai-Mixtral-8x7B-Instruct-v0.1.json" path="/v2/chat/completions" method="post" %}
-[./mistralai-Mixtral-8x7B-Instruct-v0.1.json](./mistralai-Mixtral-8x7B-Instruct-v0.1.json)
-{% endswagger %}
-[#references:end]: <> ({})
-[#references:end]: <> ({})
