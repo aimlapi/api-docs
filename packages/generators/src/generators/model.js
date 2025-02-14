@@ -7,7 +7,9 @@ class ModelPageGenerator extends PageGenerator {
 
     for (const model of models) {
       const { path, schema } = openapi.byModel[model.name];
-
+      if(model.name.includes('Mistral')){
+        console.log(rest)
+      }
       if (!path) {
         console.warn(`Model '${model.name}' path not found.`);
       }
