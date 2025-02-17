@@ -44,10 +44,13 @@ const summary = (name) =>
           children = children[tag]?.children;
         }
       }
+      const fixPath = file.replace(/\\/g, '/')
+      console.log(file)
+      console.log(fixPath)
       children[key] = {
         ...children[key],
         key: key,
-        value: `${file}.md`,
+        value: `${fixPath}.md`,
         children: { ...children[key]?.children },
       };
 

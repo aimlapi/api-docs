@@ -1,10 +1,10 @@
 [#references:start]: <> ({ "template": "openapi" })
 [#references:start]: <> ({ "template": "openapi" })
-# triposr
+# flux/dev
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
-* triposr
+* flux/dev
 {% endhint %}
 
 # Model Overview
@@ -15,8 +15,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./triposr.json" path="/images/generations/with-url" method="post" %}
-./triposr.json
+{% swagger src="./flux/dev.json" path="/images/generations/with-url" method="post" %}
+./flux/dev.json
 {% endswagger %}
 [#references:end]: <> ({})
 [#references:end]: <> ({})
