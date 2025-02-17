@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # Llama-3.2-3B-Instruct-Turbo
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./Llama-3.2-3B-Instruct-Turbo.json" path="/v2/chat/completions" method="post" %}
 ./Llama-3.2-3B-Instruct-Turbo.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # bge-large-en
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./bge-large-en.json" path="/embeddings" method="post" %}
 ./bge-large-en.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

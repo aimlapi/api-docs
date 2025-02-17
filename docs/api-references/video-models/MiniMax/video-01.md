@@ -1,5 +1,6 @@
 <!-- [#references:start]: <> ({ "template": "openapi" }) -->
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # video-01
 
 {% hint style="info" %}
@@ -19,4 +20,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ./video-01.json
 {% endswagger %}
 [#references:end]: <> ({})
-<!-- [#references:end]: <> ({}) -->
+[#references:end]: <> ({}) -->

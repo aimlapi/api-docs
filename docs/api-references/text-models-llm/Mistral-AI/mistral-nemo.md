@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # mistral-nemo
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./mistral-nemo.json" path="/v2/chat/completions" method="post" %}
 ./mistral-nemo.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

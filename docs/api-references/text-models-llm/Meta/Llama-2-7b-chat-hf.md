@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # Llama-2-7b-chat-hf
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./Llama-2-7b-chat-hf.json" path="/v2/chat/completions" method="post" %}
 ./Llama-2-7b-chat-hf.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

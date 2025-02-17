@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # flux-realism
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./flux-realism.json" path="/images/generations/with-url" method="post" %}
 ./flux-realism.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

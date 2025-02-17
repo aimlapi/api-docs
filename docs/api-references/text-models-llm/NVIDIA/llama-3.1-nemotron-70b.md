@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # llama-3.1-nemotron-70b
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./llama-3.1-nemotron-70b.json" path="/v2/chat/completions" method="post" %}
 ./llama-3.1-nemotron-70b.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

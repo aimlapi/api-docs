@@ -1,4 +1,5 @@
 [#references:start]: <> ({ "template": "openapi" })
+[#references:start]: <> ({ "template": "openapi" })
 # Mixtral-8x22B-Instruct
 
 {% hint style="info" %}
@@ -17,4 +18,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./Mixtral-8x22B-Instruct.json" path="/v2/chat/completions" method="post" %}
 ./Mixtral-8x22B-Instruct.json
 {% endswagger %}
+[#references:end]: <> ({})
 [#references:end]: <> ({})

@@ -19,6 +19,9 @@ class ModelPageGenerator extends PageGenerator {
         console.warn(`Model '${model.name}' path not found.`);
       }
       const aliastToPAth = model.alias.replace(/#/g, '')
+      if(model.alias.includes('gen3')){
+        console.log(model.alias)
+      }
       yield this.done(
         {
           ...rest,
