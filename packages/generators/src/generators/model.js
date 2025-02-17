@@ -18,13 +18,13 @@ class ModelPageGenerator extends PageGenerator {
       if (!path) {
         console.warn(`Model '${model.name}' path not found.`);
       }
-
+      const aliastToPAth = model.alias.replace(/#/g, '')
       yield this.done(
         {
           ...rest,
           openapi: {
             ...openapi,
-            url: `./${model.alias}.json`,
+            url: `./${aliastToPAth}.json`,
             alias: model.alias,
             models: aliasesMap[model.alias],
             path,
@@ -33,7 +33,7 @@ class ModelPageGenerator extends PageGenerator {
           },
           model,
         },
-        PathPlugin.traverse(`/${model.alias}`, model.alias),
+        PathPlugin.traverse(`/${aliastToPAth}`, aliastToPAth),
       );
     }
   }

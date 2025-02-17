@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # Qwen2.5-Coder-32B-Instruct
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./Qwen2.5-Coder-32B-Instruct.json" path="/v2/chat/completions" method="post" %}
 ./Qwen2.5-Coder-32B-Instruct.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

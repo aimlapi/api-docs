@@ -16,16 +16,10 @@ const replaceTemplate =
       return next;
     }
 
-    // const expr = new RegExp(
-    //   `^\\[#${section}:start\\]:\\s<>\\s\\(({.+?})\\)(.+?)\\[#${section}:end\\].+?$`,
-    //   "gms"
-    // );
     const expr = /^\[#references:start\]:\s<>\s\(({.+?})\)(.+)\[#references:end\].+?$/gms;
 
     return prev.replace(expr, (match, payload, content) => {
-      // if (name === 'openapi') {
-      //   console.log(next)
-      // }
+
       const config = JSON.parse(payload);
       const replaced =
         config.template === name ? match.replace(content, '\n' + replacer(content, next) + '\n') : content;
