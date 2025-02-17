@@ -22,9 +22,8 @@ const replaceTemplate =
         const config = JSON.parse(payload);
         
         if (config.template === name) {
-          // Делаем замену внутри блока, но сохраняем его границы
           const updatedContent = replacer(content, next);
-          console.log(updatedContent)
+
           if (updatedContent.includes('[#references:start]:')) {
             return updatedContent
           }
