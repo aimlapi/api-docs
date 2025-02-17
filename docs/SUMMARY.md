@@ -318,6 +318,7 @@
 * [3D-Generating Models](api-references/3D-models/README.md)
   * [Stability-AI](api-references\3d-generating-models\Stability-AI\README.md)
     * [triposr](api-references\3d-generating-models\Stability-AI\triposr.md)
+    * [triposr-copy](api-references\3d-generating-models\Stability-AI\triposr-copy.md)
 * [Music Models](api-references/music-models/README.md)
   * [Stability-AI](api-references\music-models\Stability-AI\README.md)
     * [stable-audio](api-references\music-models\Stability-AI\stable-audio.md)
