@@ -12,7 +12,7 @@ class VenderPageGenerator extends PageGenerator {
     }
 
     for (const vendor in byVendor) {
-      const replaceVendor = vendor.replace(' ', '-')
+      const replaceVendor = vendor.replace(/ /g, '-')
       const vendorModels = byVendor[vendor];
       yield this.done(
         {
