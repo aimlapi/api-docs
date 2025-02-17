@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # stable-diffusion-v3-medium
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./stable-diffusion-v3-medium.json" path="/images/generations/with-url" method="post" %}
 ./stable-diffusion-v3-medium.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

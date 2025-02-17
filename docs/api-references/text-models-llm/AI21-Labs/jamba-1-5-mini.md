@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # jamba-1-5-mini
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./jamba-1-5-mini.json" path="/v2/chat/completions" method="post" %}
 ./jamba-1-5-mini.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

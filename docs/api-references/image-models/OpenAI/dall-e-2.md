@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # dall-e-2
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./dall-e-2.json" path="/images/generations/with-url" method="post" %}
 ./dall-e-2.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

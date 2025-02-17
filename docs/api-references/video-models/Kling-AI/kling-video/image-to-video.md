@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # kling-video/image-to-video
 
 {% hint style="info" %}
@@ -21,5 +20,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./kling-video/image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
 ./kling-video/image-to-video.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

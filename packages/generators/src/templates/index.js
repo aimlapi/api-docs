@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const readTemplate = (name, section) => {
+const readTemplate = (name) => {
   const content = fs.readFileSync(path.join(__dirname, `./${name}.hbs`), 'utf8');
 
   return `[#references:start]: <> ({ "template": "${name}" })
@@ -10,14 +10,30 @@ ${content}
 };
 
 const replaceTemplate =
-  (name, section, replacer = (match, next) => match.replace(match, next)) =>
+  (name, replacer = (match, next) => match.replace(match, next)) =>
   (prev, next) => {
     if (!prev.trim()) {
       return next;
     }
 
     const expr = /^\[#references:start\]:\s<>\s\(({.+?})\)(.+)\[#references:end\].+?$/gms;
-
+    if(name === TEMPLATE.openapi){
+      return prev.replace(expr, (match, payload, content) => {
+        const config = JSON.parse(payload);
+        
+        if (config.template === name) {
+          // Делаем замену внутри блока, но сохраняем его границы
+          const updatedContent = replacer(content, next);
+          console.log(updatedContent)
+          if (updatedContent.includes('[#references:start]:')) {
+            return updatedContent
+          }
+          return `[#references:start]: <> (${payload})${updatedContent}[#references:end]: <> ({})`;
+        } 
+        return match; 
+      });
+    }
+    
     return prev.replace(expr, (match, payload, content) => {
 
       const config = JSON.parse(payload);

@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # gpt-3.5-turbo
 
 {% hint style="info" %}
@@ -20,5 +19,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./gpt-3.5-turbo.json" path="/v2/chat/completions" method="post" %}
 ./gpt-3.5-turbo.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

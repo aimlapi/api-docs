@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # #g1_whisper-base
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./g1_whisper-base.json" path="/stt" method="post" %}
 ./g1_whisper-base.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

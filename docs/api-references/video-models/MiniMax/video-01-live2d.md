@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # video-01-live2d
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./video-01-live2d.json" path="/v2/generate/video/minimax/generation" method="post" %}
 ./video-01-live2d.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

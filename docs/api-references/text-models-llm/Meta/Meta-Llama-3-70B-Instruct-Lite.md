@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # Meta-Llama-3-70B-Instruct-Lite
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./Meta-Llama-3-70B-Instruct-Lite.json" path="/v2/chat/completions" method="post" %}
 ./Meta-Llama-3-70B-Instruct-Lite.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

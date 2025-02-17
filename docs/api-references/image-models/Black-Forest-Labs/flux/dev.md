@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # flux/dev
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./flux/dev.json" path="/images/generations/with-url" method="post" %}
 ./flux/dev.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

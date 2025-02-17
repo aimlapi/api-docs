@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # o1-preview
 
 {% hint style="info" %}
@@ -19,5 +18,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./o1-preview.json" path="/v2/chat/completions" method="post" %}
 ./o1-preview.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # text-multilingual-embedding-002
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./text-multilingual-embedding-002.json" path="/embeddings" method="post" %}
 ./text-multilingual-embedding-002.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

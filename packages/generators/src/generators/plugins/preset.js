@@ -18,7 +18,7 @@ const summary = (name) =>
       return { key, tags, file: name ? path.join(file, name) : file };
     },
     path: `${PathPlugin.root(...args)}${path.sep}SUMMARY.md`,
-    transform: replaceTemplate(TEMPLATE.summary, SECTION.reference, (match, next) => {
+    transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
       const { file, tags, key } = next;
 
       const summary = SummaryParserMap.parse(match);

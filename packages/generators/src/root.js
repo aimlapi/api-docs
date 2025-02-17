@@ -27,22 +27,22 @@ const root = {
           VenderPageGenerator.build({
             next: [
               HandlebarsPageGenerator.build({
-                content: readTemplate(TEMPLATE.models, SECTION.references),
+                content: readTemplate(TEMPLATE.models),
                 effects: [
                   StorePlugin.store((...args) => ({
                     path: `${PathPlugin.path(...args)}${path.sep}README.md`,
-                    transform: replaceTemplate(TEMPLATE.models, SECTION.references),
+                    transform: replaceTemplate(TEMPLATE.models),
                   })),
                   summary('README'),
                 ],
               }),
               ModelPageGenerator.build({
                 next: HandlebarsPageGenerator.build({
-                  content: readTemplate(TEMPLATE.openapi, SECTION.references),
+                  content: readTemplate(TEMPLATE.openapi),
                   effects: [
                     StorePlugin.store((...args) => ({
                       path: `${PathPlugin.path(...args)}.md`,
-                      transform: replaceTemplate(TEMPLATE.openapi, SECTION.reference),
+                      transform: replaceTemplate(TEMPLATE.openapi),
                     })),
                     StorePlugin.store((...args) => ({
                       content: (_, c) => JSON.stringify(c.openapi.schema),
@@ -59,7 +59,7 @@ const root = {
           //   effects: [
           //     StorePlugin.store((...args) => ({
           //       path: `${PathPlugin.root(...args)}/SUMMARY.md`,
-          //       transform: replaceTemplate(TEMPLATE.summary, SECTION.reference),
+          //       transform: replaceTemplate(TEMPLATE.summary),
           //     })),
           //   ],
           // }),

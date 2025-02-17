@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # gen3a_turbo
 
 {% hint style="info" %}
@@ -18,5 +17,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./gen3a_turbo.json" path="/v2/generate/video/runway/generation" method="post" %}
 ./gen3a_turbo.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})

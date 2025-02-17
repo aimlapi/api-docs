@@ -281,7 +281,7 @@
     * [Generate Video](api-references/video-models/runway/generate-video.md)
     * [Fetch Generation](api-references/video-models/runway/generate-video-1.md)
     * [image-to-video](api-references/video-models/Runway/runway-gen3/turbo/image-to-video.md)
-    * [gen3a_turbo](api-references/video-models/runway/gen3a_turbo.md)
+    * [gen3a_turbo](api-references/video-models/Runway/gen3a_turbo.md)
   * [Kling-AI](api-references/video-models/Kling-AI/README.md)
     * [image-to-video](api-references/video-models/Kling-AI/kling-video/image-to-video.md)
   * [MiniMax](api-references/video-models/MiniMax/README.md)

@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
 # claude-3.5-sonnet
 
 {% hint style="info" %}
@@ -20,5 +19,4 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./claude-3.5-sonnet.json" path="/v2/chat/completions" method="post" %}
 ./claude-3.5-sonnet.json
 {% endswagger %}
-[#references:end]: <> ({})
 [#references:end]: <> ({})
