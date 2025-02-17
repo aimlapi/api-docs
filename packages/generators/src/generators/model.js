@@ -28,6 +28,7 @@ class ModelPageGenerator extends PageGenerator {
             url: `./${aliastToPAth}.json`,
             alias: model.alias,
             models: aliasesMap[model.alias],
+            description: model.description,
             path,
             method: 'post',
             schema,

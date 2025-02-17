@@ -5,13 +5,12 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 
 # Model Overview
-
+A state-of-the-art model designed to generate photorealistic images from textual descriptions. It enhances the capabilities of the FLUX-1 model, allowing users to create lifelike visuals without the need for extensive realism-related prompts.
 
 # Setup your API Key
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
-## API Schema
 {% swagger src="./flux-realism.json" path="/images/generations/with-url" method="post" %}
 ./flux-realism.json
 {% endswagger %}
