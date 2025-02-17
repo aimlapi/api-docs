@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# MythoMax-L2-13b
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * Gryphe/MythoMax-L2-13b

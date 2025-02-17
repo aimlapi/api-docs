@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Nous-Hermes-2-Mixtral-8x7B-DPO
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# abab6.5s-chat
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * abab6.5s-chat

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# deepseek-llm-67b-chat
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * deepseek-ai/deepseek-llm-67b-chat

@@ -1149,7 +1149,7 @@
   },
   {
     "name": "minimax-music",
-    "alias": "minimax-music (DEPRECATED)",
+    "alias": "minimax-music",
     "category": "music-models",
     "vendor": "MiniMax",
     "description": "An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.\n\nWarning: This model is deprecated (or planned for deprecation) and may no longer receive updates or support. We recommend switching to music-01 MiniMax model, which offers improved performance and ongoing support. The recommended alternative is faster, more cost-efficient, and supports an extended set of parameters compared to this model."

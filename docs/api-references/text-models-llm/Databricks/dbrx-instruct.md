@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# dbrx-instruct
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * databricks/dbrx-instruct

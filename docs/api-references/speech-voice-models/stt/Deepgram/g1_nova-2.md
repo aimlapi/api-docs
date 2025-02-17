@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# #g1_nova-2
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * #g1_nova-2-general

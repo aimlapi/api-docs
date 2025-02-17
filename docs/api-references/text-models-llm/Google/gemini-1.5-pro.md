@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# gemini-1.5-pro
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * gemini-1.5-pro

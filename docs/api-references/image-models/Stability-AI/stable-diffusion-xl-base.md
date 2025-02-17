@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# stable-diffusion-xl-base
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * stabilityai/stable-diffusion-xl-base-1.0

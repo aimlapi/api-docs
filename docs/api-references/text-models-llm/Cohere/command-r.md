@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# command-r
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * cohere/command-r-plus

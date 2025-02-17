@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# text-embedding-3-small
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * text-embedding-3-small

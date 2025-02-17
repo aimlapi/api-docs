@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Qwen2.5-7B-Instruct-Turbo
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * Qwen/Qwen2.5-7B-Instruct-Turbo

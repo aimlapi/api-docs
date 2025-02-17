@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# m2-bert-80M-retrieval
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * togethercomputer/m2-bert-80M-32k-retrieval

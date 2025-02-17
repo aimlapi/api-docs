@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# #g1_whisper-tiny
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * #g1_whisper-tiny

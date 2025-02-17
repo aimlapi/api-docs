@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# stable-diffusion-v3-medium
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * stable-diffusion-v3-medium

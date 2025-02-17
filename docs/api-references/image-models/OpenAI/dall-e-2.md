@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# dall-e-2
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * dall-e-2

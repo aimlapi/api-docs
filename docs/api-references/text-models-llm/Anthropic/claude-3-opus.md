@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# claude-3-opus
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * claude-3-opus-20240229

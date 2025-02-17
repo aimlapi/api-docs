@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# voyage-large-2-instruct
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * voyage-large-2-instruct

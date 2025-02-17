@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# o1-preview
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * o1-preview

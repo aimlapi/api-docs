@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# deepseek-r1
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * deepseek/deepseek-r1

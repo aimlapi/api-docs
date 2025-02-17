@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# gpt-3.5-turbo
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * gpt-3.5-turbo

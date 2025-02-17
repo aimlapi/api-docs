@@ -27,7 +27,7 @@ const replaceTemplate =
           if (updatedContent.includes('[#references:start]:')) {
             return updatedContent
           }
-          return `[#references:start]: <> (${payload})${updatedContent}[#references:end]: <> ({})`;
+          return `[#references:start]: <> (${payload})${updatedContent}\n\n[#references:end]: <> ({})`;
         } 
         return match; 
       });

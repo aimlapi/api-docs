@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# jamba-1-5-mini
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * ai21/jamba-1-5-mini

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# chatgpt-4o
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * chatgpt-4o-latest

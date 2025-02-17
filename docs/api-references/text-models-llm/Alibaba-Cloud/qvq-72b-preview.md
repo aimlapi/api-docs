@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# qvq-72b-preview
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * qwen/qvq-72b-preview

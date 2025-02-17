@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Meta-Llama-3-70B-Instruct-Lite
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/Meta-Llama-3-70B-Instruct-Lite

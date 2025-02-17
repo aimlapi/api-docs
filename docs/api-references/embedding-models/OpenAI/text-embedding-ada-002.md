@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# text-embedding-ada-002
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * text-embedding-ada-002

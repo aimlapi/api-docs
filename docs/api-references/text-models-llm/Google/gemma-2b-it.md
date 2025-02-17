@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# gemma-2b-it
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * google/gemma-2b-it

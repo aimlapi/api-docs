@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# gen3a_turbo
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * gen3a_turbo

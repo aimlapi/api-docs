@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# text-multilingual-embedding-002
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * text-multilingual-embedding-002

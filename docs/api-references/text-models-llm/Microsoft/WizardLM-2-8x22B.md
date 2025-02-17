@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# WizardLM-2-8x22B
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * microsoft/WizardLM-2-8x22B

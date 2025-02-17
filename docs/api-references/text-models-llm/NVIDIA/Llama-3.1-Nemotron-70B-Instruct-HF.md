@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Llama-3.1-Nemotron-70B-Instruct-HF
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * nvidia/Llama-3.1-Nemotron-70B-Instruct-HF

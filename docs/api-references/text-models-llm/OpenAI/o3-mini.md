@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# o3-mini
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * o3-mini

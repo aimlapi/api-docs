@@ -324,6 +324,7 @@
   * [MiniMax](api-references/music-models/MiniMax/README.md)
     * [music-01](api-references/music-models/MiniMax/music-01.md)
     * [minimax-music (DEPRECATED)](api-references/music-models/MiniMax/minimax-music (DEPRECATED).md)
+    * [minimax-music](api-references/music-models/MiniMax/minimax-music.md)
 * [Model Database](api-references/model-database/README.md)
   * [Text Models](api-references/model-database/text-models.md)
   * [Video Models](api-references/model-database/video-models.md)

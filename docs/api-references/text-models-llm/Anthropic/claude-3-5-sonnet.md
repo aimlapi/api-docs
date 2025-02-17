@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# claude-3-5-sonnet
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * claude-3-5-sonnet-20240620

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# magnum-v4
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * anthracite-org/magnum-v4-72b

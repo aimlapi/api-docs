@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# stable-diffusion-v35-large
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * stable-diffusion-v35-large

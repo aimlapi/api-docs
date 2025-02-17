@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# kling-video/image-to-video
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * kling-video/v1/standard/image-to-video

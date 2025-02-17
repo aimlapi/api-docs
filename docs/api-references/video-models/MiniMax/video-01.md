@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# video-01
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * video-01

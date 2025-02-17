@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# runway-gen3/turbo/image-to-video
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * runway-gen3/turbo/image-to-video

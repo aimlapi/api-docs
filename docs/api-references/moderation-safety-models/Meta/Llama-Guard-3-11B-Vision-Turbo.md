@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Llama-Guard-3-11B-Vision-Turbo
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/Llama-Guard-3-11B-Vision-Turbo

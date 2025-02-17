@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# recraft-v3
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * recraft-v3

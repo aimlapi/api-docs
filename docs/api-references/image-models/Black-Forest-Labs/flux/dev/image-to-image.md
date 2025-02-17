@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# flux/dev/image-to-image
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * flux/dev/image-to-image

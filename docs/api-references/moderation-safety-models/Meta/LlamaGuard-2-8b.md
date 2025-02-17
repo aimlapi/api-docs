@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# LlamaGuard-2-8b
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/LlamaGuard-2-8b

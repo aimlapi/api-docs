@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# SOLAR-10.7B-Instruct
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * upstage/SOLAR-10.7B-Instruct-v1.0

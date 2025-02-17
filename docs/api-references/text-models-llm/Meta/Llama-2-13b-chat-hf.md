@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Llama-2-13b-chat-hf
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/Llama-2-13b-chat-hf

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# textembedding-gecko
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * textembedding-gecko@001

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Llama-3.2-90B-Vision-Instruct-Turbo
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# bge-base-en
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * BAAI/bge-base-en-v1.5

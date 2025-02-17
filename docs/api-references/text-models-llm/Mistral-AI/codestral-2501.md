@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# codestral-2501
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * mistralai/codestral-2501

@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# llama-3.1-lumimaid
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * neversleep/llama-3.1-lumimaid-70b

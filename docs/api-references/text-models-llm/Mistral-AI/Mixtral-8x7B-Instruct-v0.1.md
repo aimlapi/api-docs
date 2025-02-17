@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# Mixtral-8x7B-Instruct-v0.1
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * mistralai/Mixtral-8x7B-Instruct-v0.1

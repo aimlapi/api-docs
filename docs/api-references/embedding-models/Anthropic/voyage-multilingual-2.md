@@ -1,6 +1,4 @@
 [#references:start]: <> ({ "template": "openapi" })
-# voyage-multilingual-2
-
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * voyage-multilingual-2
