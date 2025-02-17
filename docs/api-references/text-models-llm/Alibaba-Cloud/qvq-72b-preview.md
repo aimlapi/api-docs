@@ -1,7 +1,22 @@
 [#references:start]: <> ({ "template": "openapi" })
 [#references:start]: <> ({ "template": "openapi" })
+# qvq-72b-preview
+
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+* qwen/qvq-72b-preview
+{% endhint %}
+
+# Model Overview
+
+
+# Setup your API Key
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+# Submit a request
+## API Schema
 {% swagger src="./qvq-72b-preview.json" path="/v2/chat/completions" method="post" %}
-[./qvq-72b-preview.json](./qvq-72b-preview.json)
+./qvq-72b-preview.json
 {% endswagger %}
 [#references:end]: <> ({})
 [#references:end]: <> ({})

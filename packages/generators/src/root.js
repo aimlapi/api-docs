@@ -6,7 +6,7 @@ const StorePlugin = require('./generators/plugins/store');
 const { TEMPLATE, readTemplate, replaceTemplate, SECTION, CATEGORY } = require('./templates');
 const { MODELS_URL, OPENAPI_URL } = require('./config');
 const CustomGenerator = require('./generators/custom');
-const ProviderPageGenerator = require('./generators/provider');
+const VenderPageGenerator = require('./generators/vendor');
 const { SummaryParserMap } = require('./templates/parser');
 const { summary } = require('./generators/plugins/preset');
 const path = require('path');
@@ -24,7 +24,7 @@ const root = {
     next:[
       CategoryPageGenerator.build({
         next: [
-          ProviderPageGenerator.build({
+          VenderPageGenerator.build({
             next: [
               HandlebarsPageGenerator.build({
                 content: readTemplate(TEMPLATE.models, SECTION.references),

@@ -1,7 +1,22 @@
 [#references:start]: <> ({ "template": "openapi" })
 [#references:start]: <> ({ "template": "openapi" })
+# gemini-1.5-flash
+
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+* gemini-1.5-flash
+{% endhint %}
+
+# Model Overview
+
+
+# Setup your API Key
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+# Submit a request
+## API Schema
 {% swagger src="./gemini-1.5-flash.json" path="/v2/chat/completions" method="post" %}
-[./gemini-1.5-flash.json](./gemini-1.5-flash.json)
+./gemini-1.5-flash.json
 {% endswagger %}
 [#references:end]: <> ({})
 [#references:end]: <> ({})

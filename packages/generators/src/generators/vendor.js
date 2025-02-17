@@ -2,7 +2,7 @@ const { OPENAPI_URL } = require('../config');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 
-class ProviderPageGenerator extends PageGenerator {
+class VenderPageGenerator extends PageGenerator {
   *generate() {
     const { models, ...rest } = this.config;
 
@@ -25,4 +25,4 @@ class ProviderPageGenerator extends PageGenerator {
   }
 }
 
-module.exports = ProviderPageGenerator;
+module.exports = VenderPageGenerator;

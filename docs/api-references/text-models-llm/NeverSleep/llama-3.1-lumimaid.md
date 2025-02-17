@@ -1,7 +1,22 @@
 [#references:start]: <> ({ "template": "openapi" })
 [#references:start]: <> ({ "template": "openapi" })
+# llama-3.1-lumimaid
+
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+* neversleep/llama-3.1-lumimaid-70b
+{% endhint %}
+
+# Model Overview
+
+
+# Setup your API Key
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+# Submit a request
+## API Schema
 {% swagger src="./llama-3.1-lumimaid.json" path="/v2/chat/completions" method="post" %}
-[./llama-3.1-lumimaid.json](./llama-3.1-lumimaid.json)
+./llama-3.1-lumimaid.json
 {% endswagger %}
 [#references:end]: <> ({})
 [#references:end]: <> ({})
