@@ -11,7 +11,9 @@ A lightweight language model optimized for efficient text generation, summarizat
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./mistral-tiny.json" path="/v2/chat/completions" method="post" %}
 ./mistral-tiny.json
 {% endswagger %}
+
 [#references:end]: <> ({})

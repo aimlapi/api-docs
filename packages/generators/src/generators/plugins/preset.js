@@ -44,9 +44,8 @@ const summary = (name) =>
           children = children[tag]?.children;
         }
       }
-      const fixPath = file.replace(/\\/g, '/')
-      // console.log(file)
-      // console.log(fixPath)
+      const fixPath = file.replace(/\\/g, '/').replace(/ /g, '-').replace(/#/g, '')
+
       children[key] = {
         ...children[key],
         key: key,

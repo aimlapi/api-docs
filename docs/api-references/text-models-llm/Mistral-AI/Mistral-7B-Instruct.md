@@ -13,7 +13,9 @@ An advanced version of the Mistral-7B model, fine-tuned specifically for instruc
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Mistral-7B-Instruct.json" path="/v2/chat/completions" method="post" %}
 ./Mistral-7B-Instruct.json
 {% endswagger %}
+
 [#references:end]: <> ({})

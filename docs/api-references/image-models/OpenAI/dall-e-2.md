@@ -11,7 +11,9 @@ An advanced AI system designed to generate high-quality images and artwork from 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./dall-e-2.json" path="/images/generations/with-url" method="post" %}
 ./dall-e-2.json
 {% endswagger %}
+
 [#references:end]: <> ({})

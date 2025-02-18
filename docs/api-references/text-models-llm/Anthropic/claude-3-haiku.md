@@ -14,7 +14,9 @@ The quickest and most streamlined model, offering near-instant responsiveness. I
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./claude-3-haiku.json" path="/v2/chat/completions" method="post" %}
 ./claude-3-haiku.json
 {% endswagger %}
+
 [#references:end]: <> ({})

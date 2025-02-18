@@ -11,7 +11,9 @@ A finance domain-specific embedding model that delivers superior retrieval quali
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./voyage-finance-2.json" path="/embeddings" method="post" %}
 ./voyage-finance-2.json
 {% endswagger %}
+
 [#references:end]: <> ({})

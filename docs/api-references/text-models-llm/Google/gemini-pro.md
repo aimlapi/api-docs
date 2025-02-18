@@ -11,7 +11,9 @@ A state-of-the-art multimodal AI model designed to process and generate text, im
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./gemini-pro.json" path="/v2/chat/completions" method="post" %}
 ./gemini-pro.json
 {% endswagger %}
+
 [#references:end]: <> ({})

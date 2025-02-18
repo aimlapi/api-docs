@@ -11,7 +11,9 @@ A cutting-edge multimodal AI model developed by Google DeepMind, designed to pow
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./gemini-2.0-flash-exp.json" path="/v2/chat/completions" method="post" %}
 ./gemini-2.0-flash-exp.json
 {% endswagger %}
+
 [#references:end]: <> ({})

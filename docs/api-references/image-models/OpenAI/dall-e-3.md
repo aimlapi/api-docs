@@ -11,7 +11,9 @@ This model represents a significant leap forward in AI-driven image creation, ca
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./dall-e-3.json" path="/images/generations/with-url" method="post" %}
 ./dall-e-3.json
 {% endswagger %}
+
 [#references:end]: <> ({})

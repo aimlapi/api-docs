@@ -11,7 +11,9 @@ A conversational AI model designed to provide rich, nuanced, and contextually aw
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Llama-2-7b-chat-hf.json" path="/v2/chat/completions" method="post" %}
 ./Llama-2-7b-chat-hf.json
 {% endswagger %}
+
 [#references:end]: <> ({})

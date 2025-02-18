@@ -11,7 +11,9 @@ A cutting-edge large language model designed for instruction-following tasks. Bu
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Mixtral-8x22B-Instruct.json" path="/v2/chat/completions" method="post" %}
 ./Mixtral-8x22B-Instruct.json
 {% endswagger %}
+
 [#references:end]: <> ({})

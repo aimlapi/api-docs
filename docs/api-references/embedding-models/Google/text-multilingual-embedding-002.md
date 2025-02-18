@@ -11,7 +11,9 @@ A state-of-the-art model designed to convert textual data into numerical vector 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./text-multilingual-embedding-002.json" path="/embeddings" method="post" %}
 ./text-multilingual-embedding-002.json
 {% endswagger %}
+
 [#references:end]: <> ({})

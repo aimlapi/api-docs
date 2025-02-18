@@ -1,5 +1,7 @@
 const _ = require('lodash');
 
+const aliasesMap = {}
+
 const extractModels = (schema, schemaById) => {
   if (schema.properties?.model?.enum) {
     return schema.properties.model.enum;
@@ -30,7 +32,7 @@ const extractUnion = (model, schema, schemaById) => {
       const cloned = _.cloneDeep(schema);
       cloned.properties = {
         ...cloned.properties,
-        model: { ...cloned.properties.model, enum: [model] },
+        model: { ...cloned.properties.model, enum: aliasesMap[model] ? aliasesMap[model] : [model] },
       };
 
       return cloned;
@@ -66,7 +68,15 @@ const extractUnion = (model, schema, schemaById) => {
   return null;
 };
 
-const parseOpenapi = (openapi) => {
+const parseOpenapi = (openapi, fetchedModels) => {
+  for (const model of fetchedModels) {
+    if (aliasesMap[model.alias]) {
+      aliasesMap[model.alias].push(model.name)
+    } else {
+      aliasesMap[model.alias] = [model.name]
+    }
+  }
+  
   const byModel = {};
   const schemaById = openapi.components.schemas;
 

@@ -11,7 +11,9 @@ An LLM-based model, particularly the Llama2-7b version, designed to enhance the 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Llama-Guard-7b.json" path="/v2/chat/completions" method="post" %}
 ./Llama-Guard-7b.json
 {% endswagger %}
+
 [#references:end]: <> ({})

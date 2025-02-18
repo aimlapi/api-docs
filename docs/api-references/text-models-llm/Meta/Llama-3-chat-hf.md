@@ -12,7 +12,9 @@ The Llama 3 family consists of pretrained and instruction-tuned generative text 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Llama-3-chat-hf.json" path="/v2/chat/completions" method="post" %}
 ./Llama-3-chat-hf.json
 {% endswagger %}
+
 [#references:end]: <> ({})

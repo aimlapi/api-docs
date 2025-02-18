@@ -12,7 +12,9 @@ The models are trained using 680,000 hours of audio and corresponding transcript
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./g1_whisper-tiny.json" path="/stt" method="post" %}
 ./g1_whisper-tiny.json
 {% endswagger %}
+
 [#references:end]: <> ({})

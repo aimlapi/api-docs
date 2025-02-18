@@ -11,7 +11,9 @@ An auto-regressive language model that uses an optimized transformer architectur
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Meta-Llama-3.1-8B-Instruct-Turbo-128K.json" path="/v2/chat/completions" method="post" %}
 ./Meta-Llama-3.1-8B-Instruct-Turbo-128K.json
 {% endswagger %}
+
 [#references:end]: <> ({})

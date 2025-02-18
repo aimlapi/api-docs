@@ -11,7 +11,9 @@ A state-of-the-art language model designed to excel in complex reasoning tasks, 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./o3-mini.json" path="/v2/chat/completions" method="post" %}
 ./o3-mini.json
 {% endswagger %}
+
 [#references:end]: <> ({})

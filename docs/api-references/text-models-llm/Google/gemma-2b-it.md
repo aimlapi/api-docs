@@ -11,7 +11,9 @@ Gemma is a family of lightweight, state-of-the-art open models from Google, buil
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./gemma-2b-it.json" path="/v2/chat/completions" method="post" %}
 ./gemma-2b-it.json
 {% endswagger %}
+
 [#references:end]: <> ({})

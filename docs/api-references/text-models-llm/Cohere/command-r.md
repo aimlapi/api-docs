@@ -11,7 +11,9 @@ A cutting-edge large language model designed for enterprise applications, focusi
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./command-r.json" path="/v2/chat/completions" method="post" %}
 ./command-r.json
 {% endswagger %}
+
 [#references:end]: <> ({})

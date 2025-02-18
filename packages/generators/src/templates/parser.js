@@ -1,3 +1,5 @@
+const { VENDORS_PATH_MAP, ALIAS_PATH_MAP } = require(".");
+
 class SummaryParserList {
   static parse(text) {
     const expr = /^(\s*?)\*\s\[(.+)\]\((.+)\)/gm;
@@ -57,8 +59,11 @@ class SummaryParserMap {
       // }
       if (!match) continue;
       const level = spaces.length / 2;
+      const modifiedKey = VENDORS_PATH_MAP.has(key) ? VENDORS_PATH_MAP.get(key) 
+      : ALIAS_PATH_MAP.has(key) ? ALIAS_PATH_MAP.get(key) 
+      : key
       const node = {
-        key: key,
+        key: modifiedKey,
         value: value,
         children: [],
         level: level

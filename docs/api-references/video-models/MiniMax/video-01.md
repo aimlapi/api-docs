@@ -11,7 +11,9 @@ An innovative AI model designed for generating high-quality videos from text pro
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./video-01.json" path="/v2/generate/video/minimax/generation" method="post" %}
 ./video-01.json
 {% endswagger %}
+
 [#references:end]: <> ({})

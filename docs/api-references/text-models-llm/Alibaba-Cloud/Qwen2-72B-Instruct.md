@@ -12,7 +12,9 @@ This enhancement allows for more comprehensive and contextually rich interaction
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Qwen2-72B-Instruct.json" path="/v2/chat/completions" method="post" %}
 ./Qwen2-72B-Instruct.json
 {% endswagger %}
+
 [#references:end]: <> ({})

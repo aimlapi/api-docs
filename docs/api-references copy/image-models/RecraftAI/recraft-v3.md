@@ -1,7 +1,0 @@
-[#references:start]: <> ({ "template": "openapi" })
-[#references:start]: <> ({ "template": "openapi" })
-{% swagger src="./recraft-v3.json" path="/images/generations/with-url" method="post" %}
-[./recraft-v3.json](./recraft-v3.json)
-{% endswagger %}
-[#references:end]: <> ({})
-[#references:end]: <> ({})

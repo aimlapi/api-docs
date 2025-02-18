@@ -11,7 +11,9 @@ An advanced audio generation model designed to create high-quality audio tracks 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./stable-audio.json" path="/v2/generate/audio" method="post" %}
 ./stable-audio.json
 {% endswagger %}
+
 [#references:end]: <> ({})

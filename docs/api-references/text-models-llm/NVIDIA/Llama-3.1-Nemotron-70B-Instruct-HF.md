@@ -11,7 +11,9 @@ A sophisticated large language model developed by NVIDIA, designed to enhance th
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Llama-3.1-Nemotron-70B-Instruct-HF.json" path="/v2/chat/completions" method="post" %}
 ./Llama-3.1-Nemotron-70B-Instruct-HF.json
 {% endswagger %}
+
 [#references:end]: <> ({})

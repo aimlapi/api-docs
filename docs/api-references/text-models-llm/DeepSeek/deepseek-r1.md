@@ -11,7 +11,9 @@ A cutting-edge reasoning model developed by DeepSeek AI, designed to excel in co
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./deepseek-r1.json" path="/v2/chat/completions" method="post" %}
 ./deepseek-r1.json
 {% endswagger %}
+
 [#references:end]: <> ({})

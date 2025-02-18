@@ -11,7 +11,9 @@ A sophisticated conversational AI model with 13 billion parameters, capable of g
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./Llama-2-13b-chat-hf.json" path="/v2/chat/completions" method="post" %}
 ./Llama-2-13b-chat-hf.json
 {% endswagger %}
+
 [#references:end]: <> ({})

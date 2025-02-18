@@ -3,7 +3,7 @@ const ModelPageGenerator = require('./generators/model');
 const HandlebarsPageGenerator = require('./generators/common/handlebars');
 const PathPlugin = require('./generators/plugins/path');
 const StorePlugin = require('./generators/plugins/store');
-const { TEMPLATE, readTemplate, replaceTemplate, SECTION, CATEGORY } = require('./templates');
+const { TEMPLATE, readTemplate, replaceTemplate, SECTION, CATEGORY, ALIAS_MAP } = require('./templates');
 const { MODELS_URL, OPENAPI_URL } = require('./config');
 const CustomGenerator = require('./generators/custom');
 const VenderPageGenerator = require('./generators/vendor');
@@ -45,7 +45,7 @@ const root = {
                       transform: replaceTemplate(TEMPLATE.openapi),
                     })),
                     StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(c.openapi.schema),
+                      content: (_, c) => JSON.stringify(jsonModify(c.openapi.schema, ...args)),
                       path: `${PathPlugin.path(...args)}.json`,
                     })),
                     summary(),
@@ -69,6 +69,18 @@ const root = {
   }),
   plugins: [new PathPlugin(), new StorePlugin()],
 };
+
+const jsonModify = (data, args) => {
+  const key = Object.keys(data.paths)[0]
+  const alias = args[args.plugins[0].id].tags.at(-1)
+
+  if (ALIAS_MAP[alias]) {
+    if (data.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
+      data.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+  }
+  
+  return data
+}
 
 module.exports = {
   root,

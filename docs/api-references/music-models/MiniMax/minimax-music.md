@@ -13,7 +13,9 @@ Warning: This model is deprecated (or planned for deprecation) and may no longer
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./minimax-music.json" path="/v2/generate/audio" method="post" %}
 ./minimax-music.json
 {% endswagger %}
+
 [#references:end]: <> ({})

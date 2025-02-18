@@ -91,7 +91,10 @@ CATEGORY_MAPPING = {
   "moderation-safety-models": "Content Moderation/Safety Models",
   "3d-generating-models": "3D-Generating Models"
 }
+const VENDORS_PATH_MAP = new Map()
+const ALIAS_PATH_MAP = new Map()
+const ALIAS_MAP = {}
 
 const CATEGORY_SET = new Set(["Text Models (LLM)", "Image Models", "Video Models", "Embedding Models", "Voice/Speech Models", "STT", 'Speech Models', "Voice/Speech Models", "TTS", "Music Models", "Vision Models", "Vision Models" ,  "Content Moderation/Safety Models", "3D-Generating Models"])
 
-module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET };
+module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP };

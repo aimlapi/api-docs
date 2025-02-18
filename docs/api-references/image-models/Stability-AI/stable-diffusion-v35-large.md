@@ -11,7 +11,9 @@ A state-of-the-art text-to-image generative model designed to create high-resolu
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./stable-diffusion-v35-large.json" path="/images/generations/with-url" method="post" %}
 ./stable-diffusion-v35-large.json
 {% endswagger %}
+
 [#references:end]: <> ({})

@@ -11,7 +11,9 @@ An experimental research model developed by the Qwen team, focusing on enhancing
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./qvq-72b-preview.json" path="/v2/chat/completions" method="post" %}
 ./qvq-72b-preview.json
 {% endswagger %}
+
 [#references:end]: <> ({})

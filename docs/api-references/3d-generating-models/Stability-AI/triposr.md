@@ -11,7 +11,9 @@ A transformer-based model designed for rapid 3D object reconstruction from a sin
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./triposr.json" path="/images/generations/with-url" method="post" %}
 ./triposr.json
 {% endswagger %}
+
 [#references:end]: <> ({})

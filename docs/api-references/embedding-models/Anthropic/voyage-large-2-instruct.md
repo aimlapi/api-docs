@@ -11,7 +11,9 @@ An instruction-tuned, general-purpose text embedding model optimized for tasks s
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./voyage-large-2-instruct.json" path="/embeddings" method="post" %}
 ./voyage-large-2-instruct.json
 {% endswagger %}
+
 [#references:end]: <> ({})

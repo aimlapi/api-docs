@@ -11,7 +11,9 @@ An advanced conversational AI designed to deliver highly engaging and context-aw
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./deepseek-llm-67b-chat.json" path="/v2/chat/completions" method="post" %}
 ./deepseek-llm-67b-chat.json
 {% endswagger %}
+
 [#references:end]: <> ({})

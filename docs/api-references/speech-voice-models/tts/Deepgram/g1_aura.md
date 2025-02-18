@@ -22,7 +22,9 @@ Deepgram Aura is the first text-to-speech (TTS) AI model designed for real-time,
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./g1_aura.json" path="/tts" method="post" %}
 ./g1_aura.json
 {% endswagger %}
+
 [#references:end]: <> ({})

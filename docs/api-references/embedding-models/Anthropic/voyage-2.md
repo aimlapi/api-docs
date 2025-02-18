@@ -11,7 +11,9 @@ A general-purpose embedding model that delivers state-of-the-art performance acr
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./voyage-2.json" path="/embeddings" method="post" %}
 ./voyage-2.json
 {% endswagger %}
+
 [#references:end]: <> ({})

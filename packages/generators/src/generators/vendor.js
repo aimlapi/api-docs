@@ -1,4 +1,5 @@
 const { OPENAPI_URL } = require('../config');
+const { VENDORS_PATH_MAP } = require('../templates');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 
@@ -13,13 +14,16 @@ class VenderPageGenerator extends PageGenerator {
 
     for (const vendor in byVendor) {
       const replaceVendor = vendor.replace(/ /g, '-');
+      if (replaceVendor !== vendor) {
+        VENDORS_PATH_MAP.set(replaceVendor, vendor)
+      }
       const vendorModels = byVendor[vendor];
       yield this.done(
         {
           ...rest,
           models: vendorModels,
         },
-        PathPlugin.traverse(`/${replaceVendor}`, replaceVendor),
+        PathPlugin.traverse(`/${replaceVendor}`, vendor),
       );
     }
   }

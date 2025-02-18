@@ -14,7 +14,9 @@ Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing a
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./claude-3-5-haiku.json" path="/v2/chat/completions" method="post" %}
 ./claude-3-5-haiku.json
 {% endswagger %}
+
 [#references:end]: <> ({})

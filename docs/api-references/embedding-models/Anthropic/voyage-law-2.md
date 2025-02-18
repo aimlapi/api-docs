@@ -11,7 +11,9 @@ This model leads the MTEB leaderboard for legal retrieval by a significant margi
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 # Submit a request
+## API Schema
 {% swagger src="./voyage-law-2.json" path="/embeddings" method="post" %}
 ./voyage-law-2.json
 {% endswagger %}
+
 [#references:end]: <> ({})
