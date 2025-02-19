@@ -105,6 +105,19 @@ Stop sequences are strings that, when detected in the model's output, signal the
 stop = ["\n"]  # Instructs the model to stop generating when it produces a newline character.
 ```
 
+### Stream
+
+The parameter in chat models controls how responses are delivered.
+
+* If **`true`**, the model returns output token by token in real time. This allows users to see the response as it is being generated, improving responsiveness in chat applications.
+* If **`false`**, the model waits until the entire response is generated before returning it in full.
+
+Streaming is particularly useful for interactive conversations but requires handling streamed data properly in code. By default, `stream` is set to **`false`**.
+
+```python
+stream = True #
+```
+
 ### Temperature
 
 The temperature controls the randomness of the model's output. Setting it to 0 results in deterministic output, whereas higher values up to 1 introduce more variation and creativity in responses.

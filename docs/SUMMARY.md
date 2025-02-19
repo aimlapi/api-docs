@@ -45,7 +45,7 @@
     * [Overview](api-overview/video-models/runway/overview.md)
     * [Generate Video](api-overview/video-models/runway/generate-video.md)
     * [Fetch Generation](api-overview/video-models/runway/generate-video-1.md)
-* [Audio Models (Music & Vocal)](api-overview/audio-models-music-and-vocal/README.md)
+* [Music Models](api-overview/audio-models-music-and-vocal/README.md)
   * [Suno AI v2 (deprecated)](api-overview/audio-models-music-and-vocal/suno-ai-v2/README.md)
     * [What is a Clip](api-overview/audio-models-music-and-vocal/suno-ai-v2/what-is-a-clip.md)
     * [Costs](api-overview/audio-models-music-and-vocal/suno-ai-v2/costs.md)
@@ -71,14 +71,14 @@
   * [Minimax Music (legacy)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/README.md)
     * [Generate an audio (Minimax Music)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/generate-an-audio.md)
     * [Fetch an audio (Minimax Music)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/fetch-generations.md)
+* [Voice/Speech Models](api-overview/speech-models/README.md)
+  * [Speech-to-Text (STT)](api-overview/speech-models/speech-to-text-stt.md)
+  * [Text-to-Speech (TTS)](api-overview/speech-models/text-to-speech-tts.md)
 * [Vision Models](api-overview/vision-models/README.md)
   * [Image Analysis](api-overview/vision-models/image-analysis.md)
   * [OCR: Optical Character Recognition](api-overview/vision-models/ocr-optical-character-recognition.md)
   * [OFR: Optical Feature Recognition](api-overview/vision-models/ofr-optical-feature-recognition.md)
-* [Speech Models](api-overview/speech-models/README.md)
-  * [Speech-to-Text (STT)](api-overview/speech-models/speech-to-text-stt.md)
-  * [Text-to-Speech (TTS)](api-overview/speech-models/text-to-speech-tts.md)
-* [Guard models](api-overview/guard-models/README.md)
+* [Content Moderation/Safety Models](api-overview/guard-models/README.md)
 * [Model Database](api-overview/model-database/README.md)
   * [Text Models](api-overview/model-database/text-models.md)
   * [Video Models](api-overview/model-database/video-models.md)
@@ -91,7 +91,7 @@
 
 ## Recipes
 
-* [Models comparsion](recipes/models-comparsion.md)
+* [Model comparsion](recipes/models-comparsion.md)
 * [Using Assistants & Threads](recipes/using-assistants-and-threads.md)
 
 ## FAQ

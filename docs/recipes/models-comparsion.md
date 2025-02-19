@@ -1,13 +1,13 @@
 ---
-description: Use the API to list all available models and compare their responses.
 icon: code
+description: Use the API to list all available models and compare their responses.
 ---
 
-# Models comparsion
+# Model comparsion
 
 The API used in this example is listed [here](../api-overview/model-database/).
 
-### Example
+### Example (two random models)
 
 For example, you can send requests to two random models and compare the results:
 
@@ -16,12 +16,12 @@ const { OpenAI } = require('openai');
 const { Axios } = require('axios');
 const main = async () => {
   const BASE_URL = '{{baseUrl}}';
-  const API_TOKEN = '{{token}}';
+  const API_KEY = '{{YOUR_API_KEY}}';
   const axios = new Axios({
-    headers: { Authorization: `Bearer ${API_TOKEN}` },
+    headers: { Authorization: `Bearer ${API_KEY}` },
     baseURL: BASE_URL,
   });
-  const openai = new OpenAI({ baseURL: BASE_URL, apiKey: API_TOKEN });
+  const openai = new OpenAI({ baseURL: BASE_URL, apiKey: API_KEY });
   const vendorByModel = await axios.get('/models').then((res) => JSON.parse(res.data));
   const models = Object.keys(vendorByModel);
   const shuffledModels = [...models].sort(() => Math.round(Math.random()));
