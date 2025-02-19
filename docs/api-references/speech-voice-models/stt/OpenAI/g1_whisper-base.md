@@ -13,7 +13,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./g1_whisper-base.json" path="/stt" method="post" %}
+{% swagger src="./g1_whisper-base.json" path="/v1/stt" method="post" %}
 ./g1_whisper-base.json
 {% endswagger %}
 

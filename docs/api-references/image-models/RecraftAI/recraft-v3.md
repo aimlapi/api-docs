@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./recraft-v3.json" path="/images/generations/with-url" method="post" %}
+{% swagger src="./recraft-v3.json" path="/v1/images/generations/with-url" method="post" %}
 ./recraft-v3.json
 {% endswagger %}
 

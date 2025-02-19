@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./g1_aura.json" path="/tts" method="post" %}
+{% swagger src="./g1_aura.json" path="/v1/tts" method="post" %}
 ./g1_aura.json
 {% endswagger %}
 

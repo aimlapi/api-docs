@@ -14,7 +14,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./textembedding-gecko.json" path="/embeddings" method="post" %}
+{% swagger src="./textembedding-gecko.json" path="/v1/embeddings" method="post" %}
 ./textembedding-gecko.json
 {% endswagger %}
 

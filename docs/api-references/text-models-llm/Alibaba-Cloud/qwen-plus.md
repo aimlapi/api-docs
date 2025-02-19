@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./qwen-plus.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./qwen-plus.json" path="/v1/chat/completions" method="post" %}
 ./qwen-plus.json
 {% endswagger %}
 

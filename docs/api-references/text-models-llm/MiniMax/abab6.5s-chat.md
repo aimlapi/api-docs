@@ -13,7 +13,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./abab6.5s-chat.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./abab6.5s-chat.json" path="/v1/chat/completions" method="post" %}
 ./abab6.5s-chat.json
 {% endswagger %}
 

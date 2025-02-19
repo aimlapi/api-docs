@@ -68,6 +68,13 @@ const extractUnion = (model, schema, schemaById) => {
   return null;
 };
 
+const getVersionFromUrl = (url) => {
+  const match = url.match(/\/v(\d+)\//);
+  return match ? parseInt(match[1], 10) : null;
+}
+const VERSION_MAP = {
+
+}
 const parseOpenapi = (openapi, fetchedModels) => {
   for (const model of fetchedModels) {
     if (aliasesMap[model.alias]) {
@@ -85,7 +92,13 @@ const parseOpenapi = (openapi, fetchedModels) => {
       if (method !== 'post') {
         continue;
       }
-
+      const version = getVersionFromUrl(path)
+      const basePath = path.replace(/\/v\d+\//, '/');
+      if (VERSION_MAP[basePath] === 1) {
+        console.log(VERSION_MAP)
+        continue
+      }
+      VERSION_MAP[basePath] = version
       const operation = openapi.paths[path][method];
 
       const refId = openapi.paths[path][method].requestBody?.content?.['application/json']?.schema?.$ref

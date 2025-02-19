@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./bge-large-en.json" path="/embeddings" method="post" %}
+{% swagger src="./bge-large-en.json" path="/v1/embeddings" method="post" %}
 ./bge-large-en.json
 {% endswagger %}
 

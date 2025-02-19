@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./MythoMax-L2-13b.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./MythoMax-L2-13b.json" path="/v1/chat/completions" method="post" %}
 ./MythoMax-L2-13b.json
 {% endswagger %}
 

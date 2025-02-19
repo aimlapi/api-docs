@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./Llama-Guard-7b.json" path="/v2/chat/completions" method="post" %}
+{% swagger src="./Llama-Guard-7b.json" path="/v1/chat/completions" method="post" %}
 ./Llama-Guard-7b.json
 {% endswagger %}
 

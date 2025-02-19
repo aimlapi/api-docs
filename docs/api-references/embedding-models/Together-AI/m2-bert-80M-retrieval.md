@@ -14,7 +14,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./m2-bert-80M-retrieval.json" path="/embeddings" method="post" %}
+{% swagger src="./m2-bert-80M-retrieval.json" path="/v1/embeddings" method="post" %}
 ./m2-bert-80M-retrieval.json
 {% endswagger %}
 
