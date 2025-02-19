@@ -1,5 +1,6 @@
 const parseOpenapi = require('../utils/parse-openapi');
 const PageGenerator = require('./common/page');
+const yaml = require('js-yaml');
 const fs = require("fs").promises;
 
 class ModelsGenerator extends PageGenerator {
@@ -13,12 +14,14 @@ class ModelsGenerator extends PageGenerator {
   }
 
   async fetchSwagger() {
-    return await fetch(this.config.openapi.url).then((res) => res.json());
+    return await fetch(this.config.openapi.url).then((res) => res.text());
   }
 
   async *generate() {
     const models = await this.fetchModels();
-    const openapi = parseOpenapi(await this.fetchSwagger(), models);
+    const swaggerData = yaml.load(await this.fetchSwagger()); 
+
+    const openapi = parseOpenapi(swaggerData, models);
 
     for (const model of models) {
       model.key = model.name.replace(/[\/#]/g, ' ').trim().replace(/\s+/g, '-');
