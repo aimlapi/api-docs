@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Contact Us](https://webforms.pipedrive.com/f/6qbDVqej0gFSr3yerhf5KALZ1IwAfvGYuM8imBNuRWalzRyQOcUbNZt2QVSFF9Blrd)
+* [Get Support](https://help.aimlapi.com)
 * [🤖 Introduction](README.md)
 
 ## Quickstart
