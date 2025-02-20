@@ -95,7 +95,6 @@ const parseOpenapi = (openapi, fetchedModels) => {
       const version = getVersionFromUrl(path)
       const basePath = path.replace(/\/v\d+\//, '/');
       if (VERSION_MAP[basePath] === 1) {
-        console.log(VERSION_MAP)
         continue
       }
       VERSION_MAP[basePath] = version

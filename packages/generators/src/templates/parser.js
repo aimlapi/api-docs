@@ -44,19 +44,7 @@ class SummaryParserMap {
     const matches = text.replace(/^\n?/gm, '').matchAll(expr);
     for (const match of matches) {
       const [, spaces, key, value] = match;
-      // if (level === spaces.length / 2) {
-      //   result[key] = { key, value, children: {} };
-      // } else if (level < spaces.length / 2) {
-      //   const previousKey = Object.keys(result).at(-1);
-      //   previous = result;
-      //   previous[previousKey].children = { [key]: { key, value, children: {} } };
-      //   result = previous[previousKey].children;
-      //   level += 1;
-      // } else if (level > spaces.length / 2) {
-      //   result = previous;
-      //   result[key] = { key, value, children: [] };
-      //   level -= 1;
-      // }
+
       if (!match) continue;
       const level = spaces.length / 2;
       const modifiedKey = VENDORS_PATH_MAP.has(key) ? VENDORS_PATH_MAP.get(key) 

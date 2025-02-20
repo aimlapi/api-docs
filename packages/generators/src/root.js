@@ -74,15 +74,6 @@ const jsonModify = (data, args) => {
   const key = Object.keys(data.paths)[0]
   const alias = args[args.plugins[0].id].tags.at(-1)
 
-  // if (c <= 10){
-  //   console.log(args)
-  //   c += 1
-  // }
-  // if (c <= 3){
-  //   console.log(data)
-  //   // c += 1
-  // }
-
   if (ALIAS_MAP[alias]) {
     if (data.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
       data.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
