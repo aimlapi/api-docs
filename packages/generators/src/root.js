@@ -45,12 +45,11 @@ const root = {
                       transform: replaceTemplate(TEMPLATE.openapi),
                     })),
                     StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(jsonModify(c.openapi, ...args)),
+                      content: (_, c) => JSON.stringify(jsonModify(c.openapi.schema, ...args)),
                       path: `${PathPlugin.path(...args)}.json`,
-
                     })),
                     StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(jsonModify(c.openapi, ...args)),
+                      content: (_, c) => JSON.stringify(jsonModifyForPair(c.openapi, ...args)),
                       path: `${PathPlugin.path(...args)}.json`,
                     })),
                     summary(),
@@ -75,7 +74,7 @@ const root = {
   plugins: [new PathPlugin(), new StorePlugin()],
 };
 let c = 0
-const jsonModify1 = (data, args) => {
+const jsonModify = (data, args) => {
   const key = Object.keys(data.paths)[0]
   const alias = args[args.plugins[0].id].tags.at(-1)
   if(c < 2) {
@@ -90,11 +89,11 @@ const jsonModify1 = (data, args) => {
   return data
 }
 
-const jsonModify = (data, args) => {
+const jsonModifyForPair = (data, args) => {
   if (data.pair.has) {
       const key = Object.keys(data.pair.schema.paths)[0]
       const alias = args[args.plugins[0].id].tags.at(-1)
-      args[args.plugins[0].id].path = args[args.plugins[0].id].path + '-pair'
+      args[args.plugins[0].id].path = args[args.plugins[0].id].path
    
       if (ALIAS_MAP[alias]) {
         if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)

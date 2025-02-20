@@ -5,13 +5,6 @@ const PathPlugin = require('./plugins/path');
 class ModelPageGenerator extends PageGenerator {
   *generate() {
     const { models, openapi, ...rest } = this.config;
-    // for (const model of models) {
-    //   if (ALIAS_MAP[model.alias]) {
-    //     ALIAS_MAP[model.alias].push(model.name)
-    //   } else {
-    //     ALIAS_MAP[model.alias] = [model.name]
-    //   }
-    // }
     for (const model of models) {
       const { path, schema, method, pair } = openapi.byModel[model.name];
       if (!path) {
