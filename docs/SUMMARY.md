@@ -71,6 +71,15 @@
   * [Minimax Music (legacy)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/README.md)
     * [Generate an audio (Minimax Music)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/generate-an-audio.md)
     * [Fetch an audio (Minimax Music)](api-overview/audio-models-music-and-vocal/minimax-music-legacy/fetch-generations.md)
+* [Web Search Models](api-overview/web-search-models/README.md)
+  * [Bagoodex](api-overview/web-search-models/bagoodex/README.md)
+    * [bagoodex/bagoodex-search-v1](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/README.md)
+      * [Find Links](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links.md)
+      * [Find Images](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images.md)
+      * [Find Videos](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos.md)
+      * [Find the Weather](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather.md)
+      * [Find a Local Map](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map.md)
+      * [Get a Knowledge Structure](api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure.md)
 * [Voice/Speech Models](api-overview/speech-models/README.md)
   * [Speech-to-Text (STT)](api-overview/speech-models/speech-to-text-stt.md)
   * [Text-to-Speech (TTS)](api-overview/speech-models/text-to-speech-tts.md)
@@ -102,6 +111,7 @@
 * [How to use the Free Tier?](faq/free-tier.md)
 * [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
 * [Are my requests cropped?](faq/my-requests-are-cropped.md)
+* [Can I call API in the asynchronous mode?](faq/my-requests-are-cropped-1.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 
 ## Glossary
