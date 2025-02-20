@@ -1,0 +1,11 @@
+import requests
+
+def main():
+    params = {'followup_id': '<YOUR_GENERATION_ID>'}
+    headers = {'Authorization': f'Bearer {{apiKey}}'}
+    response = requests.get(f'{{baseUrl}}/bagoodex/images', headers=headers, params=params)
+    print(response.json())
+
+
+if __name__ == "__main__":
+    main()
