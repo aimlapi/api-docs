@@ -16,4 +16,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ./video-01.json
 {% endswagger %}
 
+## Pair API Schema
+{% swagger src="./video-01-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
+./video-01-pair.json
+{% endswagger %}
 [#references:end]: <> ({})
