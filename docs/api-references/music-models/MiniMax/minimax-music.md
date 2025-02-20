@@ -22,4 +22,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% swagger src="./minimax-music-pair.json" path="/v2/generate/audio" method="get" %}
 ./minimax-music-pair.json
 {% endswagger %}
+
 [#references:end]: <> ({})

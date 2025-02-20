@@ -9,8 +9,9 @@ const CustomGenerator = require('./generators/custom');
 const VenderPageGenerator = require('./generators/vendor');
 const { SummaryParserMap } = require('./templates/parser');
 const { summary } = require('./generators/plugins/preset');
-const path = require('path');
 const CategoryPageGenerator = require('./generators/category');
+const path = require('path');
+const _ = require('lodash');
 
 const DOCS_PATH = '/api-references';
 
@@ -45,12 +46,12 @@ const root = {
                       transform: replaceTemplate(TEMPLATE.openapi),
                     })),
                     StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(jsonModify(c.openapi.schema, ...args)),
+                      content: (_, c) => JSON.stringify(jsonModify(c.openapi, ...args)),
                       path: `${PathPlugin.path(...args)}.json`,
                     })),
                     StorePlugin.store((...args) => ({
                       content: (_, c) => JSON.stringify(jsonModifyForPair(c.openapi, ...args)),
-                      path: `${PathPlugin.path(...args)}.json`,
+                      path: `${PathPlugin.path(getArgs(...args))}.json`,
                     })),
                     summary(),
                   ],
@@ -74,33 +75,60 @@ const root = {
   plugins: [new PathPlugin(), new StorePlugin()],
 };
 let c = 0
-const jsonModify = (data, args) => {
-  const key = Object.keys(data.paths)[0]
+const pairMap = {}
+const getArgs = (args) => {
+
   const alias = args[args.plugins[0].id].tags.at(-1)
-  if(c < 2) {
-    console.log(args)
-    c += 1
+  if(pairMap[alias]) {
+    console.log('@@@@', pairMap)
+    return pairMap[alias]
+  }
+  return args
+}
+const jsonModify = (data, args) => {
+  const key = Object.keys(data.schema.paths)[0]
+  const alias = args[args.plugins[0].id].tags.at(-1)
+  if (data.pair.has) {
+    console.log(data.pair.has)
+    const cloned = _.cloneDeep(args);
+    cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
+    savePair(alias, cloned)
   }
   if (ALIAS_MAP[alias]) {
-    if (data.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
-      data.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+    if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
+      data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
   }
   
-  return data
+  return data.schema
+}
+
+const savePair = (alias, cloned) => {
+  if(!pairMap[alias])
+    pairMap[alias] = cloned
 }
 
 const jsonModifyForPair = (data, args) => {
+  // console.log(data.pair.has)
   if (data.pair.has) {
+      console.log(data.pair.has)
       const key = Object.keys(data.pair.schema.paths)[0]
       const alias = args[args.plugins[0].id].tags.at(-1)
-      args[args.plugins[0].id].path = args[args.plugins[0].id].path
-   
+      // const cloned = _.cloneDeep(args);
+      // cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
+      // if(!pairMap[alias])
+      // pairMap[alias] = cloned
+      // console.log(alias)
+      // console.log(pairMap)
+      // if(c < 1) {
+      //   console.log(args)
+      //   c += 1
+      // }
       if (ALIAS_MAP[alias]) {
         if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
           data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
       }
       
-      return data
+      return data.pair.schema
   }
 
   const key = Object.keys(data.schema.paths)[0]
@@ -111,7 +139,7 @@ const jsonModifyForPair = (data, args) => {
       data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
   }
   
-  return data
+  return data.schema
   
 }
 
