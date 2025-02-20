@@ -1,85 +1,85 @@
 {
     "paths": {
       "/v2/generate/audio": {
-        "post": {
-          "operationId": "AudioModelsControllerV2_createGeneration_v2",
-          "parameters": [],
-          "requestBody": {
-            "required": true,
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "provider": {
-                      "type": "string",
-                      "enum": [
-                        "fal-ai"
-                      ],
-                      "default": "fal-ai",
-                      "readOnly": true
-                    },
-                    "model": {
-                      "type": "string",
-                      "enum": [
-                        "stable-audio"
-                      ]
-                    },
-                    "prompt": {
-                      "type": "string"
-                    },
-                    "seconds_start": {
-                      "type": "integer",
-                      "maximum": 47,
-                      "minimum": 1,
-                      "description": "The start point of the audio clip to generate (Only for stable-audio)"
-                    },
-                    "seconds_total": {
-                      "type": "integer",
-                      "maximum": 47,
-                      "minimum": 1,
-                      "default": 30,
-                      "description": "The duration of the audio clip to generate (Only for stable-audio)"
-                    },
-                    "steps": {
-                      "type": "integer",
-                      "minimum": 1,
-                      "maximum": 1000,
-                      "default": 100,
-                      "description": "The number of steps to denoise the audio (Only for stable-audio)"
-                    }
-                  },
-                  "required": [
-                    "model",
-                    "prompt"
-                  ]
-                }
-              }
-            }
-          },
-          "responses": {
-            "default": {
-              "description": "",
+        "get": {
+            "operationId": "AudioModelsControllerV2_fetchGeneration_v2",
+            "parameters": [],
+            "requestBody": {
+              "required": true,
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Audio.v2.SubmitAudioResponseDTO"
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string",
+                        "enum": [
+                          "fal-ai"
+                        ],
+                        "default": "fal-ai",
+                        "readOnly": true
+                      },
+                      "model": {
+                        "type": "string",
+                        "enum": [
+                          "stable-audio"
+                        ]
+                      },
+                      "prompt": {
+                        "type": "string"
+                      },
+                      "seconds_start": {
+                        "type": "integer",
+                        "maximum": 47,
+                        "minimum": 1,
+                        "description": "The start point of the audio clip to generate (Only for stable-audio)"
+                      },
+                      "seconds_total": {
+                        "type": "integer",
+                        "maximum": 47,
+                        "minimum": 1,
+                        "default": 30,
+                        "description": "The duration of the audio clip to generate (Only for stable-audio)"
+                      },
+                      "steps": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 1000,
+                        "default": 100,
+                        "description": "The number of steps to denoise the audio (Only for stable-audio)"
+                      }
+                    },
+                    "required": [
+                      "model",
+                      "prompt"
+                    ]
                   }
                 }
               }
-            }
+            },
+            "responses": {
+              "default": {
+                "description": "",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Audio.v2.SubmitAudioResponseDTO"
+                    }
+                  }
+                }
+              }
+            },
+            "tags": [
+              "Audio Generation"
+            ],
+            "security": [
+              {
+                "access-token": []
+              }
+            ]
           },
-          "tags": [
-            "Audio Generation"
-          ],
-          "security": [
-            {
-              "access-token": []
-            }
-          ]
-        },
-        "get": {
-          "operationId": "AudioModelsControllerV2_fetchGeneration_v2",
+        "post": {
+          "operationId": "AudioModelsControllerV2_createGeneration_v2",
           "parameters": [],
           "requestBody": {
             "required": true,
