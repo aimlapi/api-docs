@@ -80,8 +80,7 @@ const dataBaseModels = () =>
   content: (...args) => {
     const root = PathPlugin.root(...args);
     const file = path.relative(root, PathPlugin.path(...args))
-    console.log('root', root)
-    console.log('file', file)
+
     const key = file.split(`${path.sep}`).at(-1);
     const tags = PathPlugin.tags(...args);
 
@@ -96,7 +95,6 @@ const dataBaseModels = () =>
     let children = childrenObject;
 
     const fixPath = file.replace(/\\/g, '/').replace(/ /g, '-').replace(/#/g, '') + '/model-database';
-    console.log(fixPath)
     children[key] = {
       ...children[key],
       key: key,

@@ -1,5 +1,4 @@
 [#references:start]: <> ({ "template": "modelsData" })
-test1
   <h2>Text Models (LLM)</h2>
   <table border="1">
     <thead>
@@ -499,7 +498,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Image Models</h2>
   <table border="1">
     <thead>
@@ -591,7 +590,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Video Models</h2>
   <table border="1">
     <thead>
@@ -653,7 +652,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Embedding Models</h2>
   <table border="1">
     <thead>
@@ -781,7 +780,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Voice/Speech Models</h2>
   <table border="1">
     <thead>
@@ -867,7 +866,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Voice/Speech Models</h2>
   <table border="1">
     <thead>
@@ -977,7 +976,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Speech-to-Text</h2>
   <table border="1">
     <thead>
@@ -991,7 +990,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Text-to-Speech</h2>
   <table border="1">
     <thead>
@@ -1005,7 +1004,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Voice/Speech Models</h2>
   <table border="1">
     <thead>
@@ -1019,7 +1018,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Music Models</h2>
   <table border="1">
     <thead>
@@ -1051,7 +1050,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>Vision Models</h2>
   <table border="1">
     <thead>
@@ -1065,7 +1064,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Vision Models</h2>
   <table border="1">
     <thead>
@@ -1079,7 +1078,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Vision Models</h2>
   <table border="1">
     <thead>
@@ -1093,7 +1092,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>OCR</h2>
   <table border="1">
     <thead>
@@ -1107,7 +1106,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>OFR</h2>
   <table border="1">
     <thead>
@@ -1121,7 +1120,7 @@ test1
     <tbody>
     </tbody>
   </table>
-  
+
   <h2>Content Moderation/Safety Models</h2>
   <table border="1">
     <thead>
@@ -1159,7 +1158,7 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
   <h2>3D-Generating Models</h2>
   <table border="1">
     <thead>
@@ -1179,6 +1178,6 @@ test1
         </tr>
     </tbody>
   </table>
-  
+
 
 [#references:end]: <> ({})
