@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr>
-          <td><a href="api-references\text-models-llm\OpenAI\gpt-4o">gpt-4o</a></td>
+          <td><a href="api-references/text-models-llm/OpenAI/gpt-4o">gpt-4o</a></td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
