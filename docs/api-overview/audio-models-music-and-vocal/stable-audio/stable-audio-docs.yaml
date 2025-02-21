@@ -55,10 +55,12 @@ servers:
     description: AI/ML API server
 components:
   securitySchemes:
-    bearer:
+    access-token:
       scheme: bearer
-      bearerFormat: JWT
+      bearerFormat: <YOUR_API_KEY>
       type: http
+      in: header
+      description: Bearer key
   schemas:
     GenerateAudioOrVideoResponseDTO:
       type: object
