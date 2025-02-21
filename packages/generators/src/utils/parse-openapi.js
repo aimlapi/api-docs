@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { ALIAS_MAP } = require('../templates');
+const { ALIAS_MAP, MODELS_TO_ALIAS_MAP } = require('../templates');
 
 const aliasesMap = {}
 
@@ -72,25 +72,24 @@ const extractUnion = (model, schema, schemaById) => {
 const getVersionFromPath = (path) => {
   const match = path.match(/\/v(\d+)\//);
   return match ? parseInt(match[1], 10) : null;
-}
-const version_map = {
-
-}
+};
+const version_map = {};
 const EXCEPTIONS_PAIR_MAP = {
   '/v2/generate/audio/minimax/upload': '/v2/generate/audio/minimax/generate',
   '/v2/generate/audio/minimax/generate': '/v2/generate/audio/minimax/upload'
-}
+};
 const parseOpenapi = (openapi, fetchedModels) => {
   for (const model of fetchedModels) {
     if (ALIAS_MAP[model.alias]) {
-      ALIAS_MAP[model.alias].push(model.name)
+      ALIAS_MAP[model.alias].push(model.name);
     } else {
-      ALIAS_MAP[model.alias] = [model.name]
+      ALIAS_MAP[model.alias] = [model.name];
     }
+    MODELS_TO_ALIAS_MAP[model.name] = {alias: model.alias, path: '', category: model.category};
   }
   
   const byModel = {};
-  const pairs = {}
+  const pairs = {};
   const schemaById = openapi.components.schemas;
 
   for (const path in openapi.paths) {
@@ -99,12 +98,12 @@ const parseOpenapi = (openapi, fetchedModels) => {
         continue;
       }
 
-      const version = getVersionFromPath(path)
+      const version = getVersionFromPath(path);
       const basePath = path.replace(/\/v\d+\//, '/');
       if (version_map[basePath] === 1) {
         continue
       }
-      version_map[basePath] = version
+      version_map[basePath] = version;
 
       const pairData = {
         has: false,
@@ -112,7 +111,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
         schema: undefined,
         operation: undefined, 
         method: '',
-      }
+      };
 
       if (EXCEPTIONS_PAIR_MAP[path] || (openapi.paths[path]['get'] && (path.includes('/generate/audio') || path.includes('/generate/video')) && version)) {
         if(EXCEPTIONS_PAIR_MAP[path]) {
@@ -175,7 +174,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
           path: '',
           schema: undefined,
           method: ''
-        }
+        };
         if (pairData.has) {
           const unionPair = extractUnion(model, pairData.schema, schemaById);
   
@@ -197,10 +196,10 @@ const parseOpenapi = (openapi, fetchedModels) => {
             },
             ...rest,
           };
-          pair.has = true
-          pair.path = pairData.path
-          pair.method = pairData.method
-          pair.schema = transformedPair
+          pair.has = true;
+          pair.path = pairData.path;
+          pair.method = pairData.method;
+          pair.schema = transformedPair;
         }
 
         byModel[model] = { path, schema: transformed, method, pair };

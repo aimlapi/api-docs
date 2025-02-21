@@ -17,7 +17,7 @@ const replaceTemplate =
     }
 
     const expr = /^\[#references:start\]:\s<>\s\(({.+?})\)(.+)\[#references:end\].+?$/gms;
-    if(name === TEMPLATE.openapi){
+    if([TEMPLATE.openapi, TEMPLATE.modelsData].includes(name)){
       return prev.replace(expr, (match, payload, content) => {
         const config = JSON.parse(payload);
         
@@ -67,6 +67,7 @@ const TEMPLATE = {
   openapi: 'openapi',
   summary: 'summary',
   models: 'models',
+  modelsData: 'modelsData',
 };
 
 const SECTION = {
@@ -86,6 +87,8 @@ CATEGORY_MAPPING = {
   "speech-voice-models": "Voice/Speech Models",
   "music-models": "Music Models",
   "vision-modle": "Vision Models",
+  "vision-modle/ocr": "Vision Models",
+  "vision-modle/ofr": "Vision Models",
   "ocr": "OCR",
   "ofr": "OFR",
   "moderation-safety-models": "Content Moderation/Safety Models",
@@ -95,6 +98,11 @@ const VENDORS_PATH_MAP = new Map()
 const ALIAS_PATH_MAP = new Map()
 const ALIAS_MAP = {}
 
+/*
+[name modal]: {alias: string, path: string, category: string}
+*/
+const MODELS_TO_ALIAS_MAP = {}
+
 const CATEGORY_SET = new Set(["Text Models (LLM)", "Image Models", "Video Models", "Embedding Models", "Voice/Speech Models", "STT", 'Speech Models', "Voice/Speech Models", "TTS", "Music Models", "Vision Models", "Vision Models" ,  "Content Moderation/Safety Models", "3D-Generating Models"])
 
-module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP };
+module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP, MODELS_TO_ALIAS_MAP };

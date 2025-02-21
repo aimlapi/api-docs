@@ -1,0 +1,25 @@
+{{test}}
+{{#each categories}}
+  <h2>{{this.category}}</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Model-ID</th>
+        <th>Developer</th>
+        <th>Context</th>
+        <th>MODEL-CARD</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.models}}
+        <tr>
+          <td>{{this.modelId}}</td>
+          <td>{{this.developer}}</td>
+          <td>{{this.context}}</td>
+          <td>{{this.modelCard}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  
+{{/each}}

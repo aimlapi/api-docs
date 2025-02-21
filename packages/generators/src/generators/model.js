@@ -10,12 +10,12 @@ class ModelPageGenerator extends PageGenerator {
       if (!path) {
         console.warn(`Model '${model.name}' path not found.`);
       }
-      const aliastToPAth = model.alias.replace(/#/g, '').replace(/ /g, '-').replace(/\//g, '-')
+      const aliastToPAth = model.alias.replace(/#/g, '').replace(/ /g, '-').replace(/\//g, '-');
       if (model.alias !== aliastToPAth) {
-        ALIAS_PATH_MAP.set(aliastToPAth, model.alias)
+        ALIAS_PATH_MAP.set(aliastToPAth, model.alias);
       } 
       if (pair?.has) {
-        pair.url = `./${aliastToPAth}-pair.json`
+        pair.url = `./${aliastToPAth}-pair.json`;
       }
       yield this.done(
         {
@@ -24,6 +24,7 @@ class ModelPageGenerator extends PageGenerator {
             ...openapi,
             url: `./${aliastToPAth}.json`,
             alias: model.alias,
+            model: model.name,
             models: ALIAS_MAP[model.alias],
             description: model.description,
             path,

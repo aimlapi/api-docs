@@ -203,13 +203,6 @@
     "description": "The forefront of AI technology, combining the power of 56 billion parameters with advanced deep policy optimization (DPO) techniques. This model is engineered to provide strategic decision-making capabilities, analyzing complex datasets to generate actionable insights and optimized policy decisions."
   },
   {
-    "name": "deepseek-ai/deepseek-llm-67b-chat",
-    "alias": "deepseek-llm-67b-chat",
-    "category": "text-models-llm",
-    "vendor": "DeepSeek",
-    "description": "An advanced conversational AI designed to deliver highly engaging and context-aware dialogues. Powered by a massive 67 billion parameters, this model excels in understanding and generating human-like text, making it an ideal solution for creating responsive and intelligent chatbots. Its sophisticated architecture enables it to grasp subtle nuances in language, providing a seamless conversational experience that mimics human interaction."
-  },
-  {
     "name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
     "alias": "Llama-3.3-70B-Instruct-Turbo",
     "category": "text-models-llm",

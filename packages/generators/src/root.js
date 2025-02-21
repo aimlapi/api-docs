@@ -3,15 +3,16 @@ const ModelPageGenerator = require('./generators/model');
 const HandlebarsPageGenerator = require('./generators/common/handlebars');
 const PathPlugin = require('./generators/plugins/path');
 const StorePlugin = require('./generators/plugins/store');
-const { TEMPLATE, readTemplate, replaceTemplate, SECTION, CATEGORY, ALIAS_MAP } = require('./templates');
+const { TEMPLATE, readTemplate, replaceTemplate, SECTION, CATEGORY, ALIAS_MAP, MODELS_TO_ALIAS_MAP } = require('./templates');
 const { MODELS_URL, OPENAPI_URL } = require('./config');
 const CustomGenerator = require('./generators/custom');
 const VenderPageGenerator = require('./generators/vendor');
 const { SummaryParserMap } = require('./templates/parser');
-const { summary } = require('./generators/plugins/preset');
+const { summary, dataBaseModels } = require('./generators/plugins/preset');
 const CategoryPageGenerator = require('./generators/category');
 const path = require('path');
 const _ = require('lodash');
+const DataBaseModelsPageGenerator = require('./generators/dataBaseModels');
 
 const DOCS_PATH = '/api-references';
 
@@ -70,17 +71,28 @@ const root = {
           // }),
         ],
       }),
-    ],
+      DataBaseModelsPageGenerator.build({
+        next: HandlebarsPageGenerator.build({
+          content: readTemplate(TEMPLATE.modelsData),
+          effects: [
+            StorePlugin.store((...args) => ({
+              path: `${PathPlugin.path(...args)}${path.sep}/model-database.md`,
+              transform: replaceTemplate(TEMPLATE.modelsData),
+            })),
+            dataBaseModels(),
+          ],
+        }),
+      }),
+    ]
   }),
+
   plugins: [new PathPlugin(), new StorePlugin()],
 };
 let c = 0
 const pairMap = {}
 const getArgs = (args) => {
-
   const alias = args[args.plugins[0].id].tags.at(-1)
   if(pairMap[alias]) {
-    console.log('@@@@', pairMap)
     return pairMap[alias]
   }
   return args
@@ -88,8 +100,10 @@ const getArgs = (args) => {
 const jsonModify = (data, args) => {
   const key = Object.keys(data.schema.paths)[0]
   const alias = args[args.plugins[0].id].tags.at(-1)
+  const root = PathPlugin.root(args);
+  const file = path.relative(root, PathPlugin.path(args))
+  MODELS_TO_ALIAS_MAP[data.model].path = file
   if (data.pair.has) {
-    console.log(data.pair.has)
     const cloned = _.cloneDeep(args);
     cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
     savePair(alias, cloned)
@@ -107,22 +121,12 @@ const savePair = (alias, cloned) => {
     pairMap[alias] = cloned
 }
 
+// if there is a second endpoint for this alias, a json with the '-pair' appended is created
 const jsonModifyForPair = (data, args) => {
-  // console.log(data.pair.has)
   if (data.pair.has) {
-      console.log(data.pair.has)
       const key = Object.keys(data.pair.schema.paths)[0]
       const alias = args[args.plugins[0].id].tags.at(-1)
-      // const cloned = _.cloneDeep(args);
-      // cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
-      // if(!pairMap[alias])
-      // pairMap[alias] = cloned
-      // console.log(alias)
-      // console.log(pairMap)
-      // if(c < 1) {
-      //   console.log(args)
-      //   c += 1
-      // }
+
       if (ALIAS_MAP[alias]) {
         if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
           data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
@@ -140,7 +144,6 @@ const jsonModifyForPair = (data, args) => {
   }
   
   return data.schema
-  
 }
 
 module.exports = {

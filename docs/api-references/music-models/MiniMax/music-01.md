@@ -16,7 +16,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ./music-01.json
 {% endswagger %}
 
-## Pair API Schema
 {% swagger src="./music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
 ./music-01-pair.json
 {% endswagger %}

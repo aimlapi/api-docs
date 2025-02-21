@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { replaceTemplate, TEMPLATE, SECTION, CATEGORY_MAPPING } = require('../../templates');
+const { replaceTemplate, TEMPLATE, SECTION, CATEGORY_MAPPING, MODELS_TO_ALIAS_MAP } = require('../../templates');
 const { SummaryParserMap } = require('../../templates/parser');
 
 const PathPlugin = require('./path');
@@ -59,20 +59,55 @@ const summary = (name) =>
     }),
   }));
 
-  function transformToObject(childrenArray) {
-    const result = {};
-    for (const item of childrenArray) {
-      const transformedItem = {
-        key: item.key,
-        value: item.value,
-        children: item.children && item.children.length > 0 
-                  ? transformToObject(item.children) 
-                  : {},
-        level: item.level
-      };
-      result[item.key] = transformedItem;
-    }
-    return result;
+function transformToObject(childrenArray) {
+  const result = {};
+  for (const item of childrenArray) {
+    const transformedItem = {
+      key: item.key,
+      value: item.value,
+      children: item.children && item.children.length > 0 
+                ? transformToObject(item.children) 
+                : {},
+      level: item.level
+    };
+    result[item.key] = transformedItem;
   }
+  return result;
+}
 
-module.exports = { summary };
+const dataBaseModels = () => 
+  StorePlugin.store((...args) => ({
+  content: (...args) => {
+    const root = PathPlugin.root(...args);
+    const file = path.relative(root, PathPlugin.path(...args))
+    console.log('root', root)
+    console.log('file', file)
+    const key = file.split(`${path.sep}`).at(-1);
+    const tags = PathPlugin.tags(...args);
+
+    return { key, tags, file: file };
+  },
+  path: `${PathPlugin.root(...args)}${path.sep}SUMMARY.md`,
+  transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
+    const { file } = next;
+    const key = 'Model Database'
+    const summary = SummaryParserMap.parse(match);
+    const childrenObject = transformToObject(summary?.children)
+    let children = childrenObject;
+
+    const fixPath = file.replace(/\\/g, '/').replace(/ /g, '-').replace(/#/g, '') + '/model-database';
+    console.log(fixPath)
+    children[key] = {
+      ...children[key],
+      key: key,
+      value: `${fixPath}.md`,
+      children: { ...children[key]?.children },
+    };
+
+    const stringified = SummaryParserMap.stringify(childrenObject);
+
+    return `## API REFERENCES\n${stringified}`;
+  }),
+}));
+
+module.exports = { summary, dataBaseModels };

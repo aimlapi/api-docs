@@ -16,7 +16,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ./stable-audio.json
 {% endswagger %}
 
-## Pair API Schema
 {% swagger src="./stable-audio-pair.json" path="/v2/generate/audio" method="get" %}
 ./stable-audio-pair.json
 {% endswagger %}
