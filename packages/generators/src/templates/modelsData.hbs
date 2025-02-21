@@ -12,10 +12,10 @@
     <tbody>
       {{#each this.models}}
         <tr>
-          <td>[{{this.modelId}}]({{this.link}})</td>
+          <td><a href="{{this.link}}">{{this.modelId}}</a></td>
           <td>{{this.developer}}</td>
           <td>{{this.context}}</td>
-          <td>[{{this.modalName}}]({{this.modelCard}})</td>
+          <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
         </tr>
       {{/each}}
     </tbody>
