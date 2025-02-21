@@ -92,9 +92,10 @@ Individual fields for which no information was found are also returned empty.
 First, you must first call the standard chat completion endpoint with your query. (See the Chat Completion call in the [corresponding section](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion) of this documentation or check how this call is made in the [example ](find-images.md#example)below.)&#x20;
 
 {% hint style="success" %}
-Note that queries can include Google's advanced search syntax:
+Note that queries can include advanced search syntax:
 
-* **Search for an exact match:** Enter a word or phrase inside quotes. For example, `"tallest building"`.&#x20;
+* **Search for an exact match:** Enter a word or phrase using `\"` before and after it. \
+  For example, `\"tallest building\"`.&#x20;
 * **Search for a specific site:** Enter `site:` in front of a site or domain. For example, `site:youtube.com cat videos`.
 * **Exclude words from your search:** Enter `-` in front of a word that you want to leave out. For example, `jaguar speed -car`.
 {% endhint %}

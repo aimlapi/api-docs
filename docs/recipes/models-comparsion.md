@@ -1,6 +1,17 @@
 ---
 icon: code
 description: Use the API to list all available models and compare their responses.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Model comparsion
@@ -136,7 +147,7 @@ def generate_joke(model):
     client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
     
     system_prompt = "You are an AI assistant that only responds with jokes."
-    user_prompt = "Why is the sky blue?"
+    user_prompt = "Why did the programmer break up with their keyboard?"
     
     response = client.chat.completions.create(
         messages=[
@@ -152,7 +163,7 @@ def main():
     for model in [model1, model2]:
         joke = generate_joke(model)
         print(f"--- {model} ---")
-        print(f"USER: Why is the sky blue?")
+        print(f"USER: Why did the programmer break up with their keyboard?")
         print(f"AI  : {joke}")
 
 if __name__ == "__main__":

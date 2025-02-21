@@ -111,7 +111,7 @@
 * [How to use the Free Tier?](faq/free-tier.md)
 * [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
 * [Are my requests cropped?](faq/my-requests-are-cropped.md)
-* [Can I call API in the asynchronous mode?](faq/my-requests-are-cropped-1.md)
+* [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 
 ## Glossary
@@ -122,3 +122,4 @@
 
 * [About](integrations/about.md)
 * [Langflow](integrations/langflow.md)
+* [LiteLLM](integrations/litellm.md)

@@ -14,6 +14,7 @@ icon: brackets-curly
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const main = async () => {
   const params = new URLSearchParams({
@@ -33,9 +34,11 @@ const main = async () => {
 main()
 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 
@@ -54,5 +57,6 @@ if __name__ == "__main__":
     main()
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
