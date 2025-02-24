@@ -24,7 +24,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
       }
       const dataModel = {
         modelId: model.name,
-        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/'),
+        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/').replace(/\api-references/g, '..'),
         developer: model.info.developer,
         context: model.info?.contextLength ? model.info?.contextLength : '',
         modalName: model.info.name,
