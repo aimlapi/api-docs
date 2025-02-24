@@ -272,6 +272,7 @@
   * [Music & Vocal Models](api-references/model-database/music-and-vocal-models.md)
   * [Embedding Models](api-references/model-database/embedding-models.md)
   * [Model Request](api-references/model-database/model-request.md)
+  * [test](api-references/model-database/README.md)
 
 [#references:end]: <> ({})
 
