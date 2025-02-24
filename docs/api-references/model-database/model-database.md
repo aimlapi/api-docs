@@ -3,7 +3,7 @@
 
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
-  a href="../text-models-llm/OpenAI/gpt-4o.md" target="_blank">GPT 4o</a>
+  <a href="../text-models-llm/OpenAI/gpt-4o.md" target="_blank">GPT 4o</a>
   <table border="1">
     <thead>
       <tr>
