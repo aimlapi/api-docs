@@ -1,8 +1,5 @@
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
-  [gpt-4o](../text-models-llm/OpenAI/gpt-4o.md)
-  [gpt-4o](./model-request.md)
-  [gpt-4o](/api-references/text-models-llm/openai/gpt-4o)
   <table border="1">
     <thead>
       <tr>
@@ -26,13 +23,13 @@
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
         </tr>
            <tr>
-          <td>[gpt-4o](../text-models-llm/OpenAI/gpt-4o.md)</td>
+          <td>[gpt-4o](../text-models-llm/OpenAI/gpt-4o)</td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
         </tr>
               <tr>
-          <td>[gpt-4o](./model-request.md)</td>
+          <td>[gpt-4o](./model-request)</td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
