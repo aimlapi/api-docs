@@ -44,6 +44,7 @@ const summary = (name) =>
           children = children[tag]?.children;
         }
       }
+      // Replacing significant symbols in path
       const fixPath = file.replace(/\\/g, '/').replace(/ /g, '-').replace(/#/g, '')
 
       children[key] = {
@@ -93,7 +94,7 @@ const dataBaseModels = () =>
     const summary = SummaryParserMap.parse(match);
     const childrenObject = transformToObject(summary?.children)
     let children = childrenObject;
-
+    // Replacing significant symbols in path, adding folder name to path
     const fixPath = file.replace(/\\/g, '/').replace(/ /g, '-').replace(/#/g, '') + '/model-database';
     children[key] = {
       ...children[key],

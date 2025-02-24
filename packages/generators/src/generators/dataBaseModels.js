@@ -6,7 +6,7 @@ const { MODELS_TO_ALIAS_MAP, CATEGORY_MAPPING } = require('../templates');
 class DataBaseModelsPageGenerator extends PageGenerator {
   *generate() {
     const { models, openapi, modelsData, ...rest } = this.config;
-    // console.log(MODELS_TO_ALIAS_MAP)
+
     const categoriesObj = {}
     const keys = Object.keys(CATEGORY_MAPPING)
     keys.forEach(key => {
@@ -24,7 +24,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
       }
       const dataModel = {
         modelId: model.name,
-        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/').replace(/\api-references/g, '..'),
+        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/').replace(/\api-references/g, '..'), // transform path: api-referenses\<category>\<vendor>\<alias> to /<category>/<vendor>/<alias>
         developer: model.info.developer,
         context: model.info?.contextLength ? model.info?.contextLength : '',
         modalName: model.info.name,
@@ -42,7 +42,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
       categories: modelsBase,
       test: 'test1',
     },
-    PathPlugin.traverse(`/model-database`, 'Model Database'));
+    PathPlugin.traverse(`/model-database`, 'Model Database')); // (for path, for name in SUMMARY.md)
   }
 }
 

@@ -35,8 +35,6 @@ class SummaryParserMap {
   static parse(text) {
     const expr = /^(\s*?)\*\s\[(.+)\]\((.+)\)/gm;
 
-    let level = 0;
-    let previous = null;
     let result = { key: 'root', value: '', children: [], level: -1 };
     let root = result;
     const stack = [root];
@@ -47,6 +45,7 @@ class SummaryParserMap {
 
       if (!match) continue;
       const level = spaces.length / 2;
+      // the key may contain significant characters to form a path to the file. such names were replaced and MAPs were compiled
       const modifiedKey = VENDORS_PATH_MAP.has(key) ? VENDORS_PATH_MAP.get(key) 
       : ALIAS_PATH_MAP.has(key) ? ALIAS_PATH_MAP.get(key) 
       : key

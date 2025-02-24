@@ -1,5 +1,5 @@
 const ModelsGenerator = require('./generators/models');
-const ModelPageGenerator = require('./generators/model');
+const AliasPageGenerator = require('./generators/alias');
 const HandlebarsPageGenerator = require('./generators/common/handlebars');
 const PathPlugin = require('./generators/plugins/path');
 const StorePlugin = require('./generators/plugins/store');
@@ -38,7 +38,7 @@ const root = {
                   summary('README'),
                 ],
               }),
-              ModelPageGenerator.build({
+              AliasPageGenerator.build({
                 next: HandlebarsPageGenerator.build({
                   content: readTemplate(TEMPLATE.openapi),
                   effects: [
@@ -88,7 +88,7 @@ const root = {
 
   plugins: [new PathPlugin(), new StorePlugin()],
 };
-let c = 0
+
 const pairMap = {}
 const getArgs = (args) => {
   const alias = args[args.plugins[0].id].tags.at(-1)
@@ -103,11 +103,14 @@ const jsonModify = (data, args) => {
   const root = PathPlugin.root(args);
   const file = path.relative(root, PathPlugin.path(args))
   MODELS_TO_ALIAS_MAP[data.model].path = file
+  // save for pair fetch in alias
   if (data.pair.has) {
+  
     const cloned = _.cloneDeep(args);
     cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
     savePair(alias, cloned)
   }
+  // changing the list of models
   if (ALIAS_MAP[alias]) {
     if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
       data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
@@ -124,15 +127,15 @@ const savePair = (alias, cloned) => {
 // if there is a second endpoint for this alias, a json with the '-pair' appended is created
 const jsonModifyForPair = (data, args) => {
   if (data.pair.has) {
-      const key = Object.keys(data.pair.schema.paths)[0]
-      const alias = args[args.plugins[0].id].tags.at(-1)
+    const key = Object.keys(data.pair.schema.paths)[0]
+    const alias = args[args.plugins[0].id].tags.at(-1)
 
-      if (ALIAS_MAP[alias]) {
-        if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
-          data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-      }
-      
-      return data.pair.schema
+    if (ALIAS_MAP[alias]) {
+      if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
+        data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+    }
+    
+    return data.pair.schema
   }
 
   const key = Object.keys(data.schema.paths)[0]

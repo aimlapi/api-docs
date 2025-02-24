@@ -13,6 +13,7 @@ class VenderPageGenerator extends PageGenerator {
     }
 
     for (const vendor in byVendor) {
+      // Replacing significant symbols in vendor
       const replaceVendor = vendor.replace(/ /g, '-');
       if (replaceVendor !== vendor) {
         VENDORS_PATH_MAP.set(replaceVendor, vendor)
@@ -23,7 +24,7 @@ class VenderPageGenerator extends PageGenerator {
           ...rest,
           models: vendorModels,
         },
-        PathPlugin.traverse(`/${replaceVendor}`, vendor),
+        PathPlugin.traverse(`/${replaceVendor}`, vendor), // (for path, for name in SUMMARY.md)
       );
     }
   }

@@ -17,7 +17,7 @@ class CategoryPageGenerator extends PageGenerator {
           ...rest,
           models: categoryModels,
         },
-        PathPlugin.traverse(`/${category}`, category),
+        PathPlugin.traverse(`/${category}`, category), // (for path, for name in SUMMARY.md)
       );
     }
   }

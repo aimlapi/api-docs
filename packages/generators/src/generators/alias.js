@@ -2,7 +2,7 @@ const { ALIAS_PATH_MAP, ALIAS_MAP } = require('../templates');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 
-class ModelPageGenerator extends PageGenerator {
+class AliasPageGenerator extends PageGenerator {
   *generate() {
     const { models, openapi, ...rest } = this.config;
     for (const model of models) {
@@ -10,6 +10,7 @@ class ModelPageGenerator extends PageGenerator {
       if (!path) {
         console.warn(`Model '${model.name}' path not found.`);
       }
+      // Replacing significant symbols in alias
       const aliastToPAth = model.alias.replace(/#/g, '').replace(/ /g, '-').replace(/\//g, '-');
       if (model.alias !== aliastToPAth) {
         ALIAS_PATH_MAP.set(aliastToPAth, model.alias);
@@ -34,10 +35,10 @@ class ModelPageGenerator extends PageGenerator {
           },
           model,
         },
-        PathPlugin.traverse(`/${aliastToPAth}`, model.alias),
+        PathPlugin.traverse(`/${aliastToPAth}`, model.alias), // (for path, for name in SUMMARY.md)
       );
     }
   }
 }
 
-module.exports = ModelPageGenerator;
+module.exports = AliasPageGenerator;
