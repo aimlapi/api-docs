@@ -11,43 +11,31 @@
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td>[gpt-4o](api-references/text-models-llm/openai/gpt-4o)</td>
-          <td>Open AI</td>
-          <td>128000</td>
-          <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
-        </tr>
-        <tr>
-          <td>[gpt-4o](/api-references/text-models-llm/openai/gpt-4o)</td>
-          <td>Open AI</td>
-          <td>128000</td>
-          <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
-        </tr>
-        <tr>
-          <td>[gpt-4o](./api-references/model-database/model-request)</td>
+           <tr>
+          <td>[gpt-4o](/api-references/text-models-llm/OpenAI/gpt-4o)</td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
         </tr>
            <tr>
-          <td>[gpt-4o](../text-models-llm/OpenAI/gpt-4o)</td>
-          <td>Open AI</td>
-          <td>128000</td>
-          <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
-        </tr>
-                 <tr>
-          <td>[gpt-4o](./model-request)</td>
+          <td>[gpt-4o](/api-references/text-models-llm/OpenAI/gpt-4o.md)</td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
         </tr>
               <tr>
-          <td>[gpt-4o](./model-database/model-request)</td>
+          <td>[gpt-4o](/api-references/model-database/model-request)</td>
           <td>Open AI</td>
           <td>128000</td>
           <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
         </tr>
-              <tr>
+          <tr>
+          <td>[gpt-4o](/api-references/model-database/model-request.md)</td>
+          <td>Open AI</td>
+          <td>128000</td>
+          <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">GPT 4o</a></td>
+        </tr>
+        <tr>
           <td>[gpt-4o](./api-references/text-models-llm/openai/gpt-4o.md)</td>
           <td>Open AI</td>
           <td>128000</td>
