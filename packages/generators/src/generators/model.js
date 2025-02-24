@@ -25,7 +25,7 @@ class ModelPageGenerator extends PageGenerator {
             url: `./${aliastToPAth}.json`,
             alias: model.alias,
             model: model.name,
-            models: ALIAS_MAP[model.alias],
+            models: ALIAS_MAP[model.alias].sort(),
             description: model.description,
             path,
             method: method,

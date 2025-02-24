@@ -1,8 +1,8 @@
 [#references:start]: <> ({ "template": "openapi" })
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
-* mistralai/Mistral-7B-Instruct-v0.2
 * mistralai/Mistral-7B-Instruct-v0.1
+* mistralai/Mistral-7B-Instruct-v0.2
 * mistralai/Mistral-7B-Instruct-v0.3
 {% endhint %}
 

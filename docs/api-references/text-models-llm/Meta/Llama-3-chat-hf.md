@@ -1,8 +1,8 @@
 [#references:start]: <> ({ "template": "openapi" })
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
-* meta-llama/Llama-3-8b-chat-hf
 * meta-llama/Llama-3-70b-chat-hf
+* meta-llama/Llama-3-8b-chat-hf
 {% endhint %}
 
 # Model Overview

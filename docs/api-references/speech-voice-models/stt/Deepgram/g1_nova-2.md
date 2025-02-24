@@ -1,16 +1,16 @@
 [#references:start]: <> ({ "template": "openapi" })
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
+* #g1_nova-2-automotive
+* #g1_nova-2-conversationalai
+* #g1_nova-2-drivethru
+* #g1_nova-2-finance
 * #g1_nova-2-general
+* #g1_nova-2-medical
 * #g1_nova-2-meeting
 * #g1_nova-2-phonecall
-* #g1_nova-2-voicemail
-* #g1_nova-2-finance
-* #g1_nova-2-conversationalai
 * #g1_nova-2-video
-* #g1_nova-2-medical
-* #g1_nova-2-drivethru
-* #g1_nova-2-automotive
+* #g1_nova-2-voicemail
 {% endhint %}
 
 # Model Overview

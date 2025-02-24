@@ -1,9 +1,9 @@
 [#references:start]: <> ({ "template": "openapi" })
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
+* textembedding-gecko-multilingual@001
 * textembedding-gecko@001
 * textembedding-gecko@003
-* textembedding-gecko-multilingual@001
 {% endhint %}
 
 # Model Overview

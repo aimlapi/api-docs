@@ -2,8 +2,8 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * gpt-4o
-* gpt-4o-2024-08-06
 * gpt-4o-2024-05-13
+* gpt-4o-2024-08-06
 {% endhint %}
 
 # Model Overview

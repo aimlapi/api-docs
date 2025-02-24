@@ -1,9 +1,9 @@
 [#references:start]: <> ({ "template": "openapi" })
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
+* anthropic/claude-3.5-sonnet
 * anthropic/claude-3.5-sonnet-20240620
 * anthropic/claude-3.5-sonnet-20241022
-* anthropic/claude-3.5-sonnet
 {% endhint %}
 
 # Model Overview
