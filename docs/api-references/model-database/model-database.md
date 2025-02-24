@@ -1,5 +1,8 @@
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
+  [gpt-4o](../text-models-llm/OpenAI/gpt-4o.md)
+  [gpt-4o](./model-request.md)
+  [gpt-4o](/api-references/text-models-llm/openai/gpt-4o)
   <table border="1">
     <thead>
       <tr>
