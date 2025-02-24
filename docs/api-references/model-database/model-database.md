@@ -1,4 +1,7 @@
 # Full List of Model IDs
+[gpt-4o](../text-models-llm/OpenAI/gpt-4o.md)
+[gpt-4o1](./text-models-llm/OpenAI/gpt-4o.md)
+[gpt-4o1](/text-models-llm/OpenAI/gpt-4o.md)
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
   <table border="1">
