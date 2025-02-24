@@ -1,9 +1,9 @@
 # Full List of Model IDs
 [gpt-4o](../text-models-llm/OpenAI/gpt-4o.md)
-[gpt-4o1](./text-models-llm/OpenAI/gpt-4o.md)
-[gpt-4o1](/text-models-llm/OpenAI/gpt-4o.md)
+
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
+  a href="../text-models-llm/OpenAI/gpt-4o.md" target="_blank">GPT 4o</a>
   <table border="1">
     <thead>
       <tr>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-           <tr>
+        <tr>
           <td>[gpt-4o](/api-references/text-models-llm/OpenAI/gpt-4o)</td>
           <td>Open AI</td>
           <td>128000</td>
