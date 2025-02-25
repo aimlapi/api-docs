@@ -1,24 +1,50 @@
 {{#each categories}}
   <h2>{{this.category}}</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Model ID</th>
-        <th>Developer</th>
-        <th>Context</th>
-        <th>Model Card</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each this.models}}
+  {{#if this.isHasSub}}
+    {{#each subCategory}}
+      <h3>{{this.name}}</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Model ID</th>
+            <th>Developer</th>
+            <th>Context</th>
+            <th>Model Card</th>
+          </tr>
+        </thead>
+        <tbody>
+           {{#each (lookup .. this.key)}}
+            <tr>
+              <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+              <td>{{this.developer}}</td>
+              <td>{{this.context}}</td>
+              <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{/each}}
+  {{else}}
+    <table border="1">
+      <thead>
         <tr>
-          <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
-          <td>{{this.developer}}</td>
-          <td>{{this.context}}</td>
-          <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+          <th>Model ID</th>
+          <th>Developer</th>
+          <th>Context</th>
+          <th>Model Card</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+        {{#each this.models}}
+          <tr>
+            <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+            <td>{{this.developer}}</td>
+            <td>{{this.context}}</td>
+            <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
 {{/each}}
+

@@ -1,20 +1,52 @@
 const PageGenerator = require('./common/page');
 const Handlebars = require('handlebars');
 const PathPlugin = require('./plugins/path');
-const { MODELS_TO_ALIAS_MAP, CATEGORY_MAPPING } = require('../templates');
+const { MODELS_TO_ALIAS_MAP, CATEGORY_MAPPING, CATEGORY_SET } = require('../templates');
 
 class DataBaseModelsPageGenerator extends PageGenerator {
   *generate() {
     const { models, openapi, modelsData, ...rest } = this.config;
 
     const categoriesObj = {}
-    const keys = Object.keys(CATEGORY_MAPPING)
-    keys.forEach(key => {
-      categoriesObj[key] = {
-        category: CATEGORY_MAPPING[key],
-        models: []
+    // const keys = Object.keys(CATEGORY_MAPPING)
+    for (const item of CATEGORY_SET) {
+      if (item.includes('/')){
+         console.log(item)
+        const arr = item.split('/')
+        if (categoriesObj[arr[0]]) {
+          categoriesObj[arr[0]].subCategory.push({
+            name: CATEGORY_MAPPING[arr[1]],
+            key: arr[1],
+        })
+          categoriesObj[arr[0]][arr[1]] = []
+        } else {
+          categoriesObj[arr[0]] = {
+            category: CATEGORY_MAPPING[arr[0]],
+            subCategory: [{
+              name: CATEGORY_MAPPING[arr[1]],
+              key: arr[1],
+          }],
+            [arr[1]]: [],
+            models: [],
+            isHasSub: true,
+          }
+        }
+      } else {
+        categoriesObj[item] = {
+          category: CATEGORY_MAPPING[item],
+          subCategory: [],
+          models: [],
+          isHasSub: false
+        }
       }
-    });
+    }
+    // keys.forEach(key => {
+    //   categoriesObj[key] = {
+    //     category: CATEGORY_MAPPING[key],
+    //     subCategory: '',
+    //     models: []
+    //   }
+    // });
 
     const modelsBase = []
   
@@ -30,7 +62,16 @@ class DataBaseModelsPageGenerator extends PageGenerator {
         modalName: model.info.name,
         modelCard: model.info.url,
       }
-      categoriesObj[MODELS_TO_ALIAS_MAP[model.name].category].models.push(dataModel)
+      const categoryModel = MODELS_TO_ALIAS_MAP[model.name].category
+      
+      if (categoryModel.includes('/')) {
+        const arr = categoryModel.split('/')
+        categoriesObj[arr[0]][arr[1]].push(dataModel)
+        categoriesObj[arr[0]].models.push(dataModel)
+      } else {
+        categoriesObj[categoryModel].models.push(dataModel)
+      }
+      
     });
 
     for (const category in categoriesObj){
@@ -40,7 +81,6 @@ class DataBaseModelsPageGenerator extends PageGenerator {
     yield this.done({
       ...rest,
       categories: modelsBase,
-      test: 'test1',
     },
     PathPlugin.traverse(`/model-database`, 'Model Database')); // (for path, for name in SUMMARY.md)
   }

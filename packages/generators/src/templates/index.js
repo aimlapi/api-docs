@@ -82,7 +82,7 @@ CATEGORY_MAPPING = {
   "embedding-models": "Embedding Models",
   "speech-voice-models/tts": "Voice/Speech Models",
   "speech-voice-models/stt": "Voice/Speech Models",
-  "stt": "Speech-to-Text",
+  "stt": "Speech-to-Text",//"Voice/Speech Models" / "STT",
   "tts": "Text-to-Speech",//"Voice/Speech Models" / "TTS",
   "speech-voice-models": "Voice/Speech Models",
   "music-models": "Music Models",
@@ -103,6 +103,18 @@ const ALIAS_MAP = {}
 */
 const MODELS_TO_ALIAS_MAP = {}
 
-const CATEGORY_SET = new Set(["Text Models (LLM)", "Image Models", "Video Models", "Embedding Models", "Voice/Speech Models", "STT", 'Speech Models', "Voice/Speech Models", "TTS", "Music Models", "Vision Models", "Vision Models" ,  "Content Moderation/Safety Models", "3D-Generating Models"])
+const CATEGORY_SET = new Set([
+  "text-models-llm",
+  "image-models",
+  "video-models",
+  "embedding-models",
+  "speech-voice-models/tts",
+  "speech-voice-models/stt",
+  "music-models",
+  "vision-modle/ocr",
+  "vision-modle/ofr",
+  "moderation-safety-models",
+  "3d-generating-models",
+])
 
 module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP, MODELS_TO_ALIAS_MAP };
