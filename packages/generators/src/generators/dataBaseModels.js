@@ -1,5 +1,4 @@
 const PageGenerator = require('./common/page');
-const Handlebars = require('handlebars');
 const PathPlugin = require('./plugins/path');
 const { MODELS_TO_ALIAS_MAP, CATEGORY_MAPPING, CATEGORY_SET } = require('../templates');
 
@@ -8,10 +7,9 @@ class DataBaseModelsPageGenerator extends PageGenerator {
     const { models, openapi, modelsData, ...rest } = this.config;
 
     const categoriesObj = {}
-    // const keys = Object.keys(CATEGORY_MAPPING)
+
     for (const item of CATEGORY_SET) {
       if (item.includes('/')){
-         console.log(item)
         const arr = item.split('/')
         if (categoriesObj[arr[0]]) {
           categoriesObj[arr[0]].subCategory.push({
@@ -40,13 +38,6 @@ class DataBaseModelsPageGenerator extends PageGenerator {
         }
       }
     }
-    // keys.forEach(key => {
-    //   categoriesObj[key] = {
-    //     category: CATEGORY_MAPPING[key],
-    //     subCategory: '',
-    //     models: []
-    //   }
-    // });
 
     const modelsBase = []
   
