@@ -5,7 +5,8 @@ const PathPlugin = require('./plugins/path');
 class AliasPageGenerator extends PageGenerator {
   *generate() {
     const { models, openapi, ...rest } = this.config;
-    const sortedModels = models.sort((a, b) => a.alias - b.alias)
+    const sortedModels = models.sort((a, b) => a.alias.localeCompare(b.alias))
+
     for (const model of sortedModels) {
       const { path, schema, method, pair } = openapi.byModel[model.name];
       if (!path) {
