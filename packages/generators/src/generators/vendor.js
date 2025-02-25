@@ -11,8 +11,13 @@ class VenderPageGenerator extends PageGenerator {
     for (const model of models) {
       byVendor[model.vendor] = [...(byVendor[model.vendor] ?? []), model];
     }
+    const keys = Object.keys(byVendor).sort()
+    const sortedByVendor = {}
+    for (const key of keys) {
+      sortedByVendor[key] = byVendor[key]
+    }
 
-    for (const vendor in byVendor) {
+    for (const vendor in sortedByVendor) {
       // Replacing significant symbols in vendor
       const replaceVendor = vendor.replace(/ /g, '-');
       if (replaceVendor !== vendor) {
