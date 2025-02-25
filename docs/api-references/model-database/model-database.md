@@ -100,7 +100,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/gpt-4-turbo.md">gpt-4-turbo-2024-04-09</a></td>
             <td>Open AI</td>
             <td>128000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-4.md">gpt-4</a></td>
@@ -112,19 +112,19 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/gpt-4-preview.md">gpt-4-0125-preview</a></td>
             <td>Open AI</td>
             <td>8000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-4-preview.md">gpt-4-1106-preview</a></td>
             <td>Open AI</td>
             <td>8000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo</a></td>
             <td>Open AI</td>
             <td>16000</td>
-            <td><a href="" target="_blank">Chat GPT 3.5 Turbo</a></td>
+            <td>Chat GPT 3.5 Turbo</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-0125</a></td>
@@ -196,7 +196,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Meta/Llama-Vision-Free.md">meta-llama/Llama-Vision-Free</a></td>
             <td>Meta</td>
             <td>128000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Gryphe/MythoMax-L2-13b.md">Gryphe/MythoMax-L2-13b</a></td>
@@ -274,7 +274,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md">Qwen/Qwen2.5-Coder-32B-Instruct</a></td>
             <td>Qwen</td>
             <td>131000</td>
-            <td><a href="" target="_blank">Qwen 2.5 Coder 32B Instruct</a></td>
+            <td>Qwen 2.5 Coder 32B Instruct</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Databricks/dbrx-instruct.md">databricks/dbrx-instruct</a></td>
@@ -298,7 +298,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md">meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K</a></td>
             <td>Meta</td>
             <td>128000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Meta/Llama-3-chat-hf.md">meta-llama/Llama-3-70b-chat-hf</a></td>
@@ -544,7 +544,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/MiniMax/abab6.5s-chat.md">abab6.5s-chat</a></td>
             <td>Minimax AI</td>
             <td>245000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
       </tbody>
     </table>
@@ -715,7 +715,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/OpenAI/text-embedding-3-small.md">text-embedding-3-small</a></td>
             <td>Open AI</td>
             <td>8000</td>
-            <td><a href="" target="_blank">Text-embedding-3-small</a></td>
+            <td>Text-embedding-3-small</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/OpenAI/text-embedding-3-large.md">text-embedding-3-large</a></td>
@@ -769,43 +769,43 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/Anthropic/voyage-finance-2.md">voyage-finance-2</a></td>
             <td>Anthropic</td>
             <td>32000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Anthropic/voyage-multilingual-2.md">voyage-multilingual-2</a></td>
             <td>Anthropic</td>
             <td>32000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Anthropic/voyage-law-2.md">voyage-law-2</a></td>
             <td>Anthropic</td>
             <td>16000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Anthropic/voyage-code-2.md">voyage-code-2</a></td>
             <td>Anthropic</td>
             <td>16000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Anthropic/voyage-large-2.md">voyage-large-2</a></td>
             <td>Anthropic</td>
             <td>16000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Anthropic/voyage-2.md">voyage-2</a></td>
             <td>Anthropic</td>
             <td>4000</td>
-            <td><a href="" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@001</a></td>
             <td>Google</td>
             <td>3000</td>
-            <td><a href="" target="_blank">Textembedding-gecko@001</a></td>
+            <td>Textembedding-gecko@001</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@003</a></td>
@@ -823,7 +823,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/Google/text-multilingual-embedding-002.md">text-multilingual-embedding-002</a></td>
             <td>Google</td>
             <td>2000</td>
-            <td><a href="" target="_blank">Text-multilingual-embedding-002</a></td>
+            <td>Text-multilingual-embedding-002</td>
           </tr>
       </tbody>
     </table>
@@ -1018,7 +1018,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
               <td><a href="../speech-voice-models/stt/Deepgram/redaction.md">#g1_redaction</a></td>
               <td>Deepgram</td>
               <td></td>
-              <td><a href="" target="_blank">-</a></td>
+              <td>-</td>
             </tr>
         </tbody>
       </table>
@@ -1043,7 +1043,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../music-models/MiniMax/minimax-music-[legacy].md">minimax-music</a></td>
             <td>Minimax AI</td>
             <td></td>
-            <td><a href="" target="_blank">MiniMax Music</a></td>
+            <td>MiniMax Music</td>
           </tr>
           <tr>
             <td><a href="../music-models/MiniMax/music-01.md">music-01</a></td>
@@ -1053,33 +1053,6 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h3>Vision Models</h3>
-      <h4>OCR</h4>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Model ID</th>
-            <th>Developer</th>
-            <th>Context</th>
-            <th>Model Card</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <h4>OFR</h4>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Model ID</th>
-            <th>Developer</th>
-            <th>Context</th>
-            <th>Model Card</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
   <h3>Content Moderation Models</h3>
     <table border="1">
       <thead>
@@ -1101,7 +1074,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td>
             <td>Meta</td>
             <td>128000</td>
-            <td><a href="" target="_blank">Llama Guard 3 11B Vision Turbo</a></td>
+            <td>Llama Guard 3 11B Vision Turbo</td>
           </tr>
           <tr>
             <td><a href="../moderation-safety-models/Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td>
