@@ -211,8 +211,8 @@
 ## Capabilities
 
 * [Completion or Chat Models](сapabilities/completion-or-chat-models.md)
-* [Parameters](сapabilities/parameters.md)
 * [Chat Completion](сapabilities/chat-completion.md)
+* [Parameters](сapabilities/parameters.md)
 * [Function Calling](сapabilities/function-calling/README.md)
   * [Image-To-Text (Vision)](сapabilities/function-calling/image-to-text-vision.md)
   * [Anthropic](сapabilities/function-calling/anthropic.md)
