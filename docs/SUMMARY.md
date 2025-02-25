@@ -11,6 +11,7 @@
 
 [#references:start]: <> ({ "template": "summary" })
 ## API REFERENCES
+* [Model Database](api-references/model-database/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)
     * [jamba-1-5-mini](api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)
@@ -202,22 +203,22 @@
       * [Find the Weather](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-the-weather.md)
       * [Find a Local Map](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-a-local-map.md)
       * [Get a Knowledge Structure](api-references/web-search-models/bagoodex/bagoodex-search-v1/get-a-knowledge-structure.md)
-* [Model Database](api-references/model-database/model-database.md)
 
 [#references:end]: <> ({})
 
-## Knowledge base
 
-* [Completion or Chat Models](knowledge-base/completion-or-chat-models.md)
-* [Parameters](knowledge-base/parameters.md)
-* [Chat Completion](knowledge-base/chat-completion.md)
-* [Function Calling](knowledge-base/function-calling/README.md)
-  * [Image-To-Text (Vision)](knowledge-base/function-calling/image-to-text-vision.md)
-  * [Anthropic](knowledge-base/function-calling/anthropic.md)
-* [Managing Assistants & Threads](knowledge-base/managing-assistants-and-threads/README.md)
-  * [Threads](knowledge-base/managing-assistants-and-threads/threads/README.md)
-    * [Runs](knowledge-base/managing-assistants-and-threads/threads/runs.md)
-    * [Messages](knowledge-base/managing-assistants-and-threads/threads/messages.md)
+## Capabilities
+
+* [Completion or Chat Models](сapabilities/completion-or-chat-models.md)
+* [Parameters](сapabilities/parameters.md)
+* [Chat Completion](сapabilities/chat-completion.md)
+* [Function Calling](сapabilities/function-calling/README.md)
+  * [Image-To-Text (Vision)](сapabilities/function-calling/image-to-text-vision.md)
+  * [Anthropic](сapabilities/function-calling/anthropic.md)
+* [Managing Assistants & Threads](сapabilities/managing-assistants-and-threads/README.md)
+  * [Threads](сapabilities/managing-assistants-and-threads/threads/README.md)
+    * [Runs](сapabilities/managing-assistants-and-threads/threads/runs.md)
+    * [Messages](сapabilities/managing-assistants-and-threads/threads/messages.md)
   * [Using Assistants & Threads](knowledge/managing-assistants-and-threads/using-assistants-and-threads.md)
 * [Models comparsion](knowledge/models-comparsion.md)
 
