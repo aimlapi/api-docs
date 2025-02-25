@@ -56,8 +56,8 @@ class DataBaseModelsPageGenerator extends PageGenerator {
         link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/').replace(/\api-references/g, '..'), // transform path: api-referenses\<category>\<vendor>\<alias> to /<category>/<vendor>/<alias>
         developer: model.info.developer,
         context: model.info?.contextLength ? model.info?.contextLength : '',
-        modalName: model.info.name,
-        modelCard: MODELS_TO_ALIAS_MAP[model.name].offsite_name || model.info.url,
+        modalName: MODELS_TO_ALIAS_MAP[model.name].offsite_name || model.info.name,
+        modelCard: model.info.url,
       }
       const categoryModel = MODELS_TO_ALIAS_MAP[model.name].category
       
