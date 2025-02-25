@@ -57,7 +57,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
         developer: model.info.developer,
         context: model.info?.contextLength ? model.info?.contextLength : '',
         modalName: MODELS_TO_ALIAS_MAP[model.name].offsite_name || model.info.name,
-        modelCard: model.info.url,
+        modelCard: MODELS_TO_ALIAS_MAP[model.name].offsite_name == '-' || !MODELS_TO_ALIAS_MAP[model.name].offsite_name ? '' : model.info.url,
       }
       const categoryModel = MODELS_TO_ALIAS_MAP[model.name].category
       

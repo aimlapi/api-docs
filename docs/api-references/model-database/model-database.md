@@ -82,13 +82,13 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/gpt-4o-mini.md">gpt-4o-mini-2024-07-18</a></td>
             <td>Open AI</td>
             <td>128000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-4o-mini" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-4o.md">chatgpt-4o-latest</a></td>
             <td>Open AI</td>
             <td>128000</td>
-            <td><a href="https://aimlapi.com/models/gpt-4o-2024-08-06-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-4-turbo.md">gpt-4-turbo</a></td>
@@ -130,7 +130,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-0125</a></td>
             <td>Open AI</td>
             <td>16000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-3-5-turbo-0125" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-1106</a></td>
@@ -148,7 +148,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/o1-preview.md">o1-preview-2024-09-12</a></td>
             <td>Open AI</td>
             <td>128000</td>
-            <td><a href="https://aimlapi.com/models/openai-o1-preview-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/o1-mini.md">o1-mini</a></td>
@@ -160,7 +160,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/o1-mini.md">o1-mini-2024-09-12</a></td>
             <td>Open AI</td>
             <td>128000</td>
-            <td><a href="https://aimlapi.com/models/openai-o1-mini-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/o3-mini.md">o3-mini</a></td>
@@ -232,7 +232,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO.md">NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO</a></td>
             <td>NousResearch</td>
             <td>32000</td>
-            <td><a href="https://aimlapi.com/models/nous-hermes-2-mixtral-8x7b-dpo" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md">meta-llama/Llama-3.3-70B-Instruct-Turbo</a></td>
@@ -358,7 +358,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Turbo.md">meta-llama/Meta-Llama-3-70B-Instruct-Turbo</a></td>
             <td>Meta</td>
             <td>128000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-70b-instruct-turbo-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Lite.md">meta-llama/Meta-Llama-3-70B-Instruct-Lite</a></td>
@@ -376,7 +376,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md">Gryphe/MythoMax-L2-13b-Lite</a></td>
             <td>Gryphe</td>
             <td>4000</td>
-            <td><a href="https://aimlapi.com/models/mythomax-l2-13b" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Meta/Llama-2-7b-chat-hf.md">meta-llama/Llama-2-7b-chat-hf</a></td>
@@ -400,13 +400,13 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Anthropic/claude-3-haiku.md">claude-3-haiku-20240307</a></td>
             <td>Anthropic</td>
             <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-haiku" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Anthropic/claude-3-5-sonnet.md">claude-3-5-sonnet-20240620</a></td>
             <td>Anthropic</td>
             <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-5-sonnet" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Anthropic/claude-3-5-sonnet.md">claude-3-5-sonnet-20241022</a></td>
@@ -418,7 +418,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Anthropic/claude-3-5-haiku.md">claude-3-5-haiku-20241022</a></td>
             <td>Anthropic</td>
             <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-5-haiku-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Anthropic/claude-3-7-sonnet.md">claude-3-7-sonnet-20250219</a></td>
@@ -617,7 +617,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../image-models/Black-Forest-Labs/flux-dev-image-to-image.md">flux/dev/image-to-image</a></td>
             <td>Flux</td>
             <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-dev-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../image-models/Stability-AI/stable-diffusion-v3-medium.md">stable-diffusion-v3-medium</a></td>
@@ -690,7 +690,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../video-models/MiniMax/video-01-live2d.md">video-01-live2d</a></td>
             <td>Minimax AI</td>
             <td></td>
-            <td><a href="https://aimlapi.com/models/minimax-video-01-api" target="_blank">-</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../video-models/Runway/gen3a_turbo.md">gen3a_turbo</a></td>
@@ -994,25 +994,25 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
               <td><a href="../speech-voice-models/stt/OpenAI/whisper-medium.md">#g1_whisper-medium</a></td>
               <td>Deepgram</td>
               <td></td>
-              <td><a href="https://aimlapi.com/models/whisper" target="_blank">-</a></td>
+              <td>-</td>
             </tr>
             <tr>
               <td><a href="../speech-voice-models/stt/OpenAI/whisper-small.md">#g1_whisper-small</a></td>
               <td>Deepgram</td>
               <td></td>
-              <td><a href="https://aimlapi.com/models/whisper" target="_blank">-</a></td>
+              <td>-</td>
             </tr>
             <tr>
               <td><a href="../speech-voice-models/stt/OpenAI/whisper-tiny.md">#g1_whisper-tiny</a></td>
               <td>Deepgram</td>
               <td></td>
-              <td><a href="https://aimlapi.com/models/whisper" target="_blank">-</a></td>
+              <td>-</td>
             </tr>
             <tr>
               <td><a href="../speech-voice-models/stt/OpenAI/whisper-base.md">#g1_whisper-base</a></td>
               <td>Deepgram</td>
               <td></td>
-              <td><a href="https://aimlapi.com/models/whisper" target="_blank">-</a></td>
+              <td>-</td>
             </tr>
             <tr>
               <td><a href="../speech-voice-models/stt/Deepgram/redaction.md">#g1_redaction</a></td>
