@@ -204,7 +204,6 @@
       * [Find a Local Map](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-a-local-map.md)
       * [Get a Knowledge Structure](api-references/web-search-models/bagoodex/bagoodex-search-v1/get-a-knowledge-structure.md)
 
-
 [#references:end]: <> ({})
 
 

@@ -43,7 +43,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
 ## Full List of Model IDs
 
 [#references:start]: <> ({ "template": "modelsData" })
-  <h2>Text Models (LLM)</h2>
+  <h3>Text Models (LLM)</h3>
     <table border="1">
       <thead>
         <tr>
@@ -548,7 +548,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Image Models</h2>
+  <h3>Image Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -645,7 +645,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Video Models</h2>
+  <h3>Video Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -700,7 +700,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Embedding Models</h2>
+  <h3>Embedding Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -827,8 +827,8 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Voice/Speech Models</h2>
-      <h3>Text-to-Speech</h3>
+  <h3>Voice/Speech Models</h3>
+      <h4>Text-to-Speech</h4>
       <table border="1">
         <thead>
           <tr>
@@ -913,7 +913,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             </tr>
         </tbody>
       </table>
-      <h3>Speech-to-Text</h3>
+      <h4>Speech-to-Text</h4>
       <table border="1">
         <thead>
           <tr>
@@ -1022,7 +1022,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             </tr>
         </tbody>
       </table>
-  <h2>Music Models</h2>
+  <h3>Music Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -1053,8 +1053,8 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Vision Models</h2>
-      <h3>OCR</h3>
+  <h3>Vision Models</h3>
+      <h4>OCR</h4>
       <table border="1">
         <thead>
           <tr>
@@ -1067,7 +1067,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
         <tbody>
         </tbody>
       </table>
-      <h3>OFR</h3>
+      <h4>OFR</h4>
       <table border="1">
         <thead>
           <tr>
@@ -1080,7 +1080,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
         <tbody>
         </tbody>
       </table>
-  <h2>Content Moderation/Safety Models</h2>
+  <h3>Content Moderation/Safety Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -1117,7 +1117,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>3D-Generating Models</h2>
+  <h3>3D-Generating Models</h3>
     <table border="1">
       <thead>
         <tr>
@@ -1136,7 +1136,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
           </tr>
       </tbody>
     </table>
-  <h2>Web Search Models</h2>
+  <h3>Web Search Models</h3>
     <table border="1">
       <thead>
         <tr>
