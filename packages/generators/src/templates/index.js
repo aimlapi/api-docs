@@ -92,7 +92,8 @@ CATEGORY_MAPPING = {
   "ocr": "OCR",
   "ofr": "OFR",
   "moderation-safety-models": "Content Moderation/Safety Models",
-  "3d-generating-models": "3D-Generating Models"
+  "3d-generating-models": "3D-Generating Models",
+  'web-search-models': 'Web Search Models',
 }
 const VENDORS_PATH_MAP = new Map()
 const ALIAS_PATH_MAP = new Map()
@@ -115,6 +116,9 @@ const CATEGORY_SET = new Set([
   "vision-modle/ofr",
   "moderation-safety-models",
   "3d-generating-models",
+  'web-search-models',
 ])
 
-module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP, MODELS_TO_ALIAS_MAP };
+const NO_PARSE_MODAL = ['bagoodex-search-v1']
+
+module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP, MODELS_TO_ALIAS_MAP, NO_PARSE_MODAL };

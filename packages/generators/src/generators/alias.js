@@ -1,4 +1,4 @@
-const { ALIAS_PATH_MAP, ALIAS_MAP } = require('../templates');
+const { ALIAS_PATH_MAP, ALIAS_MAP, NO_PARSE_MODAL } = require('../templates');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 
@@ -8,6 +8,12 @@ class AliasPageGenerator extends PageGenerator {
     const sortedModels = models.sort((a, b) => a.alias.localeCompare(b.alias))
 
     for (const model of sortedModels) {
+      if(!openapi.byModel[model.name] || NO_PARSE_MODAL.includes(model.name)){
+        console.warn(`Model '${model.name}' path not found.`);
+        continue
+      }
+ 
+
       const { path, schema, method, pair } = openapi.byModel[model.name];
       if (!path) {
         console.warn(`Model '${model.name}' path not found.`);

@@ -2,6 +2,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 * meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+* meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K
 {% endhint %}
 
 # Model Overview

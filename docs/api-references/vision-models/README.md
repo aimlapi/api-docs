@@ -1,5 +1,17 @@
 ---
 icon: eye
+description: Overview of the capabilities of AIML API vision models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Vision Models

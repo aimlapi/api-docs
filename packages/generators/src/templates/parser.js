@@ -57,6 +57,9 @@ class SummaryParserMap {
       };
       while (stack.length > level + 1) stack.pop();
       const parent = stack[level];
+      if(!parent?.children){
+        console.log(stack)
+      }
       parent.children.push(node);
       stack[level + 1] = node;
     }

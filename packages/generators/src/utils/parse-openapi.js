@@ -85,7 +85,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
     } else {
       ALIAS_MAP[model.alias] = [model.name];
     }
-    MODELS_TO_ALIAS_MAP[model.name] = {alias: model.alias, path: '', category: model.category};
+    MODELS_TO_ALIAS_MAP[model.name] = {alias: model.alias, path: '', category: model.category, offsite_name: model.offsite_name};
   }
   
   const byModel = {};
