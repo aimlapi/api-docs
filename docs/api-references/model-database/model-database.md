@@ -1,7 +1,46 @@
-# Full List of Model IDs
-random text for exmple 
-# Full List of Model IDs 2
-random text for exmple 2
+---
+icon: crystal-ball
+description: A full list of available models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Model Database
+
+{% hint style="info" %}
+If you need to select models based on specific parameters for your task, visit the [dedicated page on our official website](https://aimlapi.com/models/), which offers convenient filtering options. On the selected model’s page, you can find detailed technical and commercial information.
+{% endhint %}
+
+The section **Get Model List via API** contains API reference for the service endpoint, which lets you request the full model list.
+
+The section **Model IDs** lists the identifiers of all available and deprecated models, grouped by category. These IDs are used to specify the exact models in your code, like this:&#x20;
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+If you already know the identifier, use the page search function (<kbd>Ctrl+F</kbd> for Win/Linux, <kbd>Command+F</kbd> for Mac) to locate it.&#x20;
+
+{% hint style="success" %}
+**New Model Request**
+
+Can't find the model you need? Join our [Discord community](https://discord.gg/vayNtU9ThM) to propose new models for integration into our API offerings. Your contributions help us grow and serve you better.
+{% endhint %}
+
+## Get Model List via API&#x20;
+
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/models" method="get" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
+## Full List of Model IDs
 
 [#references:start]: <> ({ "template": "modelsData" })
   <h2>Text Models (LLM)</h2>
