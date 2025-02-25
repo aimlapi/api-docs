@@ -8,10 +8,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -508,10 +508,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -600,10 +600,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -662,10 +662,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -790,10 +790,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -876,10 +876,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -986,10 +986,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1000,10 +1000,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1014,10 +1014,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1028,10 +1028,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1060,10 +1060,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1074,10 +1074,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1088,10 +1088,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1102,10 +1102,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1116,10 +1116,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1130,10 +1130,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
@@ -1168,10 +1168,10 @@ random text for exmple 2
   <table border="1">
     <thead>
       <tr>
-        <th>Model-ID</th>
+        <th>Model ID</th>
         <th>Developer</th>
         <th>Context</th>
-        <th>MODEL-CARD</th>
+        <th>Model Card</th>
       </tr>
     </thead>
     <tbody>
