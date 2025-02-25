@@ -2,7 +2,7 @@
 icon: shield
 ---
 
-# Content Moderation/Safety Models
+# Content Moderation Models
 
 ## Overview
 

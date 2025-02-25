@@ -1080,7 +1080,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
         <tbody>
         </tbody>
       </table>
-  <h3>Content Moderation/Safety Models</h3>
+  <h3>Content Moderation Models</h3>
     <table border="1">
       <thead>
         <tr>

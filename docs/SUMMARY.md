@@ -157,7 +157,7 @@
   * [Runway](api-references/video-models/Runway/README.md)
     * [runway-gen3/turbo/image-to-video](api-references/video-models/Runway/runway-gen3-turbo-image-to-video.md)
     * [gen3a_turbo](api-references/video-models/Runway/gen3a_turbo.md)
-* [Content Moderation/Safety Models](api-references/moderation-safety-models/README.md)
+* [Content Moderation Models](api-references/moderation-safety-models/README.md)
   * [Meta](api-references/moderation-safety-models/Meta/README.md)
     * [Llama-Guard-7b](api-references/moderation-safety-models/Meta/Llama-Guard-7b.md)
     * [Llama-Guard-3-11B-Vision-Turbo](api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)

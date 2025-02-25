@@ -13,7 +13,7 @@ layout:
     visible: true
 ---
 
-# Content Moderation/Safety Models
+# Content Moderation Models
 
 ## Overview
 

@@ -91,7 +91,7 @@ CATEGORY_MAPPING = {
   "vision-modle/ofr": "Vision Models",
   "ocr": "OCR",
   "ofr": "OFR",
-  "moderation-safety-models": "Content Moderation/Safety Models",
+  "moderation-safety-models": "Content Moderation Models",
   "3d-generating-models": "3D-Generating Models",
   'web-search-models': 'Web Search Models',
 }
