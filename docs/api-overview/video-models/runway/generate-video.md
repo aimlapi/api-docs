@@ -8,47 +8,11 @@ icon: code
 
 You can generate a video using the AI/ML API. In the basic setup, you need only a prompt and the aspect ratio of the desired result.
 
-### Ratio
+## API Schema
 
-* **Type:** String
-* **Key:** `ratio`
-* **Allowed Values:**  `16:9`, `9:16`
-
-### Prompt
-
-* **Type:** String
-* **Key:** `prompt`
-* **Character Limit:** 512 characters
-
-### Image URL
-
-* **Type:** URL
-* **Key:** `image_url`
-* **Description:** A HTTPS URL or data URI containing an encoded image to be used as the first frame of the generated
-
-### Last Image URL
-
-* **Type:** URL
-* **Key:** `last_image_url`
-* **Description:** A HTTPS URL or data URI containing an encoded image to be used as the last frame of the generated
-
-### Duration
-
-* **Type:** Integer
-* **Key:** `duration`
-* **Allowed Values:**  `5`, `10`
-
-### Seed
-
-* **Type:** Integer
-* **Key:** `seed`
-* **Description:**  If unspecified, a random number is chosen. Varying the seed integer is a way to get different results for the same other request parameters. Using the same seed integer for an identical request will produce similar results
-
-### Watermark
-
-* **Type:** Boolean
-* **Key:** `watermark`
-* **Description:**  A boolean indicating whether or not the output video will contain a Runway watermark
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/runway/generation" method="post" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
 
 ## Example
 
@@ -58,6 +22,7 @@ Ensure you replace `"my_key"` with your actual API key before running the code.
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const main = async () => {
   const response = await fetch('https://api.aimlapi.com/v2/generate/video/runway/generation', {
@@ -79,8 +44,11 @@ const main = async () => {
 
 main()
 ```
+{% endcode %}
 {% endtab %}
+
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 
@@ -102,5 +70,6 @@ if __name__ == "__main__":
     main()
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

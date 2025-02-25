@@ -8,6 +8,12 @@ icon: code
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. Here are the API to fetch the generations.
 
+## API Schema
+
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/runway/generation" method="get" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
 ## Example
 
 {% hint style="info" %}
@@ -20,6 +26,7 @@ You can send the following request:
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const main = async () => {
   const url = new URL('https://api.aimlapi.com/v2/generate/video/runway/generation');
@@ -39,9 +46,11 @@ const main = async () => {
 main();
 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 
@@ -66,5 +75,6 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

@@ -24,8 +24,8 @@ layout:
 [text-models-llm](api-overview/text-models-llm/)
 {% endcontent-ref %}
 
-{% content-ref url="api-overview/model-database/image-models.md" %}
-[image-models.md](api-overview/model-database/image-models.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="api-overview/model-database/vision-models.md" %}
@@ -36,8 +36,8 @@ layout:
 [audio-models-music-and-vocal](api-overview/audio-models-music-and-vocal/)
 {% endcontent-ref %}
 
-{% content-ref url="api-overview/model-database/speech-models.md" %}
-[speech-models.md](api-overview/model-database/speech-models.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="api-overview/video-models/" %}

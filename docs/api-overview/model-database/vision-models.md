@@ -4,6 +4,7 @@ description: >-
   Welcome to the Vision Models API documentation! The AI/ML API allows you to
   leverage vision capabilities to analyze and understand images through our
   models.
+hidden: true
 ---
 
 # Vision Models

@@ -6,4 +6,4 @@ icon: book-open
 
 ## Supported Models
 
-You can read about supported models in our database [image-models.md](../model-database/image-models.md "mention")
+You can read about supported models in our database [Broken link](broken-reference "mention")

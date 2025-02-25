@@ -21,12 +21,12 @@ With our API, you can use content moderation / safety models to classify input c
 
 ## Model list
 
-| ID                                        | Provider    |
-| ----------------------------------------- | ----------- |
-| meta-llama/Meta-Llama-Guard-3-8B          | open-source |
-| Meta-Llama/Llama-Guard-7b                 | open-source |
-| meta-llama/Llama-Guard-3-11B-Vision-Turbo | open-source |
-| meta-llama/LlamaGuard-2-8b                | open-source |
+| ID                                        | Developer |
+| ----------------------------------------- | --------- |
+| meta-llama/Meta-Llama-Guard-3-8B          | Meta      |
+| Meta-Llama/Llama-Guard-7b                 | Meta      |
+| meta-llama/Llama-Guard-3-11B-Vision-Turbo | Meta      |
+| meta-llama/LlamaGuard-2-8b                | Meta      |
 
 ### Key Features
 

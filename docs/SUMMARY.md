@@ -89,14 +89,8 @@
   * [OFR: Optical Feature Recognition](api-overview/vision-models/ofr-optical-feature-recognition.md)
 * [Content Moderation/Safety Models](api-overview/guard-models/README.md)
 * [Model Database](api-overview/model-database/README.md)
-  * [Text Models](api-overview/model-database/text-models.md)
-  * [Video Models](api-overview/model-database/video-models.md)
-  * [Image Models](api-overview/model-database/image-models.md)
   * [Vision Models](api-overview/model-database/vision-models.md)
-  * [Speech Models](api-overview/model-database/speech-models.md)
   * [Music & Vocal Models](api-overview/model-database/music-and-vocal-models.md)
-  * [Embedding Models](api-overview/model-database/embedding-models.md)
-  * [Model Request](api-overview/model-database/model-request.md)
 
 ## Recipes
 

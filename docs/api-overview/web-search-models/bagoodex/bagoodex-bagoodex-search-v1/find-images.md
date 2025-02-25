@@ -53,15 +53,15 @@ Response:
   },
   {
     "source": "",
-    "original": "https://sites.wustl.edu/monh/files/2019/12/woman-and-meganeura-350x263.jpeg",
-    "title": "Dragonflies and Damselflies of Missouri ...",
-    "source_name": "Washington University"
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/31/Meganeuramodell.jpg",
+    "title": "Ancient Dragonflies Were Huge, Larger ...",
+    "source_name": "Roaring Earth -"
   },
   {
     "source": "",
-    "original": "http://www.stancsmith.com/uploads/4/8/9/6/48964465/meganeuropsis-giantdragonfly_orig.jpg",
-    "title": "Ginormous Dragonfly - Stan C ...",
-    "source_name": "Stan C. Smith"
+    "original": "https://sites.wustl.edu/monh/files/2019/12/woman-and-meganeura-350x263.jpeg",
+    "title": "Dragonflies and Damselflies of Missouri ...",
+    "source_name": "Washington University"
   },
   {
     "source": "",
@@ -71,9 +71,9 @@ Response:
   },
   {
     "source": "",
-    "original": "https://i.ytimg.com/vi/ixlQX7lV8dc/sddefault.jpg",
-    "title": "Meganeura' - The Prehistoric Dragonfly ...",
-    "source_name": "YouTube"
+    "original": "http://www.stancsmith.com/uploads/4/8/9/6/48964465/meganeuropsis-giantdragonfly_orig.jpg",
+    "title": "Ginormous Dragonfly - Stan C ...",
+    "source_name": "Stan C. Smith"
   }
 ]
 ```
@@ -104,9 +104,9 @@ The chat completion endpoint returns an ID, which must then be passed as the sol
 
 ## API Schema
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/bagoodex/images" method="get" %}
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/bagoodex/images" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
+{% endopenapi %}
 
 ### Example
 
@@ -155,10 +155,76 @@ complete_chat()
 ```
 {% endcode %}
 
-**Model Response**:
+<details>
+
+<summary><strong>Model Response</strong></summary>
 
 {% code overflow="wrap" %}
 ```json
-d
+[
+  {
+    "source": "",
+    "original": "https://images.theconversation.com/files/234118/original/file-20180829-195319-1d4y13t.jpg?ixlib=rb-4.1.0&rect=0%2C7%2C1200%2C790&q=45&auto=format&w=926&fit=clip",
+    "title": "Paleozoic era's giant dragonflies ...",
+    "source_name": "The Conversation"
+  },
+  {
+    "source": "",
+    "original": "https://s3-us-west-1.amazonaws.com/scifindr/articles/image3s/000/002/727/large/meganeuropsis-eating-roach_lucas-lima_3x4.jpg?1470033295",
+    "title": "huge dragonfly ...",
+    "source_name": "Earth Archives"
+  },
+  {
+    "source": "",
+    "original": "https://s3-us-west-1.amazonaws.com/scifindr/articles/image2s/000/002/727/large/meganeuropsis_lucas-lima_4x3.jpg?1470033293",
+    "title": "huge dragonfly ...",
+    "source_name": "Earth Archives"
+  },
+  {
+    "source": "",
+    "original": "https://static.wikia.nocookie.net/prehistoricparkip/images/3/37/Meganeurid_bbc_prehistoric_.jpg/revision/latest?cb=20120906182204",
+    "title": "Giant Dragonfly | Prehistoric Park Wiki ...",
+    "source_name": "Prehistoric Park Wiki - Fandom"
+  },
+  {
+    "source": "",
+    "original": "https://i.redd.it/rig989kttmc71.jpg",
+    "title": "This pretty large dragonfly we found ...",
+    "source_name": "Reddit"
+  },
+  {
+    "source": "",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Meganeurites_gracilipes_restoration.webp",
+    "title": "Meganisoptera - Wikipedia",
+    "source_name": "Wikipedia"
+  },
+  {
+    "source": "",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/31/Meganeuramodell.jpg",
+    "title": "Ancient Dragonflies Were Huge, Larger ...",
+    "source_name": "Roaring Earth -"
+  },
+  {
+    "source": "",
+    "original": "https://sites.wustl.edu/monh/files/2019/12/woman-and-meganeura-350x263.jpeg",
+    "title": "Dragonflies and Damselflies of Missouri ...",
+    "source_name": "Washington University"
+  },
+  {
+    "source": "",
+    "original": "https://static.sciencelearn.org.nz/images/images/000/004/172/original/INSECTS_ITV_Image_map_Aquatic_insects_Dragonfly.jpg?1674173331",
+    "title": "Bush giant dragonfly — Science ...",
+    "source_name": "Science Learning Hub"
+  },
+  {
+    "source": "",
+    "original": "http://www.stancsmith.com/uploads/4/8/9/6/48964465/meganeuropsis-giantdragonfly_orig.jpg",
+    "title": "Ginormous Dragonfly - Stan C ...",
+    "source_name": "Stan C. Smith"
+  }
+]
 ```
 {% endcode %}
+
+</details>
+
