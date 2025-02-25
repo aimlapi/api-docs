@@ -119,6 +119,6 @@ const CATEGORY_SET = new Set([
   'web-search-models',
 ])
 
-const NO_PARSE_MODAL = ['bagoodex-search-v1']
+const NO_PARSE_MODAL = ['bagoodex/bagoodex-search-v1']
 
 module.exports = { readTemplate, replaceTemplate, TEMPLATE, CATEGORY_MAPPING, SECTION, CATEGORY_SET, VENDORS_PATH_MAP, ALIAS_PATH_MAP, ALIAS_MAP, MODELS_TO_ALIAS_MAP, NO_PARSE_MODAL };

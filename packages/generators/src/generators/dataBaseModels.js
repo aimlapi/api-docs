@@ -44,12 +44,12 @@ class DataBaseModelsPageGenerator extends PageGenerator {
     modelsData.forEach(model => {
 
       if(!MODELS_TO_ALIAS_MAP[model.name]){
-        if(model.name == 'bagoodex/bagoodex-search-v1'){
-          model.name = 'bagoodex-search-v1'
-        } else {
-          return
-        }
-        
+        // if(model.name == 'bagoodex/bagoodex-search-v1'){
+        //   model.name = 'bagoodex-search-v1'
+        // } else {
+        //   return
+        // }
+        return
       }
       const dataModel = {
         modelId: model.name,

@@ -421,6 +421,12 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="-" target="_blank">Claude 3.5 haiku 2024-10-22</a></td>
           </tr>
           <tr>
+            <td><a href="../text-models-llm/Anthropic/claude-3-7-sonnet.md">claude-3-7-sonnet-20250219</a></td>
+            <td>Anthropic</td>
+            <td>200000</td>
+            <td><a href="Claude 3.7 Sonnet" target="_blank">Claude 3.7 sonnet</a></td>
+          </tr>
+          <tr>
             <td><a href="../text-models-llm/Google/gemini-1.5-flash.md">gemini-1.5-flash</a></td>
             <td>Google</td>
             <td>1000000</td>
@@ -1142,7 +1148,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
       </thead>
       <tbody>
           <tr>
-            <td><a href="api-referenses/web-search-models/Bagoodex/Bagoodex.md">bagoodex-search-v1</a></td>
+            <td><a href="../web-search-models/Bagoodex/bagoodex-search-v1.md">bagoodex/bagoodex-search-v1</a></td>
             <td>Bagoodex</td>
             <td>32000</td>
             <td><a href="Bagoodex Web Search v1" target="_blank">Bagoodex Web Search v1</a></td>

@@ -18,7 +18,7 @@ const DOCS_PATH = '/api-references';
 
 const root = {
   next: ModelsGenerator.build({
-    url: path.join(__dirname, "json_for-docs_generation_20250225v3.json"), //MODELS_URL,
+    url: path.join(__dirname, "json_for-docs_generation_20250225v4.json"), //MODELS_URL,
     openapi: {
       url: OPENAPI_URL,
     },
