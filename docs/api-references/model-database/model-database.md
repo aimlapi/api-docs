@@ -1141,6 +1141,12 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
         </tr>
       </thead>
       <tbody>
+          <tr>
+            <td><a href="api-referenses/web-search-models/Bagoodex/Bagoodex.md">bagoodex-search-v1</a></td>
+            <td>Bagoodex</td>
+            <td>32000</td>
+            <td><a href="Bagoodex Web Search v1" target="_blank">Bagoodex Web Search v1</a></td>
+          </tr>
       </tbody>
     </table>
 

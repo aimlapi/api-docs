@@ -194,7 +194,7 @@
     * [stable-audio](api-references/music-models/Stability-AI/stable-audio.md)
 * [Web Search Models](api-references/web-search-models/README.md)
   * [Bagoodex](api-references/web-search-models/Bagoodex/README.md)
-     * [bagoodex/bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/README.md)
+    * [bagoodex/bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/README.md)
       * [Find Links](api-references/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links.md)
       * [Find Images](api-references/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images.md)
       * [Find Videos](api-references/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos.md)

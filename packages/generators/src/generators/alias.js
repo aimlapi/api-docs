@@ -1,4 +1,4 @@
-const { ALIAS_PATH_MAP, ALIAS_MAP, NO_PARSE_MODAL } = require('../templates');
+const { ALIAS_PATH_MAP, ALIAS_MAP, NO_PARSE_MODAL, MODELS_TO_ALIAS_MAP } = require('../templates');
 const PageGenerator = require('./common/page');
 const PathPlugin = require('./plugins/path');
 
@@ -8,7 +8,12 @@ class AliasPageGenerator extends PageGenerator {
     const sortedModels = models.sort((a, b) => a.alias.localeCompare(b.alias))
 
     for (const model of sortedModels) {
-      if(!openapi.byModel[model.name] || NO_PARSE_MODAL.includes(model.name)){
+      if(!openapi.byModel[model.name]){
+        if(NO_PARSE_MODAL.includes(model.name)){
+          MODELS_TO_ALIAS_MAP[model.name].path = `api-referenses/${model.category}/${model.vendor.replace(/ /g, '-')}/${model.alias.replace(/#/g, '').replace(/ /g, '-').replace(/\//g, '-')}`
+          console.warn(`Model '${model.name}' is EXCEPTIONS.`);
+          continue
+        }
         console.warn(`Model '${model.name}' path not found.`);
         continue
       }

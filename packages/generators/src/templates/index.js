@@ -100,7 +100,7 @@ const ALIAS_PATH_MAP = new Map()
 const ALIAS_MAP = {}
 
 /*
-[name modal]: {alias: string, path: string, category: string}
+[name modal]: {alias: string, path: string, category: string, offsite_name: string}
 */
 const MODELS_TO_ALIAS_MAP = {}
 
