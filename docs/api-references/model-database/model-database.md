@@ -124,7 +124,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo</a></td>
             <td>Open AI</td>
             <td>16000</td>
-            <td>Chat GPT 3.5 Turbo</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-0125</a></td>
@@ -274,7 +274,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md">Qwen/Qwen2.5-Coder-32B-Instruct</a></td>
             <td>Qwen</td>
             <td>131000</td>
-            <td>Qwen 2.5 Coder 32B Instruct</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/Databricks/dbrx-instruct.md">databricks/dbrx-instruct</a></td>
@@ -733,7 +733,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/OpenAI/text-embedding-3-small.md">text-embedding-3-small</a></td>
             <td>Open AI</td>
             <td>8000</td>
-            <td>Text-embedding-3-small</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/OpenAI/text-embedding-3-large.md">text-embedding-3-large</a></td>
@@ -823,7 +823,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@001</a></td>
             <td>Google</td>
             <td>3000</td>
-            <td>Textembedding-gecko@001</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@003</a></td>
@@ -841,7 +841,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../embedding-models/Google/text-multilingual-embedding-002.md">text-multilingual-embedding-002</a></td>
             <td>Google</td>
             <td>2000</td>
-            <td>Text-multilingual-embedding-002</td>
+            <td>-</td>
           </tr>
       </tbody>
     </table>
@@ -1061,7 +1061,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../music-models/MiniMax/minimax-music-[legacy].md">minimax-music</a></td>
             <td>Minimax AI</td>
             <td></td>
-            <td>MiniMax Music</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../music-models/MiniMax/music-01.md">music-01</a></td>
@@ -1092,7 +1092,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="../moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td>
             <td>Meta</td>
             <td>128000</td>
-            <td>Llama Guard 3 11B Vision Turbo</td>
+            <td>-</td>
           </tr>
           <tr>
             <td><a href="../moderation-safety-models/Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td>
