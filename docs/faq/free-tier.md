@@ -38,7 +38,7 @@ The following rules apply:
 
 Using our API on the Free Tier, you can access:
 
-* [Chat completion text models](../api-references/text-models-llm/chat-completion.md),
+* [Chat completion text models](broken-reference),
 * [Embedding models](broken-reference),
 * [Image models](../api-references/image-models/).
 

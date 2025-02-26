@@ -20,20 +20,6 @@ layout:
 
 Our API features the capability to generate audio. With this API, you can create your own music, speech, and any audio experience from your prompt and imagination.
 
-## Providers
-
-{% content-ref url="stable-audio/" %}
-[stable-audio](stable-audio/)
-{% endcontent-ref %}
-
-{% content-ref url="minimax-music/" %}
-[minimax-music](minimax-music/)
-{% endcontent-ref %}
-
-{% content-ref url="minimax-music-legacy/" %}
-[minimax-music-legacy](minimax-music-legacy/)
-{% endcontent-ref %}
-
 ## Quick Code Example
 
 Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](https://docs.aimlapi.com/api-overview/audio-models-music-and-vocal/minimax-music-legacy) from MiniMax.
@@ -46,10 +32,10 @@ As an example, we will generate a song using the popular **minimax-music** model
 
 We used a publicly available sample from royalty-free sample database and generated some lyrics in [Chat GPT](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion):
 
-&#x20;      _Side by side, through thick and thin,_ \
-&#x20;      _With a laugh, we always win._ \
-&#x20;      _Storms may come, but we stay true,_ \
-&#x20;      _Friends forever—me and you!_
+_Side by side, through thick and thin,_\
+&#xNAN;_&#x57;ith a laugh, we always win._\
+&#xNAN;_&#x53;torms may come, but we stay true,_\
+&#xNAN;_&#x46;riends forever—me and you!_
 
 To turn this into a model-friendly prompt (as a single string), we added hash symbols and line breaks.
 

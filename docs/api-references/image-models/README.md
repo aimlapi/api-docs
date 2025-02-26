@@ -61,6 +61,6 @@ We obtained the following image by running that code example:
 
 
 
-{% content-ref url="generate-an-image.md" %}
-[generate-an-image.md](generate-an-image.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
