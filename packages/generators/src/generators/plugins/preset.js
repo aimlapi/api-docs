@@ -33,7 +33,7 @@ const summary = (name) =>
             children = children[CATEGORY_MAPPING[arr[0]]]?.children;
             children = children[CATEGORY_MAPPING[arr[1]]]?.children;
           } else if (tag === 'ocr' || tag === 'ofr') {
-            children = children[CATEGORY_MAPPING["vision-modle"]]?.children;
+            children = children[CATEGORY_MAPPING["vision-models"]]?.children;
             children = children[CATEGORY_MAPPING[tag]]?.children;
           } else {
             if(children[CATEGORY_MAPPING[tag]]?.children)
