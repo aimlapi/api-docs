@@ -149,7 +149,7 @@
     * [imagen-3.0](api-references/image-models/Google/imagen-3.0.md)
 * [Web Search Models](api-references/web-search-models/README.md)
   * [Bagoodex](api-references/web-search-models/bagoodex/README.md)
-    * [bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-search-v1.md)
+    * [bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-search-v1/README.md)
       * [Find Links](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-links.md)
       * [Find Images](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-images.md)
       * [Find Videos](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-videos.md)
