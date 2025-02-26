@@ -14,7 +14,7 @@ layout:
     visible: true
 ---
 
-# Speech Models
+# Voice/Speech Models
 
 With our API you are able to synthesize speech and transform speech into text.
 
@@ -28,10 +28,10 @@ With our API you are able to synthesize speech and transform speech into text.
 
 ## Getting Started
 
-{% content-ref url="speech-to-text-stt.md" %}
-[speech-to-text-stt.md](speech-to-text-stt.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="text-to-speech-tts.md" %}
-[text-to-speech-tts.md](text-to-speech-tts.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

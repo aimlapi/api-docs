@@ -20,7 +20,7 @@ layout:
 
 ## Welcome to the AI/ML API!
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a data-mention href="api-references/model-database/">model-database</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a data-mention href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a data-mention href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a data-mention href="capabilities/function-calling/">function-calling</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Misc</strong>:</td><td><a data-mention href="broken-reference">Broken link</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a data-mention href="quickstart/setting-up.md">setting-up.md</a></td><td><a data-mention href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a data-mention href="api-references/model-database/model-database.md">model-database.md</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a data-mention href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a data-mention href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a data-mention href="capabilities/function-calling/">function-calling</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Misc</strong>:</td><td><a data-mention href="broken-reference">Broken link</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
 Select the model by its task:
 
@@ -42,8 +42,8 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [video-models](api-references/video-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/audio-models-music-and-vocal/" %}
-[audio-models-music-and-vocal](api-references/audio-models-music-and-vocal/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="api-references/speech-models/" %}
@@ -54,20 +54,20 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [web-search-models](api-references/web-search-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/model-database/vision-models.md" %}
-[vision-models.md](api-references/model-database/vision-models.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/guard-models.md" %}
-[guard-models.md](api-references/guard-models.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/3d-generating-models.md" %}
-[3d-generating-models.md](api-references/3d-generating-models.md)
+{% content-ref url="api-references/3d-generating-models/" %}
+[3d-generating-models](api-references/3d-generating-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/embedding-models.md" %}
-[embedding-models.md](api-references/embedding-models.md)
+{% content-ref url="api-references/embedding-models/" %}
+[embedding-models](api-references/embedding-models/)
 {% endcontent-ref %}
 {% endtab %}
 {% endtabs %}
