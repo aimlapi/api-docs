@@ -158,8 +158,8 @@
   * [MiniMax](api-references/video-models/MiniMax/README.md)
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
-  * [Runway](api-references/video-models/Runway/README.md)
-    * [gen3a_turbo](api-references/video-models/Runway/gen3a_turbo.md)
+  * [Runway](api-references/video-models/runway/README.md)
+    * [gen3a_turbo](api-references/video-models/runway/gen3a_turbo.md)
 * [Content Moderation Models](api-references/moderation-safety-models/README.md)
   * [Meta](api-references/moderation-safety-models/Meta/README.md)
     * [Llama-Guard-3-11B-Vision-Turbo](api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)
@@ -211,18 +211,18 @@
 
 ## Capabilities
 
-* [Completion or Chat Models](сapabilities/completion-or-chat-models.md)
-* [Chat Completion](сapabilities/chat-completion.md)
-* [Parameters](сapabilities/parameters.md)
-* [Function Calling](сapabilities/function-calling/README.md)
-  * [Image-To-Text (Vision)](сapabilities/function-calling/image-to-text-vision.md)
-  * [Anthropic](сapabilities/function-calling/anthropic.md)
-* [Managing Assistants & Threads](сapabilities/managing-assistants-and-threads/README.md)
-  * [Threads](сapabilities/managing-assistants-and-threads/threads/README.md)
-    * [Runs](сapabilities/managing-assistants-and-threads/threads/runs.md)
-    * [Messages](сapabilities/managing-assistants-and-threads/threads/messages.md)
-  * [Using Assistants & Threads](knowledge/managing-assistants-and-threads/using-assistants-and-threads.md)
-* [Models comparsion](knowledge/models-comparsion.md)
+* [Completion or Chat Models](capabilities/completion-or-chat-models.md)
+* [Chat Completion](capabilities/chat-completion.md)
+* [Parameters](capabilities/parameters.md)
+* [Function Calling](capabilities/function-calling/README.md)
+  * [Image-To-Text (Vision)](capabilities/function-calling/image-to-text-vision.md)
+  * [Anthropic](capabilities/function-calling/anthropic.md)
+* [Managing Assistants & Threads](capabilities/managing-assistants-and-threads/README.md)
+  * [Threads](capabilities/managing-assistants-and-threads/threads/README.md)
+    * [Runs](capabilities/managing-assistants-and-threads/threads/runs.md)
+    * [Messages](capabilities/managing-assistants-and-threads/threads/messages.md)
+  * [Using Assistants & Threads](capabilities/managing-assistants-and-threads/using-assistants-and-threads.md)
+* [Models comparsion](capabilities/models-comparsion.md)
 
 
 ## FAQ

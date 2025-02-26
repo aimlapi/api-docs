@@ -1,7 +1,0 @@
-[#generator:start]: <> ({ "template": "openapi" })
-[#generator:start]: <> ({ "template": "openapi" })
-{% swagger src="./gpt-4o-mini.json" path="/v2/chat/completions" method="post" %}
-[./gpt-4o-mini.json](./gpt-4o-mini.json)
-{% endswagger %}
-[#generator:end]: <> ({})
-[#generator:end]: <> ({})

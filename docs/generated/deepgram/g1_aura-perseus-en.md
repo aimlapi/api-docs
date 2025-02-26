@@ -1,7 +1,0 @@
-[#generator:start]: <> ({ "template": "openapi" })
-[#generator:start]: <> ({ "template": "openapi" })
-{% swagger src="./g1_aura-perseus-en.json" path="/tts" method="post" %}
-[./g1_aura-perseus-en.json](./g1_aura-perseus-en.json)
-{% endswagger %}
-[#generator:end]: <> ({})
-[#generator:end]: <> ({})
