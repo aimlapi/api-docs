@@ -20,12 +20,12 @@ The model allows searching for answers to user queries on the internet. It suppo
 {% step %}
 **Using six specialized API endpoints**, each designed to search for only one specific type of information. These endpoints return structured responses, making them more suitable for integration into specialized services (e.g., a weather widget). Here are the types of information you can retrieve this way:
 
-* [Links](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links)
-* [Images](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images)
-* [Videos](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos)
-* [Weather details for a specified location](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather)
-* [Locations](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map)
-* [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
+* [Links](find-links.md)
+* [Images](find-images.md)
+* [Videos](find-videos.md)
+* [Weather details for a specified location](find-the-weather.md)
+* [Locations](find-a-local-map.md)
+* [Knowledge about a topic, structured as a small knowledge base](get-a-knowledge-structure.md)
 
 See API references and examples on the subpages.
 {% endstep %}

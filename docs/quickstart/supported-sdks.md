@@ -136,4 +136,4 @@ curl --request POST \
 
 ## Next Steps
 
-* [Learn how to use text models](../api-references/text-models-llm/)
+* [Check our full list of model IDs](../api-references/model-database/model-database.md)
