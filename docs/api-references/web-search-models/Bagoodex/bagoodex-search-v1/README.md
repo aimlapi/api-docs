@@ -1,46 +1,25 @@
-# Find a Local Map
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Overview
+# bagoodex/bagoodex-search-v1
 
-This is a description of one of the six use cases for the `bagoodex/bagoodex-search-v1` model—retrieving a Google Maps link, a small picture of the map and coordinates of the requested place based on information from the internet.
+The model allows searching for answers to user queries on the internet. It supports **two** usage options:
 
-**An output example**:
+{% stepper %}
+{% step %}
+**As a regular chat completion model** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. See the Chat Completion call in the [corresponding section](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion) of this documentation or check how this call is made in the Python example:&#x20;
 
-{% code overflow="wrap" %}
-```json
-{
-  "link": "https://www.google.com/maps/place/San+Francisco,+CA/data=!4m2!3m1!1s0x80859a6d00690021:0x4a501367f076adff?sa=X&ved=2ahUKEwjqg7eNz9KLAxVCFFkFHWSPEeIQ8gF6BAgqEAA&hl=en",
-  "image": "https://dmwtgq8yidg0m.cloudfront.net/images/TdNFUpcEvvHL-local-map.webp"
-}
-```
-{% endcode %}
-
-{% hint style="info" %}
-The output will be the requested information retrieved from the internet—or empty brackets `{}` if nothing was found or if the entered query does not match the selected search type  (for example, entering something like "wofujwofifwuowijufi").
-{% endhint %}
-
-First, you must first call the standard chat completion endpoint with your query. (See the Chat Completion call in the [corresponding section](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion) of this documentation or check how this call is made in the [example ](find-a-local-map.md#example)below.)&#x20;
-
-{% hint style="success" %}
-Note that queries can include advanced search syntax:
-
-* **Search for an exact match:** Enter a word or phrase using `\"` before and after it. \
-  For example, `\"tallest building\"`.&#x20;
-* **Search for a specific site:** Enter `site:` in front of a site or domain. For example, `site:youtube.com cat videos`.
-* **Exclude words from your search:** Enter `-` in front of a word that you want to leave out. For example, `jaguar speed -car`.
-{% endhint %}
-
-The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the `bagoodex/local-map` endpoint below:
-
-## API Schema
-
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/bagoodex/local-map" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
-
-### Example
-
-{% code overflow="wrap" %}
 ```python
 import requests
 from openai import OpenAI
@@ -61,37 +40,61 @@ def complete_chat():
         messages=[
             {
                 "role": "user",
-                "content": "where is san francisco",
+                
+                # Enter your query here
+                "content": 'how to make a slingshot',
             },
         ],
     )
     
-    # Extract the ID from the response
-    gen_id = response.id  
-    print(f"Generated ID: {gen_id}")
     
-    # Call the Bagoodex endpoint with the generated ID
-    get_local_map(gen_id)
+    print(response.choices[0].message.content)
 
-def get_local_map(gen_id):
-    params = {'followup_id': gen_id}
-    headers = {'Authorization': f'Bearer {API_KEY}'}
-    response = requests.get(f'{API_URL}/v1/bagoodex/local-map', headers=headers, params=params)
-    
-    print(response.json())
 
 # Run the function
 complete_chat()
 ```
-{% endcode %}
 
-**Model Response**:
+**Response**:
 
 {% code overflow="wrap" %}
-```json
-{
-  "link": "https://www.google.com/maps/place/San+Francisco,+CA/data=!4m2!3m1!1s0x80859a6d00690021:0x4a501367f076adff?sa=X&ved=2ahUKEwjqg7eNz9KLAxVCFFkFHWSPEeIQ8gF6BAgqEAA&hl=en",
-  "image": "https://dmwtgq8yidg0m.cloudfront.net/images/TdNFUpcEvvHL-local-map.webp"
-}
+```
+To make a slingshot, you can follow the instructions provided in the two sources:
+
+**Option 1: Make a Giant Slingshot**
+
+* Start by cutting two 2x4's to a length of 40 inches each, which will be the main arms of the slingshot.
+* Attach the arms to a base made of plywood using screws, and then add side braces to support the arms.
+* Install an exercise band as the launching mechanism, making sure to tighten it to achieve the desired distance.
+* Add a cross brace to keep the arms rigid and prevent them from spreading or caving in.
+
+**Option 2: Make a Stick Slingshot**
+
+* Find a sturdy, Y-shaped stick and break it down to the desired shape.
+* Cut notches on the ends of the stick to hold the rubber bands in place.
+* Create a pouch by folding a piece of fabric in half and then half again, and then cutting small holes for the rubber bands.        
+* Thread the rubber bands through the holes and tie them securely to the stick using thread.
+* Decorate the slingshot with coloured yarn or twine if desired.
+
+You can choose to make either a giant slingshot or a stick slingshot, depending on your preference and the materials available.  
 ```
 {% endcode %}
+
+
+{% endstep %}
+
+{% step %}
+**Using six specialized API endpoints**, each designed to search for only one specific type of information. These endpoints return structured responses, making them more suitable for integration into specialized services (e.g., a weather widget). Here are the types of information you can retrieve this way:
+
+* [Links](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links)
+* [Images](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images)
+* [Videos](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos)
+* [Weather details for a specified location](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather)
+* [Locations](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map)
+* [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
+
+See API references and examples on the subpages.
+
+
+{% endstep %}
+{% endstepper %}
