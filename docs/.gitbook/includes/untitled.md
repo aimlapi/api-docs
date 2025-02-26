@@ -2,6 +2,6 @@
 title: Untitled
 ---
 
-{% content-ref url="../../api-overview/audio-models-music-and-vocal/minimax-music-legacy/" %}
-[minimax-music-legacy](../../api-overview/audio-models-music-and-vocal/minimax-music-legacy/)
+{% content-ref url="../../api-references/audio-models-music-and-vocal/minimax-music-legacy/" %}
+[minimax-music-legacy](../../api-references/audio-models-music-and-vocal/minimax-music-legacy/)
 {% endcontent-ref %}

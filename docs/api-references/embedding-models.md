@@ -1,16 +1,12 @@
 ---
-icon: code
+icon: binary
 ---
 
-# Embeddings
+# Embedding Models
 
-New Embedding Models
+## What are Embedding Models?
 
-The latest embedding models from AI/ML API, `text-embedding-3-small` and `text-embedding-3-large`, are now available. These models offer cost savings, enhanced multilingual support, and customizable parameters to manage their size.
-
-#### What are Embeddings?
-
-Embeddings from AI/ML API quantify the similarity between text strings. These embeddings are particularly useful for:
+Embedding Models from AI/ML API quantify the similarity between text strings. These models are particularly useful for:
 
 * **Search**: Rank search results by their relevance to a query.
 * **Clustering**: Group similar text strings together.
@@ -21,11 +17,9 @@ Embeddings from AI/ML API quantify the similarity between text strings. These em
 
 An embedding is a vector (list) of floating-point numbers, where the distance between vectors indicates their relatedness. Smaller distances indicate higher similarity, while larger distances suggest lower similarity.
 
-For more information on Embeddings pricing, visit our pricing page. Costs are calculated based on the number of tokens in the input.
+For more information on Embedding models pricing, visit our pricing page. Costs are calculated based on the number of tokens in the input.
 
-
-
-**Example: Generating Embeddings**
+## **Example: Generating Embeddings**
 
 ```
 curl https://api.aimlapi.com/v1/embeddings \
@@ -38,13 +32,14 @@ curl https://api.aimlapi.com/v1/embeddings \
 
 ```
 
-The response will include the embedding vector and additional metadata.
+The response will include the embedding vector and additional metadata:
 
-**Example Embedding Response**
+<details>
 
-```json
-{
-  "object": "list",
+<summary><strong>Response</strong></summary>
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>  "object": "list",
   "data": [
     {
       "object": "embedding",
@@ -64,15 +59,15 @@ The response will include the embedding vector and additional metadata.
     "total_tokens": 5
   }
 }
+</code></pre>
 
-
-```
+</details>
 
 By default, the length of the embedding vector is 1536 for `text-embedding-3-small` or 3072 for `text-embedding-3-large`. You can reduce the dimensions of the embedding using the `dimensions` parameter without losing its ability to represent concepts. More details on embedding dimensions can be found in the embedding use case section.
 
-#### Embedding Models
+## Embedding Models
 
-AI/ML API offers two robust third-generation embedding models (indicated by -3 in the model ID).&#x20;
+AI/ML API offers two robust third-generation embedding models (indicated by "-3-" in the model ID).&#x20;
 
 | Model                  | \~ Pages per Dollar | Performance on MTEB Eval | Max Input Tokens |
 | ---------------------- | ------------------- | ------------------------ | ---------------- |
@@ -80,7 +75,7 @@ AI/ML API offers two robust third-generation embedding models (indicated by -3 i
 | text-embedding-3-large | 9,615               | 64.6%                    | 8191             |
 | text-embedding-ada-002 | 12,500              | 61.0%                    | 8191             |
 
-#### Example in Python
+## Example in Python
 
 Here's how to use the embeddings API in Python:
 
@@ -92,7 +87,7 @@ import openai
 # Initialize the API client
 client = openai.OpenAI(
     base_url="https://api.aimlapi.com/v1",
-    api_key=os.getenv("AIMLAPI_API_KEY"),
+    api_key=os.getenv("<AIMLAPI_API_KEY>"),
 )
 
 # Define the text for which to generate an embedding

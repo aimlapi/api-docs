@@ -136,4 +136,4 @@ curl --request POST \
 
 ## Next Steps
 
-* [Learn how to use text models](../api-overview/text-models-llm/)
+* [Learn how to use text models](../api-references/text-models-llm/)

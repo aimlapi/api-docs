@@ -84,7 +84,7 @@ print(response.json())
 </details>
 
 {% hint style="info" %}
-In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../text-models-llm/function-calling/anthropic.md).
+In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../../capabilities/function-calling/anthropic.md).
 {% endhint %}
 
 ### Uploading Base64 Encoded Images
@@ -135,7 +135,7 @@ print(response.json())
 </details>
 
 {% hint style="info" %}
-In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../text-models-llm/function-calling/anthropic.md).
+In this example, the GPT-4o model was used with the corresponding set of parameters. If you are using models from Anthropic (claude-3.5-sonnet, etc), check [here](../../capabilities/function-calling/anthropic.md).
 {% endhint %}
 
 ### Multiple Image Inputs

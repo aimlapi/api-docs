@@ -13,32 +13,30 @@ layout:
     visible: true
 ---
 
-# Content Moderation/Safety Models
+# Content Moderation Models
 
 ## Overview
 
 With our API, you can use content moderation / safety models to classify input content as safe or unsafe instantly.
 
-## Model list
-
-| ID                                        | Developer |
-| ----------------------------------------- | --------- |
-| meta-llama/Meta-Llama-Guard-3-8B          | Meta      |
-| Meta-Llama/Llama-Guard-7b                 | Meta      |
-| meta-llama/Llama-Guard-3-11B-Vision-Turbo | Meta      |
-| meta-llama/LlamaGuard-2-8b                | Meta      |
-
-### Key Features
+## Key Features
 
 * **Text Analysis**: Check text for security.
 * **Image Analysis**: Check image for security.
 * **Flexible Input Methods**: Supports both image URLs and base64 encoded images.
 * **Multiple Image Inputs**: Analyze multiple images in a single request.
 
-### Quick Start
+Content moderation models are perfect for scenarios where content safety is crucial:
 
-{% hint style="info" %}
-Ensure you replace `"my_key"` with your actual API key before running the code.
+* Moderate user-generated content on websites.
+* Filter harmful inputs in chatbots.
+* Safeguard sensitive systems from unsafe data.
+* Ensure compliance with safety standards in applications.
+
+### Quick Example
+
+{% hint style="warning" %}
+Ensure you replace  <kbd>\<YOUR\_API\_KEY></kbd>  with your actual API key and  <kbd>\<YOUR\_MODEL></kbd>  with the actual content moderation model id before running the code.
 {% endhint %}
 
 {% tabs %}
@@ -48,7 +46,7 @@ const main = async () => {
   const response = await fetch('https://api.aimlapi.com/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer my_key',
+      Authorization: 'Bearer <YOUR_API_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -95,22 +93,15 @@ if __name__ == "__main__":
 {% endtab %}
 {% endtabs %}
 
-This request returns either "safe" or "unsafe" depending on the input content.
+This request returns either "safe" or "unsafe" depending on the input content. For example:
+
+```
+unsafe \n 04
+```
 
 Once content is classified as unsafe, it is categorized under the hazard category. This process is unique to each model.
 
-#### For example:
-
-`unsafe \n 04`
-
-### Content moderation models are perfect for scenarios where content safety is crucial
-
-* moderate user-generated content on websites
-* filter harmful inputs in chatbots
-* safeguard sensitive systems from unsafe data
-* ensure compliance with safety standards in applications
-
-### Example
+### Example #2
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -121,11 +112,11 @@ const isPromptSafe = async (prompt) => {
     {
       method: "POST",
       headers: {
-        Authorization: "Bearer your_key",
+        Authorization: "Bearer <YOUR_API_KEY>",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "<GUARD_MODEL>",
+        model: "<CONTENT_MODERATION_MODEL>",
         messages: [
           {
             role: "user",
@@ -150,11 +141,11 @@ const getAnswer = async (prompt) => {
   const response = await fetch('https://api.aimlapi.com/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer my_key',
+      Authorization: 'Bearer <YOUR_API_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: '<YOUR_MODEL>',
+      model: '<TEXT_MODEL>',
       messages: [
         {
           role: 'user',

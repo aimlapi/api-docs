@@ -14,7 +14,7 @@ layout:
     visible: true
 ---
 
-# Model Database
+# 📒 All Model IDs
 
 {% hint style="info" %}
 If you need to select models based on specific parameters for your task, visit the [dedicated page on our official website](https://aimlapi.com/models/), which offers convenient filtering options. On the selected model’s page, you can find detailed technical and commercial information.
@@ -31,7 +31,7 @@ If you already know the identifier, use the page search function (<kbd>Ctrl+F</k
 {% hint style="success" %}
 **New Model Request**
 
-Can't find the model you need? Join our [Discord community](https://discord.gg/vayNtU9ThM) to propose new models for integration into our API offerings. Your contributions help us grow and serve you better.
+Can't find the model you need? Join our [Discord community](https://discord.gg/8CwhkUuCR6) to propose new models for integration into our API offerings. Your contributions help us grow and serve you better.
 {% endhint %}
 
 ## Get Model List via API&#x20;
@@ -274,3 +274,9 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
 | Meta-Llama/Llama-Guard-7b                 | Meta      |
 | meta-llama/Llama-Guard-3-11B-Vision-Turbo | Meta      |
 | meta-llama/LlamaGuard-2-8b                | Meta      |
+
+### 3D-Generating Models
+
+| ID      | Developer    |
+| ------- | ------------ |
+| triposr | Stability AI |

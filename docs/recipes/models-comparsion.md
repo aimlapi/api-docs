@@ -16,7 +16,7 @@ layout:
 
 # Model comparsion
 
-The API used in this example is listed [here](../api-overview/model-database/).
+The API used in this example is listed [here](../api-references/model-database/).
 
 ### Example #1: Compare two random text models
 

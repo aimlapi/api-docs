@@ -2,7 +2,7 @@
 icon: code
 ---
 
-# Generate an Audio
+# Generate an audio (Stable Audio)
 
 ## Overview
 
@@ -15,9 +15,9 @@ icon: code
 
 ## API Reference
 
-{% swagger src="stable-audio-docs.yaml" path="/v2/generate/audio" method="post" %}
-[stable-audio-docs.yaml](stable-audio-docs.yaml)
-{% endswagger %}
+{% openapi src="../../../api-overview/audio-models-music-and-vocal/stable-audio/stable-audio-docs.yaml" path="/v2/generate/audio" method="post" %}
+[stable-audio-docs.yaml](../../../api-overview/audio-models-music-and-vocal/stable-audio/stable-audio-docs.yaml)
+{% endopenapi %}
 
 ## Examples
 

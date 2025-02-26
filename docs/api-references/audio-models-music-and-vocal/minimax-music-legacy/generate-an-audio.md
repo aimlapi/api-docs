@@ -2,7 +2,7 @@
 icon: code
 ---
 
-# Generate an Audio
+# Generate an audio (Minimax Music)
 
 ## Overview
 
@@ -15,9 +15,9 @@ icon: code
 
 ## API Reference
 
-{% swagger src="minimax-docs.yaml" path="/v2/generate/audio" method="post" %}
-[minimax-docs.yaml](minimax-docs.yaml)
-{% endswagger %}
+{% openapi src="../../../api-overview/audio-models-music-and-vocal/minimax-music-legacy/minimax-docs.yaml" path="/v2/generate/audio" method="post" %}
+[minimax-docs.yaml](../../../api-overview/audio-models-music-and-vocal/minimax-music-legacy/minimax-docs.yaml)
+{% endopenapi %}
 
 ## Examples
 

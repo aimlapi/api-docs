@@ -3,9 +3,10 @@ icon: book-open
 description: >-
   Learn how you can tweak results of your AI/ML API responses with tailored
   requests.
+hidden: true
 ---
 
-# Parameters
+# LLM Parameters
 
 ## Overview
 
