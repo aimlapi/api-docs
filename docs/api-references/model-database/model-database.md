@@ -584,7 +584,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
             <td><a href="https://aimlapi.com/models/imagen-3-api" target="_blank">Imagen 3</a></td>
           </tr>
           <tr>
-            <td><a href="../image-models/Black-Forest-Labs/schnell.md">flux/schnell</a></td>
+            <td><a href="../image-models/Black-Forest-Labs/flux-schnell.md">flux/schnell</a></td>
             <td>Flux</td>
             <td></td>
             <td><a href="https://aimlapi.com/models/flux-1-schnell-api" target="_blank">FLUX.1 [schnell]</a></td>
@@ -657,25 +657,43 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/v
       </thead>
       <tbody>
           <tr>
-            <td><a href="../video-models/Kling-AI/kling-video-image-to-video.md">kling-video/v1/standard/image-to-video</a></td>
+            <td><a href="../video-models/Kling-AI/v1-standard-image-to-video.md">kling-video/v1/standard/image-to-video</a></td>
             <td>Kling AI</td>
             <td></td>
             <td><a href="https://aimlapi.com/models/kling-ai-image-to-video" target="_blank">Kling AI (image-to-video)</a></td>
           </tr>
           <tr>
-            <td><a href="../video-models/Kling-AI/kling-video-image-to-video.md">kling-video/v1/pro/image-to-video</a></td>
+            <td><a href="../video-models/Kling-AI/v1-standard-text-to-video.md">kling-video/v1/standard/text-to-video</a></td>
+            <td>Kling AI</td>
+            <td></td>
+            <td><a href="https://aimlapi.com/models/kling-ai-text-to-video-api" target="_blank">Kling AI (text-to-video)</a></td>
+          </tr>
+          <tr>
+            <td><a href="../video-models/Kling-AI/v1-pro-image-to-video.md">kling-video/v1/pro/image-to-video</a></td>
             <td>Kling AI</td>
             <td></td>
             <td><a href="https://aimlapi.com/models/kling-ai-image-to-video" target="_blank">Kling AI (image-to-video)</a></td>
           </tr>
           <tr>
-            <td><a href="../video-models/Kling-AI/kling-1.6-standart.md">kling-video/v1.6/standard/image-to-video</a></td>
+            <td><a href="../video-models/Kling-AI/v1-pro-text-to-video.md">kling-video/v1/pro/text-to-video</a></td>
+            <td>Kling AI</td>
+            <td></td>
+            <td><a href="https://aimlapi.com/models/kling-ai-text-to-video-api" target="_blank">Kling AI (text-to-video)</a></td>
+          </tr>
+          <tr>
+            <td><a href="../video-models/Kling-AI/v1.6-standard-text-to-video.md">kling-video/v1.6/standard/text-to-video</a></td>
+            <td>Kling AI</td>
+            <td></td>
+            <td><a href="https://aimlapi.com/models/kling-1-6-standard" target="_blank">Kling 1.6 Standard</a></td>
+          </tr>
+          <tr>
+            <td><a href="../video-models/Kling-AI/v1.6-standart-image-to-video.md">kling-video/v1.6/standard/image-to-video</a></td>
             <td>Kling AI</td>
             <td></td>
             <td><a href="https://aimlapi.com/models/kling-1-6-standard" target="_blank">Kling 1.6 Standart</a></td>
           </tr>
           <tr>
-            <td><a href="../video-models/Kling-AI/kling-video-image-to-video.md">kling-video/v1.6/pro/image-to-video</a></td>
+            <td><a href="../video-models/Kling-AI/v1.6-pro-image-to-video.md">kling-video/v1.6/pro/image-to-video</a></td>
             <td>Kling AI</td>
             <td></td>
             <td><a href="https://aimlapi.com/models/kling-1-6-pro-api" target="_blank">Kling 1.6 Pro</a></td>

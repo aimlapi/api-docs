@@ -8,7 +8,7 @@ class AliasPageGenerator extends PageGenerator {
     const sortedModels = models.sort((a, b) => a.alias.localeCompare(b.alias))
 
     for (const model of sortedModels) {
-      if(!openapi.byModel[model.name]){
+      if(!openapi.byModel?.[model.name]){
         if(NO_PARSE_MODAL.includes(model.name)){
           MODELS_TO_ALIAS_MAP[model.name].path = `api-referenses/${model.category}/${model.vendor.replace(/ /g, '-')}/${model.alias.replace(/#/g, '').replace(/ /g, '-').replace(/\//g, '-')}`
           console.warn(`Model '${model.name}' is EXCEPTIONS.`);
@@ -39,7 +39,7 @@ class AliasPageGenerator extends PageGenerator {
             url: `./${aliastToPAth}.json`,
             alias: model.alias,
             model: model.name,
-            models: ALIAS_MAP[model.alias].sort(),
+            models: ALIAS_MAP[model.alias].sort((a, b) => a.localeCompare(b)),
             description: model.description,
             path,
             method: method,

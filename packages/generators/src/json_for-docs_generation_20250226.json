@@ -145,7 +145,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gpt-3.5-turbo"
+    "offsite_name": "Chat GPT 3.5 Turbo"
   },
   {
     "name": "gpt-3.5-turbo-0125",
@@ -156,7 +156,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gpt-3.5-turbo"
+    "offsite_name": "-"
   },
   {
     "name": "gpt-3.5-turbo-1106",
@@ -167,7 +167,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gpt-3.5-turbo"
+    "offsite_name": "Chat GPT-3.5 Turbo 1106"
   },
   {
     "name": "o1-preview",
@@ -178,7 +178,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "o1-preview"
+    "offsite_name": "OpenAI o1-preview"
   },
   {
     "name": "o1-preview-2024-09-12",
@@ -189,7 +189,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "o1-preview"
+    "offsite_name": "-"
   },
   {
     "name": "o1-mini",
@@ -200,7 +200,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "o1-mini"
+    "offsite_name": "OpenAI o1-mini"
   },
   {
     "name": "o1-mini-2024-09-12",
@@ -211,7 +211,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "o1-mini"
+    "offsite_name": "-"
   },
   {
     "name": "microsoft/WizardLM-2-8x22B",
@@ -222,7 +222,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "WizardLM-2-8x22B"
+    "offsite_name": "WizardLM 2-8 (22B)"
   },
   {
     "name": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
@@ -235,7 +235,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "Llama-3.2-90B-Vision-Instruct-Turbo"
+    "offsite_name": "Llama 3.2 90B Vision Instruct Turbo"
   },
   {
     "name": "Meta-Llama/Llama-Guard-7b",
@@ -246,7 +246,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-Guard-7b"
+    "offsite_name": "Llama Guard (7B)"
   },
   {
     "name": "google/gemma-2-27b-it",
@@ -257,7 +257,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gemma-2-27b-it"
+    "offsite_name": "Gemma 2 (27b)"
   },
   {
     "name": "meta-llama/Llama-Vision-Free",
@@ -270,7 +270,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "Llama-Vision-Free"
+    "offsite_name": "-"
   },
   {
     "name": "Gryphe/MythoMax-L2-13b",
@@ -281,7 +281,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "MythoMax-L2-13b"
+    "offsite_name": "MythoMax-L2 (13B)"
   },
   {
     "name": "mistralai/Mixtral-8x22B-Instruct-v0.1",
@@ -303,7 +303,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Qwen2-72B-Instruct"
+    "offsite_name": "Qwen 2 Instruct (72B)"
   },
   {
     "name": "mistralai/Mixtral-8x7B-Instruct-v0.1",
@@ -325,7 +325,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-3.1-Nemotron-70B-Instruct-HF"
+    "offsite_name": "Llama 3.1 Nemotron 70B Instruct"
   },
   {
     "name": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
@@ -336,7 +336,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Nous-Hermes-2-Mixtral-8x7B-DPO"
+    "offsite_name": "-"
   },
   {
     "name": "deepseek-ai/deepseek-llm-67b-chat",
@@ -358,7 +358,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-3.3-70B-Instruct-Turbo"
+    "offsite_name": "Meta Llama 3.3 70B Instruct Turbo"
   },
   {
     "name": "upstage/SOLAR-10.7B-Instruct-v1.0",
@@ -369,7 +369,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "SOLAR-10.7B-Instruct"
+    "offsite_name": "Upstage SOLAR Instruct v1 (11B)"
   },
   {
     "name": "meta-llama/Llama-3.2-3B-Instruct-Turbo",
@@ -380,7 +380,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-3.2-3B-Instruct-Turbo"
+    "offsite_name": "Llama 3.2 3B Instruct Turbo"
   },
   {
     "name": "meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo",
@@ -393,7 +393,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "Llama-3.2-11B-Vision-Instruct-Turbo"
+    "offsite_name": "Llama 3.2 11B Vision Instruct Turbo"
   },
   {
     "name": "meta-llama/Llama-2-13b-chat-hf",
@@ -404,7 +404,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-2-13b-chat-hf"
+    "offsite_name": "LLaMA-2 Chat (13B)"
   },
   {
     "name": "meta-llama/Llama-Guard-3-11B-Vision-Turbo",
@@ -417,7 +417,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "Llama-Guard-3-11B-Vision-Turbo"
+    "offsite_name": "Llama Guard 3 11B Vision Turbo"
   },
   {
     "name": "Qwen/Qwen2.5-7B-Instruct-Turbo",
@@ -428,7 +428,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Qwen2.5-7B-Instruct-Turbo"
+    "offsite_name": "Qwen 2.5 7B Instruct Turbo"
   },
   {
     "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
@@ -439,7 +439,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Qwen2.5-Coder-32B-Instruct"
+    "offsite_name": "Qwen 2.5 Coder 32B Instruct"
   },
   {
     "name": "databricks/dbrx-instruct",
@@ -450,7 +450,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "dbrx-instruct"
+    "offsite_name": "DBRX Instruct"
   },
   {
     "name": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
@@ -461,7 +461,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3-8B-Instruct-Lite"
+    "offsite_name": "Llama 3 8B Instruct Lite"
   },
   {
     "name": "meta-llama/Llama-3-8b-chat-hf",
@@ -472,18 +472,18 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-3-chat-hf"
+    "offsite_name": "Llama 3 8B Instruct Reference"
   },
   {
     "name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K",
-    "alias": "Meta-Llama-3.1-8B-Instruct-Turbo-128K",
+    "alias": "Meta-Llama-3.1-8B-Instruct-Turbo",
     "category": "text-models-llm",
     "vendor": "Meta",
     "description": "An auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for safety and helpfulness. ",
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3.1-8B-Instruct-Turbo-128K"
+    "offsite_name": "-"
   },
   {
     "name": "meta-llama/Llama-3-70b-chat-hf",
@@ -494,7 +494,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-3-chat-hf"
+    "offsite_name": "Llama 3 70B Instruct Reference"
   },
   {
     "name": "Qwen/Qwen2.5-72B-Instruct-Turbo",
@@ -505,7 +505,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Qwen2.5-72B-Instruct-Turbo"
+    "offsite_name": "Qwen 2.5 72B Instruct Turbo"
   },
   {
     "name": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
@@ -516,7 +516,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3.1-405B-Instruct-Turbo"
+    "offsite_name": "Llama 3.1 (405B) Instruct Turbo"
   },
   {
     "name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
@@ -527,7 +527,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3.1-8B-Instruct-Turbo"
+    "offsite_name": "Llama 3.1 8B Instruct Turbo"
   },
   {
     "name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
@@ -538,7 +538,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3.1-70B-Instruct-Turbo"
+    "offsite_name": "Llama 3.1 70B Instruct Turbo"
   },
   {
     "name": "google/gemma-2b-it",
@@ -549,7 +549,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gemma-2b-it"
+    "offsite_name": "Gemma Instruct (2B)"
   },
   {
     "name": "mistralai/Mistral-7B-Instruct-v0.2",
@@ -571,7 +571,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "LlamaGuard-2-8b"
+    "offsite_name": "LlamaGuard 2 (8b)"
   },
   {
     "name": "mistralai/Mistral-7B-Instruct-v0.1",
@@ -604,7 +604,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3-70B-Instruct-Turbo"
+    "offsite_name": "-"
   },
   {
     "name": "meta-llama/Meta-Llama-3-70B-Instruct-Lite",
@@ -615,7 +615,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-3-70B-Instruct-Lite"
+    "offsite_name": "Llama 3 70B Instruct Lite"
   },
   {
     "name": "google/gemma-2-9b-it",
@@ -626,7 +626,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gemma-2-9b-it"
+    "offsite_name": "Gemma 2 (9B)"
   },
   {
     "name": "Gryphe/MythoMax-L2-13b-Lite",
@@ -637,7 +637,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "MythoMax-L2-13b-Lite"
+    "offsite_name": "-"
   },
   {
     "name": "meta-llama/Llama-2-7b-chat-hf",
@@ -648,7 +648,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Llama-2-7b-chat-hf"
+    "offsite_name": "LLaMA-2 Chat (7B)"
   },
   {
     "name": "meta-llama/Meta-Llama-Guard-3-8B",
@@ -659,7 +659,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "Meta-Llama-Guard-3-8B"
+    "offsite_name": "Llama Guard 3 (8B)"
   },
   {
     "name": "claude-3-opus-20240229",
@@ -672,7 +672,7 @@
       "anthropic/message-completion.vision",
       "anthropic/message-completion.function"
     ],
-    "offsite_name": "claude-3-opus"
+    "offsite_name": "Claude 3 Opus"
   },
   {
     "name": "claude-3-sonnet-20240229",
@@ -685,7 +685,7 @@
       "anthropic/message-completion.vision",
       "anthropic/message-completion.function"
     ],
-    "offsite_name": "claude-3-sonnet"
+    "offsite_name": "Claude 3 Sonnet"
   },
   {
     "name": "claude-3-haiku-20240307",
@@ -698,7 +698,7 @@
       "anthropic/message-completion.vision",
       "anthropic/message-completion.function"
     ],
-    "offsite_name": "claude-3-haiku"
+    "offsite_name": "-"
   },
   {
     "name": "claude-3-5-sonnet-20240620",
@@ -711,7 +711,7 @@
       "anthropic/message-completion.vision",
       "anthropic/message-completion.function"
     ],
-    "offsite_name": "claude-3-5-sonnet"
+    "offsite_name": "-"
   },
   {
     "name": "claude-3-5-sonnet-20241022",
@@ -724,7 +724,7 @@
       "anthropic/message-completion.vision",
       "anthropic/message-completion.function"
     ],
-    "offsite_name": "claude-3-5-sonnet"
+    "offsite_name": "Claude 3.5 Sonnet 20241022"
   },
   {
     "name": "claude-3-5-haiku-20241022",
@@ -735,7 +735,7 @@
     "features": [
       "anthropic/message-completion"
     ],
-    "offsite_name": "claude-3-5-haiku"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3.5-sonnet-20240620",
@@ -743,7 +743,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
-    "offsite_name": "claude-3.5-sonnet"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3.5-sonnet-20241022",
@@ -751,7 +751,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
-    "offsite_name": "claude-3.5-sonnet"
+    "offsite_name": "Claude 3.5 Sonnet 20241022"
   },
   {
     "name": "anthropic/claude-3.5-sonnet",
@@ -759,7 +759,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
-    "offsite_name": "claude-3.5-sonnet"
+    "offsite_name": "Claude 3.5 Sonnet"
   },
   {
     "name": "claude-3-5-sonnet-latest",
@@ -767,7 +767,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
-    "offsite_name": "claude-3-5-sonnet"
+    "offsite_name": "Claude 3.5 Sonnet"
   },
   {
     "name": "anthropic/claude-3-haiku-20240307",
@@ -775,7 +775,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
-    "offsite_name": "claude-3-haiku"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3-haiku",
@@ -783,7 +783,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
-    "offsite_name": "claude-3-haiku"
+    "offsite_name": "Claude 3 Haiku"
   },
   {
     "name": "claude-3-haiku-latest",
@@ -791,7 +791,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
-    "offsite_name": "claude-3-haiku"
+    "offsite_name": "Claude 3 Haiku"
   },
   {
     "name": "anthropic/claude-3-opus-20240229",
@@ -799,7 +799,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
-    "offsite_name": "claude-3-opus"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3-opus",
@@ -807,7 +807,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
-    "offsite_name": "claude-3-opus"
+    "offsite_name": "Claude 3 Opus"
   },
   {
     "name": "claude-3-opus-latest",
@@ -815,7 +815,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
-    "offsite_name": "claude-3-opus"
+    "offsite_name": "Claude 3 Opus"
   },
   {
     "name": "anthropic/claude-3-sonnet-20240229",
@@ -823,7 +823,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Sonnet is engineered to balance performance and speed, positioning it as an excellent option for applications that need both high efficiency and robust capabilities. As a multimodal model like its counterparts, Sonnet can process and analyze both text and image data.",
-    "offsite_name": "claude-3-sonnet"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3-sonnet",
@@ -831,7 +831,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Sonnet is engineered to balance performance and speed, positioning it as an excellent option for applications that need both high efficiency and robust capabilities. As a multimodal model like its counterparts, Sonnet can process and analyze both text and image data.",
-    "offsite_name": "claude-3-sonnet"
+    "offsite_name": "Claude 3 Sonnet"
   },
   {
     "name": "claude-3-sonnet-latest",
@@ -839,7 +839,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Sonnet is engineered to balance performance and speed, positioning it as an excellent option for applications that need both high efficiency and robust capabilities. As a multimodal model like its counterparts, Sonnet can process and analyze both text and image data.",
-    "offsite_name": "claude-3-sonnet"
+    "offsite_name": "Claude 3 Sonnet"
   },
   {
     "name": "anthropic/claude-3-5-haiku-20241022",
@@ -847,7 +847,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
-    "offsite_name": "claude-3-5-haiku"
+    "offsite_name": "-"
   },
   {
     "name": "anthropic/claude-3-5-haiku",
@@ -855,7 +855,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
-    "offsite_name": "claude-3-5-haiku"
+    "offsite_name": "Claude 3.5 Haiku"
   },
   {
     "name": "claude-3-5-haiku-latest",
@@ -863,7 +863,7 @@
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
-    "offsite_name": "claude-3-5-haiku"
+    "offsite_name": "Claude 3.5 Haiku"
   },
   {
     "name": "gemini-1.5-flash",
@@ -876,7 +876,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "gemini-1.5-flash"
+    "offsite_name": "Gemini 1.5 Flash"
   },
   {
     "name": "gemini-1.5-pro",
@@ -889,7 +889,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "gemini-1.5-pro"
+    "offsite_name": "Gemini 1.5 Pro"
   },
   {
     "name": "gemini-pro",
@@ -900,7 +900,7 @@
     "features": [
       "openai/chat-completion"
     ],
-    "offsite_name": "gemini-pro"
+    "offsite_name": "Gemini 1.0 Pro"
   },
   {
     "name": "gemini-2.0-flash-exp",
@@ -913,7 +913,7 @@
       "openai/chat-completion.vision",
       "openai/chat-completion.function"
     ],
-    "offsite_name": "gemini-2.0-flash-exp"
+    "offsite_name": "Gemini 2.0 Flash Experimental"
   },
   {
     "name": "mistralai/mistral-tiny",
@@ -1070,7 +1070,7 @@
   },
   {
     "name": "flux/schnell",
-    "alias": "schnell",
+    "alias": "flux/schnell",
     "category": "image-models",
     "vendor": "Black Forest Labs",
     "description": "A state-of-the-art text-to-image generation model designed to create high-quality images from textual descriptions. With a robust architecture of 12 billion parameters, it leverages advanced techniques to produce images that rival those generated by leading closed-source models.",
@@ -1169,25 +1169,25 @@
   },
   {
     "name": "kling-video/v1/standard/image-to-video",
-    "alias": "kling-video/image-to-video",
+    "alias": "v1-standard/image-to-video",
     "category": "video-models",
     "vendor": "Kling AI",
-    "description": "A sophisticated AI model developed by Kuaishou Technology that transforms static images into dynamic video clips. This model allows users to create engaging videos from images by utilizing advanced AI technologies to simulate motion and narrative, making it suitable for various creative applications.",
+    "description": "A model transforms static images into dynamic video clips.",
     "features": [],
     "offsite_name": "Kling AI (image-to-video)"
   },
   {
     "name": "kling-video/v1/pro/image-to-video",
-    "alias": "kling-video/image-to-video",
+    "alias": "v1-pro/image-to-video",
     "category": "video-models",
     "vendor": "Kling AI",
-    "description": "This model transforms static images into dynamic video clips. This model allows users to create engaging videos from images by utilizing advanced AI technologies to simulate motion and narrative, making it suitable for various creative applications.",
+    "description": "This model transforms static images into dynamic video clips. Offers more advanced camera controls than v1 Standard model, including options for tilt, pan, zoom, and roll movements. Results in richer details and more stable camera movements, enhancing the overall visual quality of the generated videos. Produces significantly sharper and more detailed videos. Enhanced animations make elements like water flow and character movements appear more natural and engaging.",
     "features": [],
     "offsite_name": "Kling AI (image-to-video)"
   },
   {
     "name": "kling-video/v1.6/standard/image-to-video",
-    "alias": "kling-1.6-standart",
+    "alias": "v1.6-standart/image-to-video",
     "category": "video-models",
     "vendor": "Kling AI",
     "description": "An advanced AI video generation model developed by Kuaishou Technology, designed to create high-quality videos from text prompts and images. This version introduces significant improvements in prompt adherence, visual quality, and dynamic action rendering, enabling users to generate more consistent and visually appealing results compared to its predecessor, Kling 1.5.",
@@ -1196,12 +1196,39 @@
   },
   {
     "name": "kling-video/v1.6/pro/image-to-video",
-    "alias": "kling-video/image-to-video",
+    "alias": "v1.6-pro/image-to-video",
     "category": "video-models",
     "vendor": "Kling AI",
-    "description": "An advanced AI video generation model, designed to create high-quality videos from image. This version introduces significant improvements in prompt adherence, visual quality, and dynamic action rendering, enabling users to generate more consistent and visually appealing results compared to its predecessor, Kling 1.5.",
+    "description": "An advanced AI video generation model, designed to create high-quality videos from image. This version introduces significant improvements in visual quality and dynamic action rendering, enabling users to generate more consistent and visually appealing results compared to its predecessor, Kling 1.5. Incorporates natural camera movements and transitions for more cinematic outputs.",
     "features": [],
     "offsite_name": "Kling 1.6 Pro"
+  },
+  {
+    "name": "kling-video/v1.6/standard/text-to-video",
+    "alias": "v1.6-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "description": "An advanced AI video generation model, designed to create high-quality videos from text prompts and images. This version introduces significant improvements in prompt adherence, visual quality, and dynamic action rendering, enabling users to generate more consistent and visually appealing results compared to its predecessor, Kling 1.5.",
+    "features": [],
+    "offsite_name": "Kling 1.6 Standard"
+  },
+  {
+    "name": "kling-video/v1/standard/text-to-video",
+    "alias": "v1-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "description": "This model converts textual descriptions into high-quality video content. Maximum Video Length: 5 s. ",
+    "features": [],
+    "offsite_name": "Kling AI (text-to-video)"
+  },
+  {
+    "name": "kling-video/v1/pro/text-to-video",
+    "alias": "v1-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "description": "This model converts textual descriptions into high-quality video content. Provides advanced camera control options, including more sophisticated movements and stabilization. Maximum Video Length: 10 s.",
+    "features": [],
+    "offsite_name": "Kling AI (text-to-video)"
   },
   {
     "name": "stable-audio",
@@ -1777,10 +1804,10 @@
     "offsite_name": "Qwen Max 2025-01-25"
   },
   {
-    "name": "bagoodex-search-v1",
-    "alias": "Bagoodex",
+    "name": "bagoodex/bagoodex-search-v1",
+    "alias": "bagoodex-search-v1",
     "category": "web-search-models",
-    "vendor": "Alibaba Cloud",
+    "vendor": "Bagoodex",
     "description": "-",
     "offsite_name": "Bagoodex Web Search v1"
   },
@@ -1791,5 +1818,13 @@
     "vendor": "Google",
     "description": "Google's latest text-to-image AI model, designed to generate high-quality, photorealistic images from text descriptions with improved detail, lighting, and fewer artifacts. It boasts enhanced natural language understanding and better text rendering.",
     "offsite_name": "Imagen 3"
+  },
+  {
+    "name": "claude-3-7-sonnet-20250219",
+    "alias": "claude-3-7-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Anthropic's latest hybrid reasoning model, designed to tackle complex tasks requiring both rapid inference and detailed problem-solving. It introduces a dual-mode operation, combining standard language generation with extended thinking capabilities.",
+    "offsite_name": "Claude 3.7 Sonnet"
   }
 ]

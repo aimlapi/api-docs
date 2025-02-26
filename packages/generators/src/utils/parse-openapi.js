@@ -208,7 +208,13 @@ const parseOpenapi = (openapi, fetchedModels) => {
       }
     }
   }
-
+  const keys = Object.keys(byModel).sort((a, b) => a.localeCompare(b))
+  // console.log(Object.keys(byModel))
+  const sortedByModel = {}
+  for (const key of keys) {
+    sortedByModel[key] = byModel[key]
+  }
+  // console.log(keys)
   return { byModel };
 };
 
