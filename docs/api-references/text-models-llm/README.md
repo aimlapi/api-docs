@@ -18,7 +18,9 @@ layout:
 
 ## Overview
 
-The AI/ML API provides access to text-based models, also known as **Large Language Models** (**LLM**s), and allows you to interact with them through natural language (that's why a third common name for such models is **chat models**). These models can be applied to various tasks, enabling the creation of diverse applications using our API. For example, text models can be used to:
+The AI/ML API provides access to text-based models, also known as Large Language Models (LLMs), and allows you to interact with them through natural language. These models can be applied to various tasks, enabling the creation of diverse applications using our API.
+
+For example, text models can be used to:
 
 * Create a system that searches your photos using text prompts.
 * Act as a psychological supporter.
@@ -29,17 +31,7 @@ The AI/ML API provides access to text-based models, also known as **Large Langua
 * Serve as a grammar corrector for multiple languages with deep context understanding.
 * And much more.
 
-We support numerous text models. You can view the complete list [here](../model-database/).
-
-## Text Model Specific Capabilities
-
-There are several capabilities of text models that are worth mentioning separately.
-
-**Completion** allows the model to analyze a given text fragment and predict how it might continue based on the probabilities of the next possible tokens or characters. **Chat Completion** extends this functionality, enabling a simulated dialogue between the user and the model based on predefined roles (e.g., "strict language teacher" and "student"). A detailed description and examples can be found [here](../../capabilities/completion-or-chat-models.md).
-
-An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of these capabilities can be found [here](../../capabilities/managing-assistants-and-threads/).
-
-**Function Calling** allows a chat model to invoke external programmatic tools (e.g., a function you have written) while generating a response. A detailed description and examples are available [here](../../capabilities/function-calling/).
+We support numerous Large Language Models. You can view the complete list of models in [our database](https://docs.aimlapi.com/api-overview/model-database/text-models).
 
 ## Quick Code Example
 
