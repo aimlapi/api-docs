@@ -12,13 +12,26 @@ layout:
     visible: true
 ---
 
-# bagoodex/bagoodex-search-v1
+# bagoodex-search-v1
 
 The model allows searching for answers to user queries on the internet. It supports **two** usage options:
 
 {% stepper %}
 {% step %}
-**As a regular chat completion model** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. See the Chat Completion call in the [corresponding section](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion) of this documentation or check how this call is made in the Python example:&#x20;
+**Using six specialized API endpoints**, each designed to search for only one specific type of information. These endpoints return structured responses, making them more suitable for integration into specialized services (e.g., a weather widget). Here are the types of information you can retrieve this way:
+
+* [Links](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links)
+* [Images](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images)
+* [Videos](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos)
+* [Weather details for a specified location](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather)
+* [Locations](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map)
+* [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
+
+See API references and examples on the subpages.
+{% endstep %}
+
+{% step %}
+**As a regular chat completion model** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. Check how this call is made in the Python example:
 
 ```python
 import requests
@@ -79,22 +92,6 @@ To make a slingshot, you can follow the instructions provided in the two sources
 You can choose to make either a giant slingshot or a stick slingshot, depending on your preference and the materials available.  
 ```
 {% endcode %}
-
-
-{% endstep %}
-
-{% step %}
-**Using six specialized API endpoints**, each designed to search for only one specific type of information. These endpoints return structured responses, making them more suitable for integration into specialized services (e.g., a weather widget). Here are the types of information you can retrieve this way:
-
-* [Links](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links)
-* [Images](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images)
-* [Videos](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos)
-* [Weather details for a specified location](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather)
-* [Locations](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map)
-* [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
-
-See API references and examples on the subpages.
-
-
 {% endstep %}
 {% endstepper %}
+

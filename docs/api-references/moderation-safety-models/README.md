@@ -17,7 +17,7 @@ layout:
 
 ## Overview
 
-With our API, you can use content moderation / safety models to classify input content as safe or unsafe instantly.
+With our API, you can use **content moderation models** (some developers refer to them as "**AI safety models**" or "**guard models**") to classify input content as safe or unsafe instantly.
 
 ## Key Features
 
@@ -36,7 +36,7 @@ Content moderation models are perfect for scenarios where content safety is cruc
 ### Quick Example
 
 {% hint style="warning" %}
-Ensure you replace  <kbd>\<YOUR\_API\_KEY></kbd>  with your actual API key and  <kbd>\<YOUR\_MODEL></kbd>  with the actual content moderation model id before running the code.
+Ensure you replace <kbd>\<YOUR\_API\_KEY></kbd> with your actual API key and <kbd>\<YOUR\_MODEL></kbd> with the actual content moderation model id before running the code.
 {% endhint %}
 
 {% tabs %}
@@ -80,7 +80,7 @@ def main():
             }
         ]
     }
-    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
 
     response = requests.post(url, json=payload, headers=headers).json()
     print(response['choices'][0]['message']['content'])
