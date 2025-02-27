@@ -1,5 +1,6 @@
 {
   "title": "Generate an mesh base on an image",
+  "docs": "https://docs.aimlapi.com/api-references/3d-generating-models",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v1",
     "apiKey": "<YOUR_API_KEY>",
