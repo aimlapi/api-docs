@@ -42,8 +42,8 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [video-models](api-references/video-models/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="api-references/music-models/" %}
+[music-models](api-references/music-models/)
 {% endcontent-ref %}
 
 {% content-ref url="api-references/speech-models/" %}
@@ -54,16 +54,16 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [web-search-models](api-references/web-search-models/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="api-references/moderation-safety-models/" %}
+[moderation-safety-models](api-references/moderation-safety-models/)
 {% endcontent-ref %}
 
 {% content-ref url="api-references/3d-generating-models/" %}
 [3d-generating-models](api-references/3d-generating-models/)
+{% endcontent-ref %}
+
+{% content-ref url="api-references/vision-models/" %}
+[vision-models](api-references/vision-models/)
 {% endcontent-ref %}
 
 {% content-ref url="api-references/embedding-models/" %}

@@ -1,5 +1,6 @@
 {
   "title": "Fetch a video",
+  "docs": "https://docs.aimlapi.com/api-references/video-models/minimax",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v2",
     "apiKey": "<YOUR_API_KEY>"
