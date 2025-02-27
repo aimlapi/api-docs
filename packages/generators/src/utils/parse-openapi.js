@@ -1,7 +1,6 @@
 const _ = require('lodash');
 const { ALIAS_MAP, MODELS_TO_ALIAS_MAP } = require('../templates');
 
-const aliasesMap = {}
 
 const extractModels = (schema, schemaById) => {
   if (schema.properties?.model?.enum) {
@@ -144,9 +143,11 @@ const parseOpenapi = (openapi, fetchedModels) => {
       if (pairData.has) {        
         const operation = openapi.paths[pairData.path][pairData.method];
 
-        const refId = openapi.paths[pairData.path][method].requestBody?.content?.['application/json']?.schema?.$ref
+        const refId = (pairData.method === 'post'
+          ? openapi.paths[pairData.path][pairData.method].requestBody?.content?.['application/json']?.schema?.$ref
+          : openapi.paths[pairData.path][pairData.method].parameters[0]?.schema?.$ref)
           .split('/')
-          .at(-1);
+          .at(-1);      
         const schema = schemaById[refId];
         pairData.operation = operation
         pairData.schema = schema
@@ -185,20 +186,22 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         if (pairData.has) {
           const unionPair = extractUnion(model, pairData.schema, schemaById);
-          // console.log(`modle name - ${model}: `, pairData.schema)
+
           const transformedPair = {
             paths: {
               [pairData.path]: {
                 [pairData.method]: {
                   ...pairData.operation,
-                  requestBody: {
-                    ...pairData.operation.requestBody,
-                    content: {
-                      ['application/json']: {
-                        schema: unionPair,
+                  ...(pairData.method === 'post' && {
+                    requestBody: {
+                      ...pairData.operation.requestBody,
+                      content: {
+                        'application/json': {
+                          schema: unionPair,
+                        },
                       },
                     },
-                  },
+                  }),
                 },
               },
             },
