@@ -12,7 +12,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./flux-schnell.json" path="/v1/images/generations/with-url" method="post" %}
+{% swagger src="./flux-schnell.json" path="/v1/images/generations" method="post" %}
 ./flux-schnell.json
 {% endswagger %}
 

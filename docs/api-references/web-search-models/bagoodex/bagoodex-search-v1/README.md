@@ -94,7 +94,9 @@ You can choose to make either a giant slingshot or a stick slingshot, depending 
 * [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
 
 See API references and examples on the subpages.
-
+{% swagger src="../bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
+../bagoodex-search-v1.json
+{% endswagger %}
 
 {% endstep %}
 {% endstepper %}

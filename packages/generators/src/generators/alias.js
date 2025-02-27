@@ -39,6 +39,7 @@ class AliasPageGenerator extends PageGenerator {
             url: `./${aliastToPAth}.json`,
             alias: model.alias,
             model: model.name,
+            reverse: path === '/v2/generate/audio/minimax/generate' && pair.has,
             models: ALIAS_MAP[model.alias].sort((a, b) => a.localeCompare(b)),
             description: model.description,
             path,

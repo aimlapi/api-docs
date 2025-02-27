@@ -83,6 +83,11 @@ const EXCEPTIONS_PAIR_MAP = {
   '/v2/generate/audio/minimax/upload': '/v2/generate/audio/minimax/generate',
   '/v2/generate/audio/minimax/generate': '/v2/generate/audio/minimax/upload'
 };
+const EXCEPTION_PATH = [
+  '/images/generations/with-url',
+  '/v1/images/generations/with-url',
+]
+
 const parseOpenapi = (openapi, fetchedModels) => {
   for (const model of fetchedModels) {
     if (ALIAS_MAP[model.alias]) {
@@ -98,6 +103,10 @@ const parseOpenapi = (openapi, fetchedModels) => {
   const schemaById = openapi.components.schemas;
 
   for (const path in openapi.paths) {
+    if(EXCEPTION_PATH.includes(path)){
+      console.log('EXCEPTION_PATH', path)
+      continue;
+    }
     for (const method in openapi.paths[path]) {
       if (method !== 'post') {
         continue;
@@ -120,6 +129,8 @@ const parseOpenapi = (openapi, fetchedModels) => {
       // Some models require two requests to be displayed on the page. Typically these are get and post requests. Exceptions are entered separately in EXCEPTIONS_PAIR_MAP.
       if (EXCEPTIONS_PAIR_MAP[path] || (openapi.paths[path]['get'] && (path.includes('/generate/audio') || path.includes('/generate/video')) && version)) {
         if(EXCEPTIONS_PAIR_MAP[path]) {
+          // EXCEPTION_PATH.push(EXCEPTIONS_PAIR_MAP[path])
+          // console.log('EXCEPTION_PATH', EXCEPTION_PATH)
           pairs[path] = EXCEPTIONS_PAIR_MAP[path]
           pairData.has = true
           pairData.method = 'post'
