@@ -94,20 +94,9 @@ You can choose to make either a giant slingshot or a stick slingshot, depending 
 * [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
 
 See API references and examples on the subpages.
-
-{% swagger src="./bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
-./bagoodex-search-v1.json
-{% endswagger %}
-{% swagger src="https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/chat/completions" method="post" %}
-[https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
-test1
-{% swagger src="https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29" models="bagoodex/bagoodex-search-v1" path="/v1/chat/completions" method="post" %}
-[https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
 {% endstep %}
-
 {% endstepper %}
+## API Schema
 {% swagger src="../bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
 ../bagoodex-search-v1.json
 {% endswagger %}
