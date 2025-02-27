@@ -12,12 +12,12 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
-./music-01.json
-{% endswagger %}
-
 {% swagger src="./music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
 ./music-01-pair.json
+{% endswagger %}
+
+{% swagger src="./music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
+./music-01.json
 {% endswagger %}
 
 [#references:end]: <> ({})
