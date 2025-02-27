@@ -33,7 +33,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./nova-2.json" path="/v1/stt" method="post" %}
+{% swagger src="./nova-2.json" path="/v1/stt/create" method="post" %}
 ./nova-2.json
 {% endswagger %}
 

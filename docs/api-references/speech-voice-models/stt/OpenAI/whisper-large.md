@@ -14,7 +14,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 # Submit a request
 ## API Schema
-{% swagger src="./whisper-large.json" path="/v1/stt" method="post" %}
+{% swagger src="./whisper-large.json" path="/v1/stt/create" method="post" %}
 ./whisper-large.json
 {% endswagger %}
 

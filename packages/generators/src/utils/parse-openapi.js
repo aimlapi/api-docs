@@ -138,7 +138,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
       if (pairData.has) {        
         const operation = openapi.paths[pairData.path][pairData.method];
 
-        const refId = openapi.paths[path][method].requestBody?.content?.['application/json']?.schema?.$ref
+        const refId = openapi.paths[pairData.path][method].requestBody?.content?.['application/json']?.schema?.$ref
           .split('/')
           .at(-1);
         const schema = schemaById[refId];
