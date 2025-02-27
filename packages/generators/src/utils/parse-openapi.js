@@ -31,10 +31,6 @@ const extractUnion = (model, schema, schemaById) => {
   if (schema.properties?.model?.enum) {
     if (schema.properties.model.enum.includes(model)) {
       const cloned = _.cloneDeep(schema);
-      if(MODELS_TO_ALIAS_MAP[model]?.alias === 'gpt-4o'){
-        console.log(`modles - ${model}:`, ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias])
-        console.log(`modles - ${model}:`, {...cloned.properties.model})
-      }
 
       cloned.properties = {
         ...cloned.properties,
@@ -69,6 +65,11 @@ const extractUnion = (model, schema, schemaById) => {
 
   if (schema.$ref) {
     return extractUnion(model, schemaById[schema.$ref.split('/').at(-1)], schemaById);
+  }
+
+
+  if (schema.properties?.purpose) {
+   return schema
   }
 
   return null;
