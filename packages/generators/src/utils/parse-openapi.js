@@ -35,9 +35,10 @@ const extractUnion = (model, schema, schemaById) => {
         console.log(`modles - ${model}:`, ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias])
         console.log(`modles - ${model}:`, {...cloned.properties.model})
       }
+
       cloned.properties = {
-        model: { enum: MODELS_TO_ALIAS_MAP[model]?.alias ? ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias] : [model] },
         ...cloned.properties,
+        model: { enum: MODELS_TO_ALIAS_MAP[model]?.alias ? ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias] : [model] },
       };
 
       return cloned;
