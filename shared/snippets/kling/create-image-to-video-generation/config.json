@@ -1,6 +1,6 @@
 {
   "title": "Generate a video",
-  "docs": "https://docs.aimlapi.com/api-overview/video-models/kling/generate-image-to-video",
+  "docs": "https://docs.aimlapi.com/api-references/video-models/kling-ai",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v2",
     "apiKey": "<YOUR_API_KEY>"

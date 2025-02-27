@@ -1,6 +1,6 @@
 {
   "title": "Get found images",
-  "docs": "https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1",
+  "docs": "https://docs.aimlapi.com/api-references/web-search-models",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v1",
     "apiKey": "<YOUR_API_KEY>"

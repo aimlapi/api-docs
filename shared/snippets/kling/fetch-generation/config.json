@@ -1,6 +1,6 @@
 {
   "title": "Fetch a video",
-  "docs": "https://docs.aimlapi.com/api-overview/video-models/kling/fetch-generation",
+  "docs": "https://docs.aimlapi.com/api-references/video-models/kling-ai",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v2",
     "apiKey": "<YOUR_API_KEY>"
