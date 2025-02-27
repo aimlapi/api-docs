@@ -31,7 +31,19 @@ See API references and examples on the subpages.
 {% endstep %}
 
 {% step %}
-**As a regular chat completion model** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. Check how this call is made in the Python example:
+**As a regular chat completion model** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. See the parameters for this usage option in the API schema below. You'll also find an example of calling this API in code at the bottom of the page.
+{% endstep %}
+{% endstepper %}
+
+## API Schema
+
+{% openapi src="../bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
+[bagoodex-search-v1.json](../bagoodex-search-v1.json)
+{% endopenapi %}
+
+## Example
+
+Check how this call is made in the Python example:
 
 ```python
 import requests
@@ -68,7 +80,9 @@ def complete_chat():
 complete_chat()
 ```
 
-**Response**:
+<details>
+
+<summary><strong>Response</strong></summary>
 
 {% code overflow="wrap" %}
 ```
@@ -92,23 +106,6 @@ To make a slingshot, you can follow the instructions provided in the two sources
 You can choose to make either a giant slingshot or a stick slingshot, depending on your preference and the materials available.  
 ```
 {% endcode %}
-{% endstep %}
-{% endstepper %}
 
-{% step %}
-**Using six specialized API endpoints**, each designed to search for only one specific type of information. These endpoints return structured responses, making them more suitable for integration into specialized services (e.g., a weather widget). Here are the types of information you can retrieve this way:
+</details>
 
-* [Links](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-links)
-* [Images](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-images)
-* [Videos](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-videos)
-* [Weather details for a specified location](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-the-weather)
-* [Locations](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/find-a-local-map)
-* [Knowledge about a topic, structured as a small knowledge base](https://docs.aimlapi.com/api-overview/web-search-models/bagoodex/bagoodex-bagoodex-search-v1/get-a-knowledge-structure)
-
-See API references and examples on the subpages.
-{% endstep %}
-{% endstepper %}
-## API Schema
-{% swagger src="../bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
-../bagoodex-search-v1.json
-{% endswagger %}
