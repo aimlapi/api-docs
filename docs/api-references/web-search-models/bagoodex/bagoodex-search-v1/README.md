@@ -106,10 +106,8 @@ test1
 [https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-json?key=2b878a3c71a785f13366e9be96bacb29)
 {% endswagger %}
 {% endstep %}
-{% swagger src="./bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
-./bagoodex-search-v1.json
-{% endswagger %}
+
 {% endstepper %}
-{% swagger src="./bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
-./bagoodex-search-v1.json
+{% swagger src="../bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
+../bagoodex-search-v1.json
 {% endswagger %}
