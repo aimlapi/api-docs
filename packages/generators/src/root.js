@@ -111,10 +111,10 @@ const jsonModify = (data, args) => {
     savePair(alias, cloned)
   }
   // changing the list of models
-  if (ALIAS_MAP[alias]) {
-    if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
-      data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-  }
+  // if (ALIAS_MAP[alias]) {
+  //   if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
+  //     data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+  // }
   
   return data.schema
 }
@@ -130,10 +130,10 @@ const jsonModifyForPair = (data, args) => {
     const key = Object.keys(data.pair.schema.paths)[0]
     const alias = args[args.plugins[0].id].tags.at(-1)
 
-    if (ALIAS_MAP[alias]) {
-      if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
-        data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-    }
+    // if (ALIAS_MAP[alias]) {
+    //   if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
+    //     data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+    // }
     
     return data.pair.schema
   }
@@ -141,10 +141,10 @@ const jsonModifyForPair = (data, args) => {
   const key = Object.keys(data.schema.paths)[0]
   const alias = args[args.plugins[0].id].tags.at(-1)
 
-  if (ALIAS_MAP[alias]) {
-    if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
-      data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-  }
+  // if (ALIAS_MAP[alias]) {
+  //   if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
+  //     data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
+  // }
   
   return data.schema
 }

@@ -31,9 +31,13 @@ const extractUnion = (model, schema, schemaById) => {
   if (schema.properties?.model?.enum) {
     if (schema.properties.model.enum.includes(model)) {
       const cloned = _.cloneDeep(schema);
+      if(MODELS_TO_ALIAS_MAP[model]?.alias === 'gpt-4o'){
+        console.log(`modles - ${model}:`, ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias])
+        console.log(`modles - ${model}:`, {...cloned.properties.model})
+      }
       cloned.properties = {
+        model: { enum: MODELS_TO_ALIAS_MAP[model]?.alias ? ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias] : [model] },
         ...cloned.properties,
-        model: { ...cloned.properties.model, enum: aliasesMap[model] ? aliasesMap[model] : [model] },
       };
 
       return cloned;
@@ -179,7 +183,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         if (pairData.has) {
           const unionPair = extractUnion(model, pairData.schema, schemaById);
-  
+          // console.log(`modle name - ${model}: `, pairData.schema)
           const transformedPair = {
             paths: {
               [pairData.path]: {
