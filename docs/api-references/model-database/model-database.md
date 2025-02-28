@@ -1134,7 +1134,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
             <td><a href="../3d-generating-models/Stability-AI/triposr.md">triposr</a></td>
             <td>Tripo AI</td>
             <td></td>
-            <td><a href="https://aimlapi.com/models/stable-tripo-sr-api" target="_blank">Stable TripoSR 3D</a></td>
+            <td style="width: 45%;"><a href="https://aimlapi.com/models/stable-tripo-sr-api" target="_blank">Stable TripoSR 3D</a></td>
           </tr>
       </tbody>
     </table>
