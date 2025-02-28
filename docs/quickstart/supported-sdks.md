@@ -49,7 +49,7 @@ Because we support the OpenAI API structure, our API can be used with the same e
 AI/ML API authorization is based on a Bearer token. You need to include it in the `Authorization` HTTP header within the request, on example:
 
 ```http
-Authorization: Bearer my_key
+Authorization: Bearer <YOUR_AIMLAPI_KEY>
 ```
 
 ### Request Example
@@ -62,7 +62,7 @@ When your token is ready you can call our API through HTTP.
 fetch("https://api.aimlapi.com/chat/completions", {
   method: "POST",
   headers: {
-    Authorization: "Bearer my_key",
+    Authorization: "Bearer <YOUR_AIMLAPI_KEY>",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
@@ -90,7 +90,7 @@ import json
 response = requests.post(
     url="https://api.aimlapi.com/chat/completions",
     headers={
-        "Authorization": "Bearer abc_api_key_xyz",
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
     data=json.dumps(
@@ -117,7 +117,7 @@ print(response.json())
 ```ruby
 curl --request POST \
   --url https://api.aimlapi.com/chat/completions \
-  --header 'Authorization: Bearer abc_api_key_xyz' \
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
   --header 'Content-Type: application/json' \
   --data '{
     "model": "gpt-4o",

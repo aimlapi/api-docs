@@ -22,7 +22,7 @@ Our API features the capability to generate audio. With this API, you can create
 
 ## Quick Code Example
 
-Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](https://docs.aimlapi.com/api-overview/audio-models-music-and-vocal/minimax-music-legacy) from MiniMax.
+Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](MiniMax/minimax-music-\[legacy].md) from MiniMax.
 
 <details>
 
