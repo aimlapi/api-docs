@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { ALIAS_MAP, MODELS_TO_ALIAS_MAP } = require('../templates');
+const { ALIAS_MAP, MODELS_TO_ALIAS_MAP, CATEGORY_SET } = require('../templates');
 
 
 const extractModels = (schema, schemaById) => {
@@ -96,6 +96,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
       ALIAS_MAP[model.alias] = [model.name];
     }
     MODELS_TO_ALIAS_MAP[model.name] = {alias: model.alias, path: '', category: model.category, offsite_name: model.offsite_name};
+    CATEGORY_SET.add(model.category)
   }
   
   const byModel = {};

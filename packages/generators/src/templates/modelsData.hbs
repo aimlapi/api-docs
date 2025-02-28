@@ -7,22 +7,22 @@
       <table border="1">
         <thead>
           <tr>
-            <th>Model ID</th>
-            <th>Developer</th>
-            <th>Context</th>
-            <th>Model Card</th>
+            <th style="width: 200px;">Model ID</th>
+            <th style="width: 150px;">Developer</th>
+            <th style="width: 100px;">Context</th>
+            <th style="width: 300px;">Model Card</th>
           </tr>
         </thead>
         <tbody>
            {{#each (lookup .. this.key)}}
             <tr>
-              <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
-              <td>{{this.developer}}</td>
-              <td>{{this.context}}</td>
+              <td style="width: 200px;"><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+              <td style="width: 150px;">{{this.developer}}</td>
+              <td style="width: 100px;">{{this.context}}</td>
               {{#if this.modelCard}}
-              <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+              <td style="width: 300px;"><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
               {{else}}
-              <td>{{this.modalName}}</td>
+              <td style="width: 300px;">{{this.modalName}}</td>
               {{/if}}
             </tr>
           {{/each}}
@@ -33,22 +33,22 @@
     <table border="1">
       <thead>
         <tr>
-          <th>Model ID</th>
-          <th>Developer</th>
-          <th>Context</th>
-          <th>Model Card</th>
+          <th style="width: 200px;">Model ID</th>
+          <th style="width: 150px;">Developer</th>
+          <th style="width: 100px;">Context</th>
+          <th style="width: 300px;">Model Card</th>
         </tr>
       </thead>
       <tbody>
         {{#each this.models}}
           <tr>
-            <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
-            <td>{{this.developer}}</td>
-            <td>{{this.context}}</td>
+            <td style="width: 200px;"><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+            <td style="width: 150px;">{{this.developer}}</td>
+            <td style="width: 100px;">{{this.context}}</td>
             {{#if this.modelCard}}
-            <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+            <td style="width: 300px;"><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
             {{else}}
-            <td>{{this.modalName}}</td>
+            <td style="width: 300px;">{{this.modalName}}</td>
             {{/if}}
           </tr>
         {{/each}}
