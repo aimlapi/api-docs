@@ -42,1121 +42,198 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 ## Full List of Model IDs
 [#references:start]: <> ({ "template": "modelsData" })
-  <h3>Text Models (LLM)</h3>
-    <table border="1">
-      <thead>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <td style="width: 20%;"><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o</a></td>
-            <td style="width: 20%;">Open AI</td>
-            <td style="width: 15%;">128000</td>
-            <td style="width: 45%;"><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">Chat GPT-4o</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o-2024-08-06</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/gpt-4o-2024-08-06-api" target="_blank">GPT-4o-2024-08-06</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o-2024-05-13</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/gpt-4o-2024-05-13-api" target="_blank">GPT-4o-2024-05-13</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o-mini.md">gpt-4o-mini</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-4o-mini" target="_blank">Chat GPT 4o mini</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o-mini.md">gpt-4o-mini-2024-07-18</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o.md">chatgpt-4o-latest</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4-turbo.md">gpt-4-turbo</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-4-turbo" target="_blank">Chat GPT 4 Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4-turbo.md">gpt-4-turbo-2024-04-09</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4.md">gpt-4</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-4" target="_blank">Chat GPT 4 </a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4-preview.md">gpt-4-0125-preview</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4-preview.md">gpt-4-1106-preview</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo</a></td>
-            <td>Open AI</td>
-            <td>16000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-0125</a></td>
-            <td>Open AI</td>
-            <td>16000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-3.5-turbo.md">gpt-3.5-turbo-1106</a></td>
-            <td>Open AI</td>
-            <td>16000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-3-5-turbo-1106" target="_blank">Chat GPT-3.5 Turbo 1106</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o1-preview.md">o1-preview</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/openai-o1-preview-api" target="_blank">OpenAI o1-preview</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o1-preview.md">o1-preview-2024-09-12</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o1-mini.md">o1-mini</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/openai-o1-mini-api" target="_blank">OpenAI o1-mini</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o1-mini.md">o1-mini-2024-09-12</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o3-mini.md">o3-mini</a></td>
-            <td>Open AI</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/openai-o3-mini-api" target="_blank">OpenAI o3 mini</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/OpenAI/o1.md">o1</a></td>
-            <td>Open AI</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/openai-o1-api" target="_blank">OpenAI o1</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Microsoft/WizardLM-2-8x22B.md">microsoft/WizardLM-2-8x22B</a></td>
-            <td>Microsoft</td>
-            <td>64000</td>
-            <td><a href="https://aimlapi.com/models/wizardlm-2-8-22b" target="_blank">WizardLM 2-8 (22B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md">meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>131000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-2-90b-vision-instruct-turbo-api" target="_blank">Llama 3.2 90B Vision Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemma-2-27b-it.md">google/gemma-2-27b-it</a></td>
-            <td>Google</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/gemma-2-27b" target="_blank">Gemma 2 (27b)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-Vision-Free.md">meta-llama/Llama-Vision-Free</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Gryphe/MythoMax-L2-13b.md">Gryphe/MythoMax-L2-13b</a></td>
-            <td>Gryphe</td>
-            <td>4000</td>
-            <td><a href="https://aimlapi.com/models/mythomax-l2-13b" target="_blank">MythoMax-L2 (13B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/Mixtral-8x22B-Instruct.md">mistralai/Mixtral-8x22B-Instruct-v0.1</a></td>
-            <td>Mistral AI</td>
-            <td>64000</td>
-            <td><a href="https://aimlapi.com/models/mixtral-8x22b-instruct" target="_blank">Mixtral 8x22B Instruct</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2-72B-Instruct.md">Qwen/Qwen2-72B-Instruct</a></td>
-            <td>Qwen</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qwen-2-instruct-72b" target="_blank">Qwen 2 Instruct (72B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md">mistralai/Mixtral-8x7B-Instruct-v0.1</a></td>
-            <td>Mistral AI</td>
-            <td>64000</td>
-            <td><a href="https://aimlapi.com/models/mixtral-8x7b-instruct-v01" target="_blank">Mixtral-8x7B Instruct v0.1</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md">nvidia/Llama-3.1-Nemotron-70B-Instruct-HF</a></td>
-            <td>Nvidia</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-nemotron-70b-instruct-api" target="_blank">Llama 3.1 Nemotron 70B Instruct</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO.md">NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO</a></td>
-            <td>NousResearch</td>
-            <td>32000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md">meta-llama/Llama-3.3-70B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/meta-llama-3-3-70b-instruct-turbo-api" target="_blank">Meta Llama 3.3 70B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Upstage-AI/SOLAR-10.7B-Instruct.md">upstage/SOLAR-10.7B-Instruct-v1.0</a></td>
-            <td>Upstage</td>
-            <td>4000</td>
-            <td><a href="https://aimlapi.com/models/upstage-solar-instruct-v1-11b" target="_blank">Upstage SOLAR Instruct v1 (11B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md">meta-llama/Llama-3.2-3B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>131000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-2-3b-instruct-turbo" target="_blank">Llama 3.2 3B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md">meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>131000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-2-11b-vision-instruct-turbo-api" target="_blank">Llama 3.2 11B Vision Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-2-13b-chat-hf.md">meta-llama/Llama-2-13b-chat-hf</a></td>
-            <td>Meta</td>
-            <td>4100</td>
-            <td><a href="https://aimlapi.com/models/llama-2-chat-13b" target="_blank">LLaMA-2 Chat (13B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md">Qwen/Qwen2.5-7B-Instruct-Turbo</a></td>
-            <td>Qwen</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qwen-2-5-7b-instruct-api" target="_blank">Qwen 2.5 7B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md">Qwen/Qwen2.5-Coder-32B-Instruct</a></td>
-            <td>Qwen</td>
-            <td>131000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Databricks/dbrx-instruct.md">databricks/dbrx-instruct</a></td>
-            <td>Databricks</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/dbrx-instruct" target="_blank">DBRX Instruct</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.md">meta-llama/Meta-Llama-3-8B-Instruct-Lite</a></td>
-            <td>Meta</td>
-            <td>9000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-8b-instruct-lite-api" target="_blank">Llama 3 8B Instruct Lite</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3-chat-hf.md">meta-llama/Llama-3-8b-chat-hf</a></td>
-            <td>Meta</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-8b-instruct-reference-api" target="_blank">Llama 3 8B Instruct Reference</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md">meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-3-chat-hf.md">meta-llama/Llama-3-70b-chat-hf</a></td>
-            <td>Meta</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/meta-llama-3-70b-instruct" target="_blank">Llama 3 70B Instruct Reference</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo.md">Qwen/Qwen2.5-72B-Instruct-Turbo</a></td>
-            <td>Qwen</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qwen-2-5-72b-instruct-turbo" target="_blank">Qwen 2.5 72B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md">meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>4000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-405b-api" target="_blank">Llama 3.1 (405B) Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md">meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-8b-api" target="_blank">Llama 3.1 8B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md">meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-70b-instruct-turbo-api" target="_blank">Llama 3.1 70B Instruct Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemma-2b-it.md">google/gemma-2b-it</a></td>
-            <td>Google</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/gemma-instruct-2b" target="_blank">Gemma Instruct (2B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/Mistral-7B-Instruct.md">mistralai/Mistral-7B-Instruct-v0.2</a></td>
-            <td>Mistral AI</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/mistral-7b-instruct-v02" target="_blank">Mistral (7B) Instruct v0.2</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/Mistral-7B-Instruct.md">mistralai/Mistral-7B-Instruct-v0.1</a></td>
-            <td>Mistral AI</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/mistral-7b-instruct" target="_blank">Mistral (7B) Instruct v0.1</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/Mistral-7B-Instruct.md">mistralai/Mistral-7B-Instruct-v0.3</a></td>
-            <td>Mistral AI</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/mistral-7b-instruct-v0-3" target="_blank">Mistral (7B) Instruct v0.3</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Turbo.md">meta-llama/Meta-Llama-3-70B-Instruct-Turbo</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Lite.md">meta-llama/Meta-Llama-3-70B-Instruct-Lite</a></td>
-            <td>Meta</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-70b-instruct-lite-api" target="_blank">Llama 3 70B Instruct Lite</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemma-2-9b-it.md">google/gemma-2-9b-it</a></td>
-            <td>Google</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/gemma-2-9b" target="_blank">Gemma 2 (9B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md">Gryphe/MythoMax-L2-13b-Lite</a></td>
-            <td>Gryphe</td>
-            <td>4000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Meta/Llama-2-7b-chat-hf.md">meta-llama/Llama-2-7b-chat-hf</a></td>
-            <td>Meta</td>
-            <td>4000</td>
-            <td><a href="https://aimlapi.com/models/llama-2-chat-7b" target="_blank">LLaMA-2 Chat (7B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-opus.md">claude-3-opus-20240229</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-opus" target="_blank">Claude 3 Opus</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-sonnet.md">claude-3-sonnet-20240229</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-sonnet" target="_blank">Claude 3 Sonnet</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-haiku.md">claude-3-haiku-20240307</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-5-sonnet.md">claude-3-5-sonnet-20240620</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-5-sonnet.md">claude-3-5-sonnet-20241022</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-5-sonnet" target="_blank">Claude 3.5 Sonnet 20241022</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-5-haiku.md">claude-3-5-haiku-20241022</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthropic/claude-3-7-sonnet.md">claude-3-7-sonnet-20250219</a></td>
-            <td>Anthropic</td>
-            <td>200000</td>
-            <td><a href="https://aimlapi.com/models/claude-3-7-sonnet-api" target="_blank">Claude 3.7 Sonnet</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemini-1.5-flash.md">gemini-1.5-flash</a></td>
-            <td>Google</td>
-            <td>1000000</td>
-            <td><a href="https://aimlapi.com/models/gemini-1-5-flash-api" target="_blank">Gemini 1.5 Flash</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemini-1.5-pro.md">gemini-1.5-pro</a></td>
-            <td>Google</td>
-            <td>1000000</td>
-            <td><a href="https://aimlapi.com/models/gemini-1-5-pro-api" target="_blank">Gemini 1.5 Pro</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemini-pro.md">gemini-pro</a></td>
-            <td>Google</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/gemini-1-0-pro-api" target="_blank">Gemini 1.0 Pro</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Google/gemini-2.0-flash-exp.md">gemini-2.0-flash-exp</a></td>
-            <td>Google</td>
-            <td>1000000</td>
-            <td><a href="https://aimlapi.com/models/gemini-2-0-flash-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/qwen-max.md">qwen-max</a></td>
-            <td>Alibaba Cloud</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qwen-max-api" target="_blank">Qwen Max</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/qwen-plus.md">qwen-plus</a></td>
-            <td>Alibaba Cloud</td>
-            <td>131000</td>
-            <td><a href="https://aimlapi.com/models/qwen-plus-api" target="_blank">Qwen Plus</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/qwen-turbo.md">qwen-turbo</a></td>
-            <td>Alibaba Cloud</td>
-            <td>1000000</td>
-            <td><a href="https://aimlapi.com/models/qwen-turbo-api" target="_blank">Qwen Turbo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/qwen-max.md">qwen-max-2025-01-25</a></td>
-            <td>Alibaba Cloud</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qwen-max-2025-01-25-api" target="_blank">Qwen Max 2025-01-25</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/mistral-tiny.md">mistralai/mistral-tiny</a></td>
-            <td>Mistral AI</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/mistral-tiny-api" target="_blank">Mistral Tiny</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/xAI/grok-beta.md">x-ai/grok-beta</a></td>
-            <td>X AI</td>
-            <td>131000</td>
-            <td><a href="https://aimlapi.com/models/grok-2-beta-api" target="_blank">Grok-2 Beta</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/mistral-nemo.md">mistralai/mistral-nemo</a></td>
-            <td>Mistral AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/mistral-nemo-api" target="_blank">Mistral Nemo</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/NeverSleep/llama-3.1-lumimaid.md">neversleep/llama-3.1-lumimaid-70b</a></td>
-            <td>Open Source</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-lumimaid-70b-api" target="_blank">Llama 3.1 Lumimaid 70b</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Anthracite/magnum-v4.md">anthracite-org/magnum-v4-72b</a></td>
-            <td>Anthracite</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/magnum-v4-72b-api" target="_blank">Magnum v4 72B</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/NVIDIA/llama-3.1-nemotron-70b.md">nvidia/llama-3.1-nemotron-70b-instruct</a></td>
-            <td>Nvidia</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/llama-3-1-nemotron-70b-instruct-api" target="_blank">Llama 3.1 Nemotron 70B Instruct</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Cohere/command-r-plus.md">cohere/command-r-plus</a></td>
-            <td>Cohere</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/command-r-api" target="_blank">Command R+</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/AI21-Labs/jamba-1-5-mini.md">ai21/jamba-1-5-mini</a></td>
-            <td>AI21 Labs</td>
-            <td>256000</td>
-            <td><a href="https://aimlapi.com/models/jamba-1-5-mini-api" target="_blank">Jamba 1.5 Mini</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Alibaba-Cloud/qvq-72b-preview.md">qwen/qvq-72b-preview</a></td>
-            <td>Qwen</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/qvq-72b-preview-api" target="_blank">QVQ-72B-Preview</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/Mistral-AI/codestral-2501.md">mistralai/codestral-2501</a></td>
-            <td>Mistral AI</td>
-            <td>256000</td>
-            <td><a href="https://aimlapi.com/models/mistral-codestral-2501-api" target="_blank">Mistral Codestral-2501</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/MiniMax/text-01.md">MiniMax-Text-01</a></td>
-            <td>Minimax AI</td>
-            <td>1000000</td>
-            <td><a href="https://aimlapi.com/models/minimax-text-01-api" target="_blank">MiniMax-Text-01</a></td>
-          </tr>
-          <tr>
-            <td><a href="../text-models-llm/MiniMax/abab6.5s-chat.md">abab6.5s-chat</a></td>
-            <td>Minimax AI</td>
-            <td>245000</td>
-            <td>-</td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Image Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../image-models/OpenAI/dall-e-3.md">dall-e-3</a></td>
-            <td>Open AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/openai-dall-e-3" target="_blank">OpenAI DALL·E 3</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/OpenAI/dall-e-2.md">dall-e-2</a></td>
-            <td>Open AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/openai-dall-e-2-api" target="_blank">OpenAI DALL·E 2</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Stability-AI/stable-diffusion-xl-base-1.0.md">stabilityai/stable-diffusion-xl-base-1.0</a></td>
-            <td>Stability AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/stable-diffusion-xl-1-0" target="_blank">Stable Diffusion XL 1.0</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Google/imagen-3.0.md">imagen-3.0-generate-002</a></td>
-            <td>Google</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/imagen-3-api" target="_blank">Imagen 3</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-schnell.md">flux/schnell</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-schnell-api" target="_blank">FLUX.1 [schnell]</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-pro.md">flux-pro</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-pro-api" target="_blank">FLUX.1 [pro]</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-pro.md">flux-pro/v1.1</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-1-pro-api" target="_blank">FLUX 1.1 [pro]</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-pro-v1.1-ultra.md">flux-pro/v1.1-ultra</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-1-pro-ultra-api" target="_blank">FLUX 1.1 [pro ultra]</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-dev.md">flux/dev</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-1-dev-api" target="_blank">FLUX.1 [dev]</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-dev-image-to-image.md">flux/dev/image-to-image</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Stability-AI/stable-diffusion-v3-medium.md">stable-diffusion-v3-medium</a></td>
-            <td>Stability AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/stable-diffusion-3-api" target="_blank">Stable Diffusion 3</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Stability-AI/stable-diffusion-v35-large.md">stable-diffusion-v35-large</a></td>
-            <td>Stability AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/stable-diffusion-3-5-large-api" target="_blank">Stable Diffusion 3.5 Large</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/Black-Forest-Labs/flux-realism.md">flux-realism</a></td>
-            <td>Flux</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/flux-realism-lora-api" target="_blank">FLUX Realism LoRA</a></td>
-          </tr>
-          <tr>
-            <td><a href="../image-models/RecraftAI/recraft-v3.md">recraft-v3</a></td>
-            <td>Recraft AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/recraft-v3" target="_blank">Recraft v3</a></td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Video Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1-standard-image-to-video.md">kling-video/v1/standard/image-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-ai-image-to-video" target="_blank">Kling AI (image-to-video)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1-standard-text-to-video.md">kling-video/v1/standard/text-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-ai-text-to-video-api" target="_blank">Kling AI (text-to-video)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1-pro-image-to-video.md">kling-video/v1/pro/image-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-ai-image-to-video" target="_blank">Kling AI (image-to-video)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1-pro-text-to-video.md">kling-video/v1/pro/text-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-ai-text-to-video-api" target="_blank">Kling AI (text-to-video)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1.6-standard-text-to-video.md">kling-video/v1.6/standard/text-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-1-6-standard" target="_blank">Kling 1.6 Standard</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1.6-standart-image-to-video.md">kling-video/v1.6/standard/image-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-1-6-standard" target="_blank">Kling 1.6 Standart</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Kling-AI/v1.6-pro-image-to-video.md">kling-video/v1.6/pro/image-to-video</a></td>
-            <td>Kling AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/kling-1-6-pro-api" target="_blank">Kling 1.6 Pro</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/MiniMax/video-01.md">video-01</a></td>
-            <td>Minimax AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/minimax-video-01-api" target="_blank">MiniMax Video-01</a></td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/MiniMax/video-01-live2d.md">video-01-live2d</a></td>
-            <td>Minimax AI</td>
-            <td></td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../video-models/Runway/gen3a_turbo.md">gen3a_turbo</a></td>
-            <td>Runway ML</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/runway-gen-3-turbo" target="_blank">Runway Gen-3 turbo</a></td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Embedding Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../embedding-models/OpenAI/text-embedding-3-small.md">text-embedding-3-small</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/OpenAI/text-embedding-3-large.md">text-embedding-3-large</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/text-embedding-3-large" target="_blank">Text-embedding-3-large</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/OpenAI/text-embedding-ada-002.md">text-embedding-ada-002</a></td>
-            <td>Open AI</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/text-embedding-ada-002" target="_blank">Text-embedding-ada-002</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-32k-retrieval</a></td>
-            <td>Together AI</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/m2-bert-retrieval-32k" target="_blank">M2-BERT-Retrieval-32k</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/BAAI/bge-base-en.md">BAAI/bge-base-en-v1.5</a></td>
-            <td>BAAI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/baai-bge-base-1p5" target="_blank">BAAI-Bge-Base-1p5</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-2k-retrieval</a></td>
-            <td>Together AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/m2-bert-retrieval-2k" target="_blank">M2-BERT-Retrieval-2K</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/BAAI/bge-large-en.md">BAAI/bge-large-en-v1.5</a></td>
-            <td>BAAI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/baai-bge-large-1p5" target="_blank">bge-large-en</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-8k-retrieval</a></td>
-            <td>Together AI</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/m2-bert-retrieval-8k" target="_blank">M2-BERT-Retrieval-8k</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-large-2-instruct.md">voyage-large-2-instruct</a></td>
-            <td>Anthropic</td>
-            <td>16000</td>
-            <td><a href="https://aimlapi.com/models/voyage-large-2-instruct-api" target="_blank">Voyage Large 2 Instruct</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-finance-2.md">voyage-finance-2</a></td>
-            <td>Anthropic</td>
-            <td>32000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-multilingual-2.md">voyage-multilingual-2</a></td>
-            <td>Anthropic</td>
-            <td>32000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-law-2.md">voyage-law-2</a></td>
-            <td>Anthropic</td>
-            <td>16000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-code-2.md">voyage-code-2</a></td>
-            <td>Anthropic</td>
-            <td>16000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-large-2.md">voyage-large-2</a></td>
-            <td>Anthropic</td>
-            <td>16000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Anthropic/voyage-2.md">voyage-2</a></td>
-            <td>Anthropic</td>
-            <td>4000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@001</a></td>
-            <td>Google</td>
-            <td>3000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko@003</a></td>
-            <td>Google</td>
-            <td>2000</td>
-            <td><a href="https://aimlapi.com/models/textembedding-gecko-003-api" target="_blank">Textembedding-gecko@003</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Google/textembedding-gecko.md">textembedding-gecko-multilingual@001</a></td>
-            <td>Google</td>
-            <td>2000</td>
-            <td><a href="https://aimlapi.com/models/textembedding-gecko-multilingual-001-api" target="_blank">Textembedding-gecko-multilingual@001</a></td>
-          </tr>
-          <tr>
-            <td><a href="../embedding-models/Google/text-multilingual-embedding-002.md">text-multilingual-embedding-002</a></td>
-            <td>Google</td>
-            <td>2000</td>
-            <td>-</td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Voice/Speech Models</h3>
-      <h4>Text-to-Speech</h4>
-      <table border="1">
-        <thead>
-           <colgroup>
-            <tr>
-              <th style="width: 20%;">Model ID</th>
-              <th style="width: 20%;">Developer</th>
-              <th style="width: 15%;">Context</th>
-              <th style="width: 45%;">Model Card</th>
-            </tr>
-          </colgroup>
-        </thead>
-        <tbody>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-asteria-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-hera-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-luna-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-stella-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-athena-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-zeus-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-orion-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-arcas-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-perseus-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-angus-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-orpheus-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/tts/Deepgram/aura.md">#g1_aura-helios-en</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/aura" target="_blank">Aura</a></td>
-            </tr>
-        </tbody>
-      </table>
-      <h4>Speech-to-Text</h4>
-      <table border="1">
-        <thead>
-           <colgroup>
-            <tr>
-              <th style="width: 20%;">Model ID</th>
-              <th style="width: 20%;">Developer</th>
-              <th style="width: 15%;">Context</th>
-              <th style="width: 45%;">Model Card</th>
-            </tr>
-          </colgroup>
-        </thead>
-        <tbody>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-general</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-meeting</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-phonecall</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-voicemail</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-finance</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-conversationalai</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-video</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-medical</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-drivethru</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-automotive</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/deepgram-nova-2" target="_blank">Deepgram Nova-2</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/OpenAI/whisper-large.md">#g1_whisper-large</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td><a href="https://aimlapi.com/models/whisper" target="_blank">Whisper</a></td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/OpenAI/whisper-medium.md">#g1_whisper-medium</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/OpenAI/whisper-small.md">#g1_whisper-small</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/OpenAI/whisper-tiny.md">#g1_whisper-tiny</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td><a href="../speech-voice-models/stt/OpenAI/whisper-base.md">#g1_whisper-base</a></td>
-              <td>Deepgram</td>
-              <td></td>
-              <td>-</td>
-            </tr>
-        </tbody>
-      </table>
-  <h3>Music Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../music-models/Stability-AI/stable-audio.md">stable-audio</a></td>
-            <td>Stability AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/stable-audio" target="_blank">Stable Audio</a></td>
-          </tr>
-          <tr>
-            <td><a href="../music-models/MiniMax/minimax-music-[legacy].md">minimax-music</a></td>
-            <td>Minimax AI</td>
-            <td></td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../music-models/MiniMax/music-01.md">music-01</a></td>
-            <td>Minimax AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/minimax-music-api" target="_blank">MiniMax Music</a></td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Content Moderation Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../moderation-safety-models/Meta/Llama-Guard-7b.md">Meta-Llama/Llama-Guard-7b</a></td>
-            <td>Meta</td>
-            <td>4000</td>
-            <td><a href="https://aimlapi.com/models/llama-guard-7b" target="_blank">Llama Guard (7B)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td>
-            <td>Meta</td>
-            <td>128000</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td><a href="../moderation-safety-models/Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td>
-            <td>Meta</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/llama-guard-2-8b" target="_blank">LlamaGuard 2 (8b)</a></td>
-          </tr>
-          <tr>
-            <td><a href="../moderation-safety-models/Meta/Meta-Llama-Guard-3-8B.md">meta-llama/Meta-Llama-Guard-3-8B</a></td>
-            <td>Meta</td>
-            <td>8000</td>
-            <td><a href="https://aimlapi.com/models/llama-guard-3-8b" target="_blank">Llama Guard 3 (8B)</a></td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>3D-Generating Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../3d-generating-models/Stability-AI/triposr.md">triposr</a></td>
-            <td>Tripo AI</td>
-            <td></td>
-            <td><a href="https://aimlapi.com/models/stable-tripo-sr-api" target="_blank">Stable TripoSR 3D</a></td>
-          </tr>
-      </tbody>
-    </table>
-  <h3>Web Search Models</h3>
-    <table border="1">
-      <thead>
-         <colgroup>
-          <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
-          </tr>
-        </colgroup>
-      </thead>
-      <tbody>
-          <tr>
-            <td><a href="../web-search-models/Bagoodex/bagoodex-search-v1.md">bagoodex/bagoodex-search-v1</a></td>
-            <td>Bagoodex</td>
-            <td>32000</td>
-            <td><a href="https://aimlapi.com/models/bagoodex-search-v1-api" target="_blank">Bagoodex Web Search v1</a></td>
-          </tr>
-      </tbody>
-    </table>
+###Text Models (LLM)
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../text-models-llm/OpenAI/gpt-4o](gpt-4o) | Open AI   | 128000   | [https://aimlapi.com/models/chat-gpt-4-omni](Chat GPT-4o)  |
+|  [../text-models-llm/OpenAI/gpt-4o](gpt-4o-2024-08-06) | Open AI   | 128000   | [https://aimlapi.com/models/gpt-4o-2024-08-06-api](GPT-4o-2024-08-06)  |
+|  [../text-models-llm/OpenAI/gpt-4o](gpt-4o-2024-05-13) | Open AI   | 128000   | [https://aimlapi.com/models/gpt-4o-2024-05-13-api](GPT-4o-2024-05-13)  |
+|  [../text-models-llm/OpenAI/gpt-4o-mini](gpt-4o-mini) | Open AI   | 128000   | [https://aimlapi.com/models/chat-gpt-4o-mini](Chat GPT 4o mini)  |
+|  [../text-models-llm/OpenAI/gpt-4o-mini](gpt-4o-mini-2024-07-18) | Open AI   | 128000   | -  |
+|  [../text-models-llm/OpenAI/gpt-4o](chatgpt-4o-latest) | Open AI   | 128000   | -  |
+|  [../text-models-llm/OpenAI/gpt-4-turbo](gpt-4-turbo) | Open AI   | 128000   | [https://aimlapi.com/models/chat-gpt-4-turbo](Chat GPT 4 Turbo)  |
+|  [../text-models-llm/OpenAI/gpt-4-turbo](gpt-4-turbo-2024-04-09) | Open AI   | 128000   | -  |
+|  [../text-models-llm/OpenAI/gpt-4](gpt-4) | Open AI   | 8000   | [https://aimlapi.com/models/chat-gpt-4](Chat GPT 4 )  |
+|  [../text-models-llm/OpenAI/gpt-4-preview](gpt-4-0125-preview) | Open AI   | 8000   | -  |
+|  [../text-models-llm/OpenAI/gpt-4-preview](gpt-4-1106-preview) | Open AI   | 8000   | -  |
+|  [../text-models-llm/OpenAI/gpt-3.5-turbo](gpt-3.5-turbo) | Open AI   | 16000   | -  |
+|  [../text-models-llm/OpenAI/gpt-3.5-turbo](gpt-3.5-turbo-0125) | Open AI   | 16000   | -  |
+|  [../text-models-llm/OpenAI/gpt-3.5-turbo](gpt-3.5-turbo-1106) | Open AI   | 16000   | [https://aimlapi.com/models/chat-gpt-3-5-turbo-1106](Chat GPT-3.5 Turbo 1106)  |
+|  [../text-models-llm/OpenAI/o1-preview](o1-preview) | Open AI   | 128000   | [https://aimlapi.com/models/openai-o1-preview-api](OpenAI o1-preview)  |
+|  [../text-models-llm/OpenAI/o1-preview](o1-preview-2024-09-12) | Open AI   | 128000   | -  |
+|  [../text-models-llm/OpenAI/o1-mini](o1-mini) | Open AI   | 128000   | [https://aimlapi.com/models/openai-o1-mini-api](OpenAI o1-mini)  |
+|  [../text-models-llm/OpenAI/o1-mini](o1-mini-2024-09-12) | Open AI   | 128000   | -  |
+|  [../text-models-llm/OpenAI/o3-mini](o3-mini) | Open AI   | 200000   | [https://aimlapi.com/models/openai-o3-mini-api](OpenAI o3 mini)  |
+|  [../text-models-llm/OpenAI/o1](o1) | Open AI   | 200000   | [https://aimlapi.com/models/openai-o1-api](OpenAI o1)  |
+|  [../text-models-llm/Microsoft/WizardLM-2-8x22B](microsoft/WizardLM-2-8x22B) | Microsoft   | 64000   | [https://aimlapi.com/models/wizardlm-2-8-22b](WizardLM 2-8 (22B))  |
+|  [../text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo](meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo) | Meta   | 131000   | [https://aimlapi.com/models/llama-3-2-90b-vision-instruct-turbo-api](Llama 3.2 90B Vision Instruct Turbo)  |
+|  [../text-models-llm/Google/gemma-2-27b-it](google/gemma-2-27b-it) | Google   | 8000   | [https://aimlapi.com/models/gemma-2-27b](Gemma 2 (27b))  |
+|  [../text-models-llm/Meta/Llama-Vision-Free](meta-llama/Llama-Vision-Free) | Meta   | 128000   | -  |
+|  [../text-models-llm/Gryphe/MythoMax-L2-13b](Gryphe/MythoMax-L2-13b) | Gryphe   | 4000   | [https://aimlapi.com/models/mythomax-l2-13b](MythoMax-L2 (13B))  |
+|  [../text-models-llm/Mistral-AI/Mixtral-8x22B-Instruct](mistralai/Mixtral-8x22B-Instruct-v0.1) | Mistral AI   | 64000   | [https://aimlapi.com/models/mixtral-8x22b-instruct](Mixtral 8x22B Instruct)  |
+|  [../text-models-llm/Alibaba-Cloud/Qwen2-72B-Instruct](Qwen/Qwen2-72B-Instruct) | Qwen   | 32000   | [https://aimlapi.com/models/qwen-2-instruct-72b](Qwen 2 Instruct (72B))  |
+|  [../text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1](mistralai/Mixtral-8x7B-Instruct-v0.1) | Mistral AI   | 64000   | [https://aimlapi.com/models/mixtral-8x7b-instruct-v01](Mixtral-8x7B Instruct v0.1)  |
+|  [../text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF](nvidia/Llama-3.1-Nemotron-70B-Instruct-HF) | Nvidia   | 128000   | [https://aimlapi.com/models/llama-3-1-nemotron-70b-instruct-api](Llama 3.1 Nemotron 70B Instruct)  |
+|  [../text-models-llm/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO](NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO) | NousResearch   | 32000   | -  |
+|  [../text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo](meta-llama/Llama-3.3-70B-Instruct-Turbo) | Meta   | 128000   | [https://aimlapi.com/models/meta-llama-3-3-70b-instruct-turbo-api](Meta Llama 3.3 70B Instruct Turbo)  |
+|  [../text-models-llm/Upstage-AI/SOLAR-10.7B-Instruct](upstage/SOLAR-10.7B-Instruct-v1.0) | Upstage   | 4000   | [https://aimlapi.com/models/upstage-solar-instruct-v1-11b](Upstage SOLAR Instruct v1 (11B))  |
+|  [../text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo](meta-llama/Llama-3.2-3B-Instruct-Turbo) | Meta   | 131000   | [https://aimlapi.com/models/llama-3-2-3b-instruct-turbo](Llama 3.2 3B Instruct Turbo)  |
+|  [../text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo](meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo) | Meta   | 131000   | [https://aimlapi.com/models/llama-3-2-11b-vision-instruct-turbo-api](Llama 3.2 11B Vision Instruct Turbo)  |
+|  [../text-models-llm/Meta/Llama-2-13b-chat-hf](meta-llama/Llama-2-13b-chat-hf) | Meta   | 4100   | [https://aimlapi.com/models/llama-2-chat-13b](LLaMA-2 Chat (13B))  |
+|  [../text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo](Qwen/Qwen2.5-7B-Instruct-Turbo) | Qwen   | 32000   | [https://aimlapi.com/models/qwen-2-5-7b-instruct-api](Qwen 2.5 7B Instruct Turbo)  |
+|  [../text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct](Qwen/Qwen2.5-Coder-32B-Instruct) | Qwen   | 131000   | -  |
+|  [../text-models-llm/Databricks/dbrx-instruct](databricks/dbrx-instruct) | Databricks   | 32000   | [https://aimlapi.com/models/dbrx-instruct](DBRX Instruct)  |
+|  [../text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite](meta-llama/Meta-Llama-3-8B-Instruct-Lite) | Meta   | 9000   | [https://aimlapi.com/models/llama-3-8b-instruct-lite-api](Llama 3 8B Instruct Lite)  |
+|  [../text-models-llm/Meta/Llama-3-chat-hf](meta-llama/Llama-3-8b-chat-hf) | Meta   | 8000   | [https://aimlapi.com/models/llama-3-8b-instruct-reference-api](Llama 3 8B Instruct Reference)  |
+|  [../text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo](meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K) | Meta   | 128000   | -  |
+|  [../text-models-llm/Meta/Llama-3-chat-hf](meta-llama/Llama-3-70b-chat-hf) | Meta   | 8000   | [https://aimlapi.com/models/meta-llama-3-70b-instruct](Llama 3 70B Instruct Reference)  |
+|  [../text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo](Qwen/Qwen2.5-72B-Instruct-Turbo) | Qwen   | 32000   | [https://aimlapi.com/models/qwen-2-5-72b-instruct-turbo](Qwen 2.5 72B Instruct Turbo)  |
+|  [../text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo](meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo) | Meta   | 4000   | [https://aimlapi.com/models/llama-3-1-405b-api](Llama 3.1 (405B) Instruct Turbo)  |
+|  [../text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo](meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo) | Meta   | 128000   | [https://aimlapi.com/models/llama-3-1-8b-api](Llama 3.1 8B Instruct Turbo)  |
+|  [../text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo](meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo) | Meta   | 128000   | [https://aimlapi.com/models/llama-3-1-70b-instruct-turbo-api](Llama 3.1 70B Instruct Turbo)  |
+|  [../text-models-llm/Google/gemma-2b-it](google/gemma-2b-it) | Google   | 8000   | [https://aimlapi.com/models/gemma-instruct-2b](Gemma Instruct (2B))  |
+|  [../text-models-llm/Mistral-AI/Mistral-7B-Instruct](mistralai/Mistral-7B-Instruct-v0.2) | Mistral AI   | 32000   | [https://aimlapi.com/models/mistral-7b-instruct-v02](Mistral (7B) Instruct v0.2)  |
+|  [../text-models-llm/Mistral-AI/Mistral-7B-Instruct](mistralai/Mistral-7B-Instruct-v0.1) | Mistral AI   | 8000   | [https://aimlapi.com/models/mistral-7b-instruct](Mistral (7B) Instruct v0.1)  |
+|  [../text-models-llm/Mistral-AI/Mistral-7B-Instruct](mistralai/Mistral-7B-Instruct-v0.3) | Mistral AI   | 32000   | [https://aimlapi.com/models/mistral-7b-instruct-v0-3](Mistral (7B) Instruct v0.3)  |
+|  [../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Turbo](meta-llama/Meta-Llama-3-70B-Instruct-Turbo) | Meta   | 128000   | -  |
+|  [../text-models-llm/Meta/Meta-Llama-3-70B-Instruct-Lite](meta-llama/Meta-Llama-3-70B-Instruct-Lite) | Meta   | 8000   | [https://aimlapi.com/models/llama-3-70b-instruct-lite-api](Llama 3 70B Instruct Lite)  |
+|  [../text-models-llm/Google/gemma-2-9b-it](google/gemma-2-9b-it) | Google   | 8000   | [https://aimlapi.com/models/gemma-2-9b](Gemma 2 (9B))  |
+|  [../text-models-llm/Gryphe/MythoMax-L2-13b-Lite](Gryphe/MythoMax-L2-13b-Lite) | Gryphe   | 4000   | -  |
+|  [../text-models-llm/Meta/Llama-2-7b-chat-hf](meta-llama/Llama-2-7b-chat-hf) | Meta   | 4000   | [https://aimlapi.com/models/llama-2-chat-7b](LLaMA-2 Chat (7B))  |
+|  [../text-models-llm/Anthropic/claude-3-opus](claude-3-opus-20240229) | Anthropic   | 200000   | [https://aimlapi.com/models/claude-3-opus](Claude 3 Opus)  |
+|  [../text-models-llm/Anthropic/claude-3-sonnet](claude-3-sonnet-20240229) | Anthropic   | 200000   | [https://aimlapi.com/models/claude-3-sonnet](Claude 3 Sonnet)  |
+|  [../text-models-llm/Anthropic/claude-3-haiku](claude-3-haiku-20240307) | Anthropic   | 200000   | -  |
+|  [../text-models-llm/Anthropic/claude-3-5-sonnet](claude-3-5-sonnet-20240620) | Anthropic   | 200000   | -  |
+|  [../text-models-llm/Anthropic/claude-3-5-sonnet](claude-3-5-sonnet-20241022) | Anthropic   | 200000   | [https://aimlapi.com/models/claude-3-5-sonnet](Claude 3.5 Sonnet 20241022)  |
+|  [../text-models-llm/Anthropic/claude-3-5-haiku](claude-3-5-haiku-20241022) | Anthropic   | 200000   | -  |
+|  [../text-models-llm/Anthropic/claude-3-7-sonnet](claude-3-7-sonnet-20250219) | Anthropic   | 200000   | [https://aimlapi.com/models/claude-3-7-sonnet-api](Claude 3.7 Sonnet)  |
+|  [../text-models-llm/Google/gemini-1.5-flash](gemini-1.5-flash) | Google   | 1000000   | [https://aimlapi.com/models/gemini-1-5-flash-api](Gemini 1.5 Flash)  |
+|  [../text-models-llm/Google/gemini-1.5-pro](gemini-1.5-pro) | Google   | 1000000   | [https://aimlapi.com/models/gemini-1-5-pro-api](Gemini 1.5 Pro)  |
+|  [../text-models-llm/Google/gemini-pro](gemini-pro) | Google   | 32000   | [https://aimlapi.com/models/gemini-1-0-pro-api](Gemini 1.0 Pro)  |
+|  [../text-models-llm/Google/gemini-2.0-flash-exp](gemini-2.0-flash-exp) | Google   | 1000000   | [https://aimlapi.com/models/gemini-2-0-flash-experimental](Gemini 2.0 Flash Experimental)  |
+|  [../text-models-llm/Alibaba-Cloud/qwen-max](qwen-max) | Alibaba Cloud   | 32000   | [https://aimlapi.com/models/qwen-max-api](Qwen Max)  |
+|  [../text-models-llm/Alibaba-Cloud/qwen-plus](qwen-plus) | Alibaba Cloud   | 131000   | [https://aimlapi.com/models/qwen-plus-api](Qwen Plus)  |
+|  [../text-models-llm/Alibaba-Cloud/qwen-turbo](qwen-turbo) | Alibaba Cloud   | 1000000   | [https://aimlapi.com/models/qwen-turbo-api](Qwen Turbo)  |
+|  [../text-models-llm/Alibaba-Cloud/qwen-max](qwen-max-2025-01-25) | Alibaba Cloud   | 32000   | [https://aimlapi.com/models/qwen-max-2025-01-25-api](Qwen Max 2025-01-25)  |
+|  [../text-models-llm/Mistral-AI/mistral-tiny](mistralai/mistral-tiny) | Mistral AI   | 32000   | [https://aimlapi.com/models/mistral-tiny-api](Mistral Tiny)  |
+|  [../text-models-llm/xAI/grok-beta](x-ai/grok-beta) | X AI   | 131000   | [https://aimlapi.com/models/grok-2-beta-api](Grok-2 Beta)  |
+|  [../text-models-llm/Mistral-AI/mistral-nemo](mistralai/mistral-nemo) | Mistral AI   | 128000   | [https://aimlapi.com/models/mistral-nemo-api](Mistral Nemo)  |
+|  [../text-models-llm/NeverSleep/llama-3.1-lumimaid](neversleep/llama-3.1-lumimaid-70b) | Open Source   | 8000   | [https://aimlapi.com/models/llama-3-1-lumimaid-70b-api](Llama 3.1 Lumimaid 70b)  |
+|  [../text-models-llm/Anthracite/magnum-v4](anthracite-org/magnum-v4-72b) | Anthracite   | 32000   | [https://aimlapi.com/models/magnum-v4-72b-api](Magnum v4 72B)  |
+|  [../text-models-llm/NVIDIA/llama-3.1-nemotron-70b](nvidia/llama-3.1-nemotron-70b-instruct) | Nvidia   | 128000   | [https://aimlapi.com/models/llama-3-1-nemotron-70b-instruct-api](Llama 3.1 Nemotron 70B Instruct)  |
+|  [../text-models-llm/Cohere/command-r-plus](cohere/command-r-plus) | Cohere   | 128000   | [https://aimlapi.com/models/command-r-api](Command R+)  |
+|  [../text-models-llm/AI21-Labs/jamba-1-5-mini](ai21/jamba-1-5-mini) | AI21 Labs   | 256000   | [https://aimlapi.com/models/jamba-1-5-mini-api](Jamba 1.5 Mini)  |
+|  [../text-models-llm/Alibaba-Cloud/qvq-72b-preview](qwen/qvq-72b-preview) | Qwen   | 32000   | [https://aimlapi.com/models/qvq-72b-preview-api](QVQ-72B-Preview)  |
+|  [../text-models-llm/Mistral-AI/codestral-2501](mistralai/codestral-2501) | Mistral AI   | 256000   | [https://aimlapi.com/models/mistral-codestral-2501-api](Mistral Codestral-2501)  |
+|  [../text-models-llm/MiniMax/text-01](MiniMax-Text-01) | Minimax AI   | 1000000   | [https://aimlapi.com/models/minimax-text-01-api](MiniMax-Text-01)  |
+|  [../text-models-llm/MiniMax/abab6.5s-chat](abab6.5s-chat) | Minimax AI   | 245000   | -  |
+###Image Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../image-models/OpenAI/dall-e-3](dall-e-3) | Open AI   |    | [https://aimlapi.com/models/openai-dall-e-3](OpenAI DALL·E 3)  |
+|  [../image-models/OpenAI/dall-e-2](dall-e-2) | Open AI   |    | [https://aimlapi.com/models/openai-dall-e-2-api](OpenAI DALL·E 2)  |
+|  [../image-models/Stability-AI/stable-diffusion-xl-base-1.0](stabilityai/stable-diffusion-xl-base-1.0) | Stability AI   |    | [https://aimlapi.com/models/stable-diffusion-xl-1-0](Stable Diffusion XL 1.0)  |
+|  [../image-models/Google/imagen-3.0](imagen-3.0-generate-002) | Google   |    | [https://aimlapi.com/models/imagen-3-api](Imagen 3)  |
+|  [../image-models/Black-Forest-Labs/flux-schnell](flux/schnell) | Flux   |    | [https://aimlapi.com/models/flux-1-schnell-api](FLUX.1 [schnell])  |
+|  [../image-models/Black-Forest-Labs/flux-pro](flux-pro) | Flux   |    | [https://aimlapi.com/models/flux-1-pro-api](FLUX.1 [pro])  |
+|  [../image-models/Black-Forest-Labs/flux-pro](flux-pro/v1.1) | Flux   |    | [https://aimlapi.com/models/flux-1-1-pro-api](FLUX 1.1 [pro])  |
+|  [../image-models/Black-Forest-Labs/flux-pro-v1.1-ultra](flux-pro/v1.1-ultra) | Flux   |    | [https://aimlapi.com/models/flux-1-1-pro-ultra-api](FLUX 1.1 [pro ultra])  |
+|  [../image-models/Black-Forest-Labs/flux-dev](flux/dev) | Flux   |    | [https://aimlapi.com/models/flux-1-dev-api](FLUX.1 [dev])  |
+|  [../image-models/Black-Forest-Labs/flux-dev-image-to-image](flux/dev/image-to-image) | Flux   |    | -  |
+|  [../image-models/Stability-AI/stable-diffusion-v3-medium](stable-diffusion-v3-medium) | Stability AI   |    | [https://aimlapi.com/models/stable-diffusion-3-api](Stable Diffusion 3)  |
+|  [../image-models/Stability-AI/stable-diffusion-v35-large](stable-diffusion-v35-large) | Stability AI   |    | [https://aimlapi.com/models/stable-diffusion-3-5-large-api](Stable Diffusion 3.5 Large)  |
+|  [../image-models/Black-Forest-Labs/flux-realism](flux-realism) | Flux   |    | [https://aimlapi.com/models/flux-realism-lora-api](FLUX Realism LoRA)  |
+|  [../image-models/RecraftAI/recraft-v3](recraft-v3) | Recraft AI   |    | [https://aimlapi.com/models/recraft-v3](Recraft v3)  |
+###Video Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../video-models/Kling-AI/v1-standard-image-to-video](kling-video/v1/standard/image-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-ai-image-to-video](Kling AI (image-to-video))  |
+|  [../video-models/Kling-AI/v1-standard-text-to-video](kling-video/v1/standard/text-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-ai-text-to-video-api](Kling AI (text-to-video))  |
+|  [../video-models/Kling-AI/v1-pro-image-to-video](kling-video/v1/pro/image-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-ai-image-to-video](Kling AI (image-to-video))  |
+|  [../video-models/Kling-AI/v1-pro-text-to-video](kling-video/v1/pro/text-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-ai-text-to-video-api](Kling AI (text-to-video))  |
+|  [../video-models/Kling-AI/v1.6-standard-text-to-video](kling-video/v1.6/standard/text-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-1-6-standard](Kling 1.6 Standard)  |
+|  [../video-models/Kling-AI/v1.6-standart-image-to-video](kling-video/v1.6/standard/image-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-1-6-standard](Kling 1.6 Standart)  |
+|  [../video-models/Kling-AI/v1.6-pro-image-to-video](kling-video/v1.6/pro/image-to-video) | Kling AI   |    | [https://aimlapi.com/models/kling-1-6-pro-api](Kling 1.6 Pro)  |
+|  [../video-models/MiniMax/video-01](video-01) | Minimax AI   |    | [https://aimlapi.com/models/minimax-video-01-api](MiniMax Video-01)  |
+|  [../video-models/MiniMax/video-01-live2d](video-01-live2d) | Minimax AI   |    | -  |
+|  [../video-models/Runway/gen3a_turbo](gen3a_turbo) | Runway ML   |    | [https://aimlapi.com/models/runway-gen-3-turbo](Runway Gen-3 turbo)  |
+###Embedding Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../embedding-models/OpenAI/text-embedding-3-small](text-embedding-3-small) | Open AI   | 8000   | -  |
+|  [../embedding-models/OpenAI/text-embedding-3-large](text-embedding-3-large) | Open AI   | 8000   | [https://aimlapi.com/models/text-embedding-3-large](Text-embedding-3-large)  |
+|  [../embedding-models/OpenAI/text-embedding-ada-002](text-embedding-ada-002) | Open AI   | 8000   | [https://aimlapi.com/models/text-embedding-ada-002](Text-embedding-ada-002)  |
+|  [../embedding-models/Together-AI/m2-bert-80M-retrieval](togethercomputer/m2-bert-80M-32k-retrieval) | Together AI   | 32000   | [https://aimlapi.com/models/m2-bert-retrieval-32k](M2-BERT-Retrieval-32k)  |
+|  [../embedding-models/BAAI/bge-base-en](BAAI/bge-base-en-v1.5) | BAAI   |    | [https://aimlapi.com/models/baai-bge-base-1p5](BAAI-Bge-Base-1p5)  |
+|  [../embedding-models/Together-AI/m2-bert-80M-retrieval](togethercomputer/m2-bert-80M-2k-retrieval) | Together AI   |    | [https://aimlapi.com/models/m2-bert-retrieval-2k](M2-BERT-Retrieval-2K)  |
+|  [../embedding-models/BAAI/bge-large-en](BAAI/bge-large-en-v1.5) | BAAI   |    | [https://aimlapi.com/models/baai-bge-large-1p5](bge-large-en)  |
+|  [../embedding-models/Together-AI/m2-bert-80M-retrieval](togethercomputer/m2-bert-80M-8k-retrieval) | Together AI   | 8000   | [https://aimlapi.com/models/m2-bert-retrieval-8k](M2-BERT-Retrieval-8k)  |
+|  [../embedding-models/Anthropic/voyage-large-2-instruct](voyage-large-2-instruct) | Anthropic   | 16000   | [https://aimlapi.com/models/voyage-large-2-instruct-api](Voyage Large 2 Instruct)  |
+|  [../embedding-models/Anthropic/voyage-finance-2](voyage-finance-2) | Anthropic   | 32000   | -  |
+|  [../embedding-models/Anthropic/voyage-multilingual-2](voyage-multilingual-2) | Anthropic   | 32000   | -  |
+|  [../embedding-models/Anthropic/voyage-law-2](voyage-law-2) | Anthropic   | 16000   | -  |
+|  [../embedding-models/Anthropic/voyage-code-2](voyage-code-2) | Anthropic   | 16000   | -  |
+|  [../embedding-models/Anthropic/voyage-large-2](voyage-large-2) | Anthropic   | 16000   | -  |
+|  [../embedding-models/Anthropic/voyage-2](voyage-2) | Anthropic   | 4000   | -  |
+|  [../embedding-models/Google/textembedding-gecko](textembedding-gecko@001) | Google   | 3000   | -  |
+|  [../embedding-models/Google/textembedding-gecko](textembedding-gecko@003) | Google   | 2000   | [https://aimlapi.com/models/textembedding-gecko-003-api](Textembedding-gecko@003)  |
+|  [../embedding-models/Google/textembedding-gecko](textembedding-gecko-multilingual@001) | Google   | 2000   | [https://aimlapi.com/models/textembedding-gecko-multilingual-001-api](Textembedding-gecko-multilingual@001)  |
+|  [../embedding-models/Google/text-multilingual-embedding-002](text-multilingual-embedding-002) | Google   | 2000   | -  |
+###Voice/Speech Models
+####Text-to-Speech
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-asteria-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-hera-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-luna-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-stella-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-athena-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-zeus-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-orion-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-arcas-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-perseus-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-angus-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-orpheus-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+|  [../speech-voice-models/tts/Deepgram/aura](#g1_aura-helios-en) | Deepgram   |    | [https://aimlapi.com/models/aura](Aura)  |
+####Speech-to-Text
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-general) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-meeting) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-phonecall) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-voicemail) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-finance) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-conversationalai) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-video) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-medical) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-drivethru) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/Deepgram/nova-2](#g1_nova-2-automotive) | Deepgram   |    | [https://aimlapi.com/models/deepgram-nova-2](Deepgram Nova-2)  |
+|  [../speech-voice-models/stt/OpenAI/whisper-large](#g1_whisper-large) | Deepgram   |    | [https://aimlapi.com/models/whisper](Whisper)  |
+|  [../speech-voice-models/stt/OpenAI/whisper-medium](#g1_whisper-medium) | Deepgram   |    | -  |
+|  [../speech-voice-models/stt/OpenAI/whisper-small](#g1_whisper-small) | Deepgram   |    | -  |
+|  [../speech-voice-models/stt/OpenAI/whisper-tiny](#g1_whisper-tiny) | Deepgram   |    | -  |
+|  [../speech-voice-models/stt/OpenAI/whisper-base](#g1_whisper-base) | Deepgram   |    | -  |
+###Music Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../music-models/Stability-AI/stable-audio](stable-audio) | Stability AI   |    | [https://aimlapi.com/models/stable-audio](Stable Audio)  |
+|  [../music-models/MiniMax/minimax-music-[legacy]](minimax-music) | Minimax AI   |    | -  |
+|  [../music-models/MiniMax/music-01](music-01) | Minimax AI   |    | [https://aimlapi.com/models/minimax-music-api](MiniMax Music)  |
+###Content Moderation Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../moderation-safety-models/Meta/Llama-Guard-7b](Meta-Llama/Llama-Guard-7b) | Meta   | 4000   | [https://aimlapi.com/models/llama-guard-7b](Llama Guard (7B))  |
+|  [../moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo](meta-llama/Llama-Guard-3-11B-Vision-Turbo) | Meta   | 128000   | -  |
+|  [../moderation-safety-models/Meta/LlamaGuard-2-8b](meta-llama/LlamaGuard-2-8b) | Meta   | 8000   | [https://aimlapi.com/models/llama-guard-2-8b](LlamaGuard 2 (8b))  |
+|  [../moderation-safety-models/Meta/Meta-Llama-Guard-3-8B](meta-llama/Meta-Llama-Guard-3-8B) | Meta   | 8000   | [https://aimlapi.com/models/llama-guard-3-8b](Llama Guard 3 (8B))  |
+###3D-Generating Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../3d-generating-models/Stability-AI/triposr](triposr) | Tripo AI   |    | [https://aimlapi.com/models/stable-tripo-sr-api](Stable TripoSR 3D)  |
+###Web Search Models
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+|  [../web-search-models/Bagoodex/bagoodex-search-v1](bagoodex/bagoodex-search-v1) | Bagoodex   | 32000   | [https://aimlapi.com/models/bagoodex-search-v1-api](Bagoodex Web Search v1)  |
 
 
 [#references:end]: <> ({})

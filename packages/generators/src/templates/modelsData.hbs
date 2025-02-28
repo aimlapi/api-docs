@@ -1,5 +1,28 @@
 {{#each categories}}
 {{#if this.models}}
+###{{this.category}}
+{{#if this.isHasSub}}
+{{#each subCategory}}
+####{{this.name}}
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+{{#each (lookup .. this.key)}}
+|  [{{{this.link}}}]({{{this.modelId}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modelCard}}}]({{{this.modalName}}}){{else}}{{{this.modalName}}}{{/if}}  |
+{{/each}}
+{{/each}}
+{{else}}
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+{{#each this.models}}
+|  [{{{this.link}}}]({{{this.modelId}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modelCard}}}]({{{this.modalName}}}){{else}}{{{this.modalName}}}{{/if}}  |
+{{/each}}
+{{/if}}
+{{/if}}
+{{/each}}
+
+
+{{!-- {{#each categories}}
+{{#if this.models}}
   <h3>{{this.category}}</h3>
   {{#if this.isHasSub}}
     {{#each subCategory}}
@@ -60,5 +83,4 @@
     </table>
   {{/if}}
 {{/if}}
-{{/each}}
-
+{{/each}} --}}
