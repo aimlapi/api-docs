@@ -48,7 +48,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
       }
       const dataModel = {
         modelId: model.name,
-        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/') + '.md',//.replace(/\api-references/g, '..'), // transform path: api-referenses\<category>\<vendor>\<alias> to /<category>/<vendor>/<alias>
+        link: MODELS_TO_ALIAS_MAP[model.name].path.replace(/\\/g, '/').replace(/\api-references/g, '..') + '.md', // transform path: api-referenses\<category>\<vendor>\<alias> to /<category>/<vendor>/<alias>
         developer: model.info.developer,
         context: model.info?.contextLength ? model.info?.contextLength : '',
         modalName: MODELS_TO_ALIAS_MAP[model.name].offsite_name !== '-' && model.info.url ? MODELS_TO_ALIAS_MAP[model.name].offsite_name : '-',
