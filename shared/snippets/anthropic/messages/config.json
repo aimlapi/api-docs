@@ -2,7 +2,7 @@
   "title": "Create an message",
   "docs": "https://docs.aimlapi.com/api-overview/text-models-llm/function-calling/anthropic",
   "payload": {
-    "baseUrl": "https://api.aimlapi.com/v1",
+    "baseUrl": "https://api.aimlapi.com/",
     "apiKey": "<YOUR_API_KEY>",
     "model": "claude-3-5-sonnet-20240620"
   }
