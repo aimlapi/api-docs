@@ -45,12 +45,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Text Models (LLM)</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -550,12 +552,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Image Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -647,12 +651,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Video Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -720,12 +726,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Embedding Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -848,12 +856,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
       <h4>Text-to-Speech</h4>
       <table border="1">
         <thead>
-          <tr>
-            <th style="width: 200px;">Model ID</th>
-            <th style="width: 150px;">Developer</th>
-            <th style="width: 100px;">Context</th>
-            <th style="width: 300px;">Model Card</th>
-          </tr>
+           <colgroup>
+            <tr>
+              <th style="width: 20%;">Model ID</th>
+              <th style="width: 20%;">Developer</th>
+              <th style="width: 15%;">Context</th>
+              <th style="width: 45%;">Model Card</th>
+            </tr>
+          </colgroup>
         </thead>
         <tbody>
             <tr>
@@ -933,12 +943,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
       <h4>Speech-to-Text</h4>
       <table border="1">
         <thead>
-          <tr>
-            <th style="width: 200px;">Model ID</th>
-            <th style="width: 150px;">Developer</th>
-            <th style="width: 100px;">Context</th>
-            <th style="width: 300px;">Model Card</th>
-          </tr>
+           <colgroup>
+            <tr>
+              <th style="width: 20%;">Model ID</th>
+              <th style="width: 20%;">Developer</th>
+              <th style="width: 15%;">Context</th>
+              <th style="width: 45%;">Model Card</th>
+            </tr>
+          </colgroup>
         </thead>
         <tbody>
             <tr>
@@ -1036,12 +1048,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Music Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -1067,12 +1081,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Content Moderation Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -1104,12 +1120,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>3D-Generating Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
@@ -1123,12 +1141,14 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Web Search Models</h3>
     <table border="1">
       <thead>
-        <tr>
-          <th style="width: 200px;">Model ID</th>
-          <th style="width: 150px;">Developer</th>
-          <th style="width: 100px;">Context</th>
-          <th style="width: 300px;">Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
           <tr>
