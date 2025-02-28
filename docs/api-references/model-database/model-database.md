@@ -1162,10 +1162,3 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 
 [#references:end]: <> ({})
-
-<style>
-  table th:nth-child(1) { width: 150px; }
-  table th:nth-child(2) { width: 200px; }
-  table th:nth-child(3) { width: 300px; }
-  table th:nth-child(4) { width: 250px; }
-</style>
