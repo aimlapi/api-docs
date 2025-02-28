@@ -1,20 +1,22 @@
 {{#each categories}}
 {{#if this.models}}
-###{{this.category}}
+
+### {{this.category}}
 {{#if this.isHasSub}}
 {{#each subCategory}}
-####{{this.name}}
+#### {{this.name}}
 | Model ID                | Developer     | Context | Model Card                        |
 |-----------------------|-------------------|-------------------|-----------------------|
 {{#each (lookup .. this.key)}}
-|  [{{{this.link}}}]({{{this.modelId}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modelCard}}}]({{{this.modalName}}}){{else}}{{{this.modalName}}}{{/if}}  |
+|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
 {{/each}}
 {{/each}}
 {{else}}
+
 | Model ID                | Developer     | Context | Model Card                        |
 |-----------------------|-------------------|-------------------|-----------------------|
 {{#each this.models}}
-|  [{{{this.link}}}]({{{this.modelId}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modelCard}}}]({{{this.modalName}}}){{else}}{{{this.modalName}}}{{/if}}  |
+|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
 {{/each}}
 {{/if}}
 {{/if}}
