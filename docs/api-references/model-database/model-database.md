@@ -47,7 +47,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 | Model ID                | Developer     | Context | Model Card                        |
 |-----------------------|-------------------|-------------------|-----------------------|
-|  [gpt-4o](api-references/text-models-llm/OpenAI/gpt-4o) | Open AI   | 128000   | [Chat GPT-4o](https://aimlapi.com/models/chat-gpt-4-omni)  |
+|  [gpt-4o](/api-references/text-models-llm/OpenAI/gpt-4o) | Open AI   | 128000   | [Chat GPT-4o](https://aimlapi.com/models/chat-gpt-4-omni)  |
 |  [gpt-4o-2024-08-06](api-references/text-models-llm/OpenAI/gpt-4o) | Open AI   | 128000   | [GPT-4o-2024-08-06](https://aimlapi.com/models/gpt-4o-2024-08-06-api)  |
 |  [gpt-4o-2024-05-13](api-references/text-models-llm/OpenAI/gpt-4o) | Open AI   | 128000   | [GPT-4o-2024-05-13](https://aimlapi.com/models/gpt-4o-2024-05-13-api)  |
 |  [gpt-4o-mini](api-references/text-models-llm/OpenAI/gpt-4o-mini) | Open AI   | 128000   | [Chat GPT 4o mini](https://aimlapi.com/models/chat-gpt-4o-mini)  |
