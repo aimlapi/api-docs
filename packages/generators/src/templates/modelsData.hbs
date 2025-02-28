@@ -16,13 +16,13 @@
         <tbody>
            {{#each (lookup .. this.key)}}
             <tr>
-              <td style="width: 200px;"><a href="{{this.link}}.md">{{this.modelId}}</a></td>
-              <td style="width: 150px;">{{this.developer}}</td>
-              <td style="width: 100px;">{{this.context}}</td>
+              <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+              <td>{{this.developer}}</td>
+              <td>{{this.context}}</td>
               {{#if this.modelCard}}
-              <td style="width: 300px;"><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+              <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
               {{else}}
-              <td style="width: 300px;">{{this.modalName}}</td>
+              <td>{{this.modalName}}</td>
               {{/if}}
             </tr>
           {{/each}}
@@ -42,13 +42,13 @@
       <tbody>
         {{#each this.models}}
           <tr>
-            <td style="width: 200px;"><a href="{{this.link}}.md">{{this.modelId}}</a></td>
-            <td style="width: 150px;">{{this.developer}}</td>
-            <td style="width: 100px;">{{this.context}}</td>
+            <td><a href="{{this.link}}.md">{{this.modelId}}</a></td>
+            <td>{{this.developer}}</td>
+            <td>{{this.context}}</td>
             {{#if this.modelCard}}
-            <td style="width: 300px;"><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
+            <td><a href="{{this.modelCard}}" target="_blank">{{this.modalName}}</a></td>
             {{else}}
-            <td style="width: 300px;">{{this.modalName}}</td>
+            <td>{{this.modalName}}</td>
             {{/if}}
           </tr>
         {{/each}}
