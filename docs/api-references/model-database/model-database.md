@@ -45,21 +45,19 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
   <h3>Text Models (LLM)</h3>
     <table border="1">
       <thead>
-         <colgroup>
           <tr>
             <th style="width: 20%;">Model ID</th>
             <th style="width: 20%;">Developer</th>
             <th style="width: 15%;">Context</th>
             <th style="width: 45%;">Model Card</th>
           </tr>
-        </colgroup>
       </thead>
       <tbody>
           <tr>
-            <td><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o</a></td>
-            <td>Open AI</td>
-            <td>128000</td>
-            <td><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">Chat GPT-4o</a></td>
+            <td style="width: 20%;"><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o</a></td>
+            <td style="width: 20%;">Open AI</td>
+            <td style="width: 15%;">128000</td>
+            <td style="width: 45%;"><a href="https://aimlapi.com/models/chat-gpt-4-omni" target="_blank">Chat GPT-4o</a></td>
           </tr>
           <tr>
             <td><a href="../text-models-llm/OpenAI/gpt-4o.md">gpt-4o-2024-08-06</a></td>
@@ -1134,7 +1132,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
             <td><a href="../3d-generating-models/Stability-AI/triposr.md">triposr</a></td>
             <td>Tripo AI</td>
             <td></td>
-            <td style="width: 45%;"><a href="https://aimlapi.com/models/stable-tripo-sr-api" target="_blank">Stable TripoSR 3D</a></td>
+            <td><a href="https://aimlapi.com/models/stable-tripo-sr-api" target="_blank">Stable TripoSR 3D</a></td>
           </tr>
       </tbody>
     </table>
