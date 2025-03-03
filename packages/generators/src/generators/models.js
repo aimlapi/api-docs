@@ -6,7 +6,7 @@ const fs = require("fs").promises;
 
 class ModelsGenerator extends PageGenerator {
   async fetchModels() {
-    if(this.config.url.includes('json_for-docs_generation_20250226.json')){
+    if(this.config.url.includes('json_for-docs_generation_20250303.json')){
       const data = await fs.readFile(this.config.url, { encoding: "utf-8" });
       const json = JSON.parse(data);
       return json;
