@@ -1,5 +1,5 @@
 ---
-icon: ballot
+icon: ledger
 description: A full list of available models.
 layout:
   title:
