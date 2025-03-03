@@ -105,7 +105,14 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% endtab %}
 {% tab title="Models by FEATURES" %}
 [#references:start]: <> ({ "template": "byFeatures" })
+<button onclick="document.getElementById('modal').style.display='block'">
+    Открыть окно
+</button>
 
+<div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+    <p>Это модальное окно</p>
+    <button onclick="document.getElementById('modal').style.display='none'">Закрыть</button>
+</div>
 
 [#references:end]: <> ({})
 {% endtab %}
