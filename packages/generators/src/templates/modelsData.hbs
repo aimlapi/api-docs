@@ -1,4 +1,4 @@
-{{#each categories}}
+{{!-- {{#each categories}}
 {{#if this.models}}
 
 ### {{this.category}}
@@ -20,10 +20,10 @@
 {{/each}}
 {{/if}}
 {{/if}}
-{{/each}}
+{{/each}} --}}
 
 
-{{!-- {{#each categories}}
+{{#each categories}}
 {{#if this.models}}
   <h3>{{this.category}}</h3>
   {{#if this.isHasSub}}
@@ -33,10 +33,10 @@
         <thead>
            <colgroup>
             <tr>
-              <th style="width: 20%;">Model ID</th>
-              <th style="width: 20%;">Developer</th>
-              <th style="width: 15%;">Context</th>
-              <th style="width: 45%;">Model Card</th>
+              <th width="256">Model ID</th>
+              <th width="140">Developer</th>
+              <th width="113">Context</th>
+              <th width="280">Model Card</th>
             </tr>
           </colgroup>
         </thead>
@@ -61,10 +61,10 @@
       <thead>
          <colgroup>
           <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
+            <th width="256">Model ID</th>
+            <th width="140">Developer</th>
+            <th width="113">Context</th>
+            <th width="280">Model Card</th>
           </tr>
         </colgroup>
       </thead>
@@ -85,4 +85,4 @@
     </table>
   {{/if}}
 {{/if}}
-{{/each}} --}}
+{{/each}}
