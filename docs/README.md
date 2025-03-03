@@ -107,6 +107,12 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [#references:start]: <> ({ "template": "byFeatures" })
 <iframe src="https://help.aimlapi.com/support/home" width="100%" height="300px"></iframe>
 
+ [Text/Chat](modal.md)
+
+[Text/Chat1](/docs/modal.md)
+
+[Text/Chat2](./modal.md)
+
 [#references:end]: <> ({})
 {% endtab %}
 {% endtabs %}
