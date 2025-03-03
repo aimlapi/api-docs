@@ -72,12 +72,51 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% endtab %}
 {% tab title="Models by VENDORS" %}
 [#references:start]: <> ({ "template": "byVendors" })
-
+**AI21 Labs**:    [Text/Chat](api-references/text-models-llm/AI21-Labs/) \
+**Alibaba Cloud**:    [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
+**Anthracite**:    [Text/Chat](api-references/text-models-llm/Anthracite/)\
+<mark style="background-color:green;">**Anthropic**</mark>:    [Text/Chat](api-references/text-models-llm/Anthropic/)    [Embedding](api-references/embedding-models/Anthropic/)\
+**BAAI**:    [Embedding](api-references/embedding-models/BAAI/)\
+<mark style="background-color:green;">**Bagoodex**</mark>:    [WebSearch](api-references/web-search-models/bagoodex/)\
+**Black Forest Labs**:    [Image](api-references/image-models/Black-Forest-Labs/)\
+**Cohere**:    [Text/Chat](api-references/text-models-llm/Cohere/)\
+**Databricks**:    [Text/Chat](api-references/text-models-llm/Databricks/) \
+<mark style="background-color:green;">**DeepSeek**</mark>:    [Text/Chat](api-references/text-models-llm/DeepSeek/) \
+**Deepgram**:    [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)    [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/) \
+**Google**:    [Text/Chat](api-references/text-models-llm/Google/)    [Image](api-references/image-models/Google/)    [Embedding](api-references/embedding-models/Google/) \
+**Gryphe**:    [Text/Chat](api-references/text-models-llm/Gryphe/) \
+<mark style="background-color:green;">**Kling AI**</mark>:    [Video](api-references/video-models/Kling-AI/) \
+**Meta**:    [Text/Chat](api-references/text-models-llm/Meta/) \
+**Microsoft**:    [Text/Chat](api-references/text-models-llm/Microsoft/) \
+<mark style="background-color:green;">**MiniMax**</mark>:    [Text/Chat](api-references/text-models-llm/MiniMax/)    [Video](api-references/video-models/MiniMax/)    [Music](api-references/music-models/MiniMax/) \
+**Mistral AI**:    [Text/Chat](api-references/text-models-llm/Mistral-AI/) \
+**NVIDIA**:    [Text/Chat](api-references/text-models-llm/NVIDIA/) \
+**NeverSleep**:    [Text/Chat](api-references/text-models-llm/NeverSleep/) \
+**NousResearch**:    [Text/Chat](api-references/text-models-llm/NousResearch/) \
+<mark style="background-color:green;">**OpenAI**</mark>:    [Text/Chat](api-references/text-models-llm/OpenAI/)    [Image](api-references/image-models/OpenAI/)   [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/)    [Embedding](api-references/embedding-models/OpenAI/) \
+**RecraftAI**:    [Image](api-references/image-models/RecraftAI/)\
+**Runway**:    [Video](api-references/video-models/runway/)\
+<mark style="background-color:green;">**Stability AI**</mark>:    [Image](api-references/image-models/Stability-AI/)    [Music](api-references/music-models/Stability-AI/)    [3D-Generation](api-references/3d-generating-models/Stability-AI/) \
+**Together AI**:    [Embedding](api-references/embedding-models/Together-AI/) \
+**Upstage AI**:    [Text/Chat](api-references/text-models-llm/Upstage-AI/) \
+**xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)
 [#references:end]: <> ({})
 {% endtab %}
 {% tab title="Models by FEATURES" %}
 [#references:start]: <> ({ "template": "byFeatures" })
+<button id="myButton" style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer;">
+  Открыть модальное окно
+</button>
 
+<div id="myModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
+  <p>Это модальное окно!</p>
+  <button id="closeModal" style="padding: 5px 10px; background-color: #dc3545; color: white; border: none; cursor: pointer;">
+    Закрыть
+  </button>
+</div>
+
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;">
+</div>
 [#references:end]: <> ({})
 {% endtab %}
 {% endtabs %}
@@ -85,3 +124,25 @@ If you've already made your choice and know the model ID, use the the [Search pa
 ## Getting Started
 
 To start using the AI/ML API, follow the [Quickstart guide](quickstart/setting-up.md) to set up your environment and make your first API call.
+
+<script>
+  const button = document.getElementById('myButton');
+  const modal = document.getElementById('myModal');
+  const closeButton = document.getElementById('closeModal');
+  const overlay = document.getElementById('overlay');
+
+  button.addEventListener('click', () => {
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+
+  overlay.addEventListener('click', () => {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+</script>
