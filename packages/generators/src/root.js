@@ -110,11 +110,6 @@ const jsonModify = (data, args) => {
     cloned[cloned.plugins[0].id].path = cloned[cloned.plugins[0].id].path + '-pair'
     savePair(alias, cloned)
   }
-  // changing the list of models
-  // if (ALIAS_MAP[alias]) {
-  //   if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
-  //     data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-  // }
   
   return data.schema
 }
@@ -126,25 +121,9 @@ const savePair = (alias, cloned) => {
 
 // if there is a second endpoint for this alias, a json with the '-pair' appended is created
 const jsonModifyForPair = (data, args) => {
-  if (data.pair.has) {
-    const key = Object.keys(data.pair.schema.paths)[0]
-    const alias = args[args.plugins[0].id].tags.at(-1)
-
-    // if (ALIAS_MAP[alias]) {
-    //   if (data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema?.properties?.model?.enum)
-    //     data.pair.schema.paths[key][data.pair.method].requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-    // }
-    
+  if (data.pair.has) {    
     return data.pair.schema
   }
-
-  const key = Object.keys(data.schema.paths)[0]
-  const alias = args[args.plugins[0].id].tags.at(-1)
-
-  // if (ALIAS_MAP[alias]) {
-  //   if (data.schema.paths[key].post.requestBody.content["application/json"].schema?.properties?.model?.enum)
-  //     data.schema.paths[key].post.requestBody.content["application/json"].schema.properties.model.enum = ALIAS_MAP[alias]
-  // }
   
   return data.schema
 }
