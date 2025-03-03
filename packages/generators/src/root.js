@@ -115,7 +115,7 @@ const jsonModifyForPair = (data, args) => {
   if (data.pair.has) {    
     return data.pair.schema
   }
-  
+
   return data.schema
 }
 
