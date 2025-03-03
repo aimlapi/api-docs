@@ -70,13 +70,8 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [embedding-models](api-references/embedding-models/)
 {% endcontent-ref %}
 {% endtab %}
-<<<<<<< HEAD
-
 {% tab title="Models by DEVELOPER" %}
-=======
-{% tab title="Models by VENDORS" %}
 [#references:start]: <> ({ "template": "byVendors" })
->>>>>>> staging
 **AI21 Labs**:    [Text/Chat](api-references/text-models-llm/AI21-Labs/) \
 **Alibaba Cloud**:    [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
 **Anthracite**:    [Text/Chat](api-references/text-models-llm/Anthracite/)\
