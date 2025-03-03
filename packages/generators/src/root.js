@@ -60,15 +60,6 @@ const root = {
               }),
             ],
           }),
-          // HandlebarsPageGenerator.build({
-          //   content: readTemplate(TEMPLATE.summary),
-          //   effects: [
-          //     StorePlugin.store((...args) => ({
-          //       path: `${PathPlugin.root(...args)}/SUMMARY.md`,
-          //       transform: replaceTemplate(TEMPLATE.summary),
-          //     })),
-          //   ],
-          // }),
         ],
       }),
       DataBaseModelsPageGenerator.build({
