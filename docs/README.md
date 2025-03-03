@@ -105,7 +105,17 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% endtab %}
 {% tab title="Models by FEATURES" %}
 [#references:start]: <> ({ "template": "byFeatures" })
-<iframe src="modal.md" width="100%" height="300px"></iframe>
+{% expand "Открыть модальное окно" %}
+### Это "модальное окно"
+
+Здесь можно разместить описание или ссылки.  
+
+**Закрыть окно** – просто сверните блок обратно.
+{% endexpand %}
+
+<iframe src="https://help.aimlapi.com/support/home" width="100%" height="300px"> qwe</iframe>
+
+<iframe src="modal.md" width="100%" height="300px"> 123</iframe>
 
 
 [#references:end]: <> ({})
