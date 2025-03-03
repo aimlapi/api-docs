@@ -10,7 +10,7 @@
 
 [#references:start]: <> ({ "template": "summary" })
 ## API REFERENCES
-* [📒 All Model IDs](api-references/model-database/model-database.md)
+* [All Model IDs](api-references/model-database/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)
     * [jamba-1-5-mini](api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)

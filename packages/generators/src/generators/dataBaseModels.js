@@ -74,7 +74,7 @@ class DataBaseModelsPageGenerator extends PageGenerator {
       ...rest,
       categories: modelsBase,
     },
-    PathPlugin.traverse(`/model-database`, '📒 All Model IDs')); // (for path, for name in SUMMARY.md)
+    PathPlugin.traverse(`/model-database`, 'All Model IDs')); // (for path, for name in SUMMARY.md)
   }
 }
 
