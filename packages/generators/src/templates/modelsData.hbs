@@ -1,30 +1,5 @@
 {{#each categories}}
 {{#if this.models}}
-
-### {{this.category}}
-{{#if this.isHasSub}}
-{{#each subCategory}}
-#### {{this.name}}
-| Model ID                | Developer     | Context | Model Card                        |
-|-----------------------|-------------------|-------------------|-----------------------|
-{{#each (lookup .. this.key)}}
-|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
-{{/each}}
-{{/each}}
-{{else}}
-
-| Model ID                | Developer     | Context | Model Card                        |
-|-----------------------|-------------------|-------------------|-----------------------|
-{{#each this.models}}
-|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
-{{/each}}
-{{/if}}
-{{/if}}
-{{/each}}
-
-
-{{!-- {{#each categories}}
-{{#if this.models}}
   <h3>{{this.category}}</h3>
   {{#if this.isHasSub}}
     {{#each subCategory}}
@@ -33,10 +8,10 @@
         <thead>
            <colgroup>
             <tr>
-              <th style="width: 20%;">Model ID</th>
-              <th style="width: 20%;">Developer</th>
-              <th style="width: 15%;">Context</th>
-              <th style="width: 45%;">Model Card</th>
+              <th width="256">Model ID</th>
+              <th width="140">Developer</th>
+              <th width="113">Context</th>
+              <th width="280">Model Card</th>
             </tr>
           </colgroup>
         </thead>
@@ -61,10 +36,10 @@
       <thead>
          <colgroup>
           <tr>
-            <th style="width: 20%;">Model ID</th>
-            <th style="width: 20%;">Developer</th>
-            <th style="width: 15%;">Context</th>
-            <th style="width: 45%;">Model Card</th>
+            <th width="256">Model ID</th>
+            <th width="140">Developer</th>
+            <th width="113">Context</th>
+            <th width="280">Model Card</th>
           </tr>
         </colgroup>
       </thead>
@@ -85,4 +60,4 @@
     </table>
   {{/if}}
 {{/if}}
-{{/each}} --}}
+{{/each}}

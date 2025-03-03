@@ -8,9 +8,9 @@
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
+[#references:start]: <> ({ "template": "summary" })
 ## API REFERENCES
-
-* [📒 All Model IDs](api-references/model-database/model-database.md)
+* [All Model IDs](api-references/model-database/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)
     * [jamba-1-5-mini](api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)
@@ -97,6 +97,7 @@
     * [o1-mini](api-references/text-models-llm/OpenAI/o1-mini.md)
     * [o1-preview](api-references/text-models-llm/OpenAI/o1-preview.md)
     * [o3-mini](api-references/text-models-llm/OpenAI/o3-mini.md)
+    * [gpt-4.5-preview](api-references/text-models-llm/OpenAI/gpt-4.5-preview.md)
   * [Upstage AI](api-references/text-models-llm/Upstage-AI/README.md)
     * [SOLAR-10.7B-Instruct](api-references/text-models-llm/Upstage-AI/SOLAR-10.7B-Instruct.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
@@ -139,8 +140,8 @@
   * [MiniMax](api-references/video-models/MiniMax/README.md)
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
-  * [Runway](api-references/video-models/runway/README.md)
-    * [gen3a\_turbo](api-references/video-models/runway/gen3a_turbo.md)
+  * [Runway](api-references/video-models/Runway/README.md)
+    * [gen3a_turbo](api-references/video-models/Runway/gen3a_turbo.md)
 * [Music Models](api-references/music-models/README.md)
   * [MiniMax](api-references/music-models/MiniMax/README.md)
     * [minimax-music \[legacy\]](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
@@ -163,7 +164,7 @@
       * [aura](api-references/speech-voice-models/tts/Deepgram/aura.md)
 * [Web Search Models](api-references/web-search-models/README.md)
   * [Bagoodex](api-references/web-search-models/bagoodex/README.md)
-    * [bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-search-v1/README.md)
+    * [bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-search-v1.md)
       * [Find Links](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-links.md)
       * [Find Images](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-images.md)
       * [Find Videos](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-videos.md)
@@ -204,6 +205,8 @@
     * [text-embedding-ada-002](api-references/embedding-models/OpenAI/text-embedding-ada-002.md)
   * [Together AI](api-references/embedding-models/Together-AI/README.md)
     * [m2-bert-80M-retrieval](api-references/embedding-models/Together-AI/m2-bert-80M-retrieval.md)
+
+[#references:end]: <> ({})
 
 ## Capabilities
 

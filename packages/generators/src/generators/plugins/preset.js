@@ -90,7 +90,7 @@ const dataBaseModels = () =>
   path: `${PathPlugin.root(...args)}${path.sep}SUMMARY.md`,
   transform: replaceTemplate(TEMPLATE.summary, (match, next) => {
     const { file } = next;
-    const key = 'Model Database'
+    const key = 'All Model IDs'
     const summary = SummaryParserMap.parse(match);
     const childrenObject = transformToObject(summary?.children)
     let children = childrenObject;
