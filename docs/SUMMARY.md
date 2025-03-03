@@ -8,8 +8,8 @@
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
+[#references:start]: <> ({ "template": "summary" })
 ## API REFERENCES
-
 * [📒 All Model IDs](api-references/model-database/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)

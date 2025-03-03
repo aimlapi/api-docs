@@ -1,5 +1,5 @@
 ---
-icon: ballot
+icon:  ledger
 description: A full list of available models.
 layout:
   title:
@@ -26,7 +26,7 @@ The section **Model IDs** lists the identifiers of all available and deprecated 
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-If you already know the identifier, use the page search function (<kbd>Ctrl+F</kbd> for Win/Linux, <kbd>Command+F</kbd> for Mac) to locate it.
+If you already know the identifier, use the page search function (<kbd>Ctrl+F</kbd> for Win/Linux, <kbd>Command+F</kbd> for Mac) to locate it. The hyperlink will take you directly to the model's API Reference page.
 
 {% hint style="success" %}
 **New Model Request**

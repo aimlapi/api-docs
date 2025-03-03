@@ -70,6 +70,16 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [embedding-models](api-references/embedding-models/)
 {% endcontent-ref %}
 {% endtab %}
+{% tab title="Models by VENDORS" %}
+[#references:start]: <> ({ "template": "byVendors" })
+
+[#references:end]: <> ({})
+{% endtab %}
+{% tab title="Models by FEATURES" %}
+[#references:start]: <> ({ "template": "byFeatures" })
+
+[#references:end]: <> ({})
+{% endtab %}
 {% endtabs %}
 
 ## Getting Started
