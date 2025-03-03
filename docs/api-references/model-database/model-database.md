@@ -66,6 +66,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 |  [o1-mini](../text-models-llm/OpenAI/o1-mini.md) | Open AI   | 128000   | [OpenAI o1-mini](https://aimlapi.com/models/openai-o1-mini-api)  |
 |  [o1-mini-2024-09-12](../text-models-llm/OpenAI/o1-mini.md) | Open AI   | 128000   | -  |
 |  [o3-mini](../text-models-llm/OpenAI/o3-mini.md) | Open AI   | 200000   | [OpenAI o3 mini](https://aimlapi.com/models/openai-o3-mini-api)  |
+|  [gpt-4.5-preview](../text-models-llm/OpenAI/gpt-4.5-preview.md) | Open AI   | 128000   | [Chat GPT 4.5 preview](https://aimlapi.com/models/chat-gpt-4-5-preview-api)  |
 |  [o1](../text-models-llm/OpenAI/o1.md) | Open AI   | 200000   | [OpenAI o1](https://aimlapi.com/models/openai-o1-api)  |
 |  [microsoft/WizardLM-2-8x22B](../text-models-llm/Microsoft/WizardLM-2-8x22B.md) | Microsoft   | 64000   | [WizardLM 2-8 (22B)](https://aimlapi.com/models/wizardlm-2-8-22b)  |
 |  [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md) | Meta   | 131000   | [Llama 3.2 90B Vision Instruct Turbo](https://aimlapi.com/models/llama-3-2-90b-vision-instruct-turbo-api)  |
