@@ -1,17 +1,44 @@
 {{#each categories}}
 {{#if this.models}}
+
+### {{this.category}}
+{{#if this.isHasSub}}
+{{#each subCategory}}
+#### {{this.name}}
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+{{#each (lookup .. this.key)}}
+|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
+{{/each}}
+{{/each}}
+{{else}}
+
+| Model ID                | Developer     | Context | Model Card                        |
+|-----------------------|-------------------|-------------------|-----------------------|
+{{#each this.models}}
+|  [{{{this.modelId}}}]({{{this.link}}}) | {{{this.developer}}}   | {{{this.context}}}   | {{#if this.modelCard}}[{{{this.modalName}}}]({{{this.modelCard}}}){{else}}{{{this.modalName}}}{{/if}}  |
+{{/each}}
+{{/if}}
+{{/if}}
+{{/each}}
+
+
+{{!-- {{#each categories}}
+{{#if this.models}}
   <h3>{{this.category}}</h3>
   {{#if this.isHasSub}}
     {{#each subCategory}}
       <h4>{{this.name}}</h4>
       <table border="1">
         <thead>
-          <tr>
-            <th>Model ID</th>
-            <th>Developer</th>
-            <th>Context</th>
-            <th>Model Card</th>
-          </tr>
+           <colgroup>
+            <tr>
+              <th style="width: 20%;">Model ID</th>
+              <th style="width: 20%;">Developer</th>
+              <th style="width: 15%;">Context</th>
+              <th style="width: 45%;">Model Card</th>
+            </tr>
+          </colgroup>
         </thead>
         <tbody>
            {{#each (lookup .. this.key)}}
@@ -32,12 +59,14 @@
   {{else}}
     <table border="1">
       <thead>
-        <tr>
-          <th>Model ID</th>
-          <th>Developer</th>
-          <th>Context</th>
-          <th>Model Card</th>
-        </tr>
+         <colgroup>
+          <tr>
+            <th style="width: 20%;">Model ID</th>
+            <th style="width: 20%;">Developer</th>
+            <th style="width: 15%;">Context</th>
+            <th style="width: 45%;">Model Card</th>
+          </tr>
+        </colgroup>
       </thead>
       <tbody>
         {{#each this.models}}
@@ -56,5 +85,4 @@
     </table>
   {{/if}}
 {{/if}}
-{{/each}}
-
+{{/each}} --}}

@@ -75,7 +75,7 @@ const SECTION = {
   generator: 'generator',
 }
 
-CATEGORY_MAPPING = {
+const CATEGORY_MAPPING = {
   "text-models-llm": "Text Models (LLM)", 
   "image-models": "Image Models",
   "video-models": "Video Models",

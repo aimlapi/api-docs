@@ -18,7 +18,7 @@ const DOCS_PATH = '/api-references';
 
 const root = {
   next: ModelsGenerator.build({
-    url: path.join(__dirname, "json_for-docs_generation_20250226.json"), //MODELS_URL,
+    url: path.join(__dirname, "json_for-docs_generation_20250303.json"), //MODELS_URL,
     openapi: {
       url: OPENAPI_URL,
     },
@@ -61,7 +61,7 @@ const root = {
             ],
           }),
           // HandlebarsPageGenerator.build({
-          //   content: readTemplate(TEMPLATE.summary, SECTION.references),
+          //   content: readTemplate(TEMPLATE.summary),
           //   effects: [
           //     StorePlugin.store((...args) => ({
           //       path: `${PathPlugin.root(...args)}/SUMMARY.md`,
