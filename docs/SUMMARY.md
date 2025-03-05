@@ -237,6 +237,6 @@
 
 ## Integrations
 
-* [About](integrations/about.md)
+* [about](integrations/about.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
