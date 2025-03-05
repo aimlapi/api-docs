@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a description of one of the six use cases for this AI Web Search Engine—retrieving internet links related to the requested subject.
+This is a description of one of the six use cases for this AI Search Engine—retrieving internet links related to the requested subject.
 
 <details>
 
@@ -37,7 +37,7 @@ The output will be the requested information retrieved from the internet—or em
 
 ## How to make a call
 
-First, you must first call the standard chat completion endpoint with your query. (Check how this call is made in the [example ](find-links.md#example)below.)
+&#x20;Check how this call is made in the [example ](find-links.md#example)below.
 
 {% hint style="success" %}
 Note that queries can include advanced search syntax:
@@ -50,15 +50,15 @@ Note that queries can include advanced search syntax:
   For example, `jaguar speed -car`.
 {% endhint %}
 
-The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the endpoint below.
-
 ## API Schema
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/bagoodex/links" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Example
+## Example
+
+First, the standard chat completion endpoint with your query is called. It returns an ID, which must then be passed as the sole input parameter `followup_id` to the specific second endpoint:
 
 {% code overflow="wrap" %}
 ```python
@@ -90,7 +90,7 @@ def complete_chat():
     gen_id = response.id  
     print(f"Generated ID: {gen_id}")
     
-    # Call the Bagoodex endpoint with the generated ID
+    # Call the second endpoint with the generated ID
     get_links(gen_id)
 
 def get_links(gen_id):
