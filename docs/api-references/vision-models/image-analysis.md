@@ -6,7 +6,7 @@ icon: book-open
 
 You can check more here:
 
-{% content-ref url="../../capabilities/function-calling/image-to-text-vision.md" %}
-[image-to-text-vision.md](../../capabilities/function-calling/image-to-text-vision.md)
+{% content-ref url="../../capabilities/image-to-text-vision.md" %}
+[image-to-text-vision.md](../../capabilities/image-to-text-vision.md)
 {% endcontent-ref %}
 

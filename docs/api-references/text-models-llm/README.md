@@ -39,7 +39,7 @@ There are several capabilities of text models that are worth mentioning separate
 
 An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of these capabilities can be found [here](../../capabilities/managing-assistants-and-threads/).
 
-**Function Calling** allows a chat model to invoke external programmatic tools (e.g., a function you have written) while generating a response. A detailed description and examples are available [here](../../capabilities/function-calling/).
+**Function Calling** allows a chat model to invoke external programmatic tools (e.g., a function you have written) while generating a response. A detailed description and examples are available [here](../../capabilities/function-calling.md).
 
 ## Quick Code Example
 

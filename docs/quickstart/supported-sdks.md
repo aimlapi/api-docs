@@ -18,6 +18,8 @@ layout:
 
 # Supported SDKs
 
+This page describes the SDK[^1]s that can be used to call our API.
+
 ## OpenAI
 
 In the [setting up article](setting-up.md), we showed an example of how to use the OpenAI SDK with the AI/ML API. We configured the environment from the very beginning and executed our request to the AI/ML API.
@@ -134,6 +136,64 @@ curl --request POST \
 {% endtab %}
 {% endtabs %}
 
+## AI/ML API Python library
+
+We have started developing our own SDK to simplify the use of our service. Currently, it supports only chat completion and embedding models.&#x20;
+
+{% hint style="success" %}
+If you’d like to contribute to expanding its functionality, feel free to reach out to us on [**Discord**](https://discord.com/invite/hvaUsJpVJf)!
+{% endhint %}
+
+### Installation
+
+After obtaining your AIML API key, create an .env file and copy the required contents into it.
+
+```shell
+touch .env
+```
+
+Copy the code below, paste it into your `.env` file, and set your API key in `AIML_API_KEY="<YOUR_AIMLAPI_KEY>"`, replacing `<YOUR_AIMLAPI_KEY>` with your actual key:
+
+```shell
+AIML_API_KEY = "<YOUR_AIMLAPI_KEY>"
+AIML_API_URL = "https://api.aimlapi.com/v1"
+```
+
+Install `aiml_api` package:
+
+```shell
+# install from PyPI
+pip install aiml_api
+```
+
+### Request Example (Python)
+
+```python
+from aiml_api import AIML_API
+
+api = AIML_API()
+
+completion = api.chat.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    messages=[
+        {"role": "user", "content": "Explain the importance of low-latency LLMs"},
+    ],
+    temperature=0.7,
+    max_tokens=256,
+)
+
+response = completion.choices[0].message.content
+print("AI:", response)
+```
+
+To execute the script, use:
+
+```shell
+python3 <your_script_name>.py
+```
+
 ## Next Steps
 
 * [Check our full list of model IDs](../api-references/model-database/model-database.md)
+
+[^1]: Software Development Kits

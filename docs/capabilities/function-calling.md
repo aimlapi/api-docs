@@ -1,11 +1,24 @@
 ---
+icon: code
 description: >-
   Learn how to connect large language models to external tools using function
   calls.
-icon: code
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Function Calling
+
+This article describes a specific capability of chat models: **function calling**, or simply **functions**. A list of models that support this feature is provided at the end of this page.
 
 ## Introduction
 
@@ -32,24 +45,6 @@ Function calling allows you to obtain structured data reliably from the model. F
 2. **Model response**: The model may choose to call one or more functions. If so, it will output a stringified JSON object adhering to your custom schema (note: the model may hallucinate parameters).
 3. **Parse the JSON**: In your code, parse the string into JSON and call the function with the provided arguments if they exist.
 4. **Call the model again**: Append the function response as a new message and let the model summarize the results back to the user.
-
-### Supported Models
-
-* `mistralai/Mixtral-8x7B-Instruct-v0.1`
-* `mistralai/Mistral-7B-Instruct-v0.1`
-* `togethercomputer/CodeLlama-34b-Instruct`
-* `gpt-4o-2024-05-13`
-* `gpt-4-turbo`
-* `gpt-4-turbo-2024-04-09`
-* `gpt-4-turbo-preview`
-* `gpt-4-0125-preview`
-* `gpt-4-1106-preview`
-* `gpt-4`
-* `gpt-4-0613`
-* `gpt-3.5-turbo`
-* `gpt-3.5-turbo-0125`
-* `gpt-3.5-turbo-1106`
-* `gpt-3.5-turbo-0613`
 
 ## Examples
 
@@ -106,3 +101,27 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ```
 {% endcode %}
+
+## Models That Support Function Calling
+
+* [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
+* [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
+* [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
+* [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
+* [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
+* [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
+* [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
+* [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md)
+* [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md)
+* [meta-llama/Llama-Guard-3-11B-Vision-Turbo](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)
+* [meta-llama/Llama-Vision-Free](../api-references/text-models-llm/Meta/Llama-Vision-Free.md)
+* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
+* [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
+* [chatgpt-4o-latest](../api-references/text-models-llm/OpenAI/gpt-4o.md)
+* [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
+* [gpt-4-turbo-2024-04-09](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
+* [gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)
+* [gpt-4o-2024-05-13](../api-references/text-models-llm/OpenAI/gpt-4o.md)
+* [gpt-4o-2024-08-06](../api-references/text-models-llm/OpenAI/gpt-4o.md)
+* [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
+* [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)

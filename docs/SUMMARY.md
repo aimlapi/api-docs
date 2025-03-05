@@ -8,9 +8,9 @@
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
-[#references:start]: <> ({ "template": "summary" })
 ## API REFERENCES
-* [All Model IDs](api-references/model-database/model-database.md)
+
+* [📒 All Model IDs](api-references/model-database/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)
     * [jamba-1-5-mini](api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)
@@ -140,8 +140,8 @@
   * [MiniMax](api-references/video-models/MiniMax/README.md)
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
-  * [Runway](api-references/video-models/Runway/README.md)
-    * [gen3a_turbo](api-references/video-models/Runway/gen3a_turbo.md)
+  * [Runway](api-references/video-models/runway/README.md)
+    * [gen3a\_turbo](api-references/video-models/runway/gen3a_turbo.md)
 * [Music Models](api-references/music-models/README.md)
   * [MiniMax](api-references/music-models/MiniMax/README.md)
     * [minimax-music \[legacy\]](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
@@ -206,15 +206,13 @@
   * [Together AI](api-references/embedding-models/Together-AI/README.md)
     * [m2-bert-80M-retrieval](api-references/embedding-models/Together-AI/m2-bert-80M-retrieval.md)
 
-[#references:end]: <> ({})
-
 ## Capabilities
 
-* [Completion or Chat Models](capabilities/completion-or-chat-models.md)
+* [Completion and Chat Completion](capabilities/completion-or-chat-models.md)
 * [Parameters](capabilities/parameters.md)
-* [Function Calling](capabilities/function-calling/README.md)
-  * [Image-To-Text (Vision)](capabilities/function-calling/image-to-text-vision.md)
-  * [Anthropic](capabilities/function-calling/anthropic.md)
+* [Function Calling](capabilities/function-calling.md)
+* [Vision in Text Models (Image-To-Text)](capabilities/image-to-text-vision.md)
+* [Features of Anthropic Models](capabilities/anthropic.md)
 * [Managing Assistants & Threads](capabilities/managing-assistants-and-threads/README.md)
   * [Threads](capabilities/managing-assistants-and-threads/threads/README.md)
     * [Runs](capabilities/managing-assistants-and-threads/threads/runs.md)
