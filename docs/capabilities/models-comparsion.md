@@ -1,16 +1,17 @@
 ---
-description: Use the API to list all available models and compare their responses.
 icon: code
+description: Use the API to list all available models and compare their responses.
 ---
 
 # Models comparsion
 
-The API used in this example is listed [here](../api-overview/model-database/).
+The API used in this example is listed on the [model-database.md](../api-references/model-database/model-database.md "mention") page.
 
 ### Example
 
 For example, you can send requests to two random models and compare the results:
 
+{% code overflow="wrap" %}
 ```javascript
 const { OpenAI } = require('openai');
 const { Axios } = require('axios');
@@ -45,9 +46,11 @@ const main = async () => {
 main();
 
 ```
+{% endcode %}
 
 Will return something like this:
 
+{% code overflow="wrap" %}
 ```
 --- zero-one-ai/Yi-34B-Chat ---
 USER: Why is the sky blue?
@@ -57,3 +60,4 @@ USER: Why is the sky blue?
 AI  : Because the white sun beams enter the blue Earth's atmosphere and get dispersed, resulting in the beautiful color we call "sky blue." It's like looking at paint being blown on a canvas by the wind! Just a joke, but the real answer is physics. 😎
 
 ```
+{% endcode %}

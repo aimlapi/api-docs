@@ -51,6 +51,11 @@ print(response.json())
 
 ## Text Models That Support Vision
 
+* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
+* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
+* [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
+* [claude-3-opus-20240229](../api-references/text-models-llm/Anthropic/claude-3-opus.md)
+* [claude-3-sonnet-20240229](../api-references/text-models-llm/Anthropic/claude-3-sonnet.md)
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)

@@ -37,7 +37,7 @@ py --version
 If any of these commands print a Python version higher than 3.8, as shown below, then Python is properly installed:
 
 ```bash
-Python 3.10.6
+Python 3.11.0
 ```
 
 If your result is different (for example, if it just prints "Python" without a version or if on Windows 11 the Microsoft Store opens), then it isn't installed.

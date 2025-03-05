@@ -39,6 +39,6 @@ You can find your API key on the [account page](https://aimlapi.com/app/keys). A
 
 If you are not a developer or are using modern systems, you might be familiar with it only as a "black window for hackers." However, the terminal is a very old and useful way to communicate with a computer. The terminal is an app inside your operating system that allows you to run commands by typing strings associated with some program. Depending on the operating system, you can run the terminal in many ways. Here are basic ways that usually work:
 
-* **On Windows:** Press the combination `Win + R` and type `cmd`.
-* **On Mac:** Press `Command + Space`, search for _Terminal_, then hit `Enter`.
-* **On Linux:** You are probably already familiar with it. On Ubuntu with GUI, for example, you can type `Ctrl + F`, search for _Terminal_, then hit `Enter`.
+* **On Windows:** Press the combination <kbd>`Win + R`</kbd> and type `cmd`.
+* **On Mac:** Press <kbd>`Command + Space`</kbd>, search for _Terminal_, then hit <kbd>`Enter`</kbd>.
+* **On Linux:** You are probably already familiar with it. On Ubuntu with GUI, for example, you can type <kbd>`Ctrl + F`</kbd>, search for _Terminal_, then hit <kbd>`Enter`</kbd>.

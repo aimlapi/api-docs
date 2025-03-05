@@ -38,9 +38,9 @@ The following rules apply:
 
 Using our API on the Free Tier, you can access:
 
-* [Chat completion text models](broken-reference),
-* [Embedding models](broken-reference),
-* [Image models](../api-references/image-models/).
+* [Chat completion text models](../api-references/model-database/model-database.md#text-models-llm),
+* [Embedding models](../api-references/model-database/model-database.md#embedding-models),
+* [Image models](../api-references/model-database/model-database.md#image-models).
 
 The following Free Tier rules apply:
 
@@ -53,16 +53,16 @@ The following Free Tier rules apply:
 
 <summary>Model list</summary>
 
-* flux/schnell&#x20;
-* flux-pro&#x20;
-* flux-pro/v1.1&#x20;
-* flux-pro/v1.1-ultra
-* flux/dev
-* flux/dev/image-to-image
-* flux-realism
-* stable-diffusion-v3-medium&#x20;
-* stable-diffusion-v35-large
-* recraft-v3
+* [flux/schnell ](../api-references/image-models/Black-Forest-Labs/flux-schnell.md)
+* [flux-pro](../api-references/image-models/Black-Forest-Labs/flux-pro.md)&#x20;
+* [flux-pro/v1.1 ](../api-references/image-models/Black-Forest-Labs/flux-pro.md)
+* [flux-pro/v1.1-ultra](../api-references/image-models/Black-Forest-Labs/flux-pro-v1.1-ultra.md)
+* [flux/dev](../api-references/image-models/Black-Forest-Labs/flux-dev.md)
+* [flux/dev/image-to-image](../api-references/image-models/Black-Forest-Labs/flux-dev-image-to-image.md)
+* [flux-realism](../api-references/image-models/Black-Forest-Labs/flux-realism.md)
+* [stable-diffusion-v3-medium ](../api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
+* [stable-diffusion-v35-large](../api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
+* [recraft-v3](../api-references/image-models/RecraftAI/recraft-v3.md)
 
 </details>
 
@@ -72,9 +72,9 @@ The following Free Tier rules apply:
 
 <summary>Model list</summary>
 
-* dall-e-2
-* dall-e-3
-* stabilityai/stable-diffusion-xl-base-1.0
+* [dall-e-2](../api-references/image-models/OpenAI/dall-e-2.md)
+* [dall-e-3](../api-references/image-models/OpenAI/dall-e-3.md)
+* [stabilityai/stable-diffusion-xl-base-1.0](../api-references/image-models/Stability-AI/stable-diffusion-xl-base-1.0.md)
 
 </details>
 
