@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a description of one of the six use cases for the `bagoodex/bagoodex-search-v1` model—retrieving a small structured knowledge base on the requested subject based on information from the internet.
+This is a description of one of the six use cases for the AI Web Search Engine—retrieving a small structured knowledge base on the requested subject based on information from the internet.
 
 An output example:
 
@@ -35,7 +35,7 @@ Note that queries can include advanced search syntax:
 * **Exclude words from your search:** Enter `-` in front of a word that you want to leave out. For example, `jaguar speed -car`.
 {% endhint %}
 
-The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the `bagoodex/knowledge` endpoint below.
+The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the endpoint below.
 
 ## API Schema
 

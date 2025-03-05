@@ -20,7 +20,7 @@ layout:
 
 ## Welcome to the AI/ML API!
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a href="quickstart/setting-up.md">setting-up.md</a></td><td><a href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a href="api-references/model-database/model-database.md">model-database.md</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a href="capabilities/function-calling.md">function-calling.md</a></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Miscellaneous</strong>:</td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a href="quickstart/setting-up.md">setting-up.md</a></td><td><a href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a href="api-references/model-database/model-database.md">model-database.md</a></td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4a1">💡</span><a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a href="capabilities/function-calling.md">function-calling.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Miscellaneous</strong>:</td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
 Select the model by its Task, by its Developer (developing company) or by the supported capabilities:
 
@@ -50,10 +50,6 @@ If you've already made your choice and know the model ID, use the the [Search pa
 [speech-models](api-references/speech-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/web-search-models/" %}
-[web-search-models](api-references/web-search-models/)
-{% endcontent-ref %}
-
 {% content-ref url="api-references/moderation-safety-models/" %}
 [moderation-safety-models](api-references/moderation-safety-models/)
 {% endcontent-ref %}
@@ -77,7 +73,7 @@ If you've already made your choice and know the model ID, use the the [Search pa
 **Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)\
 <mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/Anthropic/) [Embedding](api-references/embedding-models/Anthropic/)\
 **BAAI**: [Embedding](api-references/embedding-models/BAAI/)\
-<mark style="background-color:green;">**Bagoodex**</mark>: [WebSearch](api-references/web-search-models/bagoodex/)\
+<mark style="background-color:green;">**Bagoodex**</mark>: [WebSearch](broken-reference)\
 **Black Forest Labs**: [Image](api-references/image-models/Black-Forest-Labs/)\
 **Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)\
 **Databricks**: [Text/Chat](api-references/text-models-llm/Databricks/)\
@@ -114,8 +110,6 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% content-ref url="capabilities/image-to-text-vision.md" %}
 [image-to-text-vision.md](capabilities/image-to-text-vision.md)
 {% endcontent-ref %}
-
-
 {% endtab %}
 {% endtabs %}
 

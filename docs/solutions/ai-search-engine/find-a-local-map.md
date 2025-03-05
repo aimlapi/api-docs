@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a description of one of the six use cases for the `bagoodex/bagoodex-search-v1` model—retrieving a Google Maps link, a small picture of the map and coordinates of the requested place based on information from the internet.
+This is a description of one of the six use cases for the AI Web Search Engine—retrieving a Google Maps link, a small picture of the map and coordinates of the requested place based on information from the internet.
 
 **An output example**:
 
@@ -30,7 +30,7 @@ Note that queries can include advanced search syntax:
 * **Exclude words from your search:** Enter `-` in front of a word that you want to leave out. For example, `jaguar speed -car`.
 {% endhint %}
 
-The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the `bagoodex/local-map` endpoint below:
+The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the endpoint below:
 
 ## API Schema
 

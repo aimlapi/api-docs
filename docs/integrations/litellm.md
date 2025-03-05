@@ -23,14 +23,22 @@ layout:
 
 If you use this library, you can also call models from AI/ML API through it. Below are the most common use cases:&#x20;
 
-* Chat completion
-* Streaming
-* Chat completion (asynchronous)
-* Streaming (asynchronous)
-* Embedding (asynchronous)
-* Image Generation (asynchronous)
+* [Chat completion](litellm.md#chat-completion)
+* [Streaming](litellm.md#streaming)
+* [Chat completion (asynchronous)](litellm.md#async-completion)
+* [Streaming (asynchronous)](litellm.md#async-streaming)
+* [Embedding (asynchronous)](litellm.md#async-embedding)
+* [Image Generation (asynchronous)](litellm.md#async-image-generation)
 
-## Usage <a href="#usage" id="usage"></a>
+## Installation <a href="#usage" id="usage"></a>
+
+Install the library with the standard pip tool in terminal:
+
+```sh
+pip install litellm
+```
+
+## Making API Calls <a href="#usage" id="usage"></a>
 
 You can choose from LLama, Qwen, Flux, and 200+ other models on the [AI/ML API official website](https://aimlapi.com/models).&#x20;
 
@@ -41,7 +49,7 @@ You can choose from LLama, Qwen, Flux, and 200+ other models on the [AI/ML API o
 import litellm
 
 response = litellm.completion(
-    # The model name must include prefix "openai" + the model id from AI/ML API:
+    # The model name must include prefix "openai/" + the model id from AI/ML API:
     model="openai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo", 
     # your AI/ML API api-key: 
     api_key="<YOUR_AIMLAPI_KEY>", 
@@ -63,7 +71,7 @@ response = litellm.completion(
 import litellm
 
 response = litellm.completion(
-    # The model name must include prefix "openai" + the model id from AI/ML API:
+    # The model name must include prefix "openai/" + the model id from AI/ML API:
     model="openai/Qwen/Qwen2-72B-Instruct",  
     # your AI/ML API api-key 
     api_key="<YOUR_AIMLAPI_KEY>",  
@@ -92,7 +100,7 @@ import litellm
 
 async def main():
     response = await litellm.acompletion(
-        # The model name must include prefix "openai" + the model id from AI/ML API:
+        # The model name must include prefix "openai/" + the model id from AI/ML API:
         model="openai/anthropic/claude-3-5-haiku",  
         # your AI/ML API api-key 
         api_key="<YOUR_AIMLAPI_KEY>", 
@@ -126,7 +134,7 @@ async def main():
     try:
         print("test acompletion + streaming")
         response = await litellm.acompletion(
-            # The model name must include prefix "openai" + model id from AI/ML API:
+            # The model name must include prefix "openai/" + model id from AI/ML API:
             model="openai/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
             # your AI/ML API api-key 
             api_key="<YOUR_AIMLAPI_KEY>",
@@ -158,8 +166,10 @@ import litellm
 
 async def main():
     response = await litellm.aembedding(
-        model="openai/text-embedding-3-small", # The model name must include prefix "openai" + the model name from ai/ml api
-        api_key="",  # your aiml api-key
+        # The model name must include prefix "openai/" + model id from AI/ML API:
+        model="openai/text-embedding-3-small",
+        # your AI/ML API api-key 
+        api_key="<YOUR_AIMLAPI_KEY>",
         api_base="https://api.aimlapi.com/v1", # 👈 the URL has changed from v2 to v1
         input="Your text string",
     )
@@ -182,8 +192,10 @@ import litellm
 
 async def main():
     response = await litellm.aimage_generation(
-        model="openai/dall-e-3",  # The model name must include prefix "openai" + the model name from ai/ml api
-        api_key="",  # your aiml api-key
+        # The model name must include prefix "openai/" + model id from AI/ML API:
+        model="openai/dall-e-3",
+        # your AI/ML API api-key 
+        api_key="",
         api_base="https://api.aimlapi.com/v1", # 👈 the URL has changed from v2 to v1
         prompt="A cute baby sea otter",
     )

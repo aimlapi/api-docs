@@ -162,15 +162,6 @@
   * [Text-to-Speech](api-references/speech-models/text-to-speech/README.md)
     * [Deepgram](api-references/speech-voice-models/tts/Deepgram/README.md)
       * [aura](api-references/speech-voice-models/tts/Deepgram/aura.md)
-* [Web Search Models](api-references/web-search-models/README.md)
-  * [Bagoodex](api-references/web-search-models/bagoodex/README.md)
-    * [bagoodex-search-v1](api-references/web-search-models/bagoodex/bagoodex-search-v1.md)
-      * [Find Links](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-links.md)
-      * [Find Images](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-images.md)
-      * [Find Videos](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-videos.md)
-      * [Find the Weather](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-the-weather.md)
-      * [Find a Local Map](api-references/web-search-models/bagoodex/bagoodex-search-v1/find-a-local-map.md)
-      * [Get a Knowledge Structure](api-references/web-search-models/bagoodex/bagoodex-search-v1/get-a-knowledge-structure.md)
 * [Content Moderation Models](api-references/moderation-safety-models/README.md)
   * [Meta](api-references/moderation-safety-models/Meta/README.md)
     * [Llama-Guard-3-11B-Vision-Turbo](api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)
@@ -205,6 +196,16 @@
     * [text-embedding-ada-002](api-references/embedding-models/OpenAI/text-embedding-ada-002.md)
   * [Together AI](api-references/embedding-models/Together-AI/README.md)
     * [m2-bert-80M-retrieval](api-references/embedding-models/Together-AI/m2-bert-80M-retrieval.md)
+
+## Solutions
+
+* [AI Search Engine](solutions/ai-search-engine/README.md)
+  * [Find Links](solutions/ai-search-engine/find-links.md)
+  * [Find Images](solutions/ai-search-engine/find-images.md)
+  * [Find Videos](solutions/ai-search-engine/find-videos.md)
+  * [Find the Weather](solutions/ai-search-engine/find-the-weather.md)
+  * [Find a Local Map](solutions/ai-search-engine/find-a-local-map.md)
+  * [Get a Knowledge Structure](solutions/ai-search-engine/get-a-knowledge-structure.md)
 
 ## Capabilities
 

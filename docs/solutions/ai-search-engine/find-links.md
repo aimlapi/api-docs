@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a description of one of the six use cases for the `bagoodex/bagoodex-search-v1` model—retrieving internet links related to the requested subject.
+This is a description of one of the six use cases for this AI Web Search Engine—retrieving internet links related to the requested subject.
 
 <details>
 
@@ -50,7 +50,7 @@ Note that queries can include advanced search syntax:
   For example, `jaguar speed -car`.
 {% endhint %}
 
-The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the `bagoodex/links` endpoint below.
+The chat completion endpoint returns an ID, which must then be passed as the sole input parameter `followup_id` to the endpoint below.
 
 ## API Schema
 
