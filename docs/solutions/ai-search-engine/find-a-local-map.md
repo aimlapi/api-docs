@@ -19,6 +19,8 @@ This is a description of one of the six use cases for the AI Search Engine—ret
 The output will be the requested information retrieved from the internet—or empty brackets `{}` if nothing was found or if the entered query does not match the selected search type (for example, entering something like "wofujwofifwuowijufi").
 {% endhint %}
 
+## How to make a call <a href="#how-to-make-a-call" id="how-to-make-a-call"></a>
+
 Check how this call is made in the [example ](find-a-local-map.md#example)below.
 
 {% hint style="success" %}

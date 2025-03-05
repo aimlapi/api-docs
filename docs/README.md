@@ -73,7 +73,6 @@ If you've already made your choice and know the model ID, use the the [Search pa
 **Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)\
 <mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/Anthropic/) [Embedding](api-references/embedding-models/Anthropic/)\
 **BAAI**: [Embedding](api-references/embedding-models/BAAI/)\
-<mark style="background-color:green;">**Bagoodex**</mark>: [WebSearch](broken-reference)\
 **Black Forest Labs**: [Image](api-references/image-models/Black-Forest-Labs/)\
 **Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)\
 **Databricks**: [Text/Chat](api-references/text-models-llm/Databricks/)\
