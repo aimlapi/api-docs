@@ -6,7 +6,7 @@ icon: cube
 
 ## Overview
 
-3D generating models are AI-powered tools designed to create three-dimensional objects, environments, and textures based on input data such as text prompts, reference images, or existing 3D models. These models utilize advanced techniques like neural rendering, implicit representations, and generative adversarial networks (GANs) to produce high-quality, realistic 3D assets. They are widely used in gaming, virtual reality (VR), augmented reality (AR), and industrial design.
+3D-generating models are AI-powered tools designed to create three-dimensional objects, environments, and textures based on input data such as text prompts, reference images, or existing 3D models. These models utilize advanced techniques like neural rendering, implicit representations, and generative adversarial networks (GANs) to produce high-quality, realistic 3D assets. They are widely used in gaming, virtual reality (VR), augmented reality (AR), and industrial design.
 
 ## **Key Features**
 

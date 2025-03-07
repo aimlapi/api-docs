@@ -109,6 +109,10 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% content-ref url="capabilities/image-to-text-vision.md" %}
 [image-to-text-vision.md](capabilities/image-to-text-vision.md)
 {% endcontent-ref %}
+
+{% content-ref url="capabilities/code-generation.md" %}
+[code-generation.md](capabilities/code-generation.md)
+{% endcontent-ref %}
 {% endtab %}
 {% endtabs %}
 
