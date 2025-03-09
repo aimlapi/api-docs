@@ -1,4 +1,5 @@
 ---
+description: Welcome to the AI/ML API!
 layout:
   title:
     visible: true
@@ -14,16 +15,31 @@ layout:
 
 # 🧭 Documentation Map
 
-This documentation portal is designed to help you choose and configure one of our **solutions**—ready-to-use tools for specific practical tasks—or the AI **model** that best suits your needs from our available options and correctly integrate it into your code.
+This documentation portal is designed to help you choose and configure one of our **solutions**—ready-to-use tools for specific practical tasks—or the AI **model** that best suits your needs from our available options and correctly integrate it into your code. Simply follow the steps below.
 
-## Welcome to the AI/ML API!
+{% stepper %}
+{% step %}
+### &#x20;<mark style="background-color:green;">QUICKSTART</mark>&#x20;
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a href="quickstart/setting-up.md">setting-up.md</a></td><td><a href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><strong>Select Your AI</strong>:</td><td><a href="api-references/model-database/model-database.md">model-database.md</a></td><td><a href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a href="capabilities/function-calling.md">function-calling.md</a></td><td></td><td></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Miscellaneous</strong>:</td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td></td><td></td><td></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+Prepare everything needed to call our API:\
+[setting-up.md](quickstart/setting-up.md "mention")     [supported-sdks.md](quickstart/supported-sdks.md "mention")&#x20;
 
-Select the model by its Task, by its Developer (developing company) or by the supported Capabilities:
+***
+{% endstep %}
+
+{% step %}
+### &#x20;<mark style="background-color:yellow;">SELECT  YOUR  AI</mark>&#x20;
+
+**Choose Ready-to-Use Solutions**    |    [**SOLUTIONS**](broken-reference)
+
+* [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
+
+**Find a Suitable Model Instead**   |     [**API REFERENCES**](broken-reference)
+
+Select the model by its **Task**, by its **Developer** or by the supported **Capabilities**:
 
 {% hint style="info" %}
-If you've already made your choice and know the model ID, use the the [Search panel](https://docs.aimlapi.com/?q=) on your right.
+If you've already made your choice and know the model ID, use the [Search panel](https://docs.aimlapi.com/?q=) on your right.
 {% endhint %}
 
 {% tabs %}
@@ -66,33 +82,33 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**AI21 Labs**: [Text/Chat](api-references/text-models-llm/AI21-Labs/)\
-**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
-**Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)\
-<mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/Anthropic/) [Embedding](api-references/embedding-models/Anthropic/)\
-**BAAI**: [Embedding](api-references/embedding-models/BAAI/)\
-**Black Forest Labs**: [Image](api-references/image-models/Black-Forest-Labs/)\
-**Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)\
-**Databricks**: [Text/Chat](api-references/text-models-llm/Databricks/)\
-<mark style="background-color:green;">**DeepSeek**</mark>: [Text/Chat](api-references/text-models-llm/DeepSeek/)\
-**Deepgram**: [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/) [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
-**Google**: [Text/Chat](api-references/text-models-llm/Google/) [Image](api-references/image-models/Google/) [Embedding](api-references/embedding-models/Google/)\
-**Gryphe**: [Text/Chat](api-references/text-models-llm/Gryphe/)\
-<mark style="background-color:green;">**Kling AI**</mark>: [Video](api-references/video-models/Kling-AI/)\
-**Meta**: [Text/Chat](api-references/text-models-llm/Meta/)\
-**Microsoft**: [Text/Chat](api-references/text-models-llm/Microsoft/)\
-<mark style="background-color:green;">**MiniMax**</mark>: [Text/Chat](api-references/text-models-llm/MiniMax/) [Video](api-references/video-models/MiniMax/) [Music](api-references/music-models/MiniMax/)\
-**Mistral AI**: [Text/Chat](api-references/text-models-llm/Mistral-AI/)\
-**NVIDIA**: [Text/Chat](api-references/text-models-llm/NVIDIA/)\
-**NeverSleep**: [Text/Chat](api-references/text-models-llm/NeverSleep/)\
-**NousResearch**: [Text/Chat](api-references/text-models-llm/NousResearch/)\
-<mark style="background-color:green;">**OpenAI**</mark>: [Text/Chat](api-references/text-models-llm/OpenAI/) [Image](api-references/image-models/OpenAI/) [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/) [Embedding](api-references/embedding-models/OpenAI/)\
-**RecraftAI**: [Image](api-references/image-models/RecraftAI/)\
-**Runway**: [Video](api-references/video-models/runway/)\
-<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)\
-**Together AI**: [Embedding](api-references/embedding-models/Together-AI/)\
-**Upstage AI**: [Text/Chat](api-references/text-models-llm/Upstage-AI/)\
-**xAI**: [Text/Chat](api-references/text-models-llm/xAI/)
+**AI21 Labs**:  [Text/Chat](api-references/text-models-llm/AI21-Labs/)\
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
+**Anthracite**:  [Text/Chat](api-references/text-models-llm/Anthracite/)\
+<mark style="background-color:green;">**Anthropic**</mark>:  [Text/Chat](api-references/text-models-llm/Anthropic/)  [Embedding](api-references/embedding-models/Anthropic/) \
+**BAAI**:  [Embedding](api-references/embedding-models/BAAI/)\
+**Black Forest Labs**:  [Image](api-references/image-models/Black-Forest-Labs/)\
+**Cohere**:  [Text/Chat](api-references/text-models-llm/Cohere/)\
+**Databricks**:  [Text/Chat](api-references/text-models-llm/Databricks/)\
+<mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
+**Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)\
+**Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
+<mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
+**Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\
+**Microsoft**:  [Text/Chat](api-references/text-models-llm/Microsoft/)\
+<mark style="background-color:green;">**MiniMax**</mark>:  [Text/Chat](api-references/text-models-llm/MiniMax/)  [Video](api-references/video-models/MiniMax/)  [Music](api-references/music-models/MiniMax/)\
+**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)\
+**NVIDIA**:  [Text/Chat](api-references/text-models-llm/NVIDIA/)\
+**NeverSleep**:  [Text/Chat](api-references/text-models-llm/NeverSleep/)\
+**NousResearch**:  [Text/Chat](api-references/text-models-llm/NousResearch/)\
+<mark style="background-color:green;">**OpenAI**</mark>:  [Text/Chat](api-references/text-models-llm/OpenAI/)  [Image](api-references/image-models/OpenAI/)  [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/)  [Embedding](api-references/embedding-models/OpenAI/) \
+**RecraftAI**:  [Image](api-references/image-models/RecraftAI/)\
+**Runway**:  [Video](api-references/video-models/runway/)\
+<mark style="background-color:green;">**Stability AI**</mark>:  [Image](api-references/image-models/Stability-AI/)  [Music](api-references/music-models/Stability-AI/)  [3D-Generation](api-references/3d-generating-models/Stability-AI/)\
+**Together AI**:  [Embedding](api-references/embedding-models/Together-AI/)\
+**Upstage AI**:  [Text/Chat](api-references/text-models-llm/Upstage-AI/)\
+**xAI**:  [Text/Chat](api-references/text-models-llm/xAI/)
 {% endtab %}
 
 {% tab title="Models by CAPABILITY" %}
@@ -114,6 +130,12 @@ If you've already made your choice and know the model ID, use the the [Search pa
 {% endtab %}
 {% endtabs %}
 
-## Getting Started
+***
+{% endstep %}
 
-To start using the AI/ML API, follow the [Quickstart guide](quickstart/setting-up.md) to set up your environment and make your first API call.
+{% step %}
+### &#x20;<mark style="background-color:orange;">GOING  DEEPER</mark>&#x20;
+
+<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/managing-assistants-and-threads/">Managing Assistants &#x26; Threads</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
+{% endstep %}
+{% endstepper %}
