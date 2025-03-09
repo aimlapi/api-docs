@@ -1,5 +1,17 @@
 ---
 icon: cube
+description: Overview of the capabilities of AIML API 3D-generating models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 3D-Generating Models

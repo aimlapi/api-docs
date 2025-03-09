@@ -30,12 +30,14 @@ A long time ago, there were three princesses in a distant kingdom:
 
 Running the model might yield the following output:
 
+{% code overflow="wrap" %}
 ```
 A long time ago, there were three princesses in a distant kingdom: 
 Princess Narcissa, who was beautiful but vain, Princess Rosa, who was kind and gentle, 
 and Princess Aurora, who was strong and brave. 
 The three sisters lived in a beautiful palace with their parents, the king and queen.
 ```
+{% endcode %}
 
 This is a simple text completion. However, when training datasets become larger and are refined by human alignments, we can achieve truly AI-like results that even researchers did not initially anticipate.
 
@@ -45,12 +47,14 @@ To make text models useful in code and applications beyond generating arbitrary 
 
 For example, the model training data might look like the following:
 
+{% code overflow="wrap" %}
 ```
 USER: What's the color of the sky?
 ASSISTANT: The color of the sky can vary depending on several factors, but it is most commonly perceived as blue during the daytime.
 USER: What was the theme we discussed in the previous sentence?
 ASSISTANT: The theme of the previous sentence centered around the color of the sky.
 ```
+{% endcode %}
 
 The above data is written in a chat-like conversation format. The training dataset contains a huge amount of these conversations, and during the training process, the model learns the relationships between words and characters, enabling it to return them in the same predictable format.
 

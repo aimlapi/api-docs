@@ -18,15 +18,16 @@ layout:
 
 # Function Calling
 
-This article describes a specific capability of chat models: **function calling**, or simply **functions**. A list of models that support this feature is provided at the end of this page.
+This article describes a specific capability of chat models: **function calling**, or simply **functions**. \
+A list of models that support this feature is provided at the end of this page.
 
 ## Introduction
 
-When using the API, you can define functions that the model can choose to call, generating a JSON object with the necessary arguments. The Chat Completions API itself does not execute these functions; instead, it outputs the JSON, which you can then use to call the function within your code.
+When using text (chat) models via the API, you can define functions that the model can choose to call, generating a JSON object with the necessary arguments. The text model API itself does not execute these functions; instead, it outputs the JSON, which you can then use to call the function within your code.
 
 The latest models (gpt-4o, gpt-4-turbo, and gpt-3.5-turbo) are designed to detect when a function should be called based on the input and to produce JSON that closely matches the function signature. However, this functionality comes with potential risks. We strongly recommend implementing user confirmation steps before performing actions that could impact the real world (e.g., sending an email, posting online, making a purchase).
 
-This guide focuses on function calling with the Chat Completions API.
+This guide focuses on function calling with our text models API.
 
 ## Common Use Cases
 

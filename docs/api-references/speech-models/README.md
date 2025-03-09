@@ -18,20 +18,11 @@ layout:
 
 With our API you are able to synthesize speech and transform speech into text.
 
-## Providers
-
-### Deepgram
-
-### OpenAI
-
-* Whisper Model
-
-## Getting Started
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="speech-to-text/" %}
+[speech-to-text](speech-to-text/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="text-to-speech/" %}
+[text-to-speech](text-to-speech/)
 {% endcontent-ref %}
+

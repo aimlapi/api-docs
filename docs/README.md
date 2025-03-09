@@ -1,8 +1,4 @@
 ---
-description: >-
-  This documentation portal is designed to help you choose the AI model that
-  best suits your needs from our available options and correctly integrate it
-  into your code.
 layout:
   title:
     visible: true
@@ -18,11 +14,13 @@ layout:
 
 # 🧭 Documentation Map
 
+This documentation portal is designed to help you choose and configure one of our **solutions**—ready-to-use tools for specific practical tasks—or the AI **model** that best suits your needs from our available options and correctly integrate it into your code.
+
 ## Welcome to the AI/ML API!
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a href="quickstart/setting-up.md">setting-up.md</a></td><td><a href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td><a href="api-references/model-database/model-database.md">model-database.md</a></td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4a1">💡</span>  <a data-mention href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a href="capabilities/function-calling.md">function-calling.md</a></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Miscellaneous</strong>:</td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Start Here</strong>:</td><td><a href="quickstart/setting-up.md">setting-up.md</a></td><td><a href="quickstart/supported-sdks.md">supported-sdks.md</a></td><td></td><td><strong>Select Your AI</strong>:</td><td><a href="api-references/model-database/model-database.md">model-database.md</a></td><td><a href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/kit.png">kit.png</a></td><td><a href=".gitbook/assets/Group 39481.png">Group 39481.png</a></td></tr><tr><td><strong>Going Deeper</strong>:</td><td><a href="capabilities/completion-or-chat-models.md">completion-or-chat-models.md</a></td><td><a href="capabilities/managing-assistants-and-threads/">managing-assistants-and-threads</a></td><td><a href="capabilities/function-calling.md">function-calling.md</a></td><td></td><td></td><td></td><td><a href=".gitbook/assets/Code.png">Code.png</a></td><td><a href=".gitbook/assets/Group 39482.png">Group 39482.png</a></td></tr><tr><td><strong>Miscellaneous</strong>:</td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td><a href="broken-reference">Broken link</a></td><td></td><td></td><td></td><td><a href=".gitbook/assets/Link.png">Link.png</a></td><td><a href=".gitbook/assets/Group 39483.png">Group 39483.png</a></td></tr></tbody></table>
 
-Select the model by its Task, by its Developer (developing company) or by the supported capabilities:
+Select the model by its Task, by its Developer (developing company) or by the supported Capabilities:
 
 {% hint style="info" %}
 If you've already made your choice and know the model ID, use the the [Search panel](https://docs.aimlapi.com/?q=) on your right.

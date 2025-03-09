@@ -1,5 +1,8 @@
 ---
 icon: shield
+description: >-
+  Overview of the capabilities of AIML API content moderation models (also know
+  as AI safety models).
 layout:
   title:
     visible: true
@@ -33,7 +36,7 @@ Content moderation models are perfect for scenarios where content safety is cruc
 * Safeguard sensitive systems from unsafe data.
 * Ensure compliance with safety standards in applications.
 
-### Quick Example
+## Quick Example
 
 {% hint style="warning" %}
 Ensure you replace <kbd>\<YOUR\_API\_KEY></kbd> with your actual API key and <kbd>\<YOUR\_MODEL></kbd> with the actual content moderation model id before running the code.

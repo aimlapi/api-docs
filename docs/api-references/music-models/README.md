@@ -1,6 +1,6 @@
 ---
 icon: guitar
-description: Overview of the capabilities of AIML API audio models.
+description: Overview of the capabilities of AIML API audio / music models.
 layout:
   title:
     visible: true

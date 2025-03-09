@@ -19,7 +19,7 @@ layout:
 
 # Setting Up
 
-Here, you'll learn how to start using our API in your code:&#x20;
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you use our ready-made [solution](broken-reference) or integrate one of the [models](../api-references/model-database/model-database.md) we offer:&#x20;
 
 * generating an AIML API Key,&#x20;
 * configuring the base URL,&#x20;
@@ -81,7 +81,7 @@ Based on your environment, you will call our API differently. Below are two comm
 In the examples below, we use the [**OpenAI SDK**](https://docs.aimlapi.com/quickstart/supported-sdks#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
 
-If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `my_key` in the second line with your AIML API Key obtained from your account.\
+If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API Key obtained from your account.\
 However, below, we will still go through these examples step by step in both languages explaining every single line.
 
 {% tabs %}
@@ -92,8 +92,8 @@ from openai import OpenAI
 
 base_url = "https://api.aimlapi.com/v1"
 
-# Insert your AIML API Key in the quotation marks instead of my_key:
-api_key = "my_key" 
+# Insert your AIML API key in the quotation marks instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>" 
 
 system_prompt = "You are a travel agent. Be descriptive and helpful."
 user_prompt = "Tell me about San Francisco"
@@ -129,7 +129,7 @@ if __name__
 const baseURL = "https://api.aimlapi.com/v1";
 
 // Insert your AIML API Key in the quotation marks instead of my_key:
-const apiKey = "my_key"; 
+const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>"; 
 
 const systemPrompt = "You are a travel agent. Be descriptive and helpful";
 const userPrompt = "Tell me about San Francisco";
@@ -213,13 +213,13 @@ Create new file and name it as `travel.py`
 touch travel.py
 ```
 
-Paste following content inside this `travel.py` and replace `my_key` with your API key you got on [first step](setting-up.md#generating-an-api-key)
+Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key)
 
 ```python
 from openai import OpenAI
 
 base_url = "https://api.aimlapi.com/v1"
-api_key = "my_key"
+api_key = "<YOUR_AIMLAPI_KEY>"
 system_prompt = "You are a travel agent. Be descriptive and helpful."
 user_prompt = "Tell me about San Francisco"
 
@@ -255,6 +255,7 @@ python3 ./travel.py
 
 If you done all correct, you will see following output:
 
+{% code overflow="wrap" %}
 ```
 User: Tell me about San Francisco
 AI:  San Francisco, located in northern California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful vistas, and diverse neighborhoods. It's a popular tourist destination famous for its iconic Golden Gate Bridge, which spans the entrance to the San Francisco Bay, and the iconic Alcatraz Island, home to the infamous federal prison.
@@ -263,6 +264,7 @@ The city's famous hills offer stunning views of the bay and the cityscape. Lomba
 
 San Francisco's diverse neighborhoods each have their unique character. The historic Chinatown is the oldest in North America, while the colorful streets of the Mission District are known for their murals and Latin American culture. The Castro District is famous for its LGBTQ+ community and vibrant nightlife.
 ```
+{% endcode %}
 
 </details>
 
@@ -308,7 +310,7 @@ And paste the following content:
 <pre class="language-javascript"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
 </strong>
 const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "my_key";
+const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>";
 const systemPrompt = "You are a travel agent. Be descriptive and helpful";
 const userPrompt = "Tell me about San Francisco";
 
@@ -345,12 +347,14 @@ main();
 
 You will see a response that looks like this:
 
+{% code overflow="wrap" %}
 ```
 User: Tell me about San Francisco
 AI: San Francisco, located in the northern part of California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful scenery, and diverse neighborhoods.
 
 The city is famous for its iconic Golden Gate Bridge, an engineering marvel and one of the most recognized structures in the world. Spanning the Golden Gate Strait, this red-orange suspension bridge connects San Francisco to Marin County and offers breathtaking views of the San Francisco Bay and the Pacific Ocean.
 ```
+{% endcode %}
 
 </details>
 
@@ -380,7 +384,7 @@ Simple as it is. The next step is to initialize variables that our code will use
 {% tab title="JavaScript" %}
 ```javascript
 const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "my_key";
+const apiKey = "<YOUR_AIMLAPI_KEY>";
 const systemPrompt = "You are a travel agent. Be descriptive and helpful";
 const userPrompt = "Tell me about San Francisco";
 ```
@@ -389,7 +393,7 @@ const userPrompt = "Tell me about San Francisco";
 {% tab title="Python" %}
 ```python
 base_url = "https://api.aimlapi.com/v1"
-api_key = "my_key"
+api_key = "<YOUR_AIMLAPI_KEY>"
 system_prompt = "You are a travel agent. Be descriptive and helpful."
 user_prompt = "Tell me about San Francisco"
 ```
