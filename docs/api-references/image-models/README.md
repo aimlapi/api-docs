@@ -1,6 +1,17 @@
 ---
 icon: image-landscape
 description: A description of image generation process using AIML API image models.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Image Models
@@ -58,9 +69,3 @@ response = requests.post(url, json=payload, headers=headers)
 We obtained the following image by running that code example:
 
 <figure><img src="../../.gitbook/assets/66c834ddf0e7e8e65fb69c9f_flux.1 robots (2).webp" alt=""><figcaption><p><em>(And AI needs your clothes, your boots and your motorcycle.)</em></p></figcaption></figure>
-
-
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}

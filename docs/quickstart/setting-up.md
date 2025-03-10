@@ -46,7 +46,7 @@ To use the AIML API, you need to create an account and generate an API key. Foll
 1. [**Create an Account**](https://aimlapi.com/app/sign-up)**:** Visit the AI/ML API website and create an account.
 2. [**Generate an API Key**](https://aimlapi.com/app/keys)**:** After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
 
 ## **Configure Base URL**
 
