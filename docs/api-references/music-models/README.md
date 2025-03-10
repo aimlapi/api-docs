@@ -90,8 +90,8 @@ def main():
 ##Side by side, through thick and thin, \n\nWith a laugh, we always win. \n\n Storms may come, but we stay true, \n\nFriends forever—me and you!##
 ''',   
     }
-    # Insert your AIML API Key instead of <YOUR_API_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
     response = requests.post(url, json=payload, headers=headers)
     print("Generation:", response.json())
@@ -115,8 +115,8 @@ def main():
         # Insert the id from the output of the 1st code block, instead of &#x3C;GENERATION_ID>:
         "generation_id": "&#x3C;GENERATION_ID>",
     }
-    # Insert your AIML API Key instead of &#x3C;YOUR_API_KEY>:
-    headers = {"Authorization": "Bearer &#x3C;YOUR_API_KEY>", "Content-Type": "application/json"}
+    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
+    headers = {"Authorization": "Bearer &#x3C;YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
     response = requests.get(url, params=params, headers=headers)
     print("Generation:", response.json())
