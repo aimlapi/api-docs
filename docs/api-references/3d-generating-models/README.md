@@ -40,8 +40,8 @@ def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
         headers={
-            
-            "Authorization": "Bearer <YOUR_API_KEY>",
+            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+            "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
             "Content-Type": "application/json",
         },
         json={
