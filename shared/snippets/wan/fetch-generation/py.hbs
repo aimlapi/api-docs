@@ -1,0 +1,16 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/generate/video/alibaba/generation"
+    params = {
+        "generation_id": "<YOUR_GENERATION_ID>",
+    }
+    headers = {"Authorization": "Bearer {{apiKey}}", "Content-Type": "application/json"}
+
+    response = requests.get(url, params=params, headers=headers)
+    print("Generation:", response.json())
+
+
+if __name__ == "__main__":
+    main()
