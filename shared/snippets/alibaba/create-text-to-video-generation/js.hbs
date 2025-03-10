@@ -8,7 +8,7 @@ const main = async () => {
     body: JSON.stringify({
       model: '{{model}}',
       prompt: 'A DJ on the stand is playing, around a World War II battlefield, lots of explosions, thousands of dancing soldiers, between tanks shooting, barbed wire fences, lots of smoke and fire, black and white old video: hyper realistic, photorealistic, photography, super detailed, very sharp, on a very white background',
-      ratio: '16:9',
+      aspect_ratio: '16:9',
     }),
   }).then((res) => res.json());
 
