@@ -220,7 +220,7 @@
     * [Messages](capabilities/managing-assistants-and-threads/threads/messages.md)
   * [Using Assistants & Threads](capabilities/managing-assistants-and-threads/using-assistants-and-threads.md)
 * [Code Generation](capabilities/code-generation.md)
-* [Models comparsion](capabilities/models-comparsion.md)
+* [Model comparison](capabilities/models-comparsion.md)
 
 ## FAQ
 
