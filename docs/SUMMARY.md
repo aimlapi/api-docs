@@ -233,6 +233,10 @@
 * [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 
+## Errors and Messages
+
+* [General Info](errors-and-messages/general-info.md)
+
 ## Glossary
 
 * [Concepts](glossary/concepts.md)
