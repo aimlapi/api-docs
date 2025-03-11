@@ -1,6 +1,6 @@
 ---
-icon: circle-question
 description: FAQ section about AI/ML API Free Tier option.
+icon: circle-question
 layout:
   title:
     visible: true
@@ -79,3 +79,20 @@ The following Free Tier rules apply:
 </details>
 
 * If image generation requires more than 512 AI/ML API tokens, the request will not be processed.
+
+#### Error Message
+
+When you attempt to call the API after reaching the limit, you will receive an appropriate error. \
+For example, if the `/v1/chat/completions` endpoint was called:
+
+{% code overflow="wrap" %}
+```json
+{
+    "message": "Free-tier limit: You've reached your free limit for the hour. Get AI/ML Subscription to use API, visit https://aimlapi.com/app/billing/ !"
+    "path": "/v1/chat/completions"
+    "requestId": "798b860e-98c2-4e8e-8c50-550bcfc2eccc"
+    "statusCode": "429"
+    "timestamp": "2025-03-11T07:13:27.813Z"
+}
+```
+{% endcode %}
