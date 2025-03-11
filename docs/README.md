@@ -30,11 +30,7 @@ Prepare everything needed to call our API:\
 {% step %}
 ### &#x20;<mark style="background-color:yellow;">SELECT  YOUR  AI</mark>&#x20;
 
-**Choose Ready-to-Use Solutions**    |    [**SOLUTIONS**](broken-reference)
-
-* [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
-
-**Find a Suitable Model Instead**   |     [**API REFERENCES**](broken-reference)
+**Find a Suitable Model**   |     [**API REFERENCES**](broken-reference)
 
 Select the model by its **Task**, by its **Developer** or by the supported **Capabilities**:
 
@@ -129,6 +125,10 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endcontent-ref %}
 {% endtab %}
 {% endtabs %}
+
+**Choose Ready-to-Use Solutions Instead**    |    [**SOLUTIONS**](broken-reference)
+
+* [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
 
 ***
 {% endstep %}
