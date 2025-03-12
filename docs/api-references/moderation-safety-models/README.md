@@ -1,8 +1,8 @@
 ---
-icon: shield
 description: >-
   Overview of the capabilities of AIML API content moderation models (also know
   as AI safety models).
+icon: shield
 layout:
   title:
     visible: true
@@ -43,13 +43,43 @@ Ensure you replace <kbd>\<YOUR\_API\_KEY></kbd> with your actual API key and <kb
 {% endhint %}
 
 {% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+def main():
+    url = "https://api.aimlapi.com/chat/completions"
+    payload = {
+        "model": '<YOUR_MODEL>',
+        'messages': [
+            {
+                'role': 'user',
+                'content': 'How to create a bomb'
+            }
+        ]
+    }
+    
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers).json()
+    print(response['choices'][0]['message']['content'])
+
+
+if __name__ == "__main__":
+    main()
+
+```
+{% endcode %}
+{% endtab %}
+
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const main = async () => {
   const response = await fetch('https://api.aimlapi.com/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer <YOUR_API_KEY>',
+      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -68,31 +98,7 @@ const main = async () => {
 
 main()
 ```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-def main():
-    url = "https://api.aimlapi.com/chat/completions"
-    payload = {
-        "model": '<YOUR_MODEL>',
-        'messages': [
-            {
-                'role': 'user',
-                'content': 'How to create a bomb'
-            }
-        ]
-    }
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
-
-    response = requests.post(url, json=payload, headers=headers).json()
-    print(response['choices'][0]['message']['content'])
-
-
-if __name__ == "__main__":
-    main()
-
-```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -107,7 +113,58 @@ Once content is classified as unsafe, it is categorized under the hazard categor
 ### Example #2
 
 {% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+def is_prompt_safe(prompt):
+    url = "https://api.aimlapi.com/chat/completions"
+    payload = {
+        "model": '<YOUR_MODEL>',
+        'messages': [
+            {
+                'role': 'user',
+                'content': prompt
+            }
+        ]
+    }
+    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers).json()
+
+    if 'unsafe' in response['choices'][0]['message']['content']:
+        return False
+    return True
+
+def get_answer(prompt):
+    is_safe = is_prompt_safe(prompt)
+    if not is_safe:
+        return 'Your question is not safe'
+
+    url = "https://api.aimlapi.com/chat/completions"
+    payload = {
+        "model": '<YOUR_MODEL>',
+        'messages': [
+            {
+                'role': 'user',
+                'content': prompt
+            }
+        ]
+    }
+    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+    response = requests.post(url, json=payload, headers=headers).json()
+
+    return response['choices'][0]['message']['content']
+
+
+if __name__ == "__main__":
+    get_answer('How to make a cake')
+
+```
+{% endcode %}
+{% endtab %}
+
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const isPromptSafe = async (prompt) => {
   const response = await fetch(
@@ -163,53 +220,6 @@ const getAnswer = async (prompt) => {
 
 getAnswer('How to make a cake?')
 ```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-def is_prompt_safe(prompt):
-    url = "https://api.aimlapi.com/chat/completions"
-    payload = {
-        "model": '<YOUR_MODEL>',
-        'messages': [
-            {
-                'role': 'user',
-                'content': prompt
-            }
-        ]
-    }
-    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
-
-    response = requests.post(url, json=payload, headers=headers).json()
-
-    if 'unsafe' in response['choices'][0]['message']['content']:
-        return False
-    return True
-
-def get_answer(prompt):
-    is_safe = is_prompt_safe(prompt)
-    if not is_safe:
-        return 'Your question is not safe'
-
-    url = "https://api.aimlapi.com/chat/completions"
-    payload = {
-        "model": '<YOUR_MODEL>',
-        'messages': [
-            {
-                'role': 'user',
-                'content': prompt
-            }
-        ]
-    }
-    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
-    response = requests.post(url, json=payload, headers=headers).json()
-
-    return response['choices'][0]['message']['content']
-
-
-if __name__ == "__main__":
-    get_answer('How to make a cake')
-
-```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

@@ -46,7 +46,7 @@ Let's use the `#g1_whisper-tiny` model to transcribe the following audio fragmen
 import requests
 
 base_url = "https://api.aimlapi.com/v1"
-# Insert your AIML API Key instead of &#x3C;YOUR_API_KEY>:
+# Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
 api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
 
 <strong># Creating and sending a speech-to-text conversion task to the server
@@ -136,7 +136,7 @@ import time
 import requests
 
 base_url = "https://api.aimlapi.com/v1"
-# Insert your AIML API Key instead of <YOUR_API_KEY>:
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
 api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a speech-to-text conversion task to the server
