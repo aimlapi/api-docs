@@ -1,9 +1,9 @@
 ---
-icon: hand-wave
 description: >-
   A step-by-step guide to setting up and making a test call to the AI model,
   including generating an API key, configuring the Base URL, and running the
   first request.
+icon: hand-wave
 layout:
   title:
     visible: true
@@ -19,13 +19,12 @@ layout:
 
 # Setting Up
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you use our ready-made [solution](broken-reference) or integrate one of the [models](../api-references/model-database/model-database.md) we offer:&#x20;
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database/model-database.md) we offer or use our ready-made [solution](broken-reference):&#x20;
 
 * generating an AIML API Key,&#x20;
-* configuring the base URL,&#x20;
-* walking through an example of connecting to the **mistralai/Mistral-7B-Instruct-v0.2** model via OpenAI SDK.&#x20;
+* configuring the base URL.
 
-This guide is suitable even for complete beginners.
+Let's walk through an example of connecting to the **mistralai/Mistral-7B-Instruct-v0.2** model via OpenAI SDK. This guide is suitable even for complete beginners.
 
 ## G**enerating an AIML API Key**
 
