@@ -29,14 +29,14 @@ See API references and examples on the subpages.
 [bagoodex-search-v1.json](../../api-references/web-search-models/bagoodex/bagoodex-search-v1.json)
 {% endopenapi %}
 
-## Example
+## Example #1
 
 ```python
 import requests
 from openai import OpenAI
 
-# Insert your AIML API Key instead of <YOUR_API_KEY>:
-API_KEY = '<YOUR_API_KEY>'
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+API_KEY = '<YOUR_AIMLAPI_KEY>'
 API_URL = 'https://api.aimlapi.com'
 
 def complete_chat():
@@ -89,4 +89,79 @@ To make a slingshot, you can follow the instructions provided in the two sources
 You can choose to make either a giant slingshot or a stick slingshot, depending on your preference and the materials available.  
 ```
 {% endcode %}
+
+## Example #2: Using the IP Parameter for Personalized Model Output
+
+When using regular search engines in browsers, we can simply ask, 'Weather today' without specifying our location. In this case, the search engine automatically uses your IP address to determine your location and provide a more relevant response. The AI Search Engine also supports IP-based personalization.
+
+In the example below, the query does not specify a city, but since the request includes an IP address registered in Stockholm, the system automatically adjusts, and the response will contain today's weather forecast for that city.
+
+{% hint style="warning" %}
+Note that when making a request via Python, this parameter should be included in the extra\_body parameter (see examples below).
+{% endhint %}
+
+```python
+import requests
+from openai import OpenAI
+
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+API_KEY = '<YOUR_AIMLAPI_KEY>'
+API_URL = 'https://api.aimlapi.com'
+
+# Call the standart chat completion endpoint to get an ID
+def complete_chat():
+    client = OpenAI(
+        base_url=API_URL,
+        api_key=API_KEY,
+    )    
+
+    response = client.chat.completions.create(
+        model="bagoodex/bagoodex-search-v1",
+        messages=[
+            {
+                "role": "user",
+                "content": "Weather today",
+            },
+        ],
+        
+        # insert your IP into this section
+        extra_body={
+            'ip': '192.44.242.19' # we used a random IP address from Stockholm
+        }
+    )
+    print(response.choices[0].message.content)
+    return response
+
+
+# Run the function
+complete_chat()
+```
+
+<details>
+
+<summary>Response When Using IP Parameter</summary>
+
+{% code overflow="wrap" %}
+```
+"According to the forecast, today's weather in Stockholm is partly cloudy with light winds. The temperature is expected to be around 6°C (43°F) with a gentle breeze. \n\nThe forecast also mentions that the weather will be sunny intervals and light winds throughout the day."
+```
+{% endcode %}
+
+</details>
+
+{% hint style="warning" %}
+Keep in mind that the system caches the IP address for a period of two weeks. This means that after specifying an IP address once, any queries without an explicit location will continue to return responses linked to Stockholm for the next two weeks, even if you don't include the IP address in subsequent requests. If you need to change the location, simply provide a new IP address in your next request.
+{% endhint %}
+
+<details>
+
+<summary>Response when the IP parameter is used (from Stockholm), but the request also includes a different location (San Francisco)</summary>
+
+{% code overflow="wrap" %}
+```
+"According to the weather forecast, today in San Francisco, there will be a strong cold front moving through the Bay Area from late morning into the afternoon, boosting wind speeds with gusts at around 45 mph midday and featuring high rain rates at times. This may lead to localized runoff issues. The high temperature is expected to be around 56F, with a chance of rain 100% and rainfall near a half an inch. \n\nYou can check the latest forecast and weather conditions on websites such as [https://weather.com/weather/today/l/USCA0987:1:US] or [https://www.accuweather.com/en/us/san-francisco/94103/weather-forecast/347629]."
+```
+{% endcode %}
+
+</details>
 
