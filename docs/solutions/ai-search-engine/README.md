@@ -23,6 +23,25 @@ See API references and examples on the subpages.
 {% endstep %}
 {% endstepper %}
 
+## How to make a call
+
+&#x20;Check how this call is made in the [example ](./#example)below.
+
+{% hint style="success" %}
+Note that queries can include advanced search syntax:
+
+* **Search for an exact match:** Enter a word or phrase using `\"` before and after it.\
+  For example, `\"tallest building\"`.
+* **Search for a specific site:** Enter `site:` in front of a site or domain.\
+  For example, `site:youtube.com cat videos`.
+* **Exclude words from your search:** Enter `-` in front of a word that you want to leave out.\
+  For example, `jaguar speed -car`.
+{% endhint %}
+
+{% hint style="success" %}
+You can also personalize the search engine output by passing the IP parameter. See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-output) below.
+{% endhint %}
+
 ### API Schema
 
 {% openapi src="../../api-references/web-search-models/bagoodex/bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
