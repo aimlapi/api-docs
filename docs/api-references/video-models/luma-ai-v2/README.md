@@ -1,7 +1,3 @@
----
-icon: satellite-dish
----
-
 # Luma AI v2
 
 ## Overview

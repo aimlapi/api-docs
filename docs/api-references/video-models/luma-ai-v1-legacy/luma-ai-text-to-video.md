@@ -1,6 +1,17 @@
 ---
+description: 'Description for Luma AI Text-to-Video model: Pricing, API Reference, Examples.'
 icon: code
-description: Generate Videos from Text or Images
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Luma AI Text-to-Video
@@ -9,25 +20,34 @@ description: Generate Videos from Text or Images
 
 The Luma AI Dream Machine API allows developers to generate, retrieve, and extend AI-generated content using a variety of inputs. This API is particularly useful for creative applications, such as generating visual content from text prompts.
 
-## Authentication
+Each generation costs <kbd><mark style="background-color:blue;">500 000<mark style="background-color:blue;"></kbd> AI/ML Tokens.
 
-All API requests require a Bearer token for authentication. Include your token in the `Authorization` header of each request.
+## Setup your API Key
 
-## Pricing
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-Each generation costs 500 000 AI/ML Tokens
+## How to Make a Call
 
-## API Reference
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
+* The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.
+
+Below, you can find three corresponding API schemas and examples for all endpoint calls.
+
+## API Schemas
 
 {% hint style="info" %}
-Ensure you replace `"your-api-key"` with your actual API key before running the code.
+Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running the code.
 {% endhint %}
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
+### Generate Video
 
-### Example
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations" method="post" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
+#### Example
 
 {% tabs %}
 {% tab title="Python" %}
@@ -42,7 +62,7 @@ payload = {
   "user_prompt": "Flying jellyfish"
 }
 headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 }
 
@@ -53,7 +73,7 @@ print(response.json())
 ```
 {% endtab %}
 
-{% tab title="JS" %}
+{% tab title="JavaScript" %}
 ```javascript
 const axios = require('axios');
 
@@ -66,7 +86,7 @@ const payload = {
 };
 
 const headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 };
 
@@ -78,14 +98,17 @@ axios.post(url, payload, { headers })
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generation" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
+### Fetch Generations
 
-### Example
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generation" method="get" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
+#### Example
 
 {% tabs %}
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 
@@ -94,7 +117,7 @@ url = "https://api.aimlapi.com/luma-ai/generation"
 querystring = {"ids[0]":"4c9126f3-d9a6-4eaf-aa4c-b64b634f65bd"}
 
 headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 }
 
@@ -103,9 +126,11 @@ response = requests.get(url, headers=headers, params=querystring)
 print(response.json())
 
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="JS" %}
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const axios = require('axios');
 
@@ -116,7 +141,7 @@ const params = {
 };
 
 const headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 };
 
@@ -125,17 +150,23 @@ axios.get(url, { headers, params })
   .catch(error => console.error(error));
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
+### Extend Video
 
-### Example
+Extend allows you to effortlessly add length to an existing video.
+
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations/{taskId}/extend" method="post" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
+#### Example
 
 {% tabs %}
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 
@@ -147,7 +178,7 @@ payload = {
   "user_prompt": "Flying jellyfish with a hat"
 }
 headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 }
 
@@ -156,9 +187,11 @@ response = requests.post(url, json=payload, headers=headers)
 print(response.json())
 
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="JS" %}
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 const axios = require('axios');
 
@@ -171,7 +204,7 @@ const payload = {
 };
 
 const headers = {
-  "Authorization": "Bearer your-api-key",
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
   "content-type": "application/json"
 };
 
@@ -180,5 +213,6 @@ axios.post(url, payload, { headers })
   .catch(error => console.error(error));
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

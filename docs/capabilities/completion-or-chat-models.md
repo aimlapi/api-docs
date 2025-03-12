@@ -1,5 +1,4 @@
 ---
-icon: book-open
 description: An explanation of completion and chat completion terms.
 layout:
   title:

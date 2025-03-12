@@ -1,8 +1,4 @@
----
-icon: code
----
-
-# Anthropic
+# Features of Anthropic Models
 
 ## Features
 
@@ -12,14 +8,14 @@ icon: code
 
 ## Example Requests
 
-{% swagger src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/messages" method="post" %}
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/messages" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endswagger %}
+{% endopenapi %}
 
 ## **Vision**
 
 {% hint style="info" %}
-**Note:** API only support BASE64 String as Image input.&#x20;
+**Note:** API only support BASE64 String as Image input.
 {% endhint %}
 
 ### Possible Media Types

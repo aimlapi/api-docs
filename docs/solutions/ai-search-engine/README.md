@@ -1,3 +1,20 @@
+---
+description: >-
+  Description, API schema, and usage examples of the specialized solution — AI
+  Search Engine.
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # AI Search Engine
 
 ## Overview
@@ -25,7 +42,7 @@ See API references and examples on the subpages.
 
 ## How to make a call
 
-&#x20;Check how this call is made in the [example ](./#example-1)below.
+&#x20;Check how this call is made in the [examples ](./#example-1)below.
 
 {% hint style="success" %}
 Note that queries can include advanced search syntax:
@@ -39,7 +56,8 @@ Note that queries can include advanced search syntax:
 {% endhint %}
 
 {% hint style="success" %}
-You can also personalize the AI Search Engine output by passing the IP parameter. See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-output) below.
+You can also personalize the AI Search Engine output by passing the `ip` parameter. \
+See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-output) below.
 {% endhint %}
 
 ### API Schema
@@ -50,6 +68,8 @@ You can also personalize the AI Search Engine output by passing the IP parameter
 
 ## Example #1
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import requests
 from openai import OpenAI
@@ -83,8 +103,52 @@ def complete_chat():
 # Run the function
 complete_chat()
 ```
+{% endtab %}
 
-**Response**:
+{% tab title="JavaScript" %}
+```javascript
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+const API_KEY = '<YOUR_AIMLAPI_KEY>';
+const API_URL = 'https://api.aimlapi.com/v1/chat/completions';
+
+async function completeChat() {
+    const requestBody = {
+        model: "bagoodex/bagoodex-search-v1",
+        messages: [
+            {
+                role: "user",
+                content: "how to make a slingshot"
+            }
+        ]
+    };
+
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${API_KEY}`
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        const data = await response.json();
+        console.log(data.choices[0].message.content);
+    } catch (error) {
+        console.error("Error fetching completion:", error);
+    }
+}
+
+// Run the function
+completeChat();
+
+```
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary><strong>Response</strong></summary>
 
 {% code overflow="wrap" %}
 ```
@@ -109,16 +173,21 @@ You can choose to make either a giant slingshot or a stick slingshot, depending 
 ```
 {% endcode %}
 
+</details>
+
 ## Example #2: Using the IP Parameter for Personalized Model Output
 
-When using regular search engines in browsers, we can simply ask, 'Weather today' without specifying our location. In this case, the search engine automatically uses your IP address to determine your location and provide a more relevant response. The AI Search Engine also supports IP-based personalization.
+When using regular search engines in browsers, we can simply ask, '_Weather today_' without specifying our location. In this case, the search engine automatically uses your IP address to determine your location and provide a more relevant response. The AI Search Engine also supports IP-based personalization.
 
 In the example below, the query does not specify a city, but since the request includes an IP address registered in Stockholm, the system automatically adjusts, and the response will contain today's weather forecast for that city.
 
 {% hint style="warning" %}
-Note that when making a request via Python, this parameter should be included in the extra\_body parameter (see examples below).
+Note that when making a request via Python, the `ip` parameter should be included inside the `extra_body` parameter (see example below). When using other languages, this is not required, and the `ip` parameter can be passed like any other parameter.
 {% endhint %}
 
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 from openai import OpenAI
@@ -155,6 +224,56 @@ def complete_chat():
 # Run the function
 complete_chat()
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+import fetch from 'node-fetch';
+
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+const API_KEY = '<YOUR_AIMLAPI_KEY>';
+const API_URL = 'https://api.aimlapi.com/v1/chat/completions';
+
+async function completeChat() {
+    const requestBody = {
+        model: "bagoodex/bagoodex-search-v1",
+        messages: [
+            {
+                role: "user",
+                content: "Weather today"
+            }
+        ],
+        extra_body: {
+            ip: "192.44.242.19" // We used a random IP address from Stockholm
+        }
+    };
+
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${API_KEY}`
+            },
+            body: JSON.stringify(requestBody)
+        });
+        
+        const data = await response.json();
+        console.log(data.choices[0].message.content);
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Run the function
+completeChat();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -169,8 +288,10 @@ complete_chat()
 </details>
 
 {% hint style="warning" %}
-Keep in mind that the system caches the IP address for a period of two weeks. This means that after specifying an IP address once, any queries without an explicit location will continue to return responses linked to Stockholm for the next two weeks, even if you don't include the IP address in subsequent requests. If you need to change the location, simply provide a new IP address in your next request.
+Keep in mind that the system caches the IP address for a period of two weeks. This means that after specifying an IP address once, any queries <mark style="background-color:orange;">**without an explicit location**</mark> will continue to return responses linked to Stockholm for the next two weeks, even if you don't include the IP address in subsequent requests. If you need to change the location, simply provide a new IP address in your next request.
 {% endhint %}
+
+If an IP address registered in one location is used while explicitly specifying a different location in the query, AI Search Engine will prioritize the location from the query:
 
 <details>
 
@@ -183,4 +304,3 @@ Keep in mind that the system caches the IP address for a period of two weeks. Th
 {% endcode %}
 
 </details>
-

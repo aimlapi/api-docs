@@ -1,5 +1,4 @@
 ---
-icon: code
 description: >-
   Learn how to connect large language models to external tools using function
   calls.

@@ -1,6 +1,5 @@
 ---
 description: Example of using the threads API
-icon: code
 ---
 
 # Using Assistants & Threads
