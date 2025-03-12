@@ -39,7 +39,7 @@ Note that queries can include advanced search syntax:
 {% endhint %}
 
 {% hint style="success" %}
-You can also personalize the search engine output by passing the IP parameter. See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-output) below.
+You can also personalize the AI Search Engine output by passing the IP parameter. See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-output) below.
 {% endhint %}
 
 ### API Schema
