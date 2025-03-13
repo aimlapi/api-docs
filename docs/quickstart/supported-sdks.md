@@ -194,6 +194,6 @@ python3 <your_script_name>.py
 
 ## Next Steps
 
-* [Check our full list of model IDs](../api-references/model-database/)
+* [Check our full list of model IDs](../api-references/model-database.md)
 
 [^1]: Software Development Kits
