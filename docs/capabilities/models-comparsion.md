@@ -19,7 +19,7 @@ layout:
 
 You can send the same request to two specific text models of your choice and compare the results.
 
-Just select two models from the Text Models (LLM) category [here](../api-references/model-database/model-database.md#text-models-llm), copy their Model IDs, and paste them into the `Specify the models to compare` section of this code example as the values for `model1` and `model2`.&#x20;
+Just select two models from the Text Models (LLM) category [here](../api-references/model-database/#text-models-llm), copy their Model IDs, and paste them into the `Specify the models to compare` section of this code example as the values for `model1` and `model2`.&#x20;
 
 Don't forget to also insert your [AIML API Key](https://aimlapi.com/app/keys) instead of `<YOUR_API_KEY>`:
 

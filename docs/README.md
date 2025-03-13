@@ -85,7 +85,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **BAAI**:  [Embedding](api-references/embedding-models/BAAI/)\
 **Black Forest Labs**:  [Image](api-references/image-models/Black-Forest-Labs/)\
 **Cohere**:  [Text/Chat](api-references/text-models-llm/Cohere/)\
-**Databricks**:  [Text/Chat](api-references/text-models-llm/Databricks/)\
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
 **Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)\

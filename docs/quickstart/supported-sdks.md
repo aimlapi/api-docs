@@ -1,8 +1,8 @@
 ---
-icon: hammer-brush
 description: >-
   A description of the software development kits (SDKs) that can be used to
   interact with the AIML API.
+icon: hammer-brush
 layout:
   title:
     visible: true
@@ -194,6 +194,6 @@ python3 <your_script_name>.py
 
 ## Next Steps
 
-* [Check our full list of model IDs](../api-references/model-database/model-database.md)
+* [Check our full list of model IDs](../api-references/model-database/)
 
 [^1]: Software Development Kits

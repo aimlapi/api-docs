@@ -1,6 +1,6 @@
 ---
-icon: video
 description: Short overview of the available video model providers.
+icon: video
 layout:
   title:
     visible: true
@@ -74,8 +74,8 @@ def main():
         "prompt": "Cheetah turns toward the camera.",
         "first_frame_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Cheetah4.jpg/1200px-Cheetah4.jpg",
     }
-    # Insert your AIML API Key instead of <YOUR_API_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
     response = requests.post(url, json=payload, headers=headers)
     print("Generation:", response.json())
@@ -102,8 +102,8 @@ def main():
         "generation_id": "<GENERATION_ID>",
     }
     
-    # Insert your AIML API Key instead of <YOUR_API_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
     response = requests.get(url, params=params, headers=headers)
     print("Generation:", response.json())

@@ -38,9 +38,9 @@ The following rules apply:
 
 Using our API on the Free Tier, you can access:
 
-* [Chat completion text models](../api-references/model-database/model-database.md#text-models-llm),
-* [Embedding models](../api-references/model-database/model-database.md#embedding-models),
-* [Image models](../api-references/model-database/model-database.md#image-models).
+* [Chat completion text models](../api-references/model-database/#text-models-llm),
+* [Embedding models](../api-references/model-database/#embedding-models),
+* [Image models](../api-references/model-database/#image-models).
 
 The following Free Tier rules apply:
 

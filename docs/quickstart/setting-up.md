@@ -19,7 +19,7 @@ layout:
 
 # Setting Up
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database/model-database.md) we offer or use our ready-made [solution](broken-reference):&#x20;
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database/) we offer or use our ready-made [solution](broken-reference):&#x20;
 
 * generating an AIML API Key,&#x20;
 * configuring the base URL.

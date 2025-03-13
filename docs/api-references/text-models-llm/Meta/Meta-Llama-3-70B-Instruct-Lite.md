@@ -1,20 +1,28 @@
-[#references:start]: <> ({ "template": "openapi" })
+---
+description: No longer supported.
+hidden: true
+---
+
+# Meta-Llama-3-70B-Instruct-Lite \[offline]
+
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
+
 * meta-llama/Meta-Llama-3-70B-Instruct-Lite
 {% endhint %}
 
-# Model Overview
+## Model Overview
+
 A large language model developed by Meta, optimized for dialogue and instruction-tuned to improve helpfulness and safety. It is part of the Llama 3 family, which includes models with 8 billion and 70 billion parameters.
 
-# Setup your API Key
+## Setup your API Key
+
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-# Submit a request
-## API Schema
-{% swagger src="./Meta-Llama-3-70B-Instruct-Lite.json" path="/v1/chat/completions" method="post" %}
-./Meta-Llama-3-70B-Instruct-Lite.json
-{% endswagger %}
+## Submit a request
 
+### API Schema
 
-[#references:end]: <> ({})
+{% openapi src="Meta-Llama-3-70B-Instruct-Lite.json" path="/v1/chat/completions" method="post" %}
+[Meta-Llama-3-70B-Instruct-Lite.json](Meta-Llama-3-70B-Instruct-Lite.json)
+{% endopenapi %}
