@@ -49,7 +49,7 @@ You cannot wait for an `failed` state.
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Example: Fetch Single Generation
+#### Example: Fetch Single Generation
 
 {% hint style="info" %}
 Ensure you replace `"my_key"` with your actual API key before running the code.
@@ -119,6 +119,12 @@ If you are waiting for a video to be fully generated, you can wait for the `comp
 ### Fetch Multiple Generations
 
 Instead of using the `generation_id` parameter, you will pass `generation_ids`, which can be an array of IDs. This parameter can also accept IDs separated by commas.
+
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generations" method="get" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+
+#### Example: Fetch Multiple Generations
 
 {% tabs %}
 {% tab title="Python" %}
