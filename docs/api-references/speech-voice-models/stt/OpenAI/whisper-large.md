@@ -6,6 +6,20 @@ This documentation is valid for the following list of our models:
 * \#g1\_whisper-large
 {% endhint %}
 
+{% hint style="warning" %}
+Note:&#x20;
+
+Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`.
+
+Now, we are switching to a new two-step process:
+
+* `POST https://api.aimlapi.com/v1/stt/create` – Creates and submits a speech-to-text processing task to the server. This method accepts the same parameters as the old version but returns a `generation_id` instead of the final transcript.
+* `GET https://api.aimlapi.com/v1/stt/{generation_id}` – Retrieves the generated transcript from the server using the `generation_id` obtained from the previous API call.
+
+This approach helps prevent generation failures due to timeouts. \
+We've prepared [a couple of examples](whisper-large.md#quick-code-examples) below to make the transition to the new STT API easier for you.
+{% endhint %}
+
 ## Model Overview
 
 The Whisper models are primarily for AI research, focusing on model robustness, generalization, and biases, and are also effective for English speech recognition. The use of Whisper models for transcribing non-consensual recordings or in high-risk decision-making contexts is strongly discouraged due to potential inaccuracies and ethical concerns.
