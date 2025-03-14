@@ -52,3 +52,187 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29 ](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+## Quick Code Examples
+
+Let's use the `#g1_nova-2-meeting` model to transcribe the following audio fragment:
+
+{% embed url="https://drive.google.com/file/d/1ZN-28NUbK1TXHt6oEPj42zUJCv82e9L4/view?usp=sharing" %}
+
+### Example #1: Processing a Speech Audio File via URL
+
+<pre class="language-python" data-overflow="wrap"><code class="lang-python">import time
+import requests
+
+base_url = "https://api.aimlapi.com/v1"
+# Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
+api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+
+<strong># Creating and sending a speech-to-text conversion task to the server
+</strong>def create_stt():
+    url = f"{base_url}/stt/create"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+
+    data = {
+        "model": "#g1_nova-2-meeting",
+        "url": "https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3"
+    }
+ 
+    response = requests.post(url, json=data, headers=headers)
+    
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        print(response_data)
+        return response_data
+
+# Requesting the result of the task from the server using the generation_id
+def get_stt(gen_id):
+    url = f"{base_url}/stt/{gen_id}"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+    response = requests.get(url, headers=headers)
+    return response.json()
+    
+# First, start the generation, then repeatedly request the result from the server every 10 seconds.
+def main():
+    stt_response = create_stt()
+    gen_id = stt_response.get("generation_id")
+
+
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 600
+        while time.time() - start_time &#x3C; timeout:
+            response_data = get_stt(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+
+            if status == "waiting" or status == "active":
+                ("Still waiting... Checking again in 10 seconds.")
+                time.sleep(10)
+            else:
+                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None     
+
+
+if __name__ == "__main__":
+    main()
+
+</code></pre>
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```
+{'generation_id': 'h66460ba-0562-1dd9-b440-a56d947e72a3'}
+Processing complete:
+ He doesn't belong to you and i don't see how you have anything to do with what is be his power yet he's he persona from this stage to you be fine
+```
+{% endcode %}
+
+</details>
+
+### Example #2: Processing a Speech Audio File via File Path
+
+{% code overflow="wrap" %}
+```python
+import time
+import requests
+
+base_url = "https://api.aimlapi.com/v1"
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>"
+
+# Creating and sending a speech-to-text conversion task to the server
+def create_stt():
+    url = f"{base_url}/stt/create"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+
+    data = {
+        "model": "#g1_nova-2-meeting",
+    }
+    with open("stt-sample.mp3", "rb") as file:
+        files = {"audio": ("sample.mp3", file, "audio/mpeg")}
+        response = requests.post(url, data=data, headers=headers, files=files)
+    
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        print(response_data)
+        return response_data
+
+# Requesting the result of the task from the server using the generation_id
+def get_stt(gen_id):
+    url = f"{base_url}/stt/{gen_id}"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+    response = requests.get(url, headers=headers)
+    return response.json()
+    
+# First, start the generation, then repeatedly request the result from the server every 10 seconds.
+def main():
+    stt_response = create_stt()
+    gen_id = stt_response.get("generation_id")
+
+
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 600
+        while time.time() - start_time < timeout:
+            response_data = get_stt(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+
+            if status == "waiting" or status == "active":
+                ("Still waiting... Checking again in 10 seconds.")
+                time.sleep(10)
+            else:
+                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None     
+
+
+if __name__ == "__main__":
+    main()
+
+```
+{% endcode %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```
+{'generation_id': 'd793a81c-f8d8-40e0-a7c6-049ec6f54446'}
+Processing complete:
+ He doesn't belong to you, and I don't see how you have anything to do with what is be his power yet. He's he pursuing that from this stage to you.
+```
+{% endcode %}
+
+</details>

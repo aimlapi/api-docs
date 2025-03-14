@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% hint style="warning" %}
 Note:&#x20;
 
-Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`.
+Previously, our STT models operated via a single API call to POST `https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../../../speech-models/speech-to-text/stt-legacy.md).
 
 Now, we are switching to a new two-step process:
 
