@@ -1,6 +1,5 @@
 ---
 description: 'Description for Luma AI Text-to-Video model: Pricing, API Reference, Examples.'
-icon: code
 layout:
   title:
     visible: true
@@ -14,7 +13,11 @@ layout:
     visible: true
 ---
 
-# Luma AI Text-to-Video
+# Text-to-Video v1 (legacy)
+
+{% hint style="info" %}
+Here is our backward-compatible support for the older Luma AI API.
+{% endhint %}
 
 ## Overview
 
@@ -28,7 +31,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves making two sequential API calls:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
 * The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.
