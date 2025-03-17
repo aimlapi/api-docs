@@ -6,7 +6,7 @@ The Luma AI Dream Machine API allows developers to generate, retrieve, and exten
 [luma-ai-v2.md](luma-ai-v2.md)
 {% endcontent-ref %}
 
-{% content-ref url="luma-ai-text-to-video.md" %}
-[luma-ai-text-to-video.md](luma-ai-text-to-video.md)
+{% content-ref url="luma-ai-text-to-video-v1-legacy.md" %}
+[luma-ai-text-to-video-v1-legacy.md](luma-ai-text-to-video-v1-legacy.md)
 {% endcontent-ref %}
 
