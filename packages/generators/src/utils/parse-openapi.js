@@ -131,7 +131,6 @@ const parseOpenapi = (openapi, fetchedModels) => {
       if (EXCEPTIONS_PAIR_MAP[path] || (openapi.paths[path]['get'] && (path.includes('/generate/audio') || path.includes('/generate/video')) && version)) {
         if(EXCEPTIONS_PAIR_MAP[path]) {
           // EXCEPTION_PATH.push(EXCEPTIONS_PAIR_MAP[path])
-          // console.log('EXCEPTION_PATH', EXCEPTION_PATH)
           pairs[path] = EXCEPTIONS_PAIR_MAP[path]
           pairData.has = true
           pairData.method = 'post'
@@ -154,12 +153,15 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
       if (pairData.has) {        
         const operation = openapi.paths[pairData.path][pairData.method];
-
         const refId = (pairData.method === 'post'
           ? openapi.paths[pairData.path][pairData.method].requestBody?.content?.['application/json']?.schema?.$ref
           : openapi.paths[pairData.path][pairData.method].parameters[0]?.schema?.$ref)
-          .split('/')
-          .at(-1);      
+          ?.split('/')
+          ?.at(-1);   
+
+        if (!refId) {
+          pairData.has = false;
+        }
         const schema = schemaById[refId];
         pairData.operation = operation
         pairData.schema = schema
