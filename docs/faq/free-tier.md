@@ -26,7 +26,9 @@ The Free Tier allows users to use the service with certain limits at no cost. Th
 
 Some models can be tested in the [AI Playground](https://aimlapi.com/app/) available on our official website. There, you will find a list of models ready to be launched.&#x20;
 
-<figure><img src="../.gitbook/assets/playground-model-list.png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Screenshot_2.png" alt=""><figcaption></figcaption></figure></div>
+
+
 
 The following rules apply:
 

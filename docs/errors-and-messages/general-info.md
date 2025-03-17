@@ -45,14 +45,7 @@ For example:
 
 ## HTTP Status Code Classes and Their Meanings
 
-HTTP status codes are divided into five main classes, each indicating a specific type of server response:
-
-#### **1xx — Informational**
-
-These codes indicate that the request has been received and is being processed, but no final response is available yet.
-
-* **100 Continue** — The client may continue sending the request.
-* **101 Switching Protocols** — The server agrees to switch to a different protocol.
+HTTP status codes are divided into several main classes, each indicating a specific type of server response. Users of our API may receive messages from the following three classes:
 
 #### **2xx — Success**
 
@@ -61,14 +54,6 @@ These codes indicate that the request was successfully processed.
 * **200 OK** — The request was successful, and the server is returning the requested data.
 * **201 Created** — A new resource was successfully created (e.g., after a POST request).
 * **204 No Content** — The request was processed, but there is no response body.
-
-#### **3xx — Redirection**
-
-These codes inform the client that additional actions are required to retrieve the requested resource.
-
-* **301 Moved Permanently** — The requested resource has been permanently moved to another URL.
-* **302 Found** — Temporary redirection to another URL.
-* **304 Not Modified** — The resource has not changed; a cached version can be used.
 
 #### **4xx — Client Errors**
 
