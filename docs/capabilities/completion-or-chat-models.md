@@ -89,7 +89,7 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
-* [claude-3-5-haiku-20241022](../api-references/text-models-llm/Anthropic/claude-3-5-haiku.md)
+* [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
 * [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
 * [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
