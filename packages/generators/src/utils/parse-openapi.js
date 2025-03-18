@@ -202,9 +202,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         if (pairData.has) {
           const unionPair = pairData.method === 'post' ? extractUnion(model, pairData.schema, schemaById) : [...pairData.schema];
-          if (pairData.method === 'get') {
-            console.log(pairData.operation)
-          }
+
           const transformedPair = {
             paths: {
               [pairData.path]: {
