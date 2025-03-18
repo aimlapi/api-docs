@@ -37,5 +37,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ./nova-2.json
 {% endswagger %}
 
+{% swagger src="./nova-2-pair.json" path="/v1/stt/{generation_id}" method="get" %}
+./nova-2-pair.json
+{% endswagger %}
+
 
 [#references:end]: <> ({})
