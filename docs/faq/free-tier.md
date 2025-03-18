@@ -32,9 +32,9 @@ Some models can be tested in the [AI Playground](https://aimlapi.com/app/) avail
 
 The following rules apply:
 
-* Regular models come with 50 free requests per day.
+* Regular models come with 10 free requests per day.
 * You can execute only one request at a time.
-* [Pro models](pro-models.md) have a limit of 10,000 AI/ML API tokens per day.
+* All models, whether regular or [Pro](pro-models.md), have a limit of <kbd><mark style="background-color:blue;">50,000<mark style="background-color:blue;"></kbd> AI/ML API tokens per day.
 
 ### **Via API**
 
@@ -46,9 +46,7 @@ Using our API on the Free Tier, you can access:
 
 The following Free Tier rules apply:
 
-* You are allowed 10 free requests per hour.
 * When using Chat Completion text models, the maximum output is limited to 512 tokens. Image attachments in messages are not supported.
-* You can generate up to 10 images per hour.&#x20;
 * Using the following image models, you can only 1 image generated at a time:
 
 <details>
@@ -90,10 +88,10 @@ For example, if the `/v1/chat/completions` endpoint was called:
 {% code overflow="wrap" %}
 ```json
 {
-    "message": "Free-tier limit: You've reached your free limit for the hour. Get AI/ML Subscription to use API, visit https://aimlapi.com/app/billing/ !"
+    "message": "You have exhausted the available [plan.rule:api_token] resource limit. Update your payment method to continue using the service. For more information please visit https://aimlapi.com/app/billing"
     "path": "/v1/chat/completions"
     "requestId": "798b860e-98c2-4e8e-8c50-550bcfc2eccc"
-    "statusCode": "429"
+    "statusCode": "403"
     "timestamp": "2025-03-11T07:13:27.813Z"
 }
 ```

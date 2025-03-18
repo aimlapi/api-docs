@@ -75,3 +75,14 @@ These codes indicate issues on the server side.
 * **504 Gateway Timeout** — The server did not receive a timely response from another service.
 
 These status codes help quickly identify what happened to a request and determine the appropriate steps for troubleshooting.
+
+More details on possible error messages for the 4xx and 5xx classes can be found on the subpages:
+
+{% content-ref url="errors-with-status-code-4xx.md" %}
+[errors-with-status-code-4xx.md](errors-with-status-code-4xx.md)
+{% endcontent-ref %}
+
+{% content-ref url="errors-with-status-code-5xx.md" %}
+[errors-with-status-code-5xx.md](errors-with-status-code-5xx.md)
+{% endcontent-ref %}
+

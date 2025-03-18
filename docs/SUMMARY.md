@@ -227,6 +227,8 @@
 ## Errors and Messages
 
 * [General Info](errors-and-messages/general-info.md)
+* [Errors with status code 4xx](errors-and-messages/errors-with-status-code-4xx.md)
+* [Errors with status code 5xx](errors-and-messages/errors-with-status-code-5xx.md)
 
 ## Glossary
 
