@@ -79,15 +79,15 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 {% tab title="Models by DEVELOPER" %}
 **AI21 Labs**:  [Text/Chat](api-references/text-models-llm/AI21-Labs/)\
-**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)\
 **Anthracite**:  [Text/Chat](api-references/text-models-llm/Anthracite/)\
 <mark style="background-color:green;">**Anthropic**</mark>:  [Text/Chat](api-references/text-models-llm/Anthropic/)  [Embedding](api-references/embedding-models/Anthropic/) \
 **BAAI**:  [Embedding](api-references/embedding-models/BAAI/)\
-**Black Forest Labs**:  [Image](api-references/image-models/Black-Forest-Labs/)\
 **Cohere**:  [Text/Chat](api-references/text-models-llm/Cohere/)\
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)\
+**Flux**:  [Image](api-references/image-models/flux/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)\
 **Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
 <mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
 **Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\

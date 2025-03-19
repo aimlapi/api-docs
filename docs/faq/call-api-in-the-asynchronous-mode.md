@@ -28,7 +28,7 @@ Below, we will see how two requests are handled when the second one is shorter a
 from openai import OpenAI
 
 def complete_chat(question):
-    api_key = '<YOUR_API_KEY>'
+    api_key = '<YOUR_AIMLAPI_KEY>'
     client = OpenAI(
         base_url='https://api.aimlapi.com',
         api_key=api_key,

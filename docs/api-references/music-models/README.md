@@ -1,6 +1,6 @@
 ---
-icon: guitar
 description: Overview of the capabilities of AIML API audio / music models.
+icon: guitar
 layout:
   title:
     visible: true
@@ -19,6 +19,16 @@ layout:
 ## Overview
 
 Our API features the capability to generate audio. With this API, you can create your own music, speech, and any audio experience from your prompt and imagination.
+
+We support multiple music models. Below, you can find the complete list along with API reference links:
+
+<details>
+
+<summary>All Available Music Models</summary>
+
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr></tbody></table>
+
+</details>
 
 ## Quick Code Example
 

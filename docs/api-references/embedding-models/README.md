@@ -2,13 +2,19 @@
 icon: binary
 ---
 
-# Embeddings
+# Embedding Models
 
-New Embedding Models
+We support multiple embedding models. Below, you can find the complete list along with API reference links:
 
-The latest embedding models from AI/ML API, `text-embedding-3-small` and `text-embedding-3-large`, are now available. These models offer cost savings, enhanced multilingual support, and customizable parameters to manage their size.
+<details>
 
-#### What are Embeddings?
+<summary>All Available Embedding Models</summary>
+
+<table><thead><tr><th width="274.20001220703125">Model ID</th><th width="124.20001220703125">Developer</th><th width="103.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="OpenAI/text-embedding-3-small.md">text-embedding-3-small</a></td><td>Open AI</td><td>8000</td><td>-</td></tr><tr><td><a href="OpenAI/text-embedding-3-large.md">text-embedding-3-large</a></td><td>Open AI</td><td>8000</td><td><a href="https://aimlapi.com/models/text-embedding-3-large">Text-embedding-3-large</a></td></tr><tr><td><a href="OpenAI/text-embedding-ada-002.md">text-embedding-ada-002</a></td><td>Open AI</td><td>8000</td><td><a href="https://aimlapi.com/models/text-embedding-ada-002">Text-embedding-ada-002</a></td></tr><tr><td><a href="Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-32k-retrieval</a></td><td>Together AI</td><td>32000</td><td><a href="https://aimlapi.com/models/m2-bert-retrieval-32k">M2-BERT-Retrieval-32k</a></td></tr><tr><td><a href="BAAI/bge-base-en.md">BAAI/bge-base-en-v1.5</a></td><td>BAAI</td><td></td><td><a href="https://aimlapi.com/models/baai-bge-base-1p5">BAAI-Bge-Base-1p5</a></td></tr><tr><td><a href="Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-2k-retrieval</a></td><td>Together AI</td><td></td><td><a href="https://aimlapi.com/models/m2-bert-retrieval-2k">M2-BERT-Retrieval-2K</a></td></tr><tr><td><a href="BAAI/bge-large-en.md">BAAI/bge-large-en-v1.5</a></td><td>BAAI</td><td></td><td><a href="https://aimlapi.com/models/baai-bge-large-1p5">bge-large-en</a></td></tr><tr><td><a href="Together-AI/m2-bert-80M-retrieval.md">togethercomputer/m2-bert-80M-8k-retrieval</a></td><td>Together AI</td><td>8000</td><td><a href="https://aimlapi.com/models/m2-bert-retrieval-8k">M2-BERT-Retrieval-8k</a></td></tr><tr><td><a href="Anthropic/voyage-large-2-instruct.md">voyage-large-2-instruct</a></td><td>Anthropic</td><td>16000</td><td><a href="https://aimlapi.com/models/voyage-large-2-instruct-api">Voyage Large 2 Instruct</a></td></tr><tr><td><a href="Anthropic/voyage-finance-2.md">voyage-finance-2</a></td><td>Anthropic</td><td>32000</td><td>-</td></tr><tr><td><a href="Anthropic/voyage-multilingual-2.md">voyage-multilingual-2</a></td><td>Anthropic</td><td>32000</td><td>-</td></tr><tr><td><a href="Anthropic/voyage-law-2.md">voyage-law-2</a></td><td>Anthropic</td><td>16000</td><td>-</td></tr><tr><td><a href="Anthropic/voyage-code-2.md">voyage-code-2</a></td><td>Anthropic</td><td>16000</td><td>-</td></tr><tr><td><a href="Anthropic/voyage-large-2.md">voyage-large-2</a></td><td>Anthropic</td><td>16000</td><td>-</td></tr><tr><td><a href="Anthropic/voyage-2.md">voyage-2</a></td><td>Anthropic</td><td>4000</td><td>-</td></tr><tr><td><a href="Google/textembedding-gecko.md">textembedding-gecko@001</a></td><td>Google</td><td>3000</td><td>-</td></tr><tr><td><a href="Google/textembedding-gecko.md">textembedding-gecko@003</a></td><td>Google</td><td>2000</td><td><a href="https://aimlapi.com/models/textembedding-gecko-003-api">Textembedding-gecko@003</a></td></tr><tr><td><a href="Google/textembedding-gecko.md">textembedding-gecko-multilingual@001</a></td><td>Google</td><td>2000</td><td><a href="https://aimlapi.com/models/textembedding-gecko-multilingual-001-api">Textembedding-gecko-multilingual@001</a></td></tr><tr><td><a href="Google/text-multilingual-embedding-002.md">text-multilingual-embedding-002</a></td><td>Google</td><td>2000</td><td>-</td></tr></tbody></table>
+
+</details>
+
+## What are Embeddings?
 
 Embeddings from AI/ML API quantify the similarity between text strings. These embeddings are particularly useful for:
 
@@ -21,11 +27,15 @@ Embeddings from AI/ML API quantify the similarity between text strings. These em
 
 An embedding is a vector (list) of floating-point numbers, where the distance between vectors indicates their relatedness. Smaller distances indicate higher similarity, while larger distances suggest lower similarity.
 
-For more information on Embeddings pricing, visit our pricing page. Costs are calculated based on the number of tokens in the input.
+For more information on Embeddings pricing, visit our [pricing page](https://aimlapi.com/ai-ml-api-pricing). Costs are calculated based on the number of tokens in the input.
 
+## Embedding Model Comparison
 
+AI/ML API offers two robust third-generation embedding models (indicated by -3 in the model ID).
 
-**Example: Generating Embeddings**
+<table><thead><tr><th>Model</th><th width="156">~ Pages per Dollar</th><th width="215">Performance on MTEB Eval</th><th>Max Input Tokens</th></tr></thead><tbody><tr><td>text-embedding-3-small</td><td>62,500</td><td>62.3%</td><td>8191</td></tr><tr><td>text-embedding-3-large</td><td>9,615</td><td>64.6%</td><td>8191</td></tr><tr><td>text-embedding-ada-002</td><td>12,500</td><td>61.0%</td><td>8191</td></tr></tbody></table>
+
+## **Example: Generating Embeddings**
 
 ```
 curl https://api.aimlapi.com/v1/embeddings \
@@ -38,9 +48,11 @@ curl https://api.aimlapi.com/v1/embeddings \
 
 ```
 
-The response will include the embedding vector and additional metadata.
+The response will include the embedding vector and additional metadata:
 
-**Example Embedding Response**
+<details>
+
+<summary><strong>Response</strong></summary>
 
 ```json
 {
@@ -64,23 +76,13 @@ The response will include the embedding vector and additional metadata.
     "total_tokens": 5
   }
 }
-
-
 ```
+
+</details>
 
 By default, the length of the embedding vector is 1536 for `text-embedding-3-small` or 3072 for `text-embedding-3-large`. You can reduce the dimensions of the embedding using the `dimensions` parameter without losing its ability to represent concepts. More details on embedding dimensions can be found in the embedding use case section.
 
-#### Embedding Models
-
-AI/ML API offers two robust third-generation embedding models (indicated by -3 in the model ID).&#x20;
-
-| Model                  | \~ Pages per Dollar | Performance on MTEB Eval | Max Input Tokens |
-| ---------------------- | ------------------- | ------------------------ | ---------------- |
-| text-embedding-3-small | 62,500              | 62.3%                    | 8191             |
-| text-embedding-3-large | 9,615               | 64.6%                    | 8191             |
-| text-embedding-ada-002 | 12,500              | 61.0%                    | 8191             |
-
-#### Example in Python
+## Example in Python
 
 Here's how to use the embeddings API in Python:
 
@@ -92,7 +94,7 @@ import openai
 # Initialize the API client
 client = openai.OpenAI(
     base_url="https://api.aimlapi.com/v1",
-    api_key=os.getenv("AIMLAPI_API_KEY"),
+    api_key=os.getenv("<YOUR_AIMLAPI_KEY"),
 )
 
 # Define the text for which to generate an embedding

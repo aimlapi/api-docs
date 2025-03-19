@@ -22,6 +22,16 @@ layout:
 
 With our API, you can use **content moderation models** (some developers refer to them as "**AI safety models**" or "**guard models**") to classify input content as safe or unsafe instantly.
 
+We support several content moderation models. Below, you can find the complete list along with API reference links:
+
+<details>
+
+<summary>All Available Content Moderation Models</summary>
+
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="116.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td><td>Meta</td><td>128000</td><td>-</td></tr><tr><td><a href="Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-2-8b">LlamaGuard 2 (8b)</a></td></tr><tr><td><a href="Meta/Meta-Llama-Guard-3-8B.md">meta-llama/Meta-Llama-Guard-3-8B</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-3-8b">Llama Guard 3 (8B)</a></td></tr></tbody></table>
+
+</details>
+
 ## Key Features
 
 * **Text Analysis**: Check text for security.
@@ -39,7 +49,7 @@ Content moderation models are perfect for scenarios where content safety is cruc
 ## Quick Example
 
 {% hint style="warning" %}
-Ensure you replace <kbd>\<YOUR\_API\_KEY></kbd> with your actual API key and <kbd>\<YOUR\_MODEL></kbd> with the actual content moderation model id before running the code.
+Ensure you replace <kbd>\<YOUR\_AIMLAPI\_KEY></kbd> with your actual API key and <kbd>\<YOUR\_MODEL></kbd> with the actual content moderation model id before running the code.
 {% endhint %}
 
 {% tabs %}

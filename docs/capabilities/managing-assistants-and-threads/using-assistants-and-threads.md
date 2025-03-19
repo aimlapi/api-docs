@@ -14,7 +14,7 @@ Usually, this task is accomplished by using the chat completion API, but it requ
 
 The Threads API does this state management for you, providing streaming and polling features out-of-the-box. You can use the Threads API using raw HTTP requests, but a simpler way is to use the Openal SDK.
 
-## **Example**
+## **Example (JS)**
 
 First, you need to import the OpenAI SDK:
 
@@ -36,6 +36,7 @@ const assistant = await api.beta.assistants.create({
 
 And create a thread and write a user message in it:
 
+{% code overflow="wrap" %}
 ```javascript
 // Empty thread
 const thread = await api.beta.threads.create({ messages: [] });
@@ -51,5 +52,6 @@ const messages = await api.beta.threads.messages.list(thread.id, { order: 'desc'
 const msg = messages.data[0].content.find((item) => item.type === 'text').text.value;
 console.log(`Assistant: ${msg}`);
 ```
+{% endcode %}
 
 This code will return a model answer based on your prompt and keep the thread with message history on the server, transferring all message state management from your code to the API.

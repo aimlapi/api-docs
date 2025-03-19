@@ -31,7 +31,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url='https://api.aimlapi.com',
-    api_key='<YOUR_API_KEY>'    
+    api_key='<YOUR_AIMLAPI_KEY>'    
 )  
 
 image_url = "https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg"
@@ -75,7 +75,7 @@ import requests
 
 url = "https://api.aimlapi.com/messages"
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": "Bearer YOUR_AIMLAPI_KEY",
     "Content-Type": "application/json"
 }
 payload = {
@@ -116,7 +116,7 @@ import requests
 
 url = "https://api.aimlapi.com/messages"
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": "Bearer YOUR_AIMLAPI_KEY",
     "Content-Type": "application/json"
 }
 payload = {
@@ -139,22 +139,27 @@ print(response.json())
 **Pro tip:** you can assign a system role to the Claude models by using "system" parameter outside of messages array.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```json
 {
     model="claude-3-5-sonnet-20240620",
     max_tokens=2048,
-    system="You are a seasoned data scientist at a Fortune 500 company.", # <-- role prompt
+
+    # role prompt:
+    system="You are a seasoned data scientist at a Fortune 500 company.", 
     messages=[
         {"role": "user", "content": "Analyze this dataset for anomalies: <dataset>{{DATASET}}</dataset>"}
     ]
 }
 ```
+{% endcode %}
 
 ## Example Response
 
 The responses from the AI/ML API for Anthropic models will typically include the generated text or results from the tool called. Here is an example response for a weather query:
 
-```python
+{% code overflow="wrap" %}
+```json
 {
   "id": "msg-12345",
   "object": "message",
@@ -176,6 +181,7 @@ The responses from the AI/ML API for Anthropic models will typically include the
   }
 }
 ```
+{% endcode %}
 
 ## Streaming with Python SDK
 
@@ -186,7 +192,7 @@ import requests
 
 url = "https://api.aimlapi.com/messages"
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": "Bearer YOUR_AIMLAPI_KEY",
     "Content-Type": "application/json"
 }
 payload = {

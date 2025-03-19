@@ -1,6 +1,6 @@
 ---
-icon: cube
 description: Overview of the capabilities of AIML API 3D-generating models.
+icon: cube
 layout:
   title:
     visible: true
@@ -19,6 +19,16 @@ layout:
 ## Overview
 
 3D-generating models are AI-powered tools designed to create three-dimensional objects, environments, and textures based on input data such as text prompts, reference images, or existing 3D models. These models utilize advanced techniques like neural rendering, implicit representations, and generative adversarial networks (GANs) to produce high-quality, realistic 3D assets. They are widely used in gaming, virtual reality (VR), augmented reality (AR), and industrial design.
+
+We currently support only one 3D-generating model. Below, you can find its ID along with the API reference link.
+
+<details>
+
+<summary>All Available 3D-Generating Models</summary>
+
+<table data-full-width="false"><thead><tr><th width="222.4000244140625">Model ID</th><th width="134.39996337890625">Developer</th><th width="95">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr></tbody></table>
+
+</details>
 
 ## **Key Features**
 
