@@ -62,9 +62,11 @@ See [Example #2](./#example-2-using-the-ip-parameter-for-personalized-model-outp
 
 ### API Schema
 
-{% openapi src="../../api-references/web-search-models/bagoodex/bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
-[bagoodex-search-v1.json](../../api-references/web-search-models/bagoodex/bagoodex-search-v1.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/solutions/Bagoodex/bagoodex-search-v1.json" path="/v1/chat/completions" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/solutions/Bagoodex/bagoodex-search-v1.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/solutions/Bagoodex/bagoodex-search-v1.json)
 {% endopenapi %}
+
+
 
 ## Example #1
 

@@ -1,20 +1,20 @@
-# Veo2 (Text-to-Video)
+# Wan 2.1 (Text-to-Video)
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `veo2`
+* `wan/v2.1/1.3b/text-to-video`
 {% endhint %}
 
 ## Overview
 
-Google’s cutting-edge AI model designed to generate highly realistic and cinematic video content from textual prompts or a combination of text and images. Leveraging advanced machine learning techniques, Veo2 excels in creating videos with natural motion, realistic physics, and professional-grade visual fidelity.
+A state-of-the-art video foundation model designed for advanced generative video tasks. Supporting Text-to-Video (T2V), it incorporates groundbreaking innovations to deliver high-quality outputs with exceptional computational efficiency.
 
 Key Features:
 
-* Text-to-Video (T2V): Converts descriptive text into dynamic video content.
-* High Resolution Support: Generates videos up to 4K resolution for professional-grade outputs.
-* Multimodal Input Encoding: Integrates text and image inputs seamlessly for creative flexibility.
+* Visual text generation: Generates text in both Chinese and English within videos.
+* 3D Variational Autoencoder (Wan-VAE): Encodes and decodes unlimited-length 1080P videos with temporal precision.
+* High-quality outputs: Produces visually dynamic and temporally consistent videos at resolutions of up to 720P.
 
 ## Setup your API Key
 
@@ -33,16 +33,16 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ### Video Generation
 
-You can generate a video using this API. In the basic setup, you only need a prompt, the aspect ratio, and the desired duration (5, 6, 7, or 8 seconds).
+You can generate a video using this API.
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json" path="/v2/generate/video/google/generation" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json" path="/v2/generate/video/alibaba/generation" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json)
 {% endopenapi %}
 
 ### Fetch the video
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json" path="/v2/generate/video/google/generation" method="get" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json" path="/v2/generate/video/alibaba/generation" method="get" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json)
 {% endopenapi %}
 
 ## Examples
@@ -55,12 +55,11 @@ import requests
 
 
 def main():
-    url = "https://api.aimlapi.com/v2/generate/video/google/generation"
+    url = "https://api.aimlapi.com/v2/generate/video/alibaba/generation"
     payload = {
-        "model": "veo2",
+        "model": "wan/v2.1/1.3b/text-to-video",
         "prompt": "A DJ on the stand is playing, around a World War II battlefield, lots of explosions, thousands of dancing soldiers, between tanks shooting, barbed wire fences, lots of smoke and fire, black and white old video: hyper realistic, photorealistic, photography, super detailed, very sharp, on a very white background",
         "aspect_ratio": "16:9",
-        "duration": "5",
     }
     headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
@@ -82,7 +81,7 @@ import requests
 
 
 def main():
-    url = "https://api.aimlapi.com/v2/generate/video/google/generation"
+    url = "https://api.aimlapi.com/v2/generate/video/alibaba/generation"
     params = {
         "generation_id": "<YOUR_GENERATION_ID>",
     }
