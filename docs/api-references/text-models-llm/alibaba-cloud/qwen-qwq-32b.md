@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* Qwen/QwQ-32B
+* `Qwen/QwQ-32B`
 {% endhint %}
 
 ## Model Overview

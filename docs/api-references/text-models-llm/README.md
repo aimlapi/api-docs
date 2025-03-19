@@ -43,11 +43,15 @@ We support multiple text models. Below, you can find the complete list along wit
 
 There are several capabilities of text models that are worth mentioning separately.
 
-**Completion** allows the model to analyze a given text fragment and predict how it might continue based on the probabilities of the next possible tokens or characters. **Chat Completion** extends this functionality, enabling a simulated dialogue between the user and the model based on predefined roles (e.g., "strict language teacher" and "student"). A detailed description and examples can be found in our [Capabilities](../../capabilities/completion-or-chat-models.md) section.
+**Completion** allows the model to analyze a given text fragment and predict how it might continue based on the probabilities of the next possible tokens or characters. **Chat Completion** extends this functionality, enabling a simulated dialogue between the user and the model based on predefined roles (e.g., "strict language teacher" and "student"). A detailed description and examples can be found in our [Completion and Chat Completion](../../capabilities/completion-or-chat-models.md) article.
 
-An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of this functionality can be found in our [Capabilities](../../capabilities/managing-assistants-and-threads/) section.
+***
 
-**Function Calling** allows a chat model to invoke external programmatic tools (e.g., a function you have written) while generating a response. A detailed description and examples are available in our [Capabilities](../../capabilities/function-calling.md) section.
+An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of this functionality can be found in the [Managing Assistants & Threads](../../capabilities/managing-assistants-and-threads/) article.
+
+***
+
+**Function Calling** allows a chat model to invoke external programmatic tools (e.g., a function you have written) while generating a response. A detailed description and examples are available in the [Function Calling](../../capabilities/function-calling.md) article.
 
 ## Quick Code Example
 
@@ -66,8 +70,8 @@ from openai import OpenAI
 client = OpenAI(
     base_url="https://api.aimlapi.com/v1",
 
-    # Insert your AIML API Key in the quotation marks instead of <YOUR_API_KEY>.
-    api_key="<YOUR_API_KEY>",  
+    # Insert your AIML API Key in the quotation marks instead of <YOUR_AIMLAPI_KEY>:
+    api_key="<YOUR_AIMLAPI_KEY>",  
 )
 
 response = client.chat.completions.create(
@@ -93,7 +97,7 @@ print(f"Assistant: {message}")
 By running this code example, we received the following response from the chat model:
 
 {% code overflow="wrap" %}
-```
+```http
 Assistant: The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters Earth's atmosphere, it collides with gas molecules and small particles. Sunlight is made up of different colors, each with different wavelengths. Blue light has a shorter wavelength and is scattered in all directions by the gas molecules in the atmosphere more than other colors with longer wavelengths, such as red or yellow.
 As a result, when you look up at the sky during the day, you see this scattered blue light being dispersed in all directions, making the sky appear blue to our eyes. During sunrise and sunset, the sun's light passes through a greater thickness of Earth's atmosphere, scattering the shorter blue wavelengths out of your line of sight and leaving the longer wavelengths, like red and orange, more dominant, which is why the sky often turns those colors at those times.
 ```
