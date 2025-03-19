@@ -81,11 +81,13 @@ const getVersionFromPath = (path) => {
 const version_map = {};
 const EXCEPTIONS_PAIR_MAP = {
   '/v2/generate/audio/minimax/upload': '/v2/generate/audio/minimax/generate',
-  '/v2/generate/audio/minimax/generate': '/v2/generate/audio/minimax/upload'
+  '/v2/generate/audio/minimax/generate': '/v2/generate/audio/minimax/upload',
+  '/v1/stt/create': '/v1/stt/{generation_id}'
 };
 const EXCEPTION_PATH = [
   '/images/generations/with-url',
   '/v1/images/generations/with-url',
+  '/v1/stt'
 ]
 
 const parseOpenapi = (openapi, fetchedModels) => {
@@ -131,10 +133,9 @@ const parseOpenapi = (openapi, fetchedModels) => {
       if (EXCEPTIONS_PAIR_MAP[path] || (openapi.paths[path]['get'] && (path.includes('/generate/audio') || path.includes('/generate/video')) && version)) {
         if(EXCEPTIONS_PAIR_MAP[path]) {
           // EXCEPTION_PATH.push(EXCEPTIONS_PAIR_MAP[path])
-          // console.log('EXCEPTION_PATH', EXCEPTION_PATH)
           pairs[path] = EXCEPTIONS_PAIR_MAP[path]
           pairData.has = true
-          pairData.method = 'post'
+          pairData.method = path === '/v1/stt/create' ? 'get' : 'post'
           pairData.path = EXCEPTIONS_PAIR_MAP[path]
         } else {
           pairs[path] = path
@@ -143,7 +144,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
           pairData.path =  path
         }
       }
-     
+
       const operation = openapi.paths[path][method];
 
       const refId = openapi.paths[path][method].requestBody?.content?.['application/json']?.schema?.$ref
@@ -154,15 +155,18 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
       if (pairData.has) {        
         const operation = openapi.paths[pairData.path][pairData.method];
+        if (pairData.method === 'post') {
+          const refId = openapi.paths[pairData.path][pairData.method].requestBody?.content?.['application/json']?.schema?.$ref
+            .split('/')
+            .at(-1);
+          const schema = schemaById[refId];
+          pairData.schema = schema
+        } else {
+          const schema = openapi.paths[pairData.path][pairData.method].parameters
+          pairData.schema = schema
+        }
 
-        const refId = (pairData.method === 'post'
-          ? openapi.paths[pairData.path][pairData.method].requestBody?.content?.['application/json']?.schema?.$ref
-          : openapi.paths[pairData.path][pairData.method].parameters[0]?.schema?.$ref)
-          .split('/')
-          .at(-1);      
-        const schema = schemaById[refId];
         pairData.operation = operation
-        pairData.schema = schema
       }
 
       for (const model of models) {
@@ -197,7 +201,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
         };
 
         if (pairData.has) {
-          const unionPair = extractUnion(model, pairData.schema, schemaById);
+          const unionPair = pairData.method === 'post' ? extractUnion(model, pairData.schema, schemaById) : [...pairData.schema];
 
           const transformedPair = {
             paths: {
@@ -208,7 +212,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
                     requestBody: {
                       ...pairData.operation.requestBody,
                       content: {
-                        'application/json': {
+                        ['application/json']: {
                           schema: unionPair,
                         },
                       },

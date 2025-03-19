@@ -102,6 +102,10 @@ def main():
     stt_response = create_stt()
     gen_id = stt_response.get("generation_id")
 
+{% swagger src="./nova-2-pair.json" path="/v1/stt/{generation_id}" method="get" %}
+./nova-2-pair.json
+{% endswagger %}
+
 
     if gen_id:
         start_time = time.time()

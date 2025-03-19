@@ -163,7 +163,7 @@
     "alias": "gpt-3.5-turbo",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "description": "This model builds on the capabilities of earlier versions, offering improved natural language \nunderstanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also \ncontextually appropriate.",
+    "description": "This model builds on the capabilities of earlier versions, offering improved natural language understanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also contextually appropriate.",
     "features": [
       "openai/chat-completion"
     ],
@@ -253,7 +253,7 @@
     "alias": "gemma-2-27b-it",
     "category": "text-models-llm",
     "vendor": "Google",
-    "description": "A high-performance language model designed to handle a diverse range of text generation tasks, including question answering, summarization, and reasoning. It offers significant improvements in efficiency and \nperformance compared to its predecessors, making it suitable for various applications in natural language processing.",
+    "description": "A high-performance language model designed to handle a diverse range of text generation tasks, including question answering, summarization, and reasoning. It offers significant improvements in efficiency and performance compared to its predecessors, making it suitable for various applications in natural language processing.",
     "features": [
       "openai/chat-completion"
     ],
@@ -299,7 +299,7 @@
     "alias": "Qwen2-72B-Instruct",
     "category": "text-models-llm",
     "vendor": "Alibaba Cloud",
-    "description": "This model is stronger than the last generation of Qwen 1.5. The model's linguistic proficiency has been roadened to 27 additional languages, demonstrated state-of-the-art results across a multitude of evaluations, and the context length support was increased up to an impressive 128K tokens. \nThis enhancement allows for more comprehensive and contextually rich interactions, making Qwen2 an even more powerful tool for a variety of applications. Qwen2 builds on the Transformer architecture, adding advanced features like SwiGLU activation, attention QKV bias, group query attention, a mixture of sliding window attention, and more for improved efficiency and focus when processing information.",
+    "description": "This model is stronger than the last generation of Qwen 1.5. The model's linguistic proficiency has been roadened to 27 additional languages, demonstrated state-of-the-art results across a multitude of evaluations, and the context length support was increased up to an impressive 128K tokens. \n\nThis enhancement allows for more comprehensive and contextually rich interactions, making Qwen2 an even more powerful tool for a variety of applications. Qwen2 builds on the Transformer architecture, adding advanced features like SwiGLU activation, attention QKV bias, group query attention, a mixture of sliding window attention, and more for improved efficiency and focus when processing information.",
     "features": [
       "openai/chat-completion"
     ],
@@ -702,7 +702,7 @@
   },
   {
     "name": "claude-3-5-sonnet-20240620",
-    "alias": "claude-3-5-sonnet",
+    "alias": "claude-3.5-sonnet",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
@@ -715,7 +715,7 @@
   },
   {
     "name": "claude-3-5-sonnet-20241022",
-    "alias": "claude-3-5-sonnet",
+    "alias": "claude-3.5-sonnet",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
@@ -728,7 +728,7 @@
   },
   {
     "name": "claude-3-5-haiku-20241022",
-    "alias": "claude-3-5-haiku",
+    "alias": "claude-3.5-haiku",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
@@ -763,7 +763,7 @@
   },
   {
     "name": "claude-3-5-sonnet-latest",
-    "alias": "claude-3-5-sonnet",
+    "alias": "claude-3.5-sonnet",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
@@ -843,7 +843,7 @@
   },
   {
     "name": "anthropic/claude-3-5-haiku-20241022",
-    "alias": "claude-3-5-haiku",
+    "alias": "claude-3.5-haiku",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
@@ -851,7 +851,7 @@
   },
   {
     "name": "anthropic/claude-3-5-haiku",
-    "alias": "claude-3-5-haiku",
+    "alias": "claude-3.5-haiku",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
@@ -859,7 +859,7 @@
   },
   {
     "name": "claude-3-5-haiku-latest",
-    "alias": "claude-3-5-haiku",
+    "alias": "claude-3.5-haiku",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
@@ -1424,7 +1424,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1433,7 +1433,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1442,7 +1442,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1451,7 +1451,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1460,7 +1460,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1469,7 +1469,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1478,7 +1478,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1487,7 +1487,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1496,7 +1496,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1505,7 +1505,7 @@
     "alias": "nova-2",
     "category": "speech-voice-models/stt",
     "vendor": "Deepgram",
-    "description": "\"Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.\"",
+    "description": "Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.\n\nNova-2 offers the following model options:\n- **automotive**: Optimized for audio with automotive oriented vocabulary.\n- **conversationalai**: Optimized for use cases in which a human is talking to an automated bot, such as IVR, a voice assistant, or an automated kiosk.\n- **drivethru**: Optimized for audio sources from drivethrus.\n- **finance**: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.\n- **general**: Optimized for everyday audio processing.\n- **medical**: Optimized for audio with medical oriented vocabulary.\n- **meeting**: Optimized for conference room settings, which include multiple speakers with a single microphone.\n- **phonecall**: Optimized for low-bandwidth audio phone calls.\n- **video**: Optimized for audio sourced from videos.\n- **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.",
     "features": [],
     "offsite_name": "Deepgram Nova-2"
   },
@@ -1804,14 +1804,6 @@
     "offsite_name": "Qwen Max 2025-01-25"
   },
   {
-    "name": "bagoodex/bagoodex-search-v1",
-    "alias": "bagoodex-search-v1",
-    "category": "web-search-models",
-    "vendor": "Bagoodex",
-    "description": "-",
-    "offsite_name": "Bagoodex Web Search v1"
-  },
-  {
     "name": "imagen-3.0-generate-002",
     "alias": "imagen-3.0",
     "category": "image-models",
@@ -1821,10 +1813,57 @@
   },
   {
     "name": "claude-3-7-sonnet-20250219",
-    "alias": "claude-3-7-sonnet",
+    "alias": "claude-3.7-sonnet",
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "description": "Anthropic's latest hybrid reasoning model, designed to tackle complex tasks requiring both rapid inference and detailed problem-solving. It introduces a dual-mode operation, combining standard language generation with extended thinking capabilities.",
     "offsite_name": "Claude 3.7 Sonnet"
+  },
+  {
+    "name": "gpt-4.5-preview",
+    "alias": "gpt-4.5-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's latest general-purpose language model, designed to advance capabilities in reasoning, creativity, and conversational coherence. It builds upon GPT-4 with a broader knowledge base, improved alignment with user intent, and enhanced emotional intelligence (EQ). The model is positioned as a research preview and is OpenAI’s largest and most knowledgeable model to date.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Chat GPT 4.5 preview"
+  },
+  {
+    "name": "veo2",
+    "alias": "Veo2-Text-to-Video",
+    "category": "video-models",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": "Veo2 Text-to-Video"
+  },
+  {
+    "name": "veo2/image-to-video",
+    "alias": "Veo2-Image-to-Video",
+    "category": "video-models",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": "Veo2 Image-to-Video"
+  },
+  {
+    "name": "Qwen/QwQ-32B",
+    "alias": "qwen-QwQ-32B",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "",
+    "features": [],
+    "offsite_name": "Qwen QwQ-32B"
+  },
+  {
+    "name": "wan/v2.1/1.3b/text-to-video",
+    "alias": "wan-v2.1-text-to-video",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "description": "",
+    "features": [],
+    "offsite_name": "Wan-2.1"
   }
 ]

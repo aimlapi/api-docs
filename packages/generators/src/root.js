@@ -18,7 +18,7 @@ const DOCS_PATH = '/api-references';
 
 const root = {
   next: ModelsGenerator.build({
-    url: path.join(__dirname, "json_for-docs_generation_20250303.json"), //MODELS_URL,
+    url: path.join(__dirname, "json_for-docs_generation.json"), //MODELS_URL,
     openapi: {
       url: OPENAPI_URL,
     },
@@ -28,52 +28,34 @@ const root = {
         next: [
           VenderPageGenerator.build({
             next: [
-              HandlebarsPageGenerator.build({
-                content: readTemplate(TEMPLATE.models),
+              AliasPageGenerator.build({
                 effects: [
                   StorePlugin.store((...args) => ({
-                    path: `${PathPlugin.path(...args)}${path.sep}README.md`,
-                    transform: replaceTemplate(TEMPLATE.models),
+                    content: (_, c) => JSON.stringify(jsonModify(c.openapi, ...args)),
+                    path: `${PathPlugin.path(...args)}.json`,
                   })),
-                  summary('README'),
+                  StorePlugin.store((...args) => ({
+                    content: (_, c) => JSON.stringify(jsonModifyForPair(c.openapi, ...args)),
+                    path: `${PathPlugin.path(getArgs(...args))}.json`,
+                  })),
                 ],
-              }),
-              AliasPageGenerator.build({
-                next: HandlebarsPageGenerator.build({
-                  content: readTemplate(TEMPLATE.openapi),
-                  effects: [
-                    StorePlugin.store((...args) => ({
-                      path: `${PathPlugin.path(...args)}.md`,
-                      transform: replaceTemplate(TEMPLATE.openapi),
-                    })),
-                    StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(jsonModify(c.openapi, ...args)),
-                      path: `${PathPlugin.path(...args)}.json`,
-                    })),
-                    StorePlugin.store((...args) => ({
-                      content: (_, c) => JSON.stringify(jsonModifyForPair(c.openapi, ...args)),
-                      path: `${PathPlugin.path(getArgs(...args))}.json`,
-                    })),
-                    summary(),
-                  ],
-                }),
               }),
             ],
           }),
         ],
       }),
-      DataBaseModelsPageGenerator.build({
-        next: HandlebarsPageGenerator.build({
-          content: readTemplate(TEMPLATE.modelsData),
-          effects: [
-            StorePlugin.store((...args) => ({
-              path: `${PathPlugin.path(...args)}${path.sep}/model-database.md`,
-              transform: replaceTemplate(TEMPLATE.modelsData),
-            })),
-            dataBaseModels(),
-          ],
-        }),
-      }),
+      // DataBaseModelsPageGenerator.build({
+      //   next: HandlebarsPageGenerator.build({
+      //     content: readTemplate(TEMPLATE.modelsData),
+      //     effects: [
+      //       StorePlugin.store((...args) => ({
+      //         path: `${PathPlugin.path(...args)}${path.sep}/model-database.md`,
+      //         transform: replaceTemplate(TEMPLATE.modelsData),
+      //       })),
+      //       dataBaseModels(),
+      //     ],
+      //   }),
+      // }),
     ]
   }),
 
