@@ -66,7 +66,7 @@ import requests
 def main():
     url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
     payload = {
-        "model": "runway-gen3/turbo/image-to-video",
+        "model": "gen3a_turbo",
         "prompt": "A jellyfish in the ocean",
         "ratio": "16:9",
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
@@ -95,7 +95,7 @@ const main = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'runway-gen3/turbo/image-to-video',
+      model: 'gen3a_turbo',
       prompt: 'A jellyfish in the ocean',
       ratio: '16:9',
       image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
