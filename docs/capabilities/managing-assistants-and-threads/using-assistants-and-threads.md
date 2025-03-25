@@ -1,8 +1,9 @@
 ---
 description: Example of using the threads API
+hidden: true
 ---
 
-# Using Assistants & Threads
+# Examples of Using Assistants
 
 ## Overview
 

@@ -9,7 +9,15 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A new image generation model with inference speed increased sixfold compared to the previous flux-pro. It also features enhanced generation quality and greater accuracy in following prompts.
+Both versions, v.1 and v1.1, generate images of unmatched quality, outperforming popular models like Midjourney v6.0, DALL·E 3 (HD), and SD3-Ultra.&#x20;
+
+`flux-pro/v1.1`  is a new image generation model with inference speed increased sixfold compared to the previous `flux-pro`. It also features enhanced generation quality and greater accuracy in following prompts.
+
+Both versions accept the same set of parameters, generate JPEGs, and have identical minimum, maximum, and default image sizes.
+
+<table data-full-width="true"><thead><tr><th width="149">Model</th><th width="593">Properties of Generated Images</th></tr></thead><tbody><tr><td><code>flux-pro</code></td><td>Format: <strong>JPG</strong><br>Min size: <strong>256</strong>x<strong>256</strong><br>Max size: <strong>1440</strong>x<strong>1440</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:orange;">For both height and width, the value must be a multiple of 32.</mark></td></tr><tr><td><code>flux-pro/v1.1</code></td><td>Format: <strong>JPG</strong><br>Min size: <strong>256</strong>x<strong>256</strong><br>Max size: <strong>1440</strong>x<strong>1440</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:orange;">For both height and width, the value must be a multiple of 32.</mark></td></tr></tbody></table>
+
+
 
 ## Setup your API Key
 

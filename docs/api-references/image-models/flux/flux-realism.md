@@ -8,7 +8,10 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A state-of-the-art model designed to generate photorealistic images from textual descriptions. It enhances the capabilities of the FLUX-1 model, allowing users to create lifelike visuals without the need for extensive realism-related prompts.
+A state-of-the-art model designed to generate photorealistic images from textual descriptions. \
+It allows users to create lifelike visuals without the need for extensive realism-related prompts.
+
+<table><thead><tr><th width="201" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux-realism</code></td><td>Format: <strong>JPG</strong><br>Min size: <strong>512</strong>x<strong>512</strong><br>Max size: <strong>1536</strong>x<strong>1536</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:yellow;">For both height and width, the value must be a multiple of 32.</mark></td></tr></tbody></table>
 
 ## Setup your API Key
 

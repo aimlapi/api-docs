@@ -13,8 +13,7 @@ A state-of-the-art video foundation model designed for advanced generative video
 Key Features:
 
 * Visual text generation: Generates text in both Chinese and English within videos.
-* 3D Variational Autoencoder (Wan-VAE): Encodes and decodes unlimited-length 1080P videos with temporal precision.
-* High-quality outputs: Produces visually dynamic and temporally consistent videos at resolutions of up to 720P.
+* Output Quality: Produces videos at resolutions up to 720P with a frame rate of approximately 16 FPS[^1].
 
 ## Setup your API Key
 
@@ -99,3 +98,6 @@ if __name__ == "__main__":
 ```
 {% endcode %}
 
+
+
+[^1]: Frame per second
