@@ -13,12 +13,6 @@ This page provides API schemas for the following methods:
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
-{% hint style="warning" %}
-Note that the method names in the API schema and the SDK often differ.&#x20;
-
-Accordingly, when calling these methods via the REST API, you should use the names from the API schema, while for calls through the OpenAI SDK, use the names from the examples.
-{% endhint %}
-
 ## API Schemas
 
 ### Create an assistant

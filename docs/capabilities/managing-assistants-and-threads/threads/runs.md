@@ -5,19 +5,13 @@ Runs are processes that execute the assistant’s logic within a thread, allowin
 This page provides API schemas for the following methods:
 
 * [Create a run](runs.md#create-a-run)
-* Create a thread and run it in one request (coming soon)
+* [Create a thread and run it in one request](runs.md#create-a-thread-and-run-it-in-one-request)
 * [Retrieve a list of runs along with their parameters](runs.md#retrieve-a-list-of-runs-along-with-their-parameterss)
 * [Retrieve information about a specific run by its ID](runs.md#retrieve-information-about-a-specific-run-by-its-id)
 * [Modify a specific run by its ID](runs.md#modify-a-specific-run-by-its-id)
-* Cancel a specific run by its ID (coming soon)
+* [Cancel a specific run by its ID](runs.md#cancel-a-specific-run-by-its-id)
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
-
-{% hint style="warning" %}
-Note that the method names in the API schema and the SDK often differ.&#x20;
-
-Accordingly, when calling these methods via the REST API, you should use the names from the API schema, while for calls through the OpenAI SDK, use the names from the examples.
-{% endhint %}
 
 ## API Schemas
 
@@ -51,3 +45,6 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+### Cancel a specific run by its ID
+
+(coming soon)
