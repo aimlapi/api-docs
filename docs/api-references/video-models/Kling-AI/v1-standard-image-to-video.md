@@ -23,9 +23,9 @@ Generating a video using this model involves making two sequential API calls:
 
 Below, you can find both corresponding API schemas.
 
-### API Schema
+## API Schema
 
-#### Generate Video
+### Create a video generation task and send it to the server
 
 {% hint style="warning" %}
 The ratio/aspect\_ratio parameter is deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
@@ -35,9 +35,9 @@ The ratio/aspect\_ratio parameter is deprecated. The aspect ratio of the generat
 [v1-standard-image-to-video.json](v1-standard-image-to-video.json)
 {% endopenapi %}
 
-#### Fetch generation
+### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.&#x20;
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. &#x20;
 
 {% openapi src="v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
 [v1-standard-image-to-video-pair.json](v1-standard-image-to-video-pair.json)
