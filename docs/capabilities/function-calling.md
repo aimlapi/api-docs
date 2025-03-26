@@ -104,8 +104,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ## Models That Support Function Calling
 
-* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
-* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
+* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
+* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
 * [claude-3-opus-20240229](../api-references/text-models-llm/Anthropic/claude-3-opus.md)
 * [claude-3-sonnet-20240229](../api-references/text-models-llm/Anthropic/claude-3-sonnet.md)

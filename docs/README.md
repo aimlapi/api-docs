@@ -1,6 +1,11 @@
 ---
 description: Welcome to the AI/ML API!
+cover: .gitbook/assets/rqiuor.jpg
+coverY: 0
 layout:
+  cover:
+    visible: false
+    size: full
   title:
     visible: true
   description:
@@ -79,15 +84,15 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 {% tab title="Models by DEVELOPER" %}
 **AI21 Labs**:  [Text/Chat](api-references/text-models-llm/AI21-Labs/)\
-**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)\
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)\
 **Anthracite**:  [Text/Chat](api-references/text-models-llm/Anthracite/)\
 <mark style="background-color:green;">**Anthropic**</mark>:  [Text/Chat](api-references/text-models-llm/Anthropic/)  [Embedding](api-references/embedding-models/Anthropic/) \
 **BAAI**:  [Embedding](api-references/embedding-models/BAAI/)\
-**Black Forest Labs**:  [Image](api-references/image-models/Black-Forest-Labs/)\
 **Cohere**:  [Text/Chat](api-references/text-models-llm/Cohere/)\
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)\
+**Flux**:  [Image](api-references/image-models/flux/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)\
 **Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
 <mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
 **Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\
@@ -128,6 +133,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Choose Ready-to-Use Solutions Instead**    |    [**SOLUTIONS**](broken-reference)
 
 * [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
+* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI assistants capable of handling customer support, data analysis, content generation, and more.&#x20;
 
 ***
 {% endstep %}
@@ -135,6 +141,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% step %}
 ### &#x20;<mark style="background-color:orange;">GOING  DEEPER</mark>&#x20;
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/managing-assistants-and-threads/">Managing Assistants &#x26; Threads</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
 {% endstep %}
 {% endstepper %}

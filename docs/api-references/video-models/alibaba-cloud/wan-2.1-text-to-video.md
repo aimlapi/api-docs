@@ -13,8 +13,7 @@ A state-of-the-art video foundation model designed for advanced generative video
 Key Features:
 
 * Visual text generation: Generates text in both Chinese and English within videos.
-* 3D Variational Autoencoder (Wan-VAE): Encodes and decodes unlimited-length 1080P videos with temporal precision.
-* High-quality outputs: Produces visually dynamic and temporally consistent videos at resolutions of up to 720P.
+* Output Quality: Produces videos at resolutions up to 720P with a frame rate of approximately 16 FPS[^1].
 
 ## Setup your API Key
 
@@ -33,13 +32,15 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ### Video Generation
 
-You can generate a video using this API.
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json" path="/v2/generate/video/alibaba/generation" method="post" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video.json)
 {% endopenapi %}
 
 ### Fetch the video
+
+This endpoint lets you request the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json" path="/v2/generate/video/alibaba/generation" method="get" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json)
@@ -97,3 +98,6 @@ if __name__ == "__main__":
 ```
 {% endcode %}
 
+
+
+[^1]: Frame per second

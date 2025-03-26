@@ -53,13 +53,13 @@ The following Free Tier rules apply:
 
 <summary>Model list</summary>
 
-* [flux/schnell ](../api-references/image-models/Black-Forest-Labs/flux-schnell.md)
-* [flux-pro](../api-references/image-models/Black-Forest-Labs/flux-pro.md)&#x20;
-* [flux-pro/v1.1 ](../api-references/image-models/Black-Forest-Labs/flux-pro.md)
-* [flux-pro/v1.1-ultra](../api-references/image-models/Black-Forest-Labs/flux-pro-v1.1-ultra.md)
-* [flux/dev](../api-references/image-models/Black-Forest-Labs/flux-dev.md)
-* [flux/dev/image-to-image](../api-references/image-models/Black-Forest-Labs/flux-dev-image-to-image.md)
-* [flux-realism](../api-references/image-models/Black-Forest-Labs/flux-realism.md)
+* [flux/schnell ](../api-references/image-models/flux/flux-schnell.md)
+* [flux-pro](../api-references/image-models/flux/flux-pro.md)&#x20;
+* [flux-pro/v1.1 ](../api-references/image-models/flux/flux-pro.md)
+* [flux-pro/v1.1-ultra](../api-references/image-models/flux/flux-pro-v1.1-ultra.md)
+* [flux/dev](../api-references/image-models/flux/flux-dev.md)
+* [flux/dev/image-to-image](../api-references/image-models/flux/flux-dev-image-to-image.md)
+* [flux-realism](../api-references/image-models/flux/flux-realism.md)
 * [stable-diffusion-v3-medium ](../api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
 * [stable-diffusion-v35-large](../api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
 * [recraft-v3](../api-references/image-models/RecraftAI/recraft-v3.md)

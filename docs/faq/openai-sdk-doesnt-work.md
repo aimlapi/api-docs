@@ -1,6 +1,6 @@
 ---
-icon: circle-question
 description: FAQ section with several possible reasons of the problem with OpenAI SDK.
+icon: circle-question
 layout:
   title:
     visible: true
@@ -29,7 +29,7 @@ OpenAI SDK is a configurable package. To use it with our AI/ML API server, you n
 ```python
 from openai import OpenAI
 
-api_key = "my_key"
+api_key = "<YOUR_AIMLAPI_KEY>"
 base_url = "https://api.aimlapi.com/v1"
 
 api = OpenAI(api_key=api_key, base_url=base_url)
@@ -40,7 +40,7 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 ```javascript
 const { OpenAI } = require("openai");
 
-const apiKey = "my_key";
+const apiKey = "YOUR_AIMLAPI_KEY";
 const baseURL = "https://api.aimlapi.com/v1";
 
 const api = new OpenAI({

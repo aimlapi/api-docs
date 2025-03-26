@@ -39,7 +39,7 @@ We fully support the OpenAI API structure, and you can seamlessly use the featur
 This support provides easy integration into systems already using OpenAI's standards. For example, you can integrate our API into any product that supports LLM models by updating only two things in the configuration: the base URL and the API key.
 
 {% hint style="info" %}
-[How do I configure the base URL and API key?](../faq/openai-sdk-doesnt-work.md)
+[How do I configure the base URL and API key?](setting-up.md)
 {% endhint %}
 
 ## REST API

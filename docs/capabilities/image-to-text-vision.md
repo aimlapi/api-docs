@@ -1,10 +1,6 @@
 # Vision in Text Models (Image-To-Text)
 
-This article describes a specific capability of chat models: vision, which enables image-to-text conversion. A list of models that support it is provided at the end of this page.
-
-## Vision Tasks
-
-**Example Request: Image Analysis**
+This article describes a specific capability of text models: vision, which enables image-to-text conversion. A list of models that support it is provided at the end of this page.
 
 ## Example
 
@@ -47,8 +43,8 @@ print(response.json())
 
 ## Text Models That Support Vision
 
-* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
-* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3-5-sonnet.md)
+* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
+* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
 * [claude-3-opus-20240229](../api-references/text-models-llm/Anthropic/claude-3-opus.md)
 * [claude-3-sonnet-20240229](../api-references/text-models-llm/Anthropic/claude-3-sonnet.md)

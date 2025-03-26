@@ -42,7 +42,7 @@ See API references and examples on the subpages.
 
 ## How to make a call
 
-&#x20;Check how this call is made in the [examples ](./#example-1)below.
+&#x20;Check how this call is made in the [examples](./#example-1) below.
 
 {% hint style="success" %}
 Note that queries can include advanced search syntax:
