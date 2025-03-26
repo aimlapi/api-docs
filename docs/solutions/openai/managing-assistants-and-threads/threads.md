@@ -13,18 +13,23 @@ layout:
     visible: true
 ---
 
-# Threads
+# Thread API
 
 **Threads** serve as conversation containers that store messages exchanged between a user and an assistant, maintaining context and continuity across interactions.
 
 This page provides API schemas for the following methods:
 
-* [Create a thread](./#create-a-thread)
-* [Retrieve information about a specific thread by its ID](./#retrieve-information-about-a-specific-thread-by-its-id)
-* [Modify a specific thread by its ID](./#modify-a-specific-thread-by-its-id)
-* [Delete a specific thread by its ID](./#delete-a-specific-thread-by-its-id)
+* [Create a thread](threads.md#create-a-thread)
+* [Retrieve information about a specific thread by its ID](threads.md#retrieve-information-about-a-specific-thread-by-its-id)
+* [Modify a specific thread by its ID](threads.md#modify-a-specific-thread-by-its-id)
+* [Delete a specific thread by its ID](threads.md#delete-a-specific-thread-by-its-id)
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
+
+{% hint style="warning" %}
+Note that the method names in the API schema and the SDK often differ.\
+Accordingly, when calling these methods via the REST API, you should use the names from the API schema, while for calls through the OpenAI SDK, use the names from the examples.
+{% endhint %}
 
 ## API Schemas
 

@@ -36,13 +36,13 @@ See API references and examples on the subpages.
 {% endstep %}
 
 {% step %}
-**As a general** [**chat completion**](../../capabilities/completion-or-chat-models.md) **solution** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. See the API Schema below or check how this call is made in the Python example on the bottom of this page.
+**As a general** [**chat completion**](../../../capabilities/completion-or-chat-models.md) **solution** (but searching on the internet): enter a query in the prompt and receive an internet-sourced answer, similar to asking a question on a search engine through a browser. See the API Schema below or check how this call is made in the Python example on the bottom of this page.
 {% endstep %}
 {% endstepper %}
 
 ## How to make a call
 
-&#x20;Check how this call is made in the [examples ](./#example-1)below.
+&#x20;Check how this call is made in the [examples](./#example-1) below.
 
 {% hint style="success" %}
 Note that queries can include advanced search syntax:

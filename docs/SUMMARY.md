@@ -195,13 +195,22 @@
 
 ## Solutions
 
-* [AI Search Engine](solutions/ai-search-engine/README.md)
-  * [Find Links](solutions/ai-search-engine/find-links.md)
-  * [Find Images](solutions/ai-search-engine/find-images.md)
-  * [Find Videos](solutions/ai-search-engine/find-videos.md)
-  * [Find the Weather](solutions/ai-search-engine/find-the-weather.md)
-  * [Find a Local Map](solutions/ai-search-engine/find-a-local-map.md)
-  * [Get a Knowledge Structure](solutions/ai-search-engine/get-a-knowledge-structure.md)
+* [Bagoodex](solutions/bagoodex/README.md)
+  * [AI Search Engine](solutions/bagoodex/ai-search-engine/README.md)
+    * [Find Links](solutions/bagoodex/ai-search-engine/find-links.md)
+    * [Find Images](solutions/bagoodex/ai-search-engine/find-images.md)
+    * [Find Videos](solutions/bagoodex/ai-search-engine/find-videos.md)
+    * [Find the Weather](solutions/bagoodex/ai-search-engine/find-the-weather.md)
+    * [Find a Local Map](solutions/bagoodex/ai-search-engine/find-a-local-map.md)
+    * [Get a Knowledge Structure](solutions/bagoodex/ai-search-engine/get-a-knowledge-structure.md)
+* [OpenAI](solutions/openai/README.md)
+  * [Assistants](solutions/openai/managing-assistants-and-threads/README.md)
+    * [Assistant API](solutions/openai/managing-assistants-and-threads/assistant-api.md)
+    * [Thread API](solutions/openai/managing-assistants-and-threads/threads.md)
+    * [Message API](solutions/openai/managing-assistants-and-threads/messages.md)
+    * [Run and Run Step API](solutions/openai/managing-assistants-and-threads/runs.md)
+    * [Events](solutions/openai/managing-assistants-and-threads/events.md)
+    * [Examples of Using Assistants](solutions/openai/managing-assistants-and-threads/using-assistants-and-threads.md)
 
 ## Capabilities
 
@@ -210,12 +219,6 @@
 * [Function Calling](capabilities/function-calling.md)
 * [Vision in Text Models (Image-To-Text)](capabilities/image-to-text-vision.md)
 * [Features of Anthropic Models](capabilities/anthropic.md)
-* [Managing Assistants & Threads](capabilities/managing-assistants-and-threads/README.md)
-  * [Assistants](capabilities/managing-assistants-and-threads/assistants.md)
-  * [Threads](capabilities/managing-assistants-and-threads/threads/README.md)
-  * [Messages](capabilities/managing-assistants-and-threads/threads/messages.md)
-  * [Runs](capabilities/managing-assistants-and-threads/threads/runs.md)
-  * [Examples of Using Assistants](capabilities/managing-assistants-and-threads/using-assistants-and-threads.md)
 * [Code Generation](capabilities/code-generation.md)
 * [Model comparison](capabilities/models-comparsion.md)
 

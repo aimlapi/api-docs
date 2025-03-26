@@ -24,7 +24,7 @@ The output will be the requested information retrieved from the internet—or em
 
 ## How to make a call
 
-Check how this call is made in the [example ](get-a-knowledge-structure.md#example)below.
+Check how this call is made in the [example](get-a-knowledge-structure.md#example) below.
 
 {% hint style="success" %}
 Note that queries can include advanced search syntax:

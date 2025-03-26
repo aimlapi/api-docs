@@ -1,4 +1,4 @@
-# Messages
+# Message API
 
 **Messages** are individual pieces of communication within a thread, sent either by the user or the assistant, helping to maintain the flow and context of the conversation.
 
@@ -10,6 +10,11 @@ This page provides API schemas for the following methods:
 * [Delete a specific message by its ID](messages.md#delete-a-specific-message-by-its-id)
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
+
+{% hint style="warning" %}
+Note that the method names in the API schema and the SDK often differ.\
+Accordingly, when calling these methods via the REST API, you should use the names from the API schema, while for calls through the OpenAI SDK, use the names from the examples.
+{% endhint %}
 
 ## API Schemas
 

@@ -39,7 +39,7 @@ There are several capabilities of text models that are worth mentioning separate
 
 ***
 
-An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of this functionality can be found in the [Managing Assistants & Threads](../../capabilities/managing-assistants-and-threads/) article.
+An evolution of chat completion includes **Assistants** (preconfigured conversational agents with specific roles) and **Threads** (a mechanism for maintaining conversation history for context). Examples of this functionality can be found in the [Managing Assistants & Threads](../../solutions/openai/managing-assistants-and-threads/) article.
 
 ***
 

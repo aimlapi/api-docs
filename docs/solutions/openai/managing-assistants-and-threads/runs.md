@@ -1,4 +1,4 @@
-# Runs
+# Run and Run Step API
 
 Runs are processes that execute the assistant’s logic within a thread, allowing it to process messages, generate responses, and call external tools if needed. Runs go through different statuses, such as `queued`, `in_progress`, and `completed`, and trigger **events** based on their progress, including tool calls and message updates.
 
@@ -12,6 +12,11 @@ This page provides API schemas for the following methods:
 * [Cancel a specific run by its ID](runs.md#cancel-a-specific-run-by-its-id)
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
+
+{% hint style="warning" %}
+Note that the method names in the API schema and the SDK often differ.\
+Accordingly, when calling these methods via the REST API, you should use the names from the API schema, while for calls through the OpenAI SDK, use the names from the examples.
+{% endhint %}
 
 ## API Schemas
 
