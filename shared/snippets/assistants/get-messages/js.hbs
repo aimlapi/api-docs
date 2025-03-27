@@ -1,0 +1,18 @@
+const { OpenAI } = require('openai');
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const messages = await api.beta.threads.messages.list('<YOUR_THREAD_ID>', {
+    run_id: '<YOUR_RUN_ID>',
+  });
+
+  for (const message of messages) {
+    console.log(`Message: ${message}`);
+  }
+};
+
+main();

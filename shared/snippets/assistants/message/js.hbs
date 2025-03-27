@@ -1,0 +1,17 @@
+const { OpenAI } = require('openai');
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const message = await api.beta.threads.messages.create('<YOUR_THREAD_ID>', {
+    role: 'user',
+    content: 'Why is the sky blue?',
+  });
+
+  console.log(`Message: ${message}`);
+};
+
+main();

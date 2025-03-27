@@ -1,5 +1,5 @@
 {
-  "title": "Create an message",
+  "title": "Create a message",
   "docs": "https://docs.aimlapi.com/api-overview/text-models-llm/function-calling/anthropic",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/",
