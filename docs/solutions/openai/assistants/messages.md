@@ -1,15 +1,12 @@
 # Message API
 
-**Messages** are individual pieces of communication within a thread, sent either by the user or the assistant, helping to maintain the flow and context of the conversation.
+**Messages** are individual pieces of communication within a Thread, sent either by the user or the Assistant, helping to maintain the flow and context of the conversation.
 
 This page provides API schemas for the following methods:
 
-* [Create a message](messages.md#create-a-message)
-* [Retrieve information about a specific message by its ID](messages.md#retrieve-information-about-a-specific-message-by-its-id)
-* [Modify a specific thread by its ID](messages.md#modify-a-specific-message-by-its-id)
-* [Delete a specific message by its ID](messages.md#delete-a-specific-message-by-its-id)
+<table><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="messages.md#create-a-message">Create a Message</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/messages</code></td></tr><tr><td><a href="messages.md#retrieve-a-list-of-messages-from-a-specific-thread-along-with-their-properties">Retrieve a list of Messages from a specific Thread along with their properties</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/messages</code></td></tr><tr><td><a href="messages.md#retrieve-information-about-a-specific-message-by-its-id">Retrieve information about a specific Message by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/messages/{messageId}</code></td></tr><tr><td><a href="messages.md#modify-a-specific-message-by-its-id">Modify a specific Message by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/messages/{messageId}</code></td></tr><tr><td><a href="messages.md#delete-a-specific-message-by-its-id">Delete a specific Message by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/messages/{messageId}</code></td></tr></tbody></table>
 
-After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
+After each API schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
 {% hint style="warning" %}
 Note that the method names in the API schema and the SDK often differ.\
@@ -18,21 +15,21 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ## API Schemas
 
-### Create a message
+### Create a Message
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Retrieve information about a specific message by its ID
+### Retrieve a list of Messages from a specific Thread along with their properties
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="get" %}
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Retrieve a list of messages along with their properties
+### Retrieve information about a specific Message by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="get" %}
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
@@ -44,4 +41,7 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ### Delete a specific message by its ID
 
-(coming soon)
+{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="delete" %}
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi %}
+

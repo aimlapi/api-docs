@@ -15,16 +15,13 @@ layout:
 
 # Thread API
 
-**Threads** serve as conversation containers that store messages exchanged between a user and an assistant, maintaining context and continuity across interactions.
+**Threads** serve as conversation containers that store Messages exchanged between a user and an Assistant, maintaining context and continuity across interactions.
 
 This page provides API schemas for the following methods:
 
-* [Create a thread](threads.md#create-a-thread)
-* [Retrieve information about a specific thread by its ID](threads.md#retrieve-information-about-a-specific-thread-by-its-id)
-* [Modify a specific thread by its ID](threads.md#modify-a-specific-thread-by-its-id)
-* [Delete a specific thread by its ID](threads.md#delete-a-specific-thread-by-its-id)
+<table><thead><tr><th width="302.0833740234375"></th><th></th></tr></thead><tbody><tr><td><a href="threads.md#create-a-thread">Create a Thread</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads</code></td></tr><tr><td><a href="threads.md#retrieve-information-about-a-specific-thread-by-its-id">Retrieve information about a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#modify-a-specific-thread-by-its-id">Modify a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#delete-a-specific-thread-by-its-id">Delete a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr></tbody></table>
 
-After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
+After each API schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
 {% hint style="warning" %}
 Note that the method names in the API schema and the SDK often differ.\
@@ -33,13 +30,13 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ## API Schemas
 
-### Create a thread
+### Create a Thread
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-#### Example: Create a thread
+#### Example: Create a Thread
 
 ```python
 thread = client.beta.threads.create(
@@ -64,13 +61,13 @@ thread = client.beta.threads.create(
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Modify a specific thread by its ID
+### Modify a specific Thread by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-### Delete a specific thread by its ID
+### Delete a specific Thread by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="delete" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
