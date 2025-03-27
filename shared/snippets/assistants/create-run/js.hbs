@@ -1,0 +1,16 @@
+const { OpenAI } = require('openai');
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const run = await api.beta.threads.runs.create('<YOUR_THREAD_ID>', {
+    assistant_id: '<YOUR_ASSISTANT_ID>',
+  });
+
+  console.log(`Run: ${run}`);
+};
+
+main();
