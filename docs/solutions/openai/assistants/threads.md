@@ -36,9 +36,11 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
-#### Example: Create a Thread
+#### Python + OpenAI SDK Example:
 
-```python
+<pre class="language-python"><code class="lang-python"><strong>from openai import OpenAI
+</strong>client = OpenAI()
+
 thread = client.beta.threads.create(
   messages=[
     {
@@ -53,13 +55,31 @@ thread = client.beta.threads.create(
     }
   ]
 )        
-```
+</code></pre>
 
-### Retrieve information about a specific thread by its ID
+
+
+***
+
+### Retrieve information about a specific Thread by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+my_thread = client.beta.threads.retrieve("thread_abc123")
+print(my_thread)
+```
+
+
+
+***
 
 ### Modify a specific Thread by its ID
 
@@ -67,8 +87,38 @@ thread = client.beta.threads.create(
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+my_updated_thread = client.beta.threads.update(
+  "thread_abc123",
+  metadata={
+    "modified": "true",
+    "user": "abc123"
+  }
+)
+print(my_updated_thread)
+```
+
+
+
+***
+
 ### Delete a specific Thread by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="delete" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+response = client.beta.threads.delete("thread_abc123")
+print(response)
+```

@@ -24,11 +24,50 @@ Create an Assistant with a model and instructions.
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+client = OpenAI()
+
+assistant = client.beta.assistants.create(
+  name="Math Tutor",
+  instructions="You are a personal math tutor. Write and run code to answer math questions.",
+  tools=[{"type": "code_interpreter"}],
+  model="gpt-4o",
+)
+```
+{% endcode %}
+
+
+
+***
+
 ### Retrieve a list of Assistants along with their parameters
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+client = OpenAI()
+
+my_assistants = client.beta.assistants.list(
+    order="desc",
+    limit="20",
+)
+print(my_assistants.data)
+```
+{% endcode %}
+
+
+
+***
 
 ### Retrieve information about a specific Assistant by its ID
 
@@ -36,11 +75,51 @@ Create an Assistant with a model and instructions.
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+client = OpenAI()
+
+my_assistant = client.beta.assistants.retrieve("asst_abc123")
+print(my_assistant)
+
+```
+{% endcode %}
+
+
+
+***
+
 ### Modify a specific Assistant by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants/{assistantId}" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+client = OpenAI()
+
+my_updated_assistant = client.beta.assistants.update(
+  "asst_abc123",
+  instructions="You are an HR bot, and you have access to files to answer employee questions about company policies. Always response with info from either of the files.",
+  name="HR Helper",
+  tools=[{"type": "file_search"}],
+  model="gpt-4o"
+)
+
+print(my_updated_assistant)
+```
+{% endcode %}
+
+
+
+***
 
 ### Delete a specific Assistant by its ID
 
@@ -48,3 +127,14 @@ Create an Assistant with a model and instructions.
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
+client = OpenAI()
+
+response = client.beta.assistants.delete("asst_abc123")
+print(response)
+```
+{% endcode %}

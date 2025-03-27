@@ -21,11 +21,43 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+thread_message = client.beta.threads.messages.create(
+  "thread_abc123",
+  role="user",
+  content="How does AI work? Explain it in simple terms.",
+)
+print(thread_message)
+```
+
+
+
+***
+
 ### Retrieve a list of Messages from a specific Thread along with their properties
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+thread_messages = client.beta.threads.messages.list("thread_abc123")
+print(thread_messages.data)
+```
+
+
+
+***
 
 ### Retrieve information about a specific Message by its ID
 
@@ -33,11 +65,49 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+message = client.beta.threads.messages.retrieve(
+  message_id="msg_abc123",
+  thread_id="thread_abc123",
+)
+print(message)
+```
+
+
+
+***
+
 ### Modify a specific message by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+message = client.beta.threads.messages.update(
+  message_id="msg_abc12",
+  thread_id="thread_abc123",
+  metadata={
+    "modified": "true",
+    "user": "abc123",
+  },
+)
+print(message)
+```
+
+
+
+***
 
 ### Delete a specific message by its ID
 
@@ -45,3 +115,15 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+deleted_message = client.beta.threads.messages.delete(
+  message_id="msg_abc12",
+  thread_id="thread_abc123",
+)
+print(deleted_message)
+```
