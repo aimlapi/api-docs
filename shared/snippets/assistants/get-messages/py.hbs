@@ -10,5 +10,5 @@ messages = client.beta.threads.messages.list(
     run_id="<YOUR_RUN_ID>",  
 )
 
-for message in messages:
+for message in messages.data:
     print(f"Message: {message}")

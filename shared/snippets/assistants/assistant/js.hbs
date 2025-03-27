@@ -13,7 +13,7 @@ const main = async () => {
     description: 'This is my assistant.',
   });
 
-  console.log(`Assistant: ${assistant}`);
+  console.log(`Assistant: ${JSON.stringify(assistant, null, 2)}`);
 };
 
 main();
