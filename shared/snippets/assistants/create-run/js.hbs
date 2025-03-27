@@ -10,7 +10,7 @@ const main = async () => {
     assistant_id: '<YOUR_ASSISTANT_ID>',
   });
 
-  console.log(`Run: ${run}`);
+  console.log(`Run: ${JSON.stringify(run, null, 2)}`);
 };
 
 main();

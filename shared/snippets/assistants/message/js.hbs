@@ -11,7 +11,7 @@ const main = async () => {
     content: 'Why is the sky blue?',
   });
 
-  console.log(`Message: ${message}`);
+  console.log(`Message: ${JSON.stringify(message, null, 2)}`);
 };
 
 main();

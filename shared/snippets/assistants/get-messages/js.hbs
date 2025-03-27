@@ -10,8 +10,8 @@ const main = async () => {
     run_id: '<YOUR_RUN_ID>',
   });
 
-  for (const message of messages) {
-    console.log(`Message: ${message}`);
+  for (const message of messages.data) {
+    console.log(`Message: ${JSON.stringify(message, null, 2)}`);
   }
 };
 

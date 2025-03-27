@@ -5,6 +5,9 @@ client = OpenAI(
     api_key="{{apiKey}}",    
 )
 
-run = client.beta.threads.runs.retrieve("<YOUR_THREAD_ID>", "<YOUR_RUN_ID>")
+run = client.beta.threads.runs.retrieve(
+    run_id="<YOUR_RUN_ID>", 
+    thread_id="<YOUR_THREAD_ID>", 
+)
 
 print(f"Run: {run}")
