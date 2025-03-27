@@ -21,11 +21,51 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.runs.create(
+  thread_id="thread_abc123",
+  assistant_id="asst_abc123"
+)
+
+print(run)
+```
+
+
+
+***
+
 ### Create a Thread and run it in one request
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/runs" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.create_and_run(
+  assistant_id="asst_abc123",
+  thread={
+    "messages": [
+      {"role": "user", "content": "Explain deep learning to a 5 year old."}
+    ]
+  }
+)
+
+print(run)
+```
+
+
+
+***
 
 ### Retrieve a list of Runs belonging to a specific Thread
 
@@ -33,11 +73,46 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+runs = client.beta.threads.runs.list(
+  "thread_abc123"
+)
+
+print(runs)
+```
+
+
+
+***
+
 ### Retrieve information about a specific Run by its ID
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.runs.retrieve(
+  thread_id="thread_abc123",
+  run_id="run_abc123"
+)
+
+print(run)
+```
+
+
+
+***
 
 ### Modify a specific run by its ID
 
@@ -45,11 +120,54 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.runs.update(
+  thread_id="thread_abc123",
+  run_id="run_abc123",
+  metadata={"user_id": "user_abc123"},
+)
+
+print(run)
+```
+
+
+
+***
+
 ### Submit Tool outputs to a specific Run
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/submit_tool_outputs" method="post" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.runs.submit_tool_outputs(
+  thread_id="thread_123",
+  run_id="run_123",
+  tool_outputs=[
+    {
+      "tool_call_id": "call_001",
+      "output": "70 degrees and sunny."
+    }
+  ]
+)
+
+print(run)
+```
+
+
+
+***
 
 ### Cancel a specific Run by its ID
 
@@ -57,11 +175,47 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run = client.beta.threads.runs.cancel(
+  thread_id="thread_abc123",
+  run_id="run_abc123"
+)
+
+print(run)
+```
+
+
+
+***
+
 ### Retrieve a list of Run Steps belonging to a specific Run
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/steps" method="get" %}
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
+
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run_steps = client.beta.threads.runs.steps.list(
+    thread_id="thread_abc123",
+    run_id="run_abc123"
+)
+
+print(run_steps)
+```
+
+
+
+***
 
 ### Retrieve information about a specific Run Step by its ID
 
@@ -69,3 +223,17 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 [https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
+#### Python + OpenAI SDK Example:
+
+```python
+from openai import OpenAI
+client = OpenAI()
+
+run_step = client.beta.threads.runs.steps.retrieve(
+    thread_id="thread_abc123",
+    run_id="run_abc123",
+    step_id="step_abc123"
+)
+
+print(run_step)
+```
