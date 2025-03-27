@@ -371,7 +371,7 @@ The script enters a **while loop**, allowing continuous conversation:
 
 ### **4. Streaming Response Processing**
 
-* The assistant **starts generating a response** asynchronously.
+* The Assistant **starts generating a response** asynchronously.
 * The **event handler (`EventHandler`) captures each update** and displays it in real time.
 * The loop repeats until the user exits.
 
