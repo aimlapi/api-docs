@@ -1,5 +1,6 @@
 {
   "title": "Create an assistant",
+  "docs": "https://docs.aimlapi.com/solutions/openai/assistants/assistant-api",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/",
     "apiKey": "<YOUR_API_KEY>"

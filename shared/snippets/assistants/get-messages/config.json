@@ -1,5 +1,6 @@
 {
   "title": "Get messages",
+  "docs": "https://docs.aimlapi.com/solutions/openai/assistants/messages",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/",
     "apiKey": "<YOUR_API_KEY>"
