@@ -1,6 +1,6 @@
 ---
-icon: eye
 description: Overview of the capabilities of AIML API vision models.
+icon: eye
 layout:
   title:
     visible: true
@@ -29,8 +29,8 @@ With OCR technology, you can analyze any document and extract text as well as ot
 * Handwriting
 * Text inside PDF/TIFF files
 
-{% content-ref url="ocr-optical-character-recognition.md" %}
-[ocr-optical-character-recognition.md](ocr-optical-character-recognition.md)
+{% content-ref url="ocr-optical-character-recognition/" %}
+[ocr-optical-character-recognition](ocr-optical-character-recognition/)
 {% endcontent-ref %}
 
 ### OFR: Optical Feature Recognition
