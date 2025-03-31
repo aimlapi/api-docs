@@ -1,0 +1,27 @@
+import requests
+
+
+def main():
+    response = requests.post(
+        "{{baseUrl}}/ocr",
+        headers={
+            "Authorization": "Bearer {{apiKey}}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "document": {
+                "type": "document_url",
+                "document_url": "https://css4.pub/2015/textbook/somatosensory.pdf"
+            },
+            "model": "{{model}}",
+        },
+    )
+
+    response.raise_for_status()
+    data = response.json()
+
+    print(data)
+
+
+if __name__ == "__main__":
+    main()
