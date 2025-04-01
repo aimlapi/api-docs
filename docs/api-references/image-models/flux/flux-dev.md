@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* flux/dev
+* `flux/dev`
 {% endhint %}
 
 ## Model Overview
