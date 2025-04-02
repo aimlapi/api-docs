@@ -75,6 +75,10 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 <table><thead><tr><th width="266.20001220703125">Model ID</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td><td>Meta</td><td>128000</td><td>-</td></tr><tr><td><a href="moderation-safety-models/Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-2-8b">LlamaGuard 2 (8b)</a></td></tr><tr><td><a href="moderation-safety-models/Meta/Meta-Llama-Guard-3-8B.md">meta-llama/Meta-Llama-Guard-3-8B</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-3-8b">Llama Guard 3 (8B)</a></td></tr></tbody></table>
 
+### Vision Models
+
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="vision-models/ocr-optical-character-recognition/google/google-ocr.md"><em>The service has no Model ID</em></a></td><td>Google</td><td></td><td>-</td></tr><tr><td><a href="vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-latest.md">mistral/mistral-ocr-latest</a></td><td>Mistral AI</td><td></td><td>-</td></tr></tbody></table>
+
 ### 3D-Generating Models
 
 <table data-full-width="false"><thead><tr><th width="265.4000244140625">Model ID</th><th width="134.39996337890625">Developer</th><th width="104">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="3d-generating-models/Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr></tbody></table>
