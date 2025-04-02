@@ -77,6 +77,8 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 ### Vision Models
 
+#### Optical Character Recognition (OCR)
+
 <table><thead><tr><th width="266.20001220703125">Model ID</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="vision-models/ocr-optical-character-recognition/google/google-ocr.md"><em>The service has no Model ID</em></a></td><td>Google</td><td></td><td>-</td></tr><tr><td><a href="vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-latest.md">mistral/mistral-ocr-latest</a></td><td>Mistral AI</td><td></td><td>-</td></tr></tbody></table>
 
 ### 3D-Generating Models
