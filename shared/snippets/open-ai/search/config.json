@@ -1,0 +1,7 @@
+{
+  "title": "Search with openAI",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v1",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}

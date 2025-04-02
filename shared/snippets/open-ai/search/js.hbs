@@ -1,0 +1,23 @@
+import OpenAI from 'openai';
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const answer = await api.chat.completions.create({
+    model: '{{model}}',
+    web_search_options: {},
+    messages: [
+      {
+        role: 'user',
+        content: 'What holiday is today?'
+      }
+    ],
+  });
+
+  console.log(answer.choices[0]);
+};
+
+main();
