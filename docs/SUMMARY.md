@@ -171,6 +171,8 @@
 * [Vision Models](api-references/vision-models/README.md)
   * [Image Analysis](api-references/vision-models/image-analysis.md)
   * [OCR: Optical Character Recognition](api-references/vision-models/ocr-optical-character-recognition/README.md)
+    * [Google](api-references/vision-models/ocr-optical-character-recognition/google/README.md)
+      * [Google OCR](api-references/vision-models/ocr-optical-character-recognition/google/google-ocr.md)
     * [Mistral AI](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/README.md)
       * [mistral-ocr-latest](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-latest.md)
   * [OFR: Optical Feature Recognition](api-references/vision-models/ofr-optical-feature-recognition.md)
