@@ -133,7 +133,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Choose Ready-to-Use Solutions Instead**    |    [**SOLUTIONS**](broken-reference)
 
 * [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
-* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI assistants capable of handling customer support, data analysis, content generation, and more.&#x20;
+* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI Assistants capable of handling customer support, data analysis, content generation, and more.&#x20;
 
 ***
 {% endstep %}
