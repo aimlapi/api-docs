@@ -179,7 +179,7 @@ def ocr_process():
         json={
             "document": {
                 "type": "document_url",
-                "document_url": "https://zotov-vik.github.io/public_misc/test-PDF-2.pdf"
+                "document_url": "https://zovi0.github.io/public_misc/test-PDF-2.pdf"
             },
             "model": "mistral/mistral-ocr-latest",
             "include_image_base64": True,
