@@ -100,6 +100,7 @@
 * [Image Models](api-references/image-models/README.md)
   * [Flux](api-references/image-models/flux/README.md)
     * [flux-pro](api-references/image-models/flux/flux-pro.md)
+    * [flux-pro/v1.1](api-references/image-models/flux/flux-pro-v1.1.md)
     * [flux-pro/v1.1-ultra](api-references/image-models/flux/flux-pro-v1.1-ultra.md)
     * [flux-realism](api-references/image-models/flux/flux-realism.md)
     * [flux/dev](api-references/image-models/flux/flux-dev.md)
