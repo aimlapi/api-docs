@@ -92,13 +92,13 @@ If you've already made your choice and know the model ID, use the [Search panel]
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
 **Flux**:  [Image](api-references/image-models/flux/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)\
 **Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
 <mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
 **Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\
 **Microsoft**:  [Text/Chat](api-references/text-models-llm/Microsoft/)\
 <mark style="background-color:green;">**MiniMax**</mark>:  [Text/Chat](api-references/text-models-llm/MiniMax/)  [Video](api-references/video-models/MiniMax/)  [Music](api-references/music-models/MiniMax/)\
-**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)\
+**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)\
 **NVIDIA**:  [Text/Chat](api-references/text-models-llm/NVIDIA/)\
 **NeverSleep**:  [Text/Chat](api-references/text-models-llm/NeverSleep/)\
 **NousResearch**:  [Text/Chat](api-references/text-models-llm/NousResearch/)\
