@@ -1,3 +1,3 @@
-import image from './descriptions/image.json' assert { type: 'json' };
+import image from './descriptions/image.js'
 
 export { image };
