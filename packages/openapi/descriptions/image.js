@@ -1,4 +1,4 @@
-{
+export default {
   "prompt": {
     "desc": "The prompt to generate an image from"
   },
