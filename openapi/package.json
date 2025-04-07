@@ -1,0 +1,12 @@
+{
+  "name": "descriptions",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "files": [
+    "descriptions"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
