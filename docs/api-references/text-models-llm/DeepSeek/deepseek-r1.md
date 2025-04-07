@@ -4,6 +4,11 @@
 This documentation is valid for the following list of our models:
 
 * `deepseek/deepseek-r1`
+* `deepseek-reasoner`
+{% endhint %}
+
+{% hint style="success" %}
+Both IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 
 ## Model Overview

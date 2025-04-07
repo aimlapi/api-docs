@@ -47,7 +47,7 @@ To make text models useful in code and applications beyond generating arbitrary 
 For example, the model training data might look like the following:
 
 {% code overflow="wrap" %}
-```
+```json5
 USER: What's the color of the sky?
 ASSISTANT: The color of the sky can vary depending on several factors, but it is most commonly perceived as blue during the daytime.
 USER: What was the theme we discussed in the previous sentence?
@@ -97,12 +97,20 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [claude-3-opus-20240229](../api-references/text-models-llm/Anthropic/claude-3-opus.md)
 * [claude-3-sonnet-20240229](../api-references/text-models-llm/Anthropic/claude-3-sonnet.md)
 * [cohere/command-r-plus](../api-references/text-models-llm/Cohere/command-r-plus.md)
-* [deepseek-ai/deepseek-llm-67b-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
+* [deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
+* [deepseek/deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
+* [deepseek/deepseek-chat-v3-0324](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
+* [deepseek-reasoner](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
+* [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [gemini-pro](../api-references/text-models-llm/Google/gemini-pro.md)
 * [google/gemma-2-27b-it](../api-references/text-models-llm/Google/gemma-2-27b-it.md)
+* [google/gemma-3-1b-it](../api-references/text-models-llm/google/gemma-3.md)
+* [google/gemma-3-4b-it](../api-references/text-models-llm/google/gemma-3.md)
+* [google/gemma-3-12b-it](../api-references/text-models-llm/google/gemma-3.md)
+* [google/gemma-3-27b-it](../api-references/text-models-llm/google/gemma-3.md)
 * [Gryphe/MythoMax-L2-13b-Lite](../api-references/text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md)
 * [meta-llama/Llama-2-13b-chat-hf](../api-references/text-models-llm/Meta/Llama-2-13b-chat-hf.md)
 * [meta-llama/Llama-3-70b-chat-hf](../api-references/text-models-llm/Meta/Llama-3-chat-hf.md)
@@ -149,6 +157,10 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [gpt-4o-2024-08-06](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
 * [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
+* [gpt-4o-audio-preview](../api-references/text-models-llm/openai/gpt-4o-audio-preview.md)
+* [gpt-4o-mini-audio-preview](../api-references/text-models-llm/openai/gpt-4o-mini-audio-preview.md)
+* [gpt-4o-search-preview](../api-references/text-models-llm/openai/gpt-4o-search-preview.md)
+* [gpt-4o-mini-search-preview](../api-references/text-models-llm/openai/gpt-4o-mini-search-preview.md)
 * [o1](../api-references/text-models-llm/OpenAI/o1.md)
 * [o1-mini](../api-references/text-models-llm/OpenAI/o1-mini.md)
 * [o1-mini-2024-09-12](../api-references/text-models-llm/OpenAI/o1-mini.md)

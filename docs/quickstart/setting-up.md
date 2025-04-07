@@ -434,7 +434,7 @@ The OpenAI SDK provides us with methods to communicate with chat models. It is p
 
 `messages` is an array of objects with a `content` field as prompt and a `role` string that can be one of `system`, `user`, `tool`, `assistant`. With the role, the model can understand what to do with this prompt: Is this an instruction? Is this a user message? Is this an example of how to answer? Is this the result of code execution? The tool role is used for more complex behavior and will be discussed in another article.
 
-In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](../capabilities/parameters.md).&#x20;
+In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](broken-reference).&#x20;
 
 With that knowledge, we can now send our request like the following:
 

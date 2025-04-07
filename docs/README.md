@@ -115,17 +115,27 @@ If you've already made your choice and know the model ID, use the [Search panel]
 [completion-or-chat-models.md](capabilities/completion-or-chat-models.md)
 {% endcontent-ref %}
 
+{% content-ref url="capabilities/code-generation.md" %}
+[code-generation.md](capabilities/code-generation.md)
+{% endcontent-ref %}
+
 {% content-ref url="capabilities/function-calling.md" %}
 [function-calling.md](capabilities/function-calling.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/thinking-reasoning.md" %}
+[thinking-reasoning.md](capabilities/thinking-reasoning.md)
 {% endcontent-ref %}
 
 {% content-ref url="capabilities/image-to-text-vision.md" %}
 [image-to-text-vision.md](capabilities/image-to-text-vision.md)
 {% endcontent-ref %}
 
-{% content-ref url="capabilities/code-generation.md" %}
-[code-generation.md](capabilities/code-generation.md)
+{% content-ref url="capabilities/web-search.md" %}
+[web-search.md](capabilities/web-search.md)
 {% endcontent-ref %}
+
+
 {% endtab %}
 {% endtabs %}
 
@@ -140,6 +150,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% step %}
 ### &#x20;<mark style="background-color:orange;">GOING  DEEPER</mark>&#x20;
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
 {% endstep %}
 {% endstepper %}

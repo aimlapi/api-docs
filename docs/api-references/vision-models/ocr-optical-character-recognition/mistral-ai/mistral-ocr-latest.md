@@ -10,6 +10,9 @@ This documentation is valid for the following list of our models:
 
 This Optical Character Recognition API from Mistral sets a new standard in document understanding. Unlike other models, Mistral OCR comprehends each element of documents—media, text, tables, equations—with unprecedented accuracy and cognition. It takes images and PDFs as input and extracts content in an ordered interleaved text and images.
 
+Maximum file size: `50` MB.\
+Maximum number of pages: `1000`.
+
 {% hint style="warning" %}
 Note that this OCR does not preserve character formatting: bold, underline, italics, monospace text, etc. \
 However, it preserves footnotes (superscript text).

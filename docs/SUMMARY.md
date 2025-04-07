@@ -39,11 +39,12 @@
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
   * [Google](api-references/text-models-llm/Google/README.md)
+    * [gemini-pro](api-references/text-models-llm/Google/gemini-pro.md)
     * [gemini-1.5-flash](api-references/text-models-llm/Google/gemini-1.5-flash.md)
     * [gemini-1.5-pro](api-references/text-models-llm/Google/gemini-1.5-pro.md)
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
-    * [gemini-pro](api-references/text-models-llm/Google/gemini-pro.md)
-    * [gemma-2-27b-it](api-references/text-models-llm/Google/gemma-2-27b-it.md)
+    * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
+    * [gemma-3](api-references/text-models-llm/google/gemma-3.md)
   * [Gryphe](api-references/text-models-llm/Gryphe/README.md)
     * [MythoMax-L2-13b-Lite](api-references/text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
@@ -219,11 +220,13 @@
 ## Capabilities
 
 * [Completion and Chat Completion](capabilities/completion-or-chat-models.md)
-* [Parameters](capabilities/parameters.md)
-* [Function Calling](capabilities/function-calling.md)
-* [Vision in Text Models (Image-To-Text)](capabilities/image-to-text-vision.md)
-* [Features of Anthropic Models](capabilities/anthropic.md)
 * [Code Generation](capabilities/code-generation.md)
+* [Function Calling](capabilities/function-calling.md)
+* [Streaming Mode](capabilities/streaming-mode.md)
+* [Thinking / Reasoning](capabilities/thinking-reasoning.md)
+* [Vision in Text Models (Image-To-Text)](capabilities/image-to-text-vision.md)
+* [Web Search](capabilities/web-search.md)
+* [Features of Anthropic Models](capabilities/anthropic.md)
 * [Model comparison](capabilities/models-comparsion.md)
 
 ## FAQ

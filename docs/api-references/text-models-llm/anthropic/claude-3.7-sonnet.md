@@ -1,9 +1,11 @@
-# claude-3-7-sonnet
+# Claude 3.7 Sonnet
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* claude-3-7-sonnet-20250219
+* `claude-3-7-sonnet-20250219`
+* `claude-3-7-sonnet-latest`
+* `anthropic/claude-3.7-sonnet`
 {% endhint %}
 
 ## Model Overview
