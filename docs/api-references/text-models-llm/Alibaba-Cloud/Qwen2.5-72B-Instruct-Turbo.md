@@ -50,9 +50,7 @@ Run your modified code in your development environment. Response time depends on
 If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
 {% endhint %}
 
-## API Schemaequest
-
-### API Schema
+## API Schema
 
 {% openapi src="Qwen2.5-72B-Instruct-Turbo.json" path="/v1/chat/completions" method="post" %}
 [Qwen2.5-72B-Instruct-Turbo.json](Qwen2.5-72B-Instruct-Turbo.json)
