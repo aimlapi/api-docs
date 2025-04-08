@@ -24,7 +24,7 @@ Here, you'll learn how to start using our API in your code. The following steps 
 * generating an AIML API Key,&#x20;
 * configuring the base URL.
 
-Let's walk through an example of connecting to the **mistralai/Mistral-7B-Instruct-v0.2** model via OpenAI SDK. This guide is suitable even for complete beginners.
+Let's walk through an example of connecting to the [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) model via OpenAI SDK. This guide is suitable even for complete beginners.
 
 ## G**enerating an AIML API Key**
 
@@ -102,7 +102,7 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 
 def main():
     completion = api.chat.completions.create(
-        model="mistralai/Mistral-7B-Instruct-v0.2",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -117,7 +117,8 @@ def main():
     print("AI:", response)
 
 
-if __name__ 
+if __name__ == "__main__":
+    main()
 ```
 {% endcode %}
 {% endtab %}
@@ -227,7 +228,7 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 
 def main():
     completion = api.chat.completions.create(
-        model="mistralai/Mistral-7B-Instruct-v0.2",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -320,7 +321,7 @@ const api = new OpenAI({
 
 const main = async () => {
   const completion = await api.chat.completions.create({
-    model: "mistralai/Mistral-7B-Instruct-v0.2",
+    model: "gpt-4o",
     messages: [
       {
         role: "system",
@@ -442,7 +443,7 @@ With that knowledge, we can now send our request like the following:
 {% tab title="JavaScript" %}
 ```javascript
 const completion = await api.chat.completions.create({
-  model: "mistralai/Mistral-7B-Instruct-v0.2",
+  model: "gpt-4o",
   messages: [
     {
       role: "system",
@@ -462,7 +463,7 @@ const completion = await api.chat.completions.create({
 {% tab title="Python" %}
 ```python
 completion = api.chat.completions.create(
-    model="mistralai/Mistral-7B-Instruct-v0.2",
+    model="gpt-4o",
     messages=[
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -474,7 +475,7 @@ completion = api.chat.completions.create(
 {% endtab %}
 {% endtabs %}
 
-The response from the function `chat.completions.create` contains a completion. Completion is a fundamental part of LLM models' logic. Every LLM model is some sort of word autocomplete engine, trained by huge amounts of data. The chat models are designed to autocomplete large chunks of messages with prompts and certain roles, but other models can have their own custom logic without even roles.
+The response from the function `chat.completions.create` contains a [completion](../capabilities/completion-or-chat-models.md). Completion is a fundamental part of LLM models' logic. Every LLM model is some sort of word autocomplete engine, trained by huge amounts of data. The chat models are designed to autocomplete large chunks of messages with prompts and certain roles, but other models can have their own custom logic without even roles.
 
 Inside this completion, we are interested in the text of the generation. We can get it by getting the result from the completion variable:
 
