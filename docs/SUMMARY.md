@@ -43,6 +43,7 @@
     * [gemini-1.5-flash](api-references/text-models-llm/Google/gemini-1.5-flash.md)
     * [gemini-1.5-pro](api-references/text-models-llm/Google/gemini-1.5-pro.md)
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
+    * [gemini-2.5-pro-exp](api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
     * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [gemma-3](api-references/text-models-llm/google/gemma-3.md)
   * [Gryphe](api-references/text-models-llm/Gryphe/README.md)

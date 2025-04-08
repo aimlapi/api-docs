@@ -105,6 +105,7 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
+* [gemini-2.5-pro-exp-03-25](../api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
 * [gemini-pro](../api-references/text-models-llm/Google/gemini-pro.md)
 * [google/gemma-2-27b-it](../api-references/text-models-llm/Google/gemma-2-27b-it.md)
 * [google/gemma-3-1b-it](../api-references/text-models-llm/google/gemma-3.md)

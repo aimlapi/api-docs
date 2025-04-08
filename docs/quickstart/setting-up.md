@@ -255,7 +255,7 @@ python3 ./travel.py
 If you done all correct, you will see following output:
 
 {% code overflow="wrap" %}
-```
+```json5
 User: Tell me about San Francisco
 AI:  San Francisco, located in northern California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful vistas, and diverse neighborhoods. It's a popular tourist destination famous for its iconic Golden Gate Bridge, which spans the entrance to the San Francisco Bay, and the iconic Alcatraz Island, home to the infamous federal prison.
 
@@ -347,7 +347,7 @@ main();
 You will see a response that looks like this:
 
 {% code overflow="wrap" %}
-```
+```json5
 User: Tell me about San Francisco
 AI: San Francisco, located in the northern part of California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful scenery, and diverse neighborhoods.
 
@@ -434,7 +434,7 @@ The OpenAI SDK provides us with methods to communicate with chat models. It is p
 
 `messages` is an array of objects with a `content` field as prompt and a `role` string that can be one of `system`, `user`, `tool`, `assistant`. With the role, the model can understand what to do with this prompt: Is this an instruction? Is this a user message? Is this an example of how to answer? Is this the result of code execution? The tool role is used for more complex behavior and will be discussed in another article.
 
-In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](broken-reference).&#x20;
+In our example, we also use `max_tokens` and `temperature`.&#x20;
 
 With that knowledge, we can now send our request like the following:
 
