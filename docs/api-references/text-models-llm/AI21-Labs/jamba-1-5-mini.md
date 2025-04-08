@@ -23,7 +23,7 @@ A state-of-the-art hybrid SSM-Transformer model designed for high efficiency and
 {% step %}
 ### Copy the code example
 
-At the bottom of this page, you'll find [a code example](jamba-1-5-mini.md#example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](jamba-1-5-mini.md#code-example-python) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 {% endstep %}
 
 {% step %}
@@ -56,7 +56,7 @@ If you need a more detailed walkthrough for setting up your development environm
 [jamba-1-5-mini.json](jamba-1-5-mini.json)
 {% endopenapi %}
 
-## Example
+## Code Example (Python)
 
 {% code overflow="wrap" %}
 ```python
@@ -77,7 +77,7 @@ response = requests.post(
             {
                 "role":"user",
 
-                # Insert your question for the model here, instead of Hello.
+                # Insert your question for the model here, instead of Hello:
                 "content":"Hello"
             }
         ]
