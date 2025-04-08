@@ -21,8 +21,9 @@ layout:
 
 Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference):&#x20;
 
-* generating an AIML API Key,&#x20;
-* configuring the base URL.
+* [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),&#x20;
+* [configuring the base URL](setting-up.md#configuring-base-url),
+* [making an API call](setting-up.md#making-an-api-call).
 
 Let's walk through an example of connecting to the [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) model via OpenAI SDK. This guide is suitable even for complete beginners.
 
@@ -47,7 +48,7 @@ To use the AIML API, you need to create an account and generate an API key. Foll
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
 
-## **Configure Base URL**
+## **Configuring Base URL**
 
 <details>
 
@@ -72,12 +73,12 @@ The AI/ML API supports both versioned and non-versioned URLs, providing flexibil
 Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
 {% endhint %}
 
-## Let's Use a Real AI Model: Make Your First API Call
+## Making an API Call
 
 Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: **Python** and **NodeJS**.
 
 {% hint style="info" %}
-In the examples below, we use the [**OpenAI SDK**](https://docs.aimlapi.com/quickstart/supported-sdks#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
+In the examples below, we use the [**OpenAI SDK**](supported-sdks.md#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
 
 If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API Key obtained from your account.\
@@ -213,7 +214,7 @@ Create new file and name it as `travel.py`
 touch travel.py
 ```
 
-Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key)
+Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key).
 
 ```python
 from openai import OpenAI
