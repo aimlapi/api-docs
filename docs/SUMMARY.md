@@ -33,7 +33,6 @@
     * [Claude 3.5 Sonnet](api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
     * [Claude 3.7 Sonnet](api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
-    * [command-r](api-references/text-models-llm/Cohere/command-r.md)
     * [command-r-plus](api-references/text-models-llm/Cohere/command-r-plus.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
