@@ -101,7 +101,7 @@ print(data)
 <summary>Response</summary>
 
 {% code overflow="wrap" %}
-```json5
+```json
 {'id': 'gen-1744194041-A363xKnsNwtv6gPnUPnO', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': "Hello! 😊 How can I assist you today? Feel free to ask me anything—I'm here to help! 🚀", 'reasoning_content': '', 'refusal': None}}], 'created': 1744194041, 'model': 'deepseek/deepseek-chat-v3-0324', 'usage': {'prompt_tokens': 16, 'completion_tokens': 88, 'total_tokens': 104}}
 ```
 {% endcode %}
