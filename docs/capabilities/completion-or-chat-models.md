@@ -131,6 +131,8 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
 * [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
 * [meta-llama/Meta-Llama-Guard-3-8B](../api-references/moderation-safety-models/Meta/Meta-Llama-Guard-3-8B.md)
+* [meta-llama/llama-4-scout](../api-references/text-models-llm/meta/llama-4-maverick.md)
+* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
 * [mistralai/Mistral-7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)

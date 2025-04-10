@@ -127,6 +127,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md)
 * [meta-llama/Llama-Guard-3-11B-Vision-Turbo](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)
 * [meta-llama/Llama-Vision-Free](../api-references/text-models-llm/Meta/Llama-Vision-Free.md)
+* [meta-llama/llama-4-scout](../api-references/text-models-llm/meta/llama-4-maverick.md)
+* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
 * [chatgpt-4o-latest](../api-references/text-models-llm/OpenAI/gpt-4o.md)
