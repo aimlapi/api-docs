@@ -1,14 +1,18 @@
-# gemini-2.0-flash
+# gemini-2.5-pro-preview
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/gemini-2.0-flash`
+* `google/gemini-2.5-pro-preview`
 {% endhint %}
 
 ## Model Overview
 
-A cutting-edge multimodal AI model developed by Google DeepMind, designed to power agentic experiences. This model is capable of processing and generating content in multiple formats, including text, images, audio, and video, making it suitable for a wide range of applications such as real-time conversation systems and interactive tools.
+Gemini 2.5 Pro is Google's most advanced coding model as of Spring 2025. This is a preview version, building on the earlier [exp release](gemini-2.5-pro-exp.md).\
+**Stronger reasoning**: Leads in math and science tasks across major benchmarks.\
+**Natively multimodal**: Processes text, audio, images, and video as input.\
+**Advanced coding capabilities**: Generates code for complex web development workflows.\
+**Extended context**: Handles up to 1 million tokens for working with large datasets.
 
 ## How to Make a Call
 
@@ -23,7 +27,7 @@ A cutting-edge multimodal AI model developed by Google DeepMind, designed to pow
 {% step %}
 ### Copy the code example
 
-At the bottom of this page, you'll find [a code example](gemini-2.0-flash.md#code-example-python) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gemini-2.5-pro-preview.md#code-example-python) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 {% endstep %}
 
 {% step %}
@@ -36,7 +40,7 @@ At the bottom of this page, you'll find [a code example](gemini-2.0-flash.md#cod
 {% step %}
 ### <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gemini-2.0-flash.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gemini-2.5-pro-preview.md#api-schema), which lists all available parameters along with notes on how to use them.
 {% endstep %}
 
 {% step %}
@@ -52,8 +56,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro-preview.json" path="/v1/chat/completions" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro-preview.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro-preview.json)
 {% endopenapi %}
 
 ## Code Example (Python)
@@ -72,7 +76,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"gemini-2.0-flash",
+        "model":"google/gemini-2.5-pro-preview",
         "messages":[
             {
                 "role":"user",
@@ -95,7 +99,7 @@ print(data)
 
 {% code overflow="wrap" %}
 ```json5
-{'id': '2025-04-10|01:16:19.235787-07|9.7.175.26|-701765511', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I help you today?\n'}}], 'created': 1744272979, 'model': 'google/gemini-2.0-flash', 'usage': {'prompt_tokens': 0, 'completion_tokens': 8, 'total_tokens': 8}}
+{'id': '2025-04-10|02:56:19.936423-07|5.250.198.136|-147765573', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello there! How can I help you today?'}}], 'created': 1744278979, 'model': 'google/gemini-2.5-pro-preview-03-25', 'usage': {'prompt_tokens': 3, 'completion_tokens': 210, 'total_tokens': 213}}
 ```
 {% endcode %}
 

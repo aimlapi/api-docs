@@ -73,7 +73,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"gemini-2.0-flash-exp",
+        "model":"google/gemini-2.0-flash-exp",
         "messages":[
             {
                 "role":"user",

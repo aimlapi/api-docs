@@ -45,6 +45,7 @@
     * [gemini-2.0-flash-thinking-exp-01-21](api-references/text-models-llm/google/gemini-2.0-flash-thinking-exp-01-21.md)
     * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)
     * [gemini-2.5-pro-exp](api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
+    * [gemini-2.5-pro-preview](api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
     * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [gemma-3](api-references/text-models-llm/google/gemma-3.md)
   * [Gryphe](api-references/text-models-llm/Gryphe/README.md)
