@@ -3,6 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
+* `google/gemini-2.5-pro-exp-03-25`
 * `gemini-2.5-pro-exp-03-25`
 {% endhint %}
 
