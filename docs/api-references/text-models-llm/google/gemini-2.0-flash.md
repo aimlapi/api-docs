@@ -1,15 +1,15 @@
-# qwen-turbo
+# gemini-2.0-flash
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `qwen-turbo`
+* `gemini-2.0-flash`
+* `google/gemini-2.0-flash`
 {% endhint %}
 
 ## Model Overview
 
-This model is designed to enhance both the performance and efficiency of AI agents developed on the Alibaba Cloud Model Studio platform. Optimized for speed and precision in generative AI application development. Improves AI agent comprehension and adaptation to enterprise data, especially when integrated with Retrieval-Augmented Generation (RAG) architectures. \
-Large context window (<kbd>1,000,000</kbd> tokens).
+A cutting-edge multimodal AI model developed by Google DeepMind, designed to power agentic experiences. This model is capable of processing and generating content in multiple formats, including text, images, audio, and video, making it suitable for a wide range of applications such as real-time conversation systems and interactive tools.
 
 ## How to Make a Call
 
@@ -24,7 +24,7 @@ Large context window (<kbd>1,000,000</kbd> tokens).
 {% step %}
 ### Copy the code example
 
-At the bottom of this page, you'll find [a code example](qwen-turbo.md#code-example-python) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gemini-2.0-flash.md#code-example-python) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 {% endstep %}
 
 {% step %}
@@ -37,7 +37,7 @@ At the bottom of this page, you'll find [a code example](qwen-turbo.md#code-exam
 {% step %}
 ### <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen-turbo.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gemini-2.0-flash.md#api-schema), which lists all available parameters along with notes on how to use them.
 {% endstep %}
 
 {% step %}
@@ -53,8 +53,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="qwen-turbo.json" path="/v1/chat/completions" method="post" %}
-[qwen-turbo.json](qwen-turbo.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json" path="/v1/chat/completions" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json)
 {% endopenapi %}
 
 ## Code Example (Python)
@@ -73,7 +73,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"qwen-turbo",
+        "model":"gemini-2.0-flash",
         "messages":[
             {
                 "role":"user",
@@ -96,7 +96,7 @@ print(data)
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'chatcmpl-a4556a4c-f985-9ef2-b976-551ac7cef85a', 'system_fingerprint': None, 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': "Hello! How can I help you today? Is there something you would like to talk about or learn more about? I'm here to help with any questions you might have."}}], 'created': 1744144035, 'model': 'qwen-turbo', 'usage': {'prompt_tokens': 1, 'completion_tokens': 15, 'total_tokens': 16, 'prompt_tokens_details': {'cached_tokens': 0}}}
+{'id': '2025-04-10|01:16:19.235787-07|9.7.175.26|-701765511', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I help you today?\n'}}], 'created': 1744272979, 'model': 'google/gemini-2.0-flash', 'usage': {'prompt_tokens': 0, 'completion_tokens': 8, 'total_tokens': 8}}
 ```
 {% endcode %}
 

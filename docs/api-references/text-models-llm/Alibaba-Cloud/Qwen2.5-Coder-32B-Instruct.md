@@ -8,7 +8,8 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). The one with 32B parameters is the most powerful of them. A more comprehensive foundation for real-world applications such as Code Agents. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies. Long-context Support up to 128K tokens.
+Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). The one with 32B parameters is the most powerful of them. A more comprehensive foundation for real-world applications such as Code Agents. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies. \
+Long-context Support up to <kbd>128K</kbd> tokens.
 
 ## How to Make a Call
 

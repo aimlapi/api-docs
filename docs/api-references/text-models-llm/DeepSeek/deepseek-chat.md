@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 
 {% hint style="success" %}
-We provide the latest version of this model from Mar 24, 2025.\
+We provide the latest version of this model from **Mar 24, 2025**.\
 All three IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 

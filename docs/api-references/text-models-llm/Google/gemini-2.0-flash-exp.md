@@ -3,6 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
+* `google/gemini-2.0-flash-exp`
 * `gemini-2.0-flash-exp`
 {% endhint %}
 

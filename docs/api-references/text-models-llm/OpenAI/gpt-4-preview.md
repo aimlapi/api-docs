@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Before the release of GPT-4 Turbo, OpenAI introduced two preview models that allowed users to test advanced features ahead of a full rollout. These models supported JSON mode for structured responses, parallel function calling to handle multiple API functions in a single request, and reproducible output, ensuring more consistent results across runs. They provided a glimpse into upcoming improvements in efficiency and functionality, helping developers and businesses adapt to the evolving capabilities of OpenAI's language models. gpt-4-1106-preview has better code generation performance, reduces cases where the model doesn't complete a task.
+Before the release of GPT-4 Turbo, OpenAI introduced two preview models that allowed users to test advanced features ahead of a full rollout. These models supported JSON mode for structured responses, parallel function calling to handle multiple API functions in a single request, and reproducible output, ensuring more consistent results across runs. They provided a glimpse into upcoming improvements in efficiency and functionality, helping developers and businesses adapt to the evolving capabilities of OpenAI's language models. `gpt-4-1106-preview` has better code generation performance, reduces cases where the model doesn't complete a task.
 
 ## How to Make a Call
 
