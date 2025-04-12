@@ -174,5 +174,7 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
 * [upstage/SOLAR-10.7B-Instruct-v1.0](../api-references/text-models-llm/Upstage-AI/SOLAR-10.7B-Instruct.md)
 * [x-ai/grok-beta](../api-references/text-models-llm/xAI/grok-beta.md)
+* [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
+* [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 
 ***

@@ -15,6 +15,12 @@ layout:
 
 # gen3a\_turbo
 
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `gen3a_turbo`
+{% endhint %}
+
 ## Overview
 
 An advanced AI model designed for converting images into high-quality videos. It allows users to generate dynamic video content with smooth motion and detailed textures from still images or text prompts, significantly enhancing creative workflows in multimedia production.
@@ -44,7 +50,7 @@ You can generate a video using this API. In the basic setup, you need only a pro
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo.json)
 {% endopenapi %}
 
-### Fetch Generation
+### Retrieve the generated video from the server
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo-pair.json" path="/v2/generate/video/runway/generation" method="get" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo-pair.json)
