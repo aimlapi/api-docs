@@ -12,6 +12,8 @@ This documentation is valid for the following list of our models:
 
 This model builds on the capabilities of earlier versions, offering improved natural language understanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also contextually appropriate.
 
+You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/llama-3-vs-chatgpt-3-5-comparison) on our main website.
+
 ## How to Make a Call
 
 {% stepper %}

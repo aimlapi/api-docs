@@ -13,6 +13,8 @@ This documentation is valid for the following list of our models:
 
 OpenAI's flagship model designed to integrate enhanced capabilities across text, vision, and audio, providing real-time reasoning.
 
+You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/qwen-2-vs-chatgpt-4o-comparison) on our main website.
+
 ## How to Make a Call
 
 {% stepper %}

@@ -12,6 +12,8 @@ This model is stronger than the last generation of Qwen 1.5. The model's linguis
 
 This enhancement allows for more comprehensive and contextually rich interactions, making Qwen2 an even more powerful tool for a variety of applications. Qwen2 builds on the Transformer architecture, adding advanced features like SwiGLU activation, attention QKV bias, group query attention, a mixture of sliding window attention, and more for improved efficiency and focus when processing information.
 
+You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/qwen-2-vs-llama-3-comparison) on our main website.
+
 ## How to Make a Call
 
 {% stepper %}

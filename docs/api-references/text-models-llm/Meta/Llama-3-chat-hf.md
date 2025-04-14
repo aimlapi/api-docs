@@ -11,6 +11,8 @@ This documentation is valid for the following list of our models:
 
 The Llama 3 family consists of pretrained and instruction-tuned generative text models available in 8B and 70B sizes. These models are optimized for dialogue use cases and outperform many existing open-source chat models on common industry benchmarks.
 
+You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/qwen-2-vs-llama-3-comparison) on our main website.
+
 ## How to Make a Call
 
 {% stepper %}
