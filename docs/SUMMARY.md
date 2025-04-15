@@ -1,6 +1,7 @@
 # Table of contents
 
 * [📞 Contact Sales](https://calendly.com/aimlapi/30min)
+* [🗯️ Send Feedback](https://tally.so/r/w4G9Er)
 
 ## Quickstart
 
