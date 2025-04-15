@@ -74,7 +74,6 @@ The following Free Tier rules apply:
 
 * [dall-e-2](../api-references/image-models/OpenAI/dall-e-2.md)
 * [dall-e-3](../api-references/image-models/OpenAI/dall-e-3.md)
-* [stabilityai/stable-diffusion-xl-base-1.0](../api-references/image-models/Stability-AI/stable-diffusion-xl-base-1.0.md)
 
 </details>
 

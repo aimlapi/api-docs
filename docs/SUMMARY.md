@@ -52,7 +52,6 @@
   * [Gryphe](api-references/text-models-llm/Gryphe/README.md)
     * [MythoMax-L2-13b-Lite](api-references/text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
-    * [Llama-2-chat-hf](api-references/text-models-llm/Meta/Llama-2-13b-chat-hf.md)
     * [Llama-3-chat-hf](api-references/text-models-llm/Meta/Llama-3-chat-hf.md)
     * [Llama-3-8B-Instruct-Lite](api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.md)
     * [Llama-3.1-8B-Instruct-Turbo](api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
@@ -98,8 +97,6 @@
     * [o1-preview](api-references/text-models-llm/OpenAI/o1-preview.md)
     * [o3-mini](api-references/text-models-llm/OpenAI/o3-mini.md)
     * [gpt-4.5-preview](api-references/text-models-llm/OpenAI/gpt-4.5-preview.md)
-  * [Upstage AI](api-references/text-models-llm/Upstage-AI/README.md)
-    * [SOLAR-10.7B-Instruct](api-references/text-models-llm/Upstage-AI/SOLAR-10.7B-Instruct.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [grok-beta](api-references/text-models-llm/xAI/grok-beta.md)
     * [grok-3-beta](api-references/text-models-llm/xai/grok-3-beta.md)
@@ -123,7 +120,6 @@
   * [Stability AI](api-references/image-models/Stability-AI/README.md)
     * [stable-diffusion-v3-medium](api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
     * [stable-diffusion-v35-large](api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
-    * [stable-diffusion-xl-base-1.0](api-references/image-models/Stability-AI/stable-diffusion-xl-base-1.0.md)
 * [Video Models](api-references/video-models/README.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-text-to-video.md)
@@ -225,6 +221,10 @@
     * [Run and Run Step API](solutions/openai/assistants/runs.md)
     * [Events](solutions/openai/assistants/events.md)
     * [Examples of Using Assistants](solutions/openai/assistants/using-assistants-and-threads.md)
+
+## Use Cases
+
+* [Page 1](use-cases/page-1.md)
 
 ## Capabilities
 
