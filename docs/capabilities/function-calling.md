@@ -139,3 +139,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [gpt-4o-2024-08-06](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
 * [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
+* [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
+* [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
+* [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
