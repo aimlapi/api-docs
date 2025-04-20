@@ -177,7 +177,7 @@ def main():
             status = response_data.get("status")
 
             if status == "waiting" or status == "active":
-                ("Still waiting... Checking again in 10 seconds.")
+                print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
                 print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])

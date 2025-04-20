@@ -1,7 +1,7 @@
 # Table of contents
 
 * [📞 Contact Sales](https://calendly.com/aimlapi/30min)
-* [🗯️ Send Feedback](https://tally.so/r/w4G9Er)
+* [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 
 ## Quickstart
 
@@ -227,7 +227,7 @@
 
 ## Use Cases
 
-* [Page 1](use-cases/page-1.md)
+* [Animate Images: A Children’s Encyclopedia](use-cases/animate-images-a-childrens-encyclopedia.md)
 
 ## Capabilities
 

@@ -278,11 +278,11 @@ Plant cells have cell walls composed of cellulose, hemicelluloses, and pectin an
 
 **Content of `output_images` subfolder**
 
-<figure><img src="../../../../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/изображение (5).png" alt=""><figcaption></figcaption></figure>
 
 **How it looks in any Markdown viewer:**
 
-<figure><img src="../../../../.gitbook/assets/изображение (1).png" alt="" width="372"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/изображение (1) (1).png" alt="" width="372"><figcaption></figcaption></figure>
 
 It looks almost like the original PDF, but all the text has been recognized, and the markdown is easy to use further, for example, to embed in a web page. Enjoy!
 

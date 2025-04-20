@@ -32,7 +32,7 @@ payload = json.dumps({
 
 headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer YOUR_AIMLAPI_KEY'
+  'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>'
 }
 
 response = requests.post(url, headers=headers, data=payload)
