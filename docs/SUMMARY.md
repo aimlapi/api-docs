@@ -227,7 +227,9 @@
 
 ## Use Cases
 
+* [Create Images: Illustrate an Article](use-cases/create-images-illustrate-an-article.md)
 * [Animate Images: A Children’s Encyclopedia](use-cases/animate-images-a-childrens-encyclopedia.md)
+* [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
 
 ## Capabilities
 
