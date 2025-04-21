@@ -1,5 +1,5 @@
 {
-  "name": "api-docs-openapi",
+  "name": "@aimlapi/docs-openapi",
   "version": "1.0.0",
   "description": "",
   "type": "module",
