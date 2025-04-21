@@ -1,6 +1,6 @@
 export default {
   assistant_id: {
-    desc: `The ID of the assistant to use to execute this run`,
+    desc: `The ID of the assistant to use to execute this run.`,
   },
   additional_instructions: {
     desc: `Appends additional instructions at the end of the instructions for the run. This is useful for modifying the behavior on a per-run basis without overriding other instructions.`,
@@ -9,10 +9,10 @@ export default {
     desc: `Adds additional messages to the thread before creating the run.`,
     content: {
       text: {
-        desc: `The text contents of the message`,
+        desc: `The text contents of the message.`,
       },
       array: {
-        desc: `An array of content parts with a defined type, each can be of type text or images can be passed with image_url or image_file`,
+        desc: `An array of content parts with a defined type, each can be of type text or images can be passed with image_url or image_file.`,
         image_file: {
           file_id: {
             desc: `The File ID of the image in the message content.`,
@@ -30,19 +30,19 @@ export default {
           },
         },
         text: {
-          desc: `Text content to be sent to the model`,
+          desc: `Text content to be sent to the model.`,
         },
       },
     },
     attachments: {
       desc: `A list of files attached to the message, and the tools they should be added to.`,
       file_id: {
-        desc: `The ID of the file to attach to the message`,
+        desc: `The ID of the file to attach to the message.`,
       },
       tools: {
-        desc: `The tools to add this file to`,
+        desc: `The tools to add this file to.`,
         type: {
-          desc: `The type of tool being defined`,
+          desc: `The type of tool being defined.`,
         },
       },
     },
@@ -54,7 +54,7 @@ export default {
     desc: `The maximum number of completion tokens that may be used over the course of the run. The run will make a best effort to use only the number of completion tokens specified, across multiple turns of the run. If the run exceeds the number of completion tokens specified, the run will end with status incomplete`,
   },
   max_prompt_tokens: {
-    desc: `The maximum number of prompt tokens that may be used over the course of the run. The run will make a best effort to use only the number of prompt tokens specified, across multiple turns of the run. If the run exceeds the number of prompt tokens specified, the run will end with status incomplete`,
+    desc: `The maximum number of prompt tokens that may be used over the course of the run. The run will make a best effort to use only the number of prompt tokens specified, across multiple turns of the run. If the run exceeds the number of prompt tokens specified, the run will end with status incomplete.`,
   },
   model: {
     desc: `The ID of the Model to be used to execute this run. If a value is provided here, it will override the model associated with the assistant. If not, the model associated with the assistant will be used.`,
@@ -102,7 +102,7 @@ export default {
     },
   },
   stream: {
-    desc: `If true, returns a stream of events that happen during the Run as server-sent events`,
+    desc: `If true, returns a stream of events that happen during the Run as server-sent events.`,
   },
   temperature: {
     desc: `What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.`,
@@ -110,7 +110,7 @@ export default {
   tool_choice: {
     desc: `Controls which (if any) tool is called by the model. none means the model will not call any tools and instead generates a message. auto is the default value and means the model can pick between generating a message or calling one or more tools. required means the model must call one or more tools before responding to the user. Specifying a particular tool via {"type": "function", "function": {"name": "my_function"}} forces the model to call that tool.`,
     type: {
-      desc: `The type of the tool. If type is function, the function name must be set`,
+      desc: `The type of the tool. If type is function, the function name must be set.`,
     },
     function: {
       name: {
@@ -124,17 +124,17 @@ export default {
       desc: `The type of tool being defined.`,
     },
     file_search: {
-      desc: `Overrides for the file search tool`,
+      desc: `Overrides for the file search tool.`,
       max_num_results: {
-        desc: `The maximum number of results the file search tool should output`,
+        desc: `The maximum number of results the file search tool should output.`,
       },
       ranking_options: {
         desc: `The ranking options for the file search. If not specified, the file search tool will use the auto ranker and a score_threshold of 0.`,
         score_threshold: {
-          desc: `The score threshold for the file search. All values must be a floating point number between 0 and 1`,
+          desc: `The score threshold for the file search. All values must be a floating point number between 0 and 1.`,
         },
         ranker: {
-          desc: `The ranker to use for the file search. If not specified will use the auto ranker`,
+          desc: `The ranker to use for the file search. If not specified will use the auto ranker.`,
         },
       },
     },
@@ -146,10 +146,10 @@ export default {
         desc: `A description of what the function does, used by the model to choose when and how to call the function.`,
       },
       parameters: {
-        desc: `The parameters the functions accepts, described as a JSON Schema object`,
+        desc: `The parameters the functions accepts, described as a JSON Schema object.`,
       },
       strict: {
-        desc: `Whether to enable strict schema adherence when generating the function call. If set to true, the model will follow the exact schema defined in the parameters field. Only a subset of JSON Schema is supported when strict is true`,
+        desc: `Whether to enable strict schema adherence when generating the function call. If set to true, the model will follow the exact schema defined in the parameters field. Only a subset of JSON Schema is supported when strict is true.`,
       },
     },
   },

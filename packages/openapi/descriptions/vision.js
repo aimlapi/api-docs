@@ -2,7 +2,7 @@ export default {
   image: {
     desc: `The image to be processed.`,
     imageUri: {
-      desc: `The URI of the source image`,
+      desc: `The URI of the source image.`,
     },
   },
   features: {
