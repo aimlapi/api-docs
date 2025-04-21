@@ -229,6 +229,8 @@
 
 * [Create Images: Illustrate an Article](use-cases/create-images-illustrate-an-article.md)
 * [Animate Images: A Children’s Encyclopedia](use-cases/animate-images-a-childrens-encyclopedia.md)
+* [Create an Assistant to Discuss a Specific Document](use-cases/create-an-assistant-to-discuss-a-specific-document.md)
+* [Create a 3D Model from an Image](use-cases/create-a-3d-model-from-an-image.md)
 * [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
 
 ## Capabilities

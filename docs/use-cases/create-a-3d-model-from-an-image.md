@@ -1,28 +1,22 @@
-# triposr
+---
+icon: cubes
+---
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
+# Create a 3D Model from an Image
 
-* `triposr`
-{% endhint %}
+## Idea and Step-by-Step Plan
 
-## Model Overview
+Transforming a 2D image into a 3D model is a powerful way to bring static visuals to life. Whether you're working on a game, a product prototype, or just exploring creative tools, this process helps bridge the gap between visual concepts and spatial design.
 
-A transformer-based model designed for rapid 3D object reconstruction from a single RGB image, capable of generating high-quality 3D meshes in under 0.5 seconds on an NVIDIA A100 GPU.
+In this tutorial, you'll learn how to go from a single image to a usable 3D model using readily available tools. No deep 3D modeling experience required — just a bit of patience and curiosity.
 
-## Setup your API Key
+1. Prepare Your Image. Choose a clear image of the object you want to convert. Best results come from front-facing images with neutral backgrounds and good lighting.
+2. Upload the image to Triposr model and wait for the AI to process it — this usually takes under a minute.
+3. Download the 3D Model. You can now use the model in your web app, AR/VR project, or 3D viewer.
 
-If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+## Implementation
 
-## Submit a request
-
-### API Schema
-
-{% openapi src="triposr.json" path="/v1/images/generations" method="post" %}
-[triposr.json](triposr.json)
-{% endopenapi %}
-
-## Example
+Let's call the Triposr model and pass it a reference image in Python code.
 
 {% code overflow="wrap" %}
 ```python
@@ -66,11 +60,11 @@ The example returns a textured 3D mesh in GLB file format. You can view it [here
 
 For clarity, we took several screenshots of our mushroom from different angles in an online GLB viewer. As you can see, the model understands the shape, but preserving the pattern on the back side (which was not visible on the reference image) could be improved:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td><img src="../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>
 
 Compare them with the [reference image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg):
 
-<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/576px-Fly_Agaric_mushroom_05 (2).jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/576px-Fly_Agaric_mushroom_05 (2).jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Try to choose reference images where the target object is not obstructed by other objects and does not blend into the background. Depending on the complexity of the object, you may need to experiment with the resolution of the reference image to achieve a satisfactory mesh.
