@@ -139,6 +139,7 @@
     * [v1.6-standart/image-to-video](api-references/video-models/Kling-AI/v1.6-standart-image-to-video.md)
     * [v1.6-pro/image-to-video](api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md)
     * [v1.6-pro/text-to-video](api-references/video-models/kling-ai/v1.6-pro-text-to-video.md)
+    * [v1.6-pro/effects](api-references/video-models/kling-ai/v1.6-pro-effects.md)
   * [Luma AI](api-references/video-models/luma-ai/README.md)
     * [Text-to-Video v2](api-references/video-models/luma-ai/luma-ai-v2.md)
     * [Text-to-Video v1 (legacy)](api-references/video-models/luma-ai/luma-ai-text-to-video-v1-legacy.md)
