@@ -100,6 +100,7 @@
     * [gpt-4.1](api-references/text-models-llm/openai/gpt-4.1.md)
     * [gpt-4.1-mini](api-references/text-models-llm/openai/gpt-4.1-mini.md)
     * [gpt-4.1-nano](api-references/text-models-llm/openai/gpt-4.1-nano.md)
+    * [o4-mini](api-references/text-models-llm/openai/o4-mini.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [grok-beta](api-references/text-models-llm/xAI/grok-beta.md)
     * [grok-3-beta](api-references/text-models-llm/xai/grok-3-beta.md)

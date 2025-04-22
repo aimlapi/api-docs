@@ -57,6 +57,7 @@ Supported models:
 * [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
 * [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
+* [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 
 
 
