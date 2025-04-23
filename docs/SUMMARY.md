@@ -136,7 +136,7 @@
     * [v1-pro/image-to-video](api-references/video-models/Kling-AI/v1-pro-image-to-video.md)
     * [v1-pro/text-to-video](api-references/video-models/Kling-AI/v1-pro-text-to-video.md)
     * [v1.6-standard/text-to-video](api-references/video-models/Kling-AI/v1.6-standard-text-to-video.md)
-    * [v1.6-standart/image-to-video](api-references/video-models/Kling-AI/v1.6-standart-image-to-video.md)
+    * [v1.6-standard/image-to-video](api-references/video-models/Kling-AI/v1.6-standart-image-to-video.md)
     * [v1.6-pro/image-to-video](api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md)
     * [v1.6-pro/text-to-video](api-references/video-models/kling-ai/v1.6-pro-text-to-video.md)
     * [v1.6-standard/effects](api-references/video-models/kling-ai/v1.6-standard-effects.md)
