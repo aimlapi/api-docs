@@ -40,6 +40,7 @@ const exampleBlock = createComponent<
       <block>
         <webframe
           source={{ url: "https://cdn.aimlapi.com/assets/chat/index.html" }}
+          aspectRatio={1}
         />
       </block>
     );
