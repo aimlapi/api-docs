@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* \#g1\_whisper-medium
+* `#g1_whisper-medium`
 {% endhint %}
 
 {% hint style="warning" %}

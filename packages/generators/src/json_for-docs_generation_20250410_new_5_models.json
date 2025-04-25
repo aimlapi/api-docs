@@ -1,0 +1,48 @@
+[
+  {
+    "name": "google/gemini-2.0-flash",
+    "alias": "gemini-2.0-flash",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.0-flash-thinking-exp-01-21",
+    "alias": "gemini-2.0-flash-thinking-exp-01-21",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "meta-llama/llama-4-maverick",
+    "alias": "Llama-4-maverick",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "meta-llama/llama-4-scout",
+    "alias": "Llama-4-scout",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.5-pro-preview",
+    "alias": "gemini-2.5-pro-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]
+

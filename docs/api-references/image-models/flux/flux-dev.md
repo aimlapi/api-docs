@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* flux/dev
+* `flux/dev`
 {% endhint %}
 
 ## Model Overview
@@ -20,6 +20,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="../Black-Forest-Labs/flux-dev.json" path="/v1/images/generations" method="post" %}
-[flux-dev.json](../Black-Forest-Labs/flux-dev.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json" path="/v1/images/generations" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json)
 {% endopenapi %}
+

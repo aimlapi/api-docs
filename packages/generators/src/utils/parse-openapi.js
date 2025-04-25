@@ -87,7 +87,8 @@ const EXCEPTIONS_PAIR_MAP = {
 const EXCEPTION_PATH = [
   '/images/generations/with-url',
   '/v1/images/generations/with-url',
-  '/v1/stt'
+  '/v1/stt',
+  '/threads/{threadId}/runs/{runId}/cancel',
 ]
 
 const parseOpenapi = (openapi, fetchedModels) => {

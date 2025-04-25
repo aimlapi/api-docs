@@ -1,0 +1,30 @@
+[
+  {
+    "name": "runway/gen4_turbo",
+    "alias": "gen4_turbo",
+    "category": "video-models",
+    "vendor": "Runway",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "x-ai/grok-3-beta",
+    "alias": "grok-3-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "x-ai/grok-3-mini-beta",
+    "alias": "grok-3-mini-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]
+

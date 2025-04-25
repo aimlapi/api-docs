@@ -177,7 +177,7 @@ def main():
             status = response_data.get("status")
 
             if status == "waiting" or status == "active":
-                ("Still waiting... Checking again in 10 seconds.")
+                print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
                 print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
@@ -198,7 +198,7 @@ if __name__ == "__main__":
 <summary>Response</summary>
 
 {% code overflow="wrap" %}
-```
+```lisp
 {'generation_id': 'dd412e9d-044c-43ae-b97b-e920755074d5'}
 Processing complete:
  he doesn't belong to you and i don't see how you have anything to do with what is be his power yet he's he personified from this stage to you be fire
@@ -206,3 +206,7 @@ Processing complete:
 {% endcode %}
 
 </details>
+
+## All Available Speech-to-Text Models
+
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-automotive</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-conversationalai</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-drivethru</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-finance</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-general</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-medical</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-meeting</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-phonecall</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-video</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-voicemail</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-tiny.md">#g1_whisper-tiny</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-small.md">#g1_whisper-small</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-base.md">#g1_whisper-base</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-medium.md">#g1_whisper-medium</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-large.md">#g1_whisper-large</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/whisper">Whisper</a></td></tr></tbody></table>

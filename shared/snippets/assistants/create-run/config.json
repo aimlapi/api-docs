@@ -1,5 +1,6 @@
 {
   "title": "Create a run",
+  "docs": "https://docs.aimlapi.com/solutions/openai/assistants/runs",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/",
     "apiKey": "<YOUR_API_KEY>"

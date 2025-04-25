@@ -1,5 +1,5 @@
 ---
-description: Welcome to the AI/ML API!
+description: Learn how to get started with the AI/ML API
 cover: .gitbook/assets/rqiuor.jpg
 coverY: 0
 layout:
@@ -20,22 +20,32 @@ layout:
 
 # 🧭 Documentation Map
 
-This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code. Simply follow the steps below.
+This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code.
 
-{% stepper %}
-{% step %}
-### &#x20;<mark style="background-color:green;">QUICKSTART</mark>&#x20;
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p></p><p><strong>Start with this code block</strong> <br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Step-by-step example:</p><p><a href="quickstart/setting-up.md">Setting Up</a><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Choose the SDK to use:</p><p><a href="quickstart/supported-sdks.md">Supported SDKs</a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 
-Prepare everything needed to call our API:\
-[setting-up.md](quickstart/setting-up.md "mention")     [supported-sdks.md](quickstart/supported-sdks.md "mention")&#x20;
+client = OpenAI(
+    base_url="https://api.aimlapi.com/v1",
+    api_key="&#x3C;YOUR_AIMLAPI_KEY>",    
+)
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Write a one-sentence story about numbers."}]
+)
+
+print(response.choices[0].message.content)
+</code></pre></td></tr></tbody></table>
+
+
 
 ***
-{% endstep %}
 
-{% step %}
-### &#x20;<mark style="background-color:yellow;">SELECT  YOUR  AI</mark>&#x20;
+## Browse Models
 
-**Find a Suitable Model**   |     [**API REFERENCES**](broken-reference)
+Popular         |         [View all 200+ models >](api-references/model-database.md)
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="api-references/text-models-llm/OpenAI/">ChatGPT</a></td><td></td><td></td><td><a href="api-references/text-models-llm/OpenAI/">OpenAI</a></td></tr><tr><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td><td></td><td></td><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td></tr><tr><td><a href="api-references/image-models/flux/">Flux</a></td><td></td><td></td><td><a href="api-references/image-models/flux/">flux</a></td></tr></tbody></table>
 
 Select the model by its **Task**, by its **Developer** or by the supported **Capabilities**:
 
@@ -92,13 +102,12 @@ If you've already made your choice and know the model ID, use the [Search panel]
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
 **Flux**:  [Image](api-references/image-models/flux/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)\
 **Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
 <mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
 **Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\
-**Microsoft**:  [Text/Chat](api-references/text-models-llm/Microsoft/)\
 <mark style="background-color:green;">**MiniMax**</mark>:  [Text/Chat](api-references/text-models-llm/MiniMax/)  [Video](api-references/video-models/MiniMax/)  [Music](api-references/music-models/MiniMax/)\
-**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)\
+**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)\
 **NVIDIA**:  [Text/Chat](api-references/text-models-llm/NVIDIA/)\
 **NeverSleep**:  [Text/Chat](api-references/text-models-llm/NeverSleep/)\
 **NousResearch**:  [Text/Chat](api-references/text-models-llm/NousResearch/)\
@@ -107,7 +116,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Runway**:  [Video](api-references/video-models/runway/)\
 <mark style="background-color:green;">**Stability AI**</mark>:  [Image](api-references/image-models/Stability-AI/)  [Music](api-references/music-models/Stability-AI/)  [3D-Generation](api-references/3d-generating-models/Stability-AI/)\
 **Together AI**:  [Embedding](api-references/embedding-models/Together-AI/)\
-**Upstage AI**:  [Text/Chat](api-references/text-models-llm/Upstage-AI/)\
 **xAI**:  [Text/Chat](api-references/text-models-llm/xAI/)
 {% endtab %}
 
@@ -116,31 +124,51 @@ If you've already made your choice and know the model ID, use the [Search panel]
 [completion-or-chat-models.md](capabilities/completion-or-chat-models.md)
 {% endcontent-ref %}
 
+{% content-ref url="capabilities/code-generation.md" %}
+[code-generation.md](capabilities/code-generation.md)
+{% endcontent-ref %}
+
 {% content-ref url="capabilities/function-calling.md" %}
 [function-calling.md](capabilities/function-calling.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/thinking-reasoning.md" %}
+[thinking-reasoning.md](capabilities/thinking-reasoning.md)
 {% endcontent-ref %}
 
 {% content-ref url="capabilities/image-to-text-vision.md" %}
 [image-to-text-vision.md](capabilities/image-to-text-vision.md)
 {% endcontent-ref %}
 
-{% content-ref url="capabilities/code-generation.md" %}
-[code-generation.md](capabilities/code-generation.md)
+{% content-ref url="capabilities/web-search.md" %}
+[web-search.md](capabilities/web-search.md)
 {% endcontent-ref %}
+
+
 {% endtab %}
 {% endtabs %}
 
-**Choose Ready-to-Use Solutions Instead**    |    [**SOLUTIONS**](broken-reference)
+## Browse Solutions
 
 * [AI Search Engine](solutions/ai-search-engine/) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
-* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI assistants capable of handling customer support, data analysis, content generation, and more.&#x20;
+* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI Assistants capable of handling customer support, data analysis, content generation, and more.&#x20;
+
+
 
 ***
-{% endstep %}
 
-{% step %}
-### &#x20;<mark style="background-color:orange;">GOING  DEEPER</mark>&#x20;
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="375"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>More about text model capabilities:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>More about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a></td><td valign="top"></td></tr></tbody></table>
-{% endstep %}
-{% endstepper %}
+
+## Going Deeper
+
+<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span>  <a href="broken-reference">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span>   <a href="broken-reference">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span>  <a href="broken-reference">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span>    <a href="broken-reference">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
+
+
+
+## Have a Minute? Help Make the Docs Better!
+
+We’re currently working on improving our documentation portal, and your feedback would be **incredibly** helpful! Take [**a quick 5-question survey**](https://tally.so/r/w4G9Er) (no personal info required!)
+
+You can also rate each individual page using the built-in form on the right side of the screen:
+
+<figure><img src=".gitbook/assets/rateform-5.webp" alt=""><figcaption></figcaption></figure>

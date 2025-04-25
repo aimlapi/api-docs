@@ -1,0 +1,31 @@
+import { writeFileSync } from 'node:fs';
+import OpenAI from 'openai';
+
+const api = new OpenAI({
+  baseURL: '{{baseUrl}}',
+  apiKey: '{{apiKey}}',
+});
+
+const main = async () => {
+  const answer = await api.chat.completions.create({
+    model: '{{model}}',
+    modalities: ['text', 'audio'],
+    audio: { voice: 'alloy', format: 'wav' },
+    messages: [
+      {
+        role: 'user',
+        content: 'Tell me, why is the sky blue?'
+      }
+    ],
+  });
+
+  console.log(answer.choices[0]);
+
+  writeFileSync(
+    'answer.wav',
+    Buffer.from(answer.choices[0].message.audio.data, 'base64'),
+    { encoding: 'utf-8' }
+  );
+};
+
+main();

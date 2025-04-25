@@ -1,0 +1,22 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/generate/video/kling/generation"
+    payload = {
+        "model": "{{model}}",
+        "image_url": [
+            "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
+            "https://storage.googleapis.com/falserverless/juggernaut_examples/QEW5VrzccxGva7mPfEXjf.png",
+        ],
+        "effect_scene": "hug",
+        "duration": "5",
+    }
+    headers = {"Authorization": "Bearer {{apiKey}}", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers)
+    print("Generation:", response.json())
+
+
+if __name__ == "__main__":
+    main()

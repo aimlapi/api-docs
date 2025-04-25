@@ -49,7 +49,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 #### Requesting the result of the task from the server using the generation\_id
 
 {% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/stt/{generation_id}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29 ](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi %}
 
 ## Quick Code Examples
@@ -102,9 +102,6 @@ def main():
     stt_response = create_stt()
     gen_id = stt_response.get("generation_id")
 
-{% swagger src="./nova-2-pair.json" path="/v1/stt/{generation_id}" method="get" %}
-./nova-2-pair.json
-{% endswagger %}
 
 
     if gen_id:
@@ -121,7 +118,7 @@ def main():
             status = response_data.get("status")
 
             if status == "waiting" or status == "active":
-                ("Still waiting... Checking again in 10 seconds.")
+                print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
                 print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
@@ -211,7 +208,7 @@ def main():
             status = response_data.get("status")
 
             if status == "waiting" or status == "active":
-                ("Still waiting... Checking again in 10 seconds.")
+                print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
                 print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])

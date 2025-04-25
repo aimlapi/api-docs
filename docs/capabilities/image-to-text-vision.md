@@ -32,7 +32,7 @@ payload = json.dumps({
 
 headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer YOUR_API_KEY'
+  'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>'
 }
 
 response = requests.post(url, headers=headers, data=payload)
@@ -51,10 +51,15 @@ print(response.json())
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
+* [google/gemini-2.0-flash-thinking-exp-01-21](../api-references/text-models-llm/google/gemini-2.0-flash-thinking-exp-01-21.md)
+* [gemini-2.5-pro-exp-03-25](../api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
+* [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
 * [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md)
 * [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md)
 * [meta-llama/Llama-Guard-3-11B-Vision-Turbo](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)
 * [meta-llama/Llama-Vision-Free](../api-references/text-models-llm/Meta/Llama-Vision-Free.md)
+* [meta-llama/llama-4-scout](../api-references/text-models-llm/meta/llama-4-maverick.md)
+* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
 * [chatgpt-4o-latest](../api-references/text-models-llm/OpenAI/gpt-4o.md)
@@ -65,3 +70,6 @@ print(response.json())
 * [gpt-4o-2024-08-06](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
 * [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
+* [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
+* [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
+* [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)

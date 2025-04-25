@@ -21,10 +21,11 @@ layout:
 
 Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference):&#x20;
 
-* generating an AIML API Key,&#x20;
-* configuring the base URL.
+* [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),&#x20;
+* [configuring the base URL](setting-up.md#configuring-base-url),
+* [making an API call](setting-up.md#making-an-api-call).
 
-Let's walk through an example of connecting to the **mistralai/Mistral-7B-Instruct-v0.2** model via OpenAI SDK. This guide is suitable even for complete beginners.
+Let's walk through an example of connecting to the [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) model via OpenAI SDK. This guide is suitable even for complete beginners.
 
 ## G**enerating an AIML API Key**
 
@@ -47,7 +48,7 @@ To use the AIML API, you need to create an account and generate an API key. Foll
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
 
-## **Configure Base URL**
+## **Configuring Base URL**
 
 <details>
 
@@ -72,12 +73,12 @@ The AI/ML API supports both versioned and non-versioned URLs, providing flexibil
 Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
 {% endhint %}
 
-## Let's Use a Real AI Model: Make Your First API Call
+## Making an API Call
 
 Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: **Python** and **NodeJS**.
 
 {% hint style="info" %}
-In the examples below, we use the [**OpenAI SDK**](https://docs.aimlapi.com/quickstart/supported-sdks#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
+In the examples below, we use the [**OpenAI SDK**](supported-sdks.md#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
 
 If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API Key obtained from your account.\
@@ -102,7 +103,7 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 
 def main():
     completion = api.chat.completions.create(
-        model="mistralai/Mistral-7B-Instruct-v0.2",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -117,7 +118,8 @@ def main():
     print("AI:", response)
 
 
-if __name__ 
+if __name__ == "__main__":
+    main()
 ```
 {% endcode %}
 {% endtab %}
@@ -212,7 +214,7 @@ Create new file and name it as `travel.py`
 touch travel.py
 ```
 
-Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key)
+Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key).
 
 ```python
 from openai import OpenAI
@@ -227,7 +229,7 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 
 def main():
     completion = api.chat.completions.create(
-        model="mistralai/Mistral-7B-Instruct-v0.2",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -255,7 +257,7 @@ python3 ./travel.py
 If you done all correct, you will see following output:
 
 {% code overflow="wrap" %}
-```
+```json5
 User: Tell me about San Francisco
 AI:  San Francisco, located in northern California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful vistas, and diverse neighborhoods. It's a popular tourist destination famous for its iconic Golden Gate Bridge, which spans the entrance to the San Francisco Bay, and the iconic Alcatraz Island, home to the infamous federal prison.
 
@@ -320,7 +322,7 @@ const api = new OpenAI({
 
 const main = async () => {
   const completion = await api.chat.completions.create({
-    model: "mistralai/Mistral-7B-Instruct-v0.2",
+    model: "gpt-4o",
     messages: [
       {
         role: "system",
@@ -347,7 +349,7 @@ main();
 You will see a response that looks like this:
 
 {% code overflow="wrap" %}
-```
+```json5
 User: Tell me about San Francisco
 AI: San Francisco, located in the northern part of California, USA, is a vibrant and culturally rich city known for its iconic landmarks, beautiful scenery, and diverse neighborhoods.
 
@@ -434,7 +436,7 @@ The OpenAI SDK provides us with methods to communicate with chat models. It is p
 
 `messages` is an array of objects with a `content` field as prompt and a `role` string that can be one of `system`, `user`, `tool`, `assistant`. With the role, the model can understand what to do with this prompt: Is this an instruction? Is this a user message? Is this an example of how to answer? Is this the result of code execution? The tool role is used for more complex behavior and will be discussed in another article.
 
-In our example, we also use `max_tokens` and `temperature`. How to use these parameters is discussed in the [parameters article](../capabilities/parameters.md).&#x20;
+In our example, we also use `max_tokens` and `temperature`.&#x20;
 
 With that knowledge, we can now send our request like the following:
 
@@ -442,7 +444,7 @@ With that knowledge, we can now send our request like the following:
 {% tab title="JavaScript" %}
 ```javascript
 const completion = await api.chat.completions.create({
-  model: "mistralai/Mistral-7B-Instruct-v0.2",
+  model: "gpt-4o",
   messages: [
     {
       role: "system",
@@ -462,7 +464,7 @@ const completion = await api.chat.completions.create({
 {% tab title="Python" %}
 ```python
 completion = api.chat.completions.create(
-    model="mistralai/Mistral-7B-Instruct-v0.2",
+    model="gpt-4o",
     messages=[
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
@@ -474,7 +476,7 @@ completion = api.chat.completions.create(
 {% endtab %}
 {% endtabs %}
 
-The response from the function `chat.completions.create` contains a completion. Completion is a fundamental part of LLM models' logic. Every LLM model is some sort of word autocomplete engine, trained by huge amounts of data. The chat models are designed to autocomplete large chunks of messages with prompts and certain roles, but other models can have their own custom logic without even roles.
+The response from the function `chat.completions.create` contains a [completion](../capabilities/completion-or-chat-models.md). Completion is a fundamental part of LLM models' logic. Every LLM model is some sort of word autocomplete engine, trained by huge amounts of data. The chat models are designed to autocomplete large chunks of messages with prompts and certain roles, but other models can have their own custom logic without even roles.
 
 Inside this completion, we are interested in the text of the generation. We can get it by getting the result from the completion variable:
 

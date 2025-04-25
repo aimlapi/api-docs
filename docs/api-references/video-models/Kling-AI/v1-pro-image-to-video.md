@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* kling-video/v1/pro/image-to-video
+* `kling-video/v1/pro/image-to-video`
 {% endhint %}
 
 ## Model Overview

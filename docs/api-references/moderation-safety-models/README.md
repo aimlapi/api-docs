@@ -129,7 +129,7 @@ def is_prompt_safe(prompt):
             }
         ]
     }
-    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
     response = requests.post(url, json=payload, headers=headers).json()
 
@@ -152,7 +152,7 @@ def get_answer(prompt):
             }
         ]
     }
-    headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
+    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
     response = requests.post(url, json=payload, headers=headers).json()
 
     return response['choices'][0]['message']['content']
@@ -174,7 +174,7 @@ const isPromptSafe = async (prompt) => {
     {
       method: "POST",
       headers: {
-        Authorization: "Bearer <YOUR_API_KEY>",
+        Authorization: "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -203,7 +203,7 @@ const getAnswer = async (prompt) => {
   const response = await fetch('https://api.aimlapi.com/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer <YOUR_API_KEY>',
+      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({

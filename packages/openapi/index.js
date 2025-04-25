@@ -1,0 +1,12 @@
+export { default as image } from './descriptions/image.js';
+export { default as video } from './descriptions/video.js';
+export { default as assistant } from './descriptions/assistant.js';
+export { default as assistantRun } from './descriptions/assistant-run.js';
+export { default as assistantThread } from './descriptions/assistant-thread.js';
+export { default as audio } from './descriptions/audio.js';
+export { default as chatCompletion } from './descriptions/chat-completion.js';
+export { default as embedding } from './descriptions/embedding.js';
+export { default as ocr } from './descriptions/ocr.js';
+export { default as speechToText } from './descriptions/speech-to-text.js';
+export { default as textToSpeech } from './descriptions/text-to-speech.js';
+export { default as vision } from './descriptions/vision.js';

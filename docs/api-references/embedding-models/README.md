@@ -19,17 +19,13 @@ Embeddings from AI/ML API quantify the similarity between text strings. These em
 
 An embedding is a vector (list) of floating-point numbers, where the distance between vectors indicates their relatedness. Smaller distances indicate higher similarity, while larger distances suggest lower similarity.
 
+## Pricing
+
 For more information on Embeddings pricing, visit our [pricing page](https://aimlapi.com/ai-ml-api-pricing). Costs are calculated based on the number of tokens in the input.
-
-## Embedding Model Comparison
-
-AI/ML API offers two robust third-generation embedding models (indicated by -3 in the model ID).
-
-<table><thead><tr><th>Model</th><th width="156">~ Pages per Dollar</th><th width="215">Performance on MTEB Eval</th><th>Max Input Tokens</th></tr></thead><tbody><tr><td>text-embedding-3-small</td><td>62,500</td><td>62.3%</td><td>8191</td></tr><tr><td>text-embedding-3-large</td><td>9,615</td><td>64.6%</td><td>8191</td></tr><tr><td>text-embedding-ada-002</td><td>12,500</td><td>61.0%</td><td>8191</td></tr></tbody></table>
 
 ## **Example: Generating Embeddings**
 
-```
+```shell
 curl https://api.aimlapi.com/v1/embeddings \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $AIMLAPI_API_KEY" \

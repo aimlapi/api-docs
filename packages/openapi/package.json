@@ -1,0 +1,9 @@
+{
+  "name": "@aimlapi/docs-openapi",
+  "version": "1.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./index.js",
+  "keywords": [],
+  "author": ""
+}
