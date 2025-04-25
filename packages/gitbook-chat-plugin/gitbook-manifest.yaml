@@ -1,0 +1,12 @@
+name: aimlapi-chat
+title: aimlapi-chat
+script: src/index.tsx
+description: ""
+scopes: []
+blocks:
+  - id: aimlapi-chat
+    title: aimlapi-chat
+    description: AI/ML Chat Integration
+visibility: private
+organization: isNk5xPnJebTWJa4JCg5
+secrets: {}

@@ -1,0 +1,16 @@
+{
+  "name": "aimlapi-chat",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "publish": "gitbook publish ."
+  },
+  "dependencies": {
+    "@gitbook/runtime": "*"
+  },
+  "devDependencies": {
+    "@gitbook/cli": "^0.22.0",
+    "@gitbook/tsconfig": "*",
+    "@cloudflare/workers-types": "*"
+  }
+}
