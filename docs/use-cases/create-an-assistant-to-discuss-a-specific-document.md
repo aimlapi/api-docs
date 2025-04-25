@@ -12,14 +12,13 @@ Today, we’re going to create an AI [Assistant](../solutions/openai/assistants/
 The following features need to be implemented:
 
 * Core assistant functionality (ability to communicate with the user and respond accurately to questions using [Chat Completion](../capabilities/completion-or-chat-models.md) capability).
-* Document upload (PDF).
+* Document upload (TXT).
 
 ## Implementation
 
 Core functionality:
 
 ```python
-import openai
 from openai import OpenAI
 
 # Connect to OpenAI API

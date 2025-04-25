@@ -1,0 +1,223 @@
+# v2-master/image-to-video
+
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `klingai/v2-master-image-to-video`
+{% endhint %}
+
+## Model Overview
+
+Compared to [v1.6](../Kling-AI/v1.6-pro-image-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
+
+## Setup your API Key
+
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## How to Make a Call
+
+Generating a video using this model involves making two sequential API calls:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).&#x20;
+* The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.&#x20;
+
+Below, you can find both corresponding API schemas.
+
+## API Schema
+
+### Create a video generation task and send it to the server
+
+{% openapi-operation spec="kling-v2-master-i2v" path="/v2/generate/video/kling/generation" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.&#x20;
+
+{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
+
+## Code Example (Python)
+
+The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+
+{% hint style="warning" %}
+This model produces highly detailed and natural-looking videos, so generation may take around 5–6 minutes.
+{% endhint %}
+
+<details>
+
+<summary>Full code example</summary>
+
+<pre class="language-python" data-overflow="wrap"><code class="lang-python">import requests
+import time
+
+base_url = "https://api-staging.aimlapi.com/v2"
+api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+
+# Creating and sending a video generation task to the server
+def generate_video():
+    url = f"{base_url}/generate/video/kling/generation"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+<strong>
+</strong>    data = {
+        "model": "klingai/v2-master-image-to-video",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "duration": "5",       
+    }
+ 
+    response = requests.post(url, json=data, headers=headers)
+    
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        # print(response_data)
+        return response_data
+    
+
+# Requesting the result of the task from the server using the generation_id
+def get_video(gen_id):
+    url = f"{base_url}/generate/video/kling/generation"
+    params = {
+        "generation_id": gen_id,
+    }
+    
+    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+        "Content-Type": "application/json"
+        }
+
+    response = requests.get(url, params=params, headers=headers)
+    # print("Generation:", response.json())
+    return response.json()
+
+
+
+def main():
+     # Running video generation and getting a task id
+    gen_response = generate_video()
+    gen_id = gen_response.get("id")
+    print("Gen_ID:  ", gen_id)
+
+    # Trying to retrieve the video from the server every 10 sec
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 600
+        while time.time() - start_time &#x3C; timeout:
+            response_data = get_video(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+            print("Status:", status)
+
+            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
+                print("Still waiting... Checking again in 10 seconds.")
+                time.sleep(10)
+            else:
+                print("Processing complete:/n", response_data)
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None     
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+</details>
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Gen_ID:   88a64d31-cce4-41e8-b9d8-5392e8c2a6d4:kling-video/v2/master/image-to-video
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '88a64d31-cce4-41e8-b9d8-5392e8c2a6d4:kling-video/v2/master/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/kangaroo/iKWC3BJOdav7Cy8cWSO9k_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 5150376}}
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary>Generated Video</summary>
+
+**Original**: [784x1172](https://drive.google.com/file/d/1CtkWU6zvsTZj5O82dWnp42tcfRWSDWyH/view?usp=sharing)
+
+**Low-res GIF preview**:
+
+<figure><img src="../../../.gitbook/assets/kling-master-monalisa.gif" alt=""><figcaption><p><code>"prompt": "Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure>
+
+</details>
