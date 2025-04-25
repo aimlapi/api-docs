@@ -1,4 +1,4 @@
-name: Deploy Snippets Assets
+name: Deploy Chat Assets
 
 on:
   push:
