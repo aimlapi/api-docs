@@ -9,4 +9,5 @@ body {
 #root {
   display: flex;
   flex: 1;
+  aspect-ratio: 1;
 }

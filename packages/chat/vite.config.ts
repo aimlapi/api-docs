@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss()],
     build: {
       rollupOptions: {
-        input: "index.html",
+        input: "app.html",
         output: {
           entryFileNames: "bundle.js",
           assetFileNames: "bundle.css",
