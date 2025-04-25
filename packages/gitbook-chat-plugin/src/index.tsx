@@ -37,7 +37,7 @@ const exampleBlock = createComponent<
   },
   render: async (element, context) => {
     return (
-      <block>
+      <block size="fullscreen">
         <webframe
           source={{ url: "https://cdn.aimlapi.com/assets/chat/index.html" }}
           aspectRatio={1}
