@@ -17,8 +17,8 @@ Here's a simple explanation of how **Messages**, **Threads**, **Assistants**, **
 * A **Tool** is an additional capability that an Assistant can use to enhance its responses. Tools allow the Assistant to perform external actions, such as calling APIs, retrieving files, or running custom functions. (You may have already encountered this concept by using [Function Calling](../../../capabilities/function-calling.md) when calling text models without creating Assistants.)\
   When a Tool is enabled, the Assistant can decide when to use it based on the conversation context. If a Tool is required during a Run, the process pauses until the necessary output is provided. This makes Tools essential for handling complex tasks that go beyond simple text-based interactions. \
   Currently, three Tool options are available:&#x20;
-  * **Code Interpreter**,&#x20;
-  * **File Search**,&#x20;
+  * **Code Interpreter**, which can write or debug code for you in different programming languages,&#x20;
+  * **File Search**, which can analyze the file you provided and is capable of discussing its contents,
   * **Function Calling**, which can call your custom functions.
 
 ***
