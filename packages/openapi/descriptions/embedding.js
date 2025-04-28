@@ -1,7 +1,4 @@
 export default {
-  encoding_format: {
-    desc: `The format to return the embeddings in.`,
-  },
   dimensions: {
     desc: `The number of dimensions the resulting output embeddings should have.`,
   },
