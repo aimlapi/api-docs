@@ -1,7 +1,4 @@
 export default {
-  input: {
-    desc: `Input text to embed, encoded as a string or array of tokens.`,
-  },
   encoding_format: {
     desc: `The format to return the embeddings in.`,
   },
