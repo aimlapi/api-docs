@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Trigger autoupdate swagger
         env:
-            GH_ORG_ACCESS_TOKEN: ${{ secrets.GH_ORG_ACCESS_TOKEN }}
-            OPENAPI_REPO: ${{ secrets.OPENAPI_REPO }}
+          GH_ORG_ACCESS_TOKEN: ${{ secrets.GH_ORG_ACCESS_TOKEN }}
+          OPENAPI_REPO: ${{ secrets.OPENAPI_REPO }}
         run: |
           curl -X POST \
             -H "Authorization: Bearer $GH_ORG_ACCESS_TOKEN" \
