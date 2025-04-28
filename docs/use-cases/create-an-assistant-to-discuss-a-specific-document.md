@@ -23,7 +23,7 @@ Make sure you have [your AIMLAPI key](https://aimlapi.com/app/keys)!
 
 ### 1. Preparing Input File
 
-As input, we used a `.txt` file with the following content and placed it in the same directory as our Python script.
+As input, we used a `.txt` file with the following content and placed it in the same directory as our Python script. For testing, we created a simple file with recipes for three different dishes.
 
 <details>
 
@@ -325,15 +325,15 @@ class EventHandler(AssistantEventHandler):
 
 `on_text_created(self, text)`
 
-Triggered when the assistant creates a text response. The code simply prints `assistant >` to indicate the beginning of the output.
+Triggered when the Assistant creates a text response. The code simply prints `assistant >` to indicate the beginning of the output.
 
-**`on_text_delta(self, delta, snapshot)`**
+`on_text_delta(self, delta, snapshot)`
 
 Triggered when new parts of text (tokens) arrive. The code prints each new word or letter to the console without a newline (end=""), creating the effect of the text appearing gradually.
 
 `on_tool_call_created(self, tool_call)`
 
-Triggered if the assistant decides to use one of the tools (e.g., Code Interpreter or external APIs). The code simply prints the type of the invoked tool.
+Triggered if the Assistant decides to use one of the tools (e.g., Code Interpreter or external APIs). The code simply prints the type of the invoked tool.
 
 `on_tool_call_delta(self, delta, snapshot)`
 
@@ -343,7 +343,7 @@ Triggered when the assistant sends data to a tool or receives a result from it.
 
 **How it works**
 
-When the assistant starts forming a response, it triggers `on_text_created`.
+When the Assistant starts forming a response, it triggers `on_text_created`.
 
 Then, as tokens are generated, `on_text_delta` is triggered, updating the text in real time.
 

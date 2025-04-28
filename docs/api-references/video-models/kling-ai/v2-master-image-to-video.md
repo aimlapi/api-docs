@@ -44,7 +44,7 @@ After sending a request for video generation, this task is added to the queue. B
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
 {% hint style="warning" %}
-This model produces highly detailed and natural-looking videos, so generation may take around 5–6 minutes.
+This model produces highly detailed and natural-looking videos, so generation may take around 5–6 minutes for a 5-second video and 11-14 minutes for a 10-second video.
 {% endhint %}
 
 <details>
@@ -110,7 +110,7 @@ def main():
     if gen_id:
         start_time = time.time()
 
-        timeout = 600
+        timeout = 1000
         while time.time() - start_time &#x3C; timeout:
             response_data = get_video(gen_id)
 

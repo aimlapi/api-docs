@@ -236,7 +236,10 @@
 * [Animate Images: A Children’s Encyclopedia](use-cases/animate-images-a-childrens-encyclopedia.md)
 * [Create an Assistant to Discuss a Specific Document](use-cases/create-an-assistant-to-discuss-a-specific-document.md)
 * [Create a 3D Model from an Image](use-cases/create-a-3d-model-from-an-image.md)
+* [Create a Looped GIF for a Web Banner](use-cases/create-a-looped-gif-for-a-web-banner.md)
 * [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
+* [Create Video Content with Text Overlay: Shorts or Reels](use-cases/create-video-content-with-text-overlay-shorts-or-reels.md)
+* [Read Text Aloud and Describe Images: AI Tool to Support People with Visual Impairments](use-cases/read-text-aloud-and-describe-images-ai-tool-to-support-people-with-visual-impairments.md)
 
 ## Capabilities
 
