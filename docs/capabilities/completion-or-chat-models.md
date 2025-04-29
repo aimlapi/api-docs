@@ -102,7 +102,6 @@ Using these roles, you can create complex behaviors and protect your AI from mis
 * [deepseek/deepseek-chat-v3-0324](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
 * [deepseek-reasoner](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
-* [gemini-pro](broken-reference)
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
