@@ -20,7 +20,11 @@ layout:
 
 # 🧭 Documentation Map
 
-This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code.
+This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code.&#x20;
+
+Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
+
+***
 
 <table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p></p><p><strong>Start with this code block</strong> <br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Step-by-step example:</p><p><a href="quickstart/setting-up.md">Setting Up</a><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Choose the SDK to use:</p><p><a href="quickstart/supported-sdks.md">Supported SDKs</a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 
