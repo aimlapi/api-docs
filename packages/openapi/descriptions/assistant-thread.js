@@ -1,4 +1,13 @@
 export default {
+  id: {
+    desc: `The identifier, which can be referenced in API endpoints.`,
+  },
+  created_at: {
+    desc: `The Unix timestamp (in seconds) for when the thread was created.`,
+  },
+  object: {
+    desc: `The object type.`,
+  },
   role: {
     desc: `The role of the entity that is creating the message`,
   },
@@ -40,5 +49,16 @@ export default {
         desc: `The type of tool being defined`,
       },
     },
+  },
+  tool_resources: {
+    desc: `A set of resources that are made available to the assistant's tools in this thread. The resources are specific to the type of tool. For example, the code_interpreter tool requires a list of file IDs, while the file_search tool requires a list of vector store IDs.`,
+    file_search: {
+      vector_store_ids: {
+        desc: `The vector store attached to this thread. There can be a maximum of 1 vector store attached to the thread.`,
+      },
+    },
+  },
+  messages: {
+    desc: `A list of messages to start the thread with.`,
   },
 };

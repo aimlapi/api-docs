@@ -158,6 +158,12 @@ export default {
   },
   truncation_strategy: {
     desc: `Controls for how a thread will be truncated prior to the run. Use this to control the intial context window of the run.`,
+    type: {
+      desc: `The truncation strategy to use for the thread. The default is auto. If set to last_messages, the thread will be truncated to the n most recent messages in the thread. When set to auto, messages in the middle of the thread will be dropped to fit the context length of the model, max_prompt_tokens.`,
+    },
+    last_messages: {
+      desc: `The number of most recent messages from the thread when constructing the context for the run.`,
+    },
   },
   tool_outputs: {
     desc: `A list of tools for which the outputs are being submitted.`,
@@ -167,5 +173,8 @@ export default {
     tool_call_id: {
       desc: `The ID of the tool call in the required_action object within the run object the output is being submitted for.`,
     },
+  },
+  thread: {
+    desc: `Options to create a new thread. If no thread is provided when running a request, an empty thread will be created.`,
   },
 };

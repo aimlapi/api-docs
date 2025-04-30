@@ -19,7 +19,7 @@ export default {
   },
   title: {
     desc: `An optional title for the text. Only applicable when task_type is RETRIEVAL_DOCUMENT.
-
-Note: Specifying a title for RETRIEVAL_DOCUMENT provides better quality embeddings for retrieval.`,
+  
+  Note: Specifying a title for RETRIEVAL_DOCUMENT provides better quality embeddings for retrieval.`,
   },
 };
