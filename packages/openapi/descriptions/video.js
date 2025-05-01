@@ -14,20 +14,20 @@ export default {
     },
     minimax: {
       desc: `The model will use the image passed in this parameter as the first frame to generate a video. 
-    Supported formats:
-    - URL of the image
-    - base64 encoding of the image
-    Image specifications:
-    - format must be JPG, JPEG, or PNG;
-    - aspect ratio should be greater than 2:5 and less than 5:2; the shorter side must exceed 300 pixels
-    - file size must not exceed 20MB.`,
+      Supported formats:
+      - URL of the image
+      - base64 encoding of the image
+      Image specifications:
+      - format must be JPG, JPEG, or PNG;
+      - aspect ratio should be greater than 2:5 and less than 5:2; the shorter side must exceed 300 pixels
+      - file size must not exceed 20MB.`,
     },
     google: {
       desc: `URL of the input image to animate. Should be 720p or higher resolution.`,
     },
   },
   last_image_url: {
-    standard: {
+    default: {
       desc: `URL of the image to be used for the end of the video.`,
     },
     runway: {

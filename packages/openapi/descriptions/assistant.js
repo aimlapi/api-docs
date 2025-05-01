@@ -1,4 +1,16 @@
 export default {
+  id: {
+    desc: `The identifier, which can be referenced in API endpoints.`,
+  },
+  created_at: {
+    desc: `The Unix timestamp (in seconds) for when the assistant was created.`,
+  },
+  object: {
+    desc: `The object type.`,
+  },
+  model: {
+    desc: `ID of the model to use.`,
+  },
   description: {
     desc: `The description of the assistant. The maximum length is 512 characters.`,
   },
@@ -7,8 +19,8 @@ export default {
   },
   metadata: {
     desc: `Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.
-
-Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.`,
+  
+  Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.`,
   },
   name: {
     desc: `The name of the assistant. The maximum length is 256 characters.`,
@@ -80,9 +92,7 @@ Keys are strings with a maximum length of 64 characters. Values are strings with
           },
         },
         file_ids: {
-          desc: `	[
-
-A list of file IDs to add to the vector store. There can be a maximum of 10000 files in a vector store.`,
+          desc: `A list of file IDs to add to the vector store. There can be a maximum of 10000 files in a vector store.`,
         },
       },
     },
@@ -124,8 +134,8 @@ A list of file IDs to add to the vector store. There can be a maximum of 10000 f
   },
   top_p: {
     desc: `An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.
-
-We generally recommend altering this or temperature but not both.`,
+  
+  We generally recommend altering this or temperature but not both.`,
   },
   limit: {
     desc: `A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20.`,
@@ -138,5 +148,8 @@ We generally recommend altering this or temperature but not both.`,
   },
   after: {
     desc: `A cursor for use in pagination. after is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list.`,
+  },
+  run_id: {
+    desc: `Filter messages by the run ID that generated them.`,
   },
 };
