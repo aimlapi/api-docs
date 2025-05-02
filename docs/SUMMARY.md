@@ -44,6 +44,7 @@
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
     * [gemini-2.0-flash-thinking-exp-01-21](api-references/text-models-llm/google/gemini-2.0-flash-thinking-exp-01-21.md)
     * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)
+    * [gemini-2.5-flash-preview](api-references/text-models-llm/google/gemini-2.5-flash-preview.md)
     * [gemini-2.5-pro-exp](api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
     * [gemini-2.5-pro-preview](api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
     * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
@@ -235,8 +236,8 @@
 * [Create an Assistant to Discuss a Specific Document](use-cases/create-an-assistant-to-discuss-a-specific-document.md)
 * [Create a 3D Model from an Image](use-cases/create-a-3d-model-from-an-image.md)
 * [Create a Looped GIF for a Web Banner](use-cases/create-a-looped-gif-for-a-web-banner.md)
-* [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
 * [Read Text Aloud and Describe Images: Support People with Visual Impairments](use-cases/read-text-aloud-and-describe-images-ai-tool-to-support-people-with-visual-impairments.md)
+* [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
 
 ## Capabilities
 
