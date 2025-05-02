@@ -3,16 +3,20 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* \#g1\_nova-2-automotive
-* \#g1\_nova-2-conversationalai
-* \#g1\_nova-2-drivethru
-* \#g1\_nova-2-finance
-* \#g1\_nova-2-general
-* \#g1\_nova-2-medical
-* \#g1\_nova-2-meeting
-* \#g1\_nova-2-phonecall
-* \#g1\_nova-2-video
-* \#g1\_nova-2-voicemail
+* `#g1_nova-2-automotive`
+* `#g1_nova-2-conversationalai`
+* `#g1_nova-2-drivethru`
+* `#g1_nova-2-finance`
+* `#g1_nova-2-general`
+* `#g1_nova-2-medical`
+* `#g1_nova-2-meeting`
+* `#g1_nova-2-phonecall`
+* `#g1_nova-2-video`
+* `#g1_nova-2-voicemail`
+{% endhint %}
+
+{% hint style="success" %}
+Nova-2 models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
 {% endhint %}
 
 ## Model Overview

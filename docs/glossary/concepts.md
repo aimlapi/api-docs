@@ -1,6 +1,6 @@
 ---
-icon: book-open
 description: A glossary page with some important API terms explained.
+icon: book-open
 layout:
   title:
     visible: true
@@ -30,6 +30,149 @@ Our base URL also supports versioning, so you can use the following as well:
 * `https://api.aimlapi.com/v1`
 
 Usually, you pass the base URL as the same field inside the SDK constructor. In some cases, you can set the environment variable `BASE_URL`, and it will work. If you want to use the OpenAI SDK, then follow the [setting up article ](../quickstart/setting-up.md)and take a closer look at how to use it with the AI/ML API.
+
+## Base64
+
+Base64 is a way to encode binary data, such as files or images, into text format, making it safe to include in places like URLs or JSON requests.
+
+In the context of working with AI models, this means that if a model expects a parameter like `file_data` or `image_url`, you can encode your local file or image as a Base64 string, pass it as the value for that parameter, and in most cases, the model will successfully receive and process your file. You’ll need to import the `base64` library to handle file encoding. Below is a code example showing a real model call.
+
+<details>
+
+<summary>Code Example: Providing an Image as a Base64 String</summary>
+
+We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
+
+<figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
+
+<pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+from pathlib import Path
+import base64
+
+# loading the picture
+file_path = Path("C:/Users/user/Documents/example/images/racoons_0.png")
+
+# Read and encode the image in base64
+with open(file_path, "rb") as image_file:
+    base64_image = base64.b64encode(image_file.read()).decode("utf-8")
+
+# Create a data URL for the base64 image
+image_data_url = f"data:image/png;base64,{base64_image}"
+
+# Define an OpenAI client to call the model via OpepAI SDK
+base_url = "https://api.aimlapi.com/"
+api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+
+client = OpenAI(api_key=api_key, base_url=base_url)
+
+<strong># Send the image as Base64 to GPT-4o chat model
+</strong>completion = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "user", "content": "What’s in this image?"},
+            {
+                "role": "user", "content":[ 
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": image_data_url
+                         }
+                    }
+                ]
+            }
+
+        ],
+    )
+
+response = completion.choices[0].message.content
+print(response)
+</code></pre>
+
+**Response**:
+
+{% code overflow="wrap" %}
+```
+The image depicts an illustrated raccoon by a stream, reaching into the water with its paw. The setting is natural, with rocks and greenery surrounding the stream.
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary>Code Example: Providing a PDF file as a Base64 String</summary>
+
+We'll pass a local [PDF file](https://drive.google.com/file/d/1Lktn3GHw9zyfY7vhZqzQRa6kYCpgViI3/view?usp=sharing) to the chat model via the `file_data` parameter, encoding it as a Base64 string. The prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to extract and list all headers, one per line.
+
+{% code overflow="wrap" %}
+```python
+import base64
+from openai import OpenAI
+
+
+aimlapi_key = "<YOUR_AIMLAPI_KEY>"
+
+client = OpenAI(
+    base_url = "https://api.aimlapi.com",
+    api_key = aimlapi_key, 
+)
+
+def main():
+    
+    # Put your filename here. The file must be in the same folder as your Python script.
+    your_file_name = "headers-example.pdf"
+
+    with open(your_file_name, "rb") as f:
+        data = f.read()
+
+    # We encode the entire file into a single string to send it to the model
+    base64_string = base64.b64encode(data).decode("utf-8")
+
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        # Sending our file to the model
+                        "type": "file",
+                        "file": {
+                            "filename": your_file_name,
+                            "file_data": f"data:application/pdf;base64,{base64_string}",
+                        }
+                    },
+                    {
+                        # Providing the model with instructions on how to process the uploaded file 
+                        "type": "text",
+                        "text": "Extract all the headers from this file, placing each on a new line",
+                    },
+                ],
+            },
+        ]
+    )
+    print(response.choices[0].message.content)
+
+     
+
+if __name__ == "__main__":
+    main()
+```
+{% endcode %}
+
+**Response**:
+
+{% code overflow="wrap" %}
+```
+The Renaissance Era  
+A New Dawn of Thought  
+The Masters of Art  
+Scientific Breakthroughs  
+Legacy and Influence
+```
+{% endcode %}
+
+</details>
 
 ## API Key
 

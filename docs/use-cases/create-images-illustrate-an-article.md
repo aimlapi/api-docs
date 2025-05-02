@@ -11,15 +11,14 @@ This workflow allows you to generate an illustration based on a piece of text.
 1. **Provide the Text Snippet**\
    Input a short descriptive or narrative passage.
 2. **Choose a Chat Model and Generate a Prompt for an Image Model**\
-   Select a language model (e.g., [GPT-4](../api-references/text-models-llm/OpenAI/gpt-4.md), [GPT-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)) that will process the text and suggest a visual interpretation. Ask the chat model to prepare a visual prompt. Then, pass that prompt to an image generation model (e.g., [DALL·E](../api-references/image-models/OpenAI/dall-e-3.md)).
-3. **(Optional) Refine the Prompt**\
-   If needed, tweak the generated prompt before sending it to the image model.
-4. **Generate the Image**\
+   Select a language model (e.g., [GPT-4](../api-references/text-models-llm/OpenAI/gpt-4.md), [GPT-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)) that will process the text and suggest a visual interpretation. Ask the chat model to prepare a visual prompt. If needed, tweak the generated prompt before sending it to the image model. Then, pass that prompt to an image generation model (e.g., [DALL·E](../api-references/image-models/OpenAI/dall-e-3.md)).
+3. **Generate the Image**\
    Use the selected image model to produce the final illustration and insert it into the text.
 
 ## Full Walkthrough
 
-1. As a text example, we'll provide the following one:
+1. **Provide the Text Snippet**\
+   As a text example, we'll provide the following one:
 
 <details>
 
@@ -35,7 +34,8 @@ _Digital technology will be woven into every part of urban life. Smart homes wil
 
 </details>
 
-2. We decided to use the GPT-4o chat model to generate the prompt. As input, we’ll provide it with a brief instruction: `"Read this article and generate a short prompt for illustration generation (no need to output the words like Prompt):"` along with our text snippet from the previous step.
+2. **Choose a Chat Model and Generate a Prompt for an Image Model**\
+   We decided to use the GPT-4o chat model to generate the prompt. As input, we’ll provide it with a brief instruction: `"Read this article and generate a short prompt for illustration generation (no need to output the words like Prompt):"` along with our text snippet from the previous step.
 
 {% code overflow="wrap" %}
 ```python
@@ -78,7 +78,7 @@ A vibrant illustration of a futuristic cityscape featuring sleek vertical skyscr
 
 </details>
 
-3. Image Generation
+3. **Generate the Image**
 
 Using the supporting Text-to-Image [**flux-pro**](../api-references/image-models/flux/flux-pro.md) model from [Flux](../api-references/image-models/flux/):
 

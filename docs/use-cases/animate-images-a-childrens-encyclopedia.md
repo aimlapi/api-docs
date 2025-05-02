@@ -36,7 +36,7 @@ Repeat this process for every illustration on the page.
 
 _Raccoons are small, furry animals with fluffy striped tails and black “masks” around their eyes. They live in forests, near rivers and lakes—and sometimes even close to people in towns and cities. Raccoons are very clever, curious, and quick with their paws._
 
-<figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/racoons_0 (1).png" alt=""><figcaption></figcaption></figure>
 
 _One of the raccoon's most famous habits is "washing" its food. But raccoons aren’t really cleaning their meals. They just love to roll and rub things between their paws, especially near water. Scientists believe this helps them understand what they’re holding._
 

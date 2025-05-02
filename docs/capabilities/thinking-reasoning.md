@@ -4,6 +4,10 @@
 
 Some text models support advanced reasoning mode, enabling them to perform multi-step problem solving, draw inferences, and follow complex instructions. This makes them well-suited for tasks like code generation, data analysis, and answering questions that require understanding context or logic.
 
+{% hint style="warning" %}
+Sometimes, if you give the model a serious and complex task, generating a response can take quite a while. In such cases, you might want to use streaming mode to receive the answer word by word as it is being generated.
+{% endhint %}
+
 ## Models That Support Thinking / Reasoning Mode
 
 ### Anthropic
@@ -59,7 +63,7 @@ Supported models:
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
 * [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 
-
+***
 
 * [deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
 * [deepseek/deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
@@ -67,21 +71,21 @@ Supported models:
 * [deepseek-reasoner](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 
-
+***
 
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
 
-
+***
 
 * [google/gemma-3-1b-it](../api-references/text-models-llm/google/gemma-3.md)
 * [google/gemma-3-4b-it](../api-references/text-models-llm/google/gemma-3.md)
 * [google/gemma-3-12b-it](../api-references/text-models-llm/google/gemma-3.md)
 * [google/gemma-3-27b-it](../api-references/text-models-llm/google/gemma-3.md)
 
-
+***
 
 * [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)

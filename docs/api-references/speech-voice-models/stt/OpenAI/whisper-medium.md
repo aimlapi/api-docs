@@ -26,13 +26,15 @@ The Whisper models are primarily for AI research, focusing on model robustness, 
 
 The models are trained using 680,000 hours of audio and corresponding transcripts from the internet, with 65% being English audio and transcripts, 18% non-English audio with English transcripts, and 17% non-English audio with matching non-English transcripts, covering 98 languages in total.
 
+{% hint style="success" %}
+Whisper models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
+{% endhint %}
+
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
-
-### API Schema
+## API Schema
 
 #### Creating and sending a speech-to-text conversion task to the server
 

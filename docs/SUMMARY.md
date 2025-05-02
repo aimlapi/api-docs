@@ -162,7 +162,6 @@
     * [stt \[legacy\]](api-references/speech-models/speech-to-text/stt-legacy.md)
     * [Deepgram](api-references/speech-voice-models/stt/Deepgram/README.md)
       * [nova-2](api-references/speech-voice-models/stt/Deepgram/nova-2.md)
-      * [redaction \[offline\]](api-references/speech-voice-models/stt/Deepgram/redaction.md)
     * [OpenAI](api-references/speech-voice-models/stt/OpenAI/README.md)
       * [whisper-base](api-references/speech-voice-models/stt/OpenAI/whisper-base.md)
       * [whisper-large](api-references/speech-voice-models/stt/OpenAI/whisper-large.md)
@@ -237,7 +236,7 @@
 * [Create a 3D Model from an Image](use-cases/create-a-3d-model-from-an-image.md)
 * [Create a Looped GIF for a Web Banner](use-cases/create-a-looped-gif-for-a-web-banner.md)
 * [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
-* [Read Text Aloud and Describe Images: AI Tool to Support People with Visual Impairments](use-cases/read-text-aloud-and-describe-images-ai-tool-to-support-people-with-visual-impairments.md)
+* [Read Text Aloud and Describe Images: Support People with Visual Impairments](use-cases/read-text-aloud-and-describe-images-ai-tool-to-support-people-with-visual-impairments.md)
 
 ## Capabilities
 
@@ -261,6 +260,7 @@
 * [Are my requests cropped?](faq/my-requests-are-cropped.md)
 * [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
+* [qp](faq/qp.md)
 
 ## Errors and Messages
 
