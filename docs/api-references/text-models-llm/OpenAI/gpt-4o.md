@@ -3,8 +3,8 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `chatgpt-4o-latest`
 * `gpt-4o`
+* `chatgpt-4o-latest`
 * `gpt-4o-2024-05-13`
 * `gpt-4o-2024-08-06`
 {% endhint %}
