@@ -196,7 +196,7 @@ A specific URL where an API can be accessed to perform an operation (e.g., gener
 
 A fine-tuned model is a base AI model that has been further trained on additional, specific data to specialize it for certain tasks or behaviors.
 
-For example, an "[11B Llama 3.2](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md) model fine-tuned for content safety" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
+For example, an "[_11B Llama 3.2_](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md) _model fine-tuned for content safety_" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
 
 ## Multimodal Model&#x20;
 
@@ -204,7 +204,60 @@ A model that can process and generate different types of data (text, images, aud
 
 ## Prompt&#x20;
 
-The input given to a model to generate a response.
+The input given to a model to generate a response.&#x20;
+
+The parameter used to pass a prompt is most often called simply `prompt`:
+
+<details>
+
+<summary>Some Python code</summary>
+
+{% code overflow="wrap" %}
+```python
+json={
+    "prompt": "slightly dim banner with abstract lines, base colors are coral, yellow and magenta",  # a prompt used for image generation
+    "model": "flux/schnell",
+    "image_size": {
+        "width": 1536,
+        "height": 640
+} 
+```
+{% endcode %}
+
+</details>
+
+But there can be other variations. For example, the **messages** structure used in chat models passes the prompt within the **content** subfield. Depending on the value of the `role` parameter value, this prompt will be interpreted either as a user message (**role: user**) or as a model instruction (**role: system** or **role: assistant**).
+
+<details>
+
+<summary>Some Python code</summary>
+
+{% code overflow="wrap" %}
+```python
+"messages":[
+    {
+        "role":"system",
+        "content":"you are a helpful assistant",#this prompt is an instruction
+        "name":"text"
+    },
+    {
+        "role":"user",
+        "content":"Why is the ocean salty?" #this prompt is a user question
+    }
+],
+```
+{% endcode %}
+
+</details>
+
+There are also special parameters that allow you to refine prompts, control how strongly the model should follow them, or adjust the strictness of their interpretation.
+
+* `prompt_optimizer`: The model will automatically optimize the incoming prompt to improve the video generation quality if necessary. For more precise control, this parameter can be set to `False`, and the model will follow the instructions more strictly. At this time, it is recommended to provide finer prompts for best results.&#x20;
+* `negative_prompt`: The description of elements to avoid in the generated video/image/etc.
+* `cfg_scale` or `guidance_scale`: The Classifier Free Guidance (CFG) scale is a measure of how close you want the model to stick to your prompt.
+* `strength`: Determines how much the prompt influences the generated image.
+
+Which of these parameters are supported by a specific model can be found in the API Schema section on that model's page.
 
 ## Terminal
 
