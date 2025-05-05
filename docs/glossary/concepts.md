@@ -20,6 +20,12 @@ layout:
 
 API stands for _Application Programming Interface_. In the context of AI/ML, an API serves as a "handle" that enables you to integrate and utilize any Machine Learning model within your application. Our API supports communication via HTTP requests and is fully backward-compatible with OpenAI’s API. This means you can refer to OpenAI’s documentation for making calls to our API. However, be sure to change the base URL to direct your requests to our servers and select the desired model from our offerings.
 
+## API Key
+
+An _API Key_ is a credential that grants you access to our API from within your code. It is a sensitive string of characters that should be kept confidential. Do not share your API key with anyone else, as it could be misused without your knowledge.
+
+You can find your API key on the [account page](https://aimlapi.com/app/keys).&#x20;
+
 ## Base URL
 
 The Base URL is the first part of the URL (including the protocol, domain, and pathname) that determines the server responsible for handling your request. It’s crucial to configure the correct Base URL in your application, especially if you are using SDKs from OpenAI, Azure, or other providers. By default, these SDKs are set to point to their servers, which are not compatible with our API keys and do not support many of the models we offer.
@@ -39,7 +45,7 @@ In the context of working with AI models, this means that if a model expects a p
 
 <details>
 
-<summary>Code Example: Providing an Image as a Base64 String</summary>
+<summary>Code Example (Python): Providing an Image as a Base64 String</summary>
 
 We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
 
@@ -100,7 +106,7 @@ The image depicts an illustrated raccoon by a stream, reaching into the water wi
 
 <details>
 
-<summary>Code Example: Providing a PDF file as a Base64 String</summary>
+<summary>Code Example (Python): Providing a PDF file as a Base64 String</summary>
 
 We'll pass a local [PDF file](https://drive.google.com/file/d/1Lktn3GHw9zyfY7vhZqzQRa6kYCpgViI3/view?usp=sharing) to the chat model via the `file_data` parameter, encoding it as a Base64 string. The prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to extract and list all headers, one per line.
 
@@ -174,9 +180,31 @@ Legacy and Influence
 
 </details>
 
-## API Key
+## Deprecation
 
-You can find your API key on the [account page](https://aimlapi.com/app/keys). An _API Key_ is a credential that grants you access to our API from within your code. It is a sensitive string of characters that should be kept confidential. Do not share your API key with anyone else, as it could be misused without your knowledge.
+Deprecation is the process where a provider marks a model, parameter, or feature as outdated and no longer recommended for use. Deprecated items may remain available for some time but are likely to be removed or unsupported in the future.
+
+Deprecation can apply to an entire model (see [our list of deprecated/no longer supported models](../api-references/model-database.md#deprecated-no-longer-supported-models)) or to individual parameters. For example, in a recent update to the video model [**v1.6-pro/image-to-video**](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md) by Kling AI, the `aspect_ratio` parameter was deprecated: the model now automatically determines the aspect ratio based on the properties of the provided reference image, and explicit `aspect_ratio` input is no longer required.
+
+Users are encouraged to monitor deprecation notices carefully and update their integrations accordingly. We notify our users about such changes in our email newsletters.
+
+## Endpoint&#x20;
+
+A specific URL where an API can be accessed to perform an operation (e.g., generate a response, upload a file).
+
+## **Fine-tuned model**
+
+A fine-tuned model is a base AI model that has been further trained on additional, specific data to specialize it for certain tasks or behaviors.
+
+For example, an "[11B Llama 3.2](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md) model fine-tuned for content safety" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
+
+## Multimodal Model&#x20;
+
+A model that can process and generate different types of data (text, images, audio) in a single interaction.
+
+## Prompt&#x20;
+
+The input given to a model to generate a response.
 
 ## Terminal
 
@@ -185,3 +213,9 @@ If you are not a developer or are using modern systems, you might be familiar wi
 * **On Windows:** Press the combination <kbd>`Win + R`</kbd> and type `cmd`.
 * **On Mac:** Press <kbd>`Command + Space`</kbd>, search for _Terminal_, then hit <kbd>`Enter`</kbd>.
 * **On Linux:** You are probably already familiar with it. On Ubuntu with GUI, for example, you can type <kbd>`Ctrl + F`</kbd>, search for _Terminal_, then hit <kbd>`Enter`</kbd>.
+
+## Token
+
+A chunk of text (word, part of a word, or symbol) that text models use for processing inputs and outputs. The cost of using a text model is calculated based on the number of tokens processed. Both the text documents you send and the conversation history (in the case of interacting with an [Assistant](../solutions/openai/assistants/)) are tokenized (split into tokens) and included in the cost calculation.
+
+You can limit the model’s output using the `max_completion_tokens` parameter (the fully equivalent deprecated `max_tokens` parameter is still supported for now).

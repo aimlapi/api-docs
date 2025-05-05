@@ -128,16 +128,20 @@ If you've already made your choice and know the model ID, use the [Search panel]
 [completion-or-chat-models.md](capabilities/completion-or-chat-models.md)
 {% endcontent-ref %}
 
+{% content-ref url="capabilities/streaming-mode.md" %}
+[streaming-mode.md](capabilities/streaming-mode.md)
+{% endcontent-ref %}
+
 {% content-ref url="capabilities/code-generation.md" %}
 [code-generation.md](capabilities/code-generation.md)
 {% endcontent-ref %}
 
-{% content-ref url="capabilities/function-calling.md" %}
-[function-calling.md](capabilities/function-calling.md)
-{% endcontent-ref %}
-
 {% content-ref url="capabilities/thinking-reasoning.md" %}
 [thinking-reasoning.md](capabilities/thinking-reasoning.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/function-calling.md" %}
+[function-calling.md](capabilities/function-calling.md)
 {% endcontent-ref %}
 
 {% content-ref url="capabilities/image-to-text-vision.md" %}
@@ -147,8 +151,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% content-ref url="capabilities/web-search.md" %}
 [web-search.md](capabilities/web-search.md)
 {% endcontent-ref %}
-
-
 {% endtab %}
 {% endtabs %}
 

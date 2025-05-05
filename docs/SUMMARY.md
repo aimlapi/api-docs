@@ -242,10 +242,10 @@
 ## Capabilities
 
 * [Completion and Chat Completion](capabilities/completion-or-chat-models.md)
-* [Code Generation](capabilities/code-generation.md)
-* [Function Calling](capabilities/function-calling.md)
 * [Streaming Mode](capabilities/streaming-mode.md)
+* [Code Generation](capabilities/code-generation.md)
 * [Thinking / Reasoning](capabilities/thinking-reasoning.md)
+* [Function Calling](capabilities/function-calling.md)
 * [Vision in Text Models (Image-To-Text)](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
 * [Features of Anthropic Models](capabilities/anthropic.md)
