@@ -1,7 +1,7 @@
 export default {
   prompt: {
     default: {
-      desc: `The prompt to generate audio from.`,
+      desc: `The prompt to generate audio.`,
     },
     minimax: {
       desc: `Lyrics with optional formatting. You can use a newline to separate each line of lyrics. You can use two newlines to add a pause between lines. You can use double hash marks (##) at the beginning and end of the lyrics to add accompaniment. Maximum 600 characters.`,

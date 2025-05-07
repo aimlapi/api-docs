@@ -3,16 +3,16 @@ export default {
     desc: `Input text to embed, encoded as a string or array of tokens.`,
   },
   encoding_format: {
-    desc: `The format to return the embeddings in.`,
+    desc: `The format in which to return the embeddings.`,
   },
   dimensions: {
     desc: `The number of dimensions the resulting output embeddings should have.`,
   },
   input_type: {
-    desc: ``,
+    desc: `The type of input data for the model.`,
   },
   auto_truncate: {
-    desc: ``,
+    desc: `If enabled, this parameter automatically truncates the input text to fit within the model’s maximum token limit. It helps ensure that longer texts are processed without errors.`,
   },
   task_type: {
     desc: `Optional task type for which the embeddings will be used`,
