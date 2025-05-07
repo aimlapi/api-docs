@@ -20,12 +20,12 @@ export default {
   imageContext: {
     desc: `Additional context that may accompany the image.`,
     latLongRect: {
-      desc: `Rectangle determined by min and max LatLng pairs.`,
+      desc: `Rectangle determined by min and max LatLng (latitude-longitude) pairs.`,
       minLatLng: {
-        desc: `Min lat/long pair.`,
+        desc: `Min latitude-longitude pair.`,
       },
       maxLatLng: {
-        desc: `Max lat/long pair.`,
+        desc: `Max latitude-longitude pair.`,
       },
       latitude: {
         desc: `The latitude in degrees. It must be in the range [-90.0, +90.0].`,
@@ -44,7 +44,7 @@ export default {
       },
     },
     faceRecognitionParams: {
-      desc: ``,
+      desc: `Parameters for face recognition`,
     },
     textDetectionParams: {
       desc: `Parameters for text detection and document text detection.`,

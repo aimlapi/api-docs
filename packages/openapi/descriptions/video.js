@@ -4,7 +4,7 @@ export default {
   },
   image_url: {
     default: {
-      desc: `A direct link to the image that will be used as the visual base or keyframe for the video.`,
+      desc: `A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video.`,
     },
     runway: {
       desc: `A HTTPS URL or data URI containing an encoded image to be used as the first frame of the generated video.`,
@@ -14,12 +14,12 @@ export default {
     },
     minimax: {
       desc: `The model will use the image passed in this parameter as the first frame to generate a video. 
-      Supported formats:
-      - URL of the image
-      - base64 encoding of the image
+      Supported formats: 
+      - URL of the image;
+      - base64 encoding of the image.
       Image specifications:
       - format must be JPG, JPEG, or PNG;
-      - aspect ratio should be greater than 2:5 and less than 5:2; the shorter side must exceed 300 pixels
+      - aspect ratio should be greater than 2:5 and less than 5:2; the shorter side must exceed 300 pixels;
       - file size must not exceed 20MB.`,
     },
     google: {
@@ -28,26 +28,26 @@ export default {
   },
   last_image_url: {
     default: {
-      desc: `URL of the image to be used for the end of the video.`,
+      desc: `URL of the image to be used as the last frame of the video.`,
     },
     runway: {
       desc: `A HTTPS URL or data URI containing an encoded image to be used as the last frame of the generated video.`,
     },
   },
   duration: {
-    desc: `The number of seconds of duration for the output video.`,
+    desc: `The length of the output video in seconds.`,
   },
   ratio: {
     desc: `The aspect ratio of the generated video.`,
   },
   seed: {
-    desc: `If unspecified, a random number is chosen. Varying the seed integer is a way to get different results for the same other request parameters. Using the same seed integer for an identical request will produce similar results.`,
+    desc: `Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen.`,
   },
   camera_control: {
     desc: `Camera control parameters.`,
   },
   advanced_camera_control: {
-    desc: `Advanced Camera control parameters.`,
+    desc: `Advanced camera control parameters.`,
     movement_type: {
       desc: `The type of camera movement.`,
     },
@@ -83,7 +83,7 @@ export default {
     desc: `The effect scene to use for the video generation.`,
   },
   prompt_optimizer: {
-    desc: `The model will automatically optimize the incoming prompt to improve the generation quality If necessary. For more precise control, this parameter can be set to False, and the model will follow the instructions more strictly. At this time It is recommended to provide finer prompts for best results.`,
+    desc: `If True, the incoming prompt will be automatically optimized to improve generation quality when needed. For more precise control, set it to False — the model will then follow the instructions more strictly.`,
   },
   inference_steps: {
     desc: `Number of inference steps for sampling. Higher values give better quality but take longer.`,
@@ -104,6 +104,6 @@ export default {
     desc: `Whether to enable prompt expansion.`,
   },
   expand_prompt: {
-    desc: `Whether to expand the prompt`,
+    desc: `If set to true, the prompt will be expanded with additional prompts.`,
   },
 };
