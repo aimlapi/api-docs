@@ -82,7 +82,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"google/gemini-2.5-pro-preview",
+        "model":"google/gemini-2.5-pro-preview-05-06",
         "messages":[
             {
                 "role":"user",
@@ -105,7 +105,7 @@ print(data)
 
 {% code overflow="wrap" %}
 ```json5
-{'id': '2025-04-10|02:56:19.936423-07|5.250.198.136|-147765573', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello there! How can I help you today?'}}], 'created': 1744278979, 'model': 'google/gemini-2.5-pro-preview-03-25', 'usage': {'prompt_tokens': 3, 'completion_tokens': 210, 'total_tokens': 213}}
+{'id': '2025-05-08|11:35:53.973599-07|9.7.166.192|-684698876', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello there! How can I help you today?'}}], 'created': 1746729353, 'model': 'google/gemini-2.5-pro-preview-05-06', 'usage': {'prompt_tokens': 3, 'completion_tokens': 3990, 'completion_tokens_details': {'reasoning_tokens': 180}, 'total_tokens': 3993}}
 ```
 {% endcode %}
 
