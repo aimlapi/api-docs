@@ -35,7 +35,7 @@ Our base URL also supports versioning, so you can use the following as well:
 * `https://api.aimlapi.com`
 * `https://api.aimlapi.com/v1`
 
-Usually, you pass the base URL as the same field inside the SDK constructor. In some cases, you can set the environment variable `BASE_URL`, and it will work. If you want to use the OpenAI SDK, then follow the [setting up article ](../quickstart/setting-up.md)and take a closer look at how to use it with the AI/ML API.
+Usually, you pass the base URL as the same field inside the SDK constructor. In some cases, you can set the environment variable `BASE_URL`, and it will work. If you want to use the OpenAI SDK, then follow the [setting up article](../quickstart/setting-up.md) and take a closer look at how to use it with the AI/ML API.
 
 ## Base64
 
@@ -252,7 +252,7 @@ But there can be other variations. For example, the **messages** structure used 
 
 There are also special parameters that allow you to refine prompts, control how strongly the model should follow them, or adjust the strictness of their interpretation.
 
-* `prompt_optimizer`: The model will automatically optimize the incoming prompt to improve the video generation quality if necessary. For more precise control, this parameter can be set to `False`, and the model will follow the instructions more strictly. At this time, it is recommended to provide finer prompts for best results.&#x20;
+* `prompt_optimizer` or `enhance_prompt`: The model will automatically optimize the incoming prompt to improve the video generation quality if necessary. For more precise control, this parameter can be set to `False`, and the model will follow the instructions more strictly.&#x20;
 * `negative_prompt`: The description of elements to avoid in the generated video/image/etc.
 * `cfg_scale` or `guidance_scale`: The Classifier Free Guidance (CFG) scale is a measure of how close you want the model to stick to your prompt.
 * `strength`: Determines how much the prompt influences the generated image.

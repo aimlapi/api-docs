@@ -106,7 +106,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 <mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
 **Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
 <mark style="background-color:green;">**Flux**</mark>:  [Image](api-references/image-models/flux/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)  [Image](api-references/image-models/Google/)  [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)\
+**Google**:  [Text/Chat](api-references/text-models-llm/Google/)   [Image](api-references/image-models/google/)   [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)\
 **Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
 <mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
 **Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\

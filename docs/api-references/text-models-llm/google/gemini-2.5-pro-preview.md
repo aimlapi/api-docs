@@ -4,6 +4,12 @@
 This documentation is valid for the following list of our models:
 
 * `google/gemini-2.5-pro-preview`
+* `google/gemini-2.5-pro-preview-05-06`
+{% endhint %}
+
+{% hint style="success" %}
+We provide the latest version of this model from **May 06, 2025**.\
+Both IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 
 ## Model Overview
