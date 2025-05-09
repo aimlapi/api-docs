@@ -8,14 +8,7 @@ This documentation is valid for the following list of our models:
 
 <table data-header-hidden data-full-width="false"><thead><tr><th width="163.33331298828125" valign="top"></th><th width="173.23333740234375" valign="top"></th><th width="145.65008544921875" valign="top"></th><th width="177.60009765625" valign="top"></th><th width="107.88330078125" valign="top"></th></tr></thead><tbody><tr><td valign="top">Context: <kbd>128,000</kbd></td><td valign="top">Parameters: <kbd>70B</kbd></td><td valign="top">Cutoff date: <kbd>2025-03-17</kbd></td><td valign="top">Input:  <kbd>Text</kbd>, <kbd>Image</kbd>, <kbd>Document</kbd></td><td valign="top">Output:  <kbd>Text</kbd></td></tr><tr><td valign="top">Function calling   <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td valign="top">Code Generation   <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td valign="top">Web Search   <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td valign="top">Vision   <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td valign="top">Stream   <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr></tbody></table>
 
-<div align="right" data-full-width="false">
-  <figure>
-    <a href="https://aimlapi.com/app/" target="_blank">
-      <img src="../../../.gitbook/assets/изображение (2).png" alt="">
-    </a>
-    <figcaption></figcaption>
-  </figure>
-</div>
+<div align="right" data-full-width="false"><figure><img src="../../../.gitbook/assets/изображение (2).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Model Overview
 
