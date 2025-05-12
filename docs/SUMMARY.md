@@ -238,6 +238,7 @@
 * [Create a 3D Model from an Image](use-cases/create-a-3d-model-from-an-image.md)
 * [Create a Looped GIF for a Web Banner](use-cases/create-a-looped-gif-for-a-web-banner.md)
 * [Read Text Aloud and Describe Images: Support People with Visual Impairments](use-cases/read-text-aloud-and-describe-images-ai-tool-to-support-people-with-visual-impairments.md)
+* [Find Relevant Answers: Semantic Search with Text Embeddings](use-cases/find-relevant-answers-semantic-search-with-text-embeddings.md)
 * [Summarize Websites with AI-Powered Chrome Extension](use-cases/summarize-websites-with-ai-powered-chrome-extension.md)
 
 ## Capabilities

@@ -6,11 +6,11 @@ icon: user-group
 
 ## Idea and Step-by-Step Plan
 
-Today, we’re going to create an AI [Assistant](../solutions/openai/assistants/) that helps users engage with the content of a particular document. This assistant can answer questions about the text, explain specific sections, find relevant parts, and even participate in discussions — for example, by offering arguments, clarifying ambiguous points, or helping formulate conclusions. It's especially useful when working with technical documentation, legal texts, research papers, or project documents.
+Today, we’re going to create an AI [Assistant](../solutions/openai/assistants/) that helps users engage with the content of a particular document. This Assistant can answer questions about the text, explain specific sections, find relevant parts, and even participate in discussions — for example, by offering arguments, clarifying ambiguous points, or helping formulate conclusions. It's especially useful when working with technical documentation, legal texts, research papers, or project documents.
 
 The following features need to be implemented:
 
-* Core assistant functionality (ability to communicate with the user and respond accurately to questions using [Chat Completion](../capabilities/completion-or-chat-models.md) capability).
+* Core Assistant functionality (ability to communicate with the user and respond accurately to questions using [Chat Completion](../capabilities/completion-or-chat-models.md) capability).
 * Document upload (TXT).
 * Streaming mode.
 
