@@ -161,7 +161,9 @@ Most similar items:
 
 </details>
 
-Apparently, it was trained a bit less thoroughly and doesn't recognize who cynologists are :person\_shrugging: \
+Maybe it just wasn’t trained quite as thoroughly and doesn’t recognize who cynologists are :person\_shrugging: \
+Or maybe the difference is simply that the default embedding size is 1536 for `text-embedding-3-small` or 3072 for `text-embedding-3-large`.&#x20;
+
 We didn't notice much difference in speed, but the larger version is somewhat more expensive.
 
 ## Room for Improvement <a href="#room-for-improvement" id="room-for-improvement"></a>

@@ -39,6 +39,7 @@
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
+    * [DeepSeek Prover V2](api-references/text-models-llm/deepseek/deepseek-prover-v2.md)
   * [Google](api-references/text-models-llm/Google/README.md)
     * [gemini-1.5-flash](api-references/text-models-llm/Google/gemini-1.5-flash.md)
     * [gemini-1.5-pro](api-references/text-models-llm/Google/gemini-1.5-pro.md)
