@@ -93,6 +93,5 @@ Supported models:
 * [cohere/command-r-plus](../api-references/text-models-llm/Cohere/command-r-plus.md)
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
 * [nvidia/llama-3.1-nemotron-70b-instruct](../api-references/text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md)
-* [ai21/jamba-1-5-mini](../api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)
 * [neversleep/llama-3.1-lumimaid-70b](../api-references/text-models-llm/NeverSleep/llama-3.1-lumimaid.md)
 * [x-ai/grok-beta](../api-references/text-models-llm/xAI/grok-beta.md)

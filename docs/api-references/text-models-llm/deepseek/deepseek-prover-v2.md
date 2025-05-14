@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A massive 671B-parameter model, presumed to focus on logic and mathematics. It appears to be an upgrade over DeepSeek-Prover-V1.5.
+A massive 671B-parameter model, presumed to focus on logic and mathematics. It appears to be an upgrade over DeepSeek Prover V1.5.
 
 ## How to Make a Call
 
@@ -52,7 +52,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="deepseek-prover-v2-wrong-place" path="/v1/chat/completions" method="post" %}
+{% openapi-operation spec="deepseek-prover-v2" path="/v1/chat/completions" method="post" %}
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 

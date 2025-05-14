@@ -97,7 +97,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**AI21 Labs**:  [Text/Chat](api-references/text-models-llm/AI21-Labs/)\
 **Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)\
 **Anthracite**:  [Text/Chat](api-references/text-models-llm/Anthracite/)\
 <mark style="background-color:green;">**Anthropic**</mark>:  [Text/Chat](api-references/text-models-llm/Anthropic/)  [Embedding](api-references/embedding-models/Anthropic/) \

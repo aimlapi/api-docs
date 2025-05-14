@@ -110,7 +110,7 @@ CreateEmbeddingResponse(data=[Embedding(embedding=[0.025269029662013054, -0.0414
 
 </details>
 
-You can find a more advanced example of using embedding vectors in our [article](../../use-cases/find-relevant-answers-semantic-search-with-text-embeddings.md) in the Use Cases section.
+You can find a more advanced example of using embedding vectors in our article [Find Relevant Answers: Semantic Search with Text Embeddings](../../use-cases/find-relevant-answers-semantic-search-with-text-embeddings.md) in the Use Cases section.
 
 ## All Available Embedding Models
 

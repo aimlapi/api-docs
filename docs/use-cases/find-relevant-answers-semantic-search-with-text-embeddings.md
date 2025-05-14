@@ -166,6 +166,10 @@ Or maybe the difference is simply that the default embedding size is 1536 for `t
 
 We didn't notice much difference in speed, but the larger version is somewhat more expensive.
 
+{% hint style="info" %}
+If you're planning to perform semantic search over code snippets, a better choice might be the [voyage-code-2](../api-references/embedding-models/Anthropic/voyage-code-2.md) model, which is specifically trained to better distinguish between pieces of code.
+{% endhint %}
+
 ## Room for Improvement <a href="#room-for-improvement" id="room-for-improvement"></a>
 
 Naturally, this is a simplified example. You can develop a more comprehensive implementation by introducing features such as:

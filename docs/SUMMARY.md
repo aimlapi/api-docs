@@ -13,8 +13,6 @@
 
 * [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
-  * [AI21 Labs](api-references/text-models-llm/AI21-Labs/README.md)
-    * [jamba-1-5-mini](api-references/text-models-llm/AI21-Labs/jamba-1-5-mini.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
     * [qwen-max](api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
     * [qwen-plus](api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
@@ -44,7 +42,6 @@
     * [gemini-1.5-flash](api-references/text-models-llm/Google/gemini-1.5-flash.md)
     * [gemini-1.5-pro](api-references/text-models-llm/Google/gemini-1.5-pro.md)
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
-    * [gemini-2.0-flash-thinking-exp-01-21](api-references/text-models-llm/google/gemini-2.0-flash-thinking-exp-01-21.md)
     * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)
     * [gemini-2.5-flash-preview](api-references/text-models-llm/google/gemini-2.5-flash-preview.md)
     * [gemini-2.5-pro-exp](api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
