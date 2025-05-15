@@ -8,9 +8,13 @@ hidden: true
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="175.449951171875"></th><th width="161.7000732421875"></th><th width="162.4500732421875"></th><th></th></tr></thead><tbody><tr><td>Context: <kbd>128,000</kbd></td><td>Parameters: <kbd>70B</kbd></td><td>Cutoff date: <kbd>2025-03-17</kbd></td><td></td></tr><tr><td>Function calling <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Vision <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Web Search  <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Code Generation  <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr></tbody></table>
 
-##
 
-##
+
+
+
+{% @aimlapi-chat/aimlapi-chat %}
+
+
 
 ## Embedding Model Comparison
 
