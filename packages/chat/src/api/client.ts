@@ -1,8 +1,9 @@
 import axios from "axios";
 
 export const axiosClient = axios.create({
-  baseURL: import.meta.env.VITE_DOCS_API,
+  baseURL: import.meta.env.VITE_DOCS_API
 });
+
 export const fetchClient = {
   request: (url: string, config: RequestInit) =>
     fetch(new URL(url, import.meta.env.VITE_DOCS_API), config),
@@ -10,6 +11,6 @@ export const fetchClient = {
     fetch(new URL(url, import.meta.env.VITE_DOCS_API), {
       ...payload,
       method: "POST",
-      body: JSON.stringify(data),
-    }),
+      body: JSON.stringify(data)
+    })
 };

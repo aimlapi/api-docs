@@ -47,6 +47,9 @@ importers:
       react-syntax-highlighter:
         specifier: ^15.6.1
         version: 15.6.1(react@18.3.1)
+      react-toastify:
+        specifier: ^11.0.5
+        version: 11.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       remark-gfm:
         specifier: ^4.0.1
         version: 4.0.1
@@ -1661,6 +1664,12 @@ packages:
     resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
     peerDependencies:
       react: '>= 0.14.0'
+
+  react-toastify@11.0.5:
+    resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==}
+    peerDependencies:
+      react: ^18 || ^19
+      react-dom: ^18 || ^19
 
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
@@ -3665,6 +3674,12 @@ snapshots:
       prismjs: 1.30.0
       react: 18.3.1
       refractor: 3.6.0
+
+  react-toastify@11.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react@18.3.1:
     dependencies:
