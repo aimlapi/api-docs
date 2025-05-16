@@ -1,6 +1,6 @@
 export type ChatMessage = {
   id: string;
-  prompt?: string;
+  prompt: string;
   answer?: string;
   isLoading?: boolean;
   source?: Source[];
