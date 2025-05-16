@@ -1,7 +1,9 @@
 export type ChatMessage = {
   id: string;
-  prompt: string;
+  prompt?: string;
   answer?: string;
+  isLoading?: boolean;
+  source?: Source[];
 };
 
 export type ChatEvent = {
@@ -14,5 +16,19 @@ export type ChatAnswerEvent = {
   data: {
     type: "answer";
     answer: string;
+  };
+};
+
+export type Source = {
+  title: string;
+  text: string;
+  source: string;
+};
+
+export type ChatSourceEvent = {
+  event: "data";
+  data: {
+    type: "source";
+    source: Source[];
   };
 };
