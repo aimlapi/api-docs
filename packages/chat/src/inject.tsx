@@ -1,8 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./components/app";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import App from "./components/app";
+import { toastService } from "./services";
+import { ChatProvider } from "./contexts";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +18,10 @@ export const inject = () => {
   createRoot(root).render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <ChatProvider>
+          <App />
+        </ChatProvider>
+        {toastService.getToastContainer()}
       </QueryClientProvider>
     </StrictMode>
   );

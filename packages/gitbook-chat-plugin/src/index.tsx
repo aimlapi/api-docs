@@ -6,7 +6,9 @@ import {
 } from "@gitbook/runtime";
 
 type IntegrationContext = {} & RuntimeContext;
-type IntegrationBlockProps = {};
+type IntegrationBlockProps = {
+  defaultQuestion?: string
+};
 type IntegrationBlockState = {};
 type IntegrationAction = { action: "click" };
 
@@ -35,12 +37,16 @@ const exampleBlock = createComponent<
         return {};
     }
   },
-  render: async (element, context) => {
+  render: async ({ props }, context) => {
+    const { defaultQuestion = "" } = props;
+
+    const encodedDefaultQuestion = encodeURIComponent(defaultQuestion);
+
     return (
       <block size="fullscreen">
         <webframe
           source={{
-            url: "https://cdn.aimlapi.com/assets/chat/app.html",
+            url: `https://cdn.aimlapi.com/assets/chat/app.html?defaultQuestion=${encodedDefaultQuestion}`,
           }}
           aspectRatio={1}
         />

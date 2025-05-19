@@ -1,35 +1,71 @@
-import { FC, useCallback } from "react";
+import { TextareaHTMLAttributes, FC, KeyboardEvent, useState, ChangeEvent } from "react";
+import { useAdjustFieldHeight, useChat } from "../../hooks";
+import { SendButton } from "./send-button";
+import { ArrowDown } from "../common";
 
-export const ChatInput: FC<{
-  value: string;
-  onChange: React.ChangeEventHandler;
-  onSubmit: React.FormEventHandler;
-}> = (props) => {
-  const handleSubmit = useCallback(
-    (ev: React.FormEvent) => {
-      ev.preventDefault();
-      props.onSubmit(ev);
-    },
-    [props]
-  );
+type ChatInputProps = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onKeyDown" | "value">;
 
-  return (  
-    <form
-      className="flex gap-2 border-t p-2 mt-auto border-gray-100"
-      onSubmit={handleSubmit}
+export const ChatInput: FC<ChatInputProps> = (props) => {
+  const { rows = 0, className = "", autoFocus = true, ...restProps } = props;
+
+  const { isBottomScroll, handleScrollToLastMessage, setInput, input, handleSendMessage } =
+    useChat();
+
+  const [isFocused, setIsFocused] = useState(true);
+
+  const { fieldRef } = useAdjustFieldHeight<HTMLTextAreaElement>({ value: input });
+
+  const isActiveColor = isFocused && input.trim();
+
+  const onKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.code === "Enter" && !event.shiftKey && input.trim()) {
+      event.preventDefault();
+      handleSendMessage();
+    }
+  };
+
+  const handleChangeFocus = (isFocused: boolean) => () => {
+    setIsFocused(isFocused);
+  };
+
+  const handleClickArrowDown = () => {
+    handleScrollToLastMessage();
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(event.target.value);
+  };
+
+  return (
+    <section
+      className={`relative flex flex-col items-end justify-center border ${
+        isActiveColor ? "border-blue-400" : "border-gray-400"
+      } p-3 w-full rounded-2xl outline-transparent outline-2 transition-colors resize-none shadow-md`}
     >
-      <input
-        className="border border-gray-100 p-2 w-full rounded-sm outline-transparent outline-2 focus:outline-2 focus:outline-blue-200 transition-colors"
-        onChange={props.onChange}
-        value={props.value}
-        placeholder="Your message"
+      {!isBottomScroll && (
+        <div
+          onClick={handleClickArrowDown}
+          className="absolute top-[-15px] right-[50%] w-8 h-8 z-10 rounded-full bg-blue-400 flex justify-center items-center shadow-md cursor-pointer"
+        >
+          <ArrowDown />
+        </div>
+      )}
+
+      <textarea
+        onKeyDown={onKeyDown}
+        ref={fieldRef}
+        autoFocus={autoFocus}
+        className={`w-full outline-transparent outline-2 transition-colors resize-none ${className}`}
+        onChange={handleChange}
+        onBlur={handleChangeFocus(false)}
+        onFocus={handleChangeFocus(true)}
+        value={input}
+        rows={rows}
+        {...restProps}
       />
-      <button
-        className="p-2 cursor-pointer text-blue-500 font-medium"
-        type="submit"
-      >
-        Send
-      </button>
-    </form>
+      <div>
+        <SendButton onClick={handleSendMessage} disabled={!input.trim()} />
+      </div>
+    </section>
   );
 };
