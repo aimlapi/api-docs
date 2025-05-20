@@ -240,8 +240,11 @@
 ## Integrations
 
 * [About](integrations/about.md)
+* [Agno](integrations/agno.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
+* [gptr](integrations/gptr.md)
+* [n8n](integrations/n8n.md)
 
 ***
 
