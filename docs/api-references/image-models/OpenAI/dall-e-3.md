@@ -1,4 +1,4 @@
-# dall-e-3
+# DALL·E 3
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-This model represents a significant leap forward in AI-driven image creation, capable of generating 1024x1024 resolution images from text inputs. This model processes prompts with enhanced neural network architectures, resulting in images that are not only relevant but also rich in detail and diversity. DALL·E 3's deep learning techniques analyze and understand complex descriptions, allowing for the generation of visuals across a wide range of styles and subjects.
+This model represents a significant leap forward in AI-driven image creation, capable of generating images from text inputs. This model processes prompts with enhanced neural network architectures, resulting in images that are not only relevant but also rich in detail and diversity. DALL·E 3's deep learning techniques analyze and understand complex descriptions, allowing for the generation of visuals across a wide range of styles and subjects.
 
 You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/flux-1-vs-dall-e-3) on our main website.
 

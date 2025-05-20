@@ -276,5 +276,13 @@
 ## Integrations
 
 * [🧩 Our Integration List](integrations/our-integration-list.md)
+* [Agno](integrations/agno.md)
+* [Cline](integrations/cline.md)
+* [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
+* [793](integrations/793.md)
+
+***
+
+* [n8n](n8n.md)
