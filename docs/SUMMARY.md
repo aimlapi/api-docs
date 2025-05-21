@@ -281,6 +281,7 @@
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
+* [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
 
 ***

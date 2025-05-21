@@ -1,34 +1,32 @@
-# Cline
+# Roo Code
 
 ## About
 
-Cline is an open-source AI coding assistant with two working modes (Plan/Act), terminal command execution, and support for the Model Context Protocol (MCP) in VS Code.
+Roo Code is an autonomous AI programming agent that works right inside your editor, such as VS Code. It helps you code faster and smarter — whether you're starting a new project, maintaining existing code, or exploring new technologies.
 
-You can find the Cline repository and community on [GitHub](https://github.com/cline).
+You can find the Roo Code repository and community on [GitHub](https://github.com/RooCodeInc/Roo-Code).
 
-## Installing Cline in VS Code
+## Installing Roo Code in VS Code
 
 1. Open the **Extensions** tab in the VS Code sidebar.
 
-<figure><img src="../.gitbook/assets/file-MSoV7yWuiF.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/file-7ux9r8WqH5.png" alt=""><figcaption></figcaption></figure>
 
-2. In the search bar, type **Cline**.
+2. In the search bar, type **Roo Code**.
 3. Find the extension and click **Install**.
 
-<figure><img src="../.gitbook/assets/file-EtVsh1r3HJ.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/file-ipBmctLrIi.png" alt=""><figcaption></figcaption></figure>
 
-4. After installation, a separate **Cline** tab will appear in the sidebar.
+4. After installation, a separate **Roo Code** tab will appear in the sidebar.
 
-<figure><img src="../.gitbook/assets/file-2M7nFjSF7c (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/file-Fb31cQY2mD.png" alt=""><figcaption></figcaption></figure>
 
-## **Configuring Cline**
+## **Configuring Roo Code**
 
-1. Go to the **Cline** tab in the sidebar.
+1. Go to the **Roo Code** tab in the sidebar.
 2. Click the gear icon in the top-right corner.
 
-<figure><img src="../.gitbook/assets/file-jxjkvunu8d.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../.gitbook/assets/file-jwWpVlPG2a.png" alt=""><figcaption></figcaption></figure>
 
 In the settings:
 
@@ -36,33 +34,21 @@ In the settings:
 * In **Base URL**, enter one of our available endpoints.
 * In **API Key**, enter your [AI/ML API key](https://aimlapi.com/app/keys).
 * In **Model ID**, specify the model name. You can find some model selection tips in our [description of code generation as a capability](../capabilities/code-generation.md).
-* Click **Save**.
+* Click **Save** and **Done**.
 
-All done — start coding with Cline!
+<figure><img src="../.gitbook/assets/file-q6YYeuMLOM.png" alt=""><figcaption></figcaption></figure>
 
-## Usage Example
+All done — start coding with Roo Code!&#x20;
 
-Here’s the request we made:&#x20;
+{% hint style="info" %}
+Roo Code offers a wide range of configurable parameters, and most of them come with a description of their purpose right below.
 
-```
-Create a Python file named test and add code to print Hello, world
-```
-
-<figure><img src="../.gitbook/assets/file-hUIEu0dwuF.png" alt=""><figcaption></figcaption></figure>
-
-If you expand the **API Request** section, you can view the data — including your prompt.
-
-Since I asked to create a file in the request, the file was generated. You can see a preview and its contents, but it hasn’t been saved yet.
-
-To save the file, Cline asks for confirmation.
-
-<figure><img src="../.gitbook/assets/file-vI3i1xgY23.png" alt=""><figcaption></figcaption></figure>
-
-Once the file is saved, a second API request appears with metadata, along with a notification that the task was successfully completed.
+<img src="../.gitbook/assets/file-S21YTWgWMA.png" alt="" data-size="original">
+{% endhint %}
 
 ## **Supported Models**
 
-These models have been tested by our team for compatibility with Cline integration.
+These models have been tested by our team for compatibility with Roo Code integration.
 
 <details>
 
@@ -99,13 +85,14 @@ These models have been tested by our team for compatibility with Cline integrati
 
 * [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md)
 * [meta-llama/Llama-Vision-Free](../api-references/text-models-llm/Meta/Llama-Vision-Free.md)
-* [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
-* [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md)
-* [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
-* [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
-* [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
-* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
+
+- [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
+- [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
+- [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md)
+- [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
+- [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
+- [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
+- [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 
 
 
@@ -128,7 +115,8 @@ These models have been tested by our team for compatibility with Cline integrati
 * [mistralai/Mistral-7B-Instruct-v0.3](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
-* [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
+
+- [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
 
 
 
@@ -138,7 +126,8 @@ These models have been tested by our team for compatibility with Cline integrati
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-pro-exp-03-25](../api-references/text-models-llm/google/gemini-2.5-pro-exp.md)
-* [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
+
+- [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
 
 
 
@@ -168,4 +157,4 @@ Possible Issues:
 * **403 status code (no body)** — This is the most common error. Possible causes:
   * You might need to use a different endpoint. Be sure to refer to the documentation for the specific model you've selected from our catalog!
   * The user may have run out of tokens or doesn’t have enough. Check your balance in your account dashboard.
-* **400 status code (no body)** — This error occurs when using models that are not compatible with the integration. See the previous section [Supported Models](cline.md#supported-models) :point\_up:
+* **400 status code (no body)** — This error occurs when using models that are not compatible with the integration. See the previous section [Supported Models](roo-code.md#supported-models) :point\_up:

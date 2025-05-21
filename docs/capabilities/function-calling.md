@@ -113,7 +113,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
-*
 * [Qwen/Qwen3-235B-A22B-fp8-tput](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b.md)
 * [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
 * [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
