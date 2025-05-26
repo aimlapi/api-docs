@@ -1,4 +1,4 @@
-# Imagen 3.0
+# Imagen 3
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
@@ -40,10 +40,7 @@ def main():
         json={
             "prompt": "Racoon eating ice-cream",
             "model": "imagen-3.0-generate-002",
-            'image_size': {
-                "width": 1024,
-                "height": 320
-            }
+            "convert_base64_to_url": True,
         }
     )
 
@@ -75,4 +72,4 @@ Generation: {'data': [{'mime_type': 'image/png', 'url': 'https://cdn.aimlapi.com
 
 Default aspect ration is 1:1, so we obtained the following 1024x1024 image by running this code example:
 
-<figure><img src="https://cdn.aimlapi.com/generations/guepard/1746720987715-f2285114-7255-49fd-bef4-269b37225465.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1746720987715-f2285114-7255-49fd-bef4-269b37225465.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism. <br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>
