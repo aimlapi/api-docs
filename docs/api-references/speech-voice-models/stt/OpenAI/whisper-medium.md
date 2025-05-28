@@ -38,9 +38,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 #### Creating and sending a speech-to-text conversion task to the server
 
-{% openapi src="whisper-medium.json" path="/v1/stt/create" method="post" %}
-[whisper-medium.json](whisper-medium.json)
-{% endopenapi %}
+{% openapi-operation spec="whisper-medium-2025-05-28" path="/v1/stt/create" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id
 
