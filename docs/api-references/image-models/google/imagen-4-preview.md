@@ -24,6 +24,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 Let's generate an image of the specified aspect ratio using a simple prompt.
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -52,9 +54,46 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JS" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        prompt: 'Racoon eating ice-cream',
+        model: 'google/imagen4/preview',
+        aspect_ratio: '16:9'
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Generation:', data);
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -62,7 +101,7 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/penguin/vu5A5CUdy64ZpPzlURKvu_output.png', 'content_type': 'image/png', 'file_name': 'output.png', 'file_size': 1071496}], 'seed': 1848588799}
+Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/penguin/4ZNAvdmVu4PNSrRxSAb3X_output.png', 'content_type': 'image/png', 'file_name': 'output.png', 'file_size': 1697349}], 'seed': 595549216}
 ```
 {% endcode %}
 
@@ -70,4 +109,4 @@ Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/penguin/vu5
 
 So we obtained the following 1408x768 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/mhx11IzQz4Kq-cmZ_vefp_output.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism. <br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/4ZNAvdmVu4PNSrRxSAb3X_output.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism. <br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>

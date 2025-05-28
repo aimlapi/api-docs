@@ -24,6 +24,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 Let's generate an image of the specified size using a simple prompt.
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -52,9 +54,48 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
+
+
+{% endtab %}
+
+{% tab title="JS" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        prompt: 'Racoon eating ice-cream',
+        model: 'imagen-3.0-generate-002',
+        convert_base64_to_url: true
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Generation:', data);
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 Note that prompt enhancement is _enabled_ by default. The model will also return the enhanced prompt in the response. If you prefer not to use this feature, set the parameter `enhance_prompt` to `False`.
 
@@ -70,6 +111,6 @@ Generation: {'data': [{'mime_type': 'image/png', 'url': 'https://cdn.aimlapi.com
 
 </details>
 
-Default aspect ration is 1:1, so we obtained the following 1024x1024 image by running this code example:
+Default aspect ratio is 1:1, so we obtained the following 1024x1024 image by running this code example:
 
 <figure><img src="../../../.gitbook/assets/1746720987715-f2285114-7255-49fd-bef4-269b37225465.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism. <br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>

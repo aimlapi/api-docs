@@ -16,11 +16,97 @@ A state-of-the-art image generation model that utilizes a 12 billion parameter r
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
-
-### API Schema
+## API Schema
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json" path="/v1/images/generations" method="post" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-dev.json)
 {% endopenapi %}
 
+## Quick Example
+
+Let's generate an image using a simple prompt.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+
+
+def main():
+    response = requests.post(
+        "https://api.aimlapi.com/v1/images/generations",
+        headers={
+            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+            "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+            "Content-Type": "application/json",
+        },
+        json={
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
+            "model": "flux/dev",
+        }
+    )
+
+    response.raise_for_status()
+    data = response.json()
+
+    print("Generation:", data)
+
+
+if __name__ == "__main__":
+    main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JS" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+        model: 'flux/dev'
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Generation:', data);
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/monkey/GHx5aT0PR9GXtGi3Cx7CE.png', 'width': 1024, 'height': 768, 'content_type': 'image/png'}], 'timings': {'inference': 2.1296588028781116}, 'seed': 1007384285, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+```
+{% endcode %}
+
+</details>
+
+We obtained the following 1024x768 image by running this code example:
+
+<figure><img src="../../../.gitbook/assets/GHx5aT0PR9GXtGi3Cx7CE.png" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>

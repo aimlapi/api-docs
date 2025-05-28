@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-An advanced language model designed to enhance conversational AI, coding assistance, and complex reasoning tasks. It aims to compete with leading models like OpenAI's GPT-4 and Anthropic's Claude 3.5.
+An advanced language model designed to enhance conversational AI, coding assistance, and complex reasoning tasks. It aims to compete with leading models like OpenAI's GPT-4 and Anthropic's [Claude 3.5](../Anthropic/claude-3.5-sonnet.md).
 
 ## How to Make a Call
 

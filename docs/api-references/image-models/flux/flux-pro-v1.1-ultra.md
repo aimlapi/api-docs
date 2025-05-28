@@ -10,15 +10,13 @@ This documentation is valid for the following list of our models:
 
 An advanced AI image generator designed to create high-resolution images rapidly and efficiently. It is optimized for various applications, including content creation, e-commerce, and advertising, providing users with the ability to generate visually appealing images at unprecedented speeds.
 
-<table><thead><tr><th width="250" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux-pro/v1.1-ultra</code></td><td>Format: <strong>JPEG/PNG</strong><br>Fixed size: <strong>2752</strong>x<strong>1536</strong></td></tr></tbody></table>
+<table><thead><tr><th width="250" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux-pro/v1.1-ultra</code></td><td>Format: <strong>JPEG, PNG</strong><br>Fixed size: <strong>2752</strong>x<strong>1536</strong></td></tr></tbody></table>
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
-
-### API Schema
+## API Schema
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-pro-v1.1-ultra.json" path="/v1/images/generations" method="post" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-pro-v1.1-ultra.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-pro-v1.1-ultra.json)
@@ -28,6 +26,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 Let's generate an image using a simple prompt.
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -55,9 +55,45 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JS" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+        model: 'flux-pro/v1.1-ultra'
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Generation:', data);
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -73,4 +109,4 @@ Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/panda/Xw
 
 We obtained the following 2752x1536 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/Xw0w4dVpJk88_d8CBZQas_c2d37af49746421fa848a95df405288a (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Xw0w4dVpJk88_d8CBZQas_c2d37af49746421fa848a95df405288a (1).jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>

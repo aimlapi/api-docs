@@ -43,30 +43,31 @@ Then, configure the metaparameters for your generation:
 
 Here is an example of generation an image of a robot classroom using the `flux-pro` image model:
 
-<pre class="language-python" data-overflow="wrap"><code class="lang-python"><strong>%pip install openai
-</strong>import os
-from openai import OpenAI
+{% code overflow="wrap" %}
+```python
 import requests
 url = "https://api.aimlapi.com/v1/images/generations/"
 
-model="flux-pro"
-prompt="""
+payload = {
+  "model": "flux/schnell",
+  "prompt": """
 Create a classroom of young robots. 
 The chalkboard in the classroom has 'AI Is Your Friend' written on it.
 """
-payload = {
-  "prompt": prompt,
-  "model": model,
 }
 
 headers = {
-  #put your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
-  "Authorization": "Bearer &#x3C;YOUR_AIMLAPI_KEY>", 
+  #put your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>", 
   "content-type": "application/json"
 }
 
 response = requests.post(url, json=payload, headers=headers)
-</code></pre>
+response.raise_for_status()
+
+print("Generation:", response.json())
+```
+{% endcode %}
 
 We obtained the following image by running that code example:
 
