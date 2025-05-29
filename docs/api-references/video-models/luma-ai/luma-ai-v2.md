@@ -25,9 +25,9 @@ Below, you can find three corresponding API schemas and examples for all endpoin
 
 `loop` parameter controls if the generated video will be looped.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generation" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-t2v-v2" path="/v2/generate/video/luma-ai/generation" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ### Fetch generation
 

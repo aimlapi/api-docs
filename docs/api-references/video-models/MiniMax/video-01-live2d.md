@@ -14,13 +14,24 @@ An innovative AI model designed for generating high-quality videos from text pro
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
+## How to Make a Call
 
-### API Schema
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+
+Below, you can find two corresponding API schemas and an example that combines both endpoint calls.
+
+## API Schemas
+
+### Create a video generation task and send it to the server
 
 {% openapi src="video-01-live2d.json" path="/v2/generate/video/minimax/generation" method="post" %}
 [video-01-live2d.json](video-01-live2d.json)
 {% endopenapi %}
+
+### Retrieve the generated video from the server
 
 {% openapi src="video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
 [video-01-live2d-pair.json](video-01-live2d-pair.json)
