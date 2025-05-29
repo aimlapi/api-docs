@@ -155,6 +155,7 @@
     * [gen3a\_turbo](api-references/video-models/runway/gen3a_turbo.md)
     * [gen4\_turbo](api-references/video-models/runway/gen4_turbo.md)
 * [Music Models](api-references/music-models/README.md)
+  * [Google](api-references/music-models/google.md)
   * [MiniMax](api-references/music-models/MiniMax/README.md)
     * [minimax-music \[legacy\]](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
     * [music-01](api-references/music-models/MiniMax/music-01.md)
