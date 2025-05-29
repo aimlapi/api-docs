@@ -24,6 +24,8 @@ Supported models:
 * [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
 * [anthropic/claude-3.7-sonnet](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-3-7-sonnet-latest](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
+* [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
+* [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 
 ### OpenAI and other vendors
 

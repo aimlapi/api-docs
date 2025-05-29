@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Anthropic's latest hybrid reasoning model, designed to tackle complex tasks requiring both rapid inference and detailed problem-solving. It introduces a dual-mode operation, combining standard language generation with extended thinking capabilities.
+Anthropic's hybrid reasoning model, designed to tackle complex tasks requiring both rapid inference and detailed problem-solving. It introduces a dual-mode operation, combining standard language generation with extended thinking capabilities.
 
 ## How to Make a Call
 
