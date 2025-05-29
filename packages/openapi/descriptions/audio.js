@@ -53,4 +53,10 @@ export default {
       desc: `Audio file path, supports WAV and MP3 formats. The audio duration must be longer than 10s and no more than 10 minutes.`,
     },
   },
+  negative_prompt: {
+    desc: `A description of what to exclude from the generated audio`,
+  },
+  seed: {
+    desc: `A seed for deterministic generation. If provided, the model will attempt to produce the same audio given the same prompt and other parameters.`,
+  },
 };
