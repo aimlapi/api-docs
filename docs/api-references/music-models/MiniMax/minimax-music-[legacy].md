@@ -14,7 +14,7 @@ An advanced AI model that generates diverse high-quality audio compositions by a
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schema
+## API Schemas
 
 {% hint style="warning" %}
 Keep in mind that the maximum length of generated audio is 1 minute. If you provide a `prompt` that’s too long (which the model tries to use as song lyrics), it might exceed the time limit and result in a `"Downstream service error."`

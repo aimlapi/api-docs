@@ -14,7 +14,7 @@ An advanced AI model that generates diverse high-quality audio compositions by a
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schema
+## API Schemas
 
 {% openapi src="music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
 [music-01-pair.json](music-01-pair.json)

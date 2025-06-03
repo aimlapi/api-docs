@@ -17,6 +17,10 @@ layout:
 
 # Model comparison
 
+{% hint style="success" %}
+Be sure to check out our [Comparisons section](https://aimlapi.com/comparisons) on the main site — where text, code, image, music, and other models go head-to-head in close matchups to determine the winners!
+{% endhint %}
+
 You can send the same request to two specific text models of your choice and compare the results.
 
 Just select two models from the [Text Models (LLM) list](../api-references/model-database.md#text-models-llm), copy their Model IDs, and paste them into the `Specify the models to compare` section of this code example as the values for `model1` and `model2`.&#x20;
