@@ -23,7 +23,7 @@ An advanced audio generation model designed to create high-quality audio tracks 
 {% step %}
 ### Copy the code example
 
-At the bottom of this page, you'll find [a code example](lyria-2.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](lyria-2.md#quick-code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
 Generating an audio sample using this model involves sequentially calling two endpoints:&#x20;
@@ -51,7 +51,7 @@ Only  `prompt` is a required parameter for this model (and we’ve already fille
 {% step %}
 ### Run your modified code
 
-Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
+Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a 40 seconds.
 {% endstep %}
 {% endstepper %}
 
@@ -140,7 +140,10 @@ Listen to the track we generated below the code and response blocks.
 import time
 import requests
 
-# Creating and sending a audio generation task to the server (returns a generation ID)
+# Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
+aimlapi_key = '<YOUR_AIMLAPI_KEY>'
+
+# Creating and sending an audio generation task to the server (returns a generation ID)
 def generate_audio():
     url = "https://api.aimlapi.com/v2/generate/audio"
     payload = {
@@ -149,8 +152,7 @@ def generate_audio():
         Majestic orchestral film score recorded in a top-tier London studio. A full-scale symphony orchestra delivers sweeping, cinematic music with rich emotional depth. The composition features soaring themes, dynamic contrasts, and complex harmonies. Expect powerful percussion, expressive strings, and prominent French horns and timpani. The arrangement emphasizes a dramatic narrative arc with intricate orchestrations and a profound, awe-inspiring atmosphere.
         '''
     }
-    # Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
+    headers = {"Authorization": f"Bearer {aimlapi_key}", "Content-Type": "application/json"}
 
     response = requests.post(url, json=payload, headers=headers)
 
@@ -168,8 +170,7 @@ def retrieve_audio(gen_id):
     params = {
         "generation_id": gen_id,
     }
-    # Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
+    headers = {"Authorization": f"Bearer {aimlapi_key}", "Content-Type": "application/json"}
 
     response = requests.get(url, params=params, headers=headers)
     return response.json()
@@ -206,6 +207,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 ```
 {% endcode %}
 {% endtab %}
