@@ -87,7 +87,7 @@ Here is an example of generation an audio file based on a prompt using the music
 
 As an example, we will generate a song using the new Google's model **Lyria 2**. As you can verify in its API Schemas above, this model accepts a prompt as input—extracting information about its vocals and instruments for use in the generation process.
 
-We generated our prompt in [Chat GPT](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion):
+We generated our prompt in [Chat GPT](../../text-models-llm/OpenAI/gpt-4o.md):
 
 `Majestic orchestral film score recorded in a top-tier London studio. A 100-piece orchestra delivers sweeping, cinematic music with rich emotional depth. The composition features soaring themes, dynamic contrasts, and complex harmonies. Expect powerful percussion, expressive strings, and prominent French horns and timpani. The arrangement emphasizes a dramatic narrative arc with intricate orchestrations and a profound, awe-inspiring atmosphere.`
 
