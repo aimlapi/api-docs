@@ -10,19 +10,68 @@ This documentation is valid for the following list of our models:
 
 An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.
 
-## Setup your API Key
+## How to Make a Call
 
-If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+{% stepper %}
+{% step %}
+### Setup You Can’t Skip&#x20;
 
-## API Schemas
+:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+{% endstep %}
+
+{% step %}
+### Copy the code example
+
+At the bottom of this page, you'll find [a code example](minimax-music-\[legacy].md#quick-code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+
+{% hint style="success" %}
+Generating an audio sample using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a music generation task to the server (returns a generation ID).
+* The second one is for requesting the generated audio sample from the server using the generation ID received from the first endpoint.&#x20;
+
+The code example combines both endpoint calls.
+{% endhint %}
+{% endstep %}
+
+{% step %}
+### Modify the code example
+
+:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square:  Provide your lyrics via the `prompt` parameter. The model will use it to generate a song.&#x20;
 
 {% hint style="warning" %}
 Keep in mind that the maximum length of generated audio is 1 minute. If you provide a `prompt` that’s too long (which the model tries to use as song lyrics), it might exceed the time limit and result in a `"Downstream service error."`
 {% endhint %}
 
+:black\_small\_square:  Via `reference_audio_url` parameter, provide a URL to a reference track from which the model will extract the genre, style, tempo, vocal and instrument timbres, and the overall mood of the piece.
+{% endstep %}
+
+{% step %}
+### Run your modified code
+
+Run your modified code in your development environment. Response time depends on various factors, but it rarely exceeds 40 seconds.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="success" %}
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
+{% endhint %}
+
+## API Schemas
+
+### Generate a music sample
+
+This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
+
 {% openapi src="minimax-music-[legacy].json" path="/v2/generate/audio" method="post" %}
 [minimax-music-\[legacy\].json](minimax-music-[legacy].json)
 {% endopenapi %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
 
 {% openapi src="minimax-music-[legacy]-pair.json" path="/v2/generate/audio" method="get" %}
 [minimax-music-\[legacy\]-pair.json](minimax-music-[legacy]-pair.json)

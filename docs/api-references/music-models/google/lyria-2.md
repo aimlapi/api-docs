@@ -51,7 +51,7 @@ Only  `prompt` is a required parameter for this model (and we’ve already fille
 {% step %}
 ### Run your modified code
 
-Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a 40 seconds.
+Run your modified code in your development environment. Response time depends on various factors, but it rarely exceeds 40 seconds.
 {% endstep %}
 {% endstepper %}
 
@@ -71,7 +71,7 @@ This endpoint creates and sends a music generation task to the server — and re
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-After sending a request for music generation, this task is added to the queue. Based on the service's load and your prompt length, the generation can be completed in seconds or take a bit more.
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
 
 {% openapi-operation spec="lyria2-fetch" path="/v2/generate/audio" method="get" %}
 [Broken link](broken-reference)
