@@ -50,6 +50,7 @@
     * [gemini-2.5-pro-preview](api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
     * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [gemma-3](api-references/text-models-llm/google/gemma-3.md)
+    * [gemma-3n-4b](api-references/text-models-llm/google/gemma-3n-4b.md)
   * [Gryphe](api-references/text-models-llm/Gryphe/README.md)
     * [MythoMax-L2-13b-Lite](api-references/text-models-llm/Gryphe/MythoMax-L2-13b-Lite.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)

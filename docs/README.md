@@ -97,29 +97,51 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)  <a href="api-references/text-models-llm/Alibaba-Cloud/" class="button secondary">Text/Chat</a>\
-**Anthracite**:  [Text/Chat](api-references/text-models-llm/Anthracite/)\
-<mark style="background-color:green;">**Anthropic**</mark>:  [Text/Chat](api-references/text-models-llm/Anthropic/)  [Embedding](api-references/embedding-models/Anthropic/) \
-**BAAI**:  [Embedding](api-references/embedding-models/BAAI/)\
-**Cohere**:  [Text/Chat](api-references/text-models-llm/Cohere/)\
-<mark style="background-color:green;">**DeepSeek**</mark>:  [Text/Chat](api-references/text-models-llm/DeepSeek/)\
-**Deepgram**:  [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)  [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)\
-<mark style="background-color:green;">**Flux**</mark>:  [Image](api-references/image-models/flux/)\
-**Google**:  [Text/Chat](api-references/text-models-llm/Google/)   [Image](api-references/image-models/google/)   [Embedding](api-references/embedding-models/Google/)    [Video](api-references/video-models/google/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)\
-**Gryphe**:  [Text/Chat](api-references/text-models-llm/Gryphe/)\
-<mark style="background-color:green;">**Kling AI**</mark>:  [Video](api-references/video-models/Kling-AI/)\
-**Meta**:  [Text/Chat](api-references/text-models-llm/Meta/)\
-<mark style="background-color:green;">**MiniMax**</mark>:  [Text/Chat](api-references/text-models-llm/MiniMax/)  [Video](api-references/video-models/MiniMax/)  [Music](api-references/music-models/MiniMax/)\
-**Mistral AI**:  [Text/Chat](api-references/text-models-llm/Mistral-AI/)    [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)\
-**NVIDIA**:  [Text/Chat](api-references/text-models-llm/NVIDIA/)\
-**NeverSleep**:  [Text/Chat](api-references/text-models-llm/NeverSleep/)\
-**NousResearch**:  [Text/Chat](api-references/text-models-llm/NousResearch/)\
-<mark style="background-color:green;">**OpenAI**</mark>:  [Text/Chat](api-references/text-models-llm/OpenAI/)  [Image](api-references/image-models/OpenAI/)  [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/)  [Embedding](api-references/embedding-models/OpenAI/) \
-**RecraftAI**:  [Image](api-references/image-models/RecraftAI/)\
-**Runway**:  [Video](api-references/video-models/runway/)\
-<mark style="background-color:green;">**Stability AI**</mark>:  [Image](api-references/image-models/Stability-AI/)  [Music](api-references/music-models/Stability-AI/)  [3D-Generation](api-references/3d-generating-models/Stability-AI/)\
-**Together AI**:  [Embedding](api-references/embedding-models/Together-AI/)\
-**xAI**:  [Text/Chat](api-references/text-models-llm/xAI/)
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)
+
+**Anthracite**:    [Text/Chat](api-references/text-models-llm/Anthracite/)
+
+<mark style="background-color:green;">**Anthropic**</mark>:    [Text/Chat](api-references/text-models-llm/Anthropic/)    [Embedding](api-references/embedding-models/Anthropic/)&#x20;
+
+**BAAI**:    [Embedding](api-references/embedding-models/BAAI/)
+
+**Cohere**:    [Text/Chat](api-references/text-models-llm/Cohere/)
+
+<mark style="background-color:green;">**DeepSeek**</mark>:    [Text/Chat](api-references/text-models-llm/DeepSeek/)
+
+**Deepgram**:    [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)    [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)
+
+<mark style="background-color:green;">**Flux**</mark>:    [Image](api-references/image-models/flux/)
+
+**Google**:    [Text/Chat](api-references/text-models-llm/Google/)   [Image](api-references/image-models/google/)   [Video](api-references/video-models/google/)   [Music](api-references/music-models/google/)   [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)   [Embedding](api-references/embedding-models/Google/)
+
+**Gryphe**:    [Text/Chat](api-references/text-models-llm/Gryphe/)
+
+<mark style="background-color:green;">**Kling AI**</mark>:    [Video](api-references/video-models/Kling-AI/)
+
+**Meta**:    [Text/Chat](api-references/text-models-llm/Meta/)
+
+<mark style="background-color:green;">**MiniMax**</mark>:    [Text/Chat](api-references/text-models-llm/MiniMax/)   [Video](api-references/video-models/MiniMax/)   [Music](api-references/music-models/MiniMax/)
+
+**Mistral AI**:    [Text/Chat](api-references/text-models-llm/Mistral-AI/)   [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
+
+**NVIDIA**:    [Text/Chat](api-references/text-models-llm/NVIDIA/)
+
+**NeverSleep**:    [Text/Chat](api-references/text-models-llm/NeverSleep/)
+
+**NousResearch**:    [Text/Chat](api-references/text-models-llm/NousResearch/)
+
+<mark style="background-color:green;">**OpenAI**</mark>:    [Text/Chat](api-references/text-models-llm/OpenAI/)   [Image](api-references/image-models/OpenAI/)   [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/)   [Embedding](api-references/embedding-models/OpenAI/)&#x20;
+
+**RecraftAI**:    [Image](api-references/image-models/RecraftAI/)
+
+**Runway**:    [Video](api-references/video-models/runway/)
+
+<mark style="background-color:green;">**Stability AI**</mark>:    [Image](api-references/image-models/Stability-AI/)   [Music](api-references/music-models/Stability-AI/)   [3D-Generation](api-references/3d-generating-models/Stability-AI/)
+
+**Together AI**:    [Embedding](api-references/embedding-models/Together-AI/)
+
+**xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)
 {% endtab %}
 
 {% tab title="Models by CAPABILITY" %}
