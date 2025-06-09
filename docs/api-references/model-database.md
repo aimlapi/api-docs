@@ -35,9 +35,9 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 ## Get Model List via API
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/models" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="models" path="/models" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Full List of Model IDs
 
