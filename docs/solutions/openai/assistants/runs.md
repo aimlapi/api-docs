@@ -17,9 +17,9 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ### Create a run
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-create" path="/threads/{threadId}/runs" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -41,9 +41,9 @@ print(run)
 
 ### Create a Thread and run it in one request
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/runs" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-create-n-run" path="/threads/runs" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -69,9 +69,9 @@ print(run)
 
 ### Retrieve a list of Runs belonging to a specific Thread
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-get-list" path="/threads/{threadId}/runs" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -92,9 +92,9 @@ print(runs)
 
 ### Retrieve information about a specific Run by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-runinfo" path="/threads/{threadId}/runs/{runId}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -116,9 +116,9 @@ print(run)
 
 ### Modify a specific run by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-runmodify" path="/threads/{threadId}/runs/{runId}" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -141,9 +141,9 @@ print(run)
 
 ### Submit Tool outputs to a specific Run
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/submit_tool_outputs" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-submit-tool-outputs" path="/threads/{threadId}/runs/{runId}/submit_tool_outputs" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -171,9 +171,9 @@ print(run)
 
 ### Cancel a specific Run by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/cancel" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-cancel" path="/threads/{threadId}/runs/{runId}/cancel" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -195,9 +195,9 @@ print(run)
 
 ### Retrieve a list of Run Steps belonging to a specific Run
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/steps" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-steps-list" path="/threads/{threadId}/runs/{runId}/steps" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -219,9 +219,9 @@ print(run_steps)
 
 ### Retrieve information about a specific Run Step by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/runs/{runId}/steps/{stepId}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-runs-stepinfo" path="/threads/{threadId}/runs/{runId}/steps/{stepId}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
