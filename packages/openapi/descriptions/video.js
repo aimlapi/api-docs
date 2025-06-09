@@ -106,4 +106,10 @@ export default {
   expand_prompt: {
     desc: `If set to true, the prompt will be expanded with additional prompts.`,
   },
+  enhance_prompt: {
+    desc: `Whether to enhance the video generation.`
+  },
+  generate_audio: {
+    desc: `Whether to generate audio for the video.`,
+  },
 };
