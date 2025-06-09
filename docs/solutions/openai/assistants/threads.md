@@ -32,9 +32,9 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ### Create a Thread
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-threads-create" path="/threads" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -63,9 +63,9 @@ thread = client.beta.threads.create(
 
 ### Retrieve information about a specific Thread by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-thread-info-id" path="/threads/{threadId}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -83,9 +83,9 @@ print(my_thread)
 
 ### Modify a specific Thread by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-threads-modify" path="/threads/{threadId}" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -109,9 +109,9 @@ print(my_updated_thread)
 
 ### Delete a specific Thread by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}" method="delete" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-threads-delete" path="/threads/{threadId}" method="delete" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 

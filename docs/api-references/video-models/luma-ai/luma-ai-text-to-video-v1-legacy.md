@@ -15,6 +15,8 @@ layout:
 
 # Text-to-Video v1 (legacy)
 
+
+
 {% hint style="info" %}
 Here is our backward-compatible support for the older Luma AI API.
 {% endhint %}
@@ -46,9 +48,9 @@ Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running 
 
 ### Generate Video
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v1-gen" path="/luma-ai/generations" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Example
 
@@ -103,9 +105,9 @@ axios.post(url, payload, { headers })
 
 ### Fetch Generations
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generation" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v1-fetch" path="/luma-ai/generation" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Example
 
@@ -161,9 +163,9 @@ axios.get(url, { headers, params })
 
 Extend allows you to effortlessly add length to an existing video.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v2-extend" path="/v1/luma-ai/generations/{taskId}/extend" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Example
 
