@@ -44,9 +44,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 #### Requesting the result of the task from the server using the generation\_id
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/stt/{generation_id}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29 ](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Quick Code Examples
 
