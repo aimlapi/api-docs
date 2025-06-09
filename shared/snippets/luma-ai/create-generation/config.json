@@ -1,6 +1,6 @@
 {
   "title": "Generate a video",
-  "docs": "https://docs.aimlapi.com/api-overview/video-models/luma-ai-v2/overview",
+  "docs": "https://docs.aimlapi.com/api-references/video-models/luma-ai/luma-ai-v2",
   "payload": {
     "baseUrl": "https://api.aimlapi.com/v2",
     "apiKey": "<YOUR_API_KEY>"
