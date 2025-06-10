@@ -52,7 +52,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="gemma-3n" path="/v1/chat/completions" method="post" %}
+{% openapi-operation spec="test-constructor-2" path="/v1/chat/completions" method="post" %}
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 

@@ -133,6 +133,7 @@
   * [Google](api-references/video-models/google/README.md)
     * [Veo2 (Image-to-Video)](api-references/video-models/google/veo2-image-to-video.md)
     * [Veo2 (Text-to-Video)](api-references/video-models/google/veo2-text-to-video.md)
+    * [Veo3 (Text-to-Video)](api-references/video-models/google/veo3-text-to-video.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [v1-standard/image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
     * [v1-standard/text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
