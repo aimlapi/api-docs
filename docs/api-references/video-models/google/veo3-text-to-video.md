@@ -21,7 +21,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
-Below, you can find two corresponding API schemas and examples for both endpoint calls.
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
 
 ## API Schemas
 
