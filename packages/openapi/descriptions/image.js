@@ -65,4 +65,15 @@ export default {
   add_watermark: {
     desc: `Add an invisible watermark to the generated images.`,
   },
+  background: {
+    desc: `Allows to set transparency for the background of the generated image(s). When auto is used, the model will automatically determine the best background for the image.
+If transparent, the output format needs to support transparency, so it should be set to either png (default value) or webp.`,
+  },
+  moderation: {
+    desc: `Control the content-moderation level for images`,
+  },
+  output_compression: {
+    desc: `The compression level (0-100%) for the generated images.`,
+  },
+
 };
