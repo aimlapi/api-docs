@@ -116,6 +116,8 @@
     * [flux/dev](api-references/image-models/flux/flux-dev.md)
     * [flux/dev/image-to-image](api-references/image-models/flux/flux-dev-image-to-image.md)
     * [flux/schnell](api-references/image-models/flux/flux-schnell.md)
+    * [flux/kontext-max/text-to-image](api-references/image-models/flux/flux-kontext-max-text-to-image.md)
+    * [flux/kontext-pro/text-to-image](api-references/image-models/flux/flux-kontext-pro-text-to-image.md)
   * [Google](api-references/image-models/google/README.md)
     * [Imagen 3](api-references/image-models/google/imagen-3.0.md)
     * [Imagen 4 Preview](api-references/image-models/google/imagen-4-preview.md)
