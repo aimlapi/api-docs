@@ -113,7 +113,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**Flux**</mark>:    [Image](api-references/image-models/flux/)
 
-**Google**:    [Text/Chat](api-references/text-models-llm/Google/)   [Image](api-references/image-models/google/)   [Video](api-references/video-models/google/)   [Music](api-references/music-models/google/)   [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/google/)   [Embedding](api-references/embedding-models/Google/)
+**Google**:    [Text/Chat](api-references/text-models-llm/Google/)   [Image](api-references/image-models/google/)   [Video](api-references/video-models/google/)   [Music](api-references/vision-models/ocr-optical-character-recognition/google/)   [Vision(OCR)](api-references/music-models/google/)   [Embedding](api-references/embedding-models/Google/)
 
 **Gryphe**:    [Text/Chat](api-references/text-models-llm/Gryphe/)
 

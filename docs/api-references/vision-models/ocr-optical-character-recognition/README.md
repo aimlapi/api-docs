@@ -6,8 +6,8 @@ Advanced OCR models leverage deep learning to enhance recognition capabilities, 
 
 We provide APIs from two providers: **Google** and **Mistral AI**. Test both options by making several trial requests and determine which one best suits your needs.
 
-{% content-ref url="google/" %}
-[google](google/)
+{% content-ref url="../../music-models/google/" %}
+[google](../../music-models/google/)
 {% endcontent-ref %}
 
 {% content-ref url="mistral-ai/" %}

@@ -18,9 +18,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="dall-e-2.json" path="/v1/images/generations" method="post" %}
-[dall-e-2.json](dall-e-2.json)
-{% endopenapi %}
+{% openapi-operation spec="dall-e-2" path="/v1/images/generations" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Quick Example
 
