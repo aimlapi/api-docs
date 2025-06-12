@@ -1,6 +1,6 @@
 export default {
   url: {
-    desc: `URL of the input audio file`,
+    desc: `URL of the input audio file.`,
   },
   custom_intent: {
     desc: `A custom intent you want the model to detect within your input audio if present. Submit up to 100.`,
@@ -21,28 +21,28 @@ export default {
     desc: `When Entity Detection is enabled, the Punctuation feature will be enabled by default.`,
   },
   detect_topics: {
-    desc: `Detects the most important and relevant topics that are referenced in speech within the audio`,
+    desc: `Detects the most important and relevant topics that are referenced in speech within the audio.`,
   },
   diarize: {
-    desc: `Recognizes speaker changes. Each word in the transcript will be assigned a speaker number starting at 0`,
+    desc: `Recognizes speaker changes. Each word in the transcript will be assigned a speaker number starting at 0.`,
   },
   dictation: {
-    desc: `Identifies and extracts key entities from content in submitted audio`,
+    desc: `Identifies and extracts key entities from content in submitted audio.`,
   },
   diarize_version: {
     desc: ``,
   },
   extra: {
-    desc: `Arbitrary key-value pairs that are attached to the API response for usage in downstream processing`,
+    desc: `Arbitrary key-value pairs that are attached to the API response for usage in downstream processing.`,
   },
   filler_words: {
-    desc: `Filler Words can help transcribe interruptions in your audio, like “uh” and “um”`,
+    desc: `Filler Words can help transcribe interruptions in your audio, like “uh” and “um”.`,
   },
   intents: {
-    desc: `Recognizes speaker intent throughout a transcript or text`,
+    desc: `Recognizes speaker intent throughout a transcript or text.`,
   },
   keywords: {
-    desc: `Keywords can boost or suppress specialized terminology and brands`,
+    desc: `Keywords can boost or suppress specialized terminology and brands.`,
   },
   language: {
     desc: `The BCP-47 language tag that hints at the primary spoken language. Depending on the Model and API endpoint you choose only certain languages are available`,
