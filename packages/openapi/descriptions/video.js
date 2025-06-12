@@ -112,4 +112,7 @@ export default {
   generate_audio: {
     desc: `Whether to generate audio for the video.`,
   },
+  webhook: {
+    desc: `The URL to receive a one-time notification when the task is completed. If set, the server will send an HTTP POST request with the final result when the task ends.`,
+  },
 };
