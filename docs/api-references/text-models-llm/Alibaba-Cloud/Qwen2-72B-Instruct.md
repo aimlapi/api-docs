@@ -56,9 +56,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Qwen2-72B-Instruct.json" path="/v1/chat/completions" method="post" %}
-[Qwen2-72B-Instruct.json](Qwen2-72B-Instruct.json)
-{% endopenapi %}
+{% openapi-operation spec="qwen2-72b-instruct-2nd-try" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

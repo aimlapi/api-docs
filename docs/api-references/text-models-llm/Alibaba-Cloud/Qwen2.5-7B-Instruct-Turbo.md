@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Qwen2.5-7B-Instruct-Turbo.json" path="/v1/chat/completions" method="post" %}
-[Qwen2.5-7B-Instruct-Turbo.json](Qwen2.5-7B-Instruct-Turbo.json)
-{% endopenapi %}
+{% openapi-operation spec="qwen2-5-7b-instruct-turbo" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

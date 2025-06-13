@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="magnum-v4.json" path="/v1/chat/completions" method="post" %}
-[magnum-v4.json](magnum-v4.json)
-{% endopenapi %}
+{% openapi-operation spec="magnum-v4" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

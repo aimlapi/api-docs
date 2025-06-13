@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="qwen-plus.json" path="/v1/chat/completions" method="post" %}
-[qwen-plus.json](qwen-plus.json)
-{% endopenapi %}
+{% openapi-operation spec="qwen-plus" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

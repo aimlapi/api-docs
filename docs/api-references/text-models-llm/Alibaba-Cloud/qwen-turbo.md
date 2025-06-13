@@ -53,9 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="qwen-turbo.json" path="/v1/chat/completions" method="post" %}
-[qwen-turbo.json](qwen-turbo.json)
-{% endopenapi %}
+{% openapi-operation spec="qwen-turbo" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 
