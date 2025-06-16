@@ -57,9 +57,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="claude-3.5-sonnet.json" path="/v1/chat/completions" method="post" %}
-[claude-3.5-sonnet.json](claude-3.5-sonnet.json)
-{% endopenapi %}
+{% openapi-operation spec="claude-3-5-sonnet" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

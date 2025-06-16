@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.0-flash.json)
-{% endopenapi %}
+{% openapi-operation spec="gemini-2-0-flash" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

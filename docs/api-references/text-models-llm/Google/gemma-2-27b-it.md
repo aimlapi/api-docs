@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gemma-2-27b-it.json" path="/v1/chat/completions" method="post" %}
-[gemma-2-27b-it.json](gemma-2-27b-it.json)
-{% endopenapi %}
+{% openapi-operation spec="gemma-2-27b-it" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

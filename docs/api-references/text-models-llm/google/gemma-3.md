@@ -55,9 +55,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3.json)
-{% endopenapi %}
+{% openapi-operation spec="gemma-3" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

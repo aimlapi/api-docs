@@ -57,9 +57,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="deepseek-r1.json" path="/v1/chat/completions" method="post" %}
-[deepseek-r1.json](deepseek-r1.json)
-{% endopenapi %}
+{% openapi-operation spec="deepseek-r1" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

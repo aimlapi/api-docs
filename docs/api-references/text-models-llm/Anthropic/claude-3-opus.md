@@ -55,9 +55,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="claude-3-opus.json" path="/v1/chat/completions" method="post" %}
-[claude-3-opus.json](claude-3-opus.json)
-{% endopenapi %}
+{% openapi-operation spec="claude-3-opus" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

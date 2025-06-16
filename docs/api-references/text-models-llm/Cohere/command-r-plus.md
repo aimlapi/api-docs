@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="command-r-plus.json" path="/v1/chat/completions" method="post" %}
-[command-r-plus.json](command-r-plus.json)
-{% endopenapi %}
+{% openapi-operation spec="command-r-plus" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 
