@@ -1,0 +1,25 @@
+from openai import OpenAI
+
+
+def main():
+    client = OpenAI(
+        api_key="{{apiKey}}",
+        base_url="{{baseUrl}}",
+    )
+
+    prompt = "Put glasses on the Mona Lisa"
+
+    result = client.images.edit(
+        model="{{model}}",
+        image=[
+            open("mona-liza.jpg", "rb"),
+            open("Glasses.jpg", "rb"),
+        ],
+        prompt=prompt
+    )
+
+    print("Generation:", result)
+
+
+if __name__ == "__main__":
+    main()
