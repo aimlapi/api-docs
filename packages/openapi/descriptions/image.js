@@ -75,5 +75,10 @@ If transparent, the output format needs to support transparency, so it should be
   output_compression: {
     desc: `The compression level (0-100%) for the generated images.`,
   },
-
+  image: {
+    desc: `The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.`
+  },
+  mask: {
+    desc: `An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.`
+  }
 };
