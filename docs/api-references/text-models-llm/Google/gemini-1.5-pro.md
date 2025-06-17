@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gemini-1.5-pro.json" path="/v1/chat/completions" method="post" %}
-[gemini-1.5-pro.json](gemini-1.5-pro.json)
-{% endopenapi %}
+{% openapi-operation spec="gemini-1-5-pro" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

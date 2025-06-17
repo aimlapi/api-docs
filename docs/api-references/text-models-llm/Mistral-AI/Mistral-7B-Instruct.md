@@ -54,9 +54,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Mistral-7B-Instruct.json" path="/v1/chat/completions" method="post" %}
-[Mistral-7B-Instruct.json](Mistral-7B-Instruct.json)
-{% endopenapi %}
+{% openapi-operation spec="mistral-7b-instruct" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

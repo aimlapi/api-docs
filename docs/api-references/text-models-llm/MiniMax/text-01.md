@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="text-01.json" path="/v1/chat/completions" method="post" %}
-[text-01.json](text-01.json)
-{% endopenapi %}
+{% openapi-operation spec="text-01" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

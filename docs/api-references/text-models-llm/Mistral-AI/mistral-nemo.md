@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="mistral-nemo.json" path="/v1/chat/completions" method="post" %}
-[mistral-nemo.json](mistral-nemo.json)
-{% endopenapi %}
+{% openapi-operation spec="mistral-nemo" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

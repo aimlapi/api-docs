@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Llama-Vision-Free.json" path="/v1/chat/completions" method="post" %}
-[Llama-Vision-Free.json](Llama-Vision-Free.json)
-{% endopenapi %}
+{% openapi-operation spec="llama-vision-free" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

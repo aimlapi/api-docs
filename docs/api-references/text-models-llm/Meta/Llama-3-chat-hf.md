@@ -55,9 +55,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Llama-3-chat-hf.json" path="/v1/chat/completions" method="post" %}
-[Llama-3-chat-hf.json](Llama-3-chat-hf.json)
-{% endopenapi %}
+{% openapi-operation spec="llama-3-chat-h-f" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

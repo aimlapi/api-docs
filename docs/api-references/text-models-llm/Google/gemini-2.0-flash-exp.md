@@ -53,9 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gemini-2.0-flash-exp.json" path="/v1/chat/completions" method="post" %}
-[gemini-2.0-flash-exp.json](gemini-2.0-flash-exp.json)
-{% endopenapi %}
+{% openapi-operation spec="gemini-2-0-flash-exp" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Mixtral-8x7B-Instruct-v0.1.json" path="/v1/chat/completions" method="post" %}
-[Mixtral-8x7B-Instruct-v0.1.json](Mixtral-8x7B-Instruct-v0.1.json)
-{% endopenapi %}
+{% openapi-operation spec="mixtral-8x7b-instruct" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

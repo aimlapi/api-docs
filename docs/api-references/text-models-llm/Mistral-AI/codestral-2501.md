@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="codestral-2501.json" path="/v1/chat/completions" method="post" %}
-[codestral-2501.json](codestral-2501.json)
-{% endopenapi %}
+{% openapi-operation spec="codestral-2501" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

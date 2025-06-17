@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Meta-Llama-3-8B-Instruct-Lite.json" path="/v1/chat/completions" method="post" %}
-[Meta-Llama-3-8B-Instruct-Lite.json](Meta-Llama-3-8B-Instruct-Lite.json)
-{% endopenapi %}
+{% openapi-operation spec="meta-llama-3-8b-instruct-lite" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

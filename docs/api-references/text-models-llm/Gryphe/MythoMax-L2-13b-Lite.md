@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="MythoMax-L2-13b-Lite.json" path="/v1/chat/completions" method="post" %}
-[MythoMax-L2-13b-Lite.json](MythoMax-L2-13b-Lite.json)
-{% endopenapi %}
+{% openapi-operation spec="mythomax-l2-13b-lite" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

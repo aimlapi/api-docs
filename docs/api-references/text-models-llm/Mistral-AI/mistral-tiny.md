@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="mistral-tiny.json" path="/v1/chat/completions" method="post" %}
-[mistral-tiny.json](mistral-tiny.json)
-{% endopenapi %}
+{% openapi-operation spec="mistral-tiny" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

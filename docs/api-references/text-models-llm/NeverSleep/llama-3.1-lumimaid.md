@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="llama-3.1-lumimaid.json" path="/v1/chat/completions" method="post" %}
-[llama-3.1-lumimaid.json](llama-3.1-lumimaid.json)
-{% endopenapi %}
+{% openapi-operation spec="llama-3-1-lumimaid" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

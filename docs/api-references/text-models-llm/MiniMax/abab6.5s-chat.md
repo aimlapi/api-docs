@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="abab6.5s-chat.json" path="/v1/chat/completions" method="post" %}
-[abab6.5s-chat.json](abab6.5s-chat.json)
-{% endopenapi %}
+{% openapi-operation spec="abab6-5s-chat" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 
