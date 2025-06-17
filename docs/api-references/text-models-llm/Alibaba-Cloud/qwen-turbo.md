@@ -15,9 +15,7 @@ layout:
 # qwen-turbo
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `qwen-turbo`
+This documentation is valid for the following list of our models:   `qwen-turbo`
 {% endhint %}
 
 ## Model Overview

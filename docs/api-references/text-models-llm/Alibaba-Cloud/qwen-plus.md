@@ -15,14 +15,12 @@ layout:
 # qwen-plus
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `qwen-plus`
+This documentation is valid for the following list of our models:   `qwen-plus`
 {% endhint %}
 
 ## Model Overview
 
-An advanced large language model developed by Alibaba Cloud, designed to support multiple languages such as Chinese and English. Multilingual support, including Chinese and English. Enhanced reasoning capabilities for complex tasks. Improved instruction-following abilities.
+An advanced large language model. Multilingual support, including Chinese and English. Enhanced reasoning capabilities for complex tasks. Improved instruction-following abilities.
 
 ## How to Make a Call
 

@@ -23,11 +23,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A large-scale Mixture-of-Experts (MoE) language model developed by Alibaba Cloud. It excels in language understanding, generation, and task performance across a variety of modalities. \
-**Mixture-of-Experts (MoE) Architecture**: Uses 64 specialized "expert" networks, activating only relevant ones per task for efficient processing. \
-**Extensive Multilingual Support**: Supports 29 languages, including Chinese, English, and Arabic. \
-**Long-Context Optimization**: Supports 32K context windows with 8K generation. \
-**High Stability**: Demonstrates high stability in maintaining prompt instructions, with no erroneous replies during extensive testing.
+The large-scale Mixture-of-Experts (MoE) language model. Excels in language understanding and task performance. Supports 29 languages, including Chinese, English, and Arabic.&#x20;
 
 ## How to Make a Call
 
