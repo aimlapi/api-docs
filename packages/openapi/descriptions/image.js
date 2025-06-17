@@ -2,7 +2,14 @@ export default {
   prompt: {
     desc: `The text prompt describing the content, style, or composition of the image to be generated.`,
   },
-  num_images: { desc: `The number of images to generate.` },
+  num_images: { 
+    default: {
+      desc: `The number of images to generate.` 
+    },
+    flux_kontext: {
+      desc: `Number of image variations to generate. Each image is a different attempt to combine the reference images (from the image_url parameter) according to the prompt.`,
+    },
+  },
   seed: {
     desc: `The same seed and the same prompt given to the same version of the model will output the same image every time.`,
   },
@@ -34,7 +41,12 @@ export default {
     desc: `If set to True, prompt will be upsampled with more details.`,
   },
   image_url: {
-    desc: `The URL of the reference image.`,
+    default: {
+      desc: `The URL of the reference image.`,
+    },
+    flux_kontext: {
+      desc: `One or more image URLs used as visual references. The model merges them into a single image following the prompt instructions.`,
+    },
   },
   do_remove_background: {
     desc: `Enables removing the background from the input image.`,
