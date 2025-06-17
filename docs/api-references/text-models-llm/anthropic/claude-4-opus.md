@@ -15,7 +15,7 @@ layout:
 # Claude 4 Opus
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `anthropic/claude-opus-4`
+This documentation is valid for the following model:   `anthropic/claude-opus-4`
 {% endhint %}
 
 ## Model Overview

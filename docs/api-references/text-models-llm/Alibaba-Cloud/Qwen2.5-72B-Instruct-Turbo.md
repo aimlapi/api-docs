@@ -15,7 +15,7 @@ layout:
 # Qwen2.5-72B-Instruct-Turbo
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `Qwen/Qwen2.5-72B-Instruct-Turbo`
+This documentation is valid for the following model:   `Qwen/Qwen2.5-72B-Instruct-Turbo`
 {% endhint %}
 
 ## Model Overview

@@ -15,7 +15,7 @@ layout:
 # Claude 4 Sonnet
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `anthropic/claude-sonnet-4`
+This documentation is valid for the following model:   `anthropic/claude-sonnet-4`
 {% endhint %}
 
 ## Model Overview

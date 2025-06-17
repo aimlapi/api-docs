@@ -15,7 +15,7 @@ layout:
 # magnum-v4
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `anthracite-org/magnum-v4-72b`
+This documentation is valid for the following model:   `anthracite-org/magnum-v4-72b`
 {% endhint %}
 
 ## Model Overview

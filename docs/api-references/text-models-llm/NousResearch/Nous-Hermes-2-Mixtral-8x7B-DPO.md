@@ -52,9 +52,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="Nous-Hermes-2-Mixtral-8x7B-DPO.json" path="/v1/chat/completions" method="post" %}
-[Nous-Hermes-2-Mixtral-8x7B-DPO.json](Nous-Hermes-2-Mixtral-8x7B-DPO.json)
-{% endopenapi %}
+{% openapi-operation spec="mixtral-8x22b-instruct" path="/v1/chat/completions" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

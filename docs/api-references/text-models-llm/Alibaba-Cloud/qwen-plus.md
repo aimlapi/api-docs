@@ -15,7 +15,7 @@ layout:
 # qwen-plus
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `qwen-plus`
+This documentation is valid for the following model:   `qwen-plus`
 {% endhint %}
 
 ## Model Overview

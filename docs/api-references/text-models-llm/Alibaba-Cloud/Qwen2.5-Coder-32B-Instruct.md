@@ -15,7 +15,7 @@ layout:
 # Qwen2.5-Coder-32B-Instruct
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `Qwen/Qwen2.5-Coder-32B-Instruct`
+This documentation is valid for the following model:   `Qwen/Qwen2.5-Coder-32B-Instruct`
 {% endhint %}
 
 ## Model Overview

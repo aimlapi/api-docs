@@ -15,7 +15,7 @@ layout:
 # Qwen3-235B-A22B
 
 {% hint style="info" %}
-This documentation is valid for the following list of our models:   `Qwen/Qwen3-235B-A22B-fp8-tput`
+This documentation is valid for the following model:   `Qwen/Qwen3-235B-A22B-fp8-tput`
 {% endhint %}
 
 ## Model Overview
