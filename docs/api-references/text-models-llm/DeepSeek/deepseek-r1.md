@@ -27,7 +27,7 @@ Both IDs listed above refer to the same model; we support them for backward comp
 
 ## Model Overview
 
-DeepSeek R1 is a cutting-edge reasoning model developed by DeepSeek AI, designed to excel in complex problem-solving, mathematical reasoning, and programming assistance. Leveraging a Mixture-of-Experts (MoE) architecture, the model activates only a subset of its parameters for each token processed, allowing for efficient computation while maintaining high performance across various tasks.
+DeepSeek R1 is a cutting-edge reasoning model developed by DeepSeek AI, designed to excel in complex problem-solving, mathematical reasoning, and programming assistance.
 
 ## How to Make a Call
 
