@@ -165,6 +165,15 @@ We obtained the following 1536x1024 image by running this code example (\~ 26 s)
 
 Let's combine two images of different sizes using a simple prompt.
 
+<details>
+
+<summary>2 images</summary>
+
+| <div><figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p>t-rex.png</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/crown.png" alt=""><figcaption><p>crown.png</p></figcaption></figure></div> |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+
+</details>
+
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
