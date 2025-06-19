@@ -167,7 +167,7 @@ Let's combine two images of different sizes using a simple prompt.
 
 <details>
 
-<summary>2 images</summary>
+<summary>Our input images</summary>
 
 | <div><figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p>t-rex.png</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/crown.png" alt=""><figcaption><p>crown.png</p></figcaption></figure></div> |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
