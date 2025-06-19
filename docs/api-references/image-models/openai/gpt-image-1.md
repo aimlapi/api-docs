@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A powerful multimodal model that generates or edits images based on a text prompt.
+A powerful multimodal model capable of generating new images, combining existing ones, and applying image masks — all guided by a text prompt.
 
 ## Setup your API Key
 
