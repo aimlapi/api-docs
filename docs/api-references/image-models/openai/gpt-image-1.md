@@ -232,7 +232,7 @@ const main = async () => {
   const result = await client.images.edit({
     model: 'openai/gpt-image-1',
     image: images,
-    prompt: 'Put the crown on the T-rex's head',
+    prompt: "Put the crown on the T-rex's head",
   });
 
   console.log('Generation', result);
