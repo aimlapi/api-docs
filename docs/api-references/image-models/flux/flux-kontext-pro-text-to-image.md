@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # flux/kontext-pro/text-to-image
 
 {% hint style="info" %}
@@ -19,7 +33,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="flux-kontext-pro-try-3" path="/v1/images/generations" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI flux-kontext-pro-try-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-kontext-pro.json)
 {% endopenapi-operation %}
 
 ## Quick Example

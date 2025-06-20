@@ -6,6 +6,11 @@ This documentation is valid for the following list of our models:
 * `gpt-4.5-preview`
 {% endhint %}
 
+{% hint style="warning" %}
+The model will be deprecated on July 14, 2025, due to end of support by OpenAI.\
+Recommended replacement: [**gpt-4.1**](../openai/gpt-4.1.md).
+{% endhint %}
+
 ## Model Overview
 
 OpenAI's latest general-purpose language model, designed to advance capabilities in reasoning, creativity, and conversational coherence. It builds upon GPT-4 with a broader knowledge base, improved alignment with user intent, and enhanced emotional intelligence (EQ). The model is positioned as a research preview and is OpenAI’s largest and most knowledgeable model to date.

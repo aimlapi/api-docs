@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Imagen 4 Preview
 
 {% hint style="info" %}
@@ -17,7 +31,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="imagen-4-preview" path="/v1/images/generations" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI imagen-4-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/imagen-4-preview.json)
 {% endopenapi-operation %}
 
 ## Quick Example
