@@ -23,7 +23,7 @@ Generating a video using this model involves making two sequential API calls:
 
 Below, you can find both corresponding API schemas.
 
-## API Schema
+## API Schemas
 
 ### Create a video generation task and send it to the server
 

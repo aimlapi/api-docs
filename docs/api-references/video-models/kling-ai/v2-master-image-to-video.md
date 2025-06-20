@@ -23,12 +23,12 @@ Generating a video using this model involves making two sequential API calls:
 
 Below, you can find both corresponding API schemas.
 
-## API Schema
+## API Schemas
 
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="kling-v2-master-i2v" path="/v2/generate/video/kling/generation" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI kling-v2-master-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -36,7 +36,7 @@ Below, you can find both corresponding API schemas.
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.&#x20;
 
 {% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
 {% endopenapi-operation %}
 
 ## Code Example (Python)
@@ -54,7 +54,7 @@ This model produces highly detailed and natural-looking videos, so generation ma
 <pre class="language-python" data-overflow="wrap"><code class="lang-python">import requests
 import time
 
-base_url = "https://api-staging.aimlapi.com/v2"
+base_url = "https://api.aimlapi.com/v2"
 api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server

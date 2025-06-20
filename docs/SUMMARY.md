@@ -159,6 +159,7 @@
   * [MiniMax](api-references/video-models/MiniMax/README.md)
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
+    * [hailuo-02](api-references/video-models/minimax/hailuo-02.md)
   * [Runway](api-references/video-models/runway/README.md)
     * [gen3a\_turbo](api-references/video-models/runway/gen3a_turbo.md)
     * [gen4\_turbo](api-references/video-models/runway/gen4_turbo.md)
