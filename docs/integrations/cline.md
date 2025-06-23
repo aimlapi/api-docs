@@ -121,7 +121,6 @@ These models have been tested by our team for compatibility with Cline integrati
 
 
 
-* [mistralai/Mixtral-8x22B-Instruct-v0.1](broken-reference)
 * [mistralai/Mixtral-8x7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)
 * [mistralai/Mistral-7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
 * [mistralai/Mistral-7B-Instruct-v0.2](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
@@ -137,8 +136,8 @@ These models have been tested by our team for compatibility with Cline integrati
 * [google/gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
-* [google/gemini-2.5-pro-exp-03-25](broken-reference)
-* [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
+
+- [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
 
 
 
