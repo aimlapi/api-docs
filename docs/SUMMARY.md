@@ -5,13 +5,13 @@
 
 ## Quickstart
 
-* [🧭 Documentation Map](README.md)
+* [Documentation Map](README.md)
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
 
-* [📒 All Model IDs](api-references/model-database.md)
+* [All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
     * [qwen-max](api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
@@ -285,7 +285,7 @@
 
 ## Integrations
 
-* [🧩 Our Integration List](integrations/our-integration-list.md)
+* [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
 * [Cline](integrations/cline.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
