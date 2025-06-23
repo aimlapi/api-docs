@@ -28,7 +28,7 @@ Both IDs listed above refer to the same model; we support them for backward comp
 
 ## Model Overview
 
-Gemini 2.5 Pro is Google's most advanced coding model as of Spring 2025. This is a preview version, building on the earlier [exp release](gemini-2.5-pro-exp.md). Leads in math and science tasks across major benchmarks.
+Gemini 2.5 Pro is Google's most advanced coding model as of Spring 2025. This is a preview version, building on the earlier [exp release](broken-reference). Leads in math and science tasks across major benchmarks.
 
 ## How to Make a Call
 
@@ -67,7 +67,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemini-2-5-pro-preview" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI gemini-2-5-pro-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

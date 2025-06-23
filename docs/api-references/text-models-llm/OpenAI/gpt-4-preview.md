@@ -53,9 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gpt-4-preview.json" path="/v1/chat/completions" method="post" %}
-[gpt-4-preview.json](gpt-4-preview.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-4-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4-preview.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

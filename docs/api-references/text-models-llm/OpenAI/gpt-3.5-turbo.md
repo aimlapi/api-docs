@@ -56,9 +56,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gpt-3.5-turbo.json" path="/v1/chat/completions" method="post" %}
-[gpt-3.5-turbo.json](gpt-3.5-turbo.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-3-5-turbo" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-3-5-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-3.5-turbo.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

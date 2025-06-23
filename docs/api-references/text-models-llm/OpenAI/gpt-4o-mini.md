@@ -53,9 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gpt-4o-mini.json" path="/v1/chat/completions" method="post" %}
-[gpt-4o-mini.json](gpt-4o-mini.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-4o-mini" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4o-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-mini.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

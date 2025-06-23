@@ -3,9 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `togethercomputer/m2-bert-80M-2k-retrieval`
 * `togethercomputer/m2-bert-80M-32k-retrieval`
-* `togethercomputer/m2-bert-80M-8k-retrieval`
 {% endhint %}
 
 ## Model Overview

@@ -1,5 +1,7 @@
 # gpt-4
 
+
+
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -52,9 +54,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gpt-4.json" path="/v1/chat/completions" method="post" %}
-[gpt-4.json](gpt-4.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-4" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

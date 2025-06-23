@@ -57,9 +57,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="gpt-4o.json" path="/v1/chat/completions" method="post" %}
-[gpt-4o.json](gpt-4o.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-4o" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4o](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

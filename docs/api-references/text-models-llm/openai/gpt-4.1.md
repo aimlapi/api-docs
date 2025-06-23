@@ -54,8 +54,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="ai-ml-api-documentation-api" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="gpt-4-1" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1.json)
 {% endopenapi-operation %}
 
 ## Code Example (Python)

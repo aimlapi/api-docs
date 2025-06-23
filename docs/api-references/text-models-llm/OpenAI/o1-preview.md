@@ -53,9 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="o1-preview.json" path="/v1/chat/completions" method="post" %}
-[o1-preview.json](o1-preview.json)
-{% endopenapi %}
+{% openapi-operation spec="o1-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI o1-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o1-preview.json)
+{% endopenapi-operation %}
 
 ## Code Example (Python)
 

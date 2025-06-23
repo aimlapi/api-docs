@@ -16,6 +16,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json)
-{% endopenapi %}
+{% openapi-operation spec="gpt-4o-audio-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4o-audio-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json)
+{% endopenapi-operation %}
