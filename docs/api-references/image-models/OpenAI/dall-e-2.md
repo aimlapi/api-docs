@@ -1,6 +1,18 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # DALL·E 2
-
-
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
@@ -19,7 +31,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="dall-e-2" path="/v1/images/generations" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI dall-e-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/dall-e-2.json)
 {% endopenapi-operation %}
 
 ## Quick Example
