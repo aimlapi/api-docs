@@ -63,6 +63,7 @@
   * [MiniMax](api-references/text-models-llm/MiniMax/README.md)
     * [text-01](api-references/text-models-llm/MiniMax/text-01.md)
     * [abab6.5s-chat](api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
+    * [m1](api-references/text-models-llm/minimax/m1.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [codestral-2501](api-references/text-models-llm/Mistral-AI/codestral-2501.md)
     * [mistral-nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)

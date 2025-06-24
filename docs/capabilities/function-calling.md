@@ -186,3 +186,4 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
+* [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
