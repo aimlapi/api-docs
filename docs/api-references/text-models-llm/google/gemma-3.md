@@ -17,7 +17,6 @@ layout:
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/gemma-3-1b-it`
 * `google/gemma-3-4b-it`
 * `google/gemma-3-12b-it`
 * `google/gemma-3-27b-it`
@@ -64,7 +63,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemma-3" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI gemma-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3.json)
 {% endopenapi-operation %}
 
 ## Code Example
