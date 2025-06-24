@@ -1,17 +1,14 @@
 # Table of contents
 
-* [📞 Contact Sales](https://calendly.com/aimlapi/30min)
-* [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
-
 ## Quickstart
 
-* [Documentation Map](README.md)
+* [🧭 Documentation Map](README.md)
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
 
-* [All Model IDs](api-references/model-database.md)
+* [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
     * [qwen-max](api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
@@ -272,6 +269,11 @@
 * [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 * [qp](faq/qp.md)
+
+***
+
+* [📞 Contact Sales](https://calendly.com/aimlapi/30min)
+* [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 
 ## Errors and Messages
 
