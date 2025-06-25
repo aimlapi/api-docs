@@ -16,12 +16,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
 Generating a video using this model involves sequentially calling two endpoints:&#x20;
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 Below, you can find two corresponding API schemas and an example with both endpoint calls.
+
+</details>
 
 ## API Schemas
 
@@ -34,7 +40,7 @@ The prompt will be automatically enhanced using AI. To disable this feature, set
 {% endhint %}
 
 {% openapi-operation spec="veo3" path="/v2/generate/video/google/generation" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI veo3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -44,7 +50,7 @@ After sending a request for video generation, this task is added to the queue. B
 &#x20;or take a bit more.&#x20;
 
 {% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

@@ -30,9 +30,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="recraft-v3.json" path="/v1/images/generations" method="post" %}
-[recraft-v3.json](recraft-v3.json)
-{% endopenapi %}
+{% openapi-operation spec="recraft-v3" path="/v1/images/generations" method="post" %}
+[OpenAPI recraft-v3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/RecraftAI/recraft-v3.json)
+{% endopenapi-operation %}
 
 ## Quick Example
 

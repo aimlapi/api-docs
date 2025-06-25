@@ -23,12 +23,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
 Generating a video using this model involves sequentially calling two endpoints:&#x20;
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 Below, you can find two corresponding API schemas and examples for both endpoint calls.
+
+</details>
 
 ## API Schemas
 

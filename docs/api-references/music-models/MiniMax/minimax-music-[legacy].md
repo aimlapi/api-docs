@@ -12,31 +12,29 @@ An advanced AI model that generates diverse high-quality audio compositions by a
 
 ## How to Make a Call
 
-{% stepper %}
-{% step %}
-### Setup You Can’t Skip&#x20;
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
+### :digit\_one:  Setup You Can’t Skip
 
 :black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
-{% endstep %}
 
-{% step %}
-### Copy the code example
+### :digit\_two:  Copy the code example
 
 At the bottom of this page, you'll find [a code example](minimax-music-\[legacy].md#quick-code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
-Generating an audio sample using this model involves sequentially calling two endpoints:&#x20;
+Generating a music piece using this model involves sequentially calling two endpoints:&#x20;
 
 * The first one is for creating and sending a music generation task to the server (returns a generation ID).
-* The second one is for requesting the generated audio sample from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated piece from the server using the generation ID received from the first endpoint.&#x20;
 
 The code example combines both endpoint calls.
 {% endhint %}
-{% endstep %}
 
-{% step %}
-### Modify the code example
+### :digit\_three:  Modify the code example
 
 :black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
 :black\_small\_square:  Provide your lyrics via the `prompt` parameter. The model will use it to generate a song.&#x20;
@@ -46,18 +44,20 @@ Keep in mind that the maximum length of generated audio is 1 minute. If you prov
 {% endhint %}
 
 :black\_small\_square:  Via `reference_audio_url` parameter, provide a URL to a reference track from which the model will extract the genre, style, tempo, vocal and instrument timbres, and the overall mood of the piece.
-{% endstep %}
 
-{% step %}
-### Run your modified code
+### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Run your modified code in your development environment. Response time depends on various factors, but it rarely exceeds 1 minute.
-{% endstep %}
-{% endstepper %}
+Only  `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](minimax-music-\[legacy].md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
+
+### :digit\_five:  Run your modified code
+
+Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds 1 minute.
 
 {% hint style="success" %}
 If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
 {% endhint %}
+
+</details>
 
 ## API Schemas
 

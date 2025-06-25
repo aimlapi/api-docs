@@ -18,9 +18,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-schnell.json" path="/v1/images/generations" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-schnell.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-schnell.json)
-{% endopenapi %}
+{% openapi-operation spec="flux-schnell" path="/v1/images/generations" method="post" %}
+[OpenAPI flux-schnell](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-schnell.json)
+{% endopenapi-operation %}
 
 ## Quick Example
 

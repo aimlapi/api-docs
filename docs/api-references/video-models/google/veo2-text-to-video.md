@@ -10,17 +10,15 @@ This documentation is valid for the following list of our models:
 
 Google’s cutting-edge AI model designed to generate highly realistic and cinematic video content from textual prompts or a combination of text and images. Leveraging advanced machine learning techniques, Veo2 excels in creating videos with natural motion, realistic physics, and professional-grade visual fidelity.
 
-Key Features:
-
-* Text-to-Video (T2V): Converts descriptive text into dynamic video content.
-* High Resolution Support: Generates videos up to 4K resolution for professional-grade outputs.
-* Multimodal Input Encoding: Integrates text and image inputs seamlessly for creative flexibility.
-
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 ## How to Make a Call
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
 
 Generating a video using this model involves sequentially calling two endpoints:&#x20;
 
@@ -28,6 +26,8 @@ Generating a video using this model involves sequentially calling two endpoints:
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 Below, you can find two corresponding API schemas and examples for both endpoint calls.
+
+</details>
 
 ## API Schemas
 

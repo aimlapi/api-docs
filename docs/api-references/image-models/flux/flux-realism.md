@@ -19,9 +19,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-realism.json" path="/v1/images/generations" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-realism.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-realism.json)
-{% endopenapi %}
+{% openapi-operation spec="flux-realism" path="/v1/images/generations" method="post" %}
+[OpenAPI flux-realism](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-realism.json)
+{% endopenapi-operation %}
 
 ## Quick Example
 

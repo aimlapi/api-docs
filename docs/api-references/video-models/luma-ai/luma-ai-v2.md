@@ -12,12 +12,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
 Generating a video using this model involves making two sequential API calls:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
 * The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.  Within this API call, you can use either the standard endpoint to retrieve the generated/extended video or a special endpoint to request multiple generations at once.
 
 Below, you can find three corresponding API schemas and examples for all endpoint calls.
+
+</details>
 
 ## API Schemas
 
@@ -26,7 +32,7 @@ Below, you can find three corresponding API schemas and examples for all endpoin
 `loop` parameter controls if the generated video will be looped.
 
 {% openapi-operation spec="luma-t2v-v2" path="/v2/generate/video/luma-ai/generation" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI luma-t2v-v2](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 ### Fetch generation
@@ -46,7 +52,7 @@ You cannot wait for an `failed` state.
 {% endhint %}
 
 {% openapi-operation spec="luma-gen-fetch" path="/v2/generate/video/luma-ai/generation" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI luma-gen-fetch](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Example: Fetch Single Generation
@@ -121,7 +127,7 @@ If you are waiting for a video to be fully generated, you can wait for the `comp
 Instead of using the `generation_id` parameter, you will pass `generation_ids`, which can be an array of IDs. This parameter can also accept IDs separated by commas.
 
 {% openapi-operation spec="luma-gens-fetch" path="/v2/generate/video/luma-ai/generations" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI luma-gens-fetch](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Example: Fetch Multiple Generations
@@ -276,7 +282,7 @@ Or, in the case of using a previously generated video:
 ```
 
 {% openapi-operation spec="luma-t2v-v2" path="/v2/generate/video/luma-ai/generation" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI luma-t2v-v2](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 ## Examples

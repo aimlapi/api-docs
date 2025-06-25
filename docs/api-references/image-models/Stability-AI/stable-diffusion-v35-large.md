@@ -30,9 +30,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="stable-diffusion-v35-large.json" path="/v1/images/generations" method="post" %}
-[stable-diffusion-v35-large.json](stable-diffusion-v35-large.json)
-{% endopenapi %}
+{% openapi-operation spec="stable-diffusion-v35-large" path="/v1/images/generations" method="post" %}
+[OpenAPI stable-diffusion-v35-large](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Stability-AI/stable-diffusion-v35-large.json)
+{% endopenapi-operation %}
 
 ## Quick Example
 
