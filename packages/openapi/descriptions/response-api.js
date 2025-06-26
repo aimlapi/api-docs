@@ -698,6 +698,42 @@ Configuration options for reasoning models.`,
   },
   tool_choice: {
     desc: `How the model should select which tool (or tools) to use when generating a response.`,
+    tool_choice_mode: {
+      desc: `Controls which (if any) tool is called by the model.
+
+none means the model will not call any tool and instead generates a message.
+
+auto means the model can pick between generating a message or calling one or more tools.
+
+required means the model must call one or more tools.`
+    },
+    hosted_tool: {
+      desc: `Indicates that the model should use a built-in tool to generate a response.`,
+      type: {
+        desc: `The type of hosted tool the model should to use.`,
+      }
+    },
+    function_tool: {
+      desc: `Use this option to force the model to call a specific function.`,
+      name: {
+        desc: `The name of the function to call.`
+      },
+      type: {
+        desc: `For function calling, the type is always function.`
+      },
+    },
+    mcp_tool: {
+      desc: `Use this option to force the model to call a specific tool on a remote MCP server.`,
+      server_label: {
+        desc: `The label of the MCP server to use.`
+      },
+      type: {
+        desc: `For MCP tools, the type is always mcp.`
+      },
+      name: {
+        desc: `The name of the tool to call on the server.`
+      },
+    },
   },
   tools: {
     desc: `An array of tools the model may call while generating a response. You can specify which tool to use by setting the tool_choice parameter.`,
