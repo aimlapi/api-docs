@@ -11,3 +11,4 @@ export { default as ocr } from './descriptions/ocr.js';
 export { default as speechToText } from './descriptions/speech-to-text.js';
 export { default as textToSpeech } from './descriptions/text-to-speech.js';
 export { default as vision } from './descriptions/vision.js';
+export { default as responseApi } from './descriptions/response-api.js';
