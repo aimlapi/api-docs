@@ -125,10 +125,6 @@ agent.print_response("Share a 2 sentence horror story", stream=True)
 ```
 {% endcode %}
 {% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
 {% endtabs %}
 
 ### Image agent
@@ -158,10 +154,6 @@ agent.print_response(
 ```
 {% endcode %}
 {% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
 {% endtabs %}
 
 ### Tool use
@@ -187,10 +179,6 @@ agent = Agent(
 agent.print_response("Whats happening in France?")
 ```
 {% endcode %}
-{% endtab %}
-
-{% tab title="Second Tab" %}
-
 {% endtab %}
 {% endtabs %}
 
