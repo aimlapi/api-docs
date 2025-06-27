@@ -127,7 +127,7 @@ export default {
               desc: `A text output from the model.`,
               annotations: {
                 desc: `The annotations of the text output.`,
-                URL_citation: {
+                url_citation: {
                   desc: `A citation for a web resource used to generate a model response.`,
                   end_index: {
                     desc: `The index of the last character of the URL citation in the message.`,
@@ -258,6 +258,12 @@ export default {
               },
               type: {
                 desc: `Specifies the event type. For a scroll action, this property is always set to scroll.`,
+              },
+              x: {
+                desc: `The x-coordinate where the scroll occurred.`,
+              },
+              y: {
+                desc: `The y-coordinate where the scroll occurred.`,
               },
             },
             type: {
