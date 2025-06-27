@@ -20,7 +20,7 @@ Here's a usage option comparison table:
 git clone https://github.com/assafelovic/gpt-researcher.git  
 ```
 
-**2. Set up the environment:** copy `.env.example` to `.env` and add your AI/ML API keys in the following format:
+**2. Set up the environment:** copy `.env.example` to `.env` and add your [AIMLAPI key](https://aimlapi.com/app/keys) and other environment variables in the following format:
 
 ```bash
 AIMLAPI_API_KEY=***

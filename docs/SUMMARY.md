@@ -291,6 +291,7 @@
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
 * [Cline](integrations/cline.md)
+* [ElizaOS](integrations/elizaos.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)

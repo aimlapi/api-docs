@@ -1,5 +1,5 @@
 ---
-description: coming soon
+description: coming soon!
 hidden: true
 ---
 
