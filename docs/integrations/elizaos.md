@@ -16,6 +16,8 @@ cp .env.example .env
 bun i && bun run build && bun start
 ```
 
+You can find more details in the [official documentation](https://eliza.how/docs/intro#installation).
+
 ## How to Use AIML API via ElizaOS
 
 1. Define your [AIMLAPI key](https://aimlapi.com/app/keys) and other environment variables:
@@ -40,7 +42,11 @@ AIMLAPI_LARGE_MODEL=google/gemini-2.0-pro
 }
 ```
 
-ElizaOS provides a UI at [http://localhost:3000](http://localhost:3000):
+ElizaOS provides a UI at [http://localhost:3000](http://localhost:3000). Each configured character appears as a separate conversation partner in the left-hand panel:
+
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Click the small speaker icon below any message to hear it read aloud:
 
 <figure><img src="../.gitbook/assets/изображение (6).png" alt=""><figcaption></figcaption></figure>
 
