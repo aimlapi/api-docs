@@ -53,5 +53,6 @@ You work with Make through the browser; there’s no need to install any compone
 
 You can find more details in the [official documentation](https://help.make.com/create-your-first-scenario).
 
+## Our Supported Models
 
-
+Any of our [text models](../api-references/text-models-llm/#complete-text-model-list) can be used to process your requests — for instance, [gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md).

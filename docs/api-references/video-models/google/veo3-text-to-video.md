@@ -61,6 +61,8 @@ The code below creates a video generation task, then automatically polls the ser
 This model produces highly detailed and natural-looking videos, so generation may take around 2 minutes for a 8-second video with audio.
 {% endhint %}
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -148,6 +150,137 @@ if __name__ == "__main__":
     main()
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+const apiKey = "<YOUR_AIMLAPI_KEY>";
+const baseUrl = "https://api.aimlapi.com/v2";
+const https = require("https");
+const { URL } = require("url");
+
+// Creating and sending a video generation task to the server
+function generateVideo(callback) {
+    const data = JSON.stringify({
+        model: "google/veo3",
+        prompt: `
+A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
+`
+    });
+
+    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    const options = {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+            "Content-Length": Buffer.byteLength(data)
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            if (res.statusCode >= 400) {
+                console.error(`Error: ${res.statusCode} - ${body}`);
+                callback(null);
+            } else {
+                const result = JSON.parse(body);
+                callback(result);
+            }
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.write(data);
+    req.end();
+}
+
+// Requesting the result of the task from the server using the generation_id
+function getVideo(genId, callback) {
+    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    url.searchParams.append("generation_id", genId);
+
+    const options = {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            const result = JSON.parse(body);
+            callback(result);
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.end();
+}
+
+// Initiates video generation and checks the status every 10 seconds until completion or timeout
+function main() {
+    generateVideo((genResponse) => {
+        if (!genResponse || !genResponse.id) {
+            console.error("No generation ID received.");
+            return;
+        }
+
+        const genId = genResponse.id;
+        console.log("Gen_ID:", genId);
+
+        const timeout = 1000 * 1000; // 1000 sec
+        const interval = 10 * 1000; // 10 sec
+        const startTime = Date.now();
+
+        const checkStatus = () => {
+            if (Date.now() - startTime >= timeout) {
+                console.log("Timeout reached. Stopping.");
+                return;
+            }
+
+            getVideo(genId, (responseData) => {
+                if (!responseData) {
+                    console.error("Error: No response from API");
+                    return;
+                }
+
+                const status = responseData.status;
+                console.log("Status:", status);
+
+                if (["waiting", "active", "queued", "generating"].includes(status)) {
+                    console.log("Still waiting... Checking again in 10 seconds.");
+                    setTimeout(checkStatus, interval);
+                } else {
+                    console.log("Processing complete:\n", responseData);
+                }
+            });
+        };
+
+        checkStatus();
+    });
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
