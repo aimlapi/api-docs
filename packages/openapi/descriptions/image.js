@@ -17,6 +17,9 @@ export default {
     width_height_32: {
       desc: `For both height and width, the value must be a multiple of 32.`,
     },
+    bytedance: {
+      desc: `The total image area (height x width) must be between 262,144 and 4,194,304 pixels.`,
+    },
     default: { desc: `The size of the generated image.` },
   },
   num_inference_steps: { desc: `The number of inference steps to perform.` },
