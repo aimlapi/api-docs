@@ -116,7 +116,12 @@ export default {
     desc: `The URL to receive a one-time notification when the task is completed. If set, the server will send an HTTP POST request with the final result when the task ends.`,
   },
   resolution: {
-    desc: `the dimensions of the video display. 1080p corresponds to 1920 x 1080 pixels, 768p corresponds to 1366 x 768 pixels.`,
+    minimax: {
+      desc: `The dimensions of the video display. 1080p corresponds to 1920 x 1080 pixels, 768p corresponds to 1366 x 768 pixels.`,
+    },
+    bytedance: {
+      desc: `An enumeration where the short side of the video frame determines the resolution.`,
+    },
   },
   watermark: {
     desc: `Whether the video contains a watermark`,
