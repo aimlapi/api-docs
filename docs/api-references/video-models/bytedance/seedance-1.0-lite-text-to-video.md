@@ -54,7 +54,7 @@ If the video generation task status is `complete`, the response will include the
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
 {% hint style="warning" %}
-Generation may take around 50-60 seconds for a 5-second video.
+Generation may take around 40-50 seconds for a 5-second video.
 {% endhint %}
 
 {% tabs %}

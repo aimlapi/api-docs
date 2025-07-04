@@ -91,6 +91,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **BAAI**:    [Embedding](api-references/embedding-models/BAAI/)
 
+**ByteDance**:   [Image](api-references/image-models/bytedance/)   [Video](api-references/video-models/bytedance/)
+
 **Cohere**:    [Text/Chat](api-references/text-models-llm/Cohere/)
 
 <mark style="background-color:green;">**DeepSeek**</mark>:    [Text/Chat](api-references/text-models-llm/DeepSeek/)

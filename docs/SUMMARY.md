@@ -130,6 +130,7 @@
 * [Video Models](api-references/video-models/README.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
+    * [Seedance 1.0 lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-text-to-video.md)
   * [Google](api-references/video-models/google/README.md)
