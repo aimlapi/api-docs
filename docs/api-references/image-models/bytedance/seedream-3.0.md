@@ -68,7 +68,7 @@ async function main() {
       method: 'POST',
       headers: {
         // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer 47d5727779014fcdbbb8c98ae3640da1',
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
