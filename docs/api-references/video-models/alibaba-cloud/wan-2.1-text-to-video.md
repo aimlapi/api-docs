@@ -46,7 +46,8 @@ This endpoint creates and sends a video generation task to the server — and re
 
 ### Fetch the video
 
-This endpoint lets you request the generated video from the server using the generation ID received from the first endpoint.&#x20;
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json" path="/v2/generate/video/alibaba/generation" method="get" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-v2.1-text-to-video-pair.json)

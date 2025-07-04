@@ -36,7 +36,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ## API Schemas
 
-### Video Generation
+### Create a video generation task and send it to the server
 
 You can generate a video using this API.
 
@@ -45,6 +45,9 @@ You can generate a video using this API.
 {% endopenapi %}
 
 ### Fetch the video
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json" path="/v2/generate/video/google/generation" method="get" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json)

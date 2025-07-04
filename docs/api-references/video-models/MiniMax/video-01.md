@@ -39,6 +39,9 @@ Below, you can find two corresponding API schemas.
 
 ### Retrieve the generated video from the server
 
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
 {% openapi src="video-01-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
 [video-01-pair.json](video-01-pair.json)
 {% endopenapi %}

@@ -128,6 +128,8 @@
     * [Stable Diffusion v3 Medium](api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
     * [Stable Diffusion v3.5 Large](api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
 * [Video Models](api-references/video-models/README.md)
+  * [ByteDance](api-references/video-models/bytedance/README.md)
+    * [Seedance 1.0 lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-text-to-video.md)
   * [Google](api-references/video-models/google/README.md)
