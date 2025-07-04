@@ -33,7 +33,7 @@ Below, you can find both corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a prompt. \
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="seedance-1-0-lite-i2v" path="/v2/generate/video/bytedance/generation" method="post" %}
