@@ -127,8 +127,7 @@ export default {
     desc: `Whether the video contains a watermark`,
   },
   camerafixed: {
-    desc: `Whether to fix the camera position. Enum values:
-
+    desc: `Whether to fix the camera position.
     true: Fix the camera position. The platform will append instructions to fix the camera position in the user's prompt, but the actual effect is not guaranteed.
     false: Do not fix the camera position.`
   }
