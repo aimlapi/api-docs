@@ -65,6 +65,8 @@ You can generate a video using this API. In the basic setup, you need only an im
 
 ### Retrieve the generated video from the server
 
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in a minute or take a bit more.&#x20;
+
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json" path="/v2/generate/video/runway/generation" method="get" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
 {% endopenapi %}

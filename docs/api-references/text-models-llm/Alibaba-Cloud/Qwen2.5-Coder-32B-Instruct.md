@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Qwen2.5-Coder-32B-Instruct
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen2-5-coder-32b-instruct" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI qwen2-5-coder-32b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example

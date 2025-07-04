@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # stt \[legacy]
 
 {% hint style="warning" %}
@@ -25,6 +11,6 @@ This service uses per-second billing. The cost of audio transcription is based o
 {% endhint %}
 
 {% openapi-operation spec="stt-legacy" path="/v1/stt" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI stt-legacy](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 

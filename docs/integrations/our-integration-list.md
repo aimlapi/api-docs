@@ -1,16 +1,5 @@
 ---
 description: About third-party integrations
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Our Integration List

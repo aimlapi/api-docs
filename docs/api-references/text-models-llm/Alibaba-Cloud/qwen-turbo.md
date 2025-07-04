@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # qwen-turbo
 
 {% hint style="info" %}
@@ -60,7 +46,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen-turbo" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI qwen-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example

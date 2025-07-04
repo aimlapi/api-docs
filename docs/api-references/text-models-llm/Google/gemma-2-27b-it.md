@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # gemma-2
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemma-2-27b-it" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI gemma-2-27b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-2-27b-it.json)
 {% endopenapi-operation %}
 
 ## Code Example

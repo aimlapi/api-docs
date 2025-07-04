@@ -2,17 +2,6 @@
 description: >-
   General information about types of using error statuses/messages and their
   structure.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # General Info

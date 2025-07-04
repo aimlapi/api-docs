@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # DeepSeek Prover V2
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-prover-v2" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI deepseek-prover-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-prover-v2.json)
 {% endopenapi-operation %}
 
 ## Code Example

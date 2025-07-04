@@ -1,17 +1,6 @@
 ---
 description: FAQ section about max_tokens parameter and its possible impact on a request.
 icon: circle-question
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Can I call API in the asynchronous mode?

@@ -1,17 +1,6 @@
 ---
 description: FAQ section about AI/ML API Free Tier option.
 icon: circle-question
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # How to use the Free Tier?

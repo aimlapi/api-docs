@@ -4,17 +4,6 @@ description: >-
   including generating an API key, configuring the Base URL, and running the
   first request.
 icon: hand-wave
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Setting Up

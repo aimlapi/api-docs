@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # gemma-3n-4b
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="test-constructor-2" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI test-constructor-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3n-test-contructor.json)
 {% endopenapi-operation %}
 
 ## Code Example

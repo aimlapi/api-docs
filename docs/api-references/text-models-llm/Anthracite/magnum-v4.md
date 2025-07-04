@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # magnum-v4
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="magnum-v4" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI magnum-v4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthracite/magnum-v4.json)
 {% endopenapi-operation %}
 
 ## Code Example

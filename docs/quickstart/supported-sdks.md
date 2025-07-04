@@ -3,17 +3,6 @@ description: >-
   A description of the software development kits (SDKs) that can be used to
   interact with the AIML API.
 icon: hammer-brush
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Supported SDKs

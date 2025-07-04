@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Vision in Text Models (Image-To-Text)
 
 This article describes a specific capability of text models: vision, which enables image-to-text conversion. A list of models that support it is provided at the end of this page.
@@ -65,9 +51,7 @@ print(response.json())
 * [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
 * [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
-* [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
-* [gemini-1.5-flash](../api-references/text-models-llm/Google/gemini-1.5-flash.md)
-* [gemini-1.5-pro](../api-references/text-models-llm/Google/gemini-1.5-pro.md)
+* [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)-
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)

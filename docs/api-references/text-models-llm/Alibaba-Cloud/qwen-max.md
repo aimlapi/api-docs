@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # qwen-max
 
 {% hint style="info" %}
@@ -62,7 +48,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen-max" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI qwen-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-max.json)
 {% endopenapi-operation %}
 
 ## Code Example

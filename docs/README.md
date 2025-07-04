@@ -2,20 +2,6 @@
 description: Learn how to get started with the AI/ML API
 cover: .gitbook/assets/rqiuor.jpg
 coverY: 0
-layout:
-  cover:
-    visible: false
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # 🧭 Documentation Map

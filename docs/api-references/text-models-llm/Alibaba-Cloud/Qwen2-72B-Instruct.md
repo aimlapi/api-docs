@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Qwen2-72B-Instruct
 
 {% hint style="info" %}
@@ -63,7 +49,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen2-72b-instruct-2nd-try" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI qwen2-72b-instruct-2nd-try](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2-72B-Instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example

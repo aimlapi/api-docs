@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # DeepSeek R1
 
 {% hint style="info" %}
@@ -66,7 +52,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-r1" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI deepseek-r1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-r1.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -1,17 +1,6 @@
 ---
 description: Short overview of the available video model providers.
 icon: video
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Video Models

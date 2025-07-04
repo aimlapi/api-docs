@@ -1,17 +1,6 @@
 ---
 description: A description of image generation process using AIML API image models.
 icon: image-landscape
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Image Models

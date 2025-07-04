@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # gemini-2.5-flash-preview
 
 {% hint style="info" %}
@@ -59,7 +45,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="local-gemini-2-5-flash-preview" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI local-gemini-2-5-flash-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-flash-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

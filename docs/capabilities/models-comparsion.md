@@ -2,17 +2,6 @@
 description: >-
   A practical example for comparing responses from different models to the same
   question.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Model comparison

@@ -27,7 +27,7 @@ from agno.models.aimlapi import AIMLApi
 
 agent = Agent(
     model=AIMLApi(
-        id="google/gemini-1.5-flash", 
+        id="gpt-4o", 
         api_key="<YOUR_AIMLAPI_KEY>"
     ), 
     markdown=True, 

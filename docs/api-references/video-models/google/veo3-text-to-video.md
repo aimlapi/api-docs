@@ -45,9 +45,7 @@ The prompt will be automatically enhanced using AI. To disable this feature, set
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in a couple of minutes
-
-&#x20;or take a bit more.&#x20;
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in a couple of minutes or take a bit more.&#x20;
 
 {% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
 [OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)

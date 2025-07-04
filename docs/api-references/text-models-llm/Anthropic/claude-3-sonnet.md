@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Claude 3 Sonnet
 
 {% hint style="info" %}
@@ -66,7 +52,7 @@ If you need a more detailed walkthrough for setting up your development environm
 </details>
 
 {% openapi-operation spec="claude-3-sonnet" path="/v1/chat/completions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI claude-3-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-sonnet.json)
 {% endopenapi-operation %}
 
 ## Code Example

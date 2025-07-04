@@ -2,17 +2,6 @@
 description: >-
   Description, API schema, and usage examples of the specialized solution — AI
   Search Engine.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # AI Search Engine

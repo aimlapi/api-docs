@@ -2,17 +2,6 @@
 description: >-
   Description of code generation as a capability of some our AI models and a
   list of supporting models.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Code Generation

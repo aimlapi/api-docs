@@ -1,17 +1,6 @@
 ---
 description: Overview of the available speech model providers.
 icon: waveform
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Voice/Speech Models

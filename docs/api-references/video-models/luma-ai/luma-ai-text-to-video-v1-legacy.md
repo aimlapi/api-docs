@@ -1,16 +1,5 @@
 ---
 description: 'Description for Luma AI Text-to-Video model: Pricing, API Reference, Examples.'
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Text-to-Video v1 (legacy)
