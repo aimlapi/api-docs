@@ -23,7 +23,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Designed for deeper reasoning and tougher questions, o3-pro uses more compute to deliver higher-quality answers. It’s only available in the /responses API, which supports multi-turn model interactions and will enable more advanced features in the future. Some complex requests may take a few minutes.
+Designed for deeper reasoning and tougher questions, o3-pro uses more compute to deliver higher-quality answers. It’s only available in the `/responses` API, which supports multi-turn model interactions and will enable more advanced features in the future. Some complex requests may take a few minutes.
 
 ## How to Make a Call
 
@@ -62,7 +62,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% hint style="warning" %}
-**Note:** This model can ONLY be called via the **`/responses`** endpoint!
+Note: This model can ONLY be called via the `/responses` endpoint!
 {% endhint %}
 
 {% openapi-operation spec="o3-pro-response" path="/v1/responses" method="post" %}
