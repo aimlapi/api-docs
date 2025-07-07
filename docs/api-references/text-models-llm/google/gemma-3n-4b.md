@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 {% code overflow="wrap" %}
 ```python
 import requests
-import json
+import json  # for getting a structured output with indentation
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",

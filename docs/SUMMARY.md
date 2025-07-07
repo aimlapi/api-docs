@@ -91,6 +91,7 @@
     * [o1-preview](api-references/text-models-llm/OpenAI/o1-preview.md)
     * [o3](api-references/text-models-llm/openai/o3.md)
     * [o3-mini](api-references/text-models-llm/OpenAI/o3-mini.md)
+    * [o3-pro](api-references/text-models-llm/openai/o3-pro.md)
     * [gpt-4.5-preview](api-references/text-models-llm/OpenAI/gpt-4.5-preview.md)
     * [gpt-4.1](api-references/text-models-llm/openai/gpt-4.1.md)
     * [gpt-4.1-mini](api-references/text-models-llm/openai/gpt-4.1-mini.md)
