@@ -65,6 +65,8 @@ If you need a more detailed walkthrough for setting up your development environm
 Note: This model can ONLY be called via the `/responses` endpoint!
 {% endhint %}
 
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others (like `openai/o3-pro`) support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
 {% openapi-operation spec="o3-pro-response" path="/v1/responses" method="post" %}
 [OpenAPI o3-pro-response](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-pro.json)
 {% endopenapi-operation %}
