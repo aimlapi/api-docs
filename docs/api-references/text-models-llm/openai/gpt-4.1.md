@@ -117,3 +117,140 @@ print(data)
 {% endcode %}
 
 </details>
+
+## Code Example #2: Using /responses Endpoint
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import json   # for getting a structured output with indentation
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/responses",
+    headers={
+        "Content-Type":"application/json", 
+
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"openai/gpt-4.1-2025-04-14",
+        "input":"Hello"  # Insert your question for the model here, instead of Hello   
+    }
+)
+
+data = response.json()
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/responses', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'openai/gpt-4.1-2025-04-14',
+        input: 'Hello',  // Insert your question here, instead of Hello 
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(JSON.stringify(data, null, 2));
+
+  } catch (error) {
+    console.error('Error', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+{
+  "id": "resp_686ba45ce63481a2a4b1fad55d2bea8102a1cc22f1a1bcf1",
+  "object": "response",
+  "created_at": 1751884892,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 512,
+  "model": "openai/gpt-4.1-2025-04-14",
+  "output": [
+    {
+      "id": "rs_686ba463d18481a29dde85cfd7b055bf02a1cc22f1a1bcf1",
+      "type": "reasoning",
+      "summary": []
+    },
+    {
+      "id": "msg_686ba463d4e081a2b2e2aff962ab00f702a1cc22f1a1bcf1",
+      "type": "message",
+      "status": "in_progress",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "Hello! How can I help you today?"
+        }
+      ],
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "previous_response_id": null,
+  "reasoning": {
+    "effort": "medium",
+    "summary": null
+  },
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "text"
+    }
+  },
+  "tool_choice": "auto",
+  "tools": [],
+  "top_p": 1,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 294,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 2520,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2814
+  },
+  "metadata": {},
+  "output_text": "Hello! How can I help you today?"
+}
+```
+{% endcode %}
+
+</details>
