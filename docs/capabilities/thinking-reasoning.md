@@ -38,6 +38,7 @@ Supported models:
 ***
 
 * [google/gemini-2.5-flash-preview](../api-references/text-models-llm/google/gemini-2.5-flash-preview.md)
+* [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 
 ***
 
