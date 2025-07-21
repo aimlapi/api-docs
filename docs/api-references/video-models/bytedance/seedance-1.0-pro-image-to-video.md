@@ -58,7 +58,7 @@ This endpoint creates and sends a video generation task to the server — and re
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="bytedance-video-fetch" path="/v2/generate/video/bytedance/generation" method="get" %}
