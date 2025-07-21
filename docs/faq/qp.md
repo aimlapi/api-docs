@@ -1,6 +1,7 @@
 ---
 description: Test page
 hidden: true
+noIndex: true
 ---
 
 # qp

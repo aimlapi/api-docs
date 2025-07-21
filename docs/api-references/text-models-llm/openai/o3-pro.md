@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # o3-pro
 
 {% hint style="info" %}
@@ -207,3 +192,4 @@ main();
 {% endcode %}
 
 </details>
+
