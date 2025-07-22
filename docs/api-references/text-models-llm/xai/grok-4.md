@@ -1,3 +1,20 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # grok-4
 
 {% hint style="info" %}
@@ -46,7 +63,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-_Coming soon_
+{% openapi-operation spec="grok-4" path="/v1/chat/completions" method="post" %}
+[OpenAPI grok-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-4.json)
+{% endopenapi-operation %}
 
 ## Code Example
 

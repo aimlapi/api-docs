@@ -43,4 +43,5 @@ Supported models:
 ***
 
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
+* [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
 
