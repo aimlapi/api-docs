@@ -130,8 +130,8 @@ export default {
         - Maximum size per file: Up to 512 MB.
         - Text and document files: Up to 2 million tokens per file.
         - Spreadsheets (CSV, XLSX): Up to approximately 50 MB per file, depending on the number and size of rows.`,
-              },
             },
+          },
           file_name: {
             desc: `The file name specified by the user. This name can be used to reference the file when interacting with the model, especially if multiple files are uploaded.`,
           },
@@ -214,7 +214,7 @@ export default {
   stream_options: {
     desc: `Additional parameters for configuring the streaming mode.`,
     include_usage: {
-        desc: `Include token usage information in the stream.`
+      desc: `Include token usage information in the stream.`,
     },
   },
   top_p: {
@@ -447,5 +447,32 @@ export default {
   },
   ip: {
     desc: `IP from which a request is executed`,
+  },
+  search_mode: {
+    desc: `Controls the search mode used for the request. When set to 'academic', results will prioritize scholarly sources like peer-reviewed papers and academic journals.`,
+  },
+  search_domain_filter: {
+    desc: `A list of domains to limit search results to. Currently limited to 10 domains for Allowlisting and Denylisting. For Denylisting, add a - at the beginning of the domain string.`,
+  },
+  return_images: {
+    desc: `Determines whether search results should include images.`,
+  },
+  return_related_questions: {
+    desc: `Determines whether related questions should be returned.`,
+  },
+  search_recency_filter: {
+    desc: `Filters search results based on time (e.g., 'week', 'day').`,
+  },
+  search_after_date_filter: {
+    desc: `Filters search results to only include content published after this date. Format should be %m/%d/%Y (e.g. 3/1/2025)`,
+  },
+  search_before_date_filter: {
+    desc: `Filters search results to only include content published before this date. Format should be %m/%d/%Y (e.g. 3/1/2025)`,
+  },
+  last_updated_after_filter: {
+    desc: `Filters search results to only include content last updated after this date. Format should be %m/%d/%Y (e.g. 3/1/2025)`,
+  },
+  last_updated_before_filter: {
+    desc: `Filters search results to only include content last updated before this date. Format should be %m/%d/%Y (e.g. 3/1/2025)`,
   },
 };
