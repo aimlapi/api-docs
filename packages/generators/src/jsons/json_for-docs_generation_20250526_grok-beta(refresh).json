@@ -1,0 +1,13 @@
+[
+  {
+    "name": "x-ai/grok-beta",
+    "alias": "grok-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Grok-2 Beta"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "name": "#g1_nova-2-general",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-meeting",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-phonecall",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-voicemail",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-finance",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-conversationalai",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-video",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-medical",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-drivethru",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_nova-2-automotive",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_whisper-large",
+    "alias": "whisper-large",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "description": "description"
+  },
+  {
+    "name": "#g1_whisper-medium",
+    "alias": "whisper-medium",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "description": "description"
+  },
+  {
+    "name": "#g1_whisper-small",
+    "alias": "whisper-small",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "description": "description"
+  },
+  {
+    "name": "#g1_whisper-tiny",
+    "alias": "whisper-tiny",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "description": "description"
+  },
+  {
+    "name": "#g1_whisper-base",
+    "alias": "whisper-base",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-asteria-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-hera-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-luna-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-stella-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": ""
+  },
+  {
+    "name": "#g1_aura-athena-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-zeus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-orion-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-arcas-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-perseus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-angus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-orpheus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  },
+  {
+    "name": "#g1_aura-helios-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "description": "description"
+  }
+]

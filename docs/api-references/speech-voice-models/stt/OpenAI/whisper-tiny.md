@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* \#g1\_whisper-tiny
+* `#g1_whisper-tiny`
 {% endhint %}
 
 {% hint style="warning" %}
@@ -26,25 +26,27 @@ The Whisper models are primarily for AI research, focusing on model robustness, 
 
 The models are trained using 680,000 hours of audio and corresponding transcripts from the internet, with 65% being English audio and transcripts, 18% non-English audio with English transcripts, and 17% non-English audio with matching non-English transcripts, covering 98 languages in total.
 
+{% hint style="success" %}
+Whisper models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
+{% endhint %}
+
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
-
-### API Schema
+## API Schema
 
 #### Creating and sending a speech-to-text conversion task to the server
 
-{% openapi src="whisper-tiny.json" path="/v1/stt/create" method="post" %}
-[whisper-tiny.json](whisper-tiny.json)
-{% endopenapi %}
+{% openapi-operation spec="whisper-tiny-2025-05-28" path="/v1/stt/create" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/stt/{generation_id}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29 ](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 
 

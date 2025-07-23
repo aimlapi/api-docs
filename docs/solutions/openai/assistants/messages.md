@@ -17,9 +17,9 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 ### Create a Message
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-msg-create" path="/threads/{threadId}/messages" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -41,9 +41,9 @@ print(thread_message)
 
 ### Retrieve a list of Messages from a specific Thread along with their properties
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-msg-list" path="/threads/{threadId}/messages" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -61,9 +61,9 @@ print(thread_messages.data)
 
 ### Retrieve information about a specific Message by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-msg-info" path="/threads/{threadId}/messages/{messageId}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -84,9 +84,9 @@ print(message)
 
 ### Modify a specific message by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-msg-modify" path="/threads/{threadId}/messages/{messageId}" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -111,9 +111,9 @@ print(message)
 
 ### Delete a specific message by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/threads/{threadId}/messages/{messageId}" method="delete" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-msg-delete" path="/threads/{threadId}/messages/{messageId}" method="delete" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 

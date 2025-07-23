@@ -34,9 +34,9 @@ Note that queries can include advanced search syntax:
 
 ## API Schema
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v1/bagoodex/local-map" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="bagoodex-map" path="/v1/bagoodex/local-map" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Example
 

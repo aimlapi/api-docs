@@ -1,17 +1,6 @@
 ---
-icon: circle-question
 description: FAQ section about Pro Models category in AI/ML API.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+icon: circle-question
 ---
 
 # What are the Pro Models?

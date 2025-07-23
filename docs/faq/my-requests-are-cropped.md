@@ -1,17 +1,6 @@
 ---
-icon: circle-question
 description: FAQ section about max_tokens parameter and its possible impact on a request.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+icon: circle-question
 ---
 
 # Are my requests cropped?

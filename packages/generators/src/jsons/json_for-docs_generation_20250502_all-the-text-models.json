@@ -1,0 +1,1143 @@
+[
+  {
+    "name": "gpt-4o",
+    "alias": "gpt-4o",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's flagship model designed to integrate enhanced capabilities across text, vision, and audio, providing real-time reasoning. ",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "Chat GPT-4o"
+  },
+  {
+    "name": "gpt-4o-2024-08-06",
+    "alias": "gpt-4o",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's flagship model designed to integrate enhanced capabilities across text, vision, and audio, providing real-time reasoning. ",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "GPT-4o-2024-08-06"
+  },
+  {
+    "name": "gpt-4o-2024-05-13",
+    "alias": "gpt-4o",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's flagship model designed to integrate enhanced capabilities across text, vision, and audio, providing real-time reasoning.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "GPT-4o-2024-05-13"
+  },
+  {
+    "name": "gpt-4o-mini",
+    "alias": "gpt-4o-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's latest cost-efficient model designed to deliver advanced natural language processing and multimodal capabilities. It aims to make  AI more accessible and affordable, significantly enhancing the range of applications that can utilize AI technology.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "Chat GPT 4o mini"
+  },
+  {
+    "name": "gpt-4o-mini-2024-07-18",
+    "alias": "gpt-4o-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's latest cost-efficient model designed to deliver advanced natural language processing and multimodal capabilities. It aims to make  AI more accessible and affordable, significantly enhancing the range of applications that can utilize AI technology.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "chatgpt-4o-latest",
+    "alias": "gpt-4o",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's flagship model designed to integrate enhanced capabilities across text, vision, and audio, providing real-time reasoning. ",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "gpt-4-turbo",
+    "alias": "gpt-4-turbo",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "The model enhances the already impressive capabilities of ChatGPT 4 by significantly reducing response times, making it ideal for applications requiring instant feedback. It maintains the advanced conversational abilities of ChatGPT 4, ensuring that speed enhancements do not sacrifice the depth and coherence of interactions.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "Chat GPT 4 Turbo"
+  },
+  {
+    "name": "gpt-4-turbo-2024-04-09",
+    "alias": "gpt-4-turbo",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "The model enhances the already impressive capabilities of ChatGPT 4 by significantly reducing response times, making it ideal for applications requiring instant feedback. It maintains the advanced conversational abilities of ChatGPT 4, ensuring that speed enhancements do not sacrifice the depth and coherence of interactions. Replacement for all previous GPT-4 preview models.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function",
+      "openai/chat-completion.vision"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "gpt-4",
+    "alias": "gpt-4",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "The model represents a significant leap forward in conversational AI technology. It offers enhanced understanding and generation of natural language, capable of handling complex and nuanced dialogues with greater coherence  and context sensitivity. This model is designed to mimic human-like conversation more closely than ever before.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Chat GPT 4 "
+  },
+  {
+    "name": "gpt-4-0125-preview",
+    "alias": "gpt-4-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "Before the release of GPT-4 Turbo, OpenAI introduced two preview models that allowed users to test advanced features ahead of a full rollout. These models supported JSON mode for structured responses, parallel function calling to handle multiple API functions in a single request, and reproducible output, ensuring more consistent results across runs. They provided a glimpse into upcoming improvements in efficiency and functionality, helping developers and businesses adapt to the evolving capabilities of OpenAI's language models.\ngpt-4-1106-preview has better code generation performance, reduces cases where the model doesn't complete a task.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "gpt-4-1106-preview",
+    "alias": "gpt-4-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "Before the release of GPT-4 Turbo, OpenAI introduced two preview models that allowed users to test advanced features ahead of a full rollout. These models supported JSON mode for structured responses, parallel function calling to handle multiple API functions in a single request, and reproducible output, ensuring more consistent results across runs. They provided a glimpse into upcoming improvements in efficiency and functionality, helping developers and businesses adapt to the evolving capabilities of OpenAI's language models.\ngpt-4-1106-preview has better code generation performance, reduces cases where the model doesn't complete a task.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "gpt-3.5-turbo",
+    "alias": "gpt-3.5-turbo",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "This model builds on the capabilities of earlier versions, offering improved natural language understanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also contextually appropriate.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Chat GPT 3.5 Turbo"
+  },
+  {
+    "name": "gpt-3.5-turbo-0125",
+    "alias": "gpt-3.5-turbo",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "This model builds on the capabilities of earlier versions, offering improved natural language understanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also contextually appropriate.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "gpt-3.5-turbo-1106",
+    "alias": "gpt-3.5-turbo",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "This model builds on the capabilities of earlier versions, offering improved natural language understanding and generation for more realistic and contextually relevant conversations. It excels in handling a wide range of conversational scenarios, providing responses that are not only accurate but also contextually appropriate.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Chat GPT-3.5 Turbo 1106"
+  },
+  {
+    "name": "o1-preview",
+    "alias": "o1-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "An advanced language model designed for complex reasoning and problem-solving tasks, particularly excelling in science, coding, and mathematics.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "OpenAI o1-preview"
+  },
+  {
+    "name": "o1-preview-2024-09-12",
+    "alias": "o1-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "An advanced language model designed for complex reasoning and problem-solving tasks, particularly excelling in science, coding, and mathematics.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "o1-mini",
+    "alias": "o1-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "A cost-efficient reasoning model optimized for STEM tasks (science, technology, engineering, and math), particularly excelling in mathematics and coding. It offers advanced reasoning capabilities at a fraction of the cost of its larger counterpart, o1-preview.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "OpenAI o1-mini"
+  },
+  {
+    "name": "o1-mini-2024-09-12",
+    "alias": "o1-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "A cost-efficient reasoning model optimized for STEM tasks (science, technology, engineering, and math), particularly excelling in mathematics and coding. It offers advanced reasoning capabilities at a fraction of the cost of its larger counterpart, o1-preview.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
+    "alias": "Llama-3.2-90B-Vision-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A large-scale multimodal AI model capable of processing both text and images. It represents Meta's first foray into multimodal AI, offering advanced visual reasoning capabilities alongside powerful language processing.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Llama 3.2 90B Vision Instruct Turbo"
+  },
+  {
+    "name": "Meta-Llama/Llama-Guard-7b",
+    "alias": "Llama-Guard-7b",
+    "category": "moderation-safety-models",
+    "vendor": "Meta",
+    "description": "An LLM-based model, particularly the Llama2-7b version, designed to enhance the safety of Human-AI conversations. It incorporates a comprehensive safety risk taxonomy, aiding in the classification of safety risks associated with LLM prompts and responses. This model has been instruction-tuned on a carefully curated high-quality dataset, exhibiting robust performance in benchmarks like the OpenAI Moderation Evaluation dataset and ToxicChat. Its capabilities are on par with, or exceed, those of existing content moderation tools.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama Guard (7B)"
+  },
+  {
+    "name": "google/gemma-2-27b-it",
+    "alias": "gemma-2-27b-it",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "A high-performance language model designed to handle a diverse range of text generation tasks, including question answering, summarization, and reasoning. It offers significant improvements in efficiency and performance compared to its predecessors, making it suitable for various applications in natural language processing.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Gemma 2 (27b)"
+  },
+  {
+    "name": "google/gemma-3-1b-it",
+    "alias": "gemma-3",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemma-3-4b-it",
+    "alias": "gemma-3",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemma-3-12b-it",
+    "alias": "gemma-3",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemma-3-27b-it",
+    "alias": "gemma-3",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": ""
+  },
+  {
+    "name": "meta-llama/Llama-Vision-Free",
+    "alias": "Llama-Vision-Free",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "description",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "Gryphe/MythoMax-L2-13b",
+    "alias": "MythoMax-L2-13b",
+    "category": "text-models-llm",
+    "vendor": "Gryphe",
+    "description": "This model represents a pinnacle in the evolution of LLMs, specifically tailored for storytelling and roleplaying. Developed by Gryphe, it's part of the Mytho family, leveraging Llama 2's architecture for enhanced performance. What sets MythoMax-L2 (13B) apart is its innovative tensor merger strategy, which significantly boosts coherence in narrative generation. This model isn't just about creating stories; it's about bringing them to life, offering a deep connection with characters and plotlines that resonate.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "MythoMax-L2 (13B)"
+  },
+  {
+    "name": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "alias": "Mixtral-8x22B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "A cutting-edge large language model designed for instruction-following tasks. Built on a Mixture of Experts (MoE) architecture, this model is optimized for efficiently processing and generating human-like text based on detailed prompts.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mixtral 8x22B Instruct"
+  },
+  {
+    "name": "Qwen/Qwen2-72B-Instruct",
+    "alias": "Qwen2-72B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "This model is stronger than the last generation of Qwen 1.5. The model's linguistic proficiency has been roadened to 27 additional languages, demonstrated state-of-the-art results across a multitude of evaluations, and the context length support was increased up to an impressive 128K tokens. \n\nThis enhancement allows for more comprehensive and contextually rich interactions, making Qwen2 an even more powerful tool for a variety of applications. Qwen2 builds on the Transformer architecture, adding advanced features like SwiGLU activation, attention QKV bias, group query attention, a mixture of sliding window attention, and more for improved efficiency and focus when processing information.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Qwen 2 Instruct (72B)"
+  },
+  {
+    "name": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "alias": "Mixtral-8x7B-Instruct-v0.1",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "description",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mixtral-8x7B Instruct v0.1"
+  },
+  {
+    "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "alias": "Llama-3.1-Nemotron-70B-Instruct-HF",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA",
+    "description": "A sophisticated large language model developed by NVIDIA, designed to enhance the performance of instruction-following tasks. It utilizes advanced training techniques and a robust architecture to generate human-like responses across a variety of applications.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 Nemotron 70B Instruct"
+  },
+  {
+    "name": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+    "alias": "Nous-Hermes-2-Mixtral-8x7B-DPO",
+    "category": "text-models-llm",
+    "vendor": "NousResearch",
+    "description": "The forefront of AI technology, combining the power of 56 billion parameters with advanced deep policy optimization (DPO) techniques. This model is engineered to provide strategic decision-making capabilities, analyzing complex datasets to generate actionable insights and optimized policy decisions.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "alias": "Llama-3.3-70B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "description",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Meta Llama 3.3 70B Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Llama-3.2-3B-Instruct-Turbo",
+    "alias": "Llama-3.2-3B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A large language model (LLM) optimized for instruction-following tasks, striking a balance between computational efficiency and high-quality performance. It excels in multilingual tasks, offering a lightweight solution without compromising on quality.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.2 3B Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo",
+    "alias": "Llama-3.2-11B-Vision-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A powerful multimodal AI model designed for image and text processing tasks. It offers exceptional speed and accuracy, making it ideal for applications such as image captioning, visual question answering, and image-text retrieval.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Llama 3.2 11B Vision Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Llama-Guard-3-11B-Vision-Turbo",
+    "alias": "Llama-Guard-3-11B-Vision-Turbo",
+    "category": "moderation-safety-models",
+    "vendor": "Meta",
+    "description": "11B Llama 3.2 model fine-tuned for content safety, detecting harmful multimodal prompts and text in image reasoning use cases.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Llama Guard 3 11B Vision Turbo"
+  },
+  {
+    "name": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+    "alias": "Qwen2.5-7B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "A cutting-edge large language model designed to understand and generate text based on specific instructions. It excels in various tasks, including coding, mathematical problem-solving, and generating structured outputs.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Qwen 2.5 7B Instruct Turbo"
+  },
+  {
+    "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "alias": "Qwen2.5-Coder-32B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). The one with 32B parameters is the most powerful of them.\nA more comprehensive foundation for real-world applications such as Code Agents. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.\nLong-context Support up to 128K tokens.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Qwen 2.5 Coder 32B Instruct"
+  },
+  {
+    "name": "databricks/dbrx-instruct",
+    "alias": "dbrx-instruct",
+    "category": "text-models-llm",
+    "vendor": "Databricks",
+    "description": "A powerful, open-source large language model (LLM) developed by Databricks. It utilizes a fine-grained mixture-of-experts (MoE) architecture with 132 billion total parameters, of which 36 billion are active for any given input.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "DBRX Instruct"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+    "alias": "Meta-Llama-3-8B-Instruct-Lite",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A generative text model optimized for dialogue and instruction-following use cases. It leverages a refined transformer architecture to deliver high performance in text generation tasks.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3 8B Instruct Lite"
+  },
+  {
+    "name": "meta-llama/Llama-3-8b-chat-hf",
+    "alias": "Llama-3-chat-hf",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "The Llama 3 family consists of pretrained and instruction-tuned generative text models available in 8B and 70B sizes. These models are optimized for dialogue use cases and outperform many existing open-source chat models on common industry benchmarks.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3 8B Instruct Reference"
+  },
+  {
+    "name": "meta-llama/Llama-3-70b-chat-hf",
+    "alias": "Llama-3-chat-hf",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "The Llama 3 family consists of pretrained and instruction-tuned generative text models available in 8B and 70B sizes. These models are optimized for dialogue use cases and outperform many existing open-source chat models on common industry benchmarks.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3 70B Instruct Reference"
+  },
+  {
+    "name": "Qwen/Qwen2.5-72B-Instruct-Turbo",
+    "alias": "Qwen2.5-72B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "A state-of-the-art large language model designed for a variety of natural language processing tasks, including instruction following, coding assistance, and mathematical problem-solving.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Qwen 2.5 72B Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+    "alias": "Meta-Llama-3.1-405B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A state-of-the-art large language model developed by Meta AI, designed for advanced text generation tasks. It excels in generating coherent and contextually relevant text across various domains.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 (405B) Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    "alias": "Meta-Llama-3.1-8B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "An advanced language model designed for high-quality text generation, optimized for professional and industry applications requiring extensive GPU resources.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 8B Instruct Turbo"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+    "alias": "Meta-Llama-3.1-70B-Instruct-Turbo",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A state-of-the-art instruction-tuned language model designed for multilingual dialogue use cases. It excels in natural language generation and understanding tasks, outperforming many existing models in the industry benchmarks.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 70B Instruct Turbo"
+  },
+  {
+    "name": "mistralai/Mistral-7B-Instruct-v0.2",
+    "alias": "Mistral-7B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "An improved instruct fine-tuned version of Mistral-7B-Instruct-v0.1. It leverages instruction fine-tuning to generate responses based on specific prompts. The model architecture is based on Mistral-7B-v0.1, which includes features such as Grouped-Query Attention, Sliding-Window Attention, and a Byte-fallback BPE tokenizer.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral (7B) Instruct v0.2"
+  },
+  {
+    "name": "meta-llama/LlamaGuard-2-8b",
+    "alias": "LlamaGuard-2-8b",
+    "category": "moderation-safety-models",
+    "vendor": "Meta",
+    "description": "An 8B-parameter Llama 3-based safeguard model, designed for content classification in LLM inputs (prompt classification) and responses (response classification), similar to Llama Guard. Functioning as an LLM, it generates text outputs that indicate whether a given prompt or response is safe or unsafe, and if deemed unsafe, it specifies the violated content categories.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "LlamaGuard 2 (8b)"
+  },
+  {
+    "name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "alias": "Mistral-7B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "A robust AI model equipped with 7 billion parameters, optimized for delivering exceptional performance across various machine learning tasks. This model excels in processing large datasets, understanding complex patterns, and generating insights, making it a powerhouse for AI-driven solutions.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral (7B) Instruct v0.1"
+  },
+  {
+    "name": "mistralai/Mistral-7B-Instruct-v0.3",
+    "alias": "Mistral-7B-Instruct",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "An advanced version of the Mistral-7B model, fine-tuned specifically for instruction-based tasks. This model is designed to enhance language generation and understanding capabilities.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral (7B) Instruct v0.3"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-3-70B-Instruct-Lite",
+    "alias": "Meta-Llama-3-70B-Instruct-Lite",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A large language model developed by Meta, optimized for dialogue and instruction-tuned to improve helpfulness and safety. It is part of the Llama 3 family, which includes models with 8 billion and 70 billion parameters.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3 70B Instruct Lite"
+  },
+  {
+    "name": "meta-llama/Llama-2-7b-chat-hf",
+    "alias": "Llama-2-7b-chat-hf",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "A conversational AI model designed to provide rich, nuanced, and contextually aware interactions. With 7 billion parameters, it has the capacity to understand and generate conversations that are remarkably human-like, making it ideal for creating engaging and intelligent dialogue systems.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "LLaMA-2 Chat (7B)"
+  },
+  {
+    "name": "meta-llama/Meta-Llama-Guard-3-8B",
+    "alias": "Meta-Llama-Guard-3-8B",
+    "category": "moderation-safety-models",
+    "vendor": "Meta",
+    "description": "A language model designed to provide input and output safeguards for human-AI conversations. It focuses on content moderation and safety, ensuring the responses generated by AI systems adhere to predefined safety standards.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama Guard 3 (8B)"
+  },
+  {
+    "name": "claude-3-opus-20240229",
+    "alias": "claude-3-opus",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
+    "features": [
+      "anthropic/message-completion",
+      "anthropic/message-completion.vision",
+      "anthropic/message-completion.function"
+    ],
+    "offsite_name": "Claude 3 Opus"
+  },
+  {
+    "name": "claude-3-haiku-20240307",
+    "alias": "claude-3-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
+    "features": [
+      "anthropic/message-completion",
+      "anthropic/message-completion.vision",
+      "anthropic/message-completion.function"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "claude-3-5-sonnet-20240620",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "features": [
+      "anthropic/message-completion",
+      "anthropic/message-completion.vision",
+      "anthropic/message-completion.function"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "claude-3-5-sonnet-20241022",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "features": [
+      "anthropic/message-completion",
+      "anthropic/message-completion.vision",
+      "anthropic/message-completion.function"
+    ],
+    "offsite_name": "Claude 3.5 Sonnet 20241022"
+  },
+  {
+    "name": "claude-3-5-haiku-20241022",
+    "alias": "claude-3.5-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
+    "features": [
+      "anthropic/message-completion"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "anthropic/claude-3.5-sonnet-20240620",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "offsite_name": "-"
+  },
+  {
+    "name": "anthropic/claude-3.5-sonnet-20241022",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "offsite_name": "Claude 3.5 Sonnet 20241022"
+  },
+  {
+    "name": "anthropic/claude-3.5-sonnet",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "offsite_name": "Claude 3.5 Sonnet"
+  },
+  {
+    "name": "claude-3-5-sonnet-latest",
+    "alias": "claude-3.5-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Sonnet sets a new standard in the AI industry, raising the bar for intelligence and performance. Operating at twice the speed of its predecessor, Claude 3 Opus, Claude 3.5 Sonnet outperforms it across a range of evaluations, making it a superior choice for complex AI tasks.",
+    "offsite_name": "Claude 3.5 Sonnet"
+  },
+  {
+    "name": "anthropic/claude-3-haiku-20240307",
+    "alias": "claude-3-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
+    "offsite_name": "-"
+  },
+  {
+    "name": "anthropic/claude-3-haiku",
+    "alias": "claude-3-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
+    "offsite_name": "Claude 3 Haiku"
+  },
+  {
+    "name": "claude-3-haiku-latest",
+    "alias": "claude-3-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "The quickest and most streamlined model, offering near-instant responsiveness. It rapidly addresses simple queries and requests with exceptional speed. This allows users to create smooth AI-driven experiences that closely resemble human interactions.",
+    "offsite_name": "Claude 3 Haiku"
+  },
+  {
+    "name": "anthropic/claude-3-opus-20240229",
+    "alias": "claude-3-opus",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
+    "offsite_name": "-"
+  },
+  {
+    "name": "anthropic/claude-3-opus",
+    "alias": "claude-3-opus",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
+    "offsite_name": "Claude 3 Opus"
+  },
+  {
+    "name": "claude-3-opus-latest",
+    "alias": "claude-3-opus",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "A highly capable AI model designed to process and analyze both text and image data. It excels in tasks requiring complex reasoning, mathematical problem-solving, coding, and multilingual text understanding.",
+    "offsite_name": "Claude 3 Opus"
+  },
+  {
+    "name": "anthropic/claude-3-sonnet",
+    "alias": "claude-3-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Sonnet is engineered to balance performance and speed, positioning it as an excellent option for applications that need both high efficiency and robust capabilities. As a multimodal model like its counterparts, Sonnet can process and analyze both text and image data.",
+    "offsite_name": "Claude 3 Sonnet"
+  },
+  {
+    "name": "claude-3-sonnet-latest",
+    "alias": "claude-3-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Sonnet is engineered to balance performance and speed, positioning it as an excellent option for applications that need both high efficiency and robust capabilities. As a multimodal model like its counterparts, Sonnet can process and analyze both text and image data.",
+    "offsite_name": "Claude 3 Sonnet"
+  },
+  {
+    "name": "anthropic/claude-3-5-haiku-20241022",
+    "alias": "claude-3.5-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
+    "offsite_name": "-"
+  },
+  {
+    "name": "anthropic/claude-3-5-haiku",
+    "alias": "claude-3.5-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
+    "offsite_name": "Claude 3.5 Haiku"
+  },
+  {
+    "name": "claude-3-5-haiku-latest",
+    "alias": "claude-3.5-haiku",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Claude 3.5 Haiku is a cutting-edge AI model designed for rapid data processing and advanced reasoning capabilities. It excels in tasks requiring quick responses, such as coding assistance, customer service interactions, and content moderation.",
+    "offsite_name": "Claude 3.5 Haiku"
+  },
+  {
+    "name": "gemini-1.5-flash",
+    "alias": "gemini-1.5-flash",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "A state-of-the-art multimodal AI model designed for high-speed processing and efficient response generation. It excels in real-time applications, making it suitable for tasks that require immediate feedback and high throughput.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Gemini 1.5 Flash"
+  },
+  {
+    "name": "gemini-1.5-pro",
+    "alias": "gemini-1.5-pro",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "A state-of-the-art multimodal AI model designed to process and understand various data types, including text, images, videos, audio, and code. It excels in tasks requiring long-context understanding and interleaving of different modalities.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Gemini 1.5 Pro"
+  },
+  {
+    "name": "gemini-2.0-flash-exp",
+    "alias": "gemini-2.0-flash-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "A cutting-edge multimodal AI model developed by Google DeepMind, designed to power agentic experiences. This model is capable of processing and generating content in multiple formats, including text, images, audio, and video, making it suitable for a wide range of applications such as real-time conversation systems and interactive tools.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Gemini 2.0 Flash Experimental"
+  },
+  {
+    "name": "gemini-2.5-pro-exp-03-25",
+    "alias": "gemini-2.5-pro-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [
+    ],
+    "offsite_name": ""
+  },
+  {
+    "name": "mistralai/mistral-tiny",
+    "alias": "mistral-tiny",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "A lightweight language model optimized for efficient text generation, summarization, and code completion tasks. It is designed to operate effectively in resource-constrained environments while maintaining high performance.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral Tiny"
+  },
+  {
+    "name": "x-ai/grok-beta",
+    "alias": "grok-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "An advanced language model designed to enhance conversational AI, coding assistance, and complex reasoning tasks. It aims to compete with leading models like OpenAI's GPT-4 and Anthropic's Claude 3.5.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Grok-2 Beta"
+  },
+  {
+    "name": "mistralai/mistral-nemo",
+    "alias": "mistral-nemo",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "A state-of-the-art large language model designed for advanced natural language processing tasks, including text generation, summarization, translation, and sentiment analysis. It features a large context window of up to 128k tokens, making it suitable for handling extensive inputs and complex tasks.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral Nemo"
+  },
+  {
+    "name": "neversleep/llama-3.1-lumimaid-70b",
+    "alias": "llama-3.1-lumimaid",
+    "category": "text-models-llm",
+    "vendor": "NeverSleep",
+    "description": "A fine-tuned variant of the Llama 3 model, specifically designed for enhanced conversational capabilities and role-playing scenarios. It excels in generating coherent and contextually relevant dialogues while maintaining a broad knowledge base.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 Lumimaid 70b"
+  },
+  {
+    "name": "anthracite-org/magnum-v4-72b",
+    "alias": "magnum-v4",
+    "category": "text-models-llm",
+    "vendor": "Anthracite",
+    "description": "A large language model fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly Sonnet and Opus. It excels in generating coherent and contextually rich text, making it suitable for various applications requiring high-quality language generation.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Magnum v4 72B"
+  },
+  {
+    "name": "nvidia/llama-3.1-nemotron-70b-instruct",
+    "alias": "llama-3.1-nemotron-70b",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA",
+    "description": "A sophisticated large language model developed by NVIDIA, designed to enhance the performance of instruction-following tasks. It utilizes advanced training techniques and a robust architecture to generate human-like responses across a variety of applications.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Llama 3.1 Nemotron 70B Instruct"
+  },
+  {
+    "name": "cohere/command-r-plus",
+    "alias": "command-r-plus",
+    "category": "text-models-llm",
+    "vendor": "Cohere",
+    "description": "A cutting-edge large language model designed for enterprise applications, focusing on advanced capabilities such as Retrieval-Augmented Generation (RAG) and multi-step tool use. It is built to enhance efficiency and accuracy in real-world business scenarios.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Command R+"
+  },
+  {
+    "name": "ai21/jamba-1-5-mini",
+    "alias": "jamba-1-5-mini",
+    "category": "text-models-llm",
+    "vendor": "AI21 Labs",
+    "description": "A state-of-the-art hybrid SSM-Transformer model designed for high efficiency and performance in instruction-following tasks. It excels in processing long contexts and generating high-quality outputs, making it suitable for a variety of applications in natural language processing.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Jamba 1.5 Mini"
+  },
+  {
+    "name": "deepseek/deepseek-chat",
+    "alias": "deepseek-chat",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "An advanced conversational AI designed to deliver highly engaging and context-aware dialogues. This model excels in understanding and generating human-like text, making it an ideal solution for creating responsive and intelligent chatbots. Its sophisticated architecture enables it to grasp subtle nuances in language, providing a seamless conversational experience that mimics human interaction.",
+    "offsite_name": "DeepSeek V3"
+  },
+  {
+    "name": "mistralai/codestral-2501",
+    "alias": "codestral-2501",
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "description": "A state-of-the-art AI model specifically designed for code generation tasks. It leverages advanced machine learning techniques to assist developers in writing, debugging, and optimizing code across a wide range of programming languages. With its impressive performance metrics and capabilities, Codestral-2501 aims to streamline the coding process and enhance productivity for software developers.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Mistral Codestral-2501"
+  },
+  {
+    "name": "deepseek/deepseek-r1",
+    "alias": "deepseek-r1",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "A cutting-edge reasoning model developed by DeepSeek AI, designed to excel in complex problem-solving, mathematical reasoning, and programming assistance. Leveraging a Mixture-of-Experts (MoE) architecture, the model activates only a subset of its parameters for each token processed, allowing for efficient computation while maintaining high performance across various tasks.",
+    "offsite_name": "DeepSeek R1"
+  },
+  {
+    "name": "MiniMax-Text-01",
+    "alias": "text-01",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
+    "description": "A powerful language model developed by MiniMax AI, designed to excel in tasks requiring extensive context processing and reasoning capabilities. With a total of 456 billion parameters, of which 45.9 billion are activated per token, this model utilizes a hybrid architecture that combines various attention mechanisms to optimize performance across a wide array of applications.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "MiniMax-Text-01"
+  },
+  {
+    "name": "abab6.5s-chat",
+    "alias": "abab6.5s-chat",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
+    "description": "A powerful language model developed by MiniMax AI, designed to excel in tasks requiring extensive context processing and reasoning capabilities. With a total of 456 billion parameters, of which 45.9 billion are activated per token, this model utilizes a hybrid architecture that combines various attention mechanisms to optimize performance across a wide array of applications.\nAchieves competitive scores on academic benchmarks, including MMLU and various reasoning tests.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.vision",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "-"
+  },
+  {
+    "name": "o1",
+    "alias": "o1",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "A state-of-the-art language model designed to excel in complex reasoning tasks, including mathematical problem-solving, programming challenges, and scientific inquiries. The model integrates advanced reasoning capabilities through its innovative architecture, making it suitable for a wide range of applications that require deep understanding and logical deduction.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "OpenAI o1"
+  },
+  {
+    "name": "o3-mini",
+    "alias": "o3-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "A state-of-the-art language model designed to excel in complex reasoning tasks, including mathematical problem-solving, programming challenges, and scientific inquiries. The model integrates advanced reasoning capabilities through its innovative architecture, making it suitable for a wide range of applications that require deep understanding and logical deduction.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "OpenAI o3 mini"
+  },
+  {
+    "name": "qwen-turbo",
+    "alias": "qwen-turbo",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "This model is designed to enhance both the performance and efficiency of AI agents developed on the Alibaba Cloud Model Studio platform.\nOptimized for speed and precision in generative AI application development. Improves AI agent comprehension and adaptation to enterprise data, especially when integrated with Retrieval-Augmented Generation (RAG) architectures. Large context window (1,000,000 tokens).",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Qwen Turbo"
+  },
+  {
+    "name": "qwen-plus",
+    "alias": "qwen-plus",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "An advanced large language model developed by Alibaba Cloud, designed to support multiple languages such as Chinese and English. Multilingual support, including Chinese and English. Enhanced reasoning capabilities for complex tasks. Improved instruction-following abilities.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Qwen Plus"
+  },
+  {
+    "name": "qwen-max",
+    "alias": "qwen-max",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "A large-scale Mixture-of-Experts (MoE) language model developed by Alibaba Cloud. It excels in language understanding, generation, and task performance across a variety of modalities. Mixture-of-Experts (MoE) Architecture: Uses 64 specialized \"expert\" networks, activating only relevant ones per task for efficient processing. Extensive Multilingual Support: Supports 29 languages, including Chinese, English, and Arabic. Long-Context Optimization: Supports 32K context windows with 8K generation. High Stability: Demonstrates high stability in maintaining prompt instructions, with no erroneous replies during extensive testing.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Qwen Max"
+  },
+  {
+    "name": "qwen-max-2025-01-25",
+    "alias": "qwen-max",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "A large-scale Mixture-of-Experts (MoE) language model developed by Alibaba Cloud. It excels in language understanding, generation, and task performance across a variety of modalities. Mixture-of-Experts (MoE) Architecture: Uses 64 specialized \"expert\" networks, activating only relevant ones per task for efficient processing. Extensive Multilingual Support: Supports 29 languages, including Chinese, English, and Arabic. Long-Context Optimization: Supports 32K context windows with 8K generation. High Stability: Demonstrates high stability in maintaining prompt instructions, with no erroneous replies during extensive testing.",
+    "features": [
+      "openai/chat-completion",
+      "openai/chat-completion.function"
+    ],
+    "offsite_name": "Qwen Max 2025-01-25"
+  },
+  {
+    "name": "claude-3-7-sonnet-20250219",
+    "alias": "claude-3.7-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "Anthropic's latest hybrid reasoning model, designed to tackle complex tasks requiring both rapid inference and detailed problem-solving. It introduces a dual-mode operation, combining standard language generation with extended thinking capabilities.",
+    "offsite_name": "Claude 3.7 Sonnet"
+  },
+  {
+    "name": "gpt-4.5-preview",
+    "alias": "gpt-4.5-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "OpenAI's latest general-purpose language model, designed to advance capabilities in reasoning, creativity, and conversational coherence. It builds upon GPT-4 with a broader knowledge base, improved alignment with user intent, and enhanced emotional intelligence (EQ). The model is positioned as a research preview and is OpenAI’s largest and most knowledgeable model to date.",
+    "features": [
+      "openai/chat-completion"
+    ],
+    "offsite_name": "Chat GPT 4.5 preview"
+  },
+  {
+    "name": "Qwen/QwQ-32B",
+    "alias": "qwen-QwQ-32B",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "description": "",
+    "features": [],
+    "offsite_name": "Qwen QwQ-32B"
+  },
+  {
+    "name": "google/gemini-2.0-flash",
+    "alias": "gemini-2.0-flash",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.0-flash-thinking-exp-01-21",
+    "alias": "gemini-2.0-flash-thinking-exp-01-21",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "meta-llama/llama-4-maverick",
+    "alias": "Llama-4-maverick",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "meta-llama/llama-4-scout",
+    "alias": "Llama-4-scout",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.5-pro-preview",
+    "alias": "gemini-2.5-pro-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "openai/o4-mini-2025-04-16",
+    "alias": "o4-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.5-flash-preview",
+    "alias": "gemini-2.5-flash-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]

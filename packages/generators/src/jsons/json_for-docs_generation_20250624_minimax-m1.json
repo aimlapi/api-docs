@@ -1,0 +1,10 @@
+[
+  {
+    "name": "minimax/m1",
+    "alias": "m1",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
+    "description": "",
+    "offsite_name": ""
+  }
+]

@@ -4,6 +4,13 @@
   "description": "",
   "type": "module",
   "main": "./index.js",
+  "scripts": {
+    "prepare": "tsc"
+  },
   "keywords": [],
-  "author": ""
+  "author": "",
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
 }

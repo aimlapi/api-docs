@@ -1,5 +1,6 @@
 ---
 hidden: true
+noIndex: true
 ---
 
 # Is API down or it just me?

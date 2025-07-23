@@ -14,18 +14,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
-1. Copy the code from the example below.
-2. Replace `<YOUR_AIMLAPI_KEY>` with your AIML API key from [your personal account](https://aimlapi.com/app/keys).
-3. Replace the URL of the image with the one you need.
-4. If you need to use different parameters, refer to the API schema below for valid values and operational logic.
-5. Save the modified code as a Python file and run it in an IDE[^1] or via the console.
-
 ## API Schema
 
 {% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json" path="/v1/ocr" method="post" %}
 [https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json)
 {% endopenapi %}
 
-
-
-[^1]: An integrated development environment (IDE) is a software application that helps programmers write, test, and debug software code efficiently.

@@ -1,16 +1,5 @@
 ---
 description: Overview of the capabilities of AIML API Text-to-Speech (TTS) models.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Text-to-Speech

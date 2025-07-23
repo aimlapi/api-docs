@@ -1,0 +1,10 @@
+[
+  {
+    "name": "openai/o3-pro",
+    "alias": "o3-pro",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  }
+]

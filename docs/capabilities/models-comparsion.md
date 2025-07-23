@@ -2,20 +2,13 @@
 description: >-
   A practical example for comparing responses from different models to the same
   question.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Model comparison
+
+{% hint style="success" %}
+Be sure to check out our [Comparisons section](https://aimlapi.com/comparisons) on the main site — where text, code, image, music, and other models go head-to-head in close matchups to determine the winners!
+{% endhint %}
 
 You can send the same request to two specific text models of your choice and compare the results.
 

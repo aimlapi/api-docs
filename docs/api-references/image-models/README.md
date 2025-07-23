@@ -1,17 +1,6 @@
 ---
 description: A description of image generation process using AIML API image models.
 icon: image-landscape
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Image Models
@@ -43,30 +32,31 @@ Then, configure the metaparameters for your generation:
 
 Here is an example of generation an image of a robot classroom using the `flux-pro` image model:
 
-<pre class="language-python" data-overflow="wrap"><code class="lang-python"><strong>%pip install openai
-</strong>import os
-from openai import OpenAI
+{% code overflow="wrap" %}
+```python
 import requests
 url = "https://api.aimlapi.com/v1/images/generations/"
 
-model="flux-pro"
-prompt="""
+payload = {
+  "model": "flux/schnell",
+  "prompt": """
 Create a classroom of young robots. 
 The chalkboard in the classroom has 'AI Is Your Friend' written on it.
 """
-payload = {
-  "prompt": prompt,
-  "model": model,
 }
 
 headers = {
-  #put your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
-  "Authorization": "Bearer &#x3C;YOUR_AIMLAPI_KEY>", 
+  #put your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+  "Authorization": "Bearer <YOUR_AIMLAPI_KEY>", 
   "content-type": "application/json"
 }
 
 response = requests.post(url, json=payload, headers=headers)
-</code></pre>
+response.raise_for_status()
+
+print("Generation:", response.json())
+```
+{% endcode %}
 
 We obtained the following image by running that code example:
 
@@ -74,4 +64,4 @@ We obtained the following image by running that code example:
 
 ## All Available Image Models
 
-<table><thead><tr><th width="274.20001220703125">Model ID</th><th width="123.39996337890625">Developer</th><th width="103.79998779296875">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="OpenAI/dall-e-3.md">dall-e-3</a></td><td>Open AI</td><td></td><td><a href="https://aimlapi.com/models/openai-dall-e-3">OpenAI DALL·E 3</a></td></tr><tr><td><a href="OpenAI/dall-e-2.md">dall-e-2</a></td><td>Open AI</td><td></td><td><a href="https://aimlapi.com/models/openai-dall-e-2-api">OpenAI DALL·E 2</a></td></tr><tr><td><a href="Google/imagen-3.0.md">imagen-3.0-generate-002</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/imagen-3-api">Imagen 3</a></td></tr><tr><td><a href="flux/flux-realism.md">flux-realism</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-realism-lora-api">FLUX Realism LoRA</a></td></tr><tr><td><a href="flux/flux-schnell.md">flux/schnell</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-schnell-api">FLUX.1 [schnell]</a></td></tr><tr><td><a href="flux/flux-pro.md">flux-pro</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-pro-api">FLUX.1 [pro]</a></td></tr><tr><td><a href="flux/flux-pro.md">flux-pro/v1.1</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-1-pro-api">FLUX 1.1 [pro]</a></td></tr><tr><td><a href="flux/flux-pro-v1.1-ultra.md">flux-pro/v1.1-ultra</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-1-pro-ultra-api">FLUX 1.1 [pro ultra]</a></td></tr><tr><td><a href="flux/flux-dev.md">flux/dev</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-dev-api">FLUX.1 [dev]</a></td></tr><tr><td><a href="flux/flux-dev-image-to-image.md">flux/dev/image-to-image</a></td><td>Flux</td><td></td><td>-</td></tr><tr><td><a href="Stability-AI/stable-diffusion-v3-medium.md">stable-diffusion-v3-medium</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-diffusion-3-api">Stable Diffusion 3</a></td></tr><tr><td><a href="Stability-AI/stable-diffusion-v35-large.md">stable-diffusion-v35-large</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-diffusion-3-5-large-api">Stable Diffusion 3.5 Large</a></td></tr><tr><td><a href="RecraftAI/recraft-v3.md">recraft-v3</a></td><td>Recraft AI</td><td></td><td><a href="https://aimlapi.com/models/recraft-v3">Recraft v3</a></td></tr></tbody></table>
+<table><thead><tr><th width="274.20001220703125">Model ID  +  API Reference link</th><th width="123.39996337890625">Developer</th><th width="103.79998779296875">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="bytedance/seedream-3.0.md">bytedance/seedream-3.0</a></td><td>ByteDance</td><td></td><td><em>Coming soon</em></td></tr><tr><td><a href="flux/flux-pro.md">flux-pro</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-pro-api">FLUX.1 [pro]</a></td></tr><tr><td><a href="flux/flux-pro.md">flux-pro/v1.1</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-1-pro-api">FLUX 1.1 [pro]</a></td></tr><tr><td><a href="flux/flux-pro-v1.1-ultra.md">flux-pro/v1.1-ultra</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-1-pro-ultra-api">FLUX 1.1 [pro ultra]</a></td></tr><tr><td><a href="flux/flux-realism.md">flux-realism</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-realism-lora-api">FLUX Realism LoRA</a></td></tr><tr><td><a href="flux/flux-dev.md">flux/dev</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-dev-api">FLUX.1 [dev]</a></td></tr><tr><td><a href="flux/flux-dev-image-to-image.md">flux/dev/image-to-image</a></td><td>Flux</td><td></td><td>-</td></tr><tr><td><a href="flux/flux-schnell.md">flux/schnell</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-schnell-api">FLUX.1 [schnell]</a></td></tr><tr><td><a href="flux/flux-kontext-max-text-to-image.md">flux/kontext-max/text-to-image</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-kontext-max">FLUX.1 Kontext [max]</a></td></tr><tr><td><a href="flux/flux-kontext-max-image-to-image.md">flux/kontext-max/image-to-image</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-kontext-max">FLUX.1 Kontext [max]</a></td></tr><tr><td><a href="flux/flux-kontext-pro-text-to-image.md">flux/kontext-pro/text-to-image</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-kontext-pro">Flux.1 Kontext [pro]</a></td></tr><tr><td><a href="flux/flux-kontext-pro-image-to-image.md">flux/kontext-pro/image-to-image</a></td><td>Flux</td><td></td><td><a href="https://aimlapi.com/models/flux-1-kontext-pro">Flux.1 Kontext [pro]</a></td></tr><tr><td><a href="google/imagen-3.0.md">imagen-3.0-generate-002</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/imagen-3-api">Imagen 3</a></td></tr><tr><td><a href="google/imagen-4-preview.md">google/imagen4/preview</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/imagen-4-preview">Imagen 4 Preview</a></td></tr><tr><td><a href="google/imagen-4-ultra.md">imagen-4.0-ultra-generate-preview-06-06</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/imagen-4-ultra">Imagen 4 Ultra</a></td></tr><tr><td><a href="OpenAI/dall-e-2.md">dall-e-2</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/openai-dall-e-2-api">OpenAI DALL·E 2</a></td></tr><tr><td><a href="OpenAI/dall-e-3.md">dall-e-3</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/openai-dall-e-3">OpenAI DALL·E 3</a></td></tr><tr><td><a href="openai/gpt-image-1.md">openai/gpt-image-1</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/gpt-image-1">gpt-image-1</a></td></tr><tr><td><a href="RecraftAI/recraft-v3.md">recraft-v3</a></td><td>Recraft AI</td><td></td><td><a href="https://aimlapi.com/models/recraft-v3">Recraft v3</a></td></tr><tr><td><a href="Stability-AI/stable-diffusion-v3-medium.md">stable-diffusion-v3-medium</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-diffusion-3-api">Stable Diffusion 3</a></td></tr><tr><td><a href="Stability-AI/stable-diffusion-v35-large.md">stable-diffusion-v35-large</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-diffusion-3-5-large-api">Stable Diffusion 3.5 Large</a></td></tr></tbody></table>

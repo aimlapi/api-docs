@@ -1,0 +1,31 @@
+import fs from 'fs';
+import OpenAI, { toFile } from 'openai';
+
+
+const main = async () => {
+  const client = new OpenAI({
+    baseURL: '{{baseUrl}}',
+    apiKey: '{{apiKey}}',
+  });
+
+  const imageFiles = ['mona-liza.jpg', 'glasses.jpg'];
+
+  const images = await Promise.all(
+    imageFiles.map(
+      async (file) =>
+        await toFile(fs.createReadStream(file), null, {
+          type: 'image/jpeg',
+        }),
+    ),
+  );
+
+  const result = await client.images.edit({
+    model: '{{model}}',
+    image: images,
+    prompt: 'Put glasses on the Mona Lisa',
+  });
+
+  console.log('Generation', result);
+};
+
+main();

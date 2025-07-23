@@ -1,0 +1,20 @@
+[
+  {
+    "name": "anthropic/claude-opus-4",
+    "alias": "claude-4-opus",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "anthropic/claude-sonnet-4",
+    "alias": "claude-4-sonnet",
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]

@@ -104,10 +104,10 @@ export default {
         },
         image_url: {
           url: {
-            desc: `Either a URL of the image or the base64 encoded image data.`,
+            desc: `Either a URL of the image or the base64 encoded image data. `,
           },
           detail: {
-            desc: `Specifies the detail level of the image. `,
+            desc: `Specifies the detail level of the image. Currently supports JPG/JPEG, PNG, GIF, and WEBP formats.`,
           },
         },
         input_audio: {
@@ -121,17 +121,15 @@ export default {
         file: {
           file_data: {
             default: {
-              desc: `The file data, encoded in base64 and passed to the model as a string.`,
+              desc: `The file data, encoded in base64 and passed to the model as a string. Only PDF format is supported.`,
             },
             openai: {
-              desc: `The file data, encoded in base64 and passed to the model as a string. 
+              desc: `The file data, encoded in base64 and passed to the model as a string. Only PDF format is supported.
+        - Maximum size per file: Up to 512 MB and up to 2 million tokens.
         - Maximum number of files: Up to 20 files can be attached to a single GPT application or Assistant. This limit applies throughout the application's lifetime.
-        - Maximum total file storage per user: 10 GB.
-        - Maximum size per file: Up to 512 MB.
-        - Text and document files: Up to 2 million tokens per file.
-        - Spreadsheets (CSV, XLSX): Up to approximately 50 MB per file, depending on the number and size of rows.`,
+        - Maximum total file storage per user: 10 GB.`,
+              },
             },
-          },
           file_name: {
             desc: `The file name specified by the user. This name can be used to reference the file when interacting with the model, especially if multiple files are uploaded.`,
           },
@@ -201,7 +199,7 @@ export default {
         desc: `The contents of the tool message.`,
       },
       role: {
-        desc: `The role of the messages author: tool.The role of the author of the message — in this case, the tool`,
+        desc: `The role of the author of the message — in this case, the tool.`,
       },
       tool_call_id: {
         desc: `Tool call that this message is responding to.`,

@@ -12,6 +12,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
 Generating a video using this model involves making two sequential API calls:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
@@ -19,15 +23,17 @@ Generating a video using this model involves making two sequential API calls:
 
 Below, you can find three corresponding API schemas and examples for all endpoint calls.
 
+</details>
+
 ## API Schemas
 
 ### Generate video
 
 `loop` parameter controls if the generated video will be looped.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generation" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-t2v-v2" path="/v2/generate/video/luma-ai/generation" method="post" %}
+[OpenAPI luma-t2v-v2](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi-operation %}
 
 ### Fetch generation
 
@@ -45,9 +51,9 @@ If video generation takes too long, it can reach a timeout of 30 seconds. In suc
 You cannot wait for an `failed` state.
 {% endhint %}
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generation" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-gen-fetch" path="/v2/generate/video/luma-ai/generation" method="get" %}
+[OpenAPI luma-gen-fetch](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 #### Example: Fetch Single Generation
 
@@ -120,9 +126,9 @@ If you are waiting for a video to be fully generated, you can wait for the `comp
 
 Instead of using the `generation_id` parameter, you will pass `generation_ids`, which can be an array of IDs. This parameter can also accept IDs separated by commas.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generations" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-gens-fetch" path="/v2/generate/video/luma-ai/generations" method="get" %}
+[OpenAPI luma-gens-fetch](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 #### Example: Fetch Multiple Generations
 
@@ -242,7 +248,7 @@ main();
 
 ### Extend video
 
-You can extend a video using an existing video you generated before (using its ID) or by using an image (by URL). The extension can be done by appending to or prepending from the original content.
+You can extend a video using an existing video you generated before (using its generation ID) or by using an image (via URL). The extension can be done by appending to or prepending from the original content.
 
 The `keywords` parameter controls the following extensions. It can include parameters for defining frames:
 
@@ -275,28 +281,56 @@ Or, in the case of using a previously generated video:
 }
 ```
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/v2/generate/video/luma-ai/generation" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
-
-
+{% openapi-operation spec="luma-t2v-v2" path="/v2/generate/video/luma-ai/generation" method="post" %}
+[OpenAPI luma-t2v-v2](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
+{% endopenapi-operation %}
 
 ## Examples
 
-{% hint style="info" %}
-Ensure you replace `"my_key"` with your actual API key before running the code.
+{% hint style="warning" %}
+Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running the code.
 {% endhint %}
 
 ### Extension with the Image
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import requests
+
+
+def main()
+  url = "https://api.aimlapi.com/v2/generate/video/luma-ai/generation"
+  payload = {
+    "prompt": "Flying jellyfish",
+    "aspect_ratio": "16:9",
+    "keyframes": {
+      "frame0": {
+        "type": "image",
+        "url": "https://example.com/image1.png"
+      }
+    }
+  }
+  headers = {
+    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+    "Content-Type": "application/json"
+  }
+  
+  response = requests.post(url, json=payload, headers=headers)
+  print("Generation:",  response.json())
+  
+if __name__ == "__main__":
+    main()
+```
+{% endtab %}
+
 {% tab title="JavaScript" %}
 ```javascript
 const main = async () => {
   const response = await fetch('https://api.aimlapi.com/v2/generate/video/luma-ai/generation', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer my_key',
+      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -318,7 +352,11 @@ main();
 
 ```
 {% endtab %}
+{% endtabs %}
 
+### Extension with the Generation
+
+{% tabs %}
 {% tab title="Python" %}
 ```python
 import requests
@@ -331,13 +369,13 @@ def main()
     "aspect_ratio": "16:9",
     "keyframes": {
       "frame0": {
-        "type": "image",
-        "url": "https://example.com/image1.png"
+        "type": "generation",
+        "id": "0f3ea4aa-10e7-4dae-af0b-263ab4ac45f9"
       }
     }
   }
   headers = {
-    "Authorization": "Bearer my_key",
+    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     "Content-Type": "application/json"
   }
   
@@ -348,18 +386,14 @@ if __name__ == "__main__":
     main()
 ```
 {% endtab %}
-{% endtabs %}
 
-### Extension with the Generation
-
-{% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
 const main = async () => {
   const response = await fetch('https://api.aimlapi.com/v2/generate/video/luma-ai/generation', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer my_key',
+      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -379,36 +413,6 @@ const main = async () => {
 
 main();
 
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import requests
-
-
-def main()
-  url = "https://api.aimlapi.com/v2/generate/video/luma-ai/generation"
-  payload = {
-    "prompt": "Flying jellyfish",
-    "aspect_ratio": "16:9",
-    "keyframes": {
-      "frame0": {
-        "type": "generation",
-        "id": "0f3ea4aa-10e7-4dae-af0b-263ab4ac45f9"
-      }
-    }
-  }
-  headers = {
-    "Authorization": "Bearer my_key",
-    "Content-Type": "application/json"
-  }
-  
-  response = requests.post(url, json=payload, headers=headers)
-  print("Generation:",  response.json())
-  
-if __name__ == "__main__":
-    main()
 ```
 {% endtab %}
 {% endtabs %}

@@ -20,9 +20,9 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 
 Create an Assistant with a model and instructions.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-ass-create" path="/assistants" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -46,9 +46,9 @@ assistant = client.beta.assistants.create(
 
 ### Retrieve a list of Assistants along with their parameters
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-ass-list" path="/assistants" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -71,9 +71,9 @@ print(my_assistants.data)
 
 ### Retrieve information about a specific Assistant by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants/{assistantId}" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-ass-info-id" path="/assistants/{assistantId}" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -94,9 +94,9 @@ print(my_assistant)
 
 ### Modify a specific Assistant by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants/{assistantId}" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-ass-modify" path="/assistants/{assistantId}" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 
@@ -123,9 +123,9 @@ print(my_updated_assistant)
 
 ### Delete a specific Assistant by its ID
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/assistants/{assistantId}" method="delete" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="ass-ass-delete" path="/assistants/{assistantId}" method="delete" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
 

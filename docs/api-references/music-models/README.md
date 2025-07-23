@@ -1,17 +1,6 @@
 ---
 description: Overview of the capabilities of AIML API audio / music models.
 icon: guitar
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Music Models
@@ -134,5 +123,5 @@ Listen to the track we generated:
 
 ## All Available Music Models
 
-<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr></tbody></table>
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="google/lyria-2.md">google/lyria2</a></td><td>Google</td><td></td><td><em>Coming soon</em></td></tr><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr></tbody></table>
 

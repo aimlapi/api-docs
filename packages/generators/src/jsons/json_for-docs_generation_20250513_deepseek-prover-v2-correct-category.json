@@ -1,0 +1,11 @@
+[
+  {
+    "name": "deepseek/deepseek-prover-v2",
+    "alias": "deepseek-prover-v2",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]

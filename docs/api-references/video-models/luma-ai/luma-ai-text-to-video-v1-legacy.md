@@ -1,16 +1,5 @@
 ---
 description: 'Description for Luma AI Text-to-Video model: Pricing, API Reference, Examples.'
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Text-to-Video v1 (legacy)
@@ -31,12 +20,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## How to Make a Call
 
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
 Generating a video using this model involves making two sequential API calls:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
 * The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.
 
 Below, you can find three corresponding API schemas and examples for all endpoint calls.
+
+</details>
 
 ## API Schemas
 
@@ -46,9 +41,9 @@ Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running 
 
 ### Generate Video
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v1-gen" path="/luma-ai/generations" method="post" %}
+[OpenAPI luma-v1-gen](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 #### Example
 
@@ -103,9 +98,9 @@ axios.post(url, payload, { headers })
 
 ### Fetch Generations
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generation" method="get" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v1-fetch" path="/luma-ai/generation" method="get" %}
+[OpenAPI luma-v1-fetch](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 #### Example
 
@@ -161,9 +156,9 @@ axios.get(url, { headers, params })
 
 Extend allows you to effortlessly add length to an existing video.
 
-{% openapi src="https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29" path="/luma-ai/generations/{taskId}/extend" method="post" %}
-[https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
-{% endopenapi %}
+{% openapi-operation spec="luma-v2-extend" path="/v1/luma-ai/generations/{taskId}/extend" method="post" %}
+[OpenAPI luma-v2-extend](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 #### Example
 

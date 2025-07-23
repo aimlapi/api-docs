@@ -1,0 +1,11 @@
+[
+  {
+    "name": "google/gemma-3n-e4b-it",
+    "alias": "gemma-3n",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  }
+]

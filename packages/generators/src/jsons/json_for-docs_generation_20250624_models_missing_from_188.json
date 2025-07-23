@@ -1,0 +1,155 @@
+[
+  {
+    "name": "deepseek/deepseek-prover-v2",
+    "alias": "deepseek-prover-v2",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "",
+    "features": [],
+    "offsite_name": ""
+  },
+  {
+    "name": "deepseek/deepseek-r1",
+    "alias": "deepseek-r1",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "deepseek-reasoner",
+    "alias": "deepseek-r1",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gemini-1.5-flash",
+    "alias": "gemini-1.5-flash",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gemini-1.5-pro",
+    "alias": "gemini-1.5-pro",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gemini-2.0-flash-exp",
+    "alias": "gemini-2.0-flash-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.0-flash-exp",
+    "alias": "gemini-2.0-flash-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gemini-2.5-pro-exp-03-25",
+    "alias": "gemini-2.5-pro-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "google/gemini-2.5-pro-exp-03-25",
+    "alias": "gemini-2.5-pro-exp",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+    "alias": "nous-hermes-2",
+    "category": "text-models-llm",
+    "vendor": "NousResearch",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gpt-4o-audio-preview",
+    "alias": "gpt-4o-audio-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gpt-4o-mini-audio-preview",
+    "alias": "gpt-4o-mini-audio-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gpt-4o-search-preview",
+    "alias": "gpt-4o-search-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "gpt-4o-mini-search-preview",
+    "alias": "gpt-4o-mini-search-preview",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "openai/gpt-4.1-2025-04-14",
+    "alias": "gpt-4.1",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "openai/gpt-4.1-mini-2025-04-14",
+    "alias": "gpt-4.1-mini",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "openai/gpt-4.1-nano-2025-04-14",
+    "alias": "gpt-4.1-nano",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "x-ai/grok-3-beta",
+    "alias": "grok-3-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "",
+    "offsite_name": ""
+  },
+  {
+    "name": "x-ai/grok-3-mini-beta",
+    "alias": "grok-3-mini-beta",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "description": "",
+    "offsite_name": ""
+  }
+]
