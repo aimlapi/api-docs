@@ -1,6 +1,6 @@
 # Table of contents
 
-* [This model is no longer available](README.md)
+* [404 Model is deprecated](README.md)
 
 ## Quickstart
 
