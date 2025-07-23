@@ -1,10 +1,11 @@
 ---
 hidden: true
 noIndex: true
+icon: face-pensive
 layout:
   width: default
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -17,9 +18,7 @@ layout:
     visible: false
 ---
 
-# model-deprecated
-
-## <i class="fa-face-pensive">:face-pensive:</i>   This model is no longer available
+# This model is no longer available
 
 We're sorry — the model you tried to access is no longer supported. \
 Some information about it is still available in our [Deprecated list](api-references/model-database.md#deprecated-no-longer-supported-models).

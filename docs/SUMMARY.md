@@ -1,6 +1,6 @@
 # Table of contents
 
-* [model-deprecated](README.md)
+* [This model is no longer available](README.md)
 
 ## Quickstart
 
