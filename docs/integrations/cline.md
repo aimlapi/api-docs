@@ -84,7 +84,7 @@ These models have been tested by our team for compatibility with Cline integrati
 * [gpt-4-0125-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
 * [gpt-4-1106-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
 * [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
-* [gpt-4.5-preview](../api-references/text-models-llm/OpenAI/gpt-4.5-preview.md)
+* [gpt-4.5-preview](broken-reference)
 * [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
 * [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
@@ -135,17 +135,17 @@ These models have been tested by our team for compatibility with Cline integrati
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 
-- [google/gemini-2.5-pro-preview](../api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
+- [google/gemini-2.5-pro-preview](broken-reference)
 
 
 
-* [x-ai/grok-beta](../api-references/text-models-llm/xAI/grok-beta.md)
+* [x-ai/grok-beta](broken-reference)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 
 
 
-* [neversleep/llama-3.1-lumimaid-70b](../api-references/text-models-llm/NeverSleep/llama-3.1-lumimaid.md)
+* [neversleep/llama-3.1-lumimaid-70b](broken-reference)
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
 * [cohere/command-r-plus](../api-references/text-models-llm/Cohere/command-r-plus.md)
 * [nvidia/Llama-3.1-Nemotron-70B-Instruct-HF](../api-references/text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md)

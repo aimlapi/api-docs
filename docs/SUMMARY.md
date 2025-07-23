@@ -1,8 +1,10 @@
 # Table of contents
 
+* [model-deprecated](README.md)
+
 ## Quickstart
 
-* [🧭 Documentation Map](README.md)
+* [🧭 Documentation Map](<README (1).md>)
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
@@ -25,7 +27,6 @@
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)
     * [Claude 3 Haiku](api-references/text-models-llm/Anthropic/claude-3-haiku.md)
     * [Claude 3 Opus](api-references/text-models-llm/Anthropic/claude-3-opus.md)
-    * [Claude 3 Sonnet](api-references/text-models-llm/Anthropic/claude-3-sonnet.md)
     * [Claude 3.5 Haiku](api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
     * [Claude 3.5 Sonnet](api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
     * [Claude 3.7 Sonnet](api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
@@ -41,9 +42,7 @@
   * [Google](api-references/text-models-llm/Google/README.md)
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
     * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)
-    * [gemini-2.5-flash-preview](api-references/text-models-llm/google/gemini-2.5-flash-preview.md)
     * [gemini-2.5-flash-lite-preview](api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
-    * [gemini-2.5-pro-preview](api-references/text-models-llm/google/gemini-2.5-pro-preview.md)
     * [gemma-2](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [gemma-3](api-references/text-models-llm/google/gemma-3.md)
     * [gemma-3n-4b](api-references/text-models-llm/google/gemma-3n-4b.md)
@@ -73,8 +72,6 @@
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
     * [Llama-3.1-Nemotron-70B-Instruct-HF](api-references/text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md)
     * [llama-3.1-nemotron-70b](api-references/text-models-llm/NVIDIA/llama-3.1-nemotron-70b.md)
-  * [NeverSleep](api-references/text-models-llm/NeverSleep/README.md)
-    * [llama-3.1-lumimaid](api-references/text-models-llm/NeverSleep/llama-3.1-lumimaid.md)
   * [NousResearch](api-references/text-models-llm/NousResearch/README.md)
     * [Nous-Hermes-2-Mixtral-8x7B-DPO](api-references/text-models-llm/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO.md)
   * [OpenAI](api-references/text-models-llm/OpenAI/README.md)
@@ -94,13 +91,11 @@
     * [o3](api-references/text-models-llm/openai/o3.md)
     * [o3-mini](api-references/text-models-llm/OpenAI/o3-mini.md)
     * [o3-pro](api-references/text-models-llm/openai/o3-pro.md)
-    * [gpt-4.5-preview](api-references/text-models-llm/OpenAI/gpt-4.5-preview.md)
     * [gpt-4.1](api-references/text-models-llm/openai/gpt-4.1.md)
     * [gpt-4.1-mini](api-references/text-models-llm/openai/gpt-4.1-mini.md)
     * [gpt-4.1-nano](api-references/text-models-llm/openai/gpt-4.1-nano.md)
     * [o4-mini](api-references/text-models-llm/openai/o4-mini.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
-    * [grok-beta](api-references/text-models-llm/xAI/grok-beta.md)
     * [grok-3-beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [grok-3-mini-beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
     * [grok-4](api-references/text-models-llm/xai/grok-4.md)
@@ -309,9 +304,6 @@
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
 * [Make](integrations/make.md)
+* [n8n](integrations/n8n.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
-
-***
-
-* [n8n](n8n.md)

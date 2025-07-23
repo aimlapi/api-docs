@@ -599,4 +599,4 @@ Feel free to use the following links:
 
 [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-[**Browse our Models**](../#models-by-task)
+[**Browse our Models**](<../README (1).md#models-by-task>)

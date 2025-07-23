@@ -6,7 +6,7 @@ This documentation is valid for the following model:   `anthracite-org/magnum-v4
 
 ## Model Overview
 
-A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly [Sonnet](../Anthropic/claude-3-sonnet.md) and [Opus](../Anthropic/claude-3-opus.md). It excels in generating coherent and contextually rich text.
+A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly [Sonnet](broken-reference) and [Opus](../Anthropic/claude-3-opus.md). It excels in generating coherent and contextually rich text.
 
 ## How to Make a Call
 
