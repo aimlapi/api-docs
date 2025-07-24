@@ -41,19 +41,19 @@ export default {
       },
       image_base64: {
         desc: `Base64 string of the extracted image`,
-        dpi: {
-          desc: `Dots per inch of the page-image.`,
-        },
-        height: {
-          desc: `Height of the image in pixels.`,
-        },
-        width: {
-          desc: `Width of the image in pixels.`,
-        },
       },
     },
     dimensions: {
       desc: `The dimensions of the PDF page's screenshot image`,
+      dpi: {
+        desc: `Dots per inch of the page-image.`,
+      },
+      height: {
+        desc: `Height of the image in pixels.`,
+      },
+      width: {
+        desc: `Width of the image in pixels.`,
+      },
     },
   },
   include_image_base64: {
