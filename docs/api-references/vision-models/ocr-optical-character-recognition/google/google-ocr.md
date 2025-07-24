@@ -12,11 +12,8 @@ This API provides a feature to extract characters from images.
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json" path="/v1/ocr" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json)
-{% endopenapi %}
-
+{% openapi-operation spec="google-ocr-last" path="/v1/ocr" method="post" %}
+[OpenAPI google-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json)
+{% endopenapi-operation %}
