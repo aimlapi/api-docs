@@ -1,9 +1,9 @@
 [
   {
-    "name": "google/gc-document-ai",
-    "alias": "google-ocr",
+    "name": "mistral/mistral-ocr-latest",
+    "alias": "mistral-ocr-latest",
     "category": "vision-models-ocr",
-    "vendor": "Google",
+    "vendor": "Mistral AI",
     "description": "",
     "features": [],
     "offsite_name": ""
