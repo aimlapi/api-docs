@@ -1,10 +1,11 @@
 [
   {
-    "name": "bagoodex/bagoodex-search-v1",
-    "alias": "bagoodex-search-v1",
-    "category": "text-models-llm",
-    "vendor": "Bagoodex",
+    "name": "google/gc-document-ai",
+    "alias": "google-ocr",
+    "category": "vision-models-ocr",
+    "vendor": "Google",
     "description": "",
+    "features": [],
     "offsite_name": ""
   }
 ]
