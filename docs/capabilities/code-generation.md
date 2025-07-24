@@ -20,3 +20,4 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
+* [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)

@@ -69,6 +69,8 @@
     * [mistral-tiny](api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
     * [Mistral-7B-Instruct](api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
     * [Mixtral-8x7B-Instruct](api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)
+  * [Moonshot](api-references/text-models-llm/moonshot/README.md)
+    * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
     * [Llama-3.1-Nemotron-70B-Instruct-HF](api-references/text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md)
     * [llama-3.1-nemotron-70b](api-references/text-models-llm/NVIDIA/llama-3.1-nemotron-70b.md)

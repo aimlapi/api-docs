@@ -8,6 +8,7 @@ This capability of text chat models allows them to send search queries to the we
 
 * [gpt-4o-search-preview](../api-references/text-models-llm/openai/gpt-4o-search-preview.md)
 * [gpt-4o-mini-search-preview](../api-references/text-models-llm/openai/gpt-4o-mini-search-preview.md)
+* [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 
 ## Solutions That Support Web Search
 
