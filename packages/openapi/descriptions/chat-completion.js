@@ -473,4 +473,10 @@ export default {
   last_updated_before_filter: {
     desc: `Filters search results to only include content last updated before this date. Format should be %m/%d/%Y (e.g. 3/1/2025)`,
   },
+  safety_model: { 
+    desc: `The name of the moderation model used to validate tokens.`
+  },
+  prompt: { 
+    desc: `A string providing context for the model to complete.`
+  },
 };
