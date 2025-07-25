@@ -1,10 +1,8 @@
 # Table of contents
 
-* [404 Model is deprecated](README.md)
-
 ## Quickstart
 
-* [🧭 Documentation Map](<README (1).md>)
+* [🧭 Documentation Map](README.md)
 * [Setting Up](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
@@ -99,6 +97,9 @@
     * [gpt-4.1-mini](api-references/text-models-llm/openai/gpt-4.1-mini.md)
     * [gpt-4.1-nano](api-references/text-models-llm/openai/gpt-4.1-nano.md)
     * [o4-mini](api-references/text-models-llm/openai/o4-mini.md)
+  * [Perplexity](api-references/text-models-llm/perplexity/README.md)
+    * [sonar](api-references/text-models-llm/perplexity/sonar.md)
+    * [sonar-pro](api-references/text-models-llm/perplexity/sonar-pro.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [grok-3-beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [grok-3-mini-beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
@@ -286,6 +287,7 @@
 
 * [📞 Contact Sales](https://calendly.com/aimlapi/30min)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
+* [404 Model is deprecated](<README (1).md>)
 
 ## Errors and Messages
 

@@ -79,6 +79,7 @@ In the example below, we explicitly set `max_tokens = 15000`, hoping this will b
 
 {% tabs %}
 {% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 import json   # for getting a structured output with indentation
@@ -109,6 +110,7 @@ response = requests.post(
 data = response.json()
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="JavaScript" %}
