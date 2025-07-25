@@ -20,6 +20,32 @@ Supported models:
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 
+### Google
+
+Google's policy regarding reasoning models is not to provide parameters for explicitly controlling the model's reasoning activity during invocation. However, this activity does occur, and you can even inspect how many tokens it consumed by checking the `reasoning_tokens` field in the response.
+
+<details>
+
+<summary>Example of the "usage" section in a Gemini model response</summary>
+
+```json
+  "usage": {
+    "prompt_tokens": 6,
+    "completion_tokens": 3050,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1097
+    },
+    "total_tokens": 3056
+```
+
+</details>
+
+Supported models:
+
+* [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
+* [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
+* [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
+
 ### OpenAI and other vendors
 
 The standard way to control reasoning behavior in OpenAI models—and in some models from other providers—is through the `reasoning_effort` parameter, which tells the model how much internal reasoning it should perform before responding to the prompt.
@@ -34,10 +60,6 @@ Supported models:
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
 * [openai/o3-2025-04-16](../api-references/text-models-llm/openai/o3.md)
 * [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
-
-***
-
-* [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 
 ***
 
