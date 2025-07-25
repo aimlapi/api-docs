@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # sonar-pro
 
 {% hint style="info" %}
@@ -11,7 +6,7 @@ This documentation is valid for the following list of our models:   `perplexity/
 
 ## Model Overview
 
-A model built on top of Llama 3.3 70B and optimized for Perplexity search. Pro version&#x20;
+Pro version is built for real-time, web-connected research and complex queries. Handles multi-step, deeper reasoning tasks. Retrieves and synthesizes multiple web searches, yielding more detailed answers. Delivers 2× more citations than standard [Sonar](sonar.md) for enhanced traceability.
 
 ## How to Make a Call
 
@@ -49,8 +44,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="sonar" path="/v1/chat/completions" method="post" %}
-[OpenAPI sonar](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Perplexity/sonar.json)
+{% openapi-operation spec="sonar-pro" path="/v1/chat/completions" method="post" %}
+[OpenAPI sonar-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Perplexity/sonar-pro.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -72,7 +67,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"perplexity/sonar",
+        "model":"perplexity/sonar-pro",
         "messages":[
             {
                 "role":"user",
@@ -103,7 +98,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'perplexity/sonar',
+        model: 'perplexity/sonar-pro',
         messages:[
             {
                 role:'user',
@@ -139,6 +134,71 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "id": "14884548-2103-493c-a69d-7585f36f1c80",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "**Hello** is primarily an English salutation or greeting, first recorded in written form in 1826[1]. It is commonly used to initiate conversation or acknowledge someone's presence.\n\nThe term has notable cultural associations:\n- Students often use \"Hello, World!\" as the first output when learning programming languages—a tradition established by its inclusion in influential programming textbooks[1].\n- \"Hello\" is also the title of notable songs, including Adele’s chart-topping 2015 single and Lionel Richie’s 1984 hit[2][3][4].\n\nAlternative cultural greetings include \"Aloha,\" \"Ciao,\" and \"Namaste,\" among others[1]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ],
+  "created": 1753467346,
+  "model": "sonar-pro",
+  "usage": {
+    "prompt_tokens": 12606,
+    "completion_tokens": 4221,
+    "total_tokens": 16827,
+    "search_context_size": "low"
+  },
+  "citations": [
+    "https://en.wikipedia.org/wiki/Hello",
+    "https://www.youtube.com/watch?v=YQHsXMglC9A",
+    "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+    "https://www.youtube.com/watch?v=mHONNcZbwDY",
+    "https://www.hello-products.com"
+  ],
+  "search_results": [
+    {
+      "title": "Hello - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hello",
+      "date": "2002-06-09",
+      "last_updated": "2025-07-23"
+    },
+    {
+      "title": "Adele - Hello (Official Music Video) - YouTube",
+      "url": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "date": "2015-10-22",
+      "last_updated": "2025-07-07"
+    },
+    {
+      "title": "Hello (Adele song) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+      "date": "2015-10-22",
+      "last_updated": "2025-06-13"
+    },
+    {
+      "title": "Lionel Richie - Hello (Official Music Video) - YouTube",
+      "url": "https://www.youtube.com/watch?v=mHONNcZbwDY",
+      "date": "2020-11-20",
+      "last_updated": "2025-07-07"
+    },
+    {
+      "title": "Hello Products",
+      "url": "https://www.hello-products.com",
+      "date": "2025-06-04",
+      "last_updated": "2025-06-16"
+    }
+  ]
+}
 ```
 {% endcode %}
 

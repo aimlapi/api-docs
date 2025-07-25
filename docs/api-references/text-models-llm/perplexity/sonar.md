@@ -6,7 +6,7 @@ This documentation is valid for the following list of our models:   `perplexity/
 
 ## Model Overview
 
-A model built on top of Llama 3.3 70B and optimized for Perplexity search.
+A model built on top of Llama 3.3 70B and optimized for Perplexity search. Fast, cost-effective, everyday search and Q\&A. Ideal for simple queries, topic summaries, and fact-checking.
 
 ## How to Make a Call
 
