@@ -1,7 +1,7 @@
 [
   {
     "name": "elevenlabs/eleven_multilingual_v2",
-    "alias": "qwen3-32b",
+    "alias": "eleven_multilingual_v2",
     "category": "speech-models",
     "vendor": "ElevenLabs"
   },
