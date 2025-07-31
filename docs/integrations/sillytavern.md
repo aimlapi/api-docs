@@ -7,11 +7,11 @@ description: >-
 
 # SillyTavern
 
-***
-
 ## About
 
 [SillyTavern](https://github.com/SillyTavern/SillyTavern) is a locally installed user interface that allows you to interact with text generation LLMs, image generation engines, and TTS voice models. Integration with the AI/ML API currently applies only to LLMs.
+
+***
 
 ## Installing SillyTavern (Fresh Setup)
 

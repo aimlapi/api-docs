@@ -50,10 +50,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
-import json   # for getting a structured output with indentation
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
@@ -74,14 +76,58 @@ response = requests.post(
                 "content":"Hello"
             }
         ]
-        
     }
 )
 
 data = response.json()
+# getting a structured output with indentation
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of YOUR_AIMLAPI_KEY
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'cohere/command-a',
+        messages:[
+            {
+                role:'user',
+
+                // Insert your question for the model here, instead of Hello:
+                content: 'Hello'
+            }
+        ]
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(JSON.stringify(data, null, 2));
+
+  } catch (error) {
+    console.error('Error', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 

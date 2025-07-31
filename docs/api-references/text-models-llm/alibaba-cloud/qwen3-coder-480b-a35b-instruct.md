@@ -1,12 +1,12 @@
-# DeepSeek Prover V2
+# qwen3-coder-480b-a35b-instruct
 
 {% hint style="info" %}
-This documentation is valid for the following model:   `deepseek/deepseek-prover-v2`
+This documentation is valid for the following model:   `alibaba/qwen3-coder-480b-a35b-instruct`
 {% endhint %}
 
 ## Model Overview
 
-A massive 671B-parameter model, presumed to focus on logic and mathematics. It appears to be an upgrade over DeepSeek Prover V1.5.
+The most powerful model in the Qwen3 Coder series — a 480B-parameter MoE architecture with 35B active parameters. It natively supports a 256K token context and can handle up to 1M tokens using extrapolation techniques, delivering outstanding performance in both coding and agentic tasks.
 
 ## How to Make a Call
 
@@ -21,7 +21,7 @@ A massive 671B-parameter model, presumed to focus on logic and mathematics. It a
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](deepseek-prover-v2.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](qwen3-coder-480b-a35b-instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -30,7 +30,7 @@ At the bottom of this page, you'll find [a code example](deepseek-prover-v2.md#c
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](deepseek-prover-v2.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen3-coder-480b-a35b-instruct.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -44,8 +44,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="deepseek-prover-v2" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-prover-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-prover-v2.json)
+{% openapi-operation spec="qwen3-coder-480b-a35b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen3-coder-480b-a35b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-coder-480b-a35b-instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -67,7 +67,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"deepseek/deepseek-prover-v2",
+        "model":"alibaba/qwen3-coder-480b-a35b-instruct",
         "messages":[
             {
                 "role":"user",
@@ -99,7 +99,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-prover-v2',
+        model: 'alibaba/qwen3-coder-480b-a35b-instruct',
         messages:[
             {
                 role:'user',
@@ -134,8 +134,30 @@ main();
 <summary>Response</summary>
 
 {% code overflow="wrap" %}
-```json
-{'id': 'gen-1747126732-rD70SgJEEBVBXPHmKlNJ', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': "Hello there! As a virtual assistant, I'm here to help you with a wide variety of tasks and questions. Here are some of the things I can do:  \n  \n1. Provide information on a wide range of topics, from science and history to pop culture and current events.  \n2. Answer factual questions using my knowledge base.  \n3. Assist with homework or research projects by providing explanations, summaries, and resources.  \n4. Help with language-related tasks such as grammar, vocabulary, translations, and writing assistance.  \n5. Engage in general conversation, discussing ideas, and providing opinions on various subjects.  \n6. Offer advice or tips on various life situations, though not as a substitute for professional guidance.  \n7. Perform calculations, solve math problems, and help with understanding mathematical concepts.  \n8. Generate creative content like stories, poems, or song lyrics.  \n9. Play interactive games, such as word games or trivia.  \n10. Help you practice a language by conversing in it.  \n  \nFeel free to ask me anything, and I'll do my best to assist you!", 'reasoning_content': None, 'refusal': None}}], 'created': 1747126732, 'model': 'deepseek/deepseek-prover-v2', 'usage': {'prompt_tokens': 15, 'completion_tokens': 1021, 'total_tokens': 1036, 'prompt_tokens_details': None}}
+```json5
+{
+  "id": "chatcmpl-f906efa6-f816-9a06-a32b-aa38da5fe11a",
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "logprobs": null,
+      "message": {
+        "role": "assistant",
+        "content": "Hello! How can I help you today?"
+      }
+    }
+  ],
+  "created": 1753866642,
+  "model": "qwen3-coder-480b-a35b-instruct",
+  "usage": {
+    "prompt_tokens": 28,
+    "completion_tokens": 142,
+    "total_tokens": 170
+  }
+}
 ```
 {% endcode %}
 
