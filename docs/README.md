@@ -119,6 +119,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**OpenAI**</mark>:    [Text/Chat](api-references/text-models-llm/OpenAI/)   [Image](api-references/image-models/OpenAI/)   [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/)   [Embedding](api-references/embedding-models/OpenAI/)&#x20;
 
+**OpenRouter**:    [Text/Chat](api-references/text-models-llm/openrouter/)
+
 **Perplexity**:    [Text/Chat](api-references/text-models-llm/perplexity/)
 
 **RecraftAI**:    [Image](api-references/image-models/RecraftAI/)
