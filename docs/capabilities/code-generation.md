@@ -26,3 +26,4 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [openrouter/horizon-alpha](../api-references/text-models-llm/openrouter/horizon-alpha.md)
