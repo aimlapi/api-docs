@@ -130,6 +130,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Together AI**:    [Embedding](api-references/embedding-models/Together-AI/)
 
 **xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)
+
+**Zhipu**:    [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
 
 {% tab title="Models by CAPABILITY" %}

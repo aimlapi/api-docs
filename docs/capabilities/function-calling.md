@@ -175,3 +175,5 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
 * [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
+* [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
+* [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)

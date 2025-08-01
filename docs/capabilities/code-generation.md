@@ -24,3 +24,5 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
+* [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
+* [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
