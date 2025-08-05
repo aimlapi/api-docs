@@ -1,14 +1,26 @@
 [
   {
-    "name": "bytedance/seededit-3.0-i2i",
-    "alias": "seededit-3.0-i2i",
-    "category": "image-models",
-    "vendor": "ByteDance"
+    "name": "alibaba/wan2.1-t2v-plus",
+    "alias": "wan2.1-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
   },
   {
-    "name": "openrouter/horizon-beta",
-    "alias": "horizon-beta",
-    "category": "text-models-llm",
-    "vendor": "OpenRouter"
+    "name": "alibaba/wan2.1-t2v-turbo",
+    "alias": "wan2.1-t2v-turbo",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-t2v-plus",
+    "alias": "wan2.2-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-i2v-plus",
+    "alias": "wan2.2-i2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
   }
 ]
