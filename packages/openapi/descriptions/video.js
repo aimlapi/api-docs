@@ -107,7 +107,7 @@ export default {
     desc: `If set to true, the prompt will be expanded with additional prompts.`,
   },
   enhance_prompt: {
-    desc: `Whether to enhance the video generation.`
+    desc: `Whether to enhance the video generation.`,
   },
   generate_audio: {
     desc: `Whether to generate audio for the video.`,
@@ -129,6 +129,35 @@ export default {
   camerafixed: {
     desc: `Whether to fix the camera position.
     true: Fix the camera position. The platform will append instructions to fix the camera position in the user's prompt, but the actual effect is not guaranteed.
-    false: Do not fix the camera position.`
-  }
+    false: Do not fix the camera position.`,
+  },
+  video_url: {
+    desc: `A HTTPS URL pointing to a video or a data URI containing a video`,
+  },
+  frame_size: {
+    desc: `The width and height of the video`,
+  },
+  references: {
+    image: {
+      desc: `Passing an image reference allows the model to emulate the style or content of the reference in the output.`,
+    },
+    video: {
+      desc: `Passing a video reference allows the model to emulate the style or content of the reference in the output.`,
+    },
+  },
+  character: {
+    desc: `The character to control. You can either provide a video or an image. A visually recognizable face must be visible and stay within the frame.`,
+    character_video: {
+      desc: `A video of your character. In the output, the character will use the reference video performance in its original animated environment and some of the character's own movements.`,
+    },
+    character_image: {
+      desc: `An image of your character. In the output, the character will use the reference video performance in its original static environment.`,
+    },
+  },
+  body_control: {
+    desc: `A boolean indicating whether to enable body control. When enabled, non-facial movements and gestures will be applied to the character in addition to facial expressions.`,
+  },
+  expression_intensity: {
+    desc: `An integer between 1 and 5 (inclusive). A larger value increases the intensity of the character's expression.`,
+  },
 };
