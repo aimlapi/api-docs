@@ -74,6 +74,5 @@ Supported models:
 
 ***
 
-[zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
-
-[zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
+* [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)

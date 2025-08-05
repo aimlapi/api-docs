@@ -177,4 +177,4 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
-* [openrouter/horizon-alpha](../api-references/text-models-llm/openrouter/horizon-alpha.md)
+* [openrouter/horizon-beta](../api-references/text-models-llm/openrouter/horizon-beta.md)
