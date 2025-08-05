@@ -19,9 +19,7 @@ def main():
     response.raise_for_status()
     data = response.json()
 
-    for i, image in enumerate(data["data"]):
-        with open(f"image_{i+1}.png", "wb") as f:
-            f.write(base64.b64decode(image["url"]))
+    print("Generation:", data)
 
 
 if __name__ == "__main__":

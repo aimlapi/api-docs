@@ -16,10 +16,7 @@ const main = async () => {
     }),
   }).then((res) => res.json());
 
-  response['data'].forEach((image, i) => {
-    const buffer = Buffer.from(image['url'], 'base64');
-    fs.writeFileSync(path.join(__dirname, `image_${i + 1}.png`), buffer);
-});
+  console.log('Generation:', response);
 };
 
 main();
