@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Seededit 3.0 (Image-to-Image)
 
 {% hint style="info" %}
@@ -21,6 +16,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
+{% openapi-operation spec="seededit-3-0-i2i" path="/v1/images/generations" method="post" %}
+[OpenAPI seededit-3-0-i2i](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/seededit-3.0-i2i.json)
+{% endopenapi-operation %}
+
 ## Quick Example
 
 Let's generate an image of the specified size using a simple prompt.
@@ -30,6 +29,7 @@ Let's generate an image of the specified size using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
+import json
 
 
 def main():
@@ -41,17 +41,15 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
-            "model": "bytedance/seedream-3.0",
-            "size": "1888x301",
-            "watermark": False
+            "model": "bytedance/seededit-3.0-i2i",
+            "image": "https://zovi0.github.io/public_misc/flux-dev-t-rex.png",
+            "prompt": "Add a bird to the foreground of the photo.",
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
 
-    print("Generation:", data)
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
@@ -73,10 +71,9 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'bytedance/seedream-3.0',
-        size: '555x543',
-        watermark: false
+        model: 'bytedance/seededit-3.0-i2i',
+        image: 'https://zovi0.github.io/public_misc/flux-dev-t-rex.png',
+        prompt: 'Add a bird to the foreground of the photo.',
       }),
     });
 
@@ -104,12 +101,29 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'created': 1751616711, 'data': [{'url': 'https://ark-content-generation-v2-ap-southeast-1.tos-ap-southeast-1.volces.com/seedream-3-0-t2i/02175161671039622600af416b2ca58c9c8a1e1bf93fac0335693.jpeg?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYjg3ZjNlOGM0YzQyNGE1MmI2MDFiOTM3Y2IwMTY3OTE%2F20250704%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250704T081151Z&X-Tos-Expires=86400&X-Tos-Signature=76ad6d2e0eb218521b9ce0bfdc98eaf2aa683e9a0d3840624fb4d413a1fd360e&X-Tos-SignedHeaders=host&x-tos-process=image%2Fwatermark%2Cimage_YXNzZXRzL3dhdGVybWFyay5wbmc_eC10b3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF81'}]}
+{
+  "created": 1754408583,
+  "data": [
+    {
+      "url": "https://ark-content-generation-v2-ap-southeast-1.tos-ap-southeast-1.volces.com/seededit-3-0-i2i/0217544085757151f54867e2807e9e62dfa0a3e2d06531a7ce49c.jpeg?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20250805%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250805T154303Z&X-Tos-Expires=86400&X-Tos-Signature=e37babdb426ccd6e36f96a019145af3ea8a6e5cb21f3761d8aa3eae32b24d738&X-Tos-SignedHeaders=host"
+    }
+  ]
+}
 ```
 {% endcode %}
 
 </details>
 
-We obtained the following 1888x301 image by running this code example:
+| Reference Image                                                                                                                      | Generated Image                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>(original)</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div> |
 
-<figure><img src="../../../.gitbook/assets/02175161671039622600af416b2ca58c9c8a1e1bf93fac0335693.jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>
+<details>
+
+<summary>More generated images</summary>
+
+| <div><figure><img src="../../../.gitbook/assets/0217544095136411f54867e2807e9e62dfa0a3e2d06531af9c13d.jpg" alt=""><figcaption><p><code>"Add a crown to the T-rex's head."</code></p></figcaption></figure></div>                                                                                                                                                                   | <div><figure><img src="../../../.gitbook/assets/0217544646651366d76cd7acfd572da46abbcedd46e0f23b280e2.jpg" alt=""><figcaption><p><code>"Add a couple of silver wings"</code></p></figcaption></figure></div>                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../.gitbook/assets/0217544649506046d76cd7acfd572da46abbcedd46e0f23e52b51.jpg" alt=""><figcaption><p><code>"Remove the dinosaur. Place a book and a bouquet of wildflowers in blue and pink tones on the lounge chair. Let a light foamy surf gently wash the bottom of the chair. Don't change anything else."</code></p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/0217544652410221b9856d510eb90951bba42702ad03c2f94ae0e.jpg" alt=""><figcaption><p><code>"Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon."</code></p></figcaption></figure></div> |
+
+</details>
