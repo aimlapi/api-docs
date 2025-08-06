@@ -1,0 +1,22 @@
+const fs = require('fs');
+const path = require('path');
+
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'Make the bubbles heart-shaped',
+      image: 'https://ark-doc.tos-ap-southeast-1.bytepluses.com/seededit_i2i.jpeg',
+      size: 'adaptive',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main();
