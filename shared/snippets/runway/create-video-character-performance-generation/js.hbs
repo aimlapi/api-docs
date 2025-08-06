@@ -1,0 +1,24 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/video/runway/generation', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      character: {
+        type: 'image',
+        url: 'https://fs.tonkosti.ru/33/ol/33olc2eyzj6s4w8ksg8kkc0gg.jpg',
+      },
+      reference: {
+        type: 'video',
+        url: 'https://www.shutterstock.com/shutterstock/videos/1068048734/preview/stock-footage-cheerful-businessman-talking-on-the-phone-on-a-green-screen-chroma-key.webm',
+      }
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()

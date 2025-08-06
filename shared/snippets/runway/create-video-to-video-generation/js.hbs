@@ -1,0 +1,22 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/video/runway/generation', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'Replace the pink background color with the color of the image',
+      video_url : 'https://cdn.pixabay.com/video/2019/09/04/26566-358041233_large.mp4',
+      references: [{
+          type: 'image',
+          url: 'https://thumbs.dreamstime.com/b/yellow-square-background-shape-blank-high-quality-photo-214458702.jpg'
+        }]
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()

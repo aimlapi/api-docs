@@ -1,0 +1,21 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/generate/video/runway/generation"
+    payload = {
+        "model": "{{model}}",
+        "prompt": "Replace the pink background color with the color of the image",
+        "video_url" : f"https://cdn.pixabay.com/video/2019/09/04/26566-358041233_large.mp4",
+        "references": [{
+            "type": "image",
+            "url": "https://thumbs.dreamstime.com/b/yellow-square-background-shape-blank-high-quality-photo-214458702.jpg"
+        }]
+    }
+    headers = {"Authorization": "Bearer {{apiKey}}", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers)
+    print("Generation:", response.json())
+
+if __name__ == "__main__":
+    main()
