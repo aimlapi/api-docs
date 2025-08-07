@@ -95,7 +95,7 @@ If transparent, the output format needs to support transparency, so it should be
       desc: `The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.`
     },
     seededit: {
-      desc: `The image to be edited. Enter the Base64 encoding of the picture or an accessible URL. Image URL: Make sure that the image URL is accessible.Base64-encoded content: The format must be data:image/<image format>;base64,<Base64-encoded content>. Note <image format> must be in lowercase, for example data:image/png;base64,<base64_image>.`
+      desc: `The image to be edited. Enter the Base64 encoding of the picture or an accessible URL. Image URL: Make sure that the image URL is accessible. Base64-encoded content: The format must be in lowercase.`
     },
   },
   mask: {
