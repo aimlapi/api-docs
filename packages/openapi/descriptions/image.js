@@ -100,5 +100,8 @@ If transparent, the output format needs to support transparency, so it should be
   },
   mask: {
     desc: `An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.`
-  }
+  },
+  sync_mode: {
+    desc: `If set to true, the function will wait for the image to be generated and uploaded before returning the response. This will increase the latency of the function but it allows you to get the image directly in the response without going through the CDN.`,
+  },
 };
