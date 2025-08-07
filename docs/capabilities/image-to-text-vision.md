@@ -50,7 +50,10 @@ print(response.json())
 * [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
 * [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
-* [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)-
+* [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
+* [anthropic/claude-opus-4.1\
+  claude-opus-4-1\
+  claude-opus-4-1-20250805](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)

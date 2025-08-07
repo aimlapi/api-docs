@@ -1,12 +1,14 @@
-# Claude 4 Opus
+# gpt-oss-120b
 
 {% hint style="info" %}
-This documentation is valid for the following model:   `anthropic/claude-opus-4`
+This documentation is valid for the following list of our models:
+
+* `openai/gpt-oss-120b`
 {% endhint %}
 
 ## Model Overview
 
-The leading coding model globally, consistently excelling at complex, long-duration tasks and agent-based workflows.
+This OSS model is text-only and designed for strong reasoning and tool use.
 
 ## How to Make a Call
 
@@ -21,7 +23,7 @@ The leading coding model globally, consistently excelling at complex, long-durat
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](claude-4-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gpt-oss-120b.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -30,7 +32,7 @@ At the bottom of this page, you'll find [a code example](claude-4-opus.md#code-e
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-4-opus.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-oss-120b.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -44,8 +46,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="claude-4-opus" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-4-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-opus.json)
+{% openapi-operation spec="gpt-oss-120b" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-oss-120b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-oss-120b.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -67,7 +69,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"anthropic/claude-opus-4",
+        "model":"openai/gpt-oss-120b",
         "messages":[
             {
                 "role":"user",
@@ -99,7 +101,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'anthropic/claude-opus-4',
+        model: 'openai/gpt-oss-120b',
         messages:[
             {
                 role:'user',
@@ -136,26 +138,28 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "msg_01BDDxHJZjH3UBwLrZBUiASE",
+  "id": "gen-1754554066-7Rcl38Atg9I9CLPcnE3t",
   "object": "chat.completion",
-  "model": "claude-opus-4-20250514",
   "choices": [
     {
       "index": 0,
+      "finish_reason": "stop",
+      "logprobs": null,
       "message": {
-        "reasoning_content": "",
-        "content": "Hello! How can I help you today?",
-        "role": "assistant"
-      },
-      "finish_reason": "end_turn",
-      "logprobs": null
+        "role": "assistant",
+        "content": "Hello! 👋 How can I assist you today?",
+        "reasoning_content": "User says \"Hello\". Probably just a greeting. We respond politely, ask how we can help.",
+        "refusal": null
+      }
     }
   ],
-  "created": 1748529508,
+  "created": 1754554066,
+  "model": "openai/gpt-oss-120b",
   "usage": {
-    "prompt_tokens": 252,
-    "completion_tokens": 1890,
-    "total_tokens": 2142
+    "prompt_tokens": 12,
+    "completion_tokens": 42,
+    "total_tokens": 54,
+    "prompt_tokens_details": null
   }
 }
 ```

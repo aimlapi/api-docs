@@ -1,14 +1,19 @@
-# gen4\_turbo
+---
+hidden: true
+noIndex: true
+---
+
+# act\_two
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `runway/gen4_turbo`
+* `runway/act_two`
 {% endhint %}
 
 ## Overview
 
-This release brings faster, more scalable AI video generation with higher visual quality. This version allows for 10-second video generation. Gen4 Turbo delivers realistic motion, coherent subjects and styles across frames, and high prompt fidelity, supported by strong world modeling.
+This video-to-video model lets you animate characters using reference performance videos. Simply provide a video of someone acting out a scene along with a character reference (image or video), and Act-Two will transfer the performance to your character — including natural motion, speech, and facial expressions.
 
 ## How to Make a Call
 
@@ -23,7 +28,7 @@ This release brings faster, more scalable AI video generation with higher visual
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gen4_turbo.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](act_two.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
 Generating a video using this model involves sequentially calling two endpoints:&#x20;
@@ -41,7 +46,7 @@ The code example combines both endpoint calls.
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `image_url` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gen4_turbo.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
+Only `image_url` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](act_two.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -57,11 +62,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ### Video Generation
 
-You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between `0.5` and `2`.
+<mark style="background-color:red;">You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`0.5`</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">and</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`2`</mark><mark style="background-color:red;">.</mark>
 
-{% openapi-operation spec="runway-gen4-turbo" path="/v2/generate/video/runway/generation" method="post" %}
-[OpenAPI runway-gen4-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo.json)
-{% endopenapi-operation %}
+
 
 ### Retrieve the generated video from the server
 
@@ -74,9 +77,11 @@ If the video generation task status is `complete`, the response will include the
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-Let’s take a beautiful but somewhat barren mountain landscape:
+We often generate videos featuring raccoons and dragons — and this time won't be an exception. For the character reference, we'll use a video of a sinister-looking raccoon we previously generated while testing the runway/gen4\_turbo model. As for the motion reference, we'll take an internet-famous video of a dancing dog. A delightfully infernal combo, isn't it?
 
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Liebener_Spitze_SW.JPG/1280px-Liebener_Spitze_SW.JPG" alt=""><figcaption><p><a href="https://commons.wikimedia.org/wiki/File:Liebener_Spitze_SW.JPG">commons.wikimedia.org</a></p></figcaption></figure>
+| Character reference video                                                                                                                  | Motion reference video                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>Generated by ...</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p>Generated by ...</p></figcaption></figure></div> |
 
 Then ask Gen4 Turbo to populate it with an epic reptilian creature using the following prompt:
 
@@ -171,15 +176,6 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'queued'}
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/704dae4c-2ec9-4390-9625-abb52c359c4f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjNjYzExNDU1YTJmODNmZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0NDU4ODgwMH0.Jzmu6gPsBTTiZecKxSSwi9qk0-KSaHIgQbIOmCKe0Lk']}
 ```
 {% endcode %}
 
@@ -188,4 +184,4 @@ Generation complete:/n {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 
 The following video was generated by running the code example above. Processing time: \~65 sec. \
 You may also check out the [original video in 1280×720 resolution](https://drive.google.com/file/d/1vDMftEwlfspfHPbDIpc2FhuirrsyC9B-/view?usp=sharing).
 
-<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-51208c7d200818.gif" alt=""><figcaption><p>Just a humble GIF preview... and yet, somehow still scary!</p></figcaption></figure></div>
+...

@@ -48,7 +48,7 @@ If you need a more detailed walkthrough for setting up your development environm
 [OpenAPI claude-4-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-sonnet.json)
 {% endopenapi-operation %}
 
-## Quick Example
+## Code Example
 
 {% tabs %}
 {% tab title="Python" %}

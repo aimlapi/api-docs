@@ -19,6 +19,9 @@ Supported models:
 * [anthropic/claude-3.7-sonnet](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
+* [anthropic/claude-opus-4.1\
+  claude-opus-4-1\
+  claude-opus-4-1-20250805](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 
 ### Google
 
@@ -60,6 +63,8 @@ Supported models:
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
 * [openai/o3-2025-04-16](../api-references/text-models-llm/openai/o3.md)
 * [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
+* [openai/gpt-oss-20b](../api-references/text-models-llm/openai/gpt-oss-20b.md)
+* [openai/gpt-oss-120b](../api-references/text-models-llm/openai/gpt-oss-120b.md)
 
 ***
 
