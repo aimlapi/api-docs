@@ -65,9 +65,9 @@ Supported models:
 * [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 * [openai/gpt-oss-20b](../api-references/text-models-llm/openai/gpt-oss-20b.md)
 * [openai/gpt-oss-120b](../api-references/text-models-llm/openai/gpt-oss-120b.md)
-* [openai/gpt-5](../api-references/text-models-llm/openai/gpt-5.md)
-* [openai/gpt-5-mini](../api-references/text-models-llm/openai/gpt-5-mini.md)
-* [openai/gpt-5-nano](../api-references/text-models-llm/openai/gpt-5-nano.md)
+* [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md)
+* [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)
+* [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
 
 ***
 
