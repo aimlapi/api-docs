@@ -100,9 +100,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
-* [anthropic/claude-opus-4.1\
-  claude-opus-4-1\
-  claude-opus-4-1-20250805](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
+* [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 
 ***
 
@@ -164,6 +162,9 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 * [openai/gpt-oss-20b](../api-references/text-models-llm/openai/gpt-oss-20b.md)
 * [openai/gpt-oss-120b](../api-references/text-models-llm/openai/gpt-oss-120b.md)
+* [openai/gpt-5](../api-references/text-models-llm/openai/gpt-5.md)
+* [openai/gpt-5-mini](../api-references/text-models-llm/openai/gpt-5-mini.md)
+* [openai/gpt-5-nano](../api-references/text-models-llm/openai/gpt-5-nano.md)
 
 ***
 

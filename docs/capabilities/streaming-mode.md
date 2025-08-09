@@ -7,3 +7,6 @@ You can also use this functionality when programming [Assistants](../solutions/o
 99% of our available [text models](../api-references/text-models-llm/) support this feature, except for the following:
 
 * [o1](../api-references/text-models-llm/OpenAI/o1.md)
+* [openai/gpt-5](../api-references/text-models-llm/openai/gpt-5.md)
+* [openai/gpt-5-mini](../api-references/text-models-llm/openai/gpt-5-mini.md)
+

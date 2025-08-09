@@ -1,6 +1,22 @@
 ---
-description: FAQ section about max_tokens parameter and its possible impact on a request.
+description: >-
+  Learn how to call the API in asynchronous mode to handle long-running tasks
+  efficiently.
 icon: circle-question
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Can I call API in the asynchronous mode?

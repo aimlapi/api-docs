@@ -1,6 +1,22 @@
 ---
-description: FAQ section about max_tokens parameter and its possible impact on a request.
+description: >-
+  Find out why your API requests are being cropped and how to prevent data
+  truncation.
 icon: circle-question
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Are my requests cropped?

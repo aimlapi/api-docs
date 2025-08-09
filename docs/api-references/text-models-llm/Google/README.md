@@ -1,5 +1,20 @@
-[#references:start]: <> ({ "template": "models" })
-[#references:start]: <> ({ "template": "models" })
-# Models
-[#references:end]: <> ({})
-[#references:end]: <> ({})
+---
+description: Google OCR API Reference
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
+# Google
+

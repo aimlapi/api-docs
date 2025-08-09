@@ -64,7 +64,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 <mark style="background-color:red;">You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`0.5`</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">and</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`2`</mark><mark style="background-color:red;">.</mark>
 
-
+{% openapi-operation spec="runway-gen4-aleph" path="/v2/generate/video/runway/generation" method="post" %}
+[OpenAPI runway-gen4-aleph](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_aleph.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
