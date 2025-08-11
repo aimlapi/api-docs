@@ -35,18 +35,18 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 You can generate a video using this API. In the basic setup, you only need a prompt, the aspect ratio, and the desired duration (5, 6, 7, or 8 seconds).
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json" path="/v2/generate/video/google/generation" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video.json)
-{% endopenapi %}
+{% openapi-operation spec="veo2" path="/v2/generate/video/google/generation" method="post" %}
+[OpenAPI veo2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo2.json)
+{% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json" path="/v2/generate/video/google/generation" method="get" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Text-to-Video-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="fetch-google-veos" path="/v2/generate/video/google/generation" method="get" %}
+[OpenAPI fetch-google-veos](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo2-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -311,4 +311,4 @@ Processing complete:
 
 **Low-res GIF preview**:
 
-<figure><img src="../../../.gitbook/assets/veo2_dragon_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure>
+<div align="left"><figure><img src="../../../.gitbook/assets/veo2_dragon_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain,</code> <br><code>then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>

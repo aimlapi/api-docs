@@ -40,18 +40,18 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 You can generate a video using this API.
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json" path="/v2/generate/video/google/generation" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json)
-{% endopenapi %}
+{% openapi-operation spec="veo2-image-to-video" path="/v2/generate/video/google/generation" method="post" %}
+[OpenAPI veo2-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json)
+{% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json" path="/v2/generate/video/google/generation" method="get" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="fetch-google-veos" path="/v2/generate/video/google/generation" method="get" %}
+[OpenAPI fetch-google-veos](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo2-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -298,14 +298,8 @@ Processing complete:/n {'id': '812dbc37-f15a-46a4-a058-8477bd243f5a:veo2/image-t
 
 </details>
 
-<details>
-
-<summary>Generated Video</summary>
-
 **Original**: [1280x720](https://drive.google.com/file/d/19p8OlNOWJrJN9Z6KFTzloQ4ZAAmQIaDu/view?usp=sharing)
 
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/veo2-image-to-video-monalisa-preview.gif" alt=""><figcaption></figcaption></figure></div>
-
-</details>
