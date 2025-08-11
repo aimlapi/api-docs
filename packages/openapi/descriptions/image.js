@@ -2,9 +2,9 @@ export default {
   prompt: {
     desc: `The text prompt describing the content, style, or composition of the image to be generated.`,
   },
-  num_images: { 
+  num_images: {
     default: {
-      desc: `The number of images to generate.` 
+      desc: `The number of images to generate.`,
     },
     flux_kontext: {
       desc: `Number of image variations to generate. Each image is a different attempt to combine the reference images (from the image_url parameter) according to the prompt.`,
@@ -18,7 +18,7 @@ export default {
       desc: `For both height and width, the value must be a multiple of 32.`,
     },
     bytedance: {
-      desc: `The total image area (height x width) must be between 262,144 and 4,194,304 pixels.`,
+      desc: `Specifies the dimensions (width x height in pixels) of the generated image. Must be between [512x512, 2048x2048].`,
     },
     default: { desc: `The size of the generated image.` },
   },
@@ -92,14 +92,14 @@ If transparent, the output format needs to support transparency, so it should be
   },
   image: {
     default: {
-      desc: `The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.`
+      desc: `The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.`,
     },
     seededit: {
-      desc: `The image to be edited. Enter the Base64 encoding of the picture or an accessible URL. Image URL: Make sure that the image URL is accessible. Base64-encoded content: The format must be in lowercase.`
+      desc: `The image to be edited. Enter the Base64 encoding of the picture or an accessible URL. Image URL: Make sure that the image URL is accessible. Base64-encoded content: The format must be in lowercase.`,
     },
   },
   mask: {
-    desc: `An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.`
+    desc: `An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.`,
   },
   sync_mode: {
     desc: `If set to true, the function will wait for the image to be generated and uploaded before returning the response. This will increase the latency of the function but it allows you to get the image directly in the response without going through the CDN.`,
