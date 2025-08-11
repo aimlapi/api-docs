@@ -22,7 +22,7 @@ export default {
         desc: `Specifies the dimensions (width x height in pixels) of the generated image. Must be between [512x512, 2048x2048].`,
       },
       adaptive: {
-        desc: `The width and height pixels of the generated image. Currently only supports adaptive.`,
+        desc: `The model checks the size of the input picture against its internal size table and picks the closest match as the output picture size.`,
       },
     },
     default: { desc: `The size of the generated image.` },
