@@ -108,12 +108,12 @@ def generate_video():
         "character":
             {
                 "type":"image",
-                "url":"https://fs.tonkosti.ru/33/ol/33olc2eyzj6s4w8ksg8kkc0gg.jpg"
+                "url":"https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg"
             },
         "reference":
             {
                 "type":"video",
-                "url": "https://cdn.aimlapi.com/eagle/files/kangaroo/koEwBmrDMXobMgnBJmnlU_output.mp4"
+                "url": "https://zovi0.github.io/public_misc/kling-video-v1.6-pro-text-to-video-dancing-woman-output.mp4"
             },
         "frame_size":"1280:720",
         "body_control":True,
