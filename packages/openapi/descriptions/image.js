@@ -18,7 +18,12 @@ export default {
       desc: `For both height and width, the value must be a multiple of 32.`,
     },
     bytedance: {
-      desc: `Specifies the dimensions (width x height in pixels) of the generated image. Must be between [512x512, 2048x2048].`,
+      default: {
+        desc: `Specifies the dimensions (width x height in pixels) of the generated image. Must be between [512x512, 2048x2048].`,
+      },
+      adaptive: {
+        desc: `The width and height pixels of the generated image. Currently only supports adaptive.`,
+      },
     },
     default: { desc: `The size of the generated image.` },
   },
