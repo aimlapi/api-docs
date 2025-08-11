@@ -114,9 +114,7 @@ main();
 
 </details>
 
-| Reference Image                                                                                                                      | Generated Image                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>(original)</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div> |
+<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>(original)</p></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div></td></tr></tbody></table>
 
 <details>
 

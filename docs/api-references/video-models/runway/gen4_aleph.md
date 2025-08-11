@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # gen4\_aleph
 
 {% hint style="info" %}
@@ -62,7 +57,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ### Video Generation
 
-<mark style="background-color:red;">You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`0.5`</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">and</mark> <mark style="background-color:red;"></mark><mark style="background-color:red;">`2`</mark><mark style="background-color:red;">.</mark>
+You can generate a video using this API. In the basic setup, you need only a video URL and a prompt.
 
 {% openapi-operation spec="runway-gen4-aleph" path="/v2/generate/video/runway/generation" method="post" %}
 [OpenAPI runway-gen4-aleph](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_aleph.json)
@@ -79,13 +74,9 @@ If the video generation task status is `complete`, the response will include the
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-Let’s take a beautiful but somewhat barren mountain landscape:
+Let’s take a video of our running raccoon and ask Aleph to add a small fairy riding on its back. Here’s the prompt we can use:
 
-<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Liebener_Spitze_SW.JPG/1280px-Liebener_Spitze_SW.JPG" alt=""><figcaption><p><a href="https://commons.wikimedia.org/wiki/File:Liebener_Spitze_SW.JPG">commons.wikimedia.org</a></p></figcaption></figure>
-
-Then ask Gen4 Turbo to populate it with an epic reptilian creature using the following prompt:
-
-_<mark style="background-color:blue;">"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming"</mark>_
+_`"`_`Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.`_`"`_
 
 We combine both methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.&#x20;
 
@@ -95,78 +86,91 @@ Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key fr
 
 {% code overflow="wrap" %}
 ```python
-import time
 import requests
+import time
 
-# Creating and sending a video generation task to the server (returns a generation ID)
+# replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
+api_key = "<YOUR_AIMLAPI_KEY>"
+base_url = "https://api.aimlapi.com/v2"
+
+
+# Creating and sending a video generation task to the server
 def generate_video():
-    url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
-    payload = {
-        "model": "runway/gen4_turbo",
-        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming",
-        
-        
-        "ratio": "16:9",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Liebener_Spitze_SW.JPG/1280px-Liebener_Spitze_SW.JPG",
+    url = f"{base_url}/generate/video/runway/generation"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
     }
-    # Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
 
-    response = requests.post(url, json=payload, headers=headers)
+    data = {
+        "model": "runway/gen4_aleph",
+        "video_url":"https://zovi0.github.io/public_misc/kling-v2-master-t2v-racoon.mp4",
+        "prompt":'''
+            Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.
+        '''
+    }
 
+    response = requests.post(url, json=data, headers=headers)
+    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        print("Generation:", response_data)
+        print(response_data)
         return response_data
+    
 
-
-# Requesting the result of the generation task from the server using the generation_id:
-def retrieve_video(gen_id):
-    url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
+# Requesting the result of the task from the server using the generation_id
+def get_video(gen_id):
+    url = f"{base_url}/generate/video/runway/generation"
     params = {
         "generation_id": gen_id,
     }
-    # Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
-    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
+    
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+        "Content-Type": "application/json"
+        }
 
     response = requests.get(url, params=params, headers=headers)
+    # print("Generation:", response.json())
     return response.json()
-    
-    
-# This is the main function of the program. From here, we sequentially call the video generation and then repeatedly request the result from the server every 10 seconds:
+
+
+
 def main():
-    generation_response = generate_video()
-    gen_id = generation_response.get("id")
-        
+     # Running video generation and getting a task id
+    gen_response = generate_video()
+    gen_id = gen_response.get("id")
+    print("Generation ID:  ", gen_id)
+
+    # Trying to retrieve the video from the server every 10 sec
     if gen_id:
         start_time = time.time()
 
-        timeout = 600
+        timeout = 1800
         while time.time() - start_time < timeout:
-            response_data = retrieve_video(gen_id)
+            response_data = get_video(gen_id)
 
             if response_data is None:
                 print("Error: No response from API")
                 break
         
             status = response_data.get("status")
+            print("Status:", status)
 
-            if status == "generating" or status == "queued" or status == "waiting":
+            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Processing complete:/n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
-        return None    
+        return None     
 
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 
@@ -176,19 +180,57 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'queued'}
+{'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 'queued'}
+Generation ID:   6d6c768f-702e-4737-a3c9-0c6c6f4fec0a
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
+Status: generating
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/704dae4c-2ec9-4390-9625-abb52c359c4f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjNjYzExNDU1YTJmODNmZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0NDU4ODgwMH0.Jzmu6gPsBTTiZecKxSSwi9qk0-KSaHIgQbIOmCKe0Lk']}
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/cbd4bc0a-e4dd-45be-abb4-fa95b014dc46.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiY2YzNmNmZDVkMDcwZDcxNyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc1NTA0MzIwMH0.nsiluZQnDhkSr5peYkbNFLeUxn7vJ59C1ablCEm9CSI']}
 ```
 {% endcode %}
 
 </details>
 
-The following video was generated by running the code example above. Processing time: \~65 sec. \
-You may also check out the [original video in 1280×720 resolution](https://drive.google.com/file/d/1vDMftEwlfspfHPbDIpc2FhuirrsyC9B-/view?usp=sharing).
+**Processing time**: \~3 min 30 sec. \
+**Original**: [1280×720](https://drive.google.com/file/d/1x_AYR09NphtcDpBykCx8u4Kq7AAdgJIt/view?usp=sharing)\
+**Low-res GIF preview**:
+
+<table data-full-width="false"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи.gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
