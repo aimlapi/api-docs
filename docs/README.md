@@ -83,7 +83,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Video](api-references/video-models/alibaba-cloud/)
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Image](api-references/image-models/alibaba-cloud/)    [Video](api-references/video-models/alibaba-cloud/)
 
 **Anthracite**:    [Text/Chat](api-references/text-models-llm/Anthracite/)
 
