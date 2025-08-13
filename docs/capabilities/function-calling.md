@@ -178,7 +178,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
-* [abab6.5s-chat](../api-references/text-models-llm/MiniMax/abab6.5s-chat.md)
 * [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)

@@ -19,9 +19,7 @@ Supported models:
 * [anthropic/claude-3.7-sonnet](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
-* [anthropic/claude-opus-4.1\
-  claude-opus-4-1\
-  claude-opus-4-1-20250805](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
+* [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 
 ### Google
 

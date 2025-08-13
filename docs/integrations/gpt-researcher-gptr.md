@@ -100,7 +100,7 @@ You can also use GPT Researcher to gather information about code documentation, 
 * [Google Gemini](../api-references/text-models-llm/Google/)
 * [Claude (Anthropic)](../api-references/text-models-llm/Anthropic/)
 * [Llama 3](../api-references/text-models-llm/Meta/)
-* [Groq](../api-references/text-models-llm/xAI/)
+* [Grok](../api-references/text-models-llm/xAI/)
 * [Mistral](../api-references/text-models-llm/Mistral-AI/)
 * [Embedding models](../api-references/embedding-models/)
 
