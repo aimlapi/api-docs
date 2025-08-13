@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-
+A high-performance image generation base model that can handle intricate text rendering and perform accurate image editing.
 
 ## Setup your API Key
 
