@@ -105,8 +105,6 @@
     * [gpt-5-mini](api-references/text-models-llm/openai/gpt-5-mini.md)
     * [gpt-5-nano](api-references/text-models-llm/openai/gpt-5-nano.md)
     * [gpt-5-chat](api-references/text-models-llm/openai/gpt-5-chat.md)
-  * [OpenRouter](api-references/text-models-llm/openrouter/README.md)
-    * [horizon-beta](api-references/text-models-llm/openrouter/horizon-beta.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [sonar-pro](api-references/text-models-llm/perplexity/sonar-pro.md)
