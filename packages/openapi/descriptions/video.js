@@ -25,6 +25,9 @@ export default {
     google: {
       desc: `URL of the input image to animate. Should be 720p or higher resolution.`,
     },
+    images: {
+        desc: `Reference images for dual-character effects (Base64 encoded or URL)`
+    }
   },
   last_image_url: {
     default: {
