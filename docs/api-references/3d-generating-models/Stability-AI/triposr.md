@@ -14,13 +14,11 @@ A transformer-based model designed for rapid 3D object reconstruction from a sin
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Submit a request
+## API Schema
 
-### API Schema
-
-{% openapi src="triposr.json" path="/v1/images/generations" method="post" %}
-[triposr.json](triposr.json)
-{% endopenapi %}
+{% openapi-operation spec="triposr" path="/v1/images/generations" method="post" %}
+[OpenAPI triposr](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/Stability-AI/triposr.json)
+{% endopenapi-operation %}
 
 ## Example
 
