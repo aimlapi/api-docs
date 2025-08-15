@@ -14,7 +14,7 @@ This model use per-second billing. The cost of audio transcription is based on t
 
 ## Model Overview
 
-A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics.
+A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics (English only).&#x20;
 
 ## Setup your API Key
 

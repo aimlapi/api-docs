@@ -331,6 +331,7 @@
 
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
+* [AutoGPT](integrations/autogpt.md)
 * [Cline](integrations/cline.md)
 * [continue.dev](integrations/continue.dev.md)
 * [ElizaOS](integrations/elizaos.md)
@@ -342,3 +343,4 @@
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
+* [Toolhouse](integrations/toolhouse.md)

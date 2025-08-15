@@ -184,6 +184,6 @@ agent.print_response("Whats happening in France?")
 
 ## More
 
-For further information about the framework, please check the [official Agno documentation.](https://docs.agno.com/introduction)
+For further information about the framework, please check [the official Agno documentation](https://docs.agno.com/introduction).
 
 For additional examples, check out our [repo](https://github.com/D1m7asis/agno-aimlapi/tree/63522cb6c302f88d7a40ab734ee037ca8dc73d23/cookbook/models/aimlapi).
