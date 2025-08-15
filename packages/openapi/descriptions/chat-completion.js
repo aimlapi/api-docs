@@ -399,7 +399,7 @@ export default {
     desc: `If True, the response will contain the prompt. Can be used with logprobs to return prompt logprobs.`,
   },
   min_p: {
-    desc: `A number between 0 and 1 that can be used as an alternative to top_p and top_k.`,
+    desc: `A number between 0.001 and 0.999 that can be used as an alternative to top_p and top_k.`,
   },
   top_a: {
     desc: `Alternate top sampling parameter.`,
