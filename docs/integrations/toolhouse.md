@@ -86,7 +86,7 @@ print(response.choices[0].message.content)
 
 ***
 
-## 🖼 GUI Integration
+### GUI Integration
 
 The Toolhouse GUI ([https://app.toolhouse.ai](https://app.toolhouse.ai)) supports:
 
@@ -99,54 +99,9 @@ Tool configuration is managed entirely through their GUI and reflected in tool d
 
 ***
 
-## ✅ Supported AIMLAPI Models
-
-All models using `chat/completions` interface via AIMLAPI are supported in Python SDK:
-
-* **Mistralai** – Mistral-7B, Mixtral-8x7B
-* **Meta** – LLaMA 3.1, 3.3
-* **Anthropic** – Claude 3.5 Haiku
-* **NVIDIA** – Nemotron 70B
-* **Google, xAI, Alibaba, DeepSeek, Cohere** – via standard API URL
-
-📘 See: [https://docs.aimlapi.com/models](https://docs.aimlapi.com/models)
-
-***
-
-## ⚙️ Parameters
-
-Toolhouse integration uses the standard OpenAI-compatible parameters via `openai` SDK:
-
-* `model`
-* `messages`
-* `tools`
-* `temperature`
-* `max_tokens`
-* `stream` — optional and supported
-
-No custom parameter differences for AIMLAPI models.
-
-***
-
-## 🧠 Supported Call Features
-
-| Feature           | Supported   |
-| ----------------- | ----------- |
-| Synchronous calls | ✅           |
-| Tool Calling      | ✅           |
-| Streaming         | ✅           |
-| Threads           | ❌           |
-| Local tools       | ✅           |
-| Function calling  | ✅           |
-| Async usage       | 🟡 (manual) |
-
-
-
-***
-
 ## Integration via TypeScript
 
-### 📦 Installation
+### Installation
 
 Install the required dependencies:
 
@@ -156,7 +111,7 @@ npm install @toolhouseai/sdk openai dotenv
 
 ***
 
-### 🔌 Connection Setup
+### Connection Setup
 
 1. Create a `.env` file in the project root:
 
@@ -223,7 +178,7 @@ npx ts-node toolhouse.ts
 
 ***
 
-## 🖼 GUI Integration
+### GUI Integration
 
 Toolhouse provides a browser-based GUI at [app.toolhouse.ai](https://app.toolhouse.ai/) where you can:
 
@@ -236,7 +191,7 @@ Toolhouse provides a browser-based GUI at [app.toolhouse.ai](https://app.toolhou
 
 ***
 
-## ✅ Supported Models via AIMLAPI
+## ✅ Supported AIMLAPI Models
 
 All chat-compatible models served by AIMLAPI are supported, including:
 
@@ -250,7 +205,7 @@ All chat-compatible models served by AIMLAPI are supported, including:
 
 ***
 
-## ⚙️ Additional Parameters
+## ⚙️ Supported Parameters
 
 No AIMLAPI-specific parameter differences were found. Use standard OpenAI-compatible parameters:
 
@@ -265,11 +220,4 @@ No AIMLAPI-specific parameter differences were found. Use standard OpenAI-compat
 
 ## 🧠 Supported Call Features
 
-| Feature           | Supported                   |
-| ----------------- | --------------------------- |
-| Synchronous calls | ✅                           |
-| Asynchronous use  | ✅ (via Promises)            |
-| Tool Calling      | ✅                           |
-| Streaming         | ✅                           |
-| Threads           | ❌                           |
-| Local tools       | ✅ via `registerLocalTool()` |
+<table><thead><tr><th width="289">Feature</th><th>Via Python</th><th>Via TypeScript</th></tr></thead><tbody><tr><td>Synchronous calls</td><td>✅</td><td>✅</td></tr><tr><td>Asynchronous use</td><td>🟡 (manual)</td><td>✅ (via Promises)</td></tr><tr><td>Tool Calling</td><td>✅</td><td>✅</td></tr><tr><td>Streaming</td><td>✅</td><td>✅</td></tr><tr><td>Threads</td><td>❌</td><td>❌</td></tr><tr><td>Local tools</td><td>✅</td><td>✅ via <code>registerLocalTool()</code></td></tr></tbody></table>
