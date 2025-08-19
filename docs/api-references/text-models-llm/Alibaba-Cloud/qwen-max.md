@@ -1,11 +1,6 @@
 # qwen-max
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `qwen-max`
-* `qwen-max-2025-01-25`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>qwen-max</code></li><li><code>qwen-max-2025-01-25</code></li></ul></div></td><td valign="top"></td></tr></tbody></table>
 
 ## Model Overview
 
