@@ -50,7 +50,7 @@ export default {
   },
   file: {
     minimax: {
-      desc: `Audio file path, supports WAV and MP3 formats. The audio duration must be longer than 10s and no more than 10 minutes.`,
+      desc: `Audio file local path, supports WAV and MP3 formats. The audio duration must be longer than 10s and no more than 10 minutes.`,
     },
   },
   negative_prompt: {
