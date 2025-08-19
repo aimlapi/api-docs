@@ -1,4 +1,4 @@
-const MODELS_URL = 'https://api.aimlapi.com/models/with-details';
-const OPENAPI_URL = 'https://api.aimlapi.com/docs-public-yaml';
+const MODELS_URL = 'https://api-staging.aimlapi.com/models/with-details';
+const OPENAPI_URL = 'https://api-staging.aimlapi.com/docs-public-yaml';
 
 module.exports = { MODELS_URL, OPENAPI_URL };
