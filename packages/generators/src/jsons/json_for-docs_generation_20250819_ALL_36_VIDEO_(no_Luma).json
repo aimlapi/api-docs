@@ -132,7 +132,7 @@
     "vendor": "MiniMax"
   },
   {
-    "name": "gen3a_turbo",
+    "name": "runway/gen3a_turbo",
     "alias": "gen3a_turbo",
     "category": "video-models",
     "vendor": "Runway"
