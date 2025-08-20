@@ -1,4 +1,4 @@
-# Veo2 (Image-to-Video)
+# Veo 2 (Image-to-Video)
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
@@ -49,8 +49,8 @@ You can generate a video using this API.
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="fetch-google-veos" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI fetch-google-veos](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo2-pair.json)
+{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
+[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
