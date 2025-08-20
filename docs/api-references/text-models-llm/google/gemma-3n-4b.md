@@ -42,9 +42,11 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="test-constructor-2" path="/v1/chat/completions" method="post" %}
-[OpenAPI test-constructor-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3n-test-contructor.json)
+{% openapi-operation spec="gemma-3n-e4b-it" path="/v1/chat/completions" method="post" %}
+[OpenAPI gemma-3n-e4b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3n-e4b-it.json)
 {% endopenapi-operation %}
+
+{% embed url="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3n-e4b-it.json" %}
 
 ## Code Example
 
