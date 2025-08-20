@@ -1,26 +1,8 @@
 [
   {
-    "name": "klingai/v2-master-text-to-video",
-    "alias": "v2-master-text-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
-  },
-  {
-    "name": "klingai/v2-master-image-to-video",
-    "alias": "v2-master-image-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
-  },
-  {
-    "name": "klingai/v2.1-master-text-to-video",
-    "alias": "v2.1-master-text-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
-  },
-  {
-    "name": "klingai/v2.1-master-image-to-video",
-    "alias": "v2.1-master-image-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
+    "name": "bagoodex/bagoodex-search-v1",
+    "alias": "bagoodex-search-v1",
+    "category": "text-models-llm",
+    "vendor": "Bagoodex"
   }
 ]
