@@ -1,12 +1,6 @@
-# Claude Opus 4.1
+# Claude 4.1 Opus
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* &#x20;`anthropic/claude-opus-4.1`
-* `claude-opus-4-1`
-* `claude-opus-4-1-20250805`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li> <code>anthropic/claude-opus-4.1</code></li><li><code>claude-opus-4-1</code></li><li><code>claude-opus-4-1-20250805</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-1-20250805&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 All three IDs listed above refer to the same model; we support them for backward compatibility.
@@ -29,7 +23,7 @@ An upgrade to [Claude Opus 4](claude-4-opus.md) on agentic tasks, real-world cod
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](claude-opus-4.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](claude-opus-4.1.md#code-example-1-without-thinking) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -56,7 +50,7 @@ If you need a more detailed walkthrough for setting up your development environm
 [OpenAPI claude-opus-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4.1.json)
 {% endopenapi-operation %}
 
-## Code Example
+## Code Example #1: Without Thinking
 
 {% tabs %}
 {% tab title="Python" %}
@@ -164,6 +158,131 @@ main();
     "prompt_tokens": 252,
     "completion_tokens": 1890,
     "total_tokens": 2142
+  }
+}
+```
+{% endcode %}
+
+</details>
+
+## Code Example #2: Thinking Enabled
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import json  # for getting a structured output with indentation 
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        "Content-Type":"application/json", 
+
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"anthropic/claude-opus-4.1",
+        "messages":[
+            {
+                "role":"user",
+
+                # Insert your question for the model here, instead of Hello:
+                "content":"Hello"
+            }
+        ],
+        "max_tokens": 1025,
+        "thinking":{
+            "budget_tokens": 1024,
+            "type": "enabled"
+        }
+    }
+)
+
+data = response.json()
+# getting a structured output with indentation
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        // Insert your AIML API Key instead of YOUR_AIMLAPI_KEY
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'anthropic/claude-opus-4.1',
+        messages:[
+            {
+                role:'user',
+
+                // Insert your question for the model here, instead of Hello:
+                content: 'Hello'
+            }
+        ],
+        max_tokens: 1025, // must be greater than 'budget_tokens'
+        thinking:{
+            budget_tokens: 1024,
+            type: 'enabled'
+        }
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(JSON.stringify(data, null, 2));
+
+  } catch (error) {
+    console.error('Error', error);
+  }
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+{
+  "id": "msg_01G9P4b9HG3PeKm1rRvS8kop",
+  "object": "chat.completion",
+  "model": "claude-opus-4-1-20250805",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "reasoning_content": "The human has greeted me with a simple \"Hello\". I should respond in a friendly and helpful manner, acknowledging their greeting and inviting them to share how I can assist them today.",
+        "content": "Hello! How can I help you today?",
+        "role": "assistant"
+      },
+      "finish_reason": "end_turn",
+      "logprobs": null
+    }
+  ],
+  "created": 1755704373,
+  "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 9450,
+    "total_tokens": 10584
   }
 }
 ```
