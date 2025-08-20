@@ -1,8 +1,6 @@
 # gemma-3n-4b
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `google/gemma-3n-e4b-it`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>google/gemma-3n-e4b-it</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemma-3n-e4b-it&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 

@@ -1,15 +1,6 @@
 # Claude 3.5 Sonnet
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `anthropic/claude-3.5-sonnet`
-* `anthropic/claude-3.5-sonnet-20240620`
-* `anthropic/claude-3.5-sonnet-20241022`
-* `claude-3-5-sonnet-20240620`
-* `claude-3-5-sonnet-20241022`
-* `claude-3-5-sonnet-latest`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-3.5-sonnet</code></li><li><code>anthropic/claude-3.5-sonnet-20240620</code></li><li><code>anthropic/claude-3.5-sonnet-20241022</code></li><li><code>claude-3-5-sonnet-latest</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-3-5-sonnet-20241022&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
