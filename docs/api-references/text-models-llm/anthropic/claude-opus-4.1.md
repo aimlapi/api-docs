@@ -193,7 +193,7 @@ response = requests.post(
                 "content":"Hello"
             }
         ],
-        "max_tokens": 1025,
+        "max_tokens": 1025, # must be greater than 'budget_tokens'
         "thinking":{
             "budget_tokens": 1024,
             "type": "enabled"
