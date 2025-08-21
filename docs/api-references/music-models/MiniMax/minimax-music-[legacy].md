@@ -65,17 +65,11 @@ If you need a more detailed walkthrough for setting up your development environm
 
 This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
 
-{% openapi src="minimax-music-[legacy].json" path="/v2/generate/audio" method="post" %}
-[minimax-music-\[legacy\].json](minimax-music-[legacy].json)
-{% endopenapi %}
-
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi src="minimax-music-[legacy]-pair.json" path="/v2/generate/audio" method="get" %}
-[minimax-music-\[legacy\]-pair.json](minimax-music-[legacy]-pair.json)
-{% endopenapi %}
+
 
 ## Quick Code Example
 
