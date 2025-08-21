@@ -65,11 +65,17 @@ If you need a more detailed walkthrough for setting up your development environm
 
 This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
 
+{% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
+[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
+{% endopenapi-operation %}
+
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-
+{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% endopenapi-operation %}
 
 ## Quick Code Example
 
