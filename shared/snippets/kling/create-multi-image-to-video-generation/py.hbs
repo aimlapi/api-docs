@@ -1,0 +1,21 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/generate/video/kling/generation"
+    payload = {
+        "model": "{{model}}",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_list": [
+            "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+            "https://h2.inkwai.com/bs2/upload-ylab-stunt/se/ai_portal_queue_mmu_image_upscale_aiweb/3214b798-e1b4-4b00-b7af-72b5b0417420_raw_image_0.jpg"
+        ],
+    }
+    headers = {"Authorization": "Bearer {{apiKey}}", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers)
+    print("Generation:", response.json())
+
+
+if __name__ == "__main__":
+    main()
