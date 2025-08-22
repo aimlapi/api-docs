@@ -12,4 +12,8 @@ noIndex: true
 
 {% embed url="https://stackblitz.com/edit/secret-python-hcgqsnek?embed=1&file=klingai/v2.1-master-image-to-video.py" %}
 
+{% embed url="https://stackblitz.com/edit/vitejs-vite-hkkp7qr3?embed=1&file=index.html&theme=dark" %}
+
+
+
 [^1]: All the models in this table are no longer supported. You cannot call them.
