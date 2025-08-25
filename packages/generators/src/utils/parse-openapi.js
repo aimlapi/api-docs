@@ -1,6 +1,9 @@
 const _ = require('lodash');
-const { ALIAS_MAP, MODELS_TO_ALIAS_MAP, CATEGORY_SET } = require('../templates');
-
+const {
+  ALIAS_MAP,
+  MODELS_TO_ALIAS_MAP,
+  CATEGORY_SET,
+} = require('../templates');
 
 const extractModels = (schema, schemaById) => {
   if (schema.properties?.model?.enum) {
@@ -33,7 +36,11 @@ const extractUnion = (model, schema, schemaById) => {
 
       cloned.properties = {
         ...cloned.properties,
-        model: { enum: MODELS_TO_ALIAS_MAP[model]?.alias ? ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias] : [model] },
+        model: {
+          enum: MODELS_TO_ALIAS_MAP[model]?.alias
+            ? ALIAS_MAP[MODELS_TO_ALIAS_MAP[model].alias]
+            : [model],
+        },
       };
 
       return cloned;
@@ -63,12 +70,15 @@ const extractUnion = (model, schema, schemaById) => {
   }
 
   if (schema.$ref) {
-    return extractUnion(model, schemaById[schema.$ref.split('/').at(-1)], schemaById);
+    return extractUnion(
+      model,
+      schemaById[schema.$ref.split('/').at(-1)],
+      schemaById
+    );
   }
 
-
   if (schema.properties?.purpose) {
-   return schema
+    return schema;
   }
 
   return null;
@@ -82,7 +92,7 @@ const version_map = {};
 const EXCEPTIONS_PAIR_MAP = {
   '/v2/generate/audio/minimax/upload': '/v2/generate/audio/minimax/generate',
   '/v2/generate/audio/minimax/generate': '/v2/generate/audio/minimax/upload',
-  '/v1/stt/create': '/v1/stt/{generation_id}'
+  '/v1/stt/create': '/v1/stt/{generation_id}',
 };
 const EXCEPTION_PATH = [
   '/images/generations/with-url',
@@ -91,7 +101,7 @@ const EXCEPTION_PATH = [
   '/threads/{threadId}/runs/{runId}/cancel',
   '/v1/responses',
   '/responses',
-]
+];
 
 const parseOpenapi = (openapi, fetchedModels) => {
   for (const model of fetchedModels) {
@@ -100,17 +110,22 @@ const parseOpenapi = (openapi, fetchedModels) => {
     } else {
       ALIAS_MAP[model.alias] = [model.name];
     }
-    MODELS_TO_ALIAS_MAP[model.name] = {alias: model.alias, path: '', category: model.category, offsite_name: model.offsite_name};
-    CATEGORY_SET.add(model.category)
+    MODELS_TO_ALIAS_MAP[model.name] = {
+      alias: model.alias,
+      path: '',
+      category: model.category,
+      offsite_name: model.offsite_name,
+    };
+    CATEGORY_SET.add(model.category);
   }
-  
+
   const byModel = {};
   const pairs = {};
   const schemaById = openapi.components.schemas;
 
   for (const path in openapi.paths) {
-    if(EXCEPTION_PATH.includes(path)){
-      console.log('EXCEPTION_PATH', path)
+    if (EXCEPTION_PATH.includes(path)) {
+      console.log('EXCEPTION_PATH', path);
       continue;
     }
     for (const method in openapi.paths[path]) {
@@ -121,55 +136,66 @@ const parseOpenapi = (openapi, fetchedModels) => {
       const version = getVersionFromPath(path);
       const basePath = path.replace(/\/v\d+\//, '/');
       if (version_map[basePath] === 1) {
-        continue
+        continue;
       }
       version_map[basePath] = version;
 
       const pairData = {
         has: false,
-        path: '', 
+        path: '',
         schema: undefined,
-        operation: undefined, 
+        operation: undefined,
         method: '',
       };
       // Some models require two requests to be displayed on the page. Typically these are get and post requests. Exceptions are entered separately in EXCEPTIONS_PAIR_MAP.
-      if (EXCEPTIONS_PAIR_MAP[path] || (openapi.paths[path]['get'] && (path.includes('/generate/audio') || path.includes('/generate/video')) && version)) {
-        if(EXCEPTIONS_PAIR_MAP[path]) {
+      if (
+        EXCEPTIONS_PAIR_MAP[path] ||
+        (openapi.paths[path]['get'] &&
+          (path.includes('/generate/audio') ||
+            path.includes('/generate/video')) &&
+          version)
+      ) {
+        if (EXCEPTIONS_PAIR_MAP[path]) {
           // EXCEPTION_PATH.push(EXCEPTIONS_PAIR_MAP[path])
-          pairs[path] = EXCEPTIONS_PAIR_MAP[path]
-          pairData.has = true
-          pairData.method = path === '/v1/stt/create' ? 'get' : 'post'
-          pairData.path = EXCEPTIONS_PAIR_MAP[path]
+          pairs[path] = EXCEPTIONS_PAIR_MAP[path];
+          pairData.has = true;
+          pairData.method = path === '/v1/stt/create' ? 'get' : 'post';
+          pairData.path = EXCEPTIONS_PAIR_MAP[path];
         } else {
-          pairs[path] = path
-          pairData.has = true
-          pairData.method = 'get'
-          pairData.path =  path
+          pairs[path] = path;
+          pairData.has = true;
+          pairData.method = 'get';
+          pairData.path = path;
         }
       }
 
       const operation = openapi.paths[path][method];
 
-      const refId = openapi.paths[path][method].requestBody?.content?.['application/json']?.schema?.$ref
+      const refId = openapi.paths[path][method].requestBody?.content?.[
+        'application/json'
+      ]?.schema?.$ref
         .split('/')
         .at(-1);
       const schema = schemaById[refId];
       const models = extractModels(schema, schemaById);
 
-      if (pairData.has) {        
+      if (pairData.has) {
         const operation = openapi.paths[pairData.path][pairData.method];
         if (pairData.method === 'post') {
-          const refId = openapi.paths[pairData.path][pairData.method].requestBody?.content?.['application/json']?.schema?.$ref
+          const refId = openapi.paths[pairData.path][
+            pairData.method
+          ].requestBody?.content?.['application/json']?.schema?.$ref
             .split('/')
             .at(-1);
           const schema = schemaById[refId];
-          pairData.schema = schema
+          pairData.schema = schema;
         } else {
-          const schema = openapi.paths[pairData.path][pairData.method].parameters
-          pairData.schema = schema
+          const schema =
+            openapi.paths[pairData.path][pairData.method].parameters;
+          pairData.schema = schema;
         }
 
-        pairData.operation = operation
+        pairData.operation = operation;
       }
 
       for (const model of models) {
@@ -177,11 +203,87 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         const { paths, ...rest } = openapi;
 
+        let xCodeSamples;
+
+        if (
+          fetchedModels.map((m) => m.name).includes(model) &&
+          fetchedModels.find((m) => m.name === model).category ===
+            'text-models-llm'
+        ) {
+          xCodeSamples = [
+            {
+              lang: 'JavaScript',
+              source: `
+async function main() {
+  try {
+    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: '${model}',
+        messages:[
+            {
+                role:'user',
+                content: 'Hello'
+            }
+        ]
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("HTTP error!);
+    }
+
+    const data = await response.json();
+    console.log(JSON.stringify(data, null, 2));
+
+  } catch (error) {
+    console.error('Error', error);
+  }
+}
+
+main();`,
+            },
+            {
+              lang: 'Python',
+              source: `
+import requests
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        "Content-Type":"application/json", 
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+    },
+    json={
+        "model":"${model}",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hello"
+            }
+        ]
+    }
+)
+
+data = response.json()
+print(data)`,
+            },
+          ];
+        }
+
         const transformed = {
           paths: {
             [path]: {
               [method]: {
                 ...operation,
+                ...(xCodeSamples && {
+                  'x-codeSamples': xCodeSamples,
+                  'x-hideTryItPanel': true,
+                }),
                 requestBody: {
                   ...operation.requestBody,
                   content: {
@@ -200,11 +302,14 @@ const parseOpenapi = (openapi, fetchedModels) => {
           has: false,
           path: '',
           schema: undefined,
-          method: ''
+          method: '',
         };
 
         if (pairData.has) {
-          const unionPair = pairData.method === 'post' ? extractUnion(model, pairData.schema, schemaById) : [...pairData.schema];
+          const unionPair =
+            pairData.method === 'post'
+              ? extractUnion(model, pairData.schema, schemaById)
+              : [...pairData.schema];
 
           const transformedPair = {
             paths: {
