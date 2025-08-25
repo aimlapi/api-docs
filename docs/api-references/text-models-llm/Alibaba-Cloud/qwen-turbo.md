@@ -20,7 +20,7 @@ Large context window (<kbd>1,000,000</kbd> tokens).
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](qwen-turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](qwen-turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -40,12 +40,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="qwen-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -139,3 +133,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="qwen-turbo" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.json)
+{% endopenapi-operation %}

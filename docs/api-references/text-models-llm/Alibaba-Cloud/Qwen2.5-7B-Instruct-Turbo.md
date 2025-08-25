@@ -1,8 +1,6 @@
 # Qwen2.5-7B-Instruct-Turbo
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `Qwen/Qwen2.5-7B-Instruct-Turbo`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>Qwen/Qwen2.5-7B-Instruct-Turbo</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=Qwen/Qwen2.5-7B-Instruct-Turbo&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -21,7 +19,7 @@ A cutting-edge large language model designed to understand and generate text bas
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](Qwen2.5-7B-Instruct-Turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](Qwen2.5-7B-Instruct-Turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="qwen2-5-7b-instruct-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen2-5-7b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -140,3 +132,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="qwen2-5-7b-instruct-turbo" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen2-5-7b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.json)
+{% endopenapi-operation %}
