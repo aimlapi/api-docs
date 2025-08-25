@@ -1,10 +1,6 @@
 # Llama-3-8B-Instruct-Lite
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `meta-llama/Meta-Llama-3-8B-Instruct-Lite`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>meta-llama/Meta-Llama-3-8B-Instruct-Lite</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=meta-llama/Meta-Llama-3-8B-Instruct-Lite&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A generative text model optimized for dialogue and instruction-following use cas
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](Meta-Llama-3-8B-Instruct-Lite.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](Meta-Llama-3-8B-Instruct-Lite.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -44,14 +40,10 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
-
-{% openapi-operation spec="meta-llama-3-8b-instruct-lite" path="/v1/chat/completions" method="post" %}
-[OpenAPI meta-llama-3-8b-instruct-lite](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -82,15 +74,11 @@ data = response.json()
 print(data)
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
-<details>
+## API Schema
 
-<summary>Response</summary>
-
-{% code overflow="wrap" %}
-```json5
-{'id': 'npQo3s3-4Yz4kd-92dab7f63b26cee7', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': "Hello! It's nice to meet you. Is there something I can help you with, or would you like to chat?", 'tool_calls': []}}], 'created': 1744209196, 'model': 'meta-llama/Meta-Llama-3-8B-Instruct-Lite', 'usage': {'prompt_tokens': 2, 'completion_tokens': 5, 'total_tokens': 7}}
-```
-{% endcode %}
-
-</details>
+{% openapi-operation spec="meta-llama-3-8b-instruct-lite" path="/v1/chat/completions" method="post" %}
+[OpenAPI meta-llama-3-8b-instruct-lite](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.json)
+{% endopenapi-operation %}

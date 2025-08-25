@@ -1,10 +1,6 @@
 # Llama-4-maverick
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `meta-llama/llama-4-maverick`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>meta-llama/llama-4-maverick</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=meta-llama/llama-4-maverick&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A 17 billion active parameter model with 128 experts, is the best multimodal mod
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](llama-4-maverick.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](llama-4-maverick.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -44,14 +40,10 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
-
-{% openapi-operation spec="llama-4-maverick" path="/v1/chat/completions" method="post" %}
-[OpenAPI llama-4-maverick](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Llama-4-maverick.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -82,6 +74,8 @@ data = response.json()
 print(data)
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -94,3 +88,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="llama-4-maverick" path="/v1/chat/completions" method="post" %}
+[OpenAPI llama-4-maverick](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Llama-4-maverick.json)
+{% endopenapi-operation %}
