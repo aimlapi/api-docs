@@ -262,6 +262,18 @@ export default {
       },
       parameters: {
         desc: `The parameters the functions accepts, described as a JSON Schema object.`,
+        type: {
+            desc: `The type of the parameters object (must be "object")`,
+        },
+        properties: {
+            desc: `The properties of the function parameters`,
+        },
+        required: {
+            desc: `List of required parameter names`,
+        },
+        additionalProperties: {
+            desc: `Whether additional properties are allowed`,
+        },
       },
       strict: {
         desc: `Whether to enable strict schema adherence when generating the function call. If set to True, the model will follow the exact schema defined in the parameters field. Only a subset of JSON Schema is supported when strict is True.`,
