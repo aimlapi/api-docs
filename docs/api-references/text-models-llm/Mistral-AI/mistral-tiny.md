@@ -1,10 +1,6 @@
 # mistral-tiny
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `mistralai/mistral-tiny`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/mistral-tiny</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=mistralai/mistral-tiny&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A lightweight language model optimized for efficient text generation, summarizat
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](mistral-tiny.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](mistral-tiny.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="mistral-tiny" path="/v1/chat/completions" method="post" %}
-[OpenAPI mistral-tiny](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-tiny.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -94,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="mistral-tiny" path="/v1/chat/completions" method="post" %}
+[OpenAPI mistral-tiny](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-tiny.json)
+{% endopenapi-operation %}

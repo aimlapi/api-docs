@@ -1,14 +1,10 @@
 # mistral-nemo
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `mistralai/mistral-nemo`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/mistral-nemo</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=mistralai/mistral-nemo&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-A state-of-the-art large language model designed for advanced natural language processing tasks, including text generation, summarization, translation, and sentiment analysis. It features a large context window of up to 128k tokens, making it suitable for handling extensive inputs and complex tasks.
+A state-of-the-art large language model designed for advanced natural language processing tasks, including text generation, summarization, translation, and sentiment analysis.
 
 ## How to Make a Call
 
@@ -23,7 +19,7 @@ A state-of-the-art large language model designed for advanced natural language p
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](mistral-nemo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](mistral-nemo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="mistral-nemo" path="/v1/chat/completions" method="post" %}
-[OpenAPI mistral-nemo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-nemo.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -94,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="mistral-nemo" path="/v1/chat/completions" method="post" %}
+[OpenAPI mistral-nemo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-nemo.json)
+{% endopenapi-operation %}

@@ -1,12 +1,6 @@
 # Mistral-7B-Instruct
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `mistralai/Mistral-7B-Instruct-v0.1`
-* `mistralai/Mistral-7B-Instruct-v0.2`
-* `mistralai/Mistral-7B-Instruct-v0.3`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/Mistral-7B-Instruct-v0.1</code></li><li><code>mistralai/Mistral-7B-Instruct-v0.2</code></li><li><code>mistralai/Mistral-7B-Instruct-v0.3</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=mistralai/Mistral-7B-Instruct-v0.3&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -25,7 +19,7 @@ An advanced version of the Mistral-7B model, fine-tuned specifically for instruc
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](Mistral-7B-Instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](Mistral-7B-Instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -45,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="mistral-7b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI mistral-7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -96,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="mistral-7b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI mistral-7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.json)
+{% endopenapi-operation %}

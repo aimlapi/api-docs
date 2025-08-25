@@ -1,8 +1,6 @@
 # kimi-k2-preview
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `moonshot/kimi-k2-preview`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:  <br> <code>moonshot/kimi-k2-preview</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=moonshot/kimi-k2-preview&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -21,7 +19,7 @@ A mixture-of-experts model with strong reasoning, coding, and agentic capabiliti
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](kimi-k2-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](kimi-k2-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
-{% endopenapi-operation %}
 
 ## Code Example #1: Chat Completion
 
@@ -236,3 +228,9 @@ In short, Context Caching lets developers treat very long, seldom-changing conte
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
+{% endopenapi-operation %}

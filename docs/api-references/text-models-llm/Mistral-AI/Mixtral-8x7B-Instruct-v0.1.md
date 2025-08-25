@@ -1,10 +1,6 @@
 # Mixtral-8x7B-Instruct
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `mistralai/Mixtral-8x7B-Instruct-v0.1`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/Mixtral-8x7B-Instruct-v0.1</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=mistralai/Mixtral-8x7B-Instruct-v0.1&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A state-of-the-art AI model designed for instruction-following tasks. With a mas
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](Mixtral-8x7B-Instruct-v0.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](Mixtral-8x7B-Instruct-v0.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="mixtral-8x7b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI mixtral-8x7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -94,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="mixtral-8x7b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI mixtral-8x7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.json)
+{% endopenapi-operation %}

@@ -1,10 +1,6 @@
 # grok-3-mini-beta
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `x-ai/grok-3-mini-beta`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><ul><li><code>x-ai/grok-3-mini-beta</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=x-ai/grok-3-mini-beta&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A lighter version of the [Grok 3 Beta model](grok-3-beta.md), designed for quick
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](grok-3-mini-beta.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](grok-3-mini-beta.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json)
-{% endopenapi %}
 
 ## Code Example
 
@@ -94,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json" path="/v1/chat/completions" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json)
+{% endopenapi %}
