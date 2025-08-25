@@ -1,8 +1,6 @@
 # Claude 4 Sonnet
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `anthropic/claude-sonnet-4`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>anthropic/claude-sonnet-4</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-sonnet-4-20250514&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -41,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-4-sonnet" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-4-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-sonnet.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -162,3 +154,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-4-sonnet" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-4-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-sonnet.json)
+{% endopenapi-operation %}

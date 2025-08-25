@@ -1,6 +1,6 @@
 # Claude 3 Opus
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><p></p><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-3-opus</code></li><li><code>anthropic/claude-3-opus-20240229</code></li><li><code>claude-3-opus-20240229</code></li><li><code>claude-3-opus-latest</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-3-opus-20240229&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-3-opus</code></li><li><code>anthropic/claude-3-opus-20240229</code></li><li><code>claude-3-opus-20240229</code></li><li><code>claude-3-opus-latest</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-3-opus-20240229&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -19,7 +19,7 @@ A  highly capable multimodal model designed to process both text and image data.
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](claude-3-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](claude-3-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-3-opus" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-3-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-opus.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -138,3 +132,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-3-opus" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-3-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-opus.json)
+{% endopenapi-operation %}

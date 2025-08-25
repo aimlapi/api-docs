@@ -1,12 +1,6 @@
 # Claude 3.7 Sonnet
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `claude-3-7-sonnet-20250219`
-* `claude-3-7-sonnet-latest`
-* `anthropic/claude-3.7-sonnet`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>claude-3-7-sonnet-20250219</code></li><li><code>claude-3-7-sonnet-latest</code></li><li><code>anthropic/claude-3.7-sonnet</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-3-7-sonnet-20250219&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -45,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-3-7-sonnet" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-3-7-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3.7-sonnet.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -144,3 +132,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-3-7-sonnet" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-3-7-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3.7-sonnet.json)
+{% endopenapi-operation %}

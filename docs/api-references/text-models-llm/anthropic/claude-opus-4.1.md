@@ -23,7 +23,7 @@ An upgrade to [Claude Opus 4](claude-4-opus.md) on agentic tasks, real-world cod
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](claude-opus-4.1.md#code-example-1-without-thinking) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [code examples](claude-opus-4.1.md#code-example-1-without-thinking) that show how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +43,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-opus-4-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-opus-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4.1.json)
-{% endopenapi-operation %}
 
 ## Code Example #1: Without Thinking
 
@@ -289,3 +283,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-opus-4-1" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-opus-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4.1.json)
+{% endopenapi-operation %}

@@ -40,12 +40,6 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
-
-{% openapi-operation spec="claude-3-5-haiku" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-3-5-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3.5-haiku.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
 {% tabs %}
@@ -138,3 +132,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-3-5-haiku" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-3-5-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3.5-haiku.json)
+{% endopenapi-operation %}

@@ -1,12 +1,10 @@
 # magnum-v4
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `anthracite-org/magnum-v4-72b`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>anthracite-org/magnum-v4-72b</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=anthracite-org/magnum-v4-72b&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly [Sonnet](broken-reference) and [Opus](../Anthropic/claude-3-opus.md). It excels in generating coherent and contextually rich text.
+A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly Sonnet and [Opus](../Anthropic/claude-3-opus.md). It excels in generating coherent and contextually rich text.
 
 ## How to Make a Call
 
@@ -21,7 +19,7 @@ A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](magnum-v4.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](magnum-v4.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="magnum-v4" path="/v1/chat/completions" method="post" %}
-[OpenAPI magnum-v4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthracite/magnum-v4.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -140,3 +132,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="magnum-v4" path="/v1/chat/completions" method="post" %}
+[OpenAPI magnum-v4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthracite/magnum-v4.json)
+{% endopenapi-operation %}
