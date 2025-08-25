@@ -1,8 +1,6 @@
 # gemma-2
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `google/gemma-2-27b-it`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>google/gemma-2-27b-it</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemma-2-27b-it&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -21,7 +19,7 @@ A high-performance language model designed to handle a diverse range of text gen
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gemma-2-27b-it.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gemma-2-27b-it.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gemma-2-27b-it" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemma-2-27b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-2-27b-it.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -92,3 +84,9 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gemma-2-27b-it" path="/v1/chat/completions" method="post" %}
+[OpenAPI gemma-2-27b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-2-27b-it.json)
+{% endopenapi-operation %}

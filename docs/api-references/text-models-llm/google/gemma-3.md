@@ -1,12 +1,6 @@
 # gemma-3
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `google/gemma-3-4b-it`
-* `google/gemma-3-12b-it`
-* `google/gemma-3-27b-it`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>google/gemma-3-4b-it</code></li><li><code>google/gemma-3-12b-it</code></li><li><code>google/gemma-3-27b-it</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemma-3-27b-it&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -25,7 +19,7 @@ This page describes four variants of Google’s latest open AI model, Gemma 3. A
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gemma-3.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gemma-3.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 

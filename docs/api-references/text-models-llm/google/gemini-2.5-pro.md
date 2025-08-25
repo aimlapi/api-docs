@@ -17,9 +17,7 @@ layout:
 
 # gemini-2.5-pro
 
-{% hint style="info" %}
-This documentation is valid for the following model:   `google/gemini-2.5-pro`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>google/gemini-2.5-pro</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemini-2.5-pro&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -38,7 +36,7 @@ Gemini 2.5 models are capable of reasoning through their thoughts before respond
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gemini-2.5-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gemini-2.5-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -58,12 +56,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gemini-2-5-pro" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-2-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -192,3 +184,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gemini-2-5-pro" path="/v1/chat/completions" method="post" %}
+[OpenAPI gemini-2-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro.json)
+{% endopenapi-operation %}
