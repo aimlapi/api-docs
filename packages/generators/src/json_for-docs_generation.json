@@ -1,26 +1,44 @@
 [
   {
-    "name": "gpt-4o-audio-preview",
-    "alias": "gpt-4o-audio-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI"
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5-standart/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
   },
   {
-    "name": "gpt-4o-mini-audio-preview",
-    "alias": "gpt-4o-mini-audio-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI"
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
   },
   {
-    "name": "gpt-4o-search-preview",
-    "alias": "gpt-4o-search-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI"
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
   },
   {
-    "name": "gpt-4o-mini-search-preview",
-    "alias": "gpt-4o-mini-search-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI"
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standart/multi-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/standard/image-to-video",
+    "alias": "v2.1-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/pro/image-to-video",
+    "alias": "v2.1-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
   }
 ]
