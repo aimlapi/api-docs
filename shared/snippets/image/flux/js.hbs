@@ -6,8 +6,8 @@ const main = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      prompt: 'A jellyfish in the ocean',
       model: '{{model}}',
+      prompt: 'A jellyfish in the ocean',
     }),
   }).then((res) => res.json());
 
