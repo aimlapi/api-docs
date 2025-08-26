@@ -19,13 +19,13 @@
   },
   {
     "name": "imagen-3.0-generate-002",
-    "alias": "imagen-3.0-generate-002",
+    "alias": "imagen-3.0",
     "category": "image-models",
     "vendor": "Google"
   },
   {
     "name": "google/imagen4/preview",
-    "alias": "imagen4-preview",
+    "alias": "imagen-4-preview",
     "category": "image-models",
     "vendor": "Google"
   },
