@@ -58,7 +58,7 @@ export default {
   },
   image_urls: {
     default: {
-      desc: `List of URLs of input images for editing.`,
+      desc: `List of URLs or local Base64 encoded images to edit.`,
     },
   },
   do_remove_background: {
