@@ -1,10 +1,6 @@
 # gpt-oss-20b
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `openai/gpt-oss-20b`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>openai/gpt-oss-20b</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=openai/gpt-oss-20b&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ This OSS model is text-only and designed for strong reasoning and tool use.
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gpt-oss-20b.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gpt-oss-20b.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,12 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-oss-20b" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-oss-20b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-oss-20b.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -166,3 +156,9 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gpt-oss-20b" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-oss-20b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-oss-20b.json)
+{% endopenapi-operation %}
