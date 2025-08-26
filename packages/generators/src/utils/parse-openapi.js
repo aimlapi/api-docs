@@ -4,6 +4,7 @@ const {
   MODELS_TO_ALIAS_MAP,
   CATEGORY_SET,
 } = require('../templates');
+const generateCodeSample = require('./generate-code-sample');
 
 const extractModels = (schema, schemaById) => {
   if (schema.properties?.model?.enum) {
@@ -203,77 +204,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         const { paths, ...rest } = openapi;
 
-        let xCodeSamples;
-
-        if (
-          fetchedModels.map((m) => m.name).includes(model) &&
-          fetchedModels.find((m) => m.name === model).category ===
-            'text-models-llm'
-        ) {
-          xCodeSamples = [
-            {
-              lang: 'JavaScript',
-              source: `
-async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: '${model}',
-        messages:[
-            {
-                role:'user',
-                content: 'Hello'
-            }
-        ]
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error('HTTP error!');
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
-}
-
-main();`,
-            },
-            {
-              lang: 'Python',
-              source: `
-import requests
-
-response = requests.post(
-    "https://api.aimlapi.com/v1/chat/completions",
-    headers={
-        "Content-Type":"application/json", 
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
-    },
-    json={
-        "model":"${model}",
-        "messages":[
-            {
-                "role":"user",
-                "content":"Hello"
-            }
-        ]
-    }
-)
-
-data = response.json()
-print(data)`,
-            },
-          ];
-        }
+        const xCodeSamples = generateCodeSample(fetchedModels, model);
 
         const transformed = {
           paths: {
