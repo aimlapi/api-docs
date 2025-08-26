@@ -14,12 +14,6 @@ A text model with a support for audio prompts and the ability to generate spoken
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schema
-
-{% openapi-operation spec="gpt-4o-audio-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-4o-audio-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
 {% tabs %}
@@ -88,3 +82,9 @@ ChatCompletion(id='chatcmpl-BrgY0KMxWgy1EHUxYJC49MuMNmdOP', choices=[Choice(fini
 </details>
 
 {% embed url="https://drive.google.com/file/d/1JUWnbhFDwMCW1JqWzkvDXNqI6QNEOuVf/view?usp=sharing" %}
+
+## API Schema
+
+{% openapi-operation spec="gpt-4o-audio-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4o-audio-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-audio-preview.json)
+{% endopenapi-operation %}

@@ -1,10 +1,6 @@
 # o3-mini
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `o3-mini`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>o3-mini</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=o3-mini&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -23,7 +19,7 @@ A model designed to excel in complex reasoning tasks, including mathematical pro
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](o3-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](o3-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,20 +39,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="o3-mini" path="/v1/chat/completions" method="post" %}
-[OpenAPI o3-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-mini.json)
-{% endopenapi-operation %}
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -102,6 +84,20 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="o3-mini" path="/v1/chat/completions" method="post" %}
+[OpenAPI o3-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-mini.json)
+{% endopenapi-operation %}
+
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 

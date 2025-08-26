@@ -1,10 +1,6 @@
 # gpt-4.1-nano
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `openai/gpt-4.1-nano-2025-04-14`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>openai/gpt-4.1-nano-2025-04-14</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=openai/gpt-4.1-nano-2025-04-14&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -25,7 +21,7 @@ This model, **GPT-4.1 nano**, is fast, affordable, and powerful. It handles long
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gpt-4.1-nano.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gpt-4.1-nano.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -45,20 +41,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-4-1-nano" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-4-1-nano](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1-nano.json)
-{% endopenapi-operation %}
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -99,11 +81,25 @@ print(data)
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'chatcmpl-BMsNQOMzKxRBsGg98yUiakieydWT3', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I assist you today?', 'refusal': None, 'annotations': []}}], 'created': 1744791940, 'model': 'gpt-4.1-nano-2025-04-14', 'usage': {'prompt_tokens': 2, 'completion_tokens': 8, 'total_tokens': 10, 'prompt_tokens_details': {'cached_tokens': 0, 'audio_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}}, 'system_fingerprint': 'fp_c1fb89028d'}
+ move exampes up for openai{'id': 'chatcmpl-BMsNQOMzKxRBsGg98yUiakieydWT3', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I assist you today?', 'refusal': None, 'annotations': []}}], 'created': 1744791940, 'model': 'gpt-4.1-nano-2025-04-14', 'usage': {'prompt_tokens': 2, 'completion_tokens': 8, 'total_tokens': 10, 'prompt_tokens_details': {'cached_tokens': 0, 'audio_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}}, 'system_fingerprint': 'fp_c1fb89028d'}
 ```
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gpt-4-1-nano" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4-1-nano](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1-nano.json)
+{% endopenapi-operation %}
+
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 

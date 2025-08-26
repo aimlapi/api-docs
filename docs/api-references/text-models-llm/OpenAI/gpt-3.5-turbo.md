@@ -1,12 +1,6 @@
 # gpt-3.5-turbo
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-* `gpt-3.5-turbo`
-* `gpt-3.5-turbo-0125`
-* `gpt-3.5-turbo-1106`
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>gpt-3.5-turbo</code></li><li><code>gpt-3.5-turbo-0125</code></li><li><code>gpt-3.5-turbo-1106</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=gpt-3.5-turbo&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -27,7 +21,7 @@ You can also view [a detailed comparison of this model](https://aimlapi.com/comp
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](gpt-3.5-turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](gpt-3.5-turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -47,20 +41,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-3-5-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-3-5-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-3.5-turbo.json)
-{% endopenapi-operation %}
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -106,6 +86,20 @@ print(data)
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gpt-3-5-turbo" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-3-5-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-3.5-turbo.json)
+{% endopenapi-operation %}
+
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 

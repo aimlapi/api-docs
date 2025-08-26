@@ -23,7 +23,7 @@ Designed for deeper reasoning and tougher questions, o3-pro uses more compute to
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](o3-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+Below, you'll find [a code example](o3-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -43,18 +43,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schema
-
-{% hint style="warning" %}
-Note: This model can ONLY be called via the `/responses` endpoint!
-{% endhint %}
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others (like `openai/o3-pro`) support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="response-api" path="/v1/responses" method="post" %}
-[OpenAPI response-api](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -192,4 +180,16 @@ main();
 {% endcode %}
 
 </details>
+
+## API Schema
+
+{% hint style="warning" %}
+Note: This model can ONLY be called via the `/responses` endpoint!
+{% endhint %}
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others (like `openai/o3-pro`) support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="response-api" path="/v1/responses" method="post" %}
+[OpenAPI response-api](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
