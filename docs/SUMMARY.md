@@ -177,6 +177,7 @@
     * [v1.6-pro/effects](api-references/video-models/kling-ai/v1.6-pro-effects.md)
     * [v2-master/image-to-video](api-references/video-models/kling-ai/v2-master-image-to-video.md)
     * [v2-master/text-to-video](api-references/video-models/kling-ai/v2-master-text-to-video.md)
+    * [v2.1-standard/image-to-video](api-references/video-models/kling-ai/v2.1-standard-image-to-video.md)
     * [v2.1-master/text-to-video](api-references/video-models/kling-ai/v2.1-master-text-to-video.md)
     * [v2.1-master/image-to-video](api-references/video-models/kling-ai/v2.1-master-image-to-video.md)
   * [Luma AI](api-references/video-models/luma-ai/README.md)
