@@ -56,6 +56,11 @@ export default {
       desc: `One or more image URLs used as visual references. The model merges them into a single image following the prompt instructions.`,
     },
   },
+  image_urls: {
+    default: {
+      desc: `List of URLs of input images for editing.`,
+    },
+  },
   do_remove_background: {
     desc: `Enables removing the background from the input image.`,
   },
