@@ -234,7 +234,7 @@ async function main() {
     });
 
     if (!response.ok) {
-      throw new Error("HTTP error!);
+      throw new Error('HTTP error!');
     }
 
     const data = await response.json();
