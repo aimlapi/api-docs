@@ -11,12 +11,22 @@ function generateCodeSample(fetchedModels, modelName) {
       js: `,
         modalities: ['text', 'audio'],
         audio: { voice: 'alloy', format: 'pcm16' },`,
+      curl: `,
+    "modalities": ["text", "audio"], 
+    "audio": {"voice": "alloy", "format": "pcm16"}`,
+      http: `,
+  "modalities": ["text", "audio"], 
+  "audio": {"voice": "alloy", "format": "pcm16"}`,
     },
     textToImage: {
       python: `,
         "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."`,
       js: `,
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',`,
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',`,
+      curl: `,
+    "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."`,
+      http: `,
+  "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."`,
     },
     imageToImage: {
       python: `,
@@ -27,12 +37,26 @@ function generateCodeSample(fetchedModels, modelName) {
             : 'image'
         }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
       js: `,
-        prompt: "Add a crown to the T-rex's head.",
-        ${
-          modelName.includes('image-to-image') || modelName === 'triposr'
-            ? 'image_url'
-            : 'image'
-        }: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',`,
+      prompt: "Add a crown to the T-rex's head.",
+      ${
+        modelName.includes('image-to-image') || modelName === 'triposr'
+          ? 'image_url'
+          : 'image'
+      }: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',`,
+      curl: `,
+    "prompt": "Add a crown to the T-rexs head.",
+    "${
+      modelName.includes('image-to-image') || modelName === 'triposr'
+        ? 'image_url'
+        : 'image'
+    }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
+      http: `,
+  "prompt": "Add a crown to the T-rex's head.",
+  "${
+    modelName.includes('image-to-image') || modelName === 'triposr'
+      ? 'image_url'
+      : 'image'
+  }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
     },
   };
   let additionalParamKey;
@@ -48,34 +72,25 @@ function generateCodeSample(fetchedModels, modelName) {
       {
         lang: 'JavaScript',
         source: `async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: '${modelName}',
-        messages:[
-            {
-                role:'user',
-                content: 'Hello'
-            }
-        ]${additionalParamKey ? additionalParamsMap[additionalParamKey].js : ''}
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '${modelName}',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'
+          }
+      ]${additionalParamKey ? additionalParamsMap[additionalParamKey].js : ''}
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error('HTTP error!');
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();`,
@@ -107,6 +122,42 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
+      },
+      {
+        lang: 'cURL',
+        source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/chat/completions' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '{
+    "model": "${modelName}",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      }
+    ]${additionalParamKey ? additionalParamsMap[additionalParamKey].curl : ''}
+  }'`,
+      },
+      {
+        lang: 'HTTP',
+        source: `POST /v1/chat/completions HTTP/1.1
+Host: api.aimlapi.com
+Authorization: Bearer <YOUR_AIMLAPI_KEY>
+Content-Type: application/json
+Accept: */*
+Content-Length: 59
+
+{
+  "model": "${modelName}",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    }
+  ]${additionalParamKey ? additionalParamsMap[additionalParamKey].http : ''}
+}`,
       },
     ];
   } else if (modelName === 'openai/gpt-image-1') {
@@ -161,36 +212,58 @@ with open("<YOUR_IMAGE_PATH.png>", "rb") as file:
     data = response.json()
     print(data)`,
       },
+      {
+        lang: 'cURL',
+        source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/images/edits' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --form "prompt=Add a crown to the T-rex's head." \\
+  --form "image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>"`,
+      },
+      {
+        lang: 'HTTP',
+        source: `POST /v1/images/edits HTTP/1.1
+Host: api.aimlapi.com
+Authorization: Bearer <YOUR_AIMLAPI_KEY>
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="model"
+
+${modelName}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="prompt"
+
+Add a crown to the T-rex's head.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="<IMAGE_NAME>"
+Content-Type: image/png
+
+(data)
+------WebKitFormBoundary7MA4YWxkTrZu0gW--`,
+      },
     ];
   } else if (model.category === 'image-models') {
     return [
       {
         lang: 'JavaScript',
         source: `async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: '${modelName}'${
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '${modelName}'${
           additionalParamKey ? additionalParamsMap[additionalParamKey].js : ''
         }
-      }),
-    });
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error('HTTP error!');
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();`,
@@ -216,6 +289,33 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
+      },
+      {
+        lang: 'cURL',
+        source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/images/generations' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '{
+    "model": "${modelName}"${
+          additionalParamKey ? additionalParamsMap[additionalParamKey].curl : ''
+        }
+  }'`,
+      },
+      {
+        lang: 'HTTP',
+        source: `POST /v1/images/generations HTTP/1.1
+Host: api.aimlapi.com
+Authorization: Bearer <YOUR_AIMLAPI_KEY>
+Content-Type: application/json
+Accept: */*
+
+{
+  "model": "${modelName}"${
+          additionalParamKey ? additionalParamsMap[additionalParamKey].http : ''
+        }
+}`,
       },
     ];
   }
