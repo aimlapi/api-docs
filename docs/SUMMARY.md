@@ -137,6 +137,8 @@
     * [Imagen 3](api-references/image-models/google/imagen-3.0.md)
     * [Imagen 4 Preview](api-references/image-models/google/imagen-4-preview.md)
     * [Imagen 4 Ultra](api-references/image-models/google/imagen-4-ultra.md)
+    * [Gemini 2.5 Flash Image](api-references/image-models/google/gemini-2.5-flash-image.md)
+    * [Gemini 2.5 Flash Image Edit](api-references/image-models/google/gemini-2.5-flash-image-edit.md)
   * [OpenAI](api-references/image-models/OpenAI/README.md)
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/OpenAI/dall-e-3.md)
