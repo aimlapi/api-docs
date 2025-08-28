@@ -41,6 +41,8 @@
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
     * [DeepSeek Prover V2](api-references/text-models-llm/deepseek/deepseek-prover-v2.md)
+    * [DeepSeek Chat V3.1](api-references/text-models-llm/deepseek/deepseek-chat-v3.1.md)
+    * [DeepSeek Reasoner V3.1](api-references/text-models-llm/deepseek/deepseek-reasoner-v3.1.md)
   * [Google](api-references/text-models-llm/Google/README.md)
     * [gemini-2.0-flash-exp](api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
     * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)

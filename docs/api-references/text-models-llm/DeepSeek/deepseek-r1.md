@@ -28,7 +28,7 @@ DeepSeek R1 is a cutting-edge reasoning model developed by DeepSeek AI, designed
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](deepseek-r1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](deepseek-r1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -49,6 +49,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="deepseek-r1" path="/v1/chat/completions" method="post" %}
+[OpenAPI deepseek-r1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-r1.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -61,9 +67,7 @@ import json  # for getting a structured output with indentation
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
-        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
     },
@@ -141,9 +145,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="deepseek-r1" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-r1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-r1.json)
-{% endopenapi-operation %}
