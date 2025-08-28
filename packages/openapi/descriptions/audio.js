@@ -59,4 +59,9 @@ export default {
   seed: {
     desc: `A seed for deterministic generation. If provided, the model will attempt to produce the same audio given the same prompt and other parameters.`,
   },
+  music_length_ms: {
+    elevenlabs: {
+      desc: `The length of the song to generate in milliseconds. This parameter may not always be respected by the model, and the actual audio length can differ.`,
+    },
+  },
 };
