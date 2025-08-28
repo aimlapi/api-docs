@@ -112,6 +112,13 @@
     "vendor": "Google"
   },
   {
+    "name": "google/gemini-2.5-flash-image-edit",
+    "alias": "gemini-2.5-flash-image-edit",
+    "category": "image-models",
+    "vendor": "Google",
+    "features": ["image-to-image"]
+  },
+  {
     "name": "dall-e-3",
     "alias": "dall-e-3",
     "category": "image-models",
