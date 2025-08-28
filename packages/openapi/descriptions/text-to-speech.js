@@ -55,5 +55,47 @@ export default {
   },
   seed: {
     desc: `If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.`,
+  },
+  voice_id: {
+    desc: `Voice identifier for text-to-speech synthesis. Supports both predefined system voices and custom cloned voice IDs. Available system voices include various character types like Wise_Woman, Friendly_Person, Deep_Voice_Man, etc.`,
+  },
+  emotion: {
+    desc: `Emotional tone to apply to the synthesized speech. Controls the emotional expression of the generated voice output.`,
+  },
+  sample_rate: {
+    desc: `Audio sample rate in Hz. Higher sample rates provide better audio quality but result in larger file sizes. Common rates include 8000 (telephone quality), 16000 (wide band), 22050 (radio quality), 24000 (broadcast), 32000 (FM radio), and 44100 (CD quality).`,
+  },
+  bitrate: {
+    desc: `Audio bitrate in bits per second. Controls the compression level and audio quality. Higher bitrates provide better quality but larger file sizes.`,
+  },
+  format: {
+    desc: `Audio output format. MP3 provides good compression and compatibility, PCM offers uncompressed high quality, and FLAC provides lossless compression.`,
+  },
+  channel: {
+    desc: `Number of audio channels. 1 for mono (single channel), 2 for stereo (dual channel) output.`,
+  },
+  sound_effects: {
+    desc: `Audio effects to apply to the synthesized speech. Includes options like spacious_echo, auditorium_echo, lofi_telephone, and robotic effects.`,
+  },
+  language_boost: {
+    desc: `Language recognition enhancement option. Improves pronunciation and recognition for the specified language or dialect. Use 'auto' for automatic language detection or specify specific languages like 'Chinese', 'English', 'Spanish', etc.`,
+  },
+  output_format: {
+    desc: `Format of the output content for non-streaming requests. Controls how the generated audio data is encoded in the response.`,
+  },
+  timbre_weights: {
+    desc: `Voice mixing configuration allowing combination of up to 4 different voices with specified weights. Each voice contributes to the final output based on its weight value (1-100).`,
+  },
+  pronunciation_dict: {
+    desc: `Custom pronunciation dictionary for handling specific words or phrases. Allows fine-tuning of how certain text should be pronounced using phonetic representations.`,
+  },
+  voice_modify: {
+    desc: `Voice modification settings for adjusting pitch, intensity, timbre, and applying sound effects to customize the voice characteristics.`,
+  },
+  stream: {
+    desc: `Enable streaming mode for real-time audio generation. When enabled, audio is generated and delivered in chunks as it's processed.`,
+  },
+  subtitle_enable: {
+    desc: `Enable subtitle generation service. Only available for non-streaming requests. Generates timing information for the synthesized speech.`,
   }
 };
