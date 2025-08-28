@@ -52,6 +52,24 @@ export default {
     speed: {
       desc: `Adjusts the speed of the voice. A value of 1.0 is the default speed, while values less than 1.0 slow down the speech, and values greater than 1.0 speed it up.`,
     },
+    vol: {
+      desc: `The volume of the generated speech. Range: (0, 10]. Larger values indicate larger volumes.`,
+    },
+    pitch: {
+      desc: `The pitch of the generated speech. Range: [-12, 12]. 0 = default voice output.`,
+    },
+  },
+  voice_modify: {
+    desc: `Voice modification settings for adjusting pitch, intensity, timbre, and applying sound effects to customize the voice characteristics.`,
+    pitch: {
+      desc: `Adjusts voice pitch. Range: [-100, 100]. -100: deeper, 100: lighter`,
+    },
+    intensity: {
+      desc: `Adjusts voice intensity. Range: [-100, 100]. -100: stronger, 100: softer`,
+    },
+    timbre: {
+      desc: `Adjusts voice timbre. Range: [-100, 100]. -100: increased nasality, 100: crisper`,
+    },
   },
   seed: {
     desc: `If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.`,
@@ -97,5 +115,8 @@ export default {
   },
   subtitle_enable: {
     desc: `Enable subtitle generation service. Only available for non-streaming requests. Generates timing information for the synthesized speech.`,
-  }
+  },
+  text_normalization: {
+    desc: `English text normalization support. Improves number-reading but increases latency.`,
+  },
 };
