@@ -19,7 +19,7 @@ The forefront of AI technology, combining the power of 56 billion parameters wit
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](Nous-Hermes-2-Mixtral-8x7B-DPO.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](Nous-Hermes-2-Mixtral-8x7B-DPO.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="nous-hermes-2" path="/v1/chat/completions" method="post" %}
+[OpenAPI nous-hermes-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/NousResearch/nous-hermes-2.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -84,9 +90,3 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="nous-hermes-2" path="/v1/chat/completions" method="post" %}
-[OpenAPI nous-hermes-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/NousResearch/nous-hermes-2.json)
-{% endopenapi-operation %}

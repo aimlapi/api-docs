@@ -19,7 +19,7 @@ A mixture-of-experts model with strong reasoning, coding, and agentic capabiliti
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](kimi-k2-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](kimi-k2-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
+{% endopenapi-operation %}
 
 ## Code Example #1: Chat Completion
 
@@ -228,9 +234,3 @@ In short, Context Caching lets developers treat very long, seldom-changing conte
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
-{% endopenapi-operation %}

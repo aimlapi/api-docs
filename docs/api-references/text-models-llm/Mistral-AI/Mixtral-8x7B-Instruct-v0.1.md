@@ -19,7 +19,7 @@ A state-of-the-art AI model designed for instruction-following tasks. With a mas
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](Mixtral-8x7B-Instruct-v0.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](Mixtral-8x7B-Instruct-v0.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="mixtral-8x7b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI mixtral-8x7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -84,9 +90,3 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="mixtral-8x7b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI mixtral-8x7b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.json)
-{% endopenapi-operation %}

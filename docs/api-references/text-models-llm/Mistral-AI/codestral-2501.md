@@ -19,7 +19,7 @@ A state-of-the-art AI model specifically designed for code generation tasks. It 
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](codestral-2501.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](codestral-2501.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="codestral-2501" path="/v1/chat/completions" method="post" %}
+[OpenAPI codestral-2501](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/codestral-2501.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -84,9 +90,3 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="codestral-2501" path="/v1/chat/completions" method="post" %}
-[OpenAPI codestral-2501](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/codestral-2501.json)
-{% endopenapi-operation %}

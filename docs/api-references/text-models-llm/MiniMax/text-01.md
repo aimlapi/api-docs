@@ -19,7 +19,7 @@ A powerful language model developed by MiniMax AI, designed to excel in tasks re
 
 ### :digit\_two:  Copy the code example
 
-Below, you'll find [a code example](text-01.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](text-01.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="text-01" path="/v1/chat/completions" method="post" %}
+[OpenAPI text-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/MiniMax/text-01.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -148,9 +154,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="text-01" path="/v1/chat/completions" method="post" %}
-[OpenAPI text-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/MiniMax/text-01.json)
-{% endopenapi-operation %}
