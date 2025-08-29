@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="meta-llama-3-1-8b-instruct-turbo" path="/v1/chat/completions" method="post" %}
+[OpenAPI meta-llama-3-1-8b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -88,9 +94,3 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="meta-llama-3-1-8b-instruct-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI meta-llama-3-1-8b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.json)
-{% endopenapi-operation %}

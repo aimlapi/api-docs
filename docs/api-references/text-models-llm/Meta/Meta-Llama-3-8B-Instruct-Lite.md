@@ -19,7 +19,7 @@ A generative text model optimized for dialogue and instruction-following use cas
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](Meta-Llama-3-8B-Instruct-Lite.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](Meta-Llama-3-8B-Instruct-Lite.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="meta-llama-3-8b-instruct-lite" path="/v1/chat/completions" method="post" %}
+[OpenAPI meta-llama-3-8b-instruct-lite](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -47,14 +53,13 @@ If you need a more detailed walkthrough for setting up your development environm
 {% code overflow="wrap" %}
 ```python
 import requests
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Authorization":"Bearer b72af53a19ea41caaf5a74ba1f6fc62b",
         "Content-Type":"application/json"
     },
     json={
@@ -71,14 +76,74 @@ response = requests.post(
 )
 
 data = response.json()
-print(data)
+# getting a structured output with indentation
+print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'meta-llama/Meta-Llama-3-8B-Instruct-Lite',
+      messages:[
+          {
+              role:'user',
+
+              // Insert your question for the model here, instead of Hello:
+              content: 'Hello'
+          }
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
+```
+{% endtab %}
 {% endtabs %}
 
-## API Schema
+<details>
 
-{% openapi-operation spec="meta-llama-3-8b-instruct-lite" path="/v1/chat/completions" method="post" %}
-[OpenAPI meta-llama-3-8b-instruct-lite](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.json)
-{% endopenapi-operation %}
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+{
+  "id": "o95Ai5e-2j9zxn-976ad7df3ef49b19",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "logprobs": null,
+      "message": {
+        "role": "assistant",
+        "content": "Hello! It's nice to meet you. Is there something I can help you with, or would you like to chat?",
+        "tool_calls": []
+      }
+    }
+  ],
+  "created": 1756457871,
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+  "usage": {
+    "prompt_tokens": 2,
+    "completion_tokens": 5,
+    "total_tokens": 7
+  }
+}
+```
+{% endcode %}
+
+</details>

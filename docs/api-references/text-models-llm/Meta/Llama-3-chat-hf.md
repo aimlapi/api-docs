@@ -21,7 +21,7 @@ You can also view [a detailed comparison of this model](https://aimlapi.com/comp
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](Llama-3-chat-hf.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](Llama-3-chat-hf.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,6 +41,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="llama-3-chat-h-f" path="/v1/chat/completions" method="post" %}
+[OpenAPI llama-3-chat-h-f](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Llama-3-chat-hf.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -77,6 +83,37 @@ print(data)
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="JavaScript" %}
+```
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'meta-llama/Llama-3-70b-chat-hf',
+      messages:[
+          {
+              role:'user',
+
+              // Insert your question for the model here, instead of Hello:
+              content: 'Hello'
+          }
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
+```
+{% endtab %}
 {% endtabs %}
 
 <details>
@@ -90,9 +127,3 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="llama-3-chat-h-f" path="/v1/chat/completions" method="post" %}
-[OpenAPI llama-3-chat-h-f](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Llama-3-chat-hf.json)
-{% endopenapi-operation %}
