@@ -19,7 +19,7 @@ The leading coding model globally, consistently excelling at complex, long-durat
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](claude-4-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](claude-4-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="claude-4-opus" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-4-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-opus.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -154,9 +160,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-4-opus" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-4-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-opus.json)
-{% endopenapi-operation %}

@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="claude-4-sonnet" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-4-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-sonnet.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -154,9 +160,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="claude-4-sonnet" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-4-sonnet](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-sonnet.json)
-{% endopenapi-operation %}
