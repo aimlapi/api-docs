@@ -19,7 +19,7 @@ The most powerful model in the Qwen3 Coder series — a 480B-parameter MoE archi
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](qwen3-coder-480b-a35b-instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](qwen3-coder-480b-a35b-instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -39,6 +39,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="qwen3-coder-480b-a35b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen3-coder-480b-a35b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-coder-480b-a35b-instruct.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -154,9 +160,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="qwen3-coder-480b-a35b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-coder-480b-a35b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-coder-480b-a35b-instruct.json)
-{% endopenapi-operation %}
