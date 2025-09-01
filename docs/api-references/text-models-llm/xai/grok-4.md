@@ -36,7 +36,7 @@ Grok 4 is boldly described by its developers as the most intelligent model in th
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](grok-4.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](grok-4.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -56,6 +56,12 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="grok-4" path="/v1/chat/completions" method="post" %}
+[OpenAPI grok-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-4.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -133,9 +139,3 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="grok-4" path="/v1/chat/completions" method="post" %}
-[OpenAPI grok-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-4.json)
-{% endopenapi-operation %}

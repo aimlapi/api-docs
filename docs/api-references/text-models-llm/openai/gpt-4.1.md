@@ -19,7 +19,7 @@ All models of the GPT-4.1 family outperform [GPT‑4o](../OpenAI/gpt-4o.md) and 
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](gpt-4.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gpt-4.1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 

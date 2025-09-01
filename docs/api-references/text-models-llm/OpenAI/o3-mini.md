@@ -19,7 +19,7 @@ A model designed to excel in complex reasoning tasks, including mathematical pro
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](o3-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](o3-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 

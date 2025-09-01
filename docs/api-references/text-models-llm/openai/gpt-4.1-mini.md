@@ -21,7 +21,7 @@ This model, **GPT-4.1 mini**, is an impressive improvement in small model capabi
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](gpt-4.1-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gpt-4.1-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 

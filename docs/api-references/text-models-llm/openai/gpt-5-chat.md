@@ -21,7 +21,7 @@ The non-reasoning version of [GPT‑5](gpt-5.md).
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](gpt-5-chat.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gpt-5-chat.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -41,6 +41,20 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+{% openapi-operation spec="gpt-5-chat" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-5-chat](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-chat.json)
+{% endopenapi-operation %}
+
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -168,20 +182,6 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-5-chat" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-5-chat](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-chat.json)
-{% endopenapi-operation %}
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 
