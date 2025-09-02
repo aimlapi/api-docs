@@ -29,6 +29,9 @@ export default {
         desc: `Reference images for dual-character effects (Base64 encoded or URL)`
     }
   },
+  first_image_url: {
+      desc: `URL of the image to be used as the first frame of the video.`,
+  },
   last_image_url: {
     default: {
       desc: `URL of the image to be used as the last frame of the video.`,
@@ -163,4 +166,7 @@ export default {
   expression_intensity: {
     desc: `An integer between 1 and 5 (inclusive). A larger value increases the intensity of the character's expression.`,
   },
+  style: {
+    desc: `The style of the generated video.`,
+  }
 };
