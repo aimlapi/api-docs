@@ -20,18 +20,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 Note that by default, the `quality` parameter is set to `'medium'`. The output image will still look great, but for even more detailed results, consider setting this parameter to `'high'`.
 {% endhint %}
 
+### Generate image
+
+{% openapi-operation spec="gpt-image-1-gen" path="/v1/images/generations" method="post" %}
+[OpenAPI gpt-image-1-gen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-gen.json)
+{% endopenapi-operation %}
+
+### Edit image
+
 {% hint style="warning" %}
 Unfortunately, this model only accepts local files specified by their file paths. \
 It does not support image input via URLs or base64 encoding.
 {% endhint %}
-
-### Generate image
-
-{% openapi-operation spec="gpt-image-1" path="/v1/images/generations" method="post" %}
-[OpenAPI gpt-image-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1.json)
-{% endopenapi-operation %}
-
-### Edit image
 
 {% openapi-operation spec="gpt-image-1-edit" path="/v1/images/edits" method="post" %}
 [OpenAPI gpt-image-1-edit](https://api.aimlapi.com/docs-public-yaml)

@@ -120,6 +120,7 @@
 * [Image Models](api-references/image-models/README.md)
   * [Alibaba Cloud](api-references/image-models/alibaba-cloud/README.md)
     * [qwen-image](api-references/image-models/alibaba-cloud/qwen-image.md)
+    * [qwen-image-edit](api-references/image-models/alibaba-cloud/qwen-image-edit.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
     * [Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
     * [Seededit 3.0 (Image-to-Image)](api-references/image-models/bytedance/seededit-3.0-image-to-image.md)
