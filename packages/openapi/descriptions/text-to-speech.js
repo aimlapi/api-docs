@@ -107,9 +107,6 @@ export default {
   pronunciation_dict: {
     desc: `Custom pronunciation dictionary for handling specific words or phrases. Allows fine-tuning of how certain text should be pronounced using phonetic representations.`,
   },
-  voice_modify: {
-    desc: `Voice modification settings for adjusting pitch, intensity, timbre, and applying sound effects to customize the voice characteristics.`,
-  },
   stream: {
     desc: `Enable streaming mode for real-time audio generation. When enabled, audio is generated and delivered in chunks as it's processed.`,
   },
