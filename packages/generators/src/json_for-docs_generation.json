@@ -1,8 +1,9 @@
 [
   {
-    "name": "alibaba/qwen-image-edit",
-    "alias": "qwen-image-edit",
+    "name": "openai/gpt-image-1",
+    "alias": "gpt-image-1-gen",
     "category": "image-models",
-    "vendor": "Alibaba-Cloud"
+    "vendor": "OpenAI",
+    "features": ["image-to-image"]
   }
 ]

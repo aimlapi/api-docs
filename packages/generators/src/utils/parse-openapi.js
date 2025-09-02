@@ -102,6 +102,8 @@ const EXCEPTION_PATH = [
   '/threads/{threadId}/runs/{runId}/cancel',
   '/v1/responses',
   '/responses',
+  '/images/edits',
+  '/v1/images/edits',
 ];
 
 const parseOpenapi = (openapi, fetchedModels) => {
