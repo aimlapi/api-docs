@@ -60,6 +60,9 @@ export default {
     default: {
       desc: `List of URLs or local Base64 encoded images to edit.`,
     },
+    uso: {
+      desc: `Array of image URLs: [content_image, style_image, extra_style_image]`
+    }
   },
   do_remove_background: {
     desc: `Enables removing the background from the input image.`,
