@@ -6,6 +6,9 @@ export default {
     minimax: {
       desc: `Lyrics with optional formatting. You can use a newline to separate each line of lyrics. You can use two newlines to add a pause between lines. You can use double hash marks (##) at the beginning and end of the lyrics to add accompaniment. Maximum 600 characters.`,
     },
+    elevenlabs: {
+      desc: `A text description that can define the genre, mood, instruments, vocals, tempo, structure, and even lyrics of the track. It can be high-level (“peaceful meditation with voiceover”) or detailed (“solo piano in C minor, 90 BPM, raw and emotional”). Use keywords to control genre, emotional tone, vocals (e.g., a cappella, two singers harmonizing), structure (e.g., “lyrics begin at 15 seconds”), or provide custom lyrics directly in the prompt.`,
+    },
   },
   reference_audio_url: {
     desc: `Reference song, should contain music and vocals. Must be a .wav or .mp3 file longer than 15 seconds.`,
