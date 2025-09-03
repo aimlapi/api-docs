@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="gpt-4-1" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% code overflow="wrap" %}
@@ -84,12 +90,6 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-4-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1.json)
-{% endopenapi-operation %}
 
 ### Responses Endpoint
 

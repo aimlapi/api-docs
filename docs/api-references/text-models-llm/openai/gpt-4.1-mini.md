@@ -42,6 +42,20 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="gpt-4-1-mini" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-4-1-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1-mini.json)
+{% endopenapi-operation %}
+
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% code overflow="wrap" %}
@@ -86,20 +100,6 @@ print(data)
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="gpt-4-1-mini" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-4-1-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1-mini.json)
-{% endopenapi-operation %}
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 

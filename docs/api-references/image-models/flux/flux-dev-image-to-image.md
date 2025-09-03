@@ -31,9 +31,7 @@ Let's generate a new image using the one from the [flux/dev Quick Example](flux-
 {% code overflow="wrap" %}
 ```python
 import requests
-
-# URL of the reference picture
-img_url = "https://zovi0.github.io/public_misc/flux-dev-t-rex.png"
+import json
 
 def main():
     response = requests.post(
@@ -44,22 +42,18 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "Add a bird to the foreground of the photo.",
             "model": "flux/dev/image-to-image",
-            "image_url": img_url,
+            "prompt": "Add a bird to the foreground of the photo.",
+            "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
             "strength": 0.8
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -108,7 +102,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/lion/EyuGvQzlsBoVUB8qjV776.png', 'width': 1024, 'height': 768, 'content_type': 'image/png'}], 'timings': {'inference': 2.544010079000145}, 'seed': 2819715747, 'has_nsfw_concepts': [False], 'prompt': 'Add a bird to the foreground of the photo.'}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/elephant/RmRsL9NMW_kkRy6MemjZJ_ac9897dd871842e2a689b8bc24b4bf08.jpg',
+      width: 1472,
+      height: 512,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: { inference: 4.4450759180035675 },
+  seed: 3082066483,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'
+}
 ```
 {% endcode %}
 

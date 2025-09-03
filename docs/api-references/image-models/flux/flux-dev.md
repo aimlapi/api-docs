@@ -31,6 +31,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
+import json
 
 def main():
     response = requests.post(
@@ -41,14 +42,13 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "model": "flux/dev",
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-    print("Generation:", data)
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -74,7 +74,7 @@ async function main() {
   });
 
   const data = await response.json();
-  console.log('Generation:', data);
+  console.log(data);
 }
 
 main();
@@ -89,7 +89,24 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/monkey/GHx5aT0PR9GXtGi3Cx7CE.png', 'width': 1024, 'height': 768, 'content_type': 'image/png'}], 'timings': {'inference': 2.1296588028781116}, 'seed': 1007384285, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+{
+  "images": [
+    {
+      "url": "https://cdn.aimlapi.com/eagle/files/monkey/zS_fT2UFKmLqlbEHYCRys.jpeg",
+      "width": 1024,
+      "height": 768,
+      "content_type": "image/jpeg"
+    }
+  ],
+  "timings": {
+    "inference": 1.226824438199401
+  },
+  "seed": 1765470393,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+}
 ```
 {% endcode %}
 
