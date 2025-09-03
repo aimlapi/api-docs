@@ -37,7 +37,7 @@ The value must be a multiple of 32.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -57,15 +57,11 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -74,34 +70,25 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux-realism',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      image_size: {
+        width: 1472,
+        height: 512
       },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'flux-realism',
-        image_size: {
-          width: 1472,
-          height: 512
-        }
-      }),
-    });
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -116,7 +103,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/zebra/ixROrA_D3_AkDwO-Qjgsd_f62b7c411b4945189378bbeb0142d2ed.jpg', 'width': 1472, 'height': 512, 'content_type': 'image/jpeg'}], 'timings': {'inference': 3.874080283101648}, 'seed': 4134117142, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/elephant/RmRsL9NMW_kkRy6MemjZJ_ac9897dd871842e2a689b8bc24b4bf08.jpg',
+      width: 1472,
+      height: 512,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: { inference: 4.4450759180035675 },
+  seed: 3082066483,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'
+}
 ```
 {% endcode %}
 

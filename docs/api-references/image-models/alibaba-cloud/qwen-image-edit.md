@@ -31,7 +31,6 @@ Let's generate an image of the specified size using a simple prompt.
 import requests
 import json
 
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",

@@ -31,7 +31,6 @@ Let's generate an image of the specified size using a simple prompt.
 import requests
 import json
 
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
@@ -42,15 +41,13 @@ def main():
         },
         json={
             "model": "bytedance/seededit-3.0-i2i",
-            "image": "https://zovi0.github.io/public_misc/flux-dev-t-rex.png",
+            "image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
             "prompt": "Add a bird to the foreground of the photo.",
         }
     )
 
     data = response.json()
-
     print(json.dumps(data, indent=2, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
@@ -61,35 +58,22 @@ if __name__ == "__main__":
 {% tab title="JS" %}
 {% code overflow="wrap" %}
 ```javascript
-async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'bytedance/seededit-3.0-i2i',
-        image: 'https://zovi0.github.io/public_misc/flux-dev-t-rex.png',
-        prompt: 'Add a bird to the foreground of the photo.',
-      }),
-    });
+const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+  method: 'POST',
+  headers: {
+    // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'bytedance/seededit-3.0-i2i',
+    prompt: 'Add a bird to the foreground of the photo.',
+    image: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',        
+  }),
+});
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-main();
+const data = await response.json();
+console.log(JSON.stringify(data, null, 2));
 ```
 {% endcode %}
 {% endtab %}

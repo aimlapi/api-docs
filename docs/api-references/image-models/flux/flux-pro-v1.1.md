@@ -38,7 +38,7 @@ The value must be a multiple of 32.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -49,7 +49,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "Rabbit singing",
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "model": "flux-pro/v1.1",
             'image_size': {
                 "width": 1024,
@@ -57,12 +57,9 @@ def main():
             }
         }
     )
-
-    response.raise_for_status()
+    
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -74,34 +71,25 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux-pro/v1.1',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      image_size: {
+        width: 1024,
+        height: 320
       },
-      body: JSON.stringify({
-        prompt: 'Rabbit singing',
-        model: 'flux-pro/v1.1',
-        image_size: {
-          width: 1024,
-          height: 320
-        }
-      }),
-    });
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -116,7 +104,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/koala/zWwOGJ84iP1LAkGLSwwpo_68bf71493b78444fb85c8cb6bf250522.jpg', 'width': 1024, 'height': 320, 'content_type': 'image/jpeg'}], 'timings': {}, 'seed': 1878268883, 'has_nsfw_concepts': [False], 'prompt': 'Rabbit singing'}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/squirrel/files/zebra/i1zUlcHZ0o3V2DEeyi2bL_6a366eac61354652a0430750e53bc839.jpg',
+      width: 1024,
+      height: 320,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: {},
+  seed: 1345862631,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'
+}
 ```
 {% endcode %}
 
@@ -124,4 +125,4 @@ Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/koala/zW
 
 We obtained the following 1024x320 image (JPEG) by running this code example:
 
-<figure><img src="../../../.gitbook/assets/zWwOGJ84iP1LAkGLSwwpo_68bf71493b78444fb85c8cb6bf250522.jpg" alt=""><figcaption><p><code>"Rabbit singing"</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/i1zUlcHZ0o3V2DEeyi2bL_6a366eac61354652a0430750e53bc839.jpg" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."</code></p></figcaption></figure>

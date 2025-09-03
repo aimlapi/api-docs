@@ -48,9 +48,7 @@ def main():
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
-
     print("Generation:", data)
 
 

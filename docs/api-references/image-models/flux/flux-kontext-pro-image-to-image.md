@@ -33,9 +33,6 @@ Let's generate a new image using the one from the [flux/dev Quick Example](flux-
 import requests
 import json  # for getting a structured output with indentation 
 
-# URL of the reference picture
-img_url = "https://zovi0.github.io/public_misc/flux-dev-t-rex.png"
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
@@ -47,19 +44,16 @@ def main():
         json={
             "prompt": "Add a bird to the foreground of the photo.",
             "model": "flux/kontext-pro/image-to-image",
-            "image_url": img_url,
+            "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png", # URL of the reference picture
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
-
     print(json.dumps(data, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -164,9 +158,6 @@ This time, we’ll pass two images to the model: our dinosaur and a solid blue m
 import requests
 import json  # for getting a structured output with indentation
 
-# URLs of two reference pictures
-images = ["https://zovi0.github.io/public_misc/flux-dev-t-rex.png", "https://zovi0.github.io/public_misc/blue-mug.jpg"]
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
@@ -178,7 +169,10 @@ def main():
         json={
             "prompt": "Place this image with the t-rex on this mug from the second image as a print. Make it look fit and natural.",
             "model": "flux/kontext-pro/image-to-image",
-            "image_url": images 
+            "image_url": [     # URLs of two reference pictures
+                "https://zovi0.github.io/public_misc/flux-dev-t-rex.png", 
+                "https://zovi0.github.io/public_misc/blue-mug.jpg"
+            ]
         }
     )
 
@@ -205,7 +199,10 @@ const main = async () => {
     body: JSON.stringify({
       model: 'flux/kontext-pro/text-to-image',
       prompt: 'Place this image with the t-rex on this mug from the second image as a print. Make it look fit and natural.',
-      image_url: ['https://zovi0.github.io/public_misc/flux-dev-t-rex.png', 'https://zovi0.github.io/public_misc/blue-mug.jpg'],
+      image_url: [     // URLs of two reference pictures
+        'https://zovi0.github.io/public_misc/flux-dev-t-rex.png', 
+        'https://zovi0.github.io/public_misc/blue-mug.jpg'
+      ],
     }),
   }).then((res) => res.json());
 
