@@ -29,7 +29,7 @@ Let's generate an image of the specified aspect ratio using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json   # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -46,11 +46,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -62,31 +59,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Racoon eating ice-cream',
-        model: 'google/imagen4/preview',
-        aspect_ratio: '16:9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'google/imagen4/preview',
+      prompt: 'Racoon eating ice-cream',
+      aspect_ratio: '16:9'
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -101,7 +89,17 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/penguin/4ZNAvdmVu4PNSrRxSAb3X_output.png', 'content_type': 'image/png', 'file_name': 'output.png', 'file_size': 1697349}], 'seed': 595549216}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/panda/tI_UTxAzqLqWZZqSoNqsO_output.png',
+      content_type: 'image/png',
+      file_name: 'output.png',
+      file_size: 1665805
+    }
+  ],
+  seed: 3360388064
+}
 ```
 {% endcode %}
 

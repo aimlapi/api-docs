@@ -31,7 +31,7 @@ Let's generate an image of the specified size using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -49,8 +49,7 @@ def main():
     )
 
     data = response.json()
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -62,31 +61,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'flux/kontext-pro/text-to-image',
-        "aspect_ratio": '21:9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux/kontext-pro/text-to-image',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      aspect_ratio: '21:9',
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -101,7 +91,22 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/penguin/EgskSnirzZYljpVeLSTNR_917caa60fb8f450cbd9576756171cd68.jpg', 'width': 1568, 'height': 672, 'content_type': 'image/jpeg'}], 'timings': {}, 'seed': 146234323, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+{
+  "images": [
+    {
+      "url": "https://cdn.aimlapi.com/squirrel/files/koala/6e4yw7_YnA8tEe03QW8wW_5298e11de5a24f1f9cf4f277cbdd3316.jpg",
+      "width": 1568,
+      "height": 672,
+      "content_type": "image/jpeg"
+    }
+  ],
+  "timings": {},
+  "seed": 2561481494,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+}
 ```
 {% endcode %}
 

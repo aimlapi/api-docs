@@ -31,7 +31,6 @@ Let's generate an image of the specified size using a simple prompt.
 import requests
 import json
 
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
@@ -53,7 +52,6 @@ def main():
     data = response.json()
     print(json.dumps(data, indent=2, ensure_ascii=False))
 
-
 if __name__ == "__main__":
     main()
 ```
@@ -64,7 +62,6 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
     const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
       method: 'POST',
       headers: {
@@ -74,8 +71,11 @@ async function main() {
       },
       body: JSON.stringify({
         model: 'google/gemini-2.5-flash-image-edit',
-        image: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
-        prompt: 'Add a bird to the foreground of the photo.',
+        image_urls: [
+                'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
+                'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
+        ],
+        prompt: 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.',
       }),
     });
 }

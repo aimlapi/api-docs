@@ -31,7 +31,7 @@ Let's generate an image of the specified size using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -44,15 +44,12 @@ def main():
         json={
             "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "model": "flux/kontext-max/text-to-image",
-            "aspect_ratio": "21:9"   
+            "aspect_ratio": '21:9'
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -64,31 +61,23 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'flux/kontext-max/text-to-image',
-        "aspect_ratio": '21:9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux/kontext-max/text-to-image',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      
+      aspect_ratio: '21:9',
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -103,7 +92,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/elephant/zFx0xcGvgRWPYCEqnWseI_69818c90b08d406d874ca470c4b67957.jpg', 'width': 1568, 'height': 672, 'content_type': 'image/jpeg'}], 'timings': {}, 'seed': 1661789076, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/squirrel/files/monkey/zP2cXFuTA4Bd0GbZAAb8y_be6eb84f036744dcbb2e155296b96be1.jpg',
+      width: 1568,
+      height: 672,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: {},
+  seed: 1617845674,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'
+}
 ```
 {% endcode %}
 

@@ -31,7 +31,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-import json
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(

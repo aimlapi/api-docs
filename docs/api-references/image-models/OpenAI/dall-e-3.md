@@ -31,7 +31,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -48,11 +48,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -64,31 +61,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'dall-e-3',
-        quality: 'hd'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'dall-e-3',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      quality: 'hd',
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -107,7 +95,15 @@ Note that the model applies automatic prompt enhancement, and this behavior cann
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'created': 1748502329, 'data': [{'revised_prompt': 'Visualize a T-Rex dinosaur enjoying a leisurely day at a sunny beach. The T-Rex is comfortably lounging on a sunbed and wearing stylish shades, clearly enjoying the warm weather and peaceful setting. The ocean waves gently lap up against the shoreline in the background.', 'url': 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-Eo1U9k4AbSJPoV7seW2PDq2d/user-oGBnQp1igcXKlzRsuv3QKfH3/img-4BSO0AAOQo7DPgFCzpzLOibU.png?st=2025-05-29T06%3A05%3A29Z&se=2025-05-29T08%3A05%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-29T06%3A07%3A56Z&ske=2025-05-30T06%3A07%3A56Z&sks=b&skv=2024-08-04&sig=9J/kIJjZXlDp9feazuudjCHIeR5jrw%2BjrFwOXwPMrfc%3D'}]}
+{
+  created: 1756973055,
+  data: [
+    {
+      revised_prompt: 'A massive T-Rex is taking a well-deserved vacation at a tranquil beach. The charismatic dinosaur lies leisurely on a large, comfortable sun lounger. Its tiny, clawed hands hold a pair of fashionable sunglasses in place over its sharp, menacing eyes, adding an air of humor to the otherwise intimidating figure. The soothing sound of the waves and the gentle warmth of the sun create a calming atmosphere around the chilling predator, lending the scene an amusing contradiction.',
+      url: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-5drZvxmo1TGoMx2jeKKGAGSh/user-eKr1xiaNRxSYqgKrXfgZzSAJ/img-B7BCSmDWQgWlGA2vu24HSzqS.png?st=2025-09-04T07%3A04%3A15Z&se=2025-09-04T09%3A04%3A15Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=38e27a3b-6174-4d3e-90ac-d7d9ad49543f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-04T02%3A45%3A18Z&ske=2025-09-05T02%3A45%3A18Z&sks=b&skv=2024-08-04&sig=fGRfHnpFybyg6wwJw7PYXJKM1AF1NWwD/W5qPKIha7U%3D'
+    }
+  ]
+}
 ```
 {% endcode %}
 

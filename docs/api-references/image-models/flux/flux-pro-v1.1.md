@@ -38,7 +38,7 @@ The value must be a multiple of 32.
 {% code overflow="wrap" %}
 ```python
 import requests
-import json
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(

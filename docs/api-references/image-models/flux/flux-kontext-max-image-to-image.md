@@ -33,9 +33,6 @@ Let's generate a new image using the one from the [flux/dev Quick Example](flux-
 import requests
 import json  # for getting a structured output with indentation 
 
-# URL of the reference picture
-img_url = "https://zovi0.github.io/public_misc/flux-dev-t-rex.png"
-
 def main():
     response = requests.post(
         "https://api.aimlapi.com/v1/images/generations",
@@ -45,21 +42,17 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "Add a bird to the foreground of the photo.",
             "model": "flux/kontext-max/image-to-image",
-            "image_url": img_url,
+            "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",  # URL of the reference picture
+            "prompt": "Add a bird to the foreground of the photo.",
         }
     )
 
-    # response.raise_for_status()
     data = response.json()
-
     print(json.dumps(data, indent=2, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -67,35 +60,22 @@ if __name__ == "__main__":
 {% tab title="JS" %}
 {% code overflow="wrap" %}
 ```javascript
-async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Add a bird to the foreground of the photo.',
-        model: 'flux/kontext-max/image-to-image',
-        image_url: 'https://zovi0.github.io/public_misc/flux-dev-t-rex.png'
-      }),
-    });
+const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+  method: 'POST',
+  headers: {
+    // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'flux/kontext-max/image-to-image',
+    prompt: 'Add a bird to the foreground of the photo.',
+    image_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',        
+  }),
+});
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-main();
+const data = await response.json();
+console.log(JSON.stringify(data, null, 2));
 ```
 {% endcode %}
 {% endtab %}

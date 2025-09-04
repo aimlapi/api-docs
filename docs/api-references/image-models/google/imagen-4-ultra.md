@@ -63,11 +63,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
     print(json.dumps(data, indent=2, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
@@ -79,31 +76,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Racoon eating ice-cream',
-        model: 'imagen-4.0-ultra-generate-preview-06-06',
-        aspect_ratio: '16:9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'imagen-4.0-ultra-generate-preview-06-06',
+      prompt: 'Racoon eating ice-cream',
+      aspect_ratio: '16:9'
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -119,10 +107,11 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "data": [
+  data: [
     {
-      "mime_type": "image/png",
-      "url": "https://cdn.aimlapi.com/generations/guepard/1753091188132-ea2fc805-e828-4afe-82e6-7831a2d4080e.png"
+      mime_type: 'image/png',
+      url: 'https://cdn.aimlapi.com/generations/guepard/1756971509123-7ed4055c-1878-47c5-a060-7202392b78a2.png',
+      prompt: "A curious raccoon is sitting upright on a weathered wooden picnic table, intensely focused on eating a melting ice cream cone. The raccoon holds the cone delicately in its paws, with sticky ice cream smeared around its mouth and on its fur. The ice cream is a vibrant strawberry pink color, dripping down the cone onto the table surface. Its mask-like facial markings are prominent, and its dark eyes are wide with concentration. The setting is a lush green park during golden hour, with soft, warm sunlight filtering through the background trees, creating a gentle bokeh effect. Empty picnic benches are visible in the soft-focus background. The wooden table is slightly worn, with visible grain and a few scattered leaves. The lighting is natural and warm, highlighting the raccoon's fur and the glistening ice cream."
     }
   ]
 }

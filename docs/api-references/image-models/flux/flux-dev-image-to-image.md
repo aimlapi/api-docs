@@ -31,7 +31,7 @@ Let's generate a new image using the one from the [flux/dev Quick Example](flux-
 {% code overflow="wrap" %}
 ```python
 import requests
-import json
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -62,32 +62,23 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Add a bird to the foreground of the photo.',
-        model: 'flux/dev/image-to-image',
-        image_url: 'https://zovi0.github.io/public_misc/flux-dev-t-rex.png',
-        strength: 0.8
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux/dev/image-to-image',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      image_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
+      strength: 0.8,
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();

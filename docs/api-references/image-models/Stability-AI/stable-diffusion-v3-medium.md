@@ -29,7 +29,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -46,11 +46,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -62,31 +59,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'stable-diffusion-v3-medium',
-        image_size: 'landscape_16_9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'stable-diffusion-v3-medium',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo.',
+      image_size: 'landscape_16_9'
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -101,7 +89,21 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/squirrel/files/panda/RCbeYSssFwxdkEX2tWd6i.png', 'width': 1024, 'height': 576, 'content_type': 'image/jpeg'}], 'timings': {'inference': 1.174231035867706}, 'seed': 2587699048419330600, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.', 'num_images': 1}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/squirrel/files/monkey/pAs554_StzWBkrLMgTH5a.png',
+      width: 1024,
+      height: 576,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: { inference: 1.1477893170085736 },
+  seed: 3544609846964942300,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo.',
+  num_images: 1
+}
 ```
 {% endcode %}
 

@@ -29,7 +29,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -45,11 +45,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -61,30 +58,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'recraft-v3',
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'recraft-v3',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo.',
+      
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -99,7 +88,16 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/elephant/_xsMTrYgz4vMITXeT1gjl_image.webp', 'content_type': 'image/webp', 'file_name': 'image.webp', 'file_size': 558752}]}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/koala/Z1MUK5lqaL70uC5Mn6Rlj_image.webp',
+      content_type: 'image/webp',
+      file_name: 'image.webp',
+      file_size: 347808
+    }
+  ]
+}
 ```
 {% endcode %}
 

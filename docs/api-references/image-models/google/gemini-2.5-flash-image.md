@@ -33,7 +33,7 @@ Let's generate an image of the specified aspect ratio using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -49,11 +49,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -65,24 +62,22 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'google/gemini-2.5-flash-image',
-        prompt: 'Racoon eating ice-cream',
-        aspect_ratio: '16:9'
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'google/gemini-2.5-flash-image',
+      prompt: 'Racoon eating ice-cream',
+      aspect_ratio: '16:9'
+    }),
+  });
 
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -97,7 +92,17 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/elephant/Ltdy-0QLZAnyBGLRyh-pP.jpeg', 'content_type': None, 'file_name': None, 'file_size': None}], 'description': "Sounds adorable! Here's a racoon enjoying some ice cream: "}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/zebra/VVpZmbuvMBg3k7OqJ8UnP.jpeg',
+      content_type: 'image/jpeg',
+      file_name: 'output.jpeg',
+      file_size: null
+    }
+  ],
+  description: "Sounds adorable! Here's a racoon enjoying some ice cream: "
+}
 ```
 {% endcode %}
 

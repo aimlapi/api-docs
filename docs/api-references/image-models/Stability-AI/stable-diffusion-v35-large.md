@@ -29,7 +29,7 @@ Let's generate an image using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json
 
 def main():
     response = requests.post(
@@ -47,11 +47,8 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -63,32 +60,23 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'stable-diffusion-v35-large',
-        image_size: 'landscape_16_9',
-        num_inference_steps: 40,
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'stable-diffusion-v35-large',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo.',
+      image_size: 'landscape_16_9',
+      num_inference_steps: 40,
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -103,7 +91,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'images': [{'url': 'https://cdn.aimlapi.com/eagle/files/elephant/j_c4eu3gJwADYRTb7_3M1.jpeg', 'width': 1024, 'height': 576, 'content_type': 'image/jpeg'}], 'timings': {'inference': 4.801230997079983}, 'seed': 5821854872171531000, 'has_nsfw_concepts': [False], 'prompt': 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'}
+{
+  images: [
+    {
+      url: 'https://cdn.aimlapi.com/eagle/files/elephant/4vP0cAmlTNsadiYaMFE30.jpeg',
+      width: 1024,
+      height: 576,
+      content_type: 'image/jpeg'
+    }
+  ],
+  timings: { inference: 4.855678029009141 },
+  seed: 6199662706750842000,
+  has_nsfw_concepts: [ false ],
+  prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'
+}
 ```
 {% endcode %}
 

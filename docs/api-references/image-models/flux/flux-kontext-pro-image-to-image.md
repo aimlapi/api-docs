@@ -42,15 +42,14 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "Add a bird to the foreground of the photo.",
             "model": "flux/kontext-pro/image-to-image",
-            "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png", # URL of the reference picture
+            "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",  # URL of the reference picture
+            "prompt": "Add a bird to the foreground of the photo.",
         }
     )
 
     data = response.json()
     print(json.dumps(data, indent=2, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
@@ -61,35 +60,22 @@ if __name__ == "__main__":
 {% tab title="JS" %}
 {% code overflow="wrap" %}
 ```javascript
-async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Add a bird to the foreground of the photo.',
-        model: 'flux/kontext-pro/image-to-image',
-        image_url: 'https://zovi0.github.io/public_misc/flux-dev-t-rex.png'
-      }),
-    });
+const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+  method: 'POST',
+  headers: {
+    // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'flux/kontext-pro/image-to-image',
+    prompt: 'Add a bird to the foreground of the photo.',
+    image_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',        
+  }),
+});
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-main();
+const data = await response.json();
+console.log(JSON.stringify(data, null, 2));
 ```
 {% endcode %}
 {% endtab %}

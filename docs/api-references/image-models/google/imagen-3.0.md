@@ -17,7 +17,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="imagen-3" path="/v1/images/generations" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI imagen-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/imagen-3.0.json)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -29,7 +29,7 @@ Let's generate an image of the specified size using a simple prompt.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -46,49 +46,35 @@ def main():
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
 ```
 {% endcode %}
-
-
 {% endtab %}
 
 {% tab title="JS" %}
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'Racoon eating ice-cream',
-        model: 'imagen-3.0-generate-002',
-        convert_base64_to_url: true
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'imagen-3.0-generate-002',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+      convert_base64_to_url: true
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
@@ -105,7 +91,15 @@ Note that prompt enhancement is _enabled_ by default. The model will also return
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'data': [{'mime_type': 'image/png', 'url': 'https://cdn.aimlapi.com/generations/guepard/1746720987715-f2285114-7255-49fd-bef4-269b37225465.png', 'prompt': "A close-up shot of a playful raccoon with a mischievous glint in its eyes, enjoying a scoop of strawberry ice cream on a hot summer day. The raccoon is perched on a park bench, its small paws delicately holding the cone as it takes a satisfying lick. The ice cream melts slightly in the warm weather, creating a delightful, drippy texture. Sunlight bathes the scene in a warm, golden light, enhancing the colours and creating a vibrant atmosphere. The background is slightly blurred, with lush greenery and a hint of a vibrant blue sky. The photo is taken with a Canon EOS R5 camera using a 50mm lens, capturing the detail of the raccoon's fur, the melting ice cream, and the bright colours of the surroundings."}]}
+{
+  data: [
+    {
+      mime_type: 'image/png',
+      url: 'https://cdn.aimlapi.com/generations/guepard/1756970940506-11b77754-ca2a-4995-a260-d75adfb9885c.png',
+      prompt: 'A playful raccoon with a mischievous grin is indulging in a scoop of creamy, strawberry ice cream. Its black mask and fluffy tail are prominent features as it delicately licks the cool treat with its pink tongue. The raccoon is perched on a park bench, the soft daylight illuminating its fur and the vibrant color of the ice cream. The background is a slightly blurred, idyllic summer scene with a few scattered trees and a lush green lawn. The overall image captures a moment of unexpected delight, with the raccoon enjoying a sweet summer treat in a natural and relaxing setting. This picture captures the charming side of this often misunderstood animal, showcasing its playful curiosity and enjoyment of simple pleasures. The image has a soft, nostalgic quality, using natural light and a shallow depth of field to focus on the raccoon and its ice-cream.'
+    }
+  ]
+}
 ```
 {% endcode %}
 

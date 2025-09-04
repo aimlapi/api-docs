@@ -36,7 +36,7 @@ The width and height value must be a multiple of 32.
 {% code overflow="wrap" %}
 ```python
 import requests
-
+import json  # for getting a structured output with indentation
 
 def main():
     response = requests.post(
@@ -47,24 +47,16 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "model": "flux/schnell",
-            "image_size": {
-                "width": 1440,
-                "height": 512
-            }
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
         }
     )
 
-    response.raise_for_status()
     data = response.json()
-
-    print("Generation:", data)
-
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -73,34 +65,21 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-        model: 'flux/schnell',
-        image_size: {
-          width: 1440,
-          height: 512
-        }
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'flux/schnell',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Generation:', data);
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  const data = await response.json();
+  console.log(data);
 }
 
 main();
