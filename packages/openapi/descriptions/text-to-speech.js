@@ -75,13 +75,13 @@ export default {
     desc: `If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.`,
   },
   voice_id: {
-    desc: `Voice identifier for text-to-speech synthesis. Supports both predefined system voices and custom cloned voice IDs. Available system voices include various character types like Wise_Woman, Friendly_Person, Deep_Voice_Man, etc.`,
+    desc: `Voice identifier for text-to-speech synthesis. Supports both predefined system voices and custom cloned voice IDs. `,
   },
   emotion: {
     desc: `Emotional tone to apply to the synthesized speech. Controls the emotional expression of the generated voice output.`,
   },
   sample_rate: {
-    desc: `Audio sample rate in Hz. Higher sample rates provide better audio quality but result in larger file sizes. Common rates include 8000 (telephone quality), 16000 (wide band), 22050 (radio quality), 24000 (broadcast), 32000 (FM radio), and 44100 (CD quality).`,
+    desc: `Audio sample rate in Hz.`,
   },
   bitrate: {
     desc: `Audio bitrate in bits per second. Controls the compression level and audio quality. Higher bitrates provide better quality but larger file sizes.`,
@@ -96,7 +96,7 @@ export default {
     desc: `Audio effects to apply to the synthesized speech. Includes options like spacious_echo, auditorium_echo, lofi_telephone, and robotic effects.`,
   },
   language_boost: {
-    desc: `Language recognition enhancement option. Improves pronunciation and recognition for the specified language or dialect. Use 'auto' for automatic language detection or specify specific languages like 'Chinese', 'English', 'Spanish', etc.`,
+    desc: `Language recognition enhancement option.`,
   },
   output_format: {
     desc: `Format of the output content for non-streaming requests. Controls how the generated audio data is encoded in the response.`,
