@@ -88,37 +88,26 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of YOUR_AIMLAPI_KEY
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'alibaba/qwen3-coder-480b-a35b-instruct',
-        messages:[
-            {
-                role:'user',
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'alibaba/qwen3-coder-480b-a35b-instruct',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
 
-                // Insert your question for the model here, instead of Hello:
-                content: 'Hello'
-            }
-        ]
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();

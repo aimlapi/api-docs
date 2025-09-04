@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="qwen2-5-coder-32b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen2-5-coder-32b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -52,8 +58,6 @@ import json  # for getting a structured output with indentation
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -63,16 +67,13 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ]
     }
 )
 
 data = response.json()
-# getting a structured output with indentation
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
@@ -82,37 +83,26 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of YOUR_AIMLAPI_KEY
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-        messages:[
-            {
-                role:'user',
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
 
-                // Insert your question for the model here, instead of Hello:
-                content: 'Hello'
-            }
-        ]
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();
@@ -132,9 +122,3 @@ main();
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="qwen2-5-coder-32b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen2-5-coder-32b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.json)
-{% endopenapi-operation %}

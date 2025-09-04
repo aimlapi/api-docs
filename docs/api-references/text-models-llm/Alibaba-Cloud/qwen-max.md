@@ -40,6 +40,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="qwen-max" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-max.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -52,8 +58,6 @@ import json  # for getting a structured output with indentation
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -63,16 +67,13 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ]
     }
 )
 
 data = response.json()
-# getting a structured output with indentation
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
@@ -82,37 +83,26 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of YOUR_AIMLAPI_KEY
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'qwen-max',
-        messages:[
-            {
-                role:'user',
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'qwen-max',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
 
-                // Insert your question for the model here, instead of Hello:
-                content: 'Hello'
-            }
-        ]
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();
@@ -127,14 +117,33 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'chatcmpl-7470584d-ce5c-95c2-9a79-e9618bca74a6', 'system_fingerprint': None, 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I assist you today? 😊'}}], 'created': 1744143818, 'model': 'qwen-max', 'usage': {'prompt_tokens': 30, 'completion_tokens': 148, 'total_tokens': 178, 'prompt_tokens_details': {'cached_tokens': 0}}}
+{
+  "id": "chatcmpl-62aa6045-cee9-995a-bbf5-e3b7e7f3d683",
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "logprobs": null,
+      "message": {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today? 😊"
+      }
+    }
+  ],
+  "created": 1756983980,
+  "model": "qwen-max",
+  "usage": {
+    "prompt_tokens": 30,
+    "completion_tokens": 148,
+    "total_tokens": 178,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}
 ```
 {% endcode %}
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="qwen-max" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-max.json)
-{% endopenapi-operation %}

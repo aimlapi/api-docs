@@ -57,12 +57,11 @@ If you need a more detailed walkthrough for setting up your development environm
 {% code overflow="wrap" %}
 ```python
 import requests
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -72,16 +71,46 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
+        "enable_thinking": False
     }
 )
 
 data = response.json()
-print(data)
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'alibaba/qwen3-32b',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
 ```
 {% endcode %}
 {% endtab %}
@@ -94,7 +123,7 @@ print(data)
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "chatcmpl-90e359cc-3d07-9a8d-94de-44dd5d15f675",
+  "id": "chatcmpl-1d8a5aa6-34ce-9832-a296-d312b944b437",
   "system_fingerprint": null,
   "object": "chat.completion",
   "choices": [
@@ -109,7 +138,7 @@ print(data)
       }
     }
   ],
-  "created": 1753879968,
+  "created": 1756990273,
   "model": "qwen3-32b",
   "usage": {
     "prompt_tokens": 19,
@@ -133,8 +162,6 @@ import requests
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -144,16 +171,15 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
+        "enable_thinking": True, 
+        "stream": True
     }
 )
 
-data = response.json()
-print(data)
+print(response.text)
 ```
 {% endcode %}
 {% endtab %}
