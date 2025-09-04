@@ -28,7 +28,7 @@ export default {
   },
   last_image_url: {
     default: {
-      desc: `URL of the image to be used as the last frame of the video.`,
+      desc: `A direct link to an online image or a Base64-encoded local image to be used as the last frame of the video.`,
     },
     runway: {
       desc: `A HTTPS URL or data URI containing an encoded image to be used as the last frame of the generated video.`,
