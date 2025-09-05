@@ -61,7 +61,7 @@ export default {
       desc: `List of URLs or local Base64 encoded images to edit.`,
     },
     uso: {
-      desc: `Array of image URLs: [content_image, style_image, extra_style_image]`
+      desc: `An array of up to 3 image URLs. The first image is always treated as the primary input for image-to-image generation, while the remaining images (if provided) serve as visual style references for the output.`
     }
   },
   do_remove_background: {
