@@ -48,16 +48,16 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
-import json  # for getting a structured output with indentation
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -67,12 +67,9 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello!"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
-        
+        ],
     }
 )
 
@@ -80,6 +77,37 @@ data = response.json()
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'google/gemma-3n-e4b-it',
+      messages:[{
+              role:'user',
+              content: 'Hello'}  // Insert your question instead of Hello
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 

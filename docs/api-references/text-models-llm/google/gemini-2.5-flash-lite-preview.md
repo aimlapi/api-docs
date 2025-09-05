@@ -70,13 +70,11 @@ If you need a more detailed walkthrough for setting up your development environm
 {% code overflow="wrap" %}
 ```python
 import requests
-import json   # for getting a structured output with indentation
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -86,11 +84,9 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
     }
 )
 

@@ -59,7 +59,7 @@ response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        "Authorization":"Bearer b72af53a19ea41caaf5a74ba1f6fc62b",
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
     },
     json={
@@ -67,16 +67,13 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
     }
 )
 
 data = response.json()
-# getting a structured output with indentation
 print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
