@@ -36,7 +36,6 @@ client = OpenAI(
     api_key = "<YOUR_AIMLAPI_KEY>"
 )
 
-
 def main():
     response = client.chat.completions.create(
         model="gpt-4o-mini-audio-preview",
@@ -44,14 +43,12 @@ def main():
         audio={"voice": "alloy", "format": "wav"},
         messages=[
             {
-                # Your instructions for the model
                 "role": "system",
-                "content": "Speak english"
+                "content": "Speak english"  # Your instructions for the model
             },
             {   
-                # Your question (insert it istead of Hello)
                 "role": "user",
-                "content": "Hello"
+                "content": "Hello"  # Your question (insert it istead of Hello)
             }
         ],
         max_tokens=6000,  
@@ -63,7 +60,6 @@ def main():
     dist = os.path.abspath("audio.wav")
     print("Audio saved to:", dist)
      
-
 if __name__ == "__main__":
     main()
 ```

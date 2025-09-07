@@ -46,17 +46,26 @@ If you need a more detailed walkthrough for setting up your development environm
 [OpenAPI gpt-4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1.json)
 {% endopenapi-operation %}
 
+### Responses Endpoint
+
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+
+{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
+[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
+
 ## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
@@ -66,18 +75,49 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ]
     }
 )
 
 data = response.json()
-print(data)
+print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'openai/gpt-4.1-2025-04-14',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -90,14 +130,6 @@ print(data)
 {% endcode %}
 
 </details>
-
-### Responses Endpoint
-
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
-
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Code Example #2: Using /responses Endpoint
 

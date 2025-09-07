@@ -50,16 +50,16 @@ If you need a more detailed walkthrough for setting up your development environm
 
 {% tabs %}
 {% tab title="Python" %}
-<pre class="language-python" data-overflow="wrap"><code class="lang-python">import requests
-import json  # for getting a structured output with indentation
+{% code overflow="wrap" %}
+```python
+import requests
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-<strong>        "Content-Type":"application/json", 
-</strong>
-        # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
-        "Authorization":"Bearer &#x3C;YOUR_AIMLAPI_KEY>",
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
     },
     json={
@@ -67,9 +67,7 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-
-                # Insert your question for the model here, instead of Hello:
-                "content":"Hello"
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ]
     }
@@ -77,44 +75,34 @@ response = requests.post(
 
 data = response.json()
 print(json.dumps(data, indent=2, ensure_ascii=False))
-</code></pre>
+```
+{% endcode %}
 {% endtab %}
 
-{% tab title="JS" %}
+{% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'MiniMax-Text-01',
-        messages:[
-            {
-                role:'user',
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'MiniMax-Text-01',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
 
-                // Insert your question for the model here, instead of Hello:
-                content: 'Hello'
-            }
-        ]
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();
