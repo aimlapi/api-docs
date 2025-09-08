@@ -121,5 +121,11 @@ export default {
   },
   script: {
     desc: `The script to convert to speech. Can be formatted with "Speaker X:" prefixes for multi-speaker dialogues.`
+  },
+  preset: {
+    desc: `Default voice preset to use for the speaker. Not used if audio_url is provided.`
+  },
+  audio_url: {
+    desc: `URL to a voice sample audio file. If provided, preset will be ignored.`
   }
 };
