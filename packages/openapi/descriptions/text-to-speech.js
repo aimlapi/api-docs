@@ -116,4 +116,10 @@ export default {
   text_normalization: {
     desc: `English text normalization support. Improves number-reading but increases latency.`,
   },
+  speakers: {
+    desc: `List of speakers to use for the script. If not provided, will be inferred from the script or voice samples.`
+  },
+  script: {
+    desc: `The script to convert to speech. Can be formatted with "Speaker X:" prefixes for multi-speaker dialogues.`
+  }
 };
