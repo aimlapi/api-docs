@@ -1,0 +1,31 @@
+const fs = require('fs');
+const path = require('path');
+
+const axios = require('axios').default;
+const api = new axios.create({
+  baseURL: '{{baseUrl}}',
+  headers: { Authorization: 'Bearer {{apiKey}}' },
+});
+
+const main = async () => {
+  const response = await api.post(
+    '/tts',
+    {
+      model: '{{model}}',
+      text: 'Hi! What are you doing today?',
+      voice_setting: {
+        voice_id: 'Wise_Woman'
+      }
+    },
+    { responseType: 'stream' },
+  );
+
+  const dist = path.resolve(__dirname, './audio.wav');
+  const writeStream = fs.createWriteStream(dist);
+
+  response.data.pipe(writeStream);
+
+  writeStream.on('close', () => console.log('Audio saved to:', dist));
+};
+
+main();

@@ -1,0 +1,8 @@
+{
+  "title": "Text to Speech",
+  "docs": "https://docs.aimlapi.com/api-references/speech-models/text-to-speech",
+  "payload": {
+    "baseUrl": "https://api.aimlapi.com/v1",
+    "apiKey": "<YOUR_API_KEY>"
+  }
+}
