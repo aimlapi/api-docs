@@ -1,0 +1,21 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/generate/video/pixverse/generation', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'A man and a woman hugging',
+      image_url: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
+      tail_image_url: 'https://storage.googleapis.com/falserverless/juggernaut_examples/QEW5VrzccxGva7mPfEXjf.png',
+      style: 'anime',
+      aspect_ratio: '16:9'
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
