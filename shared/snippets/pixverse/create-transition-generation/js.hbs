@@ -7,9 +7,11 @@ const main = async () => {
     },
     body: JSON.stringify({
       model: '{{model}}',
-      prompt: 'Mona Lisa puts on glasses with her hands.',
-      image_url: 'https://storage.googleapis.com/falserverless/USO/style3.webp',
-      duration: '5',
+      prompt: 'A man and a woman hugging',
+      image_url: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
+      tail_image_url: 'https://storage.googleapis.com/falserverless/juggernaut_examples/QEW5VrzccxGva7mPfEXjf.png',
+      style: 'anime',
+      aspect_ratio: '16:9'
     }),
   }).then((res) => res.json());
 
