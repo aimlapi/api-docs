@@ -97,11 +97,11 @@ These models have been tested by our team for compatibility with Cline integrati
 
 
 
-* [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-90B-Vision-Instruct-Turbo.md)
-* [meta-llama/Llama-Vision-Free](../api-references/text-models-llm/Meta/Llama-Vision-Free.md)
+* [meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo](broken-reference)
+* [meta-llama/Llama-Vision-Free](broken-reference)
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
 * [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
-* [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-11B-Vision-Instruct-Turbo.md)
+* [meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo](broken-reference)
 * [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
 * [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
 * [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
@@ -144,8 +144,8 @@ These models have been tested by our team for compatibility with Cline integrati
 
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
 * [cohere/command-r-plus](../api-references/text-models-llm/Cohere/command-r-plus.md)
-* [nvidia/Llama-3.1-Nemotron-70B-Instruct-HF](../api-references/text-models-llm/NVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF.md)
-* [NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO](../api-references/text-models-llm/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO.md)
+* [nvidia/Llama-3.1-Nemotron-70B-Instruct-HF](broken-reference)
+* [NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO](broken-reference)
 
 
 

@@ -1,10 +1,10 @@
 # Llama-3-chat-hf
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>meta-llama/Llama-3-70b-chat-hf</code></li><li><code>meta-llama/Llama-3-8b-chat-hf</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=meta-llama/Llama-3-70b-chat-hf&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>meta-llama/Llama-3-70b-chat-hf</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=meta-llama/Llama-3-70b-chat-hf&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-The Llama 3 family consists of pretrained and instruction-tuned generative text models available in 8B and 70B sizes. These models are optimized for dialogue use cases and outperform many existing open-source chat models on common industry benchmarks.
+This model is optimized for dialogue use cases and outperform many existing open-source chat models on common industry benchmarks.
 
 You can also view [a detailed comparison of this model](https://aimlapi.com/comparisons/qwen-2-vs-llama-3-comparison) on our main website.
 
