@@ -48,6 +48,10 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## Code Example
 
+{% hint style="info" %}
+Note that the `system` role is not supported in this model. In the `messages` parameter, only `user` and `assistant` roles are available.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
