@@ -8,24 +8,35 @@ const api = new axios.create({
 });
 
 const main = async () => {
-  const response = await api.post(
-    '/tts',
-    {
+  try {
+    const response = await api.post('/tts', {
       model: '{{model}}',
       script: 'Speaker 0: Hello there! Speaker 1: Hi, how are you?',
       speakers: [
         { preset: 'Frank [EN]' }
       ]
-    },
-    { responseType: 'stream' },
-  );
+    });
 
-  const dist = path.resolve(__dirname, './audio.wav');
-  const writeStream = fs.createWriteStream(dist);
+    const responseData = response.data;
+    const audioUrl = responseData.audio.url;
+    const fileName = responseData.audio.file_name;
 
-  response.data.pipe(writeStream);
+    const audioResponse = await api.get(audioUrl, { responseType: 'stream' });
 
-  writeStream.on('close', () => console.log('Audio saved to:', dist));
+    const dist = path.resolve(__dirname, fileName);
+    const writeStream = fs.createWriteStream(dist);
+
+    audioResponse.data.pipe(writeStream);
+
+    writeStream.on('close', () => {
+      console.log('Audio saved to:', dist);
+      console.log(`Duration: ${responseData.duration} seconds`);
+      console.log(`Sample rate: ${responseData.sample_rate} Hz`);
+    });
+
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
 };
 
 main();
