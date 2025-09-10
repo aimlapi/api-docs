@@ -109,7 +109,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Meta**:    [Text/Chat](api-references/text-models-llm/Meta/)
 
-<mark style="background-color:green;">**MiniMax**</mark>:    [Text/Chat](api-references/text-models-llm/MiniMax/)   [Video](api-references/video-models/MiniMax/)   [Music](api-references/music-models/MiniMax/)   [Voice-Chat](api-references/speech-models/audio-chat/)
+<mark style="background-color:green;">**MiniMax**</mark>:    [Text/Chat](api-references/text-models-llm/MiniMax/)   [Video](api-references/video-models/MiniMax/)   [Music](api-references/music-models/MiniMax/)   [Voice-Chat](api-references/speech-models/voice-chat/)
 
 **Mistral AI**:    [Text/Chat](api-references/text-models-llm/Mistral-AI/)   [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
 
