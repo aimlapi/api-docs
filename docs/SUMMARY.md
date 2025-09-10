@@ -220,7 +220,7 @@
     * [ElevenLabs](api-references/speech-models/text-to-speech/elevenlabs/README.md)
       * [eleven\_multilingual\_v2](api-references/speech-models/text-to-speech/elevenlabs/eleven_multilingual_v2.md)
       * [eleven\_turbo\_v2\_5](api-references/speech-models/text-to-speech/elevenlabs/eleven_turbo_v2_5.md)
-  * [Audio Chat](api-references/speech-models/audio-chat/README.md)
+  * [Voice Chat](api-references/speech-models/audio-chat/README.md)
     * [MiniMax](api-references/speech-models/audio-chat/minimax/README.md)
       * [Speech 2.5 Turbo Preview](api-references/speech-models/audio-chat/minimax/speech-2.5-turbo-preview.md)
 * [Content Moderation Models](api-references/moderation-safety-models/README.md)
