@@ -1,8 +1,14 @@
 [
   {
-    "name": "meta-llama/Llama-3-70b-chat-hf",
-    "alias": "Llama-3-chat-hf",
-    "category": "text-models-llm",
-    "vendor": "Meta"
+    "name": "minimax/speech-2.5-turbo-preview",
+    "alias": "speech-2.5-turbo-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/speech-2.5-hd-preview",
+    "alias": "speech-2.5-hd-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax"
   }
 ]
