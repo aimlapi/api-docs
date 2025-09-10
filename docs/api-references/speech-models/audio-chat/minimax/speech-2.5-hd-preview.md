@@ -1,9 +1,7 @@
-# Speech 2.5 Turbo Preview
-
-
+# Speech 2.5 HD Preview
 
 {% hint style="info" %}
-This documentation is valid for the following model:    `minimax/speech-2.5-turbo-preview`
+This documentation is valid for the following model:    `minimax/speech-2.5-hd-preview`
 {% endhint %}
 
 ## Model Overview
@@ -16,21 +14,18 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="speech-2-5-turbo-preview" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-5-turbo-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-turbo-preview.json)
+{% openapi-operation spec="speech-2-5-hd-preview" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-5-hd-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-hd-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example
 
 {% tabs %}
 {% tab title="Python" %}
-
-
 {% code overflow="wrap" %}
 ```python
 import os
 import requests
-
 
 def main():
     url = "https://api.aimlapi.com/v1/tts"
@@ -56,7 +51,6 @@ def main():
 
     print("Audio saved to:", dist)
 
-
 main()
 ```
 {% endcode %}
@@ -71,7 +65,7 @@ import path from "path";
 async function main() {
   const url = "https://api.aimlapi.com/v1/tts";
   const payload = {
-    model: "minimax/speech-2.5-turbo-preview",
+    model: "minimax/speech-2.5-hd-preview",
     text: "Hi! What are you doing today?",
     voice_setting: {
       voice_id: "Wise_Woman"
@@ -109,10 +103,12 @@ main();
 
 <summary>Response</summary>
 
+{% code overflow="wrap" %}
 ```
 Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
 ```
+{% endcode %}
 
 </details>
 
-{% embed url="https://drive.google.com/file/d/1tlBFyFszs--15qS_MWSps8zR46fqQzey/view?usp=sharing" %}
+{% embed url="https://drive.google.com/file/d/1y1mFt6P-PTHRUW2Rzxkc2TRXR27XP9Gd/view?usp=sharing" %}
