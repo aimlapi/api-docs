@@ -1,14 +1,14 @@
 [
   {
-    "name": "minimax/speech-2.5-turbo-preview",
-    "alias": "speech-2.5-turbo-preview",
-    "category": "speech-models",
-    "vendor": "MiniMax"
+    "name": "elevenlabs/v3_alpha",
+    "alias": "v3_alpha",
+    "category": "music-models",
+    "vendor": "elevenlabs"
   },
   {
-    "name": "minimax/speech-2.5-hd-preview",
-    "alias": "speech-2.5-hd-preview",
-    "category": "speech-models",
-    "vendor": "MiniMax"
+    "name": "elevenlabs/eleven_music",
+    "alias": "eleven_music",
+    "category": "music-models",
+    "vendor": "elevenlabs"
   }
 ]
