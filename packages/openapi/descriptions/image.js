@@ -70,6 +70,21 @@ export default {
   foreground_ratio: {
     desc: `Ratio of the foreground image to the original image.`,
   },
+  subject_detection: {
+    desc: `Specifies which subjects to detect and process. Options: 'All' (detect all subjects), 'Foreground' (detect only foreground subjects), 'Background' (detect background subjects).`,
+  },
+  face_enhancement: {
+    desc: `Whether to enhance faces in the image. When true, the model applies face-specific improvements.`,
+  },
+  face_enhancement_creativity: {
+    desc: `Level of creativity for face enhancement (0-1). Higher values allow more creative, less conservative changes.`,
+  },
+  face_enhancement_strength: {
+    desc: `How sharp enhanced faces are relative to background (0-1). Lower values blend changes subtly; higher values make faces more pronounced.`,
+  },
+  source_id: {
+    desc: `Unique identifier for the source image.`,
+  },
   mc_resolution: {
     desc: `Resolution of the marching cubes. Above 512 is not recommended.`,
   },
