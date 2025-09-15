@@ -1,14 +1,14 @@
 [
   {
-    "name": "elevenlabs/v3_alpha",
-    "alias": "v3_alpha",
-    "category": "music-models",
-    "vendor": "elevenlabs"
+    "name": "microsoft/vibevoice-1.5b",
+    "alias": "vibevoice-1.5b",
+    "category": "speech-models",
+    "vendor": "Microsoft"
   },
   {
-    "name": "elevenlabs/eleven_music",
-    "alias": "eleven_music",
-    "category": "music-models",
-    "vendor": "elevenlabs"
+    "name": "microsoft/vibevoice-7b",
+    "alias": "vibevoice-7b",
+    "category": "speech-models",
+    "vendor": "Microsoft"
   }
 ]
