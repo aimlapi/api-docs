@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # eleven\_music
 
 {% hint style="info" %}
@@ -58,6 +53,106 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## Quick Code Example
+
+Here is an example of generation an audio file based on a prompt using this music model.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import time
+import requests
+
+# Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
+aimlapi_key = '<YOUR_AIMLAPI_KEY>'
+
+# Creating and sending an audio generation task to the server (returns a generation ID)
+def generate_audio():
+    url = "https://api.aimlapi.com/v2/generate/audio"
+    payload = {
+        "model": "elevenlabs/eleven_music",
+        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "music_length_ms": 20000,
+    }
+    headers = {"Authorization": f"Bearer {aimlapi_key}", "Content-Type": "application/json"}
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        print("Generation: ", response_data)
+        return response_data
+
+
+# Requesting the result of the generation task from the server using the generation_id:
+def retrieve_audio(gen_id):
+    url = "https://api.aimlapi.com/v2/generate/audio"
+    params = {
+        "generation_id": gen_id,
+    }
+    headers = {"Authorization": f"Bearer {aimlapi_key}", "Content-Type": "application/json"}
+    response = requests.get(url, params=params, headers=headers)
+    return response.json()
+    
+# This is the main function of the program. From here, we sequentially call the audio generation and then repeatedly request the result from the server every 10 seconds:
+def main():
+    generation_response = generate_audio()
+    gen_id = generation_response.get("id")
+        
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 600
+        while time.time() - start_time < timeout:
+            response_data = retrieve_audio(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+            if status == "generating" or status == "queued" or status == "waiting":
+                print("Still waiting... Checking again in 10 seconds.")
+                time.sleep(10)
+            else:
+                print("Generation complete:/n", response_data)
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None    
+
+
+if __name__ == "__main__":
+    main()
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Generation: {'status': 'queued', 'id': '60ac7c34-3224-4b14-8e7d-0aa0db708325:elevenlabs/eleven_music'}
+Still waiting... Checking again in 10 seconds.
+Still waiting... Checking again in 10 seconds.
+Generation complete:/n {'id': '60ac7c34-3224-4b14-8e7d-0aa0db708325:elevenlabs/eleven_music', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/generations/hippopotamus/1757963033314-8ca7729d-b78c-4d4c-9ef9-89b2fb3d07e8.mp3'}}
+```
+{% endcode %}
+
+</details>
+
+Listen to the track we generated:
+
+{% embed url="https://drive.google.com/file/d/1qwu_K_iGtTLdlR_mrZkoSjQ040Q4Nqng/view?usp=sharing" %}
+"`lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s"`
+{% endembed %}
+
 ## API Schemas
 
 ### Generate a music sample
@@ -75,49 +170,3 @@ After sending a request for music generation, this task is added to the queue. B
 {% openapi-operation spec="eleven-music-fetch" path="/v2/generate/audio" method="get" %}
 [OpenAPI eleven-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/elevenlabs/eleven_music-pair.json)
 {% endopenapi-operation %}
-
-## Quick Code Example
-
-Here is an example of generation an audio file based on a prompt using this music model.
-
-{% tabs %}
-{% tab title="Python" %}
-{% code overflow="wrap" %}
-```python
-import requests
-
-def main():
-    url = "https://api.aimlapi.com/v2/generate/audio"
-    payload = {
-        "model": "elevenlabs/eleven_music",
-        "prompt": "lo-fi pop hip-hop ambient music",
-    }
-    headers = {
-        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>", 
-        "Content-Type": "application/json"
-    }
-
-    response = requests.post(url, json=payload, headers=headers)
-    print(response.json())
-
-if __name__ == "__main__":
-    main()
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-<details>
-
-<summary>Response</summary>
-
-{% code overflow="wrap" %}
-```json5
-```
-{% endcode %}
-
-</details>
-
-Listen to the track we generated:
-

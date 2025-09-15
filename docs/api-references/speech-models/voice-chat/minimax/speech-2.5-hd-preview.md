@@ -4,19 +4,11 @@
 This documentation is valid for the following model:    `minimax/speech-2.5-hd-preview`
 {% endhint %}
 
-## Model Overview
-
 A high-definition text-to-speech model with enhanced multilingual expressiveness, more precise voice replication, and expanded support for 40 languages.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
-
-## API Schema
-
-{% openapi-operation spec="speech-2-5-hd-preview" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-5-hd-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-hd-preview.json)
-{% endopenapi-operation %}
 
 ## Code Example
 
@@ -112,3 +104,9 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
 </details>
 
 {% embed url="https://drive.google.com/file/d/1y1mFt6P-PTHRUW2Rzxkc2TRXR27XP9Gd/view?usp=sharing" %}
+
+## API Schema
+
+{% openapi-operation spec="speech-2-5-hd-preview" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-5-hd-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-hd-preview.json)
+{% endopenapi-operation %}

@@ -12,26 +12,11 @@ Google’s cutting-edge AI model designed to generate highly realistic and cinem
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find two corresponding API schemas and examples for both endpoint calls.
-
-</details>
-
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 40-50 seconds for a 5-second video.
 {% endhint %}
 
@@ -57,8 +42,7 @@ def generate_video():
         "model": "veo2",
         "prompt": '''
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-'''
-    }
+''' }
  
     response = requests.post(url, json=data, headers=headers)
     
@@ -66,7 +50,6 @@ A menacing evil dragon appears in a distance above the tallest mountain, then ru
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
         return response_data
     
 
@@ -83,9 +66,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -293,6 +274,11 @@ Processing complete:
 <div align="left"><figure><img src="../../../.gitbook/assets/veo2_dragon_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain,</code> <br><code>then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
 
 ## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 ### Create a video generation task and send it to the server
 

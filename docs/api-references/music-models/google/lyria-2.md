@@ -53,31 +53,13 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schemas
-
-### Generate a music sample
-
-This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
-
-{% openapi-operation spec="lyria2" path="/v2/generate/audio" method="post" %}
-[OpenAPI lyria2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
-
-{% openapi-operation spec="lyria2-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI lyria2-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2-pair.json)
-{% endopenapi-operation %}
-
 ## Quick Code Example
 
 Here is an example of generation an audio file based on a prompt using the music model **Lyria 2**.
 
 <details>
 
-<summary>Step-by-Step Explanation</summary>
+<summary>How it works</summary>
 
 As an example, we will generate a song using the new Google's model **Lyria 2**. As you can verify in its API Schemas above, this model accepts a prompt as input—extracting information about its vocals and instruments for use in the generation process.
 
@@ -187,7 +169,6 @@ def main():
                 break
         
             status = response_data.get("status")
-
             if status == "generating" or status == "queued" or status == "waiting":
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
@@ -198,10 +179,8 @@ def main():
         print("Timeout reached. Stopping.")
         return None    
 
-
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -324,3 +303,21 @@ Listen to the track we generated:
 {% embed url="https://drive.google.com/file/d/1E1dZrg_oU20JuQ6EdLPJGfCUYCppZuxK/view" %}
 `"Majestic orchestral film score recorded in a top-tier London studio. A full-scale symphony orchestra delivers sweeping, cinematic music with rich emotional depth. The composition features soaring themes, dynamic contrasts, and complex harmonies. Expect powerful percussion, expressive strings, and prominent French horns and timpani. The arrangement emphasizes a dramatic narrative arc with intricate orchestrations and a profound, awe-inspiring atmosphere."`
 {% endembed %}
+
+## API Schemas
+
+### Generate a music sample
+
+This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
+
+{% openapi-operation spec="lyria2" path="/v2/generate/audio" method="post" %}
+[OpenAPI lyria2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
+
+{% openapi-operation spec="lyria2-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI lyria2-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2-pair.json)
+{% endopenapi-operation %}

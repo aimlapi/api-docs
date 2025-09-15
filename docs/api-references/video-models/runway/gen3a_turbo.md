@@ -10,110 +10,17 @@ This documentation is valid for the following list of our models:
 * `gen3a_turbo`
 {% endhint %}
 
-## Overview
-
 An advanced AI model designed for converting images into high-quality videos. It allows users to generate dynamic video content with smooth motion and detailed textures from still images or text prompts, significantly enhancing creative workflows in multimedia production.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
+## Full Example: Generating and Retrieving the Video From the Server
 
 <details>
 
-<summary>Step-by-Step Instructions</summary>
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find two corresponding API schemas and an example.
-
-</details>
-
-## API Schemas
-
-### Video Generation
-
-You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between `0.5` and `2`.
-
-{% openapi-operation spec="runway-gen3a-turbo" path="/v2/generate/video/runway/generation" method="post" %}
-[OpenAPI runway-gen3a-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
-[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
-{% endopenapi-operation %}
-
-## Example
-
-{% hint style="info" %}
-Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running the code.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Python" %}
-{% code overflow="wrap" %}
-```python
-import requests
-
-
-def main():
-    url = "https://api.aimlapi.com/v2/generate/video/runway/generation"
-    payload = {
-        "model": "gen3a_turbo",
-        "prompt": "A jellyfish in the ocean",
-        "ratio": "16:9",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
-    }
-    headers = {"Authorization": "Bearer <YOUR_AIMLAPI_KEY>", "Content-Type": "application/json"}
-
-    response = requests.post(url, json=payload, headers=headers)
-    print("Generation:", response.json())
-
-
-if __name__ == "__main__":
-    main()
-
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="JavaScript" %}
-{% code overflow="wrap" %}
-```javascript
-const main = async () => {
-  const response = await fetch('https://api.aimlapi.com/v2/generate/video/runway/generation', {
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'gen3a_turbo',
-      prompt: 'A jellyfish in the ocean',
-      ratio: '16:9',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
-    }),
-  }).then((res) => res.json());
-
-  console.log('Generation:', response);
-};
-
-main()
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-## Full Example: Generating and Retrieving the Video From the Server
+<summary>How it works</summary>
 
 Let’s take a beautiful but somewhat barren mountain landscape:
 
@@ -129,6 +36,10 @@ We combine both methods above in one program: first it sends a video generation 
 Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your [API Key management page](https://aimlapi.com/app/keys/) — in **both** places in the code!
 {% endhint %}
 
+</details>
+
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import time
@@ -140,8 +51,6 @@ def generate_video():
     payload = {
         "model": "gen3a_turbo",
         "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming",
-        
-        
         "ratio": "16:9",
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Liebener_Spitze_SW.JPG/1280px-Liebener_Spitze_SW.JPG",
     }
@@ -199,12 +108,12 @@ def main():
         print("Timeout reached. Stopping.")
         return None    
 
-
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -230,3 +139,29 @@ The following video was generated by running the code example above. Processing 
 You may also check out the [original video in 1280×720 resolution](https://drive.google.com/file/d/1vDMftEwlfspfHPbDIpc2FhuirrsyC9B-/view?usp=sharing).
 
 <div align="left"><figure><img src="../../../.gitbook/assets/run3a_turbo_preview.gif" alt=""><figcaption><p>"What... the hell are you?" (c)</p></figcaption></figure></div>
+
+## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+
+Below, you can find two corresponding API schemas and an example.
+
+### Video Generation
+
+You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between `0.5` and `2`.
+
+{% openapi-operation spec="runway-gen3a-turbo" path="/v2/generate/video/runway/generation" method="post" %}
+[OpenAPI runway-gen3a-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
+[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
+{% endopenapi-operation %}

@@ -12,26 +12,11 @@ A model transforms static images into dynamic video clips.
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find both corresponding API schemas.
-
-</details>
-
 ## Full Example: Generating and Retrieving the Video From the Server
 
 We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 5 minutes for a 5-second video.
 {% endhint %}
 
@@ -45,7 +30,6 @@ import time
 # replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
 api_key = "<YOUR_AIMLAPI_KEY>"
 base_url = "https://api.aimlapi.com/v2"
-
 
 # Creating and sending a video generation task to the server
 def generate_video():
@@ -85,16 +69,14 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
      # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
     # Trying to retrieve the video from the server every 10 sec
     if gen_id:
@@ -335,6 +317,11 @@ Processing complete:/n {'id': '0ebebc75-7c09-404b-ac36-345ef346a0ac:kling-video/
 </details>
 
 ## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 ### Create a video generation task and send it to the server
 

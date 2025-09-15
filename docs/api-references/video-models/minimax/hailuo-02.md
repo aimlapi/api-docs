@@ -6,58 +6,22 @@ This documentation is valid for the following list of our models:
 * `minimax/hailuo-02`
 {% endhint %}
 
-## Model Overview
-
 Compared to earlier versions, this model brings enhanced physics, more natural camera movement, and better alignment with prompts. It currently supports 10-second clips at 768p, with native 1080p coming soon.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find two corresponding API schemas and an example with both endpoint calls.
-
-</details>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-{% openapi-operation spec="hailuo-02" path="/v2/generate/video/minimax/generation" method="post" %}
-[OpenAPI hailuo-02](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/hailuo-02.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi src="../MiniMax/video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-live2d-pair.json](../MiniMax/video-01-live2d-pair.json)
-{% endopenapi %}
-
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 4-5 minutes for a 6-second video and 8-9 minutes for a 10-second video.
 {% endhint %}
 
-<details>
-
-<summary>Full code example</summary>
-
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -103,9 +67,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -113,7 +75,7 @@ def main():
     gen_response = generate_video()
     print(gen_response)
     gen_id = gen_response.get("generation_id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
     # Trying to retrieve the video from the server every 10 sec
     if gen_id:
@@ -145,8 +107,8 @@ if __name__ == "__main__":
     main()
 ```
 {% endcode %}
-
-</details>
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -222,3 +184,27 @@ Processing complete:/n {'id': '282052359471184', 'status': 'completed', 'video':
 <figure><img src="../../../.gitbook/assets/minimax-hailuo-02-preview.gif" alt=""><figcaption></figcaption></figure>
 
 </details>
+
+## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
+
+### Create a video generation task and send it to the server
+
+{% openapi-operation spec="hailuo-02" path="/v2/generate/video/minimax/generation" method="post" %}
+[OpenAPI hailuo-02](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/hailuo-02.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi src="../MiniMax/video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
+[video-01-live2d-pair.json](../MiniMax/video-01-live2d-pair.json)
+{% endopenapi %}

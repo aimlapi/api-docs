@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `elevenlabs/v3_alpha`
 {% endhint %}
 
-## Model Overview
-
 The model supports a wide range of output formats and quality levels, text normalization, and over 70 languages.
 
 ## How to Make a Call
@@ -53,7 +51,7 @@ Here is an example of generating an audio response to the user input provided in
 {% code overflow="wrap" %}
 ```python
 import os
-import requests
+import reques
 
 
 def main():

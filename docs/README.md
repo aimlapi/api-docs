@@ -89,6 +89,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**Anthropic**</mark>:    [Text/Chat](api-references/text-models-llm/Anthropic/)    [Embedding](api-references/embedding-models/Anthropic/)&#x20;
 
+**Assembly AI:**    [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
+
 **BAAI**:    [Embedding](api-references/embedding-models/BAAI/)
 
 **ByteDance**:   [Image](api-references/video-models/bytedance/)   [Video](api-references/image-models/bytedance/)
@@ -99,7 +101,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Deepgram**:    [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/)    [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)
 
-<mark style="background-color:green;">**ElevenLabs**</mark>**:**    [Text-to-Speech](api-references/speech-models/text-to-speech/elevenlabs/)
+<mark style="background-color:green;">**ElevenLabs**</mark>**:**    [Text-to-Speech](api-references/speech-models/text-to-speech/elevenlabs/)   [Voice Chat](api-references/speech-models/voice-chat/elevenlabs/)    [Music](api-references/music-models/elevenlabs/)&#x20;
 
 <mark style="background-color:green;">**Flux**</mark>:    [Image](api-references/image-models/flux/)
 

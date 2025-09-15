@@ -21,7 +21,7 @@ This video-to-video model lets you animate characters using reference performanc
 :black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### &#x20;:digit\_two:  Copy the code example
+### :digit\_two:  Copy the code example
 
 At the bottom of this page, you'll find [a code example](act_two.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
@@ -41,7 +41,7 @@ The code example combines both endpoint calls.
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `image_url` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](act_two.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
+Only `character` and `reference` are required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](act_two.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -52,6 +52,8 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+
 
 ## API Schemas
 
@@ -74,18 +76,26 @@ If the video generation task status is `complete`, the response will include the
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
+<details>
+
+<summary>How it works</summary>
+
 As the character reference, we will use a scan of a famous Leonardo da Vinci painting. For the motion reference, we will use a video of a cheerful woman dancing, generated with the [kling-video/v1.6/pro/text-to-video](../kling-ai/v1.6-pro-text-to-video.md) model.
 
 | Character reference image                                                                                       | Motion reference video                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | <div><figure><img src="../../../.gitbook/assets/mona-lisa.jpeg" alt=""><figcaption></figcaption></figure></div> | <p></p><div align="left"><figure><img src="../../../.gitbook/assets/runway-act-two-preview.gif" alt=""><figcaption></figcaption></figure></div> |
 
-We combine both POST and GET methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.&#x20;
+We combine both POST and GET methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.
 
 {% hint style="warning" %}
 Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your [API Key management page](https://aimlapi.com/app/keys/) — in **both** places in the code!
 {% endhint %}
 
+</details>
+
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -94,7 +104,6 @@ import time
 # replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
 api_key = "<YOUR_AIMLAPI_KEY>"
 base_url = "https://api.aimlapi.com/v2"
-
 
 # Creating and sending a video generation task to the server
 def generate_video():
@@ -143,9 +152,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -157,7 +164,6 @@ def main():
     # Trying to retrieve the video from the server every 10 sec
     if gen_id:
         start_time = time.time()
-
         timeout = 1800
         while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
@@ -184,6 +190,8 @@ if __name__ == "__main__":
     main()
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 

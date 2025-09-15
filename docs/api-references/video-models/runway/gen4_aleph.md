@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `runway/gen4_aleph`
 {% endhint %}
 
-## Overview
-
 This is a video-to-video model capable of either modifying the input video or generating the next shot in a story that begins in the input and continues based on your prompt. You can define camera angles and movements, alter the plot, change character appearances, or adjust the environment.
 
 ## How to Make a Call
@@ -21,7 +19,7 @@ This is a video-to-video model capable of either modifying the input video or ge
 :black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### &#x20;:digit\_two:  Copy the code example
+### :digit\_two:  Copy the code example
 
 At the bottom of this page, you'll find [a code example](gen4_aleph.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
@@ -41,7 +39,7 @@ The code example combines both endpoint calls.
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `image_url` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gen4_aleph.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
+Only `video_url` and `prompt` are required parameters for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gen4_aleph.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -53,26 +51,11 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schemas
-
-### Video Generation
-
-You can generate a video using this API. In the basic setup, you need only a video URL and a prompt.
-
-{% openapi-operation spec="runway-gen4-aleph" path="/v2/generate/video/runway/generation" method="post" %}
-[OpenAPI runway-gen4-aleph](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_aleph.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
-[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
-{% endopenapi-operation %}
-
 ## Full Example: Generating and Retrieving the Video From the Server
+
+<details>
+
+<summary>How it works</summary>
 
 Let’s take a video of our running raccoon and ask Aleph to add a small fairy riding on its back. Here’s the prompt we can use:
 
@@ -81,9 +64,13 @@ _`"`_`Add a small fairy as a rider on the raccoon’s back. She must have a blac
 We combine both methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.&#x20;
 
 {% hint style="warning" %}
-Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your [API Key management page](https://aimlapi.com/app/keys/) — in **both** places in the code!
+Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your [API Key management page](https://aimlapi.com/app/keys/)!
 {% endhint %}
 
+</details>
+
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -132,9 +119,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -173,6 +158,8 @@ if __name__ == "__main__":
     main()
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 <details>
 
@@ -234,3 +221,22 @@ Processing complete:/n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 
 **Low-res GIF preview**:
 
 <table data-full-width="false"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи.gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+
+## API Schemas
+
+### Video Generation
+
+You can generate a video using this API. In the basic setup, you need only a video URL and a prompt.
+
+{% openapi-operation spec="runway-gen4-aleph" path="/v2/generate/video/runway/generation" method="post" %}
+[OpenAPI runway-gen4-aleph](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_aleph.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
+[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
+{% endopenapi-operation %}

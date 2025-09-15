@@ -6,37 +6,17 @@ This documentation is valid for the following list of our models:
 * `veo2/image-to-video`
 {% endhint %}
 
-An advanced multimodal (image + text) AI model that transforms static images into high-quality, dynamic video content. It builds upon the success of Google's [Veo2 text-to-video](veo2-text-to-video.md) model, offering unprecedented control and realism in video generation from still images.
-
-Key Features:
-
-* Faithful content preservation from source images.
-* Intuitive motion generation with physics-aware movement.
+An advanced multimodal (image + text) AI model that transforms static images into high-quality, dynamic video content. It builds upon the success of Google's [Veo2 text-to-video](veo2-text-to-video.md) model, offering unprecedented control and realism in video generation from still images, faithful content preservation from source images, and intuitive motion generation with physics-aware movement.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find two corresponding API schemas and examples for both endpoint calls.
-
-</details>
-
 ## Full Example: Generating and Retrieving the Video From the Server
 
 We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 40-50 seconds for a 5-second video.
 {% endhint %}
 
@@ -72,7 +52,6 @@ def generate_video():
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
         return response_data
     
 
@@ -99,7 +78,7 @@ def main():
      # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
     # Trying to retrieve the video from the server every 10 sec
     if gen_id:
@@ -284,6 +263,11 @@ Processing complete:/n {'id': '812dbc37-f15a-46a4-a058-8477bd243f5a:veo2/image-t
 <div align="left"><figure><img src="../../../.gitbook/assets/veo2-image-to-video-monalisa-preview.gif" alt=""><figcaption></figcaption></figure></div>
 
 ## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
 ### Create a video generation task and send it to the server
 

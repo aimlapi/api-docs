@@ -8,7 +8,7 @@ Depending on the model, you may have access to settings for bitrate, output audi
 
 ## All Available Voice Chat Models
 
-<table><thead><tr><th width="284.4000244140625">Model ID</th><th width="132.79998779296875">Developer</th><th width="112">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="minimax/speech-2.5-turbo-preview.md">minimax/speech-2.5-turbo-preview</a></td><td>MiniMax</td><td></td><td><a href="https://aimlapi.com/models/minimax-speech-2-5-turbo">MiniMax Speech 2.5 Turbo</a></td></tr><tr><td><a href="minimax/speech-2.5-hd-preview.md">minimax/speech-2.5-hd-preview</a></td><td>MiniMax</td><td></td><td><a href="https://aimlapi.com/models/minimax-speech-2-5-hd">MiniMax Speech 2.5 HD</a></td></tr></tbody></table>
+<table><thead><tr><th width="284.4000244140625">Model ID</th><th width="132.79998779296875">Developer</th><th width="112">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="elevenlabs/v3_alpha.md">elevenlabs/v3_alpha</a></td><td>ElevenLabs</td><td></td><td><a href="https://aimlapi.com/models/eleven-v3-alpha">Eleven v3 Alpha</a></td></tr><tr><td><a href="minimax/speech-2.5-turbo-preview.md">minimax/speech-2.5-turbo-preview</a></td><td>MiniMax</td><td></td><td><a href="https://aimlapi.com/models/minimax-speech-2-5-turbo">MiniMax Speech 2.5 Turbo</a></td></tr><tr><td><a href="minimax/speech-2.5-hd-preview.md">minimax/speech-2.5-hd-preview</a></td><td>MiniMax</td><td></td><td><a href="https://aimlapi.com/models/minimax-speech-2-5-hd">MiniMax Speech 2.5 HD</a></td></tr></tbody></table>
 
 ***
 
