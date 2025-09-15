@@ -20,7 +20,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 [OpenAPI speech-2-5-turbo-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-turbo-preview.json)
 {% endopenapi-operation %}
 
-## Code Example
+## Quick Code Example
+
+Here is an example of generating an audio response to the user input provided in the `text` parameter.
 
 {% tabs %}
 {% tab title="Python" %}

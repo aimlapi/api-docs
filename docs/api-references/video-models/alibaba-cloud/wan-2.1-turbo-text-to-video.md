@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `alibaba/wan2.1-t2v-turbo`
 {% endhint %}
 
-## Overview
-
 A text-to-video (T2V) model that generates 480p and 720p silent video at \~30 FPS[^1].
 
 ## Setup your API Key
@@ -29,25 +27,6 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 </details>
 
-## API Schemas
-
-### Video Generation
-
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="wan2-1-t2v-turbo" path="/v2/generate/video/alibaba/generation" method="post" %}
-[OpenAPI wan2-1-t2v-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo.json)
-{% endopenapi-operation %}
-
-### Fetch the video
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
-[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
-{% endopenapi-operation %}
-
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
@@ -63,7 +42,6 @@ import time
 aimlapi_key = "<YOUR_AIMLAPI_KEY>"
 base_url = "https://api.aimlapi.com/v2"
 
-
 # Creating and sending a video generation task to the server
 def generate_video():
     url = f"{base_url}/generate/video/alibaba/generation"
@@ -75,8 +53,7 @@ def generate_video():
         "model": "alibaba/wan2.1-t2v-turbo",
         "prompt": '''
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-'''
-    }
+''' }
  
     response = requests.post(url, json=data, headers=headers)
     
@@ -84,9 +61,7 @@ A menacing evil dragon appears in a distance above the tallest mountain, then ru
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
         return response_data
-    
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
@@ -101,10 +76,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
-
 
 def main():
      # Running video generation and getting a task id
@@ -263,7 +235,6 @@ function main() {
                 }
             });
         };
-
         checkStatus();
     });
 }
@@ -312,5 +283,24 @@ Processing complete:/n {'id': '4f516080-dd10-4e3d-ba3d-97bb37b5323f', 'status': 
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/wan-v2.1-t2v-turbo-dragon-preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain,</code> <br><code>then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
+
+## API Schemas
+
+### Video Generation
+
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="wan2-1-t2v-turbo" path="/v2/generate/video/alibaba/generation" method="post" %}
+[OpenAPI wan2-1-t2v-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo.json)
+{% endopenapi-operation %}
+
+### Fetch the video
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
+[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
+{% endopenapi-operation %}
 
 [^1]: Frame per second

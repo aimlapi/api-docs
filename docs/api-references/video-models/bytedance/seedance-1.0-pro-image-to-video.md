@@ -24,8 +24,6 @@ This documentation is valid for the following list of our models:
 * `bytedance/seedance-1-0-pro-i2v`
 {% endhint %}
 
-## Model Overview
-
 Generate professional video content (1080p) from a reference image and text prompt in a minute — with the option to keep the camera fixed throughout the entire clip.
 
 ## Setup your API Key
@@ -46,26 +44,6 @@ Generating a video using this model involves sequentially calling two endpoints:
 Below, you can find both corresponding API schemas.
 
 </details>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="seedance-1-0-pro-image-to-video-v3" path="/v2/generate/video/bytedance/generation" method="post" %}
-[OpenAPI seedance-1-0-pro-image-to-video-v3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-pro-image-to-video.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="bytedance-video-fetch" path="/v2/generate/video/bytedance/generation" method="get" %}
-[OpenAPI bytedance-video-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-lite-text-to-video-pair.json)
-{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -318,3 +296,23 @@ Processing complete:/n {'id': 'cgt-20250721143112-kkm5n', 'status': 'completed',
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/seedance-1-0-pro-i2v_preview.gif" alt=""><figcaption><p><code>"Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure></div>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="seedance-1-0-pro-image-to-video-v3" path="/v2/generate/video/bytedance/generation" method="post" %}
+[OpenAPI seedance-1-0-pro-image-to-video-v3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-pro-image-to-video.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="bytedance-video-fetch" path="/v2/generate/video/bytedance/generation" method="get" %}
+[OpenAPI bytedance-video-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-lite-text-to-video-pair.json)
+{% endopenapi-operation %}
