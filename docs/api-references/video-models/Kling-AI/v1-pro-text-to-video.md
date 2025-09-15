@@ -6,9 +6,7 @@ This documentation is valid for the following list of our models:
 * `kling-video/v1/pro/text-to-video`
 {% endhint %}
 
-## Model Overview
-
-This model converts textual descriptions into high-quality video content. Provides advanced camera control options, including more sophisticated movements and stabilization. Maximum Video Length: 10 s.
+This model converts textual descriptions into high-quality video content. Provides advanced camera control options, including more sophisticated movements and stabilization.&#x20;
 
 ## Setup your API Key
 

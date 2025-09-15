@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `kling-video/v1/standard/text-to-video`
 {% endhint %}
 
-## Model Overview
-
 This model converts textual descriptions into high-quality video content. Maximum Video Length: 5 s.
 
 ## Setup your API Key

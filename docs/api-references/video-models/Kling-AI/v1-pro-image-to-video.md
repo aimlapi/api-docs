@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `kling-video/v1/pro/image-to-video`
 {% endhint %}
 
-## Model Overview
-
 This model transforms static images into dynamic video clips. Offers more advanced camera controls than v1 Standard model, including options for tilt, pan, zoom, and roll movements. Results in richer details and more stable camera movements, enhancing the overall visual quality of the generated videos. Produces significantly sharper and more detailed videos. Enhanced animations make elements like water flow and character movements appear more natural and engaging.
 
 ## Setup your API Key

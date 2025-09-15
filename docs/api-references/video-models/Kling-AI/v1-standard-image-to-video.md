@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `kling-video/v1/standard/image-to-video`
 {% endhint %}
 
-## Model Overview
-
 A model transforms static images into dynamic video clips.
 
 ## Setup your API Key
@@ -28,26 +26,6 @@ Generating a video using this model involves sequentially calling two endpoints:
 Below, you can find both corresponding API schemas.
 
 </details>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-{% hint style="warning" %}
-The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
-{% endhint %}
-
-{% openapi src="v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
-[v1-standard-image-to-video.json](v1-standard-image-to-video.json)
-{% endopenapi %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. &#x20;
-
-{% openapi src="v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1-standard-image-to-video-pair.json](v1-standard-image-to-video-pair.json)
-{% endopenapi %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -355,3 +333,23 @@ Processing complete:/n {'id': '0ebebc75-7c09-404b-ac36-345ef346a0ac:kling-video/
 <figure><img src="../../../.gitbook/assets/kling-video-v1-standard-image-to-video_preview.gif" alt=""><figcaption></figcaption></figure>
 
 </details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+{% hint style="warning" %}
+The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
+{% endhint %}
+
+{% openapi src="v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
+[v1-standard-image-to-video.json](v1-standard-image-to-video.json)
+{% endopenapi %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. &#x20;
+
+{% openapi src="v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
+[v1-standard-image-to-video-pair.json](v1-standard-image-to-video-pair.json)
+{% endopenapi %}
