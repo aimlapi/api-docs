@@ -1,12 +1,10 @@
-# vibevoice-1.5b
-
-
+# vibevoice-7b
 
 {% hint style="info" %}
-This documentation is valid for the following model:   `microsoft/vibevoice-1.5b`
+This documentation is valid for the following model:   `microsoft/vibevoice-7b`
 {% endhint %}
 
-Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content.
+Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content. The 7-billion-parameter version of the model.&#x20;
 
 ## Setup your API Key
 
@@ -27,7 +25,7 @@ def main():
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     }
     payload = { 
-        "model": "microsoft/vibevoice-1.5b",
+        "model": "microsoft/vibevoice-7b",
         "script": "Speaker 1: Wow, whats happening, Alice? \nSpeaker 2: Oh, just the usual… a full-blown AI revolution. Nothing to worry about",
         "speakers": [
             {   "preset": "Frank [EN]"   },
@@ -77,18 +75,14 @@ if __name__ == "__main__":
 
 ```
 Audio saved to: audio.wav
-Duration: 8.4 seconds
+Duration: 7.866666666666666 seconds
 Sample rate: 24000 Hz
 ```
 
 </details>
 
-Listen to the dialogue we generated:
-
-{% embed url="https://drive.google.com/file/d/12Cfolhx2jx7QWWfUTNiuXYhPBBtqvdwh/view" %}
-
 ## API Schema
 
-{% openapi-operation spec="vibevoice-1-5b" path="/v1/tts" method="post" %}
-[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-1.5b.json)
+{% openapi-operation spec="vibevoice-7b" path="/v1/tts" method="post" %}
+[OpenAPI vibevoice-7b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-7b.json)
 {% endopenapi-operation %}
