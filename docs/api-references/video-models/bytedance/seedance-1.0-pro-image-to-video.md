@@ -99,9 +99,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():

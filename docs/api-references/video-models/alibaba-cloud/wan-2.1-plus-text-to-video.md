@@ -63,7 +63,6 @@ A menacing evil dragon appears in a distance above the tallest mountain, then ru
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
         return response_data
     
 
@@ -80,7 +79,6 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
 
 

@@ -48,7 +48,7 @@ Below, you can find both corresponding API schemas.
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 50-60 seconds for a 5-second video.
 {% endhint %}
 
@@ -98,9 +98,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -108,7 +106,7 @@ def main():
     # Generate video
     gen_response = generate_video()
     gen_id = gen_response.get("id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
     # Try to retrieve the video from the server every 10 sec
     if gen_id:

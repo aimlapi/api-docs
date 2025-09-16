@@ -222,6 +222,8 @@
     * [ElevenLabs](api-references/speech-models/text-to-speech/elevenlabs/README.md)
       * [eleven\_multilingual\_v2](api-references/speech-models/text-to-speech/elevenlabs/eleven_multilingual_v2.md)
       * [eleven\_turbo\_v2\_5](api-references/speech-models/text-to-speech/elevenlabs/eleven_turbo_v2_5.md)
+    * [Microsoft](api-references/speech-models/text-to-speech/microsoft/README.md)
+      * [vibevoice-1.5b](api-references/speech-models/text-to-speech/microsoft/vibevoice-1.5b.md)
   * [Voice Chat](api-references/speech-models/voice-chat/README.md)
     * [ElevenLabs](api-references/speech-models/voice-chat/elevenlabs/README.md)
       * [v3\_alpha](api-references/speech-models/voice-chat/elevenlabs/v3_alpha.md)

@@ -1,10 +1,12 @@
-# eleven\_multilingual\_v2
+# vibevoice-1.5b
+
+
 
 {% hint style="info" %}
-This documentation is valid for the following model:  `elevenlabs/eleven_multilingual_v2`
+This documentation is valid for the following model:   `microsoft/vibevoice-1.5b`
 {% endhint %}
 
-A high-quality text-to-speech model offering natural-sounding intonation, support for **29** languages, and a broad selection of built-in voices. A wide range of output audio formats and quality settings is also available.
+Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content.
 
 ## Setup your API Key
 
@@ -27,13 +29,12 @@ def main():
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     }
     payload = {
-        "model": "elevenlabs/eleven_multilingual_v2",
-        "text": '''
+        "model": "microsoft/vibevoice-1.5b",
+        "script": '''
         Cities of the future promise to radically transform how people live, work, and move. 
         Instead of sprawling layouts, we’ll see vertical structures that integrate residential, work, and public spaces into single, self-sustaining ecosystems. 
         Architecture will adapt to climate conditions, and buildings will be energy-efficient—generating power through solar panels, wind turbines, and even foot traffic.
-    ''',
-        "voice": "Alice"
+    '''
     }
 
     response = requests.post(url, headers=headers, json=payload, stream=True)
@@ -123,10 +124,8 @@ Audio saved to: audio.wav
 
 </details>
 
-{% embed url="https://drive.google.com/file/d/1RNL2QPkOXd9uoNp8q6uJesMLWx9Qa5YA/view?usp=sharing" %}
-
 ## API Schema
 
-{% openapi-operation spec="eleven-multilingual-v2" path="/v1/tts" method="post" %}
-[OpenAPI eleven-multilingual-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_multilingual_v2.json)
+{% openapi-operation spec="vibevoice-1-5b" path="/v1/tts" method="post" %}
+[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-1.5b.json)
 {% endopenapi-operation %}

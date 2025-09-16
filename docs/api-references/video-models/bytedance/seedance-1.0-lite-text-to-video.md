@@ -31,7 +31,7 @@ Below, you can find both corresponding API schemas.
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Generation may take around 40-50 seconds for a 5-second video.
 {% endhint %}
 
