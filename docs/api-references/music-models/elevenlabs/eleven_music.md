@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `elevenlabs/eleven_music`
 {% endhint %}
 
-## Model Overview
-
 An advanced audio generation model designed to create high-quality audio tracks from textual prompts.
 
 ## How to Make a Call

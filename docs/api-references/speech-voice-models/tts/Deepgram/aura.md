@@ -25,12 +25,6 @@ Deepgram Aura is the first text-to-speech (TTS) AI model designed for real-time,
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schema
-
-{% openapi-operation spec="aura-2025-05-28" path="/v1/tts" method="post" %}
-[OpenAPI aura-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/aura.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
 {% tabs %}
@@ -41,7 +35,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ```python
 import os
 import requests
-
 
 def main():
     url = "https://api.aimlapi.com/v1/tts"
@@ -147,3 +140,9 @@ Audio saved to: audio.wav
 </details>
 
 {% embed url="https://drive.google.com/file/d/1DUlxcHSq4iZzDEVG1dbTLGJHMqeMlQpt/view?usp=sharing" %}
+
+## API Schema
+
+{% openapi-operation spec="aura-2025-05-28" path="/v1/tts" method="post" %}
+[OpenAPI aura-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/aura.json)
+{% endopenapi-operation %}

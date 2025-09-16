@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `minimax-music`
 {% endhint %}
 
-## Model Overview
-
 An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.
 
 ## How to Make a Call
@@ -58,24 +56,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
-
-## API Schemas
-
-### Generate a music sample
-
-This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
-
-{% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
-[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
-
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
-{% endopenapi-operation %}
 
 ## Quick Code Example
 
@@ -342,3 +322,21 @@ Generation: {'id': '906aec79-b0af-40c4-adae-15e6c4410e29:minimax-music', 'status
 Listen to the track we generated:
 
 {% embed url="https://drive.google.com/file/d/1itPTKlfuOLCtgw7SycISdPLj6gTftp1t/view" fullWidth="false" %}
+
+## API Schemas
+
+### Generate a music sample
+
+This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
+
+{% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
+[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+
+{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% endopenapi-operation %}

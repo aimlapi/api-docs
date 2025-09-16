@@ -8,31 +8,15 @@ This documentation is valid for the following list of our models:
 * `aai/slam-1`
 {% endhint %}
 
+A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics (English only).&#x20;
+
 {% hint style="success" %}
 This model use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
 {% endhint %}
 
-## Model Overview
-
-A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics (English only).&#x20;
-
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
-
-## API Schema
-
-#### Creating and sending a speech-to-text conversion task to the server
-
-{% openapi-operation spec="slam-1" path="/v1/stt/create" method="post" %}
-[OpenAPI slam-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/AssemblyAI/slam-1.json)
-{% endopenapi-operation %}
-
-#### Requesting the result of the task from the server using the generation\_id
-
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
-{% endopenapi-operation %}
 
 ## Quick Example: Processing a Speech Audio File via URL
 
@@ -428,3 +412,17 @@ Processing complete:/n {
 {% endcode %}
 
 </details>
+
+## API Schema
+
+#### Creating and sending a speech-to-text conversion task to the server
+
+{% openapi-operation spec="slam-1" path="/v1/stt/create" method="post" %}
+[OpenAPI slam-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/AssemblyAI/slam-1.json)
+{% endopenapi-operation %}
+
+#### Requesting the result of the task from the server using the generation\_id
+
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
+{% endopenapi-operation %}

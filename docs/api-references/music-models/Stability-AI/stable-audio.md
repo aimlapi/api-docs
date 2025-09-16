@@ -6,8 +6,6 @@ This documentation is valid for the following list of our models:
 * `stable-audio`
 {% endhint %}
 
-## Model Overview
-
 An advanced audio generation model designed to create high-quality audio tracks from textual prompts.
 
 ## Setup your API Key

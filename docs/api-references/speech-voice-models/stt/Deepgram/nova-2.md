@@ -15,10 +15,6 @@ This documentation is valid for the following list of our models:
 * `#g1_nova-2-voicemail`
 {% endhint %}
 
-{% hint style="success" %}
-Nova-2 models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
-{% endhint %}
-
 ## Model Overview
 
 Nova-2 builds on the advancements of Nova-1 with speech-specific optimizations to its Transformer architecture, refined data curation techniques, and a multi-stage training approach. These improvements result in a lower word error rate (WER) and better entity recognition (including proper nouns and alphanumeric sequences), as well as enhanced punctuation and capitalization.
@@ -36,23 +32,13 @@ Nova-2 offers the following model options:
 * **video**: Optimized for audio sourced from videos.
 * **voicemail**: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
 
+{% hint style="success" %}
+Nova-2 models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
+{% endhint %}
+
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
-
-## API Schema
-
-#### Creating and sending a speech-to-text conversion task to the server
-
-{% openapi-operation spec="nova-2" path="/v1/stt/create" method="post" %}
-[Broken link](broken-reference)
-{% endopenapi-operation %}
-
-#### Requesting the result of the task from the server using the generation\_id
-
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[Broken link](broken-reference)
-{% endopenapi-operation %}
 
 ## Quick Code Examples
 
@@ -239,3 +225,17 @@ Processing complete:
 {% endcode %}
 
 </details>
+
+## API Schema
+
+#### Creating and sending a speech-to-text conversion task to the server
+
+{% openapi-operation spec="nova-2" path="/v1/stt/create" method="post" %}
+[OpenAPI nova-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2.json)
+{% endopenapi-operation %}
+
+#### Requesting the result of the task from the server using the generation\_id
+
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
+{% endopenapi-operation %}

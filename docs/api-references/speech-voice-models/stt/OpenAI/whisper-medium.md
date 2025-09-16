@@ -6,7 +6,7 @@ This documentation is valid for the following list of our models:
 * `#g1_whisper-medium`
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="success" %}
 Note:&#x20;
 
 Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../../../speech-models/speech-to-text/stt-legacy.md).
@@ -33,20 +33,6 @@ Whisper models use per-second billing. The cost of audio transcription is based 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
-
-## API Schema
-
-#### Creating and sending a speech-to-text conversion task to the server
-
-{% openapi-operation spec="whisper-medium-2025-05-28" path="/v1/stt/create" method="post" %}
-[Broken link](broken-reference)
-{% endopenapi-operation %}
-
-#### Requesting the result of the task from the server using the generation\_id
-
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[Broken link](broken-reference)
-{% endopenapi-operation %}
 
 ## Quick Code Examples
 
@@ -232,3 +218,17 @@ Processing complete:
 {% endcode %}
 
 </details>
+
+## API Schema
+
+#### Creating and sending a speech-to-text conversion task to the server
+
+{% openapi-operation spec="whisper-medium-2025-05-28" path="/v1/stt/create" method="post" %}
+[OpenAPI whisper-medium-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/whisper-medium.json)
+{% endopenapi-operation %}
+
+#### Requesting the result of the task from the server using the generation\_id
+
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
+{% endopenapi-operation %}

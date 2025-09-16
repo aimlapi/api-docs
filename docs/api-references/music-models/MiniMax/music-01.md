@@ -6,32 +6,11 @@ This documentation is valid for the following list of our models:
 * `music-01`
 {% endhint %}
 
-## Model Overview
-
 An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
-
-## API Schemas
-
-### Generate a music sample
-
-This endpoint uploads a reference music piece to the server, analyzes it, and returns identifiers for the voice and/or instrumental patterns to use later.
-
-{% openapi src="music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
-[music-01-pair.json](music-01-pair.json)
-{% endopenapi %}
-
-### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
-The generation can be completed in 50-60 seconds or take a bit more.
-
-{% openapi src="music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
-[music-01.json](music-01.json)
-{% endopenapi %}
 
 ## Quick Code Example
 
@@ -263,3 +242,22 @@ Generated audio saved as generated_audio.mp3
 Listen to the track we generated:
 
 {% embed url="https://drive.google.com/file/d/1sKlPIK6kiYrp6__VhKkgGpr65e8qy2PU/view?usp=sharing" %}
+
+## API Schemas
+
+### Generate a music sample
+
+This endpoint uploads a reference music piece to the server, analyzes it, and returns identifiers for the voice and/or instrumental patterns to use later.
+
+{% openapi src="music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
+[music-01-pair.json](music-01-pair.json)
+{% endopenapi %}
+
+### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
+The generation can be completed in 50-60 seconds or take a bit more.
+
+{% openapi src="music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
+[music-01.json](music-01.json)
+{% endopenapi %}

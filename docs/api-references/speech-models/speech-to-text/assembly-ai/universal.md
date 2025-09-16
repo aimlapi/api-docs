@@ -6,13 +6,11 @@ This documentation is valid for the following list of our models:
 * `aai/universal`
 {% endhint %}
 
+A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics, with the broadest language support.
+
 {% hint style="success" %}
 This model use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
 {% endhint %}
-
-## Model Overview
-
-A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics, with the broadest language support.
 
 ## Setup your API Key
 
