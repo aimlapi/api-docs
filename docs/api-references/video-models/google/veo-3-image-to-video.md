@@ -40,7 +40,7 @@ Generation may take around 40-50 seconds for a 8-second video.
 {% code overflow="wrap" %}
 ```python
 import requests
-import timeGeneration
+import time
 
 # replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
 api_key = "<YOUR_AIMLAPI_KEY>"

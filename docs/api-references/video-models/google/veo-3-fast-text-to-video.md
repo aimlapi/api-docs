@@ -42,9 +42,9 @@ This model produces highly detailed and natural-looking videos, so generation ma
 import requests
 import time
 
-base_url = "https://api.aimlapi.com/v2"
 # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
 aimlapi_key = "<YOUR_AIMLAPI_KEY>"
+base_url = "https://api.aimlapi.com/v2"
 
 # Creating and sending a video generation task to the server
 def generate_video():

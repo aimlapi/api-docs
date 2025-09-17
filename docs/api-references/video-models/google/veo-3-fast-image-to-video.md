@@ -31,7 +31,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
 
-{% hint style="warning" %}
+{% hint style="success" %}
 Generation may take around 1 minute for a 8-second video.
 {% endhint %}
 
@@ -40,7 +40,7 @@ Generation may take around 1 minute for a 8-second video.
 {% code overflow="wrap" %}
 ```python
 import requests
-import timeGeneration
+import time
 
 # replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
 api_key = "<YOUR_AIMLAPI_KEY>"
