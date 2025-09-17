@@ -134,5 +134,5 @@ If transparent, the output format needs to support transparency, so it should be
   },
   acceleration: {
     desc: `The speed of the generation. The higher the speed, the faster the generation.`
-  }
+  },
 };
