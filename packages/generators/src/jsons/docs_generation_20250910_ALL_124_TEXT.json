@@ -493,7 +493,7 @@
   },
   {
     "name": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
-    "alias": "Nous-Hermes-2-Mixtral-8x7B-DPO",
+    "alias": "nous-hermes-2",
     "category": "text-models-llm",
     "vendor": "NousResearch"
   },
