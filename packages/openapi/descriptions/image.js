@@ -132,4 +132,7 @@ If transparent, the output format needs to support transparency, so it should be
   sync_mode: {
     desc: `If set to true, the function will wait for the image to be generated and uploaded before returning the response. This will increase the latency of the function but it allows you to get the image directly in the response without going through the CDN.`,
   },
+  acceleration: {
+    desc: `The speed of the generation. The higher the speed, the faster the generation.`
+  },
 };
