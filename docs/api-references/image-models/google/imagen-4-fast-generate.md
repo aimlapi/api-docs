@@ -1,4 +1,4 @@
-# Imagen 4 Fast Generate 001
+# Imagen 4 Fast Generate
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview <a href="#model-overview" id="model-overview"></a>
 
-This model is optimized for speed, offering faster image generation compared to other Imagen 4 variants like [Imagen 4 Generate 001](imagen-4-generate-001.md) (standard) and [Imagen 4 Ultra Generate 001](imagen-4-ultra-generate-001.md) (higher quality, slower).
+This model is optimized for speed, offering faster image generation compared to other Imagen 4 variants like [Imagen 4 Generate 001](imagen-4-generate.md) (standard) and [Imagen 4 Ultra Generate 001](imagen-4-ultra-generate.md) (higher quality, slower).
 
 ## Setup your API Key <a href="#setup-your-api-key" id="setup-your-api-key"></a>
 
