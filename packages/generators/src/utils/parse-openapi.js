@@ -104,6 +104,8 @@ const EXCEPTION_PATH = [
   '/responses',
   '/images/edits',
   '/v1/images/edits',
+  '/openai/deployments/{model}',
+  '/v1/openai/deployments/{model}'
 ];
 
 const parseOpenapi = (openapi, fetchedModels) => {
