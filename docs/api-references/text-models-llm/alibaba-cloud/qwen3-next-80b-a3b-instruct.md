@@ -1,11 +1,10 @@
-# qwen-turbo
+# qwen3-next-80b-a3b-instruct
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>qwen-turbo</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=alibaba/qwen-turbo&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><p><code>alibaba/qwen3-next-80b-a3b-instruct</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=alibaba/qwen3-next-80b-a3b-instruct&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-This model is designed to enhance both the performance and efficiency of AI agents developed on the Alibaba Cloud Model Studio platform. Optimized for speed and precision in generative AI application development. Improves AI agent comprehension and adaptation to enterprise data, especially when integrated with Retrieval-Augmented Generation (RAG) architectures. \
-Large context window (<kbd>1,000,000</kbd> tokens).
+An instruction-tuned chat model optimized for fast, stable replies without reasoning traces, designed for complex tasks in reasoning, coding, knowledge QA, and multilingual use, with strong alignment and formatting.
 
 ## How to Make a Call
 
@@ -20,7 +19,7 @@ Large context window (<kbd>1,000,000</kbd> tokens).
 
 ### &#x20;:digit\_two:  Copy the code example
 
-Below, you'll find [a code example](qwen-turbo.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](qwen3-next-80b-a3b-instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -29,7 +28,7 @@ Below, you'll find [a code example](qwen-turbo.md#code-example) that shows how t
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen-turbo.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen3-next-80b-a3b-instruct.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -43,8 +42,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="qwen-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.json)
+{% openapi-operation spec="qwen3-next-80b-a3b-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen3-next-80b-a3b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-next-80b-a3b-instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -64,13 +63,14 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"qwen-turbo",
+        "model":"alibaba/qwen3-next-80b-a3b-instruct",
         "messages":[
             {
                 "role":"user",
                 "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
+        "enable_thinking": False
     }
 )
 
@@ -92,7 +92,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'qwen-turbo',
+      model: 'alibaba/qwen3-next-80b-a3b-instruct',
       messages:[
           {
               role:'user',
@@ -118,7 +118,29 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'chatcmpl-a4556a4c-f985-9ef2-b976-551ac7cef85a', 'system_fingerprint': None, 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': "Hello! How can I help you today? Is there something you would like to talk about or learn more about? I'm here to help with any questions you might have."}}], 'created': 1744144035, 'model': 'qwen-turbo', 'usage': {'prompt_tokens': 1, 'completion_tokens': 15, 'total_tokens': 16, 'prompt_tokens_details': {'cached_tokens': 0}}}
+{
+  "id": "chatcmpl-a944254a-4252-9a54-af1b-94afcfb9807e",
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "logprobs": null,
+      "message": {
+        "role": "assistant",
+        "content": "Hello! How can I help you today? 😊"
+      }
+    }
+  ],
+  "created": 1758228572,
+  "model": "qwen3-next-80b-a3b-instruct",
+  "usage": {
+    "prompt_tokens": 9,
+    "completion_tokens": 46,
+    "total_tokens": 55
+  }
+}
 ```
 {% endcode %}
 

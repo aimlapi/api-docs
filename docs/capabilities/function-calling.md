@@ -169,14 +169,15 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 ***
 
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
+* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
+* [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
+* [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
-* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
-* [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
-* [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
+* [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
