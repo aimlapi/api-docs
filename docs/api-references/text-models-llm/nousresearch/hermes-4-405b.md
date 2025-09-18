@@ -31,7 +31,7 @@ A hybrid reasoning model designed to be creative, engaging, and neutrally aligne
 
 ### :digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](hermes-4-405b.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](hermes-4-405b.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
