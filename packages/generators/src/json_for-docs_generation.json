@@ -1,15 +1,14 @@
 [
   {
-    "name": "bytedance/seedream-v4-edit",
-    "alias": "seedream-v4-edit",
-    "category": "image-models",
-    "vendor": "ByteDance",
-    "features": ["image-to-image"]
+    "name": "x-ai/grok-4-07-09",
+    "alias": "grok-4",
+    "category": "text-models-llm",
+    "vendor": "xAI"
   },
   {
-    "name": "bytedance/seedream-v4-text-to-image",
-    "alias": "seedream-v4-text-to-image",
-    "category": "image-models",
-    "vendor": "ByteDance"
+    "name": "google/veo-3.0-i2v-fast",
+    "alias": "veo-3.0-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
   }
 ]
