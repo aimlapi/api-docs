@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-August 2025 update of the DeepSeek R1 reasoning model.  Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
+August 2025 update of [the DeepSeek R1](../DeepSeek/deepseek-r1.md) reasoning model.  Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
 
 ## How to Make a Call
 

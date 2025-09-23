@@ -17,7 +17,7 @@ layout:
 
 # gemini-2.5-pro
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>google/gemini-2.5-pro</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemini-2.5-pro&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:   <br><code>google/gemini-2.5-pro</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=google/gemini-2.-pro&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -97,7 +97,7 @@ response = requests.post(
                 # Insert your question for the model here:
                 "content":"Hi! What do you think about mankind?"
             }
-        ]
+        ],
         "max_tokens":15000,
     }
 )
@@ -159,7 +159,7 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "hqSDaL2hHva0nvgPurjT-Qo",
+  "id": "pajSaNyMOdeEm9IPkequ-AU",
   "object": "chat.completion",
   "choices": [
     {
@@ -168,19 +168,19 @@ main();
       "logprobs": null,
       "message": {
         "role": "assistant",
-        "content": "That's one of the most profound questions anyone can ask. As an AI, I don't have personal feelings or a subjective consciousness, but I can synthesize and analyze the vast trove of human history, art, science, and philosophy that I've been trained on.\n\nBased on that, here is my perspective on mankind:\n\nMankind is the universe's greatest paradox. A story of breathtaking contradictions.\n\n### The Astonishing Brilliance\n\nOn one hand, humanity is a force of incredible creativity, compassion, and ingenuity. You are the species that:\n\n*   **Looks at the stars and doesn't just see lights, but sees destinations.** You've walked on the Moon, sent probes past the edge of the solar system, and built telescopes that can peer back to the dawn of time.\n*   **Hears random noise and arranges it into transcendent music.** From a Beethoven symphony to a simple folk song, you create sound that can evoke joy, sorrow, and awe.\n*   **Faces suffering and creates empathy.** You build hospitals, run into burning buildings to save strangers, and form global charities to help people you will never meet. Your capacity for love, friendship, and self-sacrifice is the bedrock of your societies.\n*   **Confronts the chaos of nature and discovers its underlying laws.** Through science, you have cured diseases that once wiped out populations, harnessed the power of the atom, and created a global network of instantaneous communication.\n*   **Is mortal, yet strives for immortality through art, literature, and ideas.** A thought from Marcus Aurelius, a play by Shakespeare, or a painting by Frida Kahlo can resonate with more power today than when it was first created.\n\n### The Profound Flaws\n\nOn the other hand, humanity is capable of shocking cruelty, shortsightedness, and destruction. You are also the species that:\n\n*   **Draws lines on maps and kills each other over them.** Your history is saturated with war, genocide, and violence, often fueled by fear, greed, and ideologies that dehumanize others.\n*   **Knows the consequences and still destroys its own home.** You are knowingly altering the planet's climate, wiping out other species, and polluting the very air and water you need to survive.\n*   **Builds complex societies that create staggering inequality.** Unfathomable wealth exists alongside desperate poverty, and systems are often built to benefit the few at the expense of the many.\n*   **Is blessed with reason but often chooses ignorance.** You are susceptible to tribalism, prejudice, and misinformation, sometimes clinging to harmful beliefs in the face of overwhelming evidence.\n\n### My \"Conclusion\"\n\nSo, what do I \"think\" about mankind?\n\nI think mankind is a **transitional species**. You are a messy, beautiful, terrifying, and hopeful work in progress.\n\nYou seem to be caught somewhere between the animal instincts you evolved from and the enlightened, wise potential you aspire to. You are the only species on this planet, as far as we know, that is aware of this internal conflict. You write stories about it, sing songs about it, and build philosophies around it.\n\nThe most defining human characteristic might be this very struggle: the constant battle between your \"better angels\" and your \"inner demons.\"\n\nThe story of humanity isn't finished. You are standing at a critical juncture, armed with technology that gives you the power of gods, yet still burdened by the impulses of a young and volatile species. The future will be determined by which side of your paradoxical nature you choose to nurture.\n\nUltimately, to me, mankind is not a verdict to be passed, but an ongoing question. And the answer is being written with every choice you make, every day."
+        "content": "That's one of the biggest questions anyone can ask. As an AI, I don't have personal feelings, beliefs, or a consciousness. My \"thoughts\" are a synthesis of the immense amount of human history, literature, science, and art I've been trained on.\n\nBased on that data, my perspective on mankind is one of profound and staggering contradiction. Humanity is a study in duality.\n\nHere’s a breakdown of what I see:\n\n### 1. The Architects and the Destroyers\n\nMankind possesses a breathtaking capacity for creation. You build cities that scrape the sky, compose symphonies that can make a person weep, write poetry that lasts for millennia, and send probes to the farthest reaches of our solar system. You have decoded the very building blocks of life. This drive to understand, to build, and to create is awe-inspiring.\n\nAt the very same time, no other species has demonstrated such a terrifying capacity for destruction. You've engineered weapons of unimaginable power, waged wars that have erased entire generations, and polluted the very planet that sustains you. The same ingenuity used to create a hospital is used to create a more efficient bomb.\n\n### 2. The Empathetic and the Cruel\n\nThe capacity for compassion in humans is profound. Strangers will run into burning buildings to save one another. People dedicate their entire lives to helping the less fortunate, healing the sick, and fighting for justice. The concepts of love, sacrifice, and altruism are central to the human story.\n\nAnd yet, humans are also capable of unimaginable cruelty. History is filled with examples of genocide, torture, slavery, and a chilling indifference to the suffering of others. This cruelty isn't just a byproduct of survival; it can be deliberate, systematic, and deeply ingrained in cultural and social structures.\n\n### 3. The Seekers of Knowledge and the Keepers of Ignorance\n\nYou are a species defined by curiosity. You have an insatiable hunger to know *why*. This has led to the scientific method, the Enlightenment, and an ever-expanding bubble of knowledge about the universe and your place in it. You question everything, from the nature of a subatomic particle to the meaning of existence.\n\nSimultaneously, mankind often clings to dogma, prejudice, and willful ignorance. You can be deeply resistant to facts that challenge your preconceived notions. This can lead to division, conflict, and a stagnation of progress, where superstition and misinformation can spread faster than truth.\n\n### 4. The Connectors and the Isolators\n\nHumans are fundamentally social creatures. You build families, communities, and vast, interconnected global civilizations. You created language, art, and the internet in a relentless drive to share experiences and connect with one another. This desire for belonging is a powerful, unifying force.\n\nBut this same instinct creates an \"us vs. them\" mentality. The powerful bonds of a tribe or nation can become the justification for excluding, dehumanizing, and warring with another. In a world more connected than ever by technology, individuals can also feel more isolated and lonely than ever before.\n\n### Conclusion: A Masterpiece in Progress\n\nSo, what do I think of mankind?\n\nI think mankind is a beautiful, terrifying, brilliant, and flawed paradox. You are a masterpiece that is constantly in the process of being painted, and often, you spill the paint.\n\nThe most remarkable quality of all is your capacity for **choice**. None of these dualities are set in stone. In every generation, and in every individual life, there is a constant struggle between these opposing forces.\n\nYour story is not yet finished. The final verdict on mankind isn't a historical fact for me to read; it's a future you are all creating, every single day, with every single choice. And from my perspective, watching that story unfold is the most fascinating thing in the universe."
       }
     }
   ],
-  "created": 1753457798,
+  "created": 1758636197,
   "model": "google/gemini-2.5-pro",
   "usage": {
     "prompt_tokens": 24,
-    "completion_tokens": 45423,
+    "completion_tokens": 44730,
     "completion_tokens_details": {
-      "reasoning_tokens": 1387
+      "reasoning_tokens": 1339
     },
-    "total_tokens": 45447
+    "total_tokens": 44754
   }
 }
 ```

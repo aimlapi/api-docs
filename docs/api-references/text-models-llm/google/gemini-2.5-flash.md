@@ -97,7 +97,7 @@ response = requests.post(
                 # Insert your question for the model here:
                 "content":"Hi! What do you think about mankind?"
             }
-        ]
+        ],
         "max_tokens":15000,
     }
 )
