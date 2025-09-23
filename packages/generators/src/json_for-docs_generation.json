@@ -1,26 +1,56 @@
 [
   {
-    "name": "google/veo3",
-    "alias": "veo3",
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5/standard/image-to-video",
     "category": "video-models",
-    "vendor": "Google"
+    "vendor": "Kling AI"
   },
   {
-    "name": "google/veo-3.0-i2v",
-    "alias": "veo-3.0-i2v",
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5/standard/text-to-video",
     "category": "video-models",
-    "vendor": "Google"
+    "vendor": "Kling AI"
   },
   {
-    "name": "google/veo-3.0-fast",
-    "alias": "veo-3.0-fast",
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5/pro/image-to-video",
     "category": "video-models",
-    "vendor": "Google"
+    "vendor": "Kling AI"
   },
   {
-    "name": "google/veo-3.0-i2v-fast",
-    "alias": "veo-3.0-i2v-fast",
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5/pro/image-to-video",
     "category": "video-models",
-    "vendor": "Google"
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5/pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6/standard/multi-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "pixverse/v5/transition",
+    "alias": "v5/transition",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/text-to-video",
+    "alias": "v5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/image-to-video",
+    "alias": "v5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
   }
 ]
