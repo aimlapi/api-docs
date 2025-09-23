@@ -42,7 +42,7 @@ response = requests.post(
     },
     json={
         "model":"bytedance/seedream-v4-edit",
-        "prompt": "Add a crown to the T-rex's head.",
+        "prompt": "Add a bird to the foreground of the photo.",
         "image_urls": [ 
              "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
         ]
