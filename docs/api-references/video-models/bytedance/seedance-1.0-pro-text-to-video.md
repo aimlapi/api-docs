@@ -91,7 +91,6 @@ def get_video(gen_id):
         "generation_id": gen_id,
     }
     
-    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
     headers = {
         "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
@@ -102,7 +101,6 @@ def get_video(gen_id):
 
 
 def main():
-    
     # Generate video
     gen_response = generate_video()
     gen_id = gen_response.get("id")

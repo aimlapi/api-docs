@@ -123,6 +123,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Perplexity**:    [Text/Chat](api-references/text-models-llm/perplexity/)
 
+**PixVerse:**     [Video](api-references/video-models/pixverse/)
+
 **RecraftAI**:    [Image](api-references/image-models/RecraftAI/)
 
 **Runway**:    [Video](api-references/video-models/runway/)

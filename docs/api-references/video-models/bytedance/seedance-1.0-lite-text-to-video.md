@@ -58,7 +58,6 @@ def generate_video():
     }
  
     response = requests.post(url, json=data, headers=headers)
-    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
@@ -81,9 +80,7 @@ def get_video(gen_id):
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
-
 
 
 def main():
@@ -91,7 +88,7 @@ def main():
     # Generate video
     gen_response = generate_video()
     gen_id = gen_response.get("id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
     # Try to retrieve the video from the server every 10 sec
     if gen_id:
@@ -215,7 +212,7 @@ function main() {
         }
 
         const genId = genResponse.id;
-        console.log("Gen_ID:", genId);
+        console.log("Generation ID:", genId);
 
         const timeout = 1000 * 1000; // 1000 sec
         const interval = 10 * 1000; // 10 sec
@@ -244,7 +241,6 @@ function main() {
                 }
             });
         };
-
         checkStatus();
     });
 }
