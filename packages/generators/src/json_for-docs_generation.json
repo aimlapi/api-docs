@@ -1,8 +1,8 @@
 [
   {
-    "name": "bytedance/omnihuman",
-    "alias": "omnihuman",
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standard/multi-image-to-video",
     "category": "video-models",
-    "vendor": "ByteDance"
+    "vendor": "Kling AI"
   }
 ]
