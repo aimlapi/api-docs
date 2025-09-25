@@ -1,7 +1,37 @@
 [
   {
-    "name": "wan/v2.1/1.3b/text-to-video",
-    "alias": "wan-v2.1-text-to-video",
+    "name": "alibaba/wan2.1-t2v-plus",
+    "alias": "wan2.1-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.1-t2v-turbo",
+    "alias": "wan2.1-t2v-turbo",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-t2v-plus",
+    "alias": "wan2.2-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-i2v-plus",
+    "alias": "wan2.2-i2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan-25-preview/text-to-video",
+    "alias": "wan-25-preview/text-to-video",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan-25-preview/image-to-video",
+    "alias": "wan-25-preview/image-to-video",
     "category": "video-models",
     "vendor": "Alibaba Cloud"
   },
@@ -31,19 +61,37 @@
   },
   {
     "name": "veo2/image-to-video",
-    "alias": "Veo2-Image-to-Video",
+    "alias": "veo2-image-to-video",
     "category": "video-models",
     "vendor": "Google"
   },
   {
     "name": "veo2",
-    "alias": "Veo2-Text-to-Video",
+    "alias": "veo2-text-to-video",
     "category": "video-models",
     "vendor": "Google"
   },
   {
     "name": "google/veo3",
     "alias": "veo3",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-i2v",
+    "alias": "veo-3.0-i2v",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-fast",
+    "alias": "veo-3.0-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-i2v-fast",
+    "alias": "veo-3.0-i2v-fast",
     "category": "video-models",
     "vendor": "Google"
   },
@@ -72,8 +120,38 @@
     "vendor": "Kling AI"
   },
   {
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
     "name": "kling-video/v1.6/standard/image-to-video",
     "alias": "v1.6-standart/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standard/multi-image-to-video",
     "category": "video-models",
     "vendor": "Kling AI"
   },
@@ -121,13 +199,37 @@
   },
   {
     "name": "klingai/v2.1-master-text-to-video",
-    "alias": "v2-master-text-to-video",
+    "alias": "v2.1-master-text-to-video",
     "category": "video-models",
     "vendor": "Kling AI"
   },
   {
     "name": "klingai/v2.1-master-image-to-video",
-    "alias": "v2-master-image-to-video",
+    "alias": "v2.1-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/standard/image-to-video",
+    "alias": "v2.1-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/pro/image-to-video",
+    "alias": "v2.1-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/image-to-video",
+    "alias": "v2.5-turbo/pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/text-to-video",
+    "alias": "v2.5-turbo/pro/text-to-video",
     "category": "video-models",
     "vendor": "Kling AI"
   },
@@ -150,7 +252,25 @@
     "vendor": "MiniMax"
   },
   {
-    "name": "runway/gen3a_turbo",
+    "name": "pixverse/v5/transition",
+    "alias": "v5/transition",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/text-to-video",
+    "alias": "v5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/image-to-video",
+    "alias": "v5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "gen3a_turbo",
     "alias": "gen3a_turbo",
     "category": "video-models",
     "vendor": "Runway"
@@ -158,6 +278,18 @@
   {
     "name": "runway/gen4_turbo",
     "alias": "gen4_turbo",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "runway/gen4_aleph",
+    "alias": "gen4_aleph",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "runway/act_two",
+    "alias": "act_two",
     "category": "video-models",
     "vendor": "Runway"
   }
