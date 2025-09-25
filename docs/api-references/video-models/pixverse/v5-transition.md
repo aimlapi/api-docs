@@ -57,7 +57,7 @@ def generate_video():
         "prompt": "Mona Lisa sits holding glasses in her hands, then puts them on, but changes her mind, takes them off, and hides them in a handbag on her lap. Then she smiles.",
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
         "tail_image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "duration": "8",       
+        "duration": "8"       
     }
  
     response = requests.post(url, json=data, headers=headers)
