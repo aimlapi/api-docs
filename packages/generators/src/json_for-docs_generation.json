@@ -1,8 +1,14 @@
 [
   {
-    "name": "kling-video/v1.6/standard/multi-image-to-video",
-    "alias": "v1.6-standard/multi-image-to-video",
+    "name": "alibaba/wan2.5-t2v-preview",
+    "alias": "wan2.5-t2v-preview",
     "category": "video-models",
-    "vendor": "Kling AI"
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.5-i2v-preview",
+    "alias": "wan2.5-i2v-preview",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
   }
 ]

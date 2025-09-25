@@ -24,14 +24,14 @@
     "vendor": "Alibaba Cloud"
   },
   {
-    "name": "alibaba/wan-25-preview/text-to-video",
-    "alias": "wan-25-preview/text-to-video",
+    "name": "alibaba/wan2.5-t2v-preview",
+    "alias": "wan2.5-t2v-preview",
     "category": "video-models",
     "vendor": "Alibaba Cloud"
   },
   {
-    "name": "alibaba/wan-25-preview/image-to-video",
-    "alias": "wan-25-preview/image-to-video",
+    "name": "alibaba/wan2.5-i2v-preview",
+    "alias": "wan2.5-i2v-preview",
     "category": "video-models",
     "vendor": "Alibaba Cloud"
   },
