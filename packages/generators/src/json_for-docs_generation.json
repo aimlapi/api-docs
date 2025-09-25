@@ -1,14 +1,8 @@
 [
   {
-    "name": "alibaba/wan2.5-t2v-preview",
-    "alias": "wan2.5-t2v-preview",
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
     "category": "video-models",
-    "vendor": "Alibaba Cloud"
-  },
-  {
-    "name": "alibaba/wan2.5-i2v-preview",
-    "alias": "wan2.5-i2v-preview",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud"
+    "vendor": "ByteDance"
   }
 ]
