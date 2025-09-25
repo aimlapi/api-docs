@@ -130,7 +130,7 @@ export default {
     },
   },
   watermark: {
-    desc: `Whether the video contains a watermark`,
+    desc: `Whether the video contains a watermark.`,
   },
   camerafixed: {
     desc: `Whether to fix the camera position.
@@ -138,10 +138,10 @@ export default {
     false: Do not fix the camera position.`,
   },
   video_url: {
-    desc: `A HTTPS URL pointing to a video or a data URI containing a video`,
+    desc: `A HTTPS URL pointing to a video or a data URI containing a video.`,
   },
   frame_size: {
-    desc: `The width and height of the video`,
+    desc: `The width and height of the video.`,
   },
   references: {
     image: {
