@@ -75,7 +75,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "nousresearch/hermes-4-405b",
+        "model": "nousresearch/hermes-4-405b",
         "messages":[
             {
                 "role":"user",
