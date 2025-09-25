@@ -1,8 +1,8 @@
 [
   {
-    "name": "kling-video/v1.6/standard/multi-image-to-video",
-    "alias": "v1.6-standard/multi-image-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
+    "name": "alibaba/qwen3-max-preview",
+    "alias": "qwen3-max-preview",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud"
   }
 ]
