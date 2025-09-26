@@ -6,7 +6,7 @@ This documentation is valid for the following list of our models:
 * `bytedance/omnihuman`
 {% endhint %}
 
-An advanced AI framework from ByteDance that generates realistic lip-sync videos from a single image and motion signals (audio). It supports multiple visual and audio styles and produces videos in any aspect ratio or body proportion, with realism enhanced by motion, lighting, and texture details.
+An advanced AI framework from ByteDance that generates realistic lip-sync videos from a single image and motion signals (audio). It supports multiple visual and audio styles and produces videos in any body proportion, with realism enhanced by motion, lighting, and texture details.
 
 ## Setup your API Key
 
