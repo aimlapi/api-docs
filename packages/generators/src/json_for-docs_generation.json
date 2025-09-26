@@ -1,8 +1,8 @@
 [
   {
-    "name": "alibaba/qwen3-max-preview",
-    "alias": "qwen3-max-preview",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud"
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
+    "category": "video-models",
+    "vendor": "ByteDance"
   }
 ]
