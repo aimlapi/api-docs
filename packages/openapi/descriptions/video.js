@@ -205,4 +205,7 @@ export default {
   interpolator_model: {
     desc: `The model to use for interpolation. Rife, or film are available.`,
   },
+  sync_mode: {
+    desc: `The synchronization mode for audio and video. Loose or tight are available.`,
+  },
 };
