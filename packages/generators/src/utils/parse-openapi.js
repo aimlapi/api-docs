@@ -105,7 +105,7 @@ const EXCEPTION_PATH = [
   '/images/edits',
   '/v1/images/edits',
   '/openai/deployments/{model}',
-  '/v1/openai/deployments/{model}'
+  '/v1/openai/deployments/{model}',
 ];
 
 const parseOpenapi = (openapi, fetchedModels) => {
@@ -154,10 +154,11 @@ const parseOpenapi = (openapi, fetchedModels) => {
       };
       // Some models require two requests to be displayed on the page. Typically these are get and post requests. Exceptions are entered separately in EXCEPTIONS_PAIR_MAP.
       if (
-        EXCEPTIONS_PAIR_MAP[path] ||
+        (!pairData.has && EXCEPTIONS_PAIR_MAP[path]) ||
         (openapi.paths[path]['get'] &&
           (path.includes('/generate/audio') ||
-            path.includes('/generate/video')) &&
+            path.includes('/generate/video') ||
+            path.includes('/video/generations')) &&
           version)
       ) {
         if (EXCEPTIONS_PAIR_MAP[path]) {
