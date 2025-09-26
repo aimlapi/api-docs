@@ -20,6 +20,8 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
 * [alibaba/qwen3-next-80b-a3b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-instruct.md)
+* [alibaba/qwen3-max-preview](../api-references/text-models-llm/alibaba-cloud/qwen3-max-preview.md)
+* [alibaba/qwen3-max-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-max-instruct.md)
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)

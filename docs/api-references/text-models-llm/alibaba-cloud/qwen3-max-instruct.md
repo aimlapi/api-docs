@@ -1,10 +1,10 @@
-# qwen3-max-preview
+# qwen3-max-instruct
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><p><code>alibaba/qwen3-max-preview</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=alibaba/qwen3-max-preview&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><p><code>alibaba/qwen3-max-instruct</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=alibaba/qwen3-max-instruct&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-The preview version of [Qwen3 Max Instruct](qwen3-max-instruct.md).
+This model offers improved accuracy in math, coding, logic, and science, handles complex instructions in Chinese and English more reliably, reduces hallucinations, supports 100+ languages with stronger translation and commonsense reasoning, and is optimized for RAG and tool use, though it lacks a dedicated ‘thinking’ mode.
 
 ## How to Make a Call
 
@@ -19,7 +19,7 @@ The preview version of [Qwen3 Max Instruct](qwen3-max-instruct.md).
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](qwen3-max-preview.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](qwen3-max-instruct.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -28,7 +28,7 @@ At the bottom of this page, you'll find [a code example](qwen3-max-preview.md#co
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen3-max-preview.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen3-max-instruct.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -42,8 +42,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="qwen3-max-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-max-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-max-preview.json)
+{% openapi-operation spec="qwen3-max-instruct" path="/v1/chat/completions" method="post" %}
+[OpenAPI qwen3-max-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-max-instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -63,7 +63,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"alibaba/qwen3-max-preview",
+        "model":"alibaba/qwen3-max-instruct",
         "messages":[
             {
                 "role":"user",
@@ -92,7 +92,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'alibaba/qwen3-max-preview',
+      model: 'alibaba/qwen3-max-instruct',
       messages:[
           {
               role:'user',
@@ -119,7 +119,7 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "chatcmpl-8ffebc65-b625-926a-8208-b765371cb1d0",
+  "id": "chatcmpl-bec5dc33-8f63-96b9-89a4-00aecfce7af8",
   "system_fingerprint": null,
   "object": "chat.completion",
   "choices": [
@@ -129,16 +129,16 @@ main();
       "logprobs": null,
       "message": {
         "role": "assistant",
-        "content": "Hello! How can I assist you today? 😊"
+        "content": "Hello! How can I help you today?"
       }
     }
   ],
-  "created": 1758898044,
-  "model": "qwen3-max-preview",
+  "created": 1758898624,
+  "model": "qwen3-max",
   "usage": {
     "prompt_tokens": 23,
-    "completion_tokens": 139,
-    "total_tokens": 162
+    "completion_tokens": 113,
+    "total_tokens": 136
   }
 }
 ```

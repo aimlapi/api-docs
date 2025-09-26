@@ -26,6 +26,7 @@
     * [qwen3-next-80b-a3b-instruct](api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-instruct.md)
     * [qwen3-next-80b-a3b-thinking](api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-thinking.md)
     * [qwen3-max-preview](api-references/text-models-llm/alibaba-cloud/qwen3-max-preview.md)
+    * [qwen3-max-instruct](api-references/text-models-llm/alibaba-cloud/qwen3-max-instruct.md)
   * [Anthracite](api-references/text-models-llm/Anthracite/README.md)
     * [magnum-v4](api-references/text-models-llm/Anthracite/magnum-v4.md)
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)
