@@ -168,5 +168,41 @@ export default {
   },
   style: {
     desc: `The style of the generated video.`,
-  }
+  },
+  num_frames: {
+    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`
+  },
+  match_input_frames_per_second: {
+    desc: `Whether to match the input video's frames per second (FPS).`,
+  },
+  frames_per_second: {
+    desc: `Frames per second of the generated video. Must be between 5 to 30`,
+  },
+  preprocess: {
+    desc: `Whether to preprocess the input video.`,
+  },
+  acceleration: {
+    desc: `Acceleration to use for inference. None or regular are available.`,
+  },
+  video_quality: {
+    desc: `The quality of the generated video.`,
+  },
+  video_write_mode: {
+    desc: `The method used to write the video. Fast, balanced, small are available.`,
+  },
+  num_interpolated_frames: {
+    desc: `Number of frames to interpolate between the original frames`,
+  },
+  temporal_downsample_factor: {
+    desc: `Temporal downsample factor for the video`,
+  },
+  enable_auto_downsample: {
+    desc: `The minimum frames per second to downsample the video to`,
+  },
+  auto_downsample_min_fps: {
+    desc: `The minimum frames per second to downsample the video to`,
+  },
+  interpolator_model: {
+    desc: `The model to use for interpolation. Rife, or film are available.`,
+  },
 };
