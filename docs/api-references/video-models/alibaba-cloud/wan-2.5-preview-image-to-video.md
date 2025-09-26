@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Wan 2.5 Preview (Image-to-Video)
 
 {% hint style="info" %}
@@ -11,7 +6,7 @@ This documentation is valid for the following list of our models:
 * `alibaba/wan2.5-i2v-preview`
 {% endhint %}
 
-
+This text-to-video model generates videos up to 1080p and can voice a character with full lip-sync by providing dialogue directly in the `prompt` parameter. In addition to the features of the [Wan 2.5 Preview (Text-to-Video)](wan-2.5-preview-text-to-video.md) model, it also supports uploading a reference image, which may depict the character to be animated or the surrounding scene.
 
 ## Setup your API Key
 
@@ -56,10 +51,10 @@ def generate_video():
     }
 
     data = {
-        "model": "alibaba/wan2.2-i2v-plus",
-        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "model": "alibaba/wan2.5-i2v-preview",
+        "prompt": '''Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.''',
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "duration": "5",       
+        "duration": "8",       
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -139,10 +134,10 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "alibaba/wan2.2-i2v-plus",
-    prompt: "Mona Lisa puts on glasses with her hands.",
+    model: "alibaba/wan2.5-i2v-preview",
+    prompt: `Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.`,
     image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    duration: "5",
+    duration: "8",
   });
 
   const url = new URL(`${baseUrl}/generate/video/alibaba/generation`);
@@ -254,18 +249,29 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   c8a198bb-8b06-4640-91ee-f96caa792390:alibaba/wan2.5-i2v-preview
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': 'c8a198bb-8b06-4640-91ee-f96caa792390:alibaba/wan2.5-i2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/15/20250927/1080b7c5/c8a198bb-8b06-4640-91ee-f96caa792390.mp4?Expires=1759009739&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=3oH7JKM54LL2LwnoRKvTyyhvWeM%3D'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~1.5 min.
+**Processing time**: \~3 min 40 sec.
 
-**Original**: 832x1120
+**Generated video** (786x1172, with sound):
 
-**Low-res GIF preview**:
-
-<div align="left"><figure><img src="../../../.gitbook/assets/seedance-1-0-lite-i2v_preview.gif" alt=""><figcaption><p><code>"Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure></div>
+{% embed url="https://drive.google.com/file/d/19Q6QkD_ZTX5semo0k50B5RK6HHTT2GsA/view" %}
 
 ## API Schemas
 

@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Wan 2.5 Preview (Text-to-Video)
 
 
@@ -13,7 +8,7 @@ This documentation is valid for the following list of our models:
 * `alibaba/wan2.5-t2v-preview`
 {% endhint %}
 
-
+This text-to-video model generates videos up to 1080p and can voice a character with full lip-sync by providing dialogue directly in the `prompt` parameter.
 
 ## Setup your API Key
 
@@ -58,10 +53,11 @@ def generate_video():
     }
 
     data = {
-        "model": "alibaba/wan2.2-t2v-plus",
+        "model": "alibaba/wan2.5-t2v-preview",
         "prompt": '''
-A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-'''
+        A racoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: "Hello, two-legged!" His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: "Wanna some?" — while extending the half-eaten ice cream toward the camera.
+        ''',
+        "resolution": "1080p"
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -87,7 +83,6 @@ def get_video(gen_id):
 
     response = requests.get(url, params=params, headers=headers)
     return response.json()
-
 
 
 def main():
@@ -140,10 +135,11 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: "alibaba/wan2.2-t2v-plus",
+        model: "alibaba/wan2.5-t2v-preview",
         prompt: `
-A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-`
+A racoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: "Hello, two-legged!" His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: "Wanna some?" — while extending the half-eaten ice cream toward the camera.
+`,
+        resolution: '1080p'
     });
 
     const url = new URL(`${baseUrl}/generate/video/alibaba/generation`);
@@ -264,16 +260,30 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2.5-t2v-preview', 'status': 'queued', 'meta': {'usage': {'tokens_used': 1050000}}}
+Generation ID:   8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2.5-t2v-preview
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2.5-t2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-accelerate.aliyuncs.com/1d/e9/20250927/3c240a55/8736603f-7944-42b6-8a3b-8b2c1e246c34.mp4?Expires=1759007661&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=L67uOyWei9u9WcvvY570igR8olU%3D'}}
 ```
 {% endcode %}
 
 </details>
 
-**Original**: 1920x1080
+**Processing time**: \~3 min.
 
-**Low-res GIF preview**:
+**Generated Video** (1920x1080, with sound):
 
-<div align="left"><figure><img src="../../../.gitbook/assets/wan-v2.2-t2v-plus-dragon-preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain,</code> <br><code>then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
+{% embed url="https://drive.google.com/file/d/1meuUckCUzvSYwW5khjM8KC7IYq1fDmhG/view" %}
+`'''A raccoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: "Hello, two-legged!" His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: "Wanna some?" — while extending the half-eaten ice cream toward the camera.'''`
+{% endembed %}
 
 ## API Schemas
 
