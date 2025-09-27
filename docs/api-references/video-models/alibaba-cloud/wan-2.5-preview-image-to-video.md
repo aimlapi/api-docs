@@ -53,8 +53,7 @@ def generate_video():
     data = {
         "model": "alibaba/wan2.5-i2v-preview",
         "prompt": '''Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.''',
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "duration": "8",       
+        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",    
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -63,7 +62,7 @@ def generate_video():
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
+        print(response_data)
         return response_data
     
 
@@ -137,7 +136,6 @@ function generateVideo(callback) {
     model: "alibaba/wan2.5-i2v-preview",
     prompt: `Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.`,
     image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    duration: "8",
   });
 
   const url = new URL(`${baseUrl}/generate/video/alibaba/generation`);
@@ -271,7 +269,7 @@ Processing complete:/n {'id': 'c8a198bb-8b06-4640-91ee-f96caa792390:alibaba/wan2
 
 **Generated video** (786x1172, with sound):
 
-{% embed url="https://drive.google.com/file/d/19Q6QkD_ZTX5semo0k50B5RK6HHTT2GsA/view" %}
+{% embed url="https://drive.google.com/file/d/19Q6QkD_ZTX5semo0k50B5RK6HHTT2GsA/view" fullWidth="false" %}
 
 ## API Schemas
 

@@ -70,7 +70,6 @@ response = requests.post(
                 "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ],
-        "enable_thinking": False
     }
 )
 
