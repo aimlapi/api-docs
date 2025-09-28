@@ -1,14 +1,22 @@
 # qwen-image-edit
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `alibaba/qwen-image-edit`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=alibaba/qwen-image-edit&#x26;mode=image" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
-The image editing variant of our 20B Qwen-Image model. It expands the model’s distinctive text rendering abilities to editing tasks, making accurate text modifications within images possible.
+The image editing variant of our 20B [qwen-image](qwen-image.md) model. It expands the model’s distinctive text rendering abilities to editing tasks, making accurate text modifications within images possible.
 
 ## Setup your API Key
 

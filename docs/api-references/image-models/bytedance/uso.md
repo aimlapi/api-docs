@@ -1,10 +1,18 @@
 # USO (Image-to-Image)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/uso`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 

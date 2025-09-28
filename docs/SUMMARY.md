@@ -113,6 +113,8 @@
     * [grok-3-mini-beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
     * [grok-4](api-references/text-models-llm/xai/grok-4.md)
     * [grok-code-fast-1](api-references/text-models-llm/xai/grok-code-fast-1.md)
+    * [grok-4-fast-non-reasoning](api-references/text-models-llm/xai/grok-4-fast-non-reasoning.md)
+    * [grok-4-fast-reasoning](api-references/text-models-llm/xai/grok-4-fast-reasoning.md)
   * [Zhipu](api-references/text-models-llm/zhipu/README.md)
     * [glm-4.5-air](api-references/text-models-llm/zhipu/glm-4.5-air.md)
     * [glm-4.5](api-references/text-models-llm/zhipu/glm-4.5.md)

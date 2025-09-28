@@ -1,22 +1,15 @@
-# qwen-plus
+---
+hidden: true
+noIndex: true
+---
 
-{% columns %}
-{% column width="75%" %}
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
+# grok-4-fast-non-reasoning
 
-* `qwen-plus`
-{% endhint %}
-{% endcolumn %}
-
-{% column width="25%" %}
-<a href="https://aimlapi.com/app/?model=alibaba/qwen-plus&#x26;mode=chat" class="button primary">Try in Playground</a>
-{% endcolumn %}
-{% endcolumns %}
+<table data-header-hidden data-full-width="false"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><p><code>x-ai/grok-4-fast-non-reasoning</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=x-ai/grok-4-fast-non-reasoning&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-An advanced large language model. Multilingual support, including Chinese and English. Enhanced reasoning capabilities for complex tasks. Improved instruction-following abilities.
+
 
 ## How to Make a Call
 
@@ -31,7 +24,7 @@ An advanced large language model. Multilingual support, including Chinese and En
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](qwen-plus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](grok-4-fast-non-reasoning.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -40,7 +33,7 @@ At the bottom of this page, you'll find [a code example](qwen-plus.md#code-examp
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](qwen-plus.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](grok-4-fast-non-reasoning.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -54,9 +47,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="qwen-plus" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen-plus.json)
-{% endopenapi-operation %}
+
 
 ## Code Example
 
@@ -75,11 +66,11 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"qwen-plus",
+        "model":"x-ai/grok-4-fast-non-reasoning",
         "messages":[
             {
                 "role":"user",
-                "content":"Hello" # insert your prompt here, instead of Hello
+                "content":"Hello"  # insert your prompt here, instead of Hello
             }
         ]
     }
@@ -103,7 +94,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'qwen-plus',
+      model: 'x-ai/grok-4-fast-non-reasoning',
       messages:[
           {
               role:'user',
@@ -129,7 +120,6 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'chatcmpl-4fda1bd7-a679-95b9-b81d-1bfc6ae98448', 'system_fingerprint': None, 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': None, 'message': {'role': 'assistant', 'content': 'Hello! How can I assist you today? If you have any questions or need help with anything, just let me know! 😊'}}], 'created': 1744143962, 'model': 'qwen-plus', 'usage': {'prompt_tokens': 8, 'completion_tokens': 68, 'total_tokens': 76, 'prompt_tokens_details': {'cached_tokens': 0}}}
 ```
 {% endcode %}
 

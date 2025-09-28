@@ -1,10 +1,18 @@
 # Seededit 3.0 (Image-to-Image)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/seededit-3.0-i2i`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=bytedance/seededit-3.0-i2i&#x26;mode=image" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
