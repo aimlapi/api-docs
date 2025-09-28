@@ -1,5 +1,4 @@
 ---
-description: Google OCR API Reference
 layout:
   width: default
   title:
