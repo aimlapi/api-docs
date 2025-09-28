@@ -39,7 +39,6 @@
     * [Claude 4 Sonnet](api-references/text-models-llm/anthropic/claude-4-sonnet.md)
     * [Claude 4.1 Opus](api-references/text-models-llm/anthropic/claude-opus-4.1.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
-    * [command-r-plus](api-references/text-models-llm/Cohere/command-r-plus.md)
     * [command-a](api-references/text-models-llm/cohere/command-a.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)

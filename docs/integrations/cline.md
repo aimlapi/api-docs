@@ -141,11 +141,8 @@ These models have been tested by our team for compatibility with Cline integrati
 
 
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
-* [cohere/command-r-plus](../api-references/text-models-llm/Cohere/command-r-plus.md)
 
-
-
-* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
+- [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 
 </details>
 
