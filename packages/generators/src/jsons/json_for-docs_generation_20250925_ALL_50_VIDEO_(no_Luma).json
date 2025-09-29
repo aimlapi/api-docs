@@ -60,6 +60,12 @@
     "vendor": "ByteDance"
   },
   {
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
     "name": "veo2/image-to-video",
     "alias": "veo2-image-to-video",
     "category": "video-models",
