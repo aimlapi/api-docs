@@ -1,15 +1,10 @@
----
-hidden: true
-noIndex: true
----
-
 # grok-4-fast-non-reasoning
 
 <table data-header-hidden data-full-width="false"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><p><code>x-ai/grok-4-fast-non-reasoning</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=x-ai/grok-4-fast-non-reasoning&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-
+xAI’s latest multimodal model, offering state-of-the-art cost efficiency and a 2M-token context window. Non-reasoning variant.
 
 ## How to Make a Call
 
@@ -47,7 +42,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-
+{% openapi-operation spec="grok-4-fast-non-reasoning" path="/v1/chat/completions" method="post" %}
+[OpenAPI grok-4-fast-non-reasoning](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-4-fast-non-reasoning.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -120,6 +117,42 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "id": "cbbc51d7-81ed-ccab-016a-c02dea45e7ec_us-east-1",
+  "system_fingerprint": "fp_e7507192a3",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "Hello! How can I help you today?",
+        "refusal": null
+      }
+    }
+  ],
+  "created": 1759186645,
+  "model": "grok-4-fast-non-reasoning",
+  "usage": {
+    "prompt_tokens": 55,
+    "completion_tokens": 9,
+    "total_tokens": 64,
+    "prompt_tokens_details": {
+      "text_tokens": 130,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 129
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "num_sources_used": 0
+  }
+}
 ```
 {% endcode %}
 
