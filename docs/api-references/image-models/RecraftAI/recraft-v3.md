@@ -1,10 +1,18 @@
 # Recraft v3
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `recraft-v3`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 

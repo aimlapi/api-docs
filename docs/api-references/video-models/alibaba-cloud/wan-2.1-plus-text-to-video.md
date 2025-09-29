@@ -1,10 +1,18 @@
 # Wan 2.1 Plus (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `alibaba/wan2.1-t2v-plus`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=alibaba/wan2.1-t2v-plus&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 A text-to-video (T2V) model that generates 720p silent video at \~30 FPS[^1].
 

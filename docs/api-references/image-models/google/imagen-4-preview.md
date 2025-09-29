@@ -1,10 +1,18 @@
 # Imagen 4 Preview
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/imagen4/preview`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=google/imagen4/preview&#x26;mode=image" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview <a href="#model-overview" id="model-overview"></a>
 

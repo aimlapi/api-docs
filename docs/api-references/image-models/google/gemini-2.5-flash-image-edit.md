@@ -1,10 +1,18 @@
 # Gemini 2.5 Flash Image Edit
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/gemini-2.5-flash-image-edit`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
