@@ -25,7 +25,7 @@
   },
   {
     "name": "reve/remix-edit-image",
-    "alias": "reve/remix-edit-image",
+    "alias": "eve/remix-edit-image",
     "category": "image-models",
     "vendor": "Reve"
   }
