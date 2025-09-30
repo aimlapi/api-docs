@@ -208,4 +208,7 @@ export default {
   sync_mode: {
     desc: `The synchronization mode for audio and video. Loose or tight are available.`,
   },
+  image_list: {
+    desc: `Array of image URLs (2-4 images) for multi-image-to-video generation.`,
+  }
 };
