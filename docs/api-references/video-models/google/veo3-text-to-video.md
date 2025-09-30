@@ -1,10 +1,18 @@
 # Veo 3 (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/veo3`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=google/veo3&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model generates high-quality short videos from text or image prompts with significant advancements over its predecessor, [Veo2](veo2-text-to-video.md).
 

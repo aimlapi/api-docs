@@ -1,10 +1,18 @@
 # Veo 2 (Image-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `veo2/image-to-video`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=veo2/image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced multimodal (image + text) AI model that transforms static images into high-quality, dynamic video content. It builds upon the success of Google's [Veo2 text-to-video](veo2-text-to-video.md) model, offering unprecedented control and realism in video generation from still images, faithful content preservation from source images, and intuitive motion generation with physics-aware movement.
 

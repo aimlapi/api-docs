@@ -17,13 +17,21 @@ layout:
 
 # Seedance 1.0 pro (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/seedance-1-0-pro-t2v`
 {% endhint %}
+{% endcolumn %}
 
-Generate professional video content (1080p) from text prompts in a minute — with the option to keep the camera fixed throughout the entire clip.
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=bytedance/seedance-1-0-pro-t2v&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
+Generate professional video content (720p) from text prompts in a minute — with the option to keep the camera fixed throughout the entire clip.
 
 ## Setup your API Key
 
@@ -49,7 +57,7 @@ Below, you can find both corresponding API schemas.
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
 {% hint style="info" %}
-Generation may take around 50-60 seconds for a 5-second video.
+Generation may take around 40-50 seconds for a 5-second video.
 {% endhint %}
 
 {% tabs %}

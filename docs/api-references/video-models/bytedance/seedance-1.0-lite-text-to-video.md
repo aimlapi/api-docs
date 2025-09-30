@@ -1,10 +1,18 @@
 # Seedance 1.0 lite (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/seedance-1-0-lite-t2v`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=bytedance/seedance-1-0-lite-t2v&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Generate professional video content from text prompts in minutes — with the option to keep the camera fixed throughout the entire clip.
 

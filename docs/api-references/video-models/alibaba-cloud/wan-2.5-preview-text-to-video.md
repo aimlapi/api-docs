@@ -2,11 +2,19 @@
 
 
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `alibaba/wan2.5-t2v-preview`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=alibaba/wan2.5-t2v-preview&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 This text-to-video model generates videos up to 1080p and can voice a character with full lip-sync by providing dialogue directly in the `prompt` parameter.
 

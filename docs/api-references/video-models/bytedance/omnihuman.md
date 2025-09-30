@@ -1,10 +1,18 @@
 # OmniHuman
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/omnihuman`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=bytedance/omnihuman&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced AI framework from ByteDance that generates realistic lip-sync videos from a single image and motion signals (audio). It supports multiple visual and audio styles and produces videos in any body proportion, with realism enhanced by motion, lighting, and texture details.
 

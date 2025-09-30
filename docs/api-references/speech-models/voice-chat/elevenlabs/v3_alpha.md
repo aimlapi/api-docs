@@ -51,7 +51,7 @@ Here is an example of generating an audio response to the user input provided in
 {% code overflow="wrap" %}
 ```python
 import os
-import reques
+import request
 
 
 def main():

@@ -1,10 +1,18 @@
 # Veo 2 (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `veo2`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=veo2&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Google’s cutting-edge AI model designed to generate highly realistic and cinematic video content from textual prompts or a combination of text and images. Leveraging advanced machine learning techniques, Veo2 excels in creating videos with natural motion, realistic physics, and professional-grade visual fidelity.
 

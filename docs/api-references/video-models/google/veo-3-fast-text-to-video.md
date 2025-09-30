@@ -1,10 +1,18 @@
 # Veo 3 Fast (Text-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/veo-3.0-fast`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=google/veo-3.0-fast&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model generates realistic 8-second 720p and 1080p videos with detailed visuals and audio. Optimized for speed and cost compared to the [Veo 3 (Text-to-Video)](veo3-text-to-video.md) model.
 

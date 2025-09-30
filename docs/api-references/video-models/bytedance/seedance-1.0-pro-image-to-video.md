@@ -18,11 +18,19 @@ layout:
 
 # Seedance 1.0 pro (Image-to-Video)
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `bytedance/seedance-1-0-pro-i2v`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=bytedance/seedance-1-0-pro-i2v&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Generate professional video content (1080p) from a reference image and text prompt in a minute — with the option to keep the camera fixed throughout the entire clip.
 
@@ -72,7 +80,7 @@ def generate_video():
         "model": "bytedance/seedance-1-0-pro-i2v",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "resolution": "1080p"      
+        "duration": "5"      
     }
  
     response = requests.post(url, json=data, headers=headers)
