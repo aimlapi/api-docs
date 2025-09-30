@@ -140,7 +140,7 @@
     * [flux/kontext-max/image-to-image](api-references/image-models/flux/flux-kontext-max-image-to-image.md)
     * [flux/kontext-pro/text-to-image](api-references/image-models/flux/flux-kontext-pro-text-to-image.md)
     * [flux/kontext-pro/image-to-image](api-references/image-models/flux/flux-kontext-pro-image-to-image.md)
-    * [flux/srpo](api-references/image-models/flux/flux-srpo.md)
+    * [flux/srpo/text-to-image](api-references/image-models/flux/flux-srpo-text-to-image.md)
     * [flux/srpo/image-to-image](api-references/image-models/flux/flux-srpo-image-to-image.md)
   * [Google](api-references/image-models/google/README.md)
     * [Imagen 3](api-references/image-models/google/imagen-3.0.md)
