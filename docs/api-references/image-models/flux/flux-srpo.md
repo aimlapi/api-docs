@@ -26,7 +26,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-
+{% openapi-operation spec="flux-srpo" path="/v1/images/generations" method="post" %}
+[OpenAPI flux-srpo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-srpo.json)
+{% endopenapi-operation %}
 
 ## Quick Example
 
