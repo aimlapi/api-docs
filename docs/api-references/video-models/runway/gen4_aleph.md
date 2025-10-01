@@ -1,10 +1,18 @@
 # gen4\_aleph
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `runway/gen4_aleph`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 This is a video-to-video model capable of either modifying the input video or generating the next shot in a story that begins in the input and continues based on your prompt. You can define camera angles and movements, alter the plot, change character appearances, or adjust the environment.
 

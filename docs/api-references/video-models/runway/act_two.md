@@ -1,12 +1,18 @@
 # act\_two
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `runway/act_two`
 {% endhint %}
+{% endcolumn %}
 
-## Overview
+{% column width="25%" %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 This video-to-video model lets you animate characters using reference performance videos. Simply provide a video of someone acting out a scene along with a character reference (image or video), and Act-Two will transfer the performance to your character — including natural motion, speech, and facial expressions.
 

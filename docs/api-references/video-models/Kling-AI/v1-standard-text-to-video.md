@@ -1,10 +1,18 @@
 # v1-standard/text-to-video
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `kling-video/v1/standard/text-to-video`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=kling-video/v1/standard/text-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 This model converts textual descriptions into high-quality video content. Maximum Video Length: 5 s.
 

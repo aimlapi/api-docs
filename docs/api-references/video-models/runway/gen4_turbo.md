@@ -1,10 +1,18 @@
 # gen4\_turbo
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `runway/gen4_turbo`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=runway/gen4_turbo&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 This release brings faster, more scalable AI video generation with higher visual quality. This version allows for 10-second video generation. Gen4 Turbo delivers realistic motion, coherent subjects and styles across frames, and high prompt fidelity, supported by strong world modeling.
 

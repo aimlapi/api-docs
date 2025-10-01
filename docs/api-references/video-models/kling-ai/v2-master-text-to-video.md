@@ -1,10 +1,18 @@
 # v2-master/text-to-video
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `klingai/v2-master-image-to-video`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=klingai/v2-master-image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Compared to [v1.6](v1.6-pro-text-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
 

@@ -1,10 +1,18 @@
 # v5/image-to-video
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `pixverse/v5/image-to-video`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=pixverse/v5/image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 This model provides faster image-to-video rendering with consistently sharp, realistic, and cinematic-quality results.
 

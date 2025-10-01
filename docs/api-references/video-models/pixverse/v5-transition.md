@@ -1,10 +1,18 @@
 # v5/transition
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `pixverse/v5/transition`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=pixverse/v5/transition&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 By specifying the first and last video frames as input, this image-to-video model is well suited for generating video scenes that can later be seamlessly edited into a complete clip in a video editor. Consistently sharp, realistic, and cinematic-quality results.
 

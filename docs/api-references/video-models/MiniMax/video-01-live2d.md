@@ -1,12 +1,20 @@
 # video-01-live2d
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `video-01-live2d`
 {% endhint %}
+{% endcolumn %}
 
-An innovative AI model designed for generating high-quality videos from text prompts or image. Developed by Hailou AI, this model can produce visually striking content with cinematic qualities, allowing users to create engaging videos quickly and efficiently.
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=video-01-live2d&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
+An innovative AI model designed for generating high-quality videos from text prompts or image. This model can produce visually striking content with cinematic qualities, allowing users to create engaging videos quickly and efficiently.
 
 ## Setup your API Key
 

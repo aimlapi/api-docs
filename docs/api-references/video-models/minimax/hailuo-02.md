@@ -1,10 +1,18 @@
 # hailuo-02
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `minimax/hailuo-02`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=minimax/hailuo-02&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Compared to earlier versions, this model brings enhanced physics, more natural camera movement, and better alignment with prompts. It currently supports 10-second clips at 768p, with native 1080p coming soon.
 

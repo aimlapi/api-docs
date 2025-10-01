@@ -4,11 +4,19 @@ description: 'Description of the gen3a_turbo model: Pricing, API Reference, Exam
 
 # gen3a\_turbo
 
+{% columns %}
+{% column width="75%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `gen3a_turbo`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=gen3a_turbo&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced AI model designed for converting images into high-quality videos. It allows users to generate dynamic video content with smooth motion and detailed textures from still images or text prompts, significantly enhancing creative workflows in multimedia production.
 
