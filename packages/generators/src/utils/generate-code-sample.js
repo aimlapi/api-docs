@@ -32,28 +32,36 @@ function generateCodeSample(fetchedModels, modelName) {
       python: `,
         "prompt": "Add a crown to the T-rex's head.",
         "${
-          modelName.includes('image-to-image') || modelName === 'triposr'
+          modelName.includes('image-to-image') ||
+          modelName.includes('edit-image') ||
+          modelName === 'triposr'
             ? 'image_url'
             : 'image'
         }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
       js: `,
       prompt: "Add a crown to the T-rex's head.",
       ${
-        modelName.includes('image-to-image') || modelName === 'triposr'
+        modelName.includes('image-to-image') ||
+        modelName.includes('edit-image') ||
+        modelName === 'triposr'
           ? 'image_url'
           : 'image'
       }: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',`,
       curl: `,
     "prompt": "Add a crown to the T-rexs head.",
     "${
-      modelName.includes('image-to-image') || modelName === 'triposr'
+      modelName.includes('image-to-image') ||
+      modelName.includes('edit-image') ||
+      modelName === 'triposr'
         ? 'image_url'
         : 'image'
     }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
       http: `,
   "prompt": "Add a crown to the T-rex's head.",
   "${
-    modelName.includes('image-to-image') || modelName === 'triposr'
+    modelName.includes('image-to-image') ||
+    modelName.includes('edit-image') ||
+    modelName === 'triposr'
       ? 'image_url'
       : 'image'
   }": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"`,
