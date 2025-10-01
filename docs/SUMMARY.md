@@ -159,6 +159,7 @@
     * [Recraft v3](api-references/image-models/RecraftAI/recraft-v3.md)
   * [Reve](api-references/image-models/reve/README.md)
     * [reve/create-image](api-references/image-models/reve/reve-create-image.md)
+    * [reve/edit-image](api-references/image-models/reve/reve-edit-image.md)
   * [Stability AI](api-references/image-models/Stability-AI/README.md)
     * [Stable Diffusion v3 Medium](api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
     * [Stable Diffusion v3.5 Large](api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
