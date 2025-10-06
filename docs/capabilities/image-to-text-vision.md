@@ -54,6 +54,7 @@ print(response.json())
 * [anthropic/claude-opus-4.1\
   claude-opus-4-1\
   claude-opus-4-1-20250805](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
+* [anthropic/claude-sonnet-4.5](../api-references/text-models-llm/anthropic/claude-4-sonnet-1.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
