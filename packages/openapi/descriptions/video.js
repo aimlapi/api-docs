@@ -26,11 +26,23 @@ export default {
       desc: `URL of the input image to animate. Should be 720p or higher resolution.`,
     },
     images: {
-        desc: `Reference images for dual-character effects (Base64 encoded or URL)`
-    }
+      desc: `Reference images for dual-character effects (Base64 encoded or URL)`,
+    },
+    sora: {
+      desc: `A URL or a Base64-encoded image file used as the initial frame for video generation.
+The image dimensions must match the selected video resolution and aspect ratio.
+Supported configurations include:
+720p with aspect ratios:
+- 16:9 — 1280x720
+- 9:16 — 720x1280
+
+1080p with aspect ratios:
+- 16:9 — 1792x1024
+- 9:16 — 1024x1792`,
+    },
   },
   first_image_url: {
-      desc: `URL of the image to be used as the first frame of the video.`,
+    desc: `URL of the image to be used as the first frame of the video.`,
   },
   last_image_url: {
     default: {
@@ -170,7 +182,7 @@ export default {
     desc: `The style of the generated video.`,
   },
   num_frames: {
-    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`
+    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`,
   },
   match_input_frames_per_second: {
     desc: `Whether to match the input video's frames per second (FPS).`,
@@ -210,5 +222,5 @@ export default {
   },
   image_list: {
     desc: `Array of image URLs (2-4 images) for multi-image-to-video generation.`,
-  }
+  },
 };
