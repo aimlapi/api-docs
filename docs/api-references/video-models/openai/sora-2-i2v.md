@@ -1,0 +1,299 @@
+# sora-2-i2v
+
+{% columns %}
+{% column width="75%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `openai/sora-2-i2v`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="25%" %}
+<a href="https://aimlapi.com/app/?model=openai/sora-2-i2v&#x26;mode=video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
+Sora 2 is new powerful media generation model, generating videos with synced audio
+
+## Setup your API Key
+
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## How to Make a Call
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
+Generating a video using this model involves sequentially calling two endpoints:&#x20;
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+
+Below, you can find both corresponding API schemas.
+
+</details>
+
+## Full Example: Generating and Retrieving the Video From the Server
+
+The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import time
+
+# Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>"
+
+# Creating and sending a video generation task to the server
+def generate_video():
+    url = "https://api.aimlapi.com/v2/video/generations"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+
+    data = {
+        "model": "openai/sora-2-i2v",
+        "prompt": "She turns around and smiles, then slowly walks out of the frame.",
+        "image_url": "https://cdn.openai.com/API/docs/images/sora/woman_skyline_original_720p.jpeg",
+        "resolution": "720p",
+        "duration": 4
+    }
+ 
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        print(response_data)
+        return response_data
+    
+
+# Requesting the result of the task from the server using the generation_id
+def get_video(gen_id):
+    url = "https://api.aimlapi.com/v2/video/generations"
+    params = {
+        "generation_id": gen_id,
+    }
+    
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+        "Content-Type": "application/json"
+        }
+
+    response = requests.get(url, params=params, headers=headers)
+    return response.json()
+
+
+def main():
+    # Generate video
+    gen_response = generate_video()
+    gen_id = gen_response.get("id")
+    print("Generation ID:  ", gen_id)
+
+    # Try to retrieve the video from the server every 10 sec
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 600
+        while time.time() - start_time < timeout:
+            response_data = get_video(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+            print("Status:", status)
+
+            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
+                print("Still waiting... Checking again in 10 seconds.")
+                time.sleep(10)
+            else:
+                print("Processing complete:/n", response_data)
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None     
+
+
+if __name__ == "__main__":
+    main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+const apiKey = '<YOUR_AIMLAPI_KEY>';
+
+// Creating and sending a video generation task to the server
+async function generateVideo() {
+  const url = 'https://api.aimlapi.com/v2/video/generations';
+
+  const data = {
+    model: 'openai/sora-2-i2v',
+    prompt: 'She turns around and smiles, then slowly walks out of the frame.',
+    image_url:
+      'https://cdn.openai.com/API/docs/images/sora/woman_skyline_original_720p.jpeg',
+    resolution: '720p',
+    aspect_ratio: '16:9',
+    duration: 4,
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`Error: ${response.status} - ${errorText}`);
+      return null;
+    }
+
+    const responseData = await response.json();
+    console.log(responseData);
+    return responseData;
+  } catch (error) {
+    console.error('Request failed:', error);
+    return null;
+  }
+}
+
+// Requesting the result of the task from the server using the generation_id
+async function getVideo(genId) {
+  const url = new URL('https://api.aimlapi.com/v2/video/generations');
+  url.searchParams.append('generation_id', genId);
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching video:', error);
+    return null;
+  }
+}
+
+// Initiates video generation and checks the status every 10 seconds until completion or timeout
+async function main() {
+  const genResponse = await generateVideo();
+  if (!genResponse) return;
+
+  const genId = genResponse.id;
+  console.log('Generation ID:', genId);
+
+  if (genId) {
+    const timeout = 600 * 1000; // 10 minutes
+    const startTime = Date.now();
+
+    while (Date.now() - startTime < timeout) {
+      const responseData = await getVideo(genId);
+
+      if (!responseData) {
+        console.error('Error: No response from API');
+        break;
+      }
+
+      const status = responseData.status;
+      console.log('Status:', status);
+
+      if (['waiting', 'active', 'queued', 'generating'].includes(status)) {
+        console.log('Still waiting... Checking again in 10 seconds.');
+        await new Promise((resolve) => setTimeout(resolve, 10000));
+      } else {
+        console.log('Processing complete:\n', responseData);
+        return responseData;
+      }
+    }
+
+    console.log('Timeout reached. Stopping.');
+  }
+}
+
+main();
+
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Generation ID: video_68e572c03d08819188f79439891f6f280590a37b858cba30:openai/sora-2-i2v
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: queued
+Still waiting... Checking again in 10 seconds.
+Status: queued
+Still waiting... Checking again in 10 seconds.
+...
+Processing complete:
+ {
+  id: 'video_68e572c03d08819188f79439891f6f280590a37b858cba30:openai/sora-2-i2v',
+  status: 'completed',
+  video: {
+    url: 'https://cdn.aimlapi.com/generations/hedgehog/1759867684272-d7a19473-8f19-421e-9bde-cf1d206c68e5.mp4'
+  }
+}
+```
+{% endcode %}
+
+</details>
+
+**Processing time**: \~1.5 min.
+
+**Low-res GIF preview**:
+
+<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-1f9deb6add98fd.gif" alt=""><figcaption><p><code>"She turns around and smiles, then slowly walks out of the frame."</code></p></figcaption></figure></div>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+\
+<mark style="background-color:$warning;">The provided image dimensions must match the selected video resolution and aspect ratio.</mark>
+
+<mark style="background-color:$warning;">Supported configurations include:</mark>
+
+* <mark style="background-color:$warning;">**720p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
+  * <mark style="background-color:$warning;">16:9 — 1280×720</mark>
+  * <mark style="background-color:$warning;">9:16 — 720×1280</mark>
+
+{% openapi-operation spec="sora-2-i2v" path="/v2/video/generations" method="post" %}
+[OpenAPI sora-2-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-i2v.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
+[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
+{% endopenapi-operation %}
