@@ -128,6 +128,9 @@ export default {
     bytedance: {
       desc: `An enumeration where the short side of the video frame determines the resolution.`,
     },
+    veed: {
+      desc: `The resolution of the generated video. Available options are 480p, and 720p.`,
+    }
   },
   watermark: {
     desc: `Whether the video contains a watermark.`,
