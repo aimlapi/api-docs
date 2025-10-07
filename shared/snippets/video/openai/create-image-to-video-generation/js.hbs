@@ -1,0 +1,20 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'She turns around and smiles, then slowly walks out of the frame.',
+      image_url: 'https://cdn.openai.com/API/docs/images/sora/woman_skyline_original_720p.jpeg',
+      resolution: '720p',
+      aspect_ratio: '16:9',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
