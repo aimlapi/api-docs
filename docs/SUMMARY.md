@@ -184,7 +184,7 @@
     * [Wan 2.2 vace fun 14b outpainting (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-outpainting-image-to-video.md)
     * [Wan 2.2 vace fun 14b inpainting (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-inpainting-image-to-video.md)
     * [Wan 2.2 vace fun 14b pose (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-pose-image-to-video.md)
-    * [Wan 2.2 vace fun 14b depth (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-pose-image-to-video-1.md)
+    * [Wan 2.2 vace fun 14b depth (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-depth-image-to-video.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
     * [Seedance 1.0 lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
