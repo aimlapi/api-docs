@@ -175,9 +175,16 @@
     * [Wan 2.1 Plus (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-plus-text-to-video.md)
     * [Wan 2.1 Turbo (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-turbo-text-to-video.md)
     * [Wan 2.2 Plus (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.2-plus-text-to-video.md)
-    * [Wan 2.2 Plus (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.2-plus-image-to-video.md)
     * [Wan 2.5 Preview (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.5-preview-text-to-video.md)
+    * [Wan 2.2 Plus (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.2-plus-image-to-video.md)
     * [Wan 2.5 Preview (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.5-preview-image-to-video.md)
+    * [Wan 2.2 14b animate replace (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.2-14b-animate-replace-image-to-video.md)
+    * [Wan 2.2 14b animate move (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.2-14b-animate-move-image-to-video.md)
+    * [Wan 2.2 vace fun 14b reframe (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-reframe-image-to-video.md)
+    * [Wan 2.2 vace fun 14b outpainting (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-outpainting-image-to-video.md)
+    * [Wan 2.2 vace fun 14b inpainting (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-inpainting-image-to-video.md)
+    * [Wan 2.2 vace fun 14b pose (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-pose-image-to-video.md)
+    * [Wan 2.2 vace fun 14b depth (Image-to-Video)](api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-pose-image-to-video-1.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
     * [Seedance 1.0 lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
@@ -398,3 +405,7 @@
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
 * [Toolhouse](integrations/toolhouse.md)
+
+***
+
+* [video link](video-link.md)
