@@ -1,8 +1,8 @@
 [
   {
-    "name": "meta-llama/llama-3.3-70b-versatile",
-    "alias": "llama-3.3-70b-versatile",
+    "name": "zhipu/glm-4.6",
+    "alias": "glm-4.6",
     "category": "text-models-llm",
-    "vendor": "Meta"
+    "vendor": "Zhipu"
   }
 ]
