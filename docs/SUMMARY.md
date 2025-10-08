@@ -218,7 +218,7 @@
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
     * [hailuo-02](api-references/video-models/minimax/hailuo-02.md)
-  * [OpenAi](api-references/video-models/openai/README.md)
+  * [OpenAI](api-references/video-models/openai/README.md)
     * [sora-2-t2v](api-references/video-models/openai/sora-2-t2v.md)
     * [sora-2-i2v](api-references/video-models/openai/sora-2-i2v.md)
     * [sora-2-pro-t2v](api-references/video-models/openai/sora-2-pro-t2v.md)
