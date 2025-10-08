@@ -34,3 +34,4 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [zhipu/glm-4.6](../api-references/text-models-llm/zhipu/glm-4.5-1.md)

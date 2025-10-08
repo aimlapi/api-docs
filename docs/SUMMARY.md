@@ -123,6 +123,7 @@
   * [Zhipu](api-references/text-models-llm/zhipu/README.md)
     * [glm-4.5-air](api-references/text-models-llm/zhipu/glm-4.5-air.md)
     * [glm-4.5](api-references/text-models-llm/zhipu/glm-4.5.md)
+    * [glm-4.6](api-references/text-models-llm/zhipu/glm-4.5-1.md)
 * [Image Models](api-references/image-models/README.md)
   * [Alibaba Cloud](api-references/image-models/alibaba-cloud/README.md)
     * [qwen-image](api-references/image-models/alibaba-cloud/qwen-image.md)
