@@ -170,6 +170,8 @@
   * [Stability AI](api-references/image-models/Stability-AI/README.md)
     * [Stable Diffusion v3 Medium](api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
     * [Stable Diffusion v3.5 Large](api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
+  * [Tencent](api-references/image-models/tencent/README.md)
+    * [Hunyuan Image V3](api-references/image-models/tencent/hunyuan-image-v3-text-to-image.md)
 * [Video Models](api-references/video-models/README.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 Plus (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-plus-text-to-video.md)
