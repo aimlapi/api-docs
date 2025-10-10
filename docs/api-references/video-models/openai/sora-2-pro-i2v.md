@@ -57,7 +57,7 @@ def generate_video():
     }
 
     data = {
-        "model": "openai/sora-pro-2-i2v",
+        "model": "openai/sora-2-pro-i2v",
         "prompt": "She turns around and smiles, then slowly walks out of the frame.",
         "image_url": "https://cdn.openai.com/API/docs/images/sora/woman_skyline_original_720p.jpeg",
         "resolution": "720p",
