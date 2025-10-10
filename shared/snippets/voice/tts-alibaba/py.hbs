@@ -1,0 +1,22 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/tts"
+    headers = {
+        "Authorization": "Bearer {{apiKey}}",
+    }
+    payload = {
+        "model": "{{model}}",
+        "text": "Qwen3 Speech Synthesis offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.",
+        "voice": "Cherry"
+    }
+
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+
+    print("Audio URL:", data["audio"]["url"])
+    print("Characters:", data["usage"]["characters"])
+
+
+main()

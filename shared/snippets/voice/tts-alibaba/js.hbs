@@ -1,0 +1,19 @@
+const axios = require('axios').default;
+
+const api = axios.create({
+  baseURL: '{{baseUrl}}',
+  headers: { Authorization: 'Bearer {{apiKey}}' },
+});
+
+const main = async () => {
+  const response = await api.post('/tts', {
+    model: '{{model}}',
+    text: 'Qwen3 Speech Synthesis offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.',
+    voice: 'Cherry',
+  });
+
+  console.log('Audio URL:', response.data.audio.url);
+  console.log('Characters:', response.data.usage.characters);
+};
+
+main();
