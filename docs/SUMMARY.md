@@ -413,7 +413,3 @@
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
 * [Toolhouse](integrations/toolhouse.md)
-
-***
-
-* [video link](video-link.md)
