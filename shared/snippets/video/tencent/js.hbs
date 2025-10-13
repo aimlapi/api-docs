@@ -1,0 +1,18 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      video_url: 'https://storage.googleapis.com/falserverless/model_tests/video_models/1_video.mp4',
+      prompt: 'A person walks on frozen ice',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
