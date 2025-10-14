@@ -64,7 +64,7 @@ def generate_video():
         "model": "pixverse/v5/text-to-video",
         "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.",
         "resolution": "1080p",
-        "duration": "5"
+        "duration": 5
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -147,7 +147,7 @@ function generateVideo(callback) {
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
 `,
         resolution: '1080p',
-        duration: '5',
+        duration: 5,
     });
 
     const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);

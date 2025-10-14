@@ -62,7 +62,7 @@ def generate_video():
         "model": "pixverse/v5/image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "duration": "5"      
+        "duration": 5     
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -147,7 +147,7 @@ function generateVideo(callback) {
     model: "pixverse/v5/image-to-video",
     prompt: "Mona Lisa puts on glasses with her hands.",
     image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    duration: "5",
+    duration: 5,
   });
 
   const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);
