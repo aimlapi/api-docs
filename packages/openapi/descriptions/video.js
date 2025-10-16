@@ -57,6 +57,9 @@ Supported configurations include:
   },
   ratio: {
     desc: `The aspect ratio of the generated video.`,
+    veo_3_1: {
+      desc: `The aspect ratio of the generated video. The value 1:1 is only available when the resolution parameter is set to 720p.`,
+    },
   },
   seed: {
     desc: `Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen.`,
