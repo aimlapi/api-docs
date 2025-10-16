@@ -1,26 +1,38 @@
 [
   {
-    "name": "alibaba/qwen3-tts-flash",
-    "alias": "qwen3-tts-flash",
-    "category": "speech-models",
-    "vendor": "Alibaba Cloud"
-  },
-  {
-    "name": "alibaba/qwen3-omni-30b-a3b-captioner",
-    "alias": "qwen3-omni-30b-a3b-captioner",
+    "name": "claude-sonnet-4-5",
+    "alias": "claude-sonnet-4.5",
     "category": "text-models-llm",
-    "vendor": "Alibaba Cloud"
+    "vendor": "Anthropic"
   },
   {
-    "name": "veed/fabric-1.0",
-    "alias": "fabric-1.0",
-    "category": "video-models",
-    "vendor": "VEED"
+    "name": "claude-sonnet-4-5-20250929",
+    "alias": "claude-sonnet-4.5",
+    "category": "text-models-llm",
+    "vendor": "Anthropic"
   },
   {
-    "name": "veed/fabric-1.0-fast",
-    "alias": "ffabric-1.0-fast",
-    "category": "video-models",
-    "vendor": "VEED"
+    "name": "anthropic/claude-sonnet-4.5",
+    "alias": "claude-sonnet-4.5",
+    "category": "text-models-llm",
+    "vendor": "Anthropic"
+  },
+  {
+    "name": "claude-haiku-4-5",
+    "alias": "claude-haiku-4.5",
+    "category": "text-models-llm",
+    "vendor": "Anthropic"
+  },
+  {
+    "name": "anthropic/claude-haiku-4.5",
+    "alias": "claude-haiku-4.5",
+    "category": "text-models-llm",
+    "vendor": "Anthropic"
+  },
+  {
+    "name": "claude-haiku-4-5-20251001",
+    "alias": "claude-haiku-4.5",
+    "category": "text-models-llm",
+    "vendor": "Anthropic"
   }
 ]
