@@ -9,6 +9,9 @@ export default {
     flux_kontext: {
       desc: `Number of image variations to generate. Each image is a different attempt to combine the reference images (from the image_url parameter) according to the prompt.`,
     },
+    flux_realism: {
+      desc: `The number of images to generate. This is always set to 1 for streaming output. Default value: 1`,
+    },
   },
   seed: {
     desc: `The same seed and the same prompt given to the same version of the model will output the same image every time.`,
