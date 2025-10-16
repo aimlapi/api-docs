@@ -1,6 +1,7 @@
 # Cursor
 
-This guide explains how to connect **AI/ML API** to **Cursor** using the **Azure OpenAI–compatible** flow. You’ll get a clean setup with **one endpoint**, support for **slashes in deployment names**,
+This guide explains how to connect **AI/ML API** to **Cursor** using the **Azure OpenAI-compatible** flow. \
+You’ll get a clean setup with **one endpoint**, support for **slashes in deployment names**.
 
 ### 🚀 Quick Setup
 
