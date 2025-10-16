@@ -306,7 +306,7 @@ Processing complete:/n {'id': 'cgt-20250718224736-699sq', 'status': 'completed',
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/seedance-1-0-pro-t2v_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/seedance-1-0-pro-t2v_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain,</code> <br><code>then rushes toward the camera with its jaws open, revealing massive fangs.</code> <br><code>We see it's coming."</code></p></figcaption></figure></div>
 
 ## API Schemas
 
