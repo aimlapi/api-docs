@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-Sora 2 is new powerful media generation model, generating videos with synced audio
+Sora 2 is new powerful media generation model, generating videos with synced audio.
 
 ## Setup your API Key
 
