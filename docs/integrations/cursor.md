@@ -6,7 +6,9 @@ This guide explains how to connect **AI/ML API** to **Cursor** using the **Azure
 
 <table><thead><tr><th width="248">Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td><code>https://api.aimlapi.com</code></td></tr><tr><td><strong>API Key</strong></td><td>Your AI/ML API key (create at <a href="https://aimlapi.com/app/keys">aimlapi.com/app/keys</a>)</td></tr><tr><td><strong>Deployment</strong></td><td><code>google/gemini-2.5-pro</code> <em>(slashes allowed)</em></td></tr><tr><td><strong>Alias (Model ID)</strong></td><td><code>gpt-4o</code> <em>(Bypasses the restriction and makes Cursor work with any mode</em>l<em>)</em></td></tr></tbody></table>
 
-⚠️ Do **not** add `/v2/azure` or `/openai` to the Base URL.
+{% hint style="warning" %}
+Do **not** add `/v2/azure` or `/openai` to the Base URL.
+{% endhint %}
 
 ***
 
