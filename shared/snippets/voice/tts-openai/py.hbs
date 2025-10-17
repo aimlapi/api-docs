@@ -1,0 +1,22 @@
+import requests
+
+
+def main():
+    url = "{{baseUrl}}/tts"
+    headers = {
+        "Authorization": "Bearer {{apiKey}}",
+    }
+    payload = {
+        "model": "{{model}}",
+        "text": "OpenAI TTS are fast and powerful language models. Use it to convert text to natural sounding spoken text.",
+        "voice": "coral"
+    }
+
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+
+    print("Audio URL:", data["audio"]["url"])
+    print("Characters:", data["usage"]["characters"])
+
+
+main()

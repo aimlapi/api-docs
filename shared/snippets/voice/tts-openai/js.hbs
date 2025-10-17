@@ -1,0 +1,19 @@
+const axios = require('axios').default;
+
+const api = axios.create({
+  baseURL: '{{baseUrl}}',
+  headers: { Authorization: 'Bearer {{apiKey}}' },
+});
+
+const main = async () => {
+  const response = await api.post('/tts', {
+    model: '{{model}}',
+    text: 'OpenAI TTS are fast and powerful language models. Use it to convert text to natural sounding spoken text.',
+    voice: 'coral',
+  });
+
+  console.log('Audio URL:', response.data.audio.url);
+  console.log('Characters:', response.data.usage.characters);
+};
+
+main();
