@@ -40,6 +40,7 @@
     * [Claude 4 Sonnet](api-references/text-models-llm/anthropic/claude-4-sonnet.md)
     * [Claude 4.1 Opus](api-references/text-models-llm/anthropic/claude-opus-4.1.md)
     * [Claude 4.5 Sonnet](api-references/text-models-llm/anthropic/claude-4-5-sonnet.md)
+    * [Claude 4.5 Haiku](api-references/text-models-llm/anthropic/claude-4.5-haiku.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
     * [command-a](api-references/text-models-llm/cohere/command-a.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)

@@ -1,12 +1,10 @@
-# Claude 4.5 Sonnet
+# Claude 4.5 Haiku
 
-
-
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:   </p><ul><li><code>claude-sonnet-4-5</code></li><li><code>anthropic/claude-sonnet-4-5</code></li><li><code>claude-sonnet-4-5-20250929</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-sonnet-4-20250514&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><p></p><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:   </p><ul><li><code>claude-haiku-4-5</code></li><li><code>anthropic/claude-haiku-4.5</code></li><li><code>claude-haiku-4-5-20251001</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-haiku-4-5-20251001&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-A major improvement over [Claude 4 Sonnet,](claude-4-sonnet.md) offering better coding abilities, stronger reasoning, and more accurate responses to your instructions.
+The model offers coding performance comparable to [Claude Sonnet 4](claude-4-sonnet.md), but at one-third the cost and more than twice the speed.
 
 ## How to Make a Call
 
@@ -21,7 +19,7 @@ A major improvement over [Claude 4 Sonnet,](claude-4-sonnet.md) offering better 
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](claude-4-5-sonnet.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](claude-4.5-haiku.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -30,7 +28,7 @@ At the bottom of this page, you'll find [a code example](claude-4-5-sonnet.md#co
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-4-5-sonnet.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-4.5-haiku.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -44,8 +42,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="anthropic-claude-sonnet-4-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI anthropic-claude-sonnet-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-4.5.json)
+{% openapi-operation spec="claude-haiku-4-5" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-haiku-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-haiku-4.5.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -65,7 +63,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"anthropic/claude-sonnet-4.5",
+        "model":"anthropic/claude-haiku-4.5",
         "messages":[
             {
                 "role":"user",
@@ -95,7 +93,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4.5',
+        model: 'anthropic/claude-haiku-4.5',
         messages:[
             {
                 role:'user',
@@ -132,26 +130,26 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "msg_011MNbgezv2p5BBE9RvnsZV9",
+  "id": "msg_01HbdLU9f78VAHxuYZ7Qp9Y1",
   "object": "chat.completion",
-  "model": "claude-sonnet-4-20250514",
+  "model": "claude-haiku-4-5-20251001",
   "choices": [
     {
       "index": 0,
       "message": {
         "reasoning_content": "",
-        "content": "Hello! How are you doing today? Is there anything I can help you with?",
+        "content": "Hello! 👋 How can I help you today?",
         "role": "assistant"
       },
       "finish_reason": "end_turn",
       "logprobs": null
     }
   ],
-  "created": 1748522617,
+  "created": 1760650965,
   "usage": {
-    "prompt_tokens": 50,
-    "completion_tokens": 630,
-    "total_tokens": 680
+    "prompt_tokens": 8,
+    "completion_tokens": 16,
+    "total_tokens": 24
   }
 }
 ```
