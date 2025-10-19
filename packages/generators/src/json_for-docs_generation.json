@@ -1,38 +1,44 @@
 [
   {
-    "name": "claude-sonnet-4-5",
-    "alias": "claude-sonnet-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-t2v",
+    "alias": "veo-3.1-t2v",
+    "category": "video-models",
+    "vendor": "Google"
   },
   {
-    "name": "claude-sonnet-4-5-20250929",
-    "alias": "claude-sonnet-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-t2v-fast",
+    "alias": "veo-3.1-t2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
   },
   {
-    "name": "anthropic/claude-sonnet-4.5",
-    "alias": "claude-sonnet-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-i2v",
+    "alias": "veo-3.1-i2v",
+    "category": "video-models",
+    "vendor": "Google"
   },
   {
-    "name": "claude-haiku-4-5",
-    "alias": "claude-haiku-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-i2v-fast",
+    "alias": "veo-3.1-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
   },
   {
-    "name": "anthropic/claude-haiku-4.5",
-    "alias": "claude-haiku-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-reference-to-video",
+    "alias": "veo-3.1-reference-to-video",
+    "category": "video-models",
+    "vendor": "Google"
   },
   {
-    "name": "claude-haiku-4-5-20251001",
-    "alias": "claude-haiku-4.5",
-    "category": "text-models-llm",
-    "vendor": "Anthropic"
+    "name": "google/veo-3.1-first-last-image-to-video",
+    "alias": "veo-3.1-first-last-image-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-first-last-image-to-video-fast",
+    "alias": "veo-3.1-first-last-image-to-video-fast",
+    "category": "video-models",
+    "vendor": "Google"
   }
 ]
