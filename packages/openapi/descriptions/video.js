@@ -54,6 +54,9 @@ Supported configurations include:
   },
   duration: {
     desc: `The length of the output video in seconds.`,
+    pixverse: {
+      desc: `The output video length in seconds. The 1080p quality option does not support 8-second videos.`,
+    },
   },
   ratio: {
     desc: `The aspect ratio of the generated video.`,
@@ -148,7 +151,7 @@ Supported configurations include:
     },
     veed: {
       desc: `The resolution of the generated video. Available options are 480p, and 720p.`,
-    }
+    },
   },
   watermark: {
     desc: `Whether the video contains a watermark.`,
