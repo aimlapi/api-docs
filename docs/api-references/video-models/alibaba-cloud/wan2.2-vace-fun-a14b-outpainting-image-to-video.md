@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-Vace is a video generation model that combines a source image, mask, and reference video to produce prompted videos with precise source control.
+A video generation model that combines a source image, mask, and reference video to produce prompted videos with precise source control.
 
 ## Setup your API Key
 
