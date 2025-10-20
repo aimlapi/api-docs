@@ -83,7 +83,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Image](api-references/video-models/alibaba-cloud/)    [Video](api-references/image-models/alibaba-cloud/)
+**Alibaba Cloud**:  [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/)    [Image](api-references/video-models/alibaba-cloud/)    [Video](api-references/image-models/alibaba-cloud/)    [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/)
 
 **Anthracite**:    [Text/Chat](api-references/text-models-llm/Anthracite/)
 
@@ -111,9 +111,13 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Meta**:    [Text/Chat](api-references/text-models-llm/Meta/)
 
+**Microsoft**:    [Text-to-Speech](api-references/speech-models/text-to-speech/microsoft/)
+
 <mark style="background-color:green;">**MiniMax**</mark>:    [Text/Chat](api-references/text-models-llm/MiniMax/)   [Video](api-references/video-models/MiniMax/)   [Music](api-references/music-models/MiniMax/)   [Voice-Chat](api-references/speech-models/voice-chat/)
 
 **Mistral AI**:    [Text/Chat](api-references/text-models-llm/Mistral-AI/)   [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
+
+**Moonshot**:    [Text/Chat](api-references/text-models-llm/moonshot/)
 
 **NousResearch**:     [Text/Chat](api-references/text-models-llm/nousresearch/)
 
