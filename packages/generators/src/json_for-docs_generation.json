@@ -1,44 +1,20 @@
 [
   {
-    "name": "google/veo-3.1-t2v",
-    "alias": "veo-3.1-t2v",
-    "category": "video-models",
-    "vendor": "Google"
+    "name": "openai/gpt-4o-mini-tts",
+    "alias": "gpt-4o-mini-tts",
+    "category": "speech-models",
+    "vendor": "OpenAI"
   },
   {
-    "name": "google/veo-3.1-t2v-fast",
-    "alias": "veo-3.1-t2v-fast",
-    "category": "video-models",
-    "vendor": "Google"
+    "name": "openai/tts-1",
+    "alias": "tts-1",
+    "category": "speech-models",
+    "vendor": "OpenAI"
   },
   {
-    "name": "google/veo-3.1-i2v",
-    "alias": "veo-3.1-i2v",
-    "category": "video-models",
-    "vendor": "Google"
-  },
-  {
-    "name": "google/veo-3.1-i2v-fast",
-    "alias": "veo-3.1-i2v-fast",
-    "category": "video-models",
-    "vendor": "Google"
-  },
-  {
-    "name": "google/veo-3.1-reference-to-video",
-    "alias": "veo-3.1-reference-to-video",
-    "category": "video-models",
-    "vendor": "Google"
-  },
-  {
-    "name": "google/veo-3.1-first-last-image-to-video",
-    "alias": "veo-3.1-first-last-image-to-video",
-    "category": "video-models",
-    "vendor": "Google"
-  },
-  {
-    "name": "google/veo-3.1-first-last-image-to-video-fast",
-    "alias": "veo-3.1-first-last-image-to-video-fast",
-    "category": "video-models",
-    "vendor": "Google"
+    "name": "openai/tts-1-hd",
+    "alias": "tts-1-hd",
+    "category": "speech-models",
+    "vendor": "OpenAI"
   }
 ]

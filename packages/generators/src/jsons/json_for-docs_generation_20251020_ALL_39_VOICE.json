@@ -1,0 +1,236 @@
+[
+  {
+    "name": "aai/slam-1",
+    "alias": "slam-1",
+    "category": "speech-models",
+    "vendor": "AssemblyAI"
+  },
+  {
+    "name": "aai/universal",
+    "alias": "universal",
+    "category": "speech-models",
+    "vendor": "AssemblyAI"
+  },
+  {
+    "name": "#g1_nova-2-general",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-meeting",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-phonecall",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-voicemail",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-finance",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-conversationalai",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-video",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-medical",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-drivethru",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_nova-2-automotive",
+    "alias": "nova-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_whisper-large",
+    "alias": "whisper-large",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "#g1_whisper-medium",
+    "alias": "whisper-medium",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "#g1_whisper-small",
+    "alias": "whisper-small",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "#g1_whisper-tiny",
+    "alias": "whisper-tiny",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "#g1_whisper-base",
+    "alias": "whisper-base",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/gpt-4o-mini-tts",
+    "alias": "gpt-4o-mini-tts",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/tts-1",
+    "alias": "tts-1",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/tts-1-hd",
+    "alias": "tts-1-hd",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "#g1_aura-asteria-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-hera-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-luna-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-stella-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-athena-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-zeus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-orion-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-arcas-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-perseus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-angus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-orpheus-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-helios-en",
+    "alias": "aura",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "minimax/speech-2.5-turbo-preview",
+    "alias": "speech-2.5-turbo-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/speech-2.5-hd-preview",
+    "alias": "speech-2.5-hd-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "elevenlabs/v3_alpha",
+    "alias": "v3_alpha",
+    "category": "speech-models",
+    "vendor": "elevenlabs"
+  },
+  {
+    "name": "elevenlabs/eleven_multilingual_v2",
+    "alias": "eleven_multilingual_v2",
+    "category": "speech-models",
+    "vendor": "ElevenLabs"
+  },
+  {
+    "name": "elevenlabs/eleven_turbo_v2_5",
+    "alias": "eleven_turbo_v2_5",
+    "category": "speech-models",
+    "vendor": "ElevenLabs"
+  },
+  {
+    "name": "microsoft/vibevoice-1.5b",
+    "alias": "vibevoice-1.5b",
+    "category": "speech-models",
+    "vendor": "Microsoft"
+  },
+  {
+    "name": "microsoft/vibevoice-7b",
+    "alias": "vibevoice-7b",
+    "category": "speech-models",
+    "vendor": "Microsoft"
+  }
+]
