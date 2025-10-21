@@ -1,20 +1,14 @@
 [
   {
-    "name": "openai/gpt-4o-mini-tts",
-    "alias": "gpt-4o-mini-tts",
-    "category": "speech-models",
-    "vendor": "OpenAI"
+    "name": "deepseek/deepseek-reasoner-v3.1-terminus",
+    "alias": "deepseek-reasoner-v3.1-terminus",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek"
   },
   {
-    "name": "openai/tts-1",
-    "alias": "tts-1",
-    "category": "speech-models",
-    "vendor": "OpenAI"
-  },
-  {
-    "name": "openai/tts-1-hd",
-    "alias": "tts-1-hd",
-    "category": "speech-models",
-    "vendor": "OpenAI"
+    "name": "deepseek/deepseek-non-reasoner-v3.1-terminus",
+    "alias": "deepseek-non-reasoner-v3.1-terminus",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek"
   }
 ]
