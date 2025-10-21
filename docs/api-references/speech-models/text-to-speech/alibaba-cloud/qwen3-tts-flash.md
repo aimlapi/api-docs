@@ -1,9 +1,9 @@
 # qwen3-tts-flash
 
-
-
 {% hint style="info" %}
-This documentation is valid for the following model:   `alibaba/qwen3-tts-flash`
+This documentation is valid for the following model: &#x20;
+
+* &#x20;`alibaba/qwen3-tts-flash`
 {% endhint %}
 
 Qwen Speech Synthesis offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.
@@ -72,7 +72,8 @@ if __name__ == "__main__":
 
 <summary>Response</summary>
 
-```
+{% code overflow="wrap" %}
+```json5
 {
     "audio": {
         "url": "http://dashscope-result-sgp.oss-ap-southeast-1.aliyuncs.com/1d/4c/20251009/534f63ee/99d6a019-a643-4ea1-aa6b-305159fb5aad.wav?Expires=1760081011&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=zLYxBBu34wIrRbvSMX0LsIDv1F8%3D"
@@ -82,12 +83,9 @@ if __name__ == "__main__":
     }
 }
 ```
+{% endcode %}
 
 </details>
-
-Listen to the dialogue we generated:
-
-To embed an audio file using the provided URL, you can use the HTML `<audio>` tag within your markdown like this:
 
 ## API Schema
 
