@@ -261,6 +261,26 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID: 0a3ca8ba-9af6-41d3-a938-41f762fcedc1:sber-ai/kandinsky5-distill-t2v
+Status: queued
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:
+ {
+  id: '0a3ca8ba-9af6-41d3-a938-41f762fcedc1:sber-ai/kandinsky5-distill-t2v',
+  status: 'completed',
+  video: {
+    url: 'https://cdn.aimlapi.com/flamingo/files/b/koala/yHNhY22wNAnpCbSqIaV8D_output.mp4'
+  }
+}
 ```
 {% endcode %}
 
