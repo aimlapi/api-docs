@@ -196,7 +196,7 @@ Supported configurations include:
   num_frames: {
     desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`,
     krea: {
-      desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 6, 18, 30, 42, etc`,
+      desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 18, 30, 42, etc`,
     },
   },
   match_input_frames_per_second: {
