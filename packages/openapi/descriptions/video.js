@@ -195,6 +195,9 @@ Supported configurations include:
   },
   num_frames: {
     desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`,
+    krea: {
+      desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 6, 18, 30, 42, etc`,
+    },
   },
   match_input_frames_per_second: {
     desc: `Whether to match the input video's frames per second (FPS).`,
@@ -237,5 +240,8 @@ Supported configurations include:
   },
   auto_fix: {
     desc: `Whether to automatically attempt to fix prompts that fail content policy or other validation checks by rewriting them`,
+  },
+  strength: {
+    desc: `Denoising strength for the video-to-video generation. 0.0 preserves the original, 1.0 completely remakes the video.`,
   },
 };
