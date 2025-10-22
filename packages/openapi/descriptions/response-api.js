@@ -1,6 +1,6 @@
 export default {
   background: {
-    desc: `Whether to run the model response in the background`,
+    desc: `Whether to run the model response in the background.`,
   },
   include: {
     desc: `Specify additional output data to include in the model response. Currently supported values are:
@@ -200,7 +200,7 @@ export default {
                 desc: `Specifies the event type. For a double click action, this property is always set to double_click.`,
               },
               x: {
-                desc: `The x-coordinate where the double click occurred..`,
+                desc: `The x-coordinate where the double click occurred.`,
               },
               y: {
                 desc: `The y-coordinate where the double click occurred.`,
@@ -364,7 +364,7 @@ export default {
             desc: `A JSON string of the arguments to pass to the function.`,
           },
           name: {
-            desc: `The name of the function to run. `,
+            desc: `The name of the function to run.`,
           },
           type: {
             desc: `The type of the function tool call. Always function_call.`,
@@ -373,7 +373,7 @@ export default {
             desc: `The unique ID of the function tool call.`,
           },
           status: {
-            desc: `The status of the item. `,
+            desc: `The status of the item.`,
           },
         },
         function_tool_call_output: {
@@ -391,11 +391,11 @@ export default {
             desc: `The unique ID of the function tool call output. Populated when this item is returned via API.`,
           },
           status: {
-            desc: `The status of the item. `,
+            desc: `The status of the item.`,
           },
         },
         reasoning: {
-          desc: `A description of the chain of thought used by a reasoning model while generating a response. `,
+          desc: `A description of the chain of thought used by a reasoning model while generating a response.`,
           id: {
             desc: `The unique identifier of the reasoning content.`,
           },
@@ -568,7 +568,7 @@ export default {
             desc: `The type of the item. Always mcp_approval_response.`,
           },
           id: {
-            desc: `The unique ID of the approval response`,
+            desc: `The unique ID of the approval response.`,
           },
           reason: {
             desc: `Optional reason for the decision.`,
@@ -817,7 +817,7 @@ required means the model must call one or more tools.`
       allowed_tools: {
         desc: `List of allowed tool names or a filter object.`,
         mcp_allowed_tools: {
-          desc: `A string array of allowed tool names`,
+          desc: `A string array of allowed tool names.`,
         },
         mcp_allowed_tools_filter: {
           desc: `A filter object to specify which tools are allowed.`,

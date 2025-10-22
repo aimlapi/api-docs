@@ -10,7 +10,7 @@ export default {
       desc: `Number of image variations to generate. Each image is a different attempt to combine the reference images (from the image_url parameter) according to the prompt.`,
     },
     flux_realism: {
-      desc: `The number of images to generate. This is always set to 1 for streaming output. Default value: 1`,
+      desc: `The number of images to generate. This is always set to 1 for streaming output. Default value: 1.`,
     },
   },
   seed: {
@@ -116,7 +116,7 @@ export default {
 If transparent, the output format needs to support transparency, so it should be set to either png (default value) or webp.`,
   },
   moderation: {
-    desc: `Control the content-moderation level for images`,
+    desc: `Control the content-moderation level for images.`,
   },
   output_compression: {
     desc: `The compression level (0-100%) for the generated images.`,

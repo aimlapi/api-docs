@@ -26,7 +26,7 @@ export default {
       desc: `URL of the input image to animate. Should be 720p or higher resolution.`,
     },
     images: {
-      desc: `Reference images for dual-character effects (Base64 encoded or URL)`,
+      desc: `Reference images for dual-character effects (Base64 encoded or URL).`,
     },
     sora: {
       desc: `A URL or a Base64-encoded image file used as the initial frame for video generation.
@@ -194,16 +194,16 @@ Supported configurations include:
     desc: `The style of the generated video.`,
   },
   num_frames: {
-    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive)`,
+    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive).`,
     krea: {
-      desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 18, 30, 42, etc`,
+      desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 18, 30, 42, etc.`,
     },
   },
   match_input_frames_per_second: {
     desc: `Whether to match the input video's frames per second (FPS).`,
   },
   frames_per_second: {
-    desc: `Frames per second of the generated video. Must be between 5 to 30`,
+    desc: `Frames per second of the generated video. Must be between 5 to 30.`,
   },
   preprocess: {
     desc: `Whether to preprocess the input video.`,
@@ -218,16 +218,16 @@ Supported configurations include:
     desc: `The method used to write the video. Fast, balanced, small are available.`,
   },
   num_interpolated_frames: {
-    desc: `Number of frames to interpolate between the original frames`,
+    desc: `Number of frames to interpolate between the original frames.`,
   },
   temporal_downsample_factor: {
-    desc: `Temporal downsample factor for the video`,
+    desc: `Temporal downsample factor for the video.`,
   },
   enable_auto_downsample: {
-    desc: `The minimum frames per second to downsample the video to`,
+    desc: `The minimum frames per second to downsample the video to.`,
   },
   auto_downsample_min_fps: {
-    desc: `The minimum frames per second to downsample the video to`,
+    desc: `The minimum frames per second to downsample the video to.`,
   },
   interpolator_model: {
     desc: `The model to use for interpolation. Rife, or film are available.`,
@@ -239,7 +239,7 @@ Supported configurations include:
     desc: `Array of image URLs (2-4 images) for multi-image-to-video generation.`,
   },
   auto_fix: {
-    desc: `Whether to automatically attempt to fix prompts that fail content policy or other validation checks by rewriting them`,
+    desc: `Whether to automatically attempt to fix prompts that fail content policy or other validation checks by rewriting them.`,
   },
   strength: {
     desc: `Denoising strength for the video-to-video generation. 0.0 preserves the original, 1.0 completely remakes the video.`,
