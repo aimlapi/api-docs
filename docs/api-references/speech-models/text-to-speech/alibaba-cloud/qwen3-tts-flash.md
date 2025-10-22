@@ -6,7 +6,7 @@ This documentation is valid for the following model: &#x20;
 * &#x20;`alibaba/qwen3-tts-flash`
 {% endhint %}
 
-Qwen Speech Synthesis offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.
+The model offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.
 
 ## Setup your API Key
 
@@ -18,12 +18,13 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
-import os
 import requests
+import json   # for getting a structured output with indentation
 
 def main():
     url = "https://api.aimlapi.com/v1/tts"
     headers = {
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     }
     payload = { 
@@ -32,34 +33,9 @@ def main():
         "voice": "Cherry"
     }
 
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()
-        
-        response_data = response.json()
-        audio_url = response_data["audio"]["url"]
-        file_name = response_data["audio"]["file_name"]
-        
-        audio_response = requests.get(audio_url, stream=True)
-        audio_response.raise_for_status()
-        
-        # Save with the original file extension from the API
-        # dist = os.path.join(os.path.dirname(__file__), file_name)  # if you run this code as a .py file
-        dist = "audio.wav"  # if you run this code in Jupyter Notebook
-
-        with open(dist, "wb") as write_stream:
-            for chunk in audio_response.iter_content(chunk_size=8192):
-                if chunk:
-                    write_stream.write(chunk)
-
-        print("Audio saved to:", dist)
-        print(f"Duration: {response_data['duration']} seconds")
-        print(f"Sample rate: {response_data['sample_rate']} Hz")
-        
-    except requests.exceptions.RequestException as e:
-        print(f"Error making request: {e}")
-    except Exception as e:
-        print(f"Error: {e}")
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -75,17 +51,19 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```json5
 {
-    "audio": {
-        "url": "http://dashscope-result-sgp.oss-ap-southeast-1.aliyuncs.com/1d/4c/20251009/534f63ee/99d6a019-a643-4ea1-aa6b-305159fb5aad.wav?Expires=1760081011&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=zLYxBBu34wIrRbvSMX0LsIDv1F8%3D"
-    },
-    "usage": {
-        "characters": 267
-    }
+  "audio": {
+    "url": "http://dashscope-result-sgp.oss-ap-southeast-1.aliyuncs.com/1d/18/20251022/cc0d532d/4adfa7be-08fe-4960-96c9-7dd866b24b48.wav?Expires=1761212494&OSSAccessKeyId=LTAI5tBLUzt9WaK89DU8aECd&Signature=CRyPQI%2BtVRQZSfjI5C5QH0VGDwU%3D"
+  },
+  "usage": {
+    "characters": 267
+  }
 }
 ```
 {% endcode %}
 
 </details>
+
+{% embed url="https://drive.google.com/file/d/15A-Ohkk2D0tDoTuYOOFDGAHrLiv0QUXt/view?usp=sharing" %}
 
 ## API Schema
 
