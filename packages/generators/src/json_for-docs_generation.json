@@ -1,20 +1,14 @@
 [
   {
-    "name": "pixverse/v5/transition",
-    "alias": "v5/transition",
+    "name": "sber-ai/kandinsky5-t2v",
+    "alias": "kandinsky5-t2v",
     "category": "video-models",
-    "vendor": "PixVerse"
+    "vendor": "Sber AI"
   },
   {
-    "name": "pixverse/v5/text-to-video",
-    "alias": "v5/text-to-video",
+    "name": "sber-ai/kandinsky5-distill-t2v",
+    "alias": "kandinsky5-distill-t2v",
     "category": "video-models",
-    "vendor": "PixVerse"
-  },
-  {
-    "name": "pixverse/v5/image-to-video",
-    "alias": "v5/image-to-video",
-    "category": "video-models",
-    "vendor": "PixVerse"
+    "vendor": "Sber AI"
   }
 ]

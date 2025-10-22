@@ -1,8 +1,0 @@
-[
-  {
-    "name": "meta-llama/llama-3.3-70b-versatile",
-    "alias": "llama-3.3-70b-versatile",
-    "category": "text-models-llm",
-    "vendor": "Meta"
-  }
-]
