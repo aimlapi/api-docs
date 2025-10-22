@@ -1,20 +1,20 @@
-# Veo 3 Fast (Text-to-Video)
+# Kandinsky 5 Distill (Text-to-Video)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/veo-3.0-fast`
+* `sber-ai/kandinsky5-distill-t2v`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=google/veo-3.0-fast&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/?model=sber-ai/kandinsky5-distill-t2v&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model generates realistic 8-second 720p and 1080p videos with detailed visuals and audio. Optimized for speed and cost compared to the [Veo 3 (Text-to-Video)](veo3-text-to-video.md) model.
+A diffusion model designed for fast text-to-video generation (no sound), offered as a compact variant of [the Kandinsky 5 (Text-to-Video)](kandinsky5-text-to-video.md) model. A resolution is slightly above standard definition (SD).
 
 ## Setup your API Key
 
@@ -31,17 +31,13 @@ Generating a video using this model involves sequentially calling two endpoints:
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
 
-Below, you can find two corresponding API schemas and an example with both endpoint calls.
+Below, you can find both corresponding API schemas.
 
 </details>
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
-
-{% hint style="warning" %}
-This model produces highly detailed and natural-looking videos, so generation may take around 2 minutes for a 8-second video with audio.
-{% endhint %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -50,42 +46,40 @@ This model produces highly detailed and natural-looking videos, so generation ma
 import requests
 import time
 
-# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-aimlapi_key = "<YOUR_AIMLAPI_KEY>"
-base_url = "https://api.aimlapi.com/v2"
+# Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = f"{base_url}/generate/video/google/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     headers = {
-        "Authorization": f"Bearer {aimlapi_key}", 
+        "Authorization": f"Bearer {api_key}", 
     }
 
     data = {
-        "model": "google/veo-3.0-fast",
-        "prompt": '''
-A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-'''
+        "model": "sber-ai/kandinsky5-distill-t2v",
+        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.",
+        "duration": 5
     }
  
     response = requests.post(url, json=data, headers=headers)
-    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
+        print(response_data)
         return response_data
     
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = f"{base_url}/generate/video/google/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     params = {
         "generation_id": gen_id,
     }
     
     headers = {
-        "Authorization": f"Bearer {aimlapi_key}", 
+        "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
         }
 
@@ -94,16 +88,16 @@ def get_video(gen_id):
 
 
 def main():
-    # Running video generation and getting a task id
+    # Generate video
     gen_response = generate_video()
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Trying to retrieve the video from the server every 10 sec
+    # Try to retrieve the video from the server every 10 sec
     if gen_id:
         start_time = time.time()
 
-        timeout = 1000
+        timeout = 600
         while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
@@ -143,13 +137,13 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: "google/veo-3.0-fast",
+        model: "sber-ai/kandinsky5-distill-t2v",
         prompt: `
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-`
+`,
     });
 
-    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    const url = new URL(`${baseUrl}/video/generations`);
     const options = {
         method: "POST",
         headers: {
@@ -184,7 +178,7 @@ A menacing evil dragon appears in a distance above the tallest mountain, then ru
 
 // Requesting the result of the task from the server using the generation_id
 function getVideo(genId, callback) {
-    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    const url = new URL(`${baseUrl}/video/generations`);
     url.searchParams.append("generation_id", genId);
 
     const options = {
@@ -267,49 +261,33 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Gen_ID:   083c6067-0bc6-464a-943b-930b1eb1753b:veo-3.0-fast-generate-001
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: completed
-Processing complete:/n {'status': 'completed', 'id': '083c6067-0bc6-464a-943b-930b1eb1753b:veo-3.0-fast-generate-001', 'video': {'url': 'https://cdn.aimlapi.com/generations/guepard/1754989116527-98dac026-6570-4d01-8a93-4234dc699032.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Original** (with the audio):  [1280x720](https://drive.google.com/file/d/1D66CSzwl-hOzKuozQGK0_6WGQdurlG5G/view?usp=sharing)
+**Processing time**: 53.6 sec.
 
-**Low-res GIF preview**:
+**Generated Video** (768x512, without sound):
 
-<div align="left"><figure><img src="../../../.gitbook/assets/veo-3.0-fast_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes</code> <br><code>toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
+{% embed url="https://drive.google.com/file/d/1DmpYZzoFsnrqgP8FvNITaZ6IYrlejkBG/view?usp=sharing" %}
 
 ## API Schemas
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a prompt.&#x20;
+You can generate a video using this API. In the basic setup, you only need a prompt. \
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% hint style="warning" %}
-The prompt will be automatically enhanced using AI. To disable this feature, set the parameter `enhance_prompt` to `false`.
-{% endhint %}
-
-{% openapi-operation spec="veo-3-0-fast" path="/v2/generate/video/google/generation" method="post" %}
-[OpenAPI veo-3-0-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.0-fast.json)
+{% openapi-operation spec="kandinsky5-distill-t2v" path="/v2/video/generations" method="post" %}
+[OpenAPI kandinsky5-distill-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-distill-t2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
 {% endopenapi-operation %}

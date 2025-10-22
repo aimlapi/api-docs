@@ -137,6 +137,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**Stability AI**</mark>:    [Image](api-references/image-models/Stability-AI/)   [Music](api-references/music-models/Stability-AI/)   [3D-Generation](api-references/3d-generating-models/Stability-AI/)
 
+**Sber AI**:    [Video](api-references/video-models/sber-ai/)
+
 **Together AI**:    [Embedding](api-references/embedding-models/Together-AI/)
 
 **xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)
