@@ -1,8 +1,28 @@
 [
   {
+    "name": "openai/gpt-4o",
     "url": "http://localhost:3305/docs-json?endpoint=openai/chat-completions&model=o1-pro&source=openai",
     "alias": "gpt-4o",
     "category": "text-models-llm",
-    "vendor": "OpenAI"
+    "vendor": "OpenAI",
+    "codeSamples": "gpt-image-edit",
+    "customParams": {
+      "text_param": "text",
+      "object_param": {
+        "name": "object",
+        "type": "string"
+      },
+      "array_param": ["param1", 212],
+      "object_array_param": [
+        {
+          "name": "object1",
+          "type": "string"
+        },
+        {
+          "name": 21212,
+          "type": "string"
+        }
+      ]
+    }
   }
 ]
