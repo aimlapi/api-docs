@@ -162,7 +162,7 @@ Supported configurations include:
     false: Do not fix the camera position.`,
   },
   video_url: {
-    desc: `A HTTPS URL pointing to a video or a data URI containing a video.`,
+    desc: `A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation.`,
   },
   frame_size: {
     desc: `The width and height of the video.`,
