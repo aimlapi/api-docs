@@ -7,7 +7,7 @@ const {
 const generateCodeSample = require('./generate-code-sample');
 
 const extractModels = (schema, schemaById) => {
-  if (schema.properties?.model?.enum) {
+  if (schema?.properties?.model?.enum) {
     return schema.properties.model.enum;
   }
 
@@ -183,6 +183,9 @@ const parseOpenapi = (openapi, fetchedModels) => {
         .split('/')
         .at(-1);
       const schema = schemaById[refId];
+      if (!schema) {
+        continue;
+      }
       const models = extractModels(schema, schemaById);
 
       if (pairData.has) {

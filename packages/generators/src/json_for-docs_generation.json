@@ -1,14 +1,20 @@
 [
   {
-    "name": "deepseek/deepseek-reasoner-v3.1-terminus",
-    "alias": "deepseek-reasoner-v3.1-terminus",
-    "category": "text-models-llm",
-    "vendor": "DeepSeek"
+    "name": "pixverse/v5/transition",
+    "alias": "v5/transition",
+    "category": "video-models",
+    "vendor": "PixVerse"
   },
   {
-    "name": "deepseek/deepseek-non-reasoner-v3.1-terminus",
-    "alias": "deepseek-non-reasoner-v3.1-terminus",
-    "category": "text-models-llm",
-    "vendor": "DeepSeek"
+    "name": "pixverse/v5/text-to-video",
+    "alias": "v5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/image-to-video",
+    "alias": "v5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
   }
 ]
