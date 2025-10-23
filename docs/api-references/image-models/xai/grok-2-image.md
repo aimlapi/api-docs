@@ -115,4 +115,4 @@ main();
 
 We obtained the following 720x960 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/xai-tmp-imgen-81fc6308-29a8-46c8-8d5a-16060c0724e8.jpeg" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."</code></p></figcaption></figure>
+<div align="left"><figure><img src="../../../.gitbook/assets/xai-tmp-imgen-81fc6308-29a8-46c8-8d5a-16060c0724e8.jpeg" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."</code></p></figcaption></figure></div>
