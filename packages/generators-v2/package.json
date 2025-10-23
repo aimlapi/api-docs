@@ -1,0 +1,12 @@
+{
+  "name": "generators-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node ./src/index.js generate"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
