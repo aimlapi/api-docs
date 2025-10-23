@@ -91,7 +91,7 @@ npm run generate --prefix packages/generators-v2
   "hideTryItPanel": false
 }
 ```
-### Пример 3 — использование готовых примеров кода и параметров от gitbook
+### Пример 3 — автосгенерированные Гитбуком примеры с полным набором параметров модели
 ```json
 {
   "name": "flux/dev",
