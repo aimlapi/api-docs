@@ -1,20 +1,14 @@
 [
   {
-    "name": "luma/ray-1-6",
-    "alias": "ray-1-6",
+    "name": "krea/krea-wan-14b/text-to-video",
+    "alias": "krea-wan-14b-text-to-video",
     "category": "video-models",
-    "vendor": "luma-ai"
+    "vendor": "Krea"
   },
   {
-    "name": "luma/ray-2",
-    "alias": "ray-2",
+    "name": "krea/krea-wan-14b/video-to-video",
+    "alias": "krea-wan-14b-video-to-video",
     "category": "video-models",
-    "vendor": "luma-ai"
-  },
-  {
-    "name": "luma/ray-flash-2",
-    "alias": "ray-flash-2",
-    "category": "image-models",
-    "vendor": "luma-ai"
+    "vendor": "Krea"
   }
 ]
