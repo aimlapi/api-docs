@@ -11,7 +11,7 @@ export function transformSchema(schema, options) {
       }
     });
   }
-  if (options.codeSamples === undefined) {
+  if (options.codeSamples === 'hide') {
     Object.entries(updatedSchema.paths).map(([path, operation]) => {
       for (const method of ['get', 'post']) {
         if (operation[method]) {
@@ -20,7 +20,7 @@ export function transformSchema(schema, options) {
       }
     });
   }
-  let codeSample = [];
+  let codeSample;
   if (options.codeSamples === 'chat-completion') {
     codeSample = codeSamples.chatCompletionSample(options);
   } else if (options.codeSamples === 'chat-completion-audio') {
@@ -35,11 +35,13 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.customSample(options);
   }
 
-  Object.entries(updatedSchema.paths).map(([path, operation]) => {
-    if (operation.post) {
-      updatedSchema.paths[path].post['x-codeSamples'] = codeSample;
-    }
-  });
+  if (codeSample) {
+    Object.entries(updatedSchema.paths).map(([path, operation]) => {
+      if (operation.post) {
+        updatedSchema.paths[path].post['x-codeSamples'] = codeSample;
+      }
+    });
+  }
 
   return updatedSchema;
 }
