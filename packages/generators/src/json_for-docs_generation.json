@@ -1,14 +1,20 @@
 [
   {
-    "name": "sber-ai/kandinsky5-t2v",
-    "alias": "kandinsky5-t2v",
+    "name": "krea/krea-wan-14b/text-to-video",
+    "alias": "krea-wan-14b-text-to-video",
     "category": "video-models",
-    "vendor": "Sber AI"
+    "vendor": "Krea"
   },
   {
-    "name": "sber-ai/kandinsky5-distill-t2v",
-    "alias": "kandinsky5-distill-t2v",
+    "name": "krea/krea-wan-14b/video-to-video",
+    "alias": "krea-wan-14b-video-to-video",
     "category": "video-models",
-    "vendor": "Sber AI"
+    "vendor": "Krea"
+  },
+  {
+    "name": "x-ai/grok-2-image",
+    "alias": "grok-2-image",
+    "category": "image-models",
+    "vendor": "xAI"
   }
 ]
