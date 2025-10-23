@@ -1,8 +1,37 @@
 export const imageToImageSample = (options, schema) => {
-  const imageParamName = schema?.paths?.['/v1/images/generations']?.post
-    ?.requestBody?.content?.['application/json']?.schema?.properties?.image
+  const properties =
+    schema?.paths?.['/v1/images/generations']?.post?.requestBody?.content?.[
+      'application/json'
+    ]?.schema?.properties;
+
+  const imageParamName = properties?.image
     ? 'image'
-    : 'image_url';
+    : properties?.image_url
+    ? 'image_url'
+    : 'image_urls';
+
+  const prompt =
+    imageParamName === 'image_urls'
+      ? 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.'
+      : "Add a crown to the T-rex's head.";
+
+  const imageValue =
+    imageParamName === 'image_urls'
+      ? [
+          'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
+          'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg',
+        ]
+      : 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png';
+
+  const jsonBody = JSON.stringify(
+    {
+      model: options.name,
+      prompt,
+      [imageParamName]: imageValue,
+    },
+    null,
+    2
+  );
   return [
     {
       lang: 'JavaScript',
@@ -13,11 +42,7 @@ export const imageToImageSample = (options, schema) => {
       'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      model: '${options.name}',
-      prompt: 'Add a crown to the T-rex's head.',
-      ${imageParamName}: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
-    }),
+    body: JSON.stringify(${jsonBody.replace(/\n/g, '\n    ')}),
   });
 
   const data = await response.json();
@@ -36,11 +61,7 @@ response = requests.post(
         "Content-Type":"application/json", 
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
     },
-    json={
-        "model":"${options.name}",
-        "prompt": "Add a crown to the T-rex's head.",
-        "${imageParamName}": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
-    }
+    json=${jsonBody.replace(/\n/g, '\n    ')}
 )
 
 data = response.json()
@@ -53,11 +74,7 @@ print(data)`,
   --url 'https://api.aimlapi.com/v1/images/generations' \\
   --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
   --header 'Content-Type: application/json' \\
-  --data '{
-    "model": "${options.name}",
-    "prompt": "Add a crown to the T-rex's head.",
-    "${imageParamName}": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
-  }'`,
+  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
     },
     {
       lang: 'HTTP',
@@ -67,11 +84,7 @@ Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
 Accept: */*
 
-{
-  "model": "${options.name}",
-  "prompt": "Add a crown to the T-rex's head.",
-  "${imageParamName}": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
-}`,
+${jsonBody}`,
     },
   ];
 };

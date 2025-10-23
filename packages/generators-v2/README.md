@@ -91,6 +91,17 @@ The generator reads configuration from a JSON file named json_for-docs_generatio
   "hideTryItPanel": false
 }
 ```
+### Пример 3 — Using ready-made code examples and parameters from gitbook
+```json
+{
+  "name": "flux/dev",
+  "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/image-generations&model=flux/dev&source=falai",
+  "alias": "flux-dev",
+  "category": "image-models",
+  "vendor": "Black-Forest-Labs",
+  "hideTryItPanel": false
+}
+```
 ## Output
 
 Each schema is generated and saved under a filename based on its category, vendor and alias (e.g., category/vendor/alias.json) inside /docs/api-references.
