@@ -91,7 +91,7 @@ The generator reads configuration from a JSON file named json_for-docs_generatio
   "hideTryItPanel": false
 }
 ```
-### Пример 3 — Using ready-made code examples and parameters from gitbook
+### Пример 3 — Gitbook auto-generated examples with a full set of model parameters
 ```json
 {
   "name": "flux/dev",
