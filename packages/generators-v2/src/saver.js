@@ -6,7 +6,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export async function saveSchema(schema, options) {
   const rootPath = path.join(__dirname, '../../../docs/api-references');
-  console.log(__dirname);
   const categoryPath = path.join(
     rootPath,
     options.category,
