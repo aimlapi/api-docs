@@ -139,9 +139,11 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Sber AI**:    [Video](api-references/video-models/sber-ai/)
 
+**Tencent**:    [Image](api-references/image-models/tencent/)
+
 **Together AI**:    [Embedding](api-references/embedding-models/Together-AI/)
 
-**xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)
+**xAI**:    [Text/Chat](api-references/text-models-llm/xAI/)    [Image](api-references/image-models/xai/)
 
 **Zhipu**:    [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
