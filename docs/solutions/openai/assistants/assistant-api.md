@@ -5,7 +5,7 @@ One Assistant can be used across multiple Threads and users.
 
 This page provides API schemas for the following methods:
 
-<table><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="assistant-api.md#create-an-assistant">Create an Assistant</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-a-list-of-assistants-along-with-their-parameters">Retrieve a list of Assistants along with their parameters</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-information-about-a-specific-assistant-by-its-id">Retrieve information about a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#modify-a-specific-assistant-by-its-id">Modify a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#delete-a-specific-assistant-by-its-id">Delete a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="assistant-api.md#create-an-assistant">Create an Assistant</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-a-list-of-assistants-along-with-their-parameters">Retrieve a list of Assistants along with their parameters</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-information-about-a-specific-assistant-by-its-id">Retrieve information about a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#modify-a-specific-assistant-by-its-id">Modify a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#delete-a-specific-assistant-by-its-id">Delete a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr></tbody></table>
 
 After each API schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
@@ -21,7 +21,7 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 Create an Assistant with a model and instructions.
 
 {% openapi-operation spec="ass-ass-create" path="/assistants" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-ass-create](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -47,7 +47,7 @@ assistant = client.beta.assistants.create(
 ### Retrieve a list of Assistants along with their parameters
 
 {% openapi-operation spec="ass-ass-list" path="/assistants" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-ass-list](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -72,7 +72,7 @@ print(my_assistants.data)
 ### Retrieve information about a specific Assistant by its ID
 
 {% openapi-operation spec="ass-ass-info-id" path="/assistants/{assistantId}" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-ass-info-id](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -95,7 +95,7 @@ print(my_assistant)
 ### Modify a specific Assistant by its ID
 
 {% openapi-operation spec="ass-ass-modify" path="/assistants/{assistantId}" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-ass-modify](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -124,7 +124,7 @@ print(my_updated_assistant)
 ### Delete a specific Assistant by its ID
 
 {% openapi-operation spec="ass-ass-delete" path="/assistants/{assistantId}" method="delete" %}
-[Broken link](broken-reference)
+[OpenAPI ass-ass-delete](https://api.aimlapi.com/docs-public-yaml?key=2b878a3c71a785f13366e9be96bacb29)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
