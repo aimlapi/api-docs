@@ -1,6 +1,6 @@
 # AutoGPT
 
-## Overview
+## About
 
 AutoGPT is an open-source platform designed to help you build, test, and run AI agents using a no-code visual interface. It allows users to link LLMs with tools, memory, planning modules, and action chains. By configuring block-based workflows, you can create custom agents that reason, plan, and act in multi-step environments.
 

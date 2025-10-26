@@ -422,6 +422,7 @@
 
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
+* [Aider](integrations/aider.md)
 * [AutoGPT](integrations/autogpt.md)
 * [Cline](integrations/cline.md)
 * [continue.dev](integrations/continue.dev.md)
