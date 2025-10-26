@@ -253,7 +253,7 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 ***
 
-### 💬 Example Settings
+## 💬 Example Settings
 
 #### [GPT 4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 
@@ -265,7 +265,7 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 ***
 
-### 📎 Links
+## 📎 Links
 
 * 🔑 [Get your API key](https://aimlapi.com/app/keys?utm_source=n8n\&utm_medium=github\&utm_campaign=integration)
 * 🧪 [Model playground](https://aimlapi.com/app?utm_source=n8n\&utm_medium=github\&utm_campaign=integration)

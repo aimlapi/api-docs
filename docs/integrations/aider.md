@@ -9,14 +9,9 @@ You’ll get a clean setup with **one endpoint**, support for **slashes in model
 
 ***
 
-## 🚀 Quick Setup
+## Quick Setup
 
-| Field               | Value                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| **Base URL**        | `https://api.aimlapi.com/v1`                                                        |
-| **API Key**         | Your AI/ML API key (create at [aimlapi.com/app/keys](https://aimlapi.com/app/keys)) |
-| **Model**           | `openai/meta-llama/Llama-3-70b-chat-hf` _(openai/\<your\_full\_model\_id>)_         |
-| **Command Example** | `aider --model openai/chatgpt-4o-latest`                                            |
+<table><thead><tr><th width="248.13323974609375">Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td><code>https://api.aimlapi.com/v1</code></td></tr><tr><td><strong>API Key</strong></td><td>Your AI/ML API key (create at <a href="https://aimlapi.com/app/keys">aimlapi.com/app/keys</a>)</td></tr><tr><td><strong>Model</strong></td><td><code>openai/meta-llama/Llama-3-70b-chat-hf</code> <em>(openai/&#x3C;your_full_model_id>)</em></td></tr><tr><td><strong>Command Example</strong></td><td><code>aider --model openai/chatgpt-4o-latest</code></td></tr></tbody></table>
 
 {% hint style="success" %}
 **Tip:** Always include the `openai/` prefix (case-sensitive) before your model name.&#x20;
@@ -26,7 +21,9 @@ This ensures Aider correctly routes requests to your **AI/ML API** endpoint.
 
 ***
 
-## ✅ Prerequisites
+## Installation
+
+### ✅ Prerequisites
 
 * AI/ML API key
 * Python 3.8–3.13 installed
@@ -35,20 +32,18 @@ This ensures Aider correctly routes requests to your **AI/ML API** endpoint.
 
 ***
 
-## Installation
-
-#### 1️⃣ Install Aider
+### 1️⃣ Install Aider
 
 ```bash
 python -m pip install aider-install
 aider-install
 ```
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-22 133803.png" alt=""><figcaption><p><em>Install Aider via terminal</em></p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-22 133803.png" alt=""><figcaption><p><em>Install Aider via terminal</em></p></figcaption></figure></div>
 
 ***
 
-#### 2️⃣ Configure AI/ML API credentials
+### 2️⃣ Configure AI/ML API credentials
 
 **Mac/Linux**
 
@@ -67,7 +62,7 @@ setx OPENAI_API_KEY <your_aimlapi_key>
 
 ***
 
-#### 3️⃣ Run Aider with AI/ML API
+### 3️⃣ Run Aider with AI/ML API
 
 Move into your project directory:
 
@@ -94,11 +89,11 @@ aider --model openai/anthropic/claude-3.7-sonnet
 aider --model openai/google/gemini-1.5-pro
 ```
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (1).png" alt="Running Aider with AI/ML API model"><figcaption><p>Running Aider with AI/ML API model</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (1).png" alt="Running Aider with AI/ML API model"><figcaption><p>Running Aider with AI/ML API model</p></figcaption></figure></div>
 
 ***
 
-#### ⚙️ 4️⃣ Model Prefix Rule
+### 4️⃣ Model Prefix Rule
 
 Aider automatically routes requests to your `OPENAI_API_BASE`.\
 To connect to **AI/ML API**, **always prefix your model with `openai/`**.
@@ -119,7 +114,7 @@ openai/<provider>/<model-name>
 
 ***
 
-#### 🧾 5️⃣ Example Aider Session
+## Example Aider Session
 
 ```bash
 cd ~/workspace/myapp
@@ -139,18 +134,18 @@ Aider will:
 
 ***
 
-#### 🧩 Common Pitfalls
+## Common Pitfalls
 
-* **Bad request – check parameters** → verify the model name and prefix
-* **Unknown model** → confirm it exists in [AI/ML API Models](https://aimlapi.com/models?utm_source=aider\&utm_medium=github\&utm_campaign=integration)
-* **Invalid API key** → re-copy from [AI/ML API Dashboard](https://aimlapi.com/app/keys)
-* **No response** → check `OPENAI_API_BASE` and your internet access
+* _**Bad request – check parameters**_  →  verify the model name and prefix
+* _**Unknown model**_  →  confirm it exists in [AI/ML API Models](https://aimlapi.com/models?utm_source=aider\&utm_medium=github\&utm_campaign=integration)
+* _**Invalid API key**_  →  re-copy from [AI/ML API Dashboard](https://aimlapi.com/app/keys)
+* _**No response**_  →  check `OPENAI_API_BASE` and your internet access
 
 ***
 
-#### 📚 References
+## 📚 References
 
-* [**Dashboard & API Keys**](https://aimlapi.com/app)
-* [**Model Catalog**](https://aimlapi.com/models)
-* [**Aider GitHub**](https://github.com/Aider-AI/aider)
-* [**Aider Installation Docs**](https://aider.chat/docs/install.html)
+* [Dashboard & API Keys](https://aimlapi.com/app)
+* [Model Catalog](https://aimlapi.com/models)
+* [Aider GitHub](https://github.com/Aider-AI/aider)
+* [Aider Installation Docs](https://aider.chat/docs/install.html)
