@@ -10,5 +10,17 @@
     "alias": "krea-wan-14b-video-to-video",
     "category": "video-models",
     "vendor": "Krea"
+  },  
+  {
+    "name": "topaz-labs/sharpen",
+    "alias": "sharpen",
+    "category": "image-models",
+    "vendor": "topaz-labs"
+  },
+  {
+    "name": "topaz-labs/sharpen-gen",
+    "alias": "sharpen-gen",
+    "category": "image-models",
+    "vendor": "topaz-labs"
   }
 ]
