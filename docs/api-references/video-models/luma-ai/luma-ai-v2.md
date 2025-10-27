@@ -1,4 +1,4 @@
-# Text-to-Video v2
+# Luma Ray 1.6 (Text-to-Video)
 
 ## Overview
 
@@ -140,7 +140,6 @@ import requests
 
 
 def main():
-
     response = requests.get(
         "https://api.aimlapi.com/v2/generate/video/luma-ai/generations",
         params={
@@ -160,7 +159,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 {% endcode %}
 {% endtab %}
@@ -318,6 +316,7 @@ def main()
   
   response = requests.post(url, json=payload, headers=headers)
   print("Generation:",  response.json())
+  
   
 if __name__ == "__main__":
     main()
