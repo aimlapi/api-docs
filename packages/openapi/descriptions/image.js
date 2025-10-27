@@ -15,6 +15,9 @@ export default {
   },
   seed: {
     desc: `The same seed and the same prompt given to the same version of the model will output the same image every time.`,
+    topaz: {
+      desc: `Optional fixed seed for repeatable results.`,
+    },
   },
   image_size: {
     width_height_32: {
@@ -44,6 +47,9 @@ export default {
   aspect_ratio: { desc: `The aspect ratio of the generated image.` },
   strength: {
     desc: `Determines how much the prompt influences the generated image.`,
+    topaz: {
+      desc: `Defines the overall intensity of the sharpening effect. Increases details. Too much sharpening can create an unrealistic result.`,
+    },
   },
   negative_prompt: {
     desc: `The description of elements to avoid in the generated image.`,
@@ -64,8 +70,8 @@ export default {
       desc: `List of URLs or local Base64 encoded images to edit.`,
     },
     uso: {
-      desc: `An array of up to 3 image URLs. The first image is always treated as the primary input for image-to-image generation, while the remaining images (if provided) serve as visual style references for the output.`
-    }
+      desc: `An array of up to 3 image URLs. The first image is always treated as the primary input for image-to-image generation, while the remaining images (if provided) serve as visual style references for the output.`,
+    },
   },
   do_remove_background: {
     desc: `Enables removing the background from the input image.`,
@@ -136,6 +142,17 @@ If transparent, the output format needs to support transparency, so it should be
     desc: `If set to true, the function will wait for the image to be generated and uploaded before returning the response. This will increase the latency of the function but it allows you to get the image directly in the response without going through the CDN.`,
   },
   acceleration: {
-    desc: `The speed of the generation. The higher the speed, the faster the generation.`
+    desc: `The speed of the generation. The higher the speed, the faster the generation.`,
+  },
+  minor_denoise: {
+    desc: `Removes noisy pixels to increase clarity. Can slightly increase image sharpness.`,
+  },
+  focus_boost: {
+    desc: `Corrects images that are missing detail by downscaling your image then upscaling the results back to the original size. Use on very blurry images!`,
+  },
+  detail: {
+    topaz: {
+      desc: `Removes noisy pixels to increase clarity. Can slightly increase image sharpness.`,
+    },
   },
 };
