@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # krea-wan-14b/video-to-video
 
 {% columns %}
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+A 14-billion parameter model for video edition.
 
 ## Setup your API Key
 
@@ -56,16 +51,18 @@ api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = "https://api.aimlapi.com/v2/generate/video/pixverse/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
 
     data = {
-        "model": "krea/krea-wan-14b/text-to-video",
-        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.",
-        "resolution": "1080p",
-        "duration": 5
+        "model": "krea/krea-wan-14b/video-to-video",
+        "video_url":"https://zovi0.github.io/public_misc/kling-v2-master-t2v-racoon.mp4",
+        "prompt":'''
+            Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.
+        ''',
+        "strength": 0.55,
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -79,7 +76,7 @@ def generate_video():
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = "https://api.aimlapi.com/v2/generate/video/pixverse/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     params = {
         "generation_id": gen_id,
     }
@@ -143,11 +140,12 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: "krea/krea-wan-14b/text-to-video",
+        model: "krea/krea-wan-14b/video-to-video",
         prompt: `
-A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
+Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.
 `,
-        // duration: 5,
+        video_url:'https://zovi0.github.io/public_misc/kling-v2-master-t2v-racoon.mp4',
+        strength: 0.55
     });
 
     const url = new URL(`${baseUrl}/video/generations`);
@@ -268,16 +266,22 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{'id': '3637be63-2db8-4ecc-bc0f-00afbdf10a55:krea/krea-wan-14b/video-to-video', 'status': 'queued', 'meta': {'usage': {'tokens_used': 315000}}}
+Generation ID:   3637be63-2db8-4ecc-bc0f-00afbdf10a55:krea/krea-wan-14b/video-to-video
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '3637be63-2db8-4ecc-bc0f-00afbdf10a55:krea/krea-wan-14b/video-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/panda/W9bYaX0QBdz6mzlOcKVRo_mF899FFI.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~2 min 28 sec.
+**Processing time**: 11.4 sec.
 
-**Generated Video** (768x512, without sound):
+**Generated Video** (832x480, without sound):
 
-
+{% embed url="https://drive.google.com/file/d/1Npu3ROPtLTf2CY07jRwZMCNGunxaBEAU/view?usp=sharing" %}
 
 ## API Schemas
 
