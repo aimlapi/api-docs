@@ -13,14 +13,12 @@ export default {
       desc: `For hug, kiss, and heart_gesture effects, pass an array containing exactly two image URLs. For squish or expansion, only one image URL is required.`,
     },
     minimax: {
-      desc: `The model will use the image passed in this parameter as the first frame to generate a video. 
-      Supported formats: 
-      - URL of the image;
-      - base64 encoding of the image.
-      Image specifications:
-      - format must be JPG, JPEG, or PNG;
-      - aspect ratio should be greater than 2:5 and less than 5:2; the shorter side must exceed 300 pixels;
-      - file size must not exceed 20MB.`,
+      desc: `A direct link to an online image or a Base64-encoded local image that will serve as the first frame for the video.
+Image specifications: 
+- format must be JPG, JPEG, or PNG; 
+- aspect ratio should be greater than 2:5 and less than 5:2; 
+- the shorter side must exceed 300 pixels; 
+- file size must not exceed 20MB.`,
     },
     google: {
       desc: `URL of the input image to animate. Should be 720p or higher resolution.`,
