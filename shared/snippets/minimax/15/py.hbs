@@ -1,0 +1,58 @@
+import requests
+
+def main():
+    url = '{{baseUrl}}/generate/audio/minimax/generate'
+    promt = "A calm and soothing instrumental music with gentle piano and soft strings."
+    lyrics = """[Verse]
+Streetlights flicker, the night breeze sighs
+Shadows stretch as I walk alone
+An old coat wraps my silent sorrow
+Wandering, longing, where should I go
+[Chorus]
+Pushing the wooden door, the aroma spreads
+In a familiar corner, a stranger gazes back
+Warm lights flicker, memories awaken
+In this small cafe, I find my way
+[Verse]
+Raindrops tap on the windowpane
+A melody plays, soft and low
+The clink of cups, the murmur of dreams
+In this haven, I find my home
+[Chorus]
+Pushing the wooden door, the aroma spreads
+In a familiar corner, a stranger gazes back
+Warm lights flicker, memories awaken
+In this small cafe, I find my way"""
+    output_format = "hex"
+
+    payload = {
+        'model': '{{model}}',
+        'prompt': promt,
+        'lyrics': lyrics,
+        'output_format': output_format
+    }
+    
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {{apiKey}}',
+    }
+
+    try:
+        response = requests.post(url, headers=headers, json=payload)
+        data = response.json()
+
+        if response.ok:
+            audio_hex = data['data']['audio']
+            decoded_hex = bytes.fromhex(audio_hex)
+
+            with open('generated_audio.mp3', 'wb') as f:
+                f.write(decoded_hex)
+            
+            print("Audio file saved as generated_audio.mp3")
+        else:
+            print(f"Failed to generate music: {data}")
+    except Exception as error:
+        print(f"Error during API request: {error}")
+
+if __name__ == '__main__':
+    main()
