@@ -67,4 +67,9 @@ export default {
       desc: `The length of the song to generate in milliseconds. This parameter may not always be respected by the model, and the actual audio length can differ.`,
     },
   },
+  output_format: {
+    minimax: {
+      desc: `The output format of the audio. Options: url or hex.`,
+    },
+  },
 };
