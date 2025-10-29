@@ -1,0 +1,35 @@
+import requests
+
+def main():
+    response = requests.post('{{baseUrl}}/generate/audio', headers={
+        'Authorization': 'Bearer {{apiKey}}',
+        'Content-Type': 'application/json',
+    }, json={
+        'model': '{{model}}',
+        'prompt': 'A calm and soothing instrumental music with gentle piano and soft strings.',
+        'lyrics': '''[Verse]
+Streetlights flicker, the night breeze sighs
+Shadows stretch as I walk alone
+An old coat wraps my silent sorrow
+Wandering, longing, where should I go
+[Chorus]
+Pushing the wooden door, the aroma spreads
+In a familiar corner, a stranger gazes back
+Warm lights flicker, memories awaken
+In this small cafe, I find my way
+[Verse]
+Raindrops tap on the windowpane
+A melody plays, soft and low
+The clink of cups, the murmur of dreams
+In this haven, I find my home
+[Chorus]
+Pushing the wooden door, the aroma spreads
+In a familiar corner, a stranger gazes back
+Warm lights flicker, memories awaken
+In this small cafe, I find my way''',
+    }).json()
+
+    print('Generation:', response)
+
+if __name__ == '__main__':
+    main()

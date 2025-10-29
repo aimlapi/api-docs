@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # krea-wan-14b/text-to-video
 
 {% columns %}
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+A 14-billion parameter model for text-to-video generation.
 
 ## Setup your API Key
 
@@ -56,7 +51,7 @@ api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = "https://api.aimlapi.com/v2/generate/video/pixverse/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
@@ -64,8 +59,7 @@ def generate_video():
     data = {
         "model": "krea/krea-wan-14b/text-to-video",
         "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.",
-        "resolution": "1080p",
-        "duration": 5
+        "num_frames": 90 
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -79,7 +73,7 @@ def generate_video():
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = "https://api.aimlapi.com/v2/generate/video/pixverse/generation"
+    url = "https://api.aimlapi.com/v2/video/generations"
     params = {
         "generation_id": gen_id,
     }
@@ -147,7 +141,7 @@ function generateVideo(callback) {
         prompt: `
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
 `,
-        // duration: 5,
+        num_frames: 90,
     });
 
     const url = new URL(`${baseUrl}/video/generations`);
@@ -268,14 +262,22 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{'id': '67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-video', 'status': 'queued', 'meta': {'usage': {'tokens_used': 315000}}}
+Generation ID:   67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-video
+Status: queued
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/zebra/GR3ehIPWwREVvJduWH6Pn_R07gifMb.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~2 min 28 sec.
+**Processing time**:  11.6 sec.
 
-**Generated Video** (768x512, without sound):
+**Generated Video** (832x480, without sound):
+
+{% embed url="https://drive.google.com/file/d/1lgAtCN0R_QTHStjbU4jFmggeFRd0PK-A/view" %}
 
 ## API Schemas
 
@@ -283,6 +285,10 @@ main();
 
 You can generate a video using this API. In the basic setup, you only need a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+Note that in this model, the video duration is defined by the number of frames, not seconds. You can calculate the duration in seconds based on the frame rate of 16 frames per second.
+
+
 
 {% openapi-operation spec="krea-wan-14b-text-to-video" path="/v2/video/generations" method="post" %}
 [OpenAPI krea-wan-14b-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Krea/krea-wan-14b-text-to-video.json)

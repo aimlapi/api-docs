@@ -30,7 +30,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## Quick Example
 
-Let's sharpen a relatively strongly blurred image using the _Strong_ mode while adjusting the _strength_ parameter.
+Let's sharpen a relatively strongly blurred image using the `Strong` mode while adjusting the `strength` parameter.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -117,7 +117,7 @@ main();
 
 </details>
 
-<table data-full-width="false"><thead><tr><th width="372.73321533203125" valign="top">Blurred Image</th><th valign="top">Deblurred Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blurred-landscape.png" alt=""><figcaption></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/sharpen_strength_0.9.png" alt=""><figcaption><p>"mode": "Strong"<br>"strength": 0.9</p></figcaption></figure></div></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blurred-landscape.png" alt=""><figcaption></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/sharpen_strength_0.9.png" alt=""><figcaption><p>"mode": "Strong"<br>"strength": 0.9</p></figcaption></figure></div></td><td></td></tr></tbody></table>
 
 For clarity, we’ve created a split image showing the results of different parameter settings.
 
