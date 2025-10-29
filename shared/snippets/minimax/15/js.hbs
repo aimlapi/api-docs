@@ -1,45 +1,18 @@
-import fs from "fs";
-import fetch from "node-fetch";
-
 const main = async () => {
-  const url = "{{baseUrl}}/generate/audio/minimax/generate";
-  const promt = "A calm and soothing instrumental music with gentle piano and soft strings.";
-  const lyrics = `[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way`;
-  const output_format = "hex";
+  const response = await fetch('{{baseUrl}}/generate/audio', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'A calm and soothing instrumental music with gentle piano and soft strings.',
+      lyrics: `[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way`,
+    }),
+  }).then((res) => res.json());
 
-  const payload = {
-    model: '{{model}}'',
-    prompt: promt,
-    lyrics: lyrics,
-    output_format: output_format
-  };
+  console.log('Generation:', response);
+};
 
-  const headers = {
-    "Content-Type": "application/json",
-    "Authorization": `Bearer {{apiKey}}`,
-  };
-
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(payload),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      const audioHex = data.data.audio;
-      const decodedHex = Buffer.from(audioHex, "hex");
-
-      fs.writeFileSync("generated_audio.mp3", decodedHex);
-      console.log("Audio file saved as generated_audio.mp3");
-    } else {
-      console.error("Failed to generate music:", data);
-    }
-  } catch (error) {
-    console.error("Error during API request:", error);
-  }
-}
-
-main();
+main()
