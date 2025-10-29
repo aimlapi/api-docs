@@ -19,7 +19,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-##
+This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). Audio generation, looped videos are also supported.
 
 ## Setup your API Key
 
@@ -274,6 +274,8 @@ main();
 **Original**: [832x1120](https://drive.google.com/file/d/1d6vJ0AvhlWUBhPAF3YWDOUW_Ze6Ym4Iv/view?usp=sharing)
 
 **Low-res GIF preview**:
+
+
 
 ## API Schemas
 

@@ -35,6 +35,40 @@ Below, you can find both corresponding API schemas.
 
 </details>
 
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+\
+<mark style="background-color:$warning;">The provided image dimensions must match the selected video resolution and aspect ratio.</mark>
+
+<mark style="background-color:$warning;">Supported configurations include:</mark>
+
+* <mark style="background-color:$warning;">**720p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
+  * <mark style="background-color:$warning;">16:9 — 1280×720</mark>
+  * <mark style="background-color:$warning;">9:16 — 720×1280</mark>
+* <mark style="background-color:$warning;">**1080p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
+  * <mark style="background-color:$warning;">16:9 — 1792×1024</mark>
+  * <mark style="background-color:$warning;">9:16 — 1024×1792</mark>
+
+
+
+{% openapi-operation spec="sora-2-pro-i2v" path="/v2/video/generations" method="post" %}
+[OpenAPI sora-2-pro-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-pro-i2v.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
+[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
+{% endopenapi-operation %}
+
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
@@ -268,37 +302,3 @@ Processing complete:
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/ezgif-1b397f75ecad63.gif" alt=""><figcaption><p><code>"She turns around and smiles, then slowly walks out of the frame."</code></p></figcaption></figure></div>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-\
-<mark style="background-color:$warning;">The provided image dimensions must match the selected video resolution and aspect ratio.</mark>
-
-<mark style="background-color:$warning;">Supported configurations include:</mark>
-
-* <mark style="background-color:$warning;">**720p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
-  * <mark style="background-color:$warning;">16:9 — 1280×720</mark>
-  * <mark style="background-color:$warning;">9:16 — 720×1280</mark>
-* <mark style="background-color:$warning;">**1080p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
-  * <mark style="background-color:$warning;">16:9 — 1792×1024</mark>
-  * <mark style="background-color:$warning;">9:16 — 1024×1792</mark>
-
-###
-
-{% openapi-operation spec="sora-2-pro-i2v" path="/v2/video/generations" method="post" %}
-[OpenAPI sora-2-pro-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-pro-i2v.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
-{% endopenapi-operation %}

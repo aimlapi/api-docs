@@ -284,7 +284,9 @@ main();
 You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-
+{% openapi-operation spec="ray-flash-2" path="/v2/video/generations" method="post" %}
+[OpenAPI ray-flash-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/luma-ai/ray-flash-2.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
