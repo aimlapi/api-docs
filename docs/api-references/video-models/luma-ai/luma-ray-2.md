@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Luma Ray 2
 
 {% columns %}
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). Audio generation, looped videos are also supported.
+This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.
 
 ## Setup your API Key
 
@@ -65,8 +60,17 @@ def generate_video():
 
     data = {
         "model": "luma/ray-2",
-        "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "prompt": "The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.",
+        "keyframes":{    
+            "frame0": {
+                "type": "image",
+                "url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg",
+            },
+            "frame1": {
+                "type": "image",
+                "url": "https://cdn.aimlapi.com/assets/content/white-fish.png",
+            },
+        },
         "duration": "5",       
     }
  
@@ -150,9 +154,18 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "luma/ray-2",
-    prompt: "Mona Lisa puts on glasses with her hands.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    duration: "5",
+      prompt: "The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.",
+      keyframes: {
+        frame0: {
+          type: "image",
+          url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg"
+        },
+        frame1: {
+          type: "image",
+          url: "https://cdn.aimlapi.com/assets/content/white-fish.png"
+        }
+      },
+      duration: "5"
   });
 
   const url = new URL(`${baseUrl}/video/generations`);
@@ -264,18 +277,33 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   7c880e75-9892-4238-8464-49cb0c6deabd:luma/ray-2
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '7c880e75-9892-4238-8464-49cb0c6deabd:luma/ray-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/25f7f772-d8f4-494e-9cdf-ab5a2c7ce3fe/2a50c77c-2e44-4bfd-915b-9df61f5ff202_resultdbe5e2f21db1effd.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~1.5 min.
+**Processing time**: \~1 min 48 sec.
 
-**Original**: [832x1120](https://drive.google.com/file/d/1d6vJ0AvhlWUBhPAF3YWDOUW_Ze6Ym4Iv/view?usp=sharing)
+**Original** (1280x720, without sound):
 
-**Low-res GIF preview**:
-
-
+{% embed url="https://drive.google.com/file/d/1xN8M6Dq6wcQ9ifG-7_Vkv4qNua28ioei/view" %}
 
 ## API Schemas
 

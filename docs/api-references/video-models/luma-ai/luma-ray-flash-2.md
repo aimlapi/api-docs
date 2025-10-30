@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Luma Ray Flash 2
 
 {% columns %}
@@ -19,7 +14,8 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.\
+This version is nearly twice as fast as [Luma Ray 2](luma-ray-2.md).
 
 ## Setup your API Key
 
@@ -65,8 +61,17 @@ def generate_video():
 
     data = {
         "model": "luma/ray-flash-2",
-        "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "prompt": "The camera moves down and gradually dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.",
+        "keyframes":{    
+            "frame0": {
+                "type": "image",
+                "url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg",
+            },
+            "frame1": {
+                "type": "image",
+                "url": "https://cdn.aimlapi.com/assets/content/white-fish.png",
+            },
+        },
         "duration": "5",       
     }
  
@@ -150,9 +155,18 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "luma/ray-flash-2",
-    prompt: "Mona Lisa puts on glasses with her hands.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    duration: "5",
+      prompt: "The camera moves down and gradually dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.",
+      keyframes: {
+        frame0: {
+          type: "image",
+          url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg"
+        },
+        frame1: {
+          type: "image",
+          url: "https://cdn.aimlapi.com/assets/content/white-fish.png"
+        }
+      },
+      duration: "5"
   });
 
   const url = new URL(`${baseUrl}/video/generations`);
@@ -264,18 +278,27 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   df551652-1bbe-4d38-9c99-d0ecb69db192:luma/ray-flash-2
+Status: queued
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': 'df551652-1bbe-4d38-9c99-d0ecb69db192:luma/ray-flash-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/8523b741-f975-4a8b-84d0-05c51f1cbb04/f9cff453-d98f-4243-a419-164f7c228c38_result76b52833979928ee.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~1.5 min.
+**Processing time**: \~1 min.
 
-**Original**: [832x1120](https://drive.google.com/file/d/1d6vJ0AvhlWUBhPAF3YWDOUW_Ze6Ym4Iv/view?usp=sharing)
+**Original** (1280x720, without sound):
 
-**Low-res GIF preview**:
-
-<div align="left"><figure><img src="../../../.gitbook/assets/seedance-1-0-lite-i2v_preview.gif" alt=""><figcaption><p><code>"Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure></div>
+{% embed url="https://drive.google.com/file/d/1TpqoSn9bacE80o3Ib_zSySxR6GYZPyMf/view" %}
 
 ## API Schemas
 

@@ -42,15 +42,6 @@ Below, you can find both corresponding API schemas.
 You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-\
-<mark style="background-color:$warning;">The provided image dimensions must match the selected video resolution and aspect ratio.</mark>
-
-<mark style="background-color:$warning;">Supported configurations include:</mark>
-
-* <mark style="background-color:$warning;">**720p**</mark> <mark style="background-color:$warning;"></mark><mark style="background-color:$warning;">with aspect ratios:</mark>
-  * <mark style="background-color:$warning;">16:9 — 1280×720</mark>
-  * <mark style="background-color:$warning;">9:16 — 720×1280</mark>
-
 {% openapi-operation spec="sora-2-i2v" path="/v2/video/generations" method="post" %}
 [OpenAPI sora-2-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-i2v.json)
 {% endopenapi-operation %}
