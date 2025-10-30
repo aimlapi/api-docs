@@ -297,7 +297,12 @@ Processing complete:/n {'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2
 
 ### Video Generation
 
+You can generate a video using this API. In the basic setup, you only need a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
 
 {% openapi-operation spec="wan2-5-t2v-preview" path="/v2/generate/video/alibaba/generation" method="post" %}
 [OpenAPI wan2-5-t2v-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-t2v-preview.json)

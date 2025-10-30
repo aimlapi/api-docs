@@ -315,6 +315,10 @@ Processing complete:/n {'id': 'cgt-20250718224736-699sq', 'status': 'completed',
 You can generate a video using this API. In the basic setup, you only need a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
+
 {% openapi-operation spec="seedance-1-0-pro-text-to-video-after-repair" path="/v2/generate/video/bytedance/generation" method="post" %}
 [OpenAPI seedance-1-0-pro-text-to-video-after-repair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-pro-text-to-video.json)
 {% endopenapi-operation %}

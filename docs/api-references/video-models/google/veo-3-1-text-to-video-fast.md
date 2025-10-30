@@ -268,10 +268,6 @@ Processing complete:
 
 You can generate a video using this API. In the basic setup, you only need a prompt.&#x20;
 
-{% hint style="warning" %}
-The prompt will be automatically enhanced using AI. To disable this feature, set the parameter `enhance_prompt` to `false`.
-{% endhint %}
-
 {% openapi-operation spec="veo-3-1-t2v-fast" path="/v2/video/generations" method="post" %}
 [OpenAPI veo-3-1-t2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-t2v-fast.json)
 {% endopenapi-operation %}

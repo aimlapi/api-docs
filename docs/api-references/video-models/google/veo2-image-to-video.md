@@ -281,6 +281,10 @@ Generating a video using this model involves sequentially calling two endpoints:
 
 You can generate a video using this API.
 
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
+
 {% openapi-operation spec="veo2-image-to-video" path="/v2/generate/video/google/generation" method="post" %}
 [OpenAPI veo2-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json)
 {% endopenapi-operation %}
