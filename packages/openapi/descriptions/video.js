@@ -139,7 +139,7 @@ Supported configurations include:
   },
   resolution: {
     default: {
-      desc: `Specifies the size of the output video in pixels`,
+      desc: `The resolution of the output video, where the number refers to the short side in pixels.`,
     },
     minimax: {
       desc: `The dimensions of the video display. 1080p corresponds to 1920 x 1080 pixels, 768p corresponds to 1366 x 768 pixels.`,
