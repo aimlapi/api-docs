@@ -24,8 +24,17 @@ const Footer: FC<Props> = (props) => {
       <button className="snippet-viewer-footer__btn" onClick={onCopy}>
         {isCopied ? 'Copied!' : 'Copy'} <Copy size={14} />
       </button>
-      {snippet.template.config.docs && (
-        <a type="button" href={snippet.template.config.docs} className="snippet-viewer-footer__btn" onClick={onCopy}>
+      {(typeof snippet.snippet.payload?.docs === 'string' ||
+        snippet.template.config.docs) && (
+        <a
+          type="button"
+          href={
+            (snippet.snippet.payload?.docs as string) ||
+            snippet.template.config.docs
+          }
+          className="snippet-viewer-footer__btn"
+          onClick={onCopy}
+        >
           Docs <BookOpen size={14} />
         </a>
       )}
