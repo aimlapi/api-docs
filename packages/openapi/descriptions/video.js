@@ -162,6 +162,9 @@ Supported configurations include:
   video_url: {
     desc: `A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation.`,
   },
+  audio_url: {
+    desc: `The URL of the audio file.`
+  },
   frame_size: {
     desc: `The width and height of the video.`,
   },
