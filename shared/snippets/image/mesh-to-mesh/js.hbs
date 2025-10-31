@@ -1,0 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      mesh_url: 'https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main();
