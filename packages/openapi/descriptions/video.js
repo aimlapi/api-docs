@@ -163,7 +163,7 @@ Supported configurations include:
     desc: `A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation.`,
   },
   audio_url: {
-    desc: `The URL of the audio file.`
+    desc: `The URL of the audio file. Supported formats: MP3, WAV, M4A, AAC. Maximum file size: 5 MB.`
   },
   frame_size: {
     desc: `The width and height of the video.`,
