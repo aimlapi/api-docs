@@ -1,26 +1,260 @@
 [
   {
-    "name": "krea/krea-wan-14b/text-to-video",
-    "alias": "krea-wan-14b-text-to-video",
-    "category": "video-models",
-    "vendor": "Krea"
+    "name": "#g1_aura-2-amalthea-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
   },
   {
-    "name": "krea/krea-wan-14b/video-to-video",
-    "alias": "krea-wan-14b-video-to-video",
-    "category": "video-models",
-    "vendor": "Krea"
-  },  
-  {
-    "name": "topaz-labs/sharpen",
-    "alias": "sharpen",
-    "category": "image-models",
-    "vendor": "topaz-labs"
+    "name": "#g1_aura-2-andromeda-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
   },
   {
-    "name": "topaz-labs/sharpen-gen",
-    "alias": "sharpen-gen",
-    "category": "image-models",
-    "vendor": "topaz-labs"
+    "name": "#g1_aura-2-apollo-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-arcas-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-aries-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-asteria-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-athena-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-atlas-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-aurora-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-callista-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-cora-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-cordelia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-delia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-electra-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-harmonia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-helena-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-hera-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-hermes-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-hyperion-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-iris-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-janus-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-juno-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-jupiter-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-luna-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-mars-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-minerva-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-neptune-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-odysseus-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-ophelia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-orion-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-orpheus-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-pandora-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-phoebe-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-pluto-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-saturn-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-selene-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-thalia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-theia-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-vesta-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-zeus-en",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-celeste-es",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-estrella-es",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
+  },
+  {
+    "name": "#g1_aura-2-nestor-es",
+    "alias": "aura-2",
+    "category": "speech-models",
+    "vendor": "Deepgram"
   }
 ]
