@@ -95,8 +95,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
 * [claude-3-opus-20240229](../api-references/text-models-llm/Anthropic/claude-3-opus.md)
 * [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
-* [claude-3-5-sonnet-20240620](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
-* [claude-3-5-sonnet-20241022](../api-references/text-models-llm/Anthropic/claude-3.5-sonnet.md)
 * [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)

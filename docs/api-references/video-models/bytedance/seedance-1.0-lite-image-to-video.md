@@ -287,8 +287,11 @@ Processing complete:/n {'id': 'cgt-20250704191750-n4qjp', 'status': 'completed',
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt.  This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
 
 {% openapi-operation spec="seedance-1-0-lite-i2v" path="/v2/generate/video/bytedance/generation" method="post" %}
 [OpenAPI seedance-1-0-lite-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-lite-image-to-video.json)

@@ -142,7 +142,7 @@ Supported configurations include:
   },
   resolution: {
     default: {
-      desc: `Specifies the size of the output video in pixels`,
+      desc: `The resolution of the output video, where the number refers to the short side in pixels.`,
     },
     minimax: {
       desc: `The dimensions of the video display. 1080p corresponds to 1920 x 1080 pixels, 768p corresponds to 1366 x 768 pixels.`,
@@ -166,7 +166,7 @@ Supported configurations include:
     desc: `A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation.`,
   },
   audio_url: {
-    desc: `The URL of the audio file.`,
+    desc: `The URL of the audio file. Supported formats: MP3, WAV, M4A, AAC. Maximum file size: 5 MB.`,
   },
   frame_size: {
     desc: `The width and height of the video.`,

@@ -297,8 +297,8 @@ Processing complete:/n {'status': 'completed', 'id': '083c6067-0bc6-464a-943b-93
 
 You can generate a video using this API. In the basic setup, you only need a prompt.&#x20;
 
-{% hint style="warning" %}
-The prompt will be automatically enhanced using AI. To disable this feature, set the parameter `enhance_prompt` to `false`.
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
 {% endhint %}
 
 {% openapi-operation spec="veo-3-0-fast" path="/v2/generate/video/google/generation" method="post" %}

@@ -281,10 +281,6 @@ Processing complete:/n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.
 
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% openapi-operation spec="wan2-2-14b-animate-move" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-2-14b-animate-move](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-14b-animate-move.json)
-{% endopenapi-operation %}
-
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
