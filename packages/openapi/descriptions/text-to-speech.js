@@ -75,7 +75,7 @@ export default {
     desc: `If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same seed and parameters should return the same result. Determinism is not guaranteed.`,
   },
   voice_id: {
-    desc: `Voice identifier for text-to-speech synthesis. Supports both predefined system voices and custom cloned voice IDs. `,
+    desc: `A predefined system voice for text-to-speech synthesis.`,
   },
   emotion: {
     desc: `Emotional tone to apply to the synthesized speech. Controls the emotional expression of the generated voice output.`,
