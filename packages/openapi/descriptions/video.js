@@ -133,6 +133,9 @@ Supported configurations include:
   },
   generate_audio: {
     desc: `Whether to generate audio for the video.`,
+    omnihuman: {
+      desc: `The URL of the audio file for lip-sync animation. The model detects spoken parts and syncs the character's mouth to them. Audio must be under 30s long.`,
+    },
   },
   webhook: {
     desc: `The URL to receive a one-time notification when the task is completed. If set, the server will send an HTTP POST request with the final result when the task ends.`,
@@ -163,7 +166,7 @@ Supported configurations include:
     desc: `A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation.`,
   },
   audio_url: {
-    desc: `The URL of the audio file.`
+    desc: `The URL of the audio file.`,
   },
   frame_size: {
     desc: `The width and height of the video.`,

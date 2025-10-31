@@ -155,4 +155,25 @@ If transparent, the output format needs to support transparency, so it should be
       desc: `Removes noisy pixels to increase clarity. Can slightly increase image sharpness.`,
     },
   },
+  mesh_url: {
+    desc: `URL of the 3D model file (.glb or .obj) to process for segmentation.`,
+  },
+  point_prompt_x: {
+    desc: `X coordinate of the point prompt for segmentation.`,
+  },
+  point_prompt_y: {
+    desc: `Y coordinate of the point prompt for segmentation.`,
+  },
+  point_prompt_z: {
+    desc: `Z coordinate of the point prompt for segmentation.`,
+  },
+  point_num: {
+    desc: `Number of points to sample from the mesh.`,
+  },
+  use_normal: {
+    desc: `Whether to use normal information for segmentation.`,
+  },
+  noise_std: {
+    desc: `Standard deviation of noise to add to sampled points.`,
+  },
 };
