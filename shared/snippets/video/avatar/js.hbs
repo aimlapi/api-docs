@@ -1,0 +1,19 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'Person speaking confidently',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
+      audio_url: 'https://cdn.aimlapi.com/eagle/files/elephant/cJUTeeCmpoqIV1Q3WWDAL_vibevoice-output-7b98283fd3974f48ba90e91d2ee1f971.mp3',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
