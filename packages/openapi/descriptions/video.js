@@ -133,9 +133,6 @@ Supported configurations include:
   },
   generate_audio: {
     desc: `Whether to generate audio for the video.`,
-    omnihuman: {
-      desc: `The URL of the audio file for lip-sync animation. The model detects spoken parts and syncs the character's mouth to them. Audio must be under 30s long.`,
-    },
   },
   webhook: {
     desc: `The URL to receive a one-time notification when the task is completed. If set, the server will send an HTTP POST request with the final result when the task ends.`,
@@ -167,6 +164,9 @@ Supported configurations include:
   },
   audio_url: {
     desc: `The URL of the audio file. Supported formats: MP3, WAV, M4A, AAC. Maximum file size: 5 MB.`,
+    omnihuman: {
+      desc: `The URL of the audio file for lip-sync animation. The model detects spoken parts and syncs the character's mouth to them. Audio must be under 30s long.`,
+    },
   },
   frame_size: {
     desc: `The width and height of the video.`,
