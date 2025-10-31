@@ -298,6 +298,7 @@
       * [qwen3-tts-flash](api-references/speech-models/text-to-speech/alibaba-cloud/qwen3-tts-flash.md)
     * [Deepgram](api-references/speech-voice-models/tts/Deepgram/README.md)
       * [aura](api-references/speech-voice-models/tts/Deepgram/aura.md)
+      * [aura 2](api-references/speech-models/text-to-speech/deepgram/aura-2.md)
     * [ElevenLabs](api-references/speech-models/text-to-speech/elevenlabs/README.md)
       * [eleven\_multilingual\_v2](api-references/speech-models/text-to-speech/elevenlabs/eleven_multilingual_v2.md)
       * [eleven\_turbo\_v2\_5](api-references/speech-models/text-to-speech/elevenlabs/eleven_turbo_v2_5.md)
