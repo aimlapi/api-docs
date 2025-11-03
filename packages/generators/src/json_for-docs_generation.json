@@ -1,51 +1,8 @@
 [
   {
-    "name": "google/gemini-2.5-flash-image-edit",
-    "alias": "gemini-2.5-flash-image-edit",
-    "category": "image-models",
-    "vendor": "Google",
-    "features": ["image-to-image"]
-  },
-  {
-    "name": "kling-video/v2.1/standard/image-to-video",
-    "alias": "v2.1-standard-image-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
-  },
-  {
-    "name": "bytedance/omnihuman/v1.5",
-    "alias": "omnihuman-v.1.5",
-    "category": "video-models",
-    "vendor": "ByteDance"
-  },
-  {
-    "name": "minimax/m1",
-    "alias": "m1",
+    "name": "minimax/m2",
+    "alias": "m2",
     "category": "text-models-llm",
-    "vendor": "MiniMax"
-  },
-  {
-    "name": "moonshot/kimi-k2-0905-preview",
-    "alias": "kimi-k2-0905-preview",
-    "category": "text-models-llm",
-    "vendor": "Moonshot"
-  },
-  {
-    "name": "moonshot/kimi-k2-turbo-preview",
-    "alias": "kimi-k2-turbo-preview",
-    "category": "text-models-llm",
-    "vendor": "Moonshot"
-  },
-  {
-    "name": "minimax/hailuo-2.3",
-    "alias": "hailuo-2.3",
-    "category": "video-models",
-    "vendor": "MiniMax"
-  },
-  {
-    "name": "minimax/hailuo-2.3-fast",
-    "alias": "hailuo-2.3-fast",
-    "category": "video-models",
     "vendor": "MiniMax"
   }
 ]
