@@ -61,6 +61,9 @@ Supported configurations include:
     veo_3_1: {
       desc: `The aspect ratio of the generated video. The value 1:1 is only available when the resolution parameter is set to 720p.`,
     },
+    ignore_image: {
+      desc: `The aspect ratio of the generated video. This parameter is ignored if image_url is provided.`,
+    },
   },
   seed: {
     desc: `Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen.`,
@@ -198,7 +201,7 @@ Supported configurations include:
     desc: `The style of the generated video.`,
   },
   num_frames: {
-    desc: `Number of frames to generate. Must be between 81 to 241 (inclusive).`,
+    desc: `Number of frames to generate.`,
     krea: {
       desc: `Number of frames to generate. Must be a multiple of 12 plus 6, for example 18, 30, 42, etc.`,
     },
@@ -247,5 +250,11 @@ Supported configurations include:
   },
   strength: {
     desc: `Denoising strength for the video-to-video generation. 0.0 preserves the original, 1.0 completely remakes the video.`,
+  },
+  fps: {
+    desc: `The frame rate of the generated video`,
+  },
+  video_output_type: {
+    desc: `The output type of the generated video.`,
   },
 };
