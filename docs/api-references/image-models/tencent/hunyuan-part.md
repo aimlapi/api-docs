@@ -1,11 +1,16 @@
-# Hunyuan Image V3
+---
+hidden: true
+noIndex: true
+---
+
+# Hunyuan Part
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `hunyuan/hunyuan-image-v3-text-to-image`
+* `tencent/hunyuan-part`
 {% endhint %}
 {% endcolumn %}
 

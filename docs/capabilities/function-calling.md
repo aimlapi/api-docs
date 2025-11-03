@@ -178,6 +178,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
+* [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
+* [moonshot/kimi-k2-turbo-preview](../api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)

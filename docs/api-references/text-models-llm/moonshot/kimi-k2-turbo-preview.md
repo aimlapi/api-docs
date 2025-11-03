@@ -1,12 +1,10 @@
-# kimi-k2-preview
+# kimi-k2-turbo-preview
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li> <code>moonshot/kimi-k2-preview</code> </li><li><code>moonshot/kimi-k2-0905-preview</code> </li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=moonshot/kimi-k2-preview&#x26;mode=chat" class="button primary">Try in Playground</a> <br><a href="https://aimlapi.com/app/?model=moonshot/kimi-k2-0905-preview&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:  </p><ul><li><code>moonshot/kimi-k2-turbo-preview</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=moonshot/kimi-k2-turbo-preview&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-`moonshot/kimi-k2-preview` (July 2025) is a mixture-of-experts model with strong reasoning, coding, and agentic capabilities.
-
-`moonshot/kimi-k2-0905-preview` (September 2025) is an upgraded version with improved grounding, better instruction following, and a stronger focus on coding and agentic tasks. The memory has doubled from 128k to a decent 256k tokens.
+The high-speed version of [Kimi K2](kimi-k2-preview.md). A model fine-tuned for agentic tasks, coding, and conversational use, featuring a context window of up to 256,000 tokens and fast generation speeds — ideal for handling long documents and real-time interactions.
 
 ## How to Make a Call
 
@@ -21,7 +19,7 @@
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](kimi-k2-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](kimi-k2-turbo-preview.md#code-example-1-chat-completion) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -30,7 +28,7 @@ At the bottom of this page, you'll find [a code example](kimi-k2-preview.md#code
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](kimi-k2-preview.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](kimi-k2-turbo-preview.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 
@@ -44,8 +42,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
+{% openapi-operation spec="kimi-k2-turbo-preview" path="/v1/chat/completions" method="post" %}
+[OpenAPI kimi-k2-turbo-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-turbo-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example #1: Chat Completion
@@ -65,7 +63,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"moonshot/kimi-k2-0905-preview",
+        "model":"moonshot/kimi-k2-turbo-preview",
         "messages":[
             {
                 "role":"user",
@@ -93,7 +91,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'moonshot/kimi-k2-0905-preview',
+      model: 'moonshot/kimi-k2-turbo-preview',
       messages:[
           {
               role:'user',
@@ -120,7 +118,7 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "chatcmpl-6908c55b7589dac387b2bd3b",
+  "id": "chatcmpl-690895f53d8b644f83fe679e",
   "object": "chat.completion",
   "choices": [
     {
@@ -128,16 +126,16 @@ main();
       "finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "Hello! How can I help you today?"
+        "content": "Hi there! How can I help you today?"
       }
     }
   ],
-  "created": 1762182491,
-  "model": "kimi-k2-0905-preview",
+  "created": 1762170357,
+  "model": "kimi-k2-turbo-preview",
   "usage": {
-    "prompt_tokens": 3,
-    "completion_tokens": 53,
-    "total_tokens": 56
+    "prompt_tokens": 10,
+    "completion_tokens": 231,
+    "total_tokens": 241
   }
 }
 ```
@@ -172,7 +170,7 @@ def search_impl(arguments: Dict[str, Any]) -> Any:
 def chat(messages):
     url = f"{BASE_URL}/chat/completions"
     payload = {
-        "model": "moonshot/kimi-k2-0905-preview",
+        "model": "moonshot/kimi-k2-turbo-preview",
         "messages": messages,
         "temperature": 0.6,
         "tools": [
@@ -235,30 +233,15 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```
-Moonshot AI’s “Context Caching” is a data-management layer for the Kimi large-language-model API.
+Moonshot AI’s “Context Caching” is a **prompt-cache** layer for the Kimi large-language-model API.  
+It lets you upload long, static text (documents, system prompts, few-shot examples, code bases, etc.) once, store the resulting key-value (KV) tensors in Moonshot’s servers, and then re-use that cached prefix in as many later requests as you want. Because the heavy “prefill” computation is already done, subsequent calls that start with the same context:
 
-What it does  
-1. You upload or define a large, static context once (for example a 100-page product manual, a legal contract, or a code base).  
-2. The platform stores this context in a fast-access cache and gives it a tag/ID.  
-3. In every subsequent call you only send the new user question; the system re-uses the cached context instead of transmitting and re-processing the whole document each time.  
-4. When the cache TTL expires it is deleted automatically; you can also refresh or invalidate it explicitly.
+- Skip re-processing the cached tokens  
+- Return the first token up to **83 % faster**  
+- Cost up to **90 % less input-token money** (you pay only a small cache-storage and cache-hit fee instead of the full per-token price every time)
 
-Benefits  
-- Up to 90 % lower token consumption (you pay only for the incremental prompt and the new response).  
-- 83 % shorter time-to-first-token latency, because the heavy prefill phase is skipped on every reuse.  
-- API price stays the same; savings come from not re-sending the same long context.
-
-Typical use cases  
-- Customer-support bots that answer many questions against the same knowledge base.  
-- Repeated analysis of a static code repository.  
-- High-traffic AI applications that repeatedly query the same large document set.
-
-Billing (during public beta)  
-- Cache creation: 24 CNY per million tokens cached.  
-- Storage: 10 CNY per million tokens per minute.  
-- Cache hit: 0.02 CNY per successful call that re-uses the cache.
-
-In short, Context Caching lets developers treat very long, seldom-changing context as a reusable asset, cutting both cost and latency for repeated queries.
+Typical use-cases are FAQ bots that always read the same manual, repeated analysis of a static repo, or any agent that keeps a long instruction set in every turn.  
+You create a cache object with a TTL (time-to-live), pay a one-time creation charge plus a per-minute storage fee, and then pay a tiny fee each time an incoming request “hits” the cache.
 ```
 {% endcode %}
 
