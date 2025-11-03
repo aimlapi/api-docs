@@ -1,8 +1,14 @@
 [
   {
-    "name": "minimax/m2",
-    "alias": "m2",
+    "name": "moonshot/kimi-k2-preview",
+    "alias": "kimi-k2-preview",
     "category": "text-models-llm",
-    "vendor": "MiniMax"
+    "vendor": "Moonshot"
+  },
+  {
+    "name": "moonshot/kimi-k2-0905-preview",
+    "alias": "kimi-k2-preview",
+    "category": "text-models-llm",
+    "vendor": "Moonshot"
   }
 ]
