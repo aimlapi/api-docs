@@ -10,11 +10,11 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=bytedance/omnihuman&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/?model=bytedance/omnihuman/v1.5&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-
+From a single image and a voice track, OmniHuman-1.5 produces expressive character animations aligned with the speech’s rhythm, intonation, and meaning.
 
 ## Setup your API Key
 
@@ -271,7 +271,9 @@ main();
 
 You can create a video with this API by providing a reference image of a character and an audio file. The character will deliver the audio with full lip-sync and natural gestures. This POST request creates and submits a video generation task to the server — and returns a generation ID.
 
-
+{% openapi-operation spec="omnihuman-v-1-5" path="/v2/video/generations" method="post" %}
+[OpenAPI omnihuman-v-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-v.1.5.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
