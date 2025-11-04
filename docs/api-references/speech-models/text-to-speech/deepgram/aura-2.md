@@ -172,7 +172,9 @@ Audio saved to: audio.wav
 
 </details>
 
-The generated audio: [WAV](https://drive.google.com/file/d/1NaJcoNwVNXGybIK64eMD9qSt9yR4-Nwp/view).
+The generated audio:&#x20;
+
+{% embed url="https://drive.google.com/file/d/1NaJcoNwVNXGybIK64eMD9qSt9yR4-Nwp/view?usp=sharing" %}
 
 ***
 

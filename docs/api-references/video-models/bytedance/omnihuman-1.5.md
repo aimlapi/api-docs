@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-From a single image and a voice track, OmniHuman-1.5 produces expressive character animations aligned with the speech’s rhythm, intonation, and meaning.
+From a single image and a voice track, this model produces expressive character animations aligned with the speech’s rhythm, intonation, and meaning.
 
 ## Setup your API Key
 
@@ -60,7 +60,7 @@ def generate_video():
 
     data = {
         "model": "bytedance/omnihuman/v1.5",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": https://cdn.aimlapi.com/assets/content/office_man.png",
         "audio_url": "https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3",
     }
  
@@ -141,7 +141,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "bytedance/omnihuman/v1.5",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://cdn.aimlapi.com/assets/content/office_man.png",
     audio_url: "https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3",
   });
 
@@ -254,6 +254,58 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/omnihuman/v1.5', 'status': 'queued', 'meta': {'usage': {'tokens_used': 5040000}}}
+Generation ID:   3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/omnihuman/v1.5
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: generating
+Still waiting... Checking again in 10 seconds.
+Status: completed
+Processing complete:/n {'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/omnihuman/v1.5', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/kangaroo/HSRdq0Z-fMRhwDLV8SM5y_video.mp4'}}
 ```
 {% endcode %}
 
@@ -261,9 +313,7 @@ main();
 
 **Original (with sound)**: [896x1344](https://drive.google.com/file/d/1WOkEu1iB3kl8UeCcEjFj1Qn29i_LBj5Y/view?usp=sharing)
 
-**Low-res GIF preview**:
-
-<div align="left"><figure><img src="../../../.gitbook/assets/bytedance-omnihuman_preview.gif" alt=""><figcaption></figcaption></figure></div>
+{% embed url="https://drive.google.com/file/d/1Zpuju5Tu0kaHPceEcLDPd4D18FMOaD-0/view" %}
 
 ## API Schemas
 
