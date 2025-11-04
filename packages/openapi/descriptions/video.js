@@ -210,19 +210,19 @@ Supported configurations include:
     desc: `Whether to match the input video's frames per second (FPS).`,
   },
   frames_per_second: {
-    desc: `Frames per second of the generated video. Must be between 5 to 30.`,
+    desc: `Frames per second of the generated video.`,
   },
   preprocess: {
     desc: `Whether to preprocess the input video.`,
   },
   acceleration: {
-    desc: `Acceleration to use for inference. None or regular are available.`,
+    desc: `Acceleration to use for inference.`,
   },
   video_quality: {
     desc: `The quality of the generated video.`,
   },
   video_write_mode: {
-    desc: `The method used to write the video. Fast, balanced, small are available.`,
+    desc: `The method used to write the video.`,
   },
   num_interpolated_frames: {
     desc: `Number of frames to interpolate between the original frames.`,
@@ -252,7 +252,7 @@ Supported configurations include:
     desc: `Denoising strength for the video-to-video generation. 0.0 preserves the original, 1.0 completely remakes the video.`,
   },
   fps: {
-    desc: `The frame rate of the generated video`,
+    desc: `Frames per second of the generated video.`,
   },
   video_output_type: {
     desc: `The output type of the generated video.`,
