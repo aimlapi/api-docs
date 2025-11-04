@@ -24,6 +24,25 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
+<details>
+
+<summary>Aspect ratio/Resolution Table</summary>
+
+| Aspect ratio | Resolution | Tokens |
+| ------------ | ---------- | ------ |
+| 1:1          | 1024×1024  | 1290   |
+| 2:3          | 832×1248   | 1290   |
+| 3:2          | 1248×832   | 1290   |
+| 3:4          | 864×1184   | 1290   |
+| 4:3          | 1184×864   | 1290   |
+| 4:5          | 896×1152   | 1290   |
+| 5:4          | 1152×896   | 1290   |
+| 9:16         | 768×1344   | 1290   |
+| 16:9         | 1344×768   | 1290   |
+| 21:9         | 1536×672   | 1290   |
+
+</details>
+
 {% openapi-operation spec="gemini-2-5-flash-image-edit" path="/v1/images/generations" method="post" %}
 [OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-2.5-flash-image-edit.json)
 {% endopenapi-operation %}
