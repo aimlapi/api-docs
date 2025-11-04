@@ -1,14 +1,8 @@
 [
   {
-    "name": "moonshot/kimi-k2-preview",
-    "alias": "kimi-k2-preview",
-    "category": "text-models-llm",
-    "vendor": "Moonshot"
-  },
-  {
-    "name": "moonshot/kimi-k2-0905-preview",
-    "alias": "kimi-k2-preview",
-    "category": "text-models-llm",
-    "vendor": "Moonshot"
+    "name": "google/gemini-2.5-flash-image",
+    "alias": "gemini-2.5-flash-image",
+    "category": "image-models",
+    "vendor": "Google"
   }
 ]
