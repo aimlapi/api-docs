@@ -1,8 +1,9 @@
 [
   {
-    "name": "google/gemini-2.5-flash-image",
-    "alias": "gemini-2.5-flash-image",
+    "name": "google/gemini-2.5-flash-image-edit",
+    "alias": "gemini-2.5-flash-image-edit",
     "category": "image-models",
-    "vendor": "Google"
+    "vendor": "Google",
+    "features": ["image-to-image"]
   }
 ]
