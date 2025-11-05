@@ -311,7 +311,7 @@ Processing complete:/n {'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/om
 
 </details>
 
-**Original (with sound)**: [896x1344](https://drive.google.com/file/d/1WOkEu1iB3kl8UeCcEjFj1Qn29i_LBj5Y/view?usp=sharing)
+**Original (1920x1088, with sound)**:
 
 {% embed url="https://drive.google.com/file/d/1Zpuju5Tu0kaHPceEcLDPd4D18FMOaD-0/view" %}
 
