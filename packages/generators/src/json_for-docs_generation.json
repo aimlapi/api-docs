@@ -1,14 +1,14 @@
 [
   {
-    "name": "nvidia/nemotron-nano-9b-v2",
-    "alias": "nemotron-nano-9b-v2",
-    "category": "text-models-llm",
-    "vendor": "NVIDIA"
+    "name": "minimax/speech-2.6-turbo",
+    "alias": "speech-2.6-turbo",
+    "category": "speech-models",
+    "vendor": "MiniMax"
   },
   {
-    "name": "nvidia/nemotron-nano-12b-v2-vl",
-    "alias": "nemotron-nano-12b-v2-vl",
-    "category": "text-models-llm",
-    "vendor": "NVIDIA"
+    "name": "minimax/speech-2.6-hd",
+    "alias": "speech-2.6-hd",
+    "category": "speech-models",
+    "vendor": "MiniMax"
   }
 ]
