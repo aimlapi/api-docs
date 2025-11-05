@@ -1,9 +1,14 @@
 [
   {
-    "name": "google/gemini-2.5-flash-image-edit",
-    "alias": "gemini-2.5-flash-image-edit",
-    "category": "image-models",
-    "vendor": "Google",
-    "features": ["image-to-image"]
+    "name": "nvidia/nemotron-nano-9b-v2",
+    "alias": "nemotron-nano-9b-v2",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA"
+  },
+  {
+    "name": "nvidia/nemotron-nano-12b-v2-vl",
+    "alias": "nemotron-nano-12b-v2-vl",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA"
   }
 ]
