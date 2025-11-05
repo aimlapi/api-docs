@@ -8,6 +8,7 @@ on:
 jobs:
   dumps:
     runs-on: monitoring-all
+    environment: production
     steps:
       - name: Dump
         env:
