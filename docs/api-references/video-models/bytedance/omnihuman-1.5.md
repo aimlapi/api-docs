@@ -60,7 +60,7 @@ def generate_video():
 
     data = {
         "model": "bytedance/omnihuman/v1.5",
-        "image_url": https://cdn.aimlapi.com/assets/content/office_man.png",
+        "image_url": "https://cdn.aimlapi.com/assets/content/office_man.png",
         "audio_url": "https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3",
     }
  
