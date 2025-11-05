@@ -7,7 +7,7 @@ import {
 
 type IntegrationContext = {} & RuntimeContext;
 type IntegrationBlockProps = {
-  defaultQuestion?: string
+  defaultQuestion?: string;
 };
 type IntegrationBlockState = {};
 type IntegrationAction = { action: "click" };
