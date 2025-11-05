@@ -19,7 +19,7 @@ The model offers strong document understanding and summarization capabilities.
 
 ### &#x20;:digit\_two:  Copy the code example
 
-At the bottom of this page, you'll find [a code example](llama-3.1-nemotron-70b-1.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](nemotron-nano-12b-v2-vl.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 ### :digit\_three:  Modify the code example
 
@@ -28,7 +28,7 @@ At the bottom of this page, you'll find [a code example](llama-3.1-nemotron-70b-
 
 ### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](llama-3.1-nemotron-70b-1.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](nemotron-nano-12b-v2-vl.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 ### :digit\_five:  Run your modified code
 

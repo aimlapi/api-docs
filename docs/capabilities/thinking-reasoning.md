@@ -81,7 +81,7 @@ Supported models:
 ***
 
 * [vidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
-* [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/llama-3.1-nemotron-70b-1.md)
+* [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/nemotron-nano-12b-v2-vl.md)
 
 ***
 
