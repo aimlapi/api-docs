@@ -257,4 +257,27 @@ Supported configurations include:
   video_output_type: {
     desc: `The output type of the generated video.`,
   },
+  lip_sync_tts_content: {
+    pixverse: {
+      lip_sync: {
+        desc: `The text content to be lip-synced in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both.`,
+      },
+      default: { desc: `The text content to be lip-synced in the video.` },
+    },
+  },
+  lip_sync_tts_speaker: {
+    pixverse: {
+      lip_sync: {
+        desc: `A predefined system voice used for generating speech in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both.`,
+      },
+      default: {
+        desc: `A predefined system voice used for generating speech in the video.`,
+      },
+    },
+  },
+  audio_url: {
+    pixverse: {
+      desc: `A direct link to an online audio file or a Base64-encoded local to an audio file used for lip-syncing in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both.`,
+    },
+  },
 };
