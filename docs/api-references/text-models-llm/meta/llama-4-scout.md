@@ -4,7 +4,7 @@
 
 ## Model Overview
 
-A 17 billion active parameter model with 16 experts, is the best multimodal model in the world in its class and is more powerful than all previous generation Llama models. Additionally, the model offers an industry-leading context window of 10M and delivers better results than [Gemma 3](../google/gemma-3.md), Gemini 2.0 Flash-Lite, and Mistral 3.1 on a wide range of common benchmarks.
+A 17 billion active parameter model with 16 experts, is the best multimodal model in the world in its class and is more powerful than all previous generation Llama models. Additionally, the model offers an industry-leading context window of 1M and delivers better results than [Gemma 3](../google/gemma-3.md), Gemini 2.0 Flash-Lite, and Mistral 3.1 on a wide range of common benchmarks.
 
 ## How to Make a Call
 

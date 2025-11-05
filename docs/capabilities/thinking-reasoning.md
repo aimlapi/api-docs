@@ -80,6 +80,11 @@ Supported models:
 
 ***
 
+* [vidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
+* [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/llama-3.1-nemotron-70b-1.md)
+
+***
+
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
