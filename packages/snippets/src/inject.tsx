@@ -25,7 +25,9 @@ export const injectButtons = () => {
       const buttons = document.querySelectorAll(".api-main-buttom.w-button");
       buttons.forEach((b) => {
         const url = new URL(b.getAttribute("href")!);
-        const model = window.location.pathname.match(/\/models\/(.+?)\/?/)?.[1];
+        const model = window.location.pathname.match(
+          /\/models\/([^\\/]+)\/?/
+        )?.[1];
         if (model) {
           url.searchParams.set("model", model);
         }
@@ -41,7 +43,7 @@ export const injectButtons = () => {
       }
 
       if (buttons.length > 0) {
-        console.error("hostnames injected");
+        console.log("hostnames injected");
         clearInterval(intervalId);
       } else {
         console.warn("failed to inject hostnames: no buttons detected");
