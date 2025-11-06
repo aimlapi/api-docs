@@ -1,8 +1,14 @@
 [
   {
-    "name": "minimax/music-1.5",
-    "alias": "music-1.5",
-    "category": "music-models",
-    "vendor": "MiniMax"
+    "name": "klingai/avatar-standard",
+    "alias": "avatar-standard",
+    "category": "video-models",
+    "vendor": "Kling-AI"
+  },
+  {
+    "name": "klingai/avatar-pro",
+    "alias": "avatar-pro",
+    "category": "video-models",
+    "vendor": "Kling-AI"
   }
 ]
