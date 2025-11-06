@@ -1,14 +1,8 @@
 [
   {
-    "name": "minimax/speech-2.6-turbo",
-    "alias": "speech-2.6-turbo",
-    "category": "speech-models",
-    "vendor": "MiniMax"
-  },
-  {
-    "name": "minimax/speech-2.6-hd",
-    "alias": "speech-2.6-hd",
-    "category": "speech-models",
+    "name": "minimax/music-1.5",
+    "alias": "music-1.5",
+    "category": "music-models",
     "vendor": "MiniMax"
   }
 ]
