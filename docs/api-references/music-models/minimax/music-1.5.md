@@ -224,3 +224,11 @@ The generation can be completed in 60-80 seconds or take a bit more.
 {% openapi-operation spec="music-1-5" path="/v2/generate/audio" method="post" %}
 [OpenAPI music-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-1.5.json)
 {% endopenapi-operation %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+
+{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% endopenapi-operation %}
