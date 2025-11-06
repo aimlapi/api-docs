@@ -1,12 +1,12 @@
-# Speech 2.5 Turbo Preview
+# Speech 2.6 Turbo
 
 {% hint style="info" %}
-This documentation is valid for the following model:   &#x20;
+This documentation is valid for the following model:  &#x20;
 
-* `minimax/speech-2.5-turbo-preview`
+* &#x20;`minimax/speech-2.6-turbo`
 {% endhint %}
 
-A high-definition text-to-speech model with enhanced multilingual expressiveness, more precise voice replication, and expanded support for 40 languages.
+The model generates speech from text prompts and multiple voices, optimized for fast, low-latency synthesis.
 
 ## Setup your API Key
 
@@ -31,7 +31,7 @@ def main():
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     }
     payload = {
-        "model": "minimax/speech-2.5-turbo-preview",
+        "model": " minimax/speech-2.6-turbo",
         "text": "Hi! What are you doing today?",
         "voice_setting": {
           "voice_id": "Wise_Woman"
@@ -63,7 +63,7 @@ import path from "path";
 async function main() {
   const url = "https://api.aimlapi.com/v1/tts";
   const payload = {
-    model: "minimax/speech-2.5-turbo-preview",
+    model: " minimax/speech-2.6-turbo",
     text: "Hi! What are you doing today?",
     voice_setting: {
       voice_id: "Wise_Woman"
@@ -107,10 +107,12 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
 
 </details>
 
-{% embed url="https://drive.google.com/file/d/1tlBFyFszs--15qS_MWSps8zR46fqQzey/view?usp=sharing" %}
+**Generation time**: \~ 4.5 s.
+
+{% embed url="https://drive.google.com/file/d/1r16yYPqHP5C1Y4Nsa3ks26XDsNvFkF9H/view" %}
 
 ## API Schema
 
-{% openapi-operation spec="speech-2-5-turbo-preview" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-5-turbo-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-turbo-preview.json)
+{% openapi-operation spec="speech-2-6-turbo" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-6-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-turbo.json)
 {% endopenapi-operation %}

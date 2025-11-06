@@ -321,6 +321,8 @@
     * [MiniMax](api-references/speech-models/voice-chat/minimax/README.md)
       * [Speech 2.5 Turbo Preview](api-references/speech-models/voice-chat/minimax/speech-2.5-turbo-preview.md)
       * [Speech 2.5 HD Preview](api-references/speech-models/voice-chat/minimax/speech-2.5-hd-preview.md)
+      * [Speech 2.6 Turbo](api-references/speech-models/voice-chat/minimax/speech-2.6-turbo.md)
+      * [Speech 2.6 HD](api-references/speech-models/voice-chat/minimax/speech-2.6-hd.md)
 * [Content Moderation Models](api-references/moderation-safety-models/README.md)
   * [Meta](api-references/moderation-safety-models/Meta/README.md)
     * [Llama-Guard-3-11B-Vision-Turbo](api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md)

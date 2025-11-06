@@ -1,7 +1,9 @@
 # Speech 2.5 HD Preview
 
 {% hint style="info" %}
-This documentation is valid for the following model:    `minimax/speech-2.5-hd-preview`
+This documentation is valid for the following model:   &#x20;
+
+* `minimax/speech-2.5-hd-preview`
 {% endhint %}
 
 A high-definition text-to-speech model with enhanced multilingual expressiveness, more precise voice replication, and expanded support for 40 languages.
