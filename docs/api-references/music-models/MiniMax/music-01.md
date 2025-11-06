@@ -245,7 +245,7 @@ Listen to the track we generated:
 
 ## API Schemas
 
-### Generate a music sample
+### Upload a reference sample
 
 This endpoint uploads a reference music piece to the server, analyzes it, and returns identifiers for the voice and/or instrumental patterns to use later.
 
