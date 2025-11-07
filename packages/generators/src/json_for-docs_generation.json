@@ -1,14 +1,26 @@
 [
   {
-    "name": "klingai/avatar-standard",
-    "alias": "avatar-standard",
+    "name": "openai/sora-2-t2v",
+    "alias": "sora-2-t2v",
     "category": "video-models",
-    "vendor": "Kling-AI"
+    "vendor": "OpenAI"
   },
   {
-    "name": "klingai/avatar-pro",
-    "alias": "avatar-pro",
+    "name": "openai/sora-2-i2v",
+    "alias": "sora-2-i2v",
     "category": "video-models",
-    "vendor": "Kling-AI"
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/sora-2-pro-i2v",
+    "alias": "sora-2-pro-i2v",
+    "category": "video-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/sora-2-pro-t2v",
+    "alias": "sora-2-pro-t2v",
+    "category": "video-models",
+    "vendor": "OpenAI"
   }
 ]
