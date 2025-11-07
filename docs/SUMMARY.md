@@ -163,7 +163,7 @@
     * [Imagen 4 Generate](api-references/image-models/google/imagen-4-generate.md)
     * [Imagen 4 Fast Generate](api-references/image-models/google/imagen-4-fast-generate.md)
     * [Imagen 4 Ultra Generate](api-references/image-models/google/imagen-4-ultra-generate.md)
-    * [Gemini 2.5 Flash Image](api-references/image-models/google/gemini-2.5-flash-image.md)
+    * [Gemini 2.5 Flash Image (Nano Banana)](api-references/image-models/google/gemini-2.5-flash-image.md)
     * [Gemini 2.5 Flash Image Edit](api-references/image-models/google/gemini-2.5-flash-image-edit.md)
   * [OpenAI](api-references/image-models/OpenAI/README.md)
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)

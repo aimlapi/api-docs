@@ -89,7 +89,7 @@ aider --model openai/anthropic/claude-3.7-sonnet
 aider --model openai/google/gemini-1.5-pro
 ```
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (1).png" alt="Running Aider with AI/ML API model"><figcaption><p>Running Aider with AI/ML API model</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (1) (2).png" alt="Running Aider with AI/ML API model"><figcaption><p>Running Aider with AI/ML API model</p></figcaption></figure></div>
 
 ***
 

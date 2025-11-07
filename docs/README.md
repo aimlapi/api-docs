@@ -12,6 +12,12 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 
 ***
 
+**Trending Models**
+
+<table data-column-title-hidden data-view="cards"><thead><tr><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td data-object-fit="contain"><a href=".gitbook/assets/sora_02.png">sora_02.png</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td data-object-fit="contain"><a href=".gitbook/assets/nano_02.png">nano_02.png</a></td><td><a href="api-references/image-models/google/gemini-2.5-flash-image.md">gemini-2.5-flash-image.md</a></td></tr><tr><td data-object-fit="contain"><a href=".gitbook/assets/gpt_02.png">gpt_02.png</a></td><td><a href="api-references/text-models-llm/openai/gpt-5.md">gpt-5.md</a></td></tr></tbody></table>
+
+***
+
 <table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p></p><p><strong>Start with this code block</strong> <br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Step-by-step example:</p><p><a href="quickstart/setting-up.md">Setting Up</a><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Choose the SDK to use:</p><p><a href="quickstart/supported-sdks.md">Supported SDKs</a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 
 client = OpenAI(
@@ -26,8 +32,6 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 </code></pre></td></tr></tbody></table>
-
-
 
 ***
 
