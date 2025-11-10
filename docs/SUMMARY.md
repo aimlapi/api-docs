@@ -448,6 +448,7 @@
 * [Cursor](integrations/cursor.md)
 * [ElizaOS](integrations/elizaos.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
+* [Kilo Code](integrations/kilo-code.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
 * [Make](integrations/make.md)
