@@ -410,6 +410,7 @@
 
 ## FAQ
 
+* [Can I get my billing info via API request?](faq/can-i-get-my-billing-info-via-api-request.md)
 * [Can I use API in Python?](faq/can-i-use-api-in-python.md)
 * [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
 * [What are the Pro Models?](faq/pro-models.md)
