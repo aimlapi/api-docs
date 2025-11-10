@@ -14,14 +14,15 @@ Yes, you can query your account balance and other billing details through the AI
 
 **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Authorization | `Bearer <token>`   |
-| Content-Type  | `application/json` |
+<table><thead><tr><th width="308">Name</th><th>Value</th></tr></thead><tbody><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr><tr><td>Content-Type</td><td><code>application/json</code></td></tr></tbody></table>
 
 **Body**
 
 **-**
+
+**Response Schema**
+
+<table><thead><tr><th width="189">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>balance</code></td><td>The total balance associated with the provided API key.</td></tr><tr><td><code>lowBalance</code></td><td>True if the balance is below the threshold.</td></tr><tr><td><code>lowBalanceThreshold</code></td><td>Threshold for switching to low balance status.</td></tr><tr><td><code>lastUpdated</code></td><td>The date of the request — i.e., the current date.</td></tr><tr><td><code>autoDebitStatus</code></td><td>Indicates whether auto top-up is enabled for the plan.</td></tr><tr><td><code>status</code></td><td>The status of the plan associated with the provided API key.</td></tr><tr><td><code>statusExplanation</code></td><td>A more detailed explanation of the plan status.</td></tr></tbody></table>
 
 ## Code Example
 
