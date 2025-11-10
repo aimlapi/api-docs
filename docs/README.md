@@ -14,7 +14,7 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 
 **Trending Models**
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td data-object-fit="contain"><a href=".gitbook/assets/sora_02.png">sora_02.png</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td data-object-fit="contain"><a href=".gitbook/assets/nano_02.png">nano_02.png</a></td><td><a href="api-references/image-models/google/gemini-2.5-flash-image.md">gemini-2.5-flash-image.md</a></td></tr><tr><td data-object-fit="contain"><a href=".gitbook/assets/gpt_02.png">gpt_02.png</a></td><td><a href="api-references/text-models-llm/openai/gpt-5.md">gpt-5.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards"><thead><tr><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href=".gitbook/assets/photo_2025-11-10_18-53-24.jpg">photo_2025-11-10_18-53-24.jpg</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td><a href=".gitbook/assets/photo_2025-11-10_18-44-22.jpg">photo_2025-11-10_18-44-22.jpg</a></td><td><a href="api-references/image-models/google/gemini-2.5-flash-image.md">gemini-2.5-flash-image.md</a></td></tr><tr><td><a href=".gitbook/assets/photo_2025-11-10_18-53-28.jpg">photo_2025-11-10_18-53-28.jpg</a></td><td><a href="api-references/text-models-llm/openai/gpt-5.md">gpt-5.md</a></td></tr></tbody></table>
 
 ***
 
