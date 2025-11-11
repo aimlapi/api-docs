@@ -1,6 +1,18 @@
 # qwen3-max-preview
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><p><code>alibaba/qwen3-max-preview</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=alibaba/qwen3-max-preview&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+{% columns %}
+{% column width="58.333333333333336%" %}
+{% hint style="info" %}
+This documentation is valid for the following model:
+
+* `alibaba/qwen3-max-preview`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="41.666666666666664%" %}
+<a href="https://aimlapi.com/app/?model=alibaba/qwen3-max-preview&#x26;mode=chat" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
