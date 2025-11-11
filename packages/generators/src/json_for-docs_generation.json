@@ -1,5 +1,395 @@
 [
   {
+    "name": "alibaba/wan2.1-t2v-plus",
+    "alias": "wan2.1-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.1-t2v-turbo",
+    "alias": "wan2.1-t2v-turbo",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-t2v-plus",
+    "alias": "wan2.2-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-i2v-plus",
+    "alias": "wan2.2-i2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-14b-animate-replace",
+    "alias": "wan2.2-14b-animate-replace",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-14b-animate-move",
+    "alias": "wan2.2-14b-animate-move",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-vace-fun-a14b-reframe",
+    "alias": "wan2.2-vace-fun-a14b-reframe",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-vace-fun-a14b-outpainting",
+    "alias": "wan2.2-vace-fun-a14b-outpainting",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-vace-fun-a14b-inpainting",
+    "alias": "wan2.2-vace-fun-a14b-inpainting",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-vace-fun-a14b-pose",
+    "alias": "wan2.2-vace-fun-a14b-pose",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.2-vace-fun-a14b-depth",
+    "alias": "wan2.2-i2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.5-t2v-preview",
+    "alias": "wan2.5-t2v-preview",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "alibaba/wan2.5-i2v-preview",
+    "alias": "wan2.5-i2v-preview",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud"
+  },
+  {
+    "name": "bytedance/seedance-1-0-lite-t2v",
+    "alias": "seedance-1.0-lite-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/seedance-1-0-lite-i2v",
+    "alias": "seedance-1.0-lite-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/seedance-1-0-pro-t2v",
+    "alias": "seedance-1.0-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/seedance-1-0-pro-i2v",
+    "alias": "seedance-1.0-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/omnihuman/v1.5",
+    "alias": "omnihuman-v.1.5",
+    "category": "video-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "veo2/image-to-video",
+    "alias": "veo2-image-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "veo2",
+    "alias": "veo2-text-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo3",
+    "alias": "veo3",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-i2v",
+    "alias": "veo-3.0-i2v",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-fast",
+    "alias": "veo-3.0-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.0-i2v-fast",
+    "alias": "veo-3.0-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-t2v",
+    "alias": "veo-3.1-t2v",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-t2v-fast",
+    "alias": "veo-3.1-t2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-i2v",
+    "alias": "veo-3.1-i2v",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-i2v-fast",
+    "alias": "veo-3.1-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-reference-to-video",
+    "alias": "veo-3.1-reference-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-first-last-image-to-video",
+    "alias": "veo-3.1-first-last-image-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/veo-3.1-first-last-image-to-video-fast",
+    "alias": "veo-3.1-first-last-image-to-video-fast",
+    "category": "video-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "kling-video/v1/standard/image-to-video",
+    "alias": "v1-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1/standard/text-to-video",
+    "alias": "v1-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1/pro/image-to-video",
+    "alias": "v1-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1/pro/text-to-video",
+    "alias": "v1-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/image-to-video",
+    "alias": "v1.6-standart/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standard/multi-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/standard/text-to-video",
+    "alias": "v1.6-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/pro/image-to-video",
+    "alias": "v1.6-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v1.6/pro/text-to-video",
+    "alias": "v1.6-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-standard-effects",
+    "alias": "v1.6-standard-effects",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-pro-effects",
+    "alias": "v1.6-pro-effects",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2-master-text-to-video",
+    "alias": "v2-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2-master-image-to-video",
+    "alias": "v2-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.1-master-text-to-video",
+    "alias": "v2.1-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.1-master-image-to-video",
+    "alias": "v2.1-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/standard/image-to-video",
+    "alias": "v2.1-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "kling-video/v2.1/pro/image-to-video",
+    "alias": "v2.1-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/image-to-video",
+    "alias": "v2.5-turbo/pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/text-to-video",
+    "alias": "v2.5-turbo/pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI"
+  },
+  {
+    "name": "krea/krea-wan-14b/text-to-video",
+    "alias": "krea-wan-14b-text-to-video",
+    "category": "video-models",
+    "vendor": "Krea"
+  },
+  {
+    "name": "krea/krea-wan-14b/video-to-video",
+    "alias": "krea-wan-14b-video-to-video",
+    "category": "video-models",
+    "vendor": "Krea"
+  },
+  {
+    "name": "luma/ray-1-6",
+    "alias": "ray-1-6",
+    "category": "video-models",
+    "vendor": "luma-ai"
+  },
+  {
+    "name": "luma/ray-2",
+    "alias": "ray-2",
+    "category": "video-models",
+    "vendor": "luma-ai"
+  },
+  {
+    "name": "luma/ray-flash-2",
+    "alias": "ray-flash-2",
+    "category": "video-models",
+    "vendor": "luma-ai"
+  },
+  {
+    "name": "video-01",
+    "alias": "video-01",
+    "category": "video-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "video-01-live2d",
+    "alias": "video-01-live2d",
+    "category": "video-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/hailuo-02",
+    "alias": "hailuo-02",
+    "category": "video-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/hailuo-2.3",
+    "alias": "hailuo-2.3",
+    "category": "video-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/hailuo-2.3-fast",
+    "alias": "hailuo-2.3-fast",
+    "category": "video-models",
+    "vendor": "MiniMax"
+  },
+  {
     "name": "openai/sora-2-t2v",
     "alias": "sora-2-t2v",
     "category": "video-models",
@@ -22,5 +412,59 @@
     "alias": "sora-2-pro-t2v",
     "category": "video-models",
     "vendor": "OpenAI"
+  },
+  {
+    "name": "pixverse/v5/transition",
+    "alias": "v5/transition",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/text-to-video",
+    "alias": "v5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5/image-to-video",
+    "alias": "v5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "gen3a_turbo",
+    "alias": "gen3a_turbo",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "runway/gen4_turbo",
+    "alias": "gen4_turbo",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "runway/gen4_aleph",
+    "alias": "gen4_aleph",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "runway/act_two",
+    "alias": "act_two",
+    "category": "video-models",
+    "vendor": "Runway"
+  },
+  {
+    "name": "sber-ai/kandinsky5-t2v",
+    "alias": "kandinsky5-t2v",
+    "category": "video-models",
+    "vendor": "Sber AI"
+  },
+  {
+    "name": "sber-ai/kandinsky5-distill-t2v",
+    "alias": "kandinsky5-distill-t2v",
+    "category": "video-models",
+    "vendor": "Sber AI"
   }
 ]
