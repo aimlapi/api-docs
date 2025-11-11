@@ -13,3 +13,4 @@ export { default as textToSpeech } from './descriptions/text-to-speech.js';
 export { default as vision } from './descriptions/vision.js';
 export { default as responseApi } from './descriptions/response-api.js';
 export { default as videoResponse } from './descriptions/video.response.js';
+export { default as chatCompletionResponse } from './descriptions/chat-completion.response.js';
