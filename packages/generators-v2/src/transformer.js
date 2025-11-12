@@ -35,13 +35,30 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.customSample(options);
   }
 
-  if (codeSample) {
-    Object.entries(updatedSchema.paths).map(([path, operation]) => {
-      if (operation.post) {
+  Object.entries(updatedSchema.paths).map(([path, operation]) => {
+    if (operation.post) {
+      if (codeSample) {
         updatedSchema.paths[path].post['x-codeSamples'] = codeSample;
       }
-    });
-  }
+      if (options.models?.length) {
+        const newModels = [
+          ...new Set([
+            ...(updatedSchema.paths[path]?.post?.requestBody?.content[
+              'application/json'
+            ]?.schema?.properties?.model?.enum || []),
+            ...options.models,
+          ]),
+        ];
+        try {
+          updatedSchema.paths[path].post.requestBody.content[
+            'application/json'
+          ].schema.properties.model.enum = newModels;
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    }
+  });
 
   return updatedSchema;
 }
