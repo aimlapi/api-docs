@@ -9,10 +9,16 @@ export async function saveSchema(schema, options) {
   const categoryPath = path.join(
     rootPath,
     options.category,
-    options.vendor
+    options.vendor.replace(/ /g, '-')
   );
   await fs.mkdir(categoryPath, { recursive: true });
 
-  const filePath = path.join(categoryPath, `${options.alias}.json`);
+  const filePath = path.join(
+    categoryPath,
+    `${options.alias
+      .replace(/#/g, '')
+      .replace(/ /g, '-')
+      .replace(/\//g, '-')}.json`
+  );
   await fs.writeFile(filePath, JSON.stringify(schema, null, 2), 'utf-8');
 }
