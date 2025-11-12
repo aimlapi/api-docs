@@ -14,11 +14,13 @@ npm run generate --prefix packages/generators-v2
 
 Генератор считывает конфигурацию из файла json_for-docs_generation.json, который должен иметь следующую структуру:
 
+> Обязательными являются только первые 5 полей.
+
 ```json
 [
   {
     "name": "modelName",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=o1-pro&source=openai",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek-chat",
     "alias": "alias",
     "category": "text-models-llm",
     "vendor": "OpenAI",
