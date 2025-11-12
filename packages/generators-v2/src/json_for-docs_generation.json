@@ -1,29 +1,10 @@
 [
   {
-    "name": "openai/gpt-4o",
-    "url": "http://localhost:3305/docs-json?endpoint=openai/chat-completions&model=o1-pro&source=openai",
-    "alias": "gpt-4o",
+    "name": "qwen-plus",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-plus",
+    "alias": "qwen-plus",
     "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
-    "customParams": {
-      "text_param": "text",
-      "object_param": {
-        "name": "object",
-        "type": "string"
-      },
-      "array_param": ["param1", 212],
-      "object_array_param": [
-        {
-          "name": "object1",
-          "type": "string"
-        },
-        {
-          "name": 21212,
-          "type": "string"
-        }
-      ]
-    }
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
   }
 ]
