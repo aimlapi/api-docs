@@ -8,9 +8,9 @@ icon: hand-wave
 
 # Setting Up
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference):&#x20;
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference/):
 
-* [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),&#x20;
+* [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),
 * [configuring the base URL](setting-up.md#configuring-base-url),
 * [making an API call](setting-up.md#making-an-api-call).
 
@@ -22,7 +22,7 @@ Let's walk through an example of connecting to the [**gpt-4o**](../api-reference
 
 <summary><mark style="color:blue;">What is an API Key?</mark></summary>
 
-You can find your AIML API key on the [account page](https://aimlapi.com/app/keys).&#x20;
+You can find your AIML API key on the [account page](https://aimlapi.com/app/keys).
 
 An AIML API Key is a credential that grants you access to our API from within your code. It is a sensitive string of characters that should be kept confidential. Do not share this API key with anyone else, as it could be misused without your knowledge.
 
@@ -35,7 +35,7 @@ To use the AIML API, you need to create an account and generate an API key. Foll
 1. [**Create an Account**](https://aimlapi.com/app/sign-up)**:** Visit the AI/ML API website and create an account.
 2. [**Generate an API Key**](https://aimlapi.com/app/keys)**:** After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Your API key</p></figcaption></figure>
 
 ## **Configuring Base URL**
 
@@ -419,13 +419,13 @@ All preparation steps are done. Now we need to write our functionality and creat
 
 The best practice is to split the code blocks into complete parts with their own logic and not place executable code inside global module code. This rule applies in both languages we discuss. So we create a main function with all our logic. In JS, this function needs to be async, due to Promises and simplicity. In Python, requests run synchronously.
 
-The OpenAI SDK provides us with methods to communicate with chat models. It is placed inside the `chat.completions.create` function. This function accepts multiple parameters but requires only two: `model` and `messages`.&#x20;
+The OpenAI SDK provides us with methods to communicate with chat models. It is placed inside the `chat.completions.create` function. This function accepts multiple parameters but requires only two: `model` and `messages`.
 
-`model` is a string, the name of the model that you want to use. For the best results, use a model designed for chat, or you can get unpredictable results if the model is not fine-tuned for that purpose. A list of supported models can be found here.&#x20;
+`model` is a string, the name of the model that you want to use. For the best results, use a model designed for chat, or you can get unpredictable results if the model is not fine-tuned for that purpose. A list of supported models can be found here.
 
 `messages` is an array of objects with a `content` field as prompt and a `role` string that can be one of `system`, `user`, `tool`, `assistant`. With the role, the model can understand what to do with this prompt: Is this an instruction? Is this a user message? Is this an example of how to answer? Is this the result of code execution? The tool role is used for more complex behavior and will be discussed in another article.
 
-In our example, we also use `max_tokens` and `temperature`.&#x20;
+In our example, we also use `max_tokens` and `temperature`.
 
 With that knowledge, we can now send our request like the following:
 
@@ -508,4 +508,3 @@ Voila! Using AI/ML API models is the simplest and most productive way to get int
 ## Future Steps
 
 * [Know more about OpenAI SDK inside AI/ML API](supported-sdks.md)
-

@@ -37,7 +37,7 @@ Note that by default, the `quality` parameter is set to `'medium'`. The output i
 ### Edit image
 
 {% hint style="warning" %}
-Unfortunately, this model only accepts local files specified by their file paths. \
+Unfortunately, this model only accepts local files specified by their file paths.\
 It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
@@ -144,7 +144,7 @@ main();
 
 We obtained the following 1536x1024 image by running this code example (\~ 26 s):
 
-<figure><img src="../../../.gitbook/assets/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/t-rex (1).png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
 
 <details>
 
@@ -164,8 +164,8 @@ Let's combine two images of different sizes using a simple prompt.
 
 <summary>Our input images</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p>t-rex.png</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/crown.png" alt=""><figcaption><p>crown.png</p></figcaption></figure></div> |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../.gitbook/assets/t-rex (1).png" alt=""><figcaption><p>t-rex.png</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/crown.png" alt=""><figcaption><p>crown.png</p></figcaption></figure></div> |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 
 </details>
 
@@ -263,8 +263,8 @@ In this example, we’ll provide the model with our previously generated image o
 
 <summary>Image &#x26; Mask</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p>Image</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/t-rex-alpha_mask (1).png" alt=""><figcaption><p>Mask</p></figcaption></figure></div> |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../.gitbook/assets/t-rex (1).png" alt=""><figcaption><p>Image</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/t-rex-alpha_mask (1).png" alt=""><figcaption><p>Mask</p></figcaption></figure></div> |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 
 </details>
 

@@ -118,9 +118,9 @@ console.log(JSON.stringify(data, null, 2));
 
 </details>
 
-| Reference Image                                                                                                     | Generated Image                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/5HOXEk0JInhVwkMbBTEAB_4c7b647485034d03ad06cf7c58331371.jpg" alt=""><figcaption></figcaption></figure></div> |
+| Reference Image                                                                                                   | Generated Image                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../reference-files/t-rex (1).png" alt=""><figcaption></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/5HOXEk0JInhVwkMbBTEAB_4c7b647485034d03ad06cf7c58331371.jpg" alt=""><figcaption></figcaption></figure></div> |
 
 <details>
 
@@ -140,8 +140,8 @@ This time, we’ll pass two images to the model: our dinosaur and a solid blue m
 
 <summary>Our input images</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>Our chilling T-rex</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/blue-mug.jpg" alt=""><figcaption><p>Our blue mug</p></figcaption></figure></div> |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../reference-files/t-rex (1).png" alt=""><figcaption><p>Our chilling T-rex</p></figcaption></figure></div> | <div><figure><img src="../../../../reference-files/blue-mug (1).jpg" alt=""><figcaption><p>Our blue mug</p></figcaption></figure></div> |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 
 </details>
 

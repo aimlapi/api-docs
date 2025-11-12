@@ -14,40 +14,40 @@ An advanced AI model that generates diverse high-quality audio compositions by a
 
 <summary>Step-by-Step Instructions</summary>
 
-### :digit\_one:  Setup You Can’t Skip
+#### :digit\_one: Setup You Can’t Skip
 
-:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### :digit\_two:  Copy the code example
+#### :digit\_two: Copy the code example
 
 At the bottom of this page, you'll find [a code example](minimax-music-\[legacy].md#quick-code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
-Generating a music piece using this model involves sequentially calling two endpoints:&#x20;
+Generating a music piece using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a music generation task to the server (returns a generation ID).
-* The second one is for requesting the generated piece from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated piece from the server using the generation ID received from the first endpoint.
 
 The code example combines both endpoint calls.
 {% endhint %}
 
-### :digit\_three:  Modify the code example
+#### :digit\_three: Modify the code example
 
-:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square:  Provide your lyrics via the `prompt` parameter. The model will use it to generate a song.&#x20;
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square: Provide your lyrics via the `prompt` parameter. The model will use it to generate a song.
 
 {% hint style="warning" %}
 Keep in mind that the maximum length of generated audio is 1 minute. If you provide a `prompt` that’s too long (which the model tries to use as song lyrics), it might exceed the time limit and result in a `"Downstream service error."`
 {% endhint %}
 
-:black\_small\_square:  Via `reference_audio_url` parameter, provide a URL to a reference track from which the model will extract the genre, style, tempo, vocal and instrument timbres, and the overall mood of the piece.
+:black\_small\_square: Via `reference_audio_url` parameter, provide a URL to a reference track from which the model will extract the genre, style, tempo, vocal and instrument timbres, and the overall mood of the piece.
 
-### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only  `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](minimax-music-\[legacy].md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
+Only `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](minimax-music-\[legacy].md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
 
-### :digit\_five:  Run your modified code
+#### :digit\_five: Run your modified code
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds 1 minute.
 
@@ -70,9 +70,9 @@ As an example, we will generate a song using the popular **minimax-music** model
 We used a publicly available sample from royalty-free sample database and generated some lyrics in [Chat GPT](../../text-models-llm/OpenAI/gpt-4o.md):
 
 _Side by side, through thick and thin,_\
-&#xNAN;_&#x57;ith a laugh, we always win._\
-&#xNAN;_&#x53;torms may come, but we stay true,_\
-&#xNAN;_&#x46;riends forever—me and you!_
+\&#xNAN;_With a laugh, we always win._\
+\&#xNAN;_Storms may come, but we stay true,_\
+\&#xNAN;_Friends forever—me and you!_
 
 To turn this into a model-friendly prompt (as a single string), we added hash symbols and line breaks.
 
@@ -80,9 +80,9 @@ To turn this into a model-friendly prompt (as a single string), we added hash sy
 
 A notable feature of our audio and video models is that uploading the prompt or sample, generating the content, and retrieving the final file from the server are handled through separate API calls. _(AIML API tokens are only consumed during the first step—i.e., the actual content generation.)_
 
-We’ve written a complete code example that sequentially calls both endpoints — you can view and copy it below. <mark style="background-color:green;">Don’t forget to replace</mark> <mark style="background-color:green;"></mark><mark style="background-color:green;">`<YOUR_AIMLAPI_KEY>`</mark> <mark style="background-color:green;"></mark><mark style="background-color:green;">with your actual AIML API Key from your</mark> [<mark style="background-color:green;">account</mark>](https://aimlapi.com/app/keys)<mark style="background-color:green;">!</mark>
+We’ve written a complete code example that sequentially calls both endpoints — you can view and copy it below. <mark style="background-color:green;">Don’t forget to replace</mark> <mark style="background-color:green;">`<YOUR_AIMLAPI_KEY>`</mark> <mark style="background-color:green;">with your actual AIML API Key from your</mark> [<mark style="background-color:green;">account</mark>](https://aimlapi.com/app/keys)<mark style="background-color:green;">!</mark>
 
-The structure of the code is simple: there are two separate functions for calling each endpoint, and a main function that orchestrates everything.&#x20;
+The structure of the code is simple: there are two separate functions for calling each endpoint, and a main function that orchestrates everything.
 
 Execution starts automatically from `main()`. It first runs the function that creates and sends a music generation task to the server — this is where you pass your **prompt** describing the desired musical fragment. This function returns a **generation ID** and the initial **task status**:
 

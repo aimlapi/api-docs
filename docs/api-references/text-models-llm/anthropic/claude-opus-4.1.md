@@ -1,6 +1,6 @@
 # Claude 4.1 Opus
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li> <code>anthropic/claude-opus-4.1</code></li><li><code>claude-opus-4-1</code></li><li><code>claude-opus-4-1-20250805</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-1-20250805&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-opus-4.1</code></li><li><code>claude-opus-4-1</code></li><li><code>claude-opus-4-1-20250805</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-1-20250805&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 All three IDs listed above refer to the same model; we support them for backward compatibility.
@@ -16,25 +16,25 @@ An upgrade to [Claude Opus 4](claude-4-opus.md) on agentic tasks, real-world cod
 
 <summary>Step-by-Step Instructions</summary>
 
-### :digit\_one:  Setup You Can’t Skip
+#### :digit\_one: Setup You Can’t Skip
 
-:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### &#x20;:digit\_two:  Copy the code example
+#### :digit\_two: Copy the code example
 
 At the bottom of this page, you'll find [code examples](claude-opus-4.1.md#code-example-1-without-thinking) that show how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
-### :digit\_three:  Modify the code example
+#### :digit\_three: Modify the code example
 
-:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square:  Insert your question or request into the `content` field—this is what the model will respond to.
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square: Insert your question or request into the `content` field—this is what the model will respond to.
 
-### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
 Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-opus-4.1.md#api-schema), which lists all available parameters along with notes on how to use them.
 
-### :digit\_five:  Run your modified code
+#### :digit\_five: Run your modified code
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
 

@@ -122,4 +122,4 @@ main();
 
 We obtained the following 1024x768 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/GHx5aT0PR9GXtGi3Cx7CE.png" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>
+<figure><img src="../../../../reference-files/t-rex (1).png" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>

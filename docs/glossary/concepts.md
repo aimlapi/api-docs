@@ -13,7 +13,7 @@ API stands for _Application Programming Interface_. In the context of AI/ML, an 
 
 An _API Key_ is a credential that grants you access to our API from within your code. It is a sensitive string of characters that should be kept confidential. Do not share your API key with anyone else, as it could be misused without your knowledge.
 
-You can find your API key on the [account page](https://aimlapi.com/app/keys).&#x20;
+You can find your API key on the [account page](https://aimlapi.com/app/keys).
 
 ## Base URL
 
@@ -38,7 +38,7 @@ In the context of working with AI models, this means that if a model expects a p
 
 We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
 
-<figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/racoons_0 (1).png" alt=""><figcaption></figcaption></figure>
 
 <pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 from pathlib import Path
@@ -177,7 +177,7 @@ Deprecation can apply to an entire model (see [our list of deprecated/no longer 
 
 Users are encouraged to monitor deprecation notices carefully and update their integrations accordingly. We notify our users about such changes in our email newsletters.
 
-## Endpoint&#x20;
+## Endpoint
 
 A specific URL where an API can be accessed to perform an operation (e.g., generate a response, upload a file).
 
@@ -187,13 +187,13 @@ A fine-tuned model is a base AI model that has been further trained on additiona
 
 For example, an "[_11B Llama 3.2_](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md) _model fine-tuned for content safety_" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
 
-## Multimodal Model&#x20;
+## Multimodal Model
 
 A model that can process and generate different types of data (text, images, audio) in a single interaction.
 
-## Prompt&#x20;
+## Prompt
 
-The input given to a model to generate a response.&#x20;
+The input given to a model to generate a response.
 
 The parameter used to pass a prompt is most often called simply `prompt`:
 
@@ -241,7 +241,7 @@ But there can be other variations. For example, the **messages** structure used 
 
 There are also special parameters that allow you to refine prompts, control how strongly the model should follow them, or adjust the strictness of their interpretation.
 
-* `prompt_optimizer` or `enhance_prompt`: The model will automatically optimize the incoming prompt to improve the video generation quality if necessary. For more precise control, this parameter can be set to `False`, and the model will follow the instructions more strictly.&#x20;
+* `prompt_optimizer` or `enhance_prompt`: The model will automatically optimize the incoming prompt to improve the video generation quality if necessary. For more precise control, this parameter can be set to `False`, and the model will follow the instructions more strictly.
 * `negative_prompt`: The description of elements to avoid in the generated video/image/etc.
 * `cfg_scale` or `guidance_scale`: The Classifier Free Guidance (CFG) scale is a measure of how close you want the model to stick to your prompt.
 * `strength`: Determines how much the prompt influences the generated image.

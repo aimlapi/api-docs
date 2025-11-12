@@ -1,7 +1,7 @@
 # v2-master/text-to-video
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 <a href="https://aimlapi.com/app/?model=klingai/v2-master-image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -30,11 +30,13 @@ This model produces highly detailed and natural-looking videos, so generation ma
 
 {% tabs %}
 {% tab title="Python" %}
-<pre class="language-python" data-overflow="wrap"><code class="lang-python">import requests
+{% code overflow="wrap" %}
+```python
+import requests
 import time
 
 base_url = "https://api.aimlapi.com/v2"
-api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server
 def generate_video():
@@ -42,8 +44,8 @@ def generate_video():
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
-<strong>
-</strong>    data = {
+
+    data = {
         "model": "klingai/v2-master-text-to-video",
         "prompt": "A cheerful white raccoon running through a sequoia forest",
         "aspect_ratio": "16:9",
@@ -67,7 +69,7 @@ def get_video(gen_id):
         "generation_id": gen_id,
     }
     
-    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
     headers = {
         "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
@@ -87,7 +89,7 @@ def main():
         start_time = time.time()
 
         timeout = 1000
-        while time.time() - start_time &#x3C; timeout:
+        while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
             if response_data is None:
@@ -110,7 +112,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-</code></pre>
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -192,14 +195,14 @@ Processing complete:/n {'id': '10c09c56-2e00-4a64-89ec-358ff71f8144:kling-video/
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/kling-master-t2v-racoon.gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>
 
 ## API Schemas
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find two corresponding API schemas and an example with both endpoint calls.
 

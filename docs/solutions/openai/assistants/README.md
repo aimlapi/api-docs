@@ -15,9 +15,9 @@ Here's a simple explanation of how **Messages**, **Threads**, **Assistants**, **
 * An **Assistant** is the AI itself—its personality, skills, and behavior. When you set up an Assistant, you define what it knows, how it should respond, and whether it can use extra Tools (like APIs or file uploads). One Assistant can be used across multiple Threads and users.
 * A **Run** is the process that executes the Assistant’s response within a Thread. When a user sends a Message, a Run is created to generate the Assistant’s reply based on the conversation history and its predefined behavior. Runs manage the execution flow, including any tool calls the Assistant might need to make. A Run goes through different statuses—such as `queued`, `in_progress`, `completed`, or `failed`—indicating its current state. Each Thread can have multiple Runs, ensuring smooth and structured interactions between the user and the Assistant.
 * A **Tool** is an additional capability that an Assistant can use to enhance its responses. Tools allow the Assistant to perform external actions, such as calling APIs, retrieving files, or running custom functions. (You may have already encountered this concept by using [Function Calling](../../../capabilities/function-calling.md) when calling text models without creating Assistants.)\
-  When a Tool is enabled, the Assistant can decide when to use it based on the conversation context. If a Tool is required during a Run, the process pauses until the necessary output is provided. This makes Tools essential for handling complex tasks that go beyond simple text-based interactions. \
-  Currently, three Tool options are available:&#x20;
-  * **Code Interpreter**, which can write or debug code for you in different programming languages,&#x20;
+  When a Tool is enabled, the Assistant can decide when to use it based on the conversation context. If a Tool is required during a Run, the process pauses until the necessary output is provided. This makes Tools essential for handling complex tasks that go beyond simple text-based interactions.\
+  Currently, three Tool options are available:
+  * **Code Interpreter**, which can write or debug code for you in different programming languages,
   * **File Search**, which can analyze the file you provided and is capable of discussing its contents,
   * **Function Calling**, which can call your custom functions.
 
@@ -71,7 +71,7 @@ message = client.beta.threads.messages.create(
 [**Create a Run**](runs.md#create-a-run) to initiate the Chat Completion process for messages within the specified Thread using the specified Assistant. This is very similar to calling a model without using the Assistants and Threads framework. If external Tool calls might be needed during processing, you must predefine the available Tools in the `tools` parameter and set `tool_choice` to `'auto'`.
 
 {% hint style="warning" %}
-Note that runs expire ten minutes after creation. \
+Note that runs expire ten minutes after creation.\
 Be sure to submit your Tool outputs before the 10-minute mark.
 {% endhint %}
 
@@ -99,7 +99,7 @@ Unlike the streaming version, this version **waits for the full response** befor
 
 ***
 
-### **1. Initialization Phase**
+#### **1. Initialization Phase**
 
 **Objects Created:**
 
@@ -117,7 +117,7 @@ Unlike the streaming version, this version **waits for the full response** befor
 
 ***
 
-### **2. Chat Loop Execution**
+#### **2. Chat Loop Execution**
 
 The script enters a **while loop**, allowing continuous conversation:
 
@@ -160,13 +160,13 @@ The script enters a **while loop**, allowing continuous conversation:
 
 ***
 
-### **Summary of Identifiers Passed Between Functions**
+#### **Summary of Identifiers Passed Between Functions**
 
 <table><thead><tr><th width="274" valign="top">Identifier</th><th valign="top">Purpose</th><th valign="top">Where It's Used</th></tr></thead><tbody><tr><td valign="top"><code>assistant_id</code></td><td valign="top">Identifies the Assistant instance</td><td valign="top">Created during initialization, used in <code>send_message()</code></td></tr><tr><td valign="top"><code>thread_id</code></td><td valign="top">Links all Messages in the conversation</td><td valign="top">Created during initialization, used in <code>send_message()</code> and fetching responses</td></tr><tr><td valign="top"><code>user_message</code></td><td valign="top">Stores user input</td><td valign="top">Passed from the chat loop to <code>send_message()</code></td></tr><tr><td valign="top"><code>run.status</code></td><td valign="top">Tracks response completion</td><td valign="top">Checked after <code>create_and_poll()</code></td></tr><tr><td valign="top"><code>message.content[0].text.value</code></td><td valign="top">Holds the Assistant's response</td><td valign="top">Extracted from <code>messages.list()</code></td></tr></tbody></table>
 
 ***
 
-### **Final Execution Flow Summary**
+#### **Final Execution Flow Summary**
 
 1. Initialize API client, Assistant, and Thread (IDs stored).
 2. Enter chat loop → user types a Message.
@@ -252,10 +252,13 @@ while True:
 <summary>Assistant Interaction Example</summary>
 
 {% code overflow="wrap" %}
-````
-🤖 AI Assistant is ready! Type 'exit' to quit.
+```
+```
+{% endcode %}
 
-You > Hi! Could you write me a python function that squares the sum of two numbers?                     
+\`\`\`\` 🤖 AI Assistant is ready! Type 'exit' to quit.
+
+You > Hi! Could you write me a python function that squares the sum of two numbers?
 
 Assistant > Certainly! Here's a simple Python function that squares the sum of two numbers:
 
@@ -268,15 +271,14 @@ result = square_of_sum(3, 4)
 print(result)  # Output: 49
 ```
 
-This function takes two arguments, `a` and `b`, calculates their sum, and then returns the square of that sum.
-Вы > Wow! Thanks a lot!
+This function takes two arguments, `a` and `b`, calculates their sum, and then returns the square of that sum. Вы > Wow! Thanks a lot!
 
-Assistant > You're welcome! If you have any more questions or need further assistance, feel free to ask. 
-Happy coding!
+Assistant > You're welcome! If you have any more questions or need further assistance, feel free to ask. Happy coding!
 
-You > exit 
+You > exit
 
 Assistant > 👋 Chat session ended. See you next time!
+
 ````
 {% endcode %}
 
@@ -508,3 +510,6 @@ Assistant > Goodbye! If you have more questions in the future, feel free to reac
 
 </details>
 
+````
+
+</details>

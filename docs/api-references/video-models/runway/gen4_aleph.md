@@ -1,7 +1,7 @@
 # gen4\_aleph
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 
 {% endcolumn %}
 {% endcolumns %}
@@ -22,34 +22,34 @@ This is a video-to-video model capable of either modifying the input video or ge
 
 <summary>Step-by-Step Instructions</summary>
 
-### :digit\_one:  Setup You Can’t Skip
+#### :digit\_one: Setup You Can’t Skip
 
-:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### :digit\_two:  Copy the code example
+#### :digit\_two: Copy the code example
 
 At the bottom of this page, you'll find [a code example](gen4_aleph.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 The code example combines both endpoint calls.
 {% endhint %}
 
-### :digit\_three:  Modify the code example
+#### :digit\_three: Modify the code example
 
-:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square:  Insert your instructions into the `prompt` field—this is what the model will do with the image.
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square: Insert your instructions into the `prompt` field—this is what the model will do with the image.
 
-### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
 Only `video_url` and `prompt` are required parameters for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gen4_aleph.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
-### :digit\_five:  Run your modified code
+#### :digit\_five: Run your modified code
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a minute.
 
@@ -69,7 +69,7 @@ Let’s take a video of our running raccoon and ask Aleph to add a small fairy r
 
 _`"`_`Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.`_`"`_
 
-We combine both methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.&#x20;
+We combine both methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.
 
 {% hint style="warning" %}
 Don’t forget to replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your [API Key management page](https://aimlapi.com/app/keys/)!
@@ -224,11 +224,11 @@ Processing complete:/n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 
 
 </details>
 
-**Processing time**: \~3 min 30 sec. \
+**Processing time**: \~3 min 30 sec.\
 **Original**: [1280×720](https://drive.google.com/file/d/1x_AYR09NphtcDpBykCx8u4Kq7AAdgJIt/view?usp=sharing)\
 **Low-res GIF preview**:
 
-<table data-full-width="false"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи.gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## API Schemas
 

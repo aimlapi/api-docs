@@ -6,8 +6,8 @@ icon: bird
 
 {% hint style="warning" %}
 **Legal Notice**\
-Please remember that reference images may be subject to copyright. Make sure to respect the law and avoid sharing the animated versions online if doing so could infringe intellectual property rights. \
-Just use them to bring a bit of joy to kids at home  :tada:
+Please remember that reference images may be subject to copyright. Make sure to respect the law and avoid sharing the animated versions online if doing so could infringe intellectual property rights.\
+Just use them to bring a bit of joy to kids at home :tada:
 {% endhint %}
 
 ## Idea and Step-by-Step Plan
@@ -32,7 +32,7 @@ Repeat this process for every illustration on the page.
 
 ***
 
-#### _What Are Raccoons?_
+_**What Are Raccoons?**_
 
 _Raccoons are small, furry animals with fluffy striped tails and black “masks” around their eyes. They live in forests, near rivers and lakes—and sometimes even close to people in towns and cities. Raccoons are very clever, curious, and quick with their paws._
 
@@ -136,7 +136,7 @@ The raccoon's paw gently ripples the stream as tiny leaves float by; the trees s
 
 </details>
 
-3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model [**kling-video/v1.6/pro/image-to-video**](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md) from Kling AI.&#x20;
+3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model [**kling-video/v1.6/pro/image-to-video**](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md) from Kling AI.
 
 <details>
 
@@ -300,7 +300,7 @@ Processing complete:/n {'id': '9e4c45e7-5785-42f3-8271-ce8a8b31dd04:kling-video/
 
 4. We've generated two videos and will now convert them into GIF animations using [a free third-party web service](https://ezgif.com/video-to-gif/), for easier playback on a web page. We'll also reduce the frame rate and size to ensure smoother playback. We'll save the resulting GIF files in the same folder, using the same names as the original PNGs.
 
-<figure><img src="../.gitbook/assets/изображение (4).png" alt="" width="479"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt="" width="479"><figcaption></figcaption></figure>
 
 5. You can also ask any chat model (e.g., [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md)) to generate a web page with the original text and the GIF animations placed in the same spots as the original illustrations.
 
@@ -312,7 +312,7 @@ Processing complete:/n {'id': '9e4c45e7-5785-42f3-8271-ce8a8b31dd04:kling-video/
 
 ***
 
-#### _What Are Raccoons?_
+_**What Are Raccoons?**_
 
 _Raccoons are small, furry animals with fluffy striped tails and black “masks” around their eyes. They live in forests, near rivers and lakes—and sometimes even close to people in towns and cities. Raccoons are very clever, curious, and quick with their paws._
 

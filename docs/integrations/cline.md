@@ -28,8 +28,6 @@ You can find the Cline repository and community on [GitHub](https://github.com/c
 
 <figure><img src="../.gitbook/assets/file-jxjkvunu8d.png" alt=""><figcaption></figcaption></figure>
 
-
-
 In the settings:
 
 * Set **API Provider** to **OpenAI Compatible**.
@@ -42,7 +40,7 @@ All done — start coding with Cline!
 
 ## Usage Example
 
-Here’s the request we made:&#x20;
+Here’s the request we made:
 
 ```
 Create a Python file named test and add code to print Hello, world
@@ -68,7 +66,7 @@ These models have been tested by our team for compatibility with Cline integrati
 
 <summary>Supported Model List</summary>
 
-* [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)&#x20;
+* [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
 * [gpt-3.5-turbo-0125](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
 * [gpt-3.5-turbo-1106](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
 * [gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)
@@ -84,30 +82,18 @@ These models have been tested by our team for compatibility with Cline integrati
 * [gpt-4-0125-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
 * [gpt-4-1106-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
 * [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
-
-- [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
-- [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
-- [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
-- [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
-
-
-
+* [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
+* [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
+* [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
+* [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 * [deepseek/deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
-
-
-
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
 * [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
-
-- [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
-- [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
-- [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
-- [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
-
-
-
-* [Qwen/Qwen2-72B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2-72B-Instruct.md)
+* [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
+* [meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
+* [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
+* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 * [Qwen/Qwen2.5-7B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
 * [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
@@ -116,9 +102,6 @@ These models have been tested by our team for compatibility with Cline integrati
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
 * [Qwen/Qwen2.5-72B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo.md)
 * [Qwen/QwQ-32B](../api-references/text-models-llm/alibaba-cloud/qwen-qwq-32b.md)
-
-
-
 * [mistralai/Mixtral-8x7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)
 * [mistralai/Mistral-7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
 * [mistralai/Mistral-7B-Instruct-v0.2](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
@@ -126,23 +109,13 @@ These models have been tested by our team for compatibility with Cline integrati
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
-
-
-
 * [google/gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
-
-
-
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
-
-
-
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
-
-- [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
+* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 
 </details>
 

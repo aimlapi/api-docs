@@ -68,7 +68,7 @@ For clarity, we took several screenshots of our mushroom from different angles i
 
 Compare them with the [reference image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg):
 
-<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/576px-Fly_Agaric_mushroom_05 (2).jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/576px-Fly_Agaric_mushroom_05 (1).jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Try to choose reference images where the target object is not obstructed by other objects and does not blend into the background. Depending on the complexity of the object, you may need to experiment with the resolution of the reference image to achieve a satisfactory mesh.

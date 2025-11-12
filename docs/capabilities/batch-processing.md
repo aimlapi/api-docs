@@ -4,7 +4,7 @@ Batch processing (batching) allows you to send multiple message requests in a si
 
 To use batch processing, several endpoints are available:
 
-<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td>Create a message batch</td><td><img src="../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/batches</code></td></tr><tr><td>Get status or results of a specific message batch</td><td><img src="../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/batches?batch_id={batch_id}</code></td></tr><tr><td>Cancel a specific message batch</td><td><img src="../.gitbook/assets/POST.png" alt="" data-size="line">  <code>https://api.aimlapi.com/batches/cancel/{batch_id}</code></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td>Create a message batch</td><td><img src="../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/batches</code></td></tr><tr><td>Get status or results of a specific message batch</td><td><img src="../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/batches?batch_id={batch_id}</code></td></tr><tr><td>Cancel a specific message batch</td><td><img src="../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/batches/cancel/{batch_id}</code></td></tr></tbody></table>
 
 {% hint style="success" %}
 You can find the list of supported models in the first API schema below — see the allowed values under `requests` > `params` > `model`.
@@ -272,44 +272,33 @@ Raw response:
 
 ## Cancel a specific message batch
 
-{% openapi-operation spec="batch-cancel" path="/v1/batches/cancel/{batch_id}" method="post" %}
-[OpenAPI batch-cancel](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
+\{% openapi-operation spec="batch-cancel" path="/v1/batches/cancel/{batch\_id}" method="post" %\} [OpenAPI batch-cancel](https://api.aimlapi.com/docs-public-yaml) \{% endopenapi-operation %\}
 
 <details>
 
 <summary>Code Example (Python)</summary>
 
-```python
-import requests
-import json
+\`
 
-# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
-API_KEY = "<YOUR_AIMLAPI_KEY>"
-BASE_URL = "https://api.aimlapi.com/v1"
+\`\`python import requests import json
 
-# Insert your batch_id here
-batch_id = "msgbatch_01McVJYhQd3Wiuqrac6y9PrX"
+## Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
 
+API\_KEY = "\<YOUR\_AIMLAPI\_KEY>" BASE\_URL = "https://api.aimlapi.com/v1"
 
-headers = {
-    "Authorization": f"Bearer {API_KEY}",
-    "Content-Type": "application/json"
-}
+## Insert your batch\_id here
 
-url = f"{BASE_URL}/batches/cancel/{batch_id}"
+batch\_id = "msgbatch\_01McVJYhQd3Wiuqrac6y9PrX"
+
+headers = { "Authorization": f"Bearer {API\_KEY}", "Content-Type": "application/json" }
+
+url = f"{BASE\_URL}/batches/cancel/{batch\_id}"
 
 response = requests.post(url, headers=headers)
 
-if response.status_code == 200:
-    print("Batch canceled successfully:")
-    data = response.json()
-    print(json.dumps(data, indent=2, ensure_ascii=False))
-else:
-    print(f"Failed to cancel batch ({response.status_code}):")
-    data = response.json()
-    print(json.dumps(data, indent=2, ensure_ascii=False))
-```
+if response.status\_code == 200: print("Batch canceled successfully:") data = response.json() print(json.dumps(data, indent=2, ensure\_ascii=False)) else: print(f"Failed to cancel batch ({response.status\_code}):") data = response.json() print(json.dumps(data, indent=2, ensure\_ascii=False))
+
+````
 
 </details>
 
@@ -317,7 +306,8 @@ else:
 
 <summary>Response #1 (successfully cancelled)</summary>
 
-{% code overflow="wrap" %}
+<div data-gb-custom-block data-tag="code" data-overflow='wrap'>
+
 ```json5
 Batch canceled successfully:
 {
@@ -337,8 +327,7 @@ Batch canceled successfully:
   "cancel_initiated_at": "2025-10-24T13:49:27.756971+00:00",
   "results_url": null
 
-```
-{% endcode %}
+````
 
 </details>
 

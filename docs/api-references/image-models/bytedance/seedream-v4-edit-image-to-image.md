@@ -1,7 +1,5 @@
 # Seedream v4 Edit (Image-to-image)
 
-
-
 {% columns %}
 {% column width="75%" %}
 {% hint style="info" %}
@@ -128,4 +126,4 @@ console.log(JSON.stringify(data, null, 2));
 
 </details>
 
-<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/flux-dev-t-rex.png" alt=""><figcaption><p>(original)</p></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/nHWHZmeMr-SL4R7uFtvq7_d54b8823cf784f67bcfa43993bdb2179.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td><div><figure><img src="../../../../reference-files/t-rex (1).png" alt=""><figcaption><p>(original)</p></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/nHWHZmeMr-SL4R7uFtvq7_d54b8823cf784f67bcfa43993bdb2179.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div></td></tr></tbody></table>

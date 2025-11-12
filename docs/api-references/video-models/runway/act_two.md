@@ -1,7 +1,7 @@
 # act\_two
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 
 {% endcolumn %}
 {% endcolumns %}
@@ -22,34 +22,34 @@ This video-to-video model lets you animate characters using reference performanc
 
 <summary>Step-by-Step Instructions</summary>
 
-### :digit\_one:  Setup You Can’t Skip
+#### :digit\_one: Setup You Can’t Skip
 
-:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### :digit\_two:  Copy the code example
+#### :digit\_two: Copy the code example
 
 At the bottom of this page, you'll find [a code example](act_two.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 The code example combines both endpoint calls.
 {% endhint %}
 
-### :digit\_three:  Modify the code example
+#### :digit\_three: Modify the code example
 
-:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square:  Insert your instructions into the `prompt` field—this is what the model will do with the image.
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square: Insert your instructions into the `prompt` field—this is what the model will do with the image.
 
-### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
 Only `character` and `reference` are required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](act_two.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
-### :digit\_five:  Run your modified code
+#### :digit\_five: Run your modified code
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a minute.
 
@@ -67,9 +67,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 As the character reference, we will use a scan of a famous Leonardo da Vinci painting. For the motion reference, we will use a video of a cheerful woman dancing, generated with the [kling-video/v1.6/pro/text-to-video](../kling-ai/v1.6-pro-text-to-video.md) model.
 
-| Character reference image                                                                                       | Motion reference video                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../.gitbook/assets/mona-lisa.jpeg" alt=""><figcaption></figcaption></figure></div> | <p></p><div align="left"><figure><img src="../../../.gitbook/assets/runway-act-two-preview.gif" alt=""><figcaption></figcaption></figure></div> |
+| Character reference image                                                                                       | Motion reference video                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../.gitbook/assets/mona-lisa.jpeg" alt=""><figcaption></figcaption></figure></div> | <div align="left"><figure><img src="../../../.gitbook/assets/runway-act-two-preview.gif" alt=""><figcaption></figcaption></figure></div> |
 
 We combine both POST and GET methods above in one program: first it sends a video generation request to the server, then it checks for results every 10 seconds.
 
@@ -200,9 +200,9 @@ Processing complete:/n {'id': 'dbf7a50e-87b2-4ba5-921f-f02fdb8f7cc6', 'status': 
 
 </details>
 
-The following video was generated by running the code example above. \
-Processing time: \~45 sec. \
-Original: [784×1168](https://drive.google.com/file/d/1QzqNY6tZdyDh1P5mn3_7QsAPOeoUqtYA/view?usp=sharing)&#x20;
+The following video was generated by running the code example above.\
+Processing time: \~45 sec.\
+Original: [784×1168](https://drive.google.com/file/d/1QzqNY6tZdyDh1P5mn3_7QsAPOeoUqtYA/view?usp=sharing)
 
 <div align="left"><figure><img src="../../../.gitbook/assets/runway-act-two-preview (1).gif" alt=""><figcaption><p>Low-resolution GIF preview</p></figcaption></figure></div>
 

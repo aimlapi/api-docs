@@ -14,34 +14,34 @@ An advanced audio generation model designed to create high-quality audio tracks 
 
 <summary>Step-by-Step Instructions</summary>
 
-### :digit\_one:  Setup You Can’t Skip
+#### :digit\_one: Setup You Can’t Skip
 
-:black\_small\_square:  [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square:  [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-### :digit\_two:  Copy the code example
+#### :digit\_two: Copy the code example
 
 At the bottom of this page, you'll find [a code example](eleven_music.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 {% hint style="success" %}
-Generating a music piece using this model involves sequentially calling two endpoints:&#x20;
+Generating a music piece using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a music generation task to the server (returns a generation ID).
-* The second one is for requesting the generated piece from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated piece from the server using the generation ID received from the first endpoint.
 
 The code example combines both endpoint calls.
 {% endhint %}
 
-### :digit\_three:  Modify the code example
+#### :digit\_three: Modify the code example
 
-:black\_small\_square:  Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square:  Provide your instructions via the `prompt` parameter. The model will use them to generate a musical composition.&#x20;
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
+:black\_small\_square: Provide your instructions via the `prompt` parameter. The model will use them to generate a musical composition.
 
-### :digit\_four:  <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
 
-Only  `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](eleven_music.md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
+Only `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](eleven_music.md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
 
-### :digit\_five:  Run your modified code
+#### :digit\_five: Run your modified code
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds 30 seconds.
 
