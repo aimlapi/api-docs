@@ -1,10 +1,17 @@
 [
   {
-    "name": "qwen-plus",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-plus",
-    "alias": "qwen-plus",
+    "name": "qwen-max",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-max",
+    "alias": "qwen-max",
     "category": "text-models-llm",
     "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
+  },
+  {
+    "name": "qwen-max-2025-01-25",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-max-2025-01-25",
+    "alias": "qwen-max",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud"
   }
 ]
