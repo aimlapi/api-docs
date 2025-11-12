@@ -23,7 +23,9 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "alibaba/qwen-max-2025-01-25"
+                      "alibaba/qwen-max",
+                      "qwen-max",
+                      "qwen-max-2025-01-25"
                     ]
                   },
                   "messages": {
@@ -613,7 +615,7 @@
                   "model",
                   "messages"
                 ],
-                "title": "alibaba/qwen-max-2025-01-25"
+                "title": "alibaba/qwen-max"
               }
             }
           }
@@ -1522,7 +1524,9 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "alibaba/qwen-max-2025-01-25"
+                      "alibaba/qwen-max",
+                      "qwen-max",
+                      "qwen-max-2025-01-25"
                     ]
                   },
                   "messages": {
@@ -2112,7 +2116,7 @@
                   "model",
                   "messages"
                 ],
-                "title": "alibaba/qwen-max-2025-01-25"
+                "title": "alibaba/qwen-max"
               }
             }
           }
