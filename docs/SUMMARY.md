@@ -383,6 +383,19 @@
     * [Events](solutions/openai/assistants/events.md)
     * [Examples of Using Assistants](solutions/openai/assistants/using-assistants-and-threads.md)
 
+## FAQ
+
+* [Can I get my billing info via API request?](faq/can-i-get-my-billing-info-via-api-request.md)
+* [Can I use API in Python?](faq/can-i-use-api-in-python.md)
+* [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
+* [What are the Pro Models?](faq/pro-models.md)
+* [How to use the Free Tier?](faq/free-tier.md)
+* [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
+* [Are my requests cropped?](faq/my-requests-are-cropped.md)
+* [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
+* [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
+* [qp](faq/qp.md)
+
 ## Use Cases
 
 * [Create Images: Illustrate an Article](use-cases/create-images-illustrate-an-article.md)
@@ -406,19 +419,6 @@
 * [Batch Processing](capabilities/batch-processing.md)
 * [Features of Anthropic Models](capabilities/anthropic.md)
 * [Model comparison](capabilities/models-comparsion.md)
-
-## FAQ
-
-* [Can I get my billing info via API request?](faq/can-i-get-my-billing-info-via-api-request.md)
-* [Can I use API in Python?](faq/can-i-use-api-in-python.md)
-* [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
-* [What are the Pro Models?](faq/pro-models.md)
-* [How to use the Free Tier?](faq/free-tier.md)
-* [Is API down or it just me?](faq/is-api-down-or-it-just-me.md)
-* [Are my requests cropped?](faq/my-requests-are-cropped.md)
-* [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
-* [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
-* [qp](faq/qp.md)
 
 ***
 

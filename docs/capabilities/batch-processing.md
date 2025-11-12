@@ -282,11 +282,11 @@ Raw response:
 
 \`\`python import requests import json
 
-## Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
+### Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
 
 API\_KEY = "\<YOUR\_AIMLAPI\_KEY>" BASE\_URL = "https://api.aimlapi.com/v1"
 
-## Insert your batch\_id here
+### Insert your batch\_id here
 
 batch\_id = "msgbatch\_01McVJYhQd3Wiuqrac6y9PrX"
 
@@ -335,8 +335,11 @@ Batch canceled successfully:
 
 <summary>Response #2 (if already finished)</summary>
 
-{% code overflow="wrap" %}
-```json5
+\{% code overflow="wrap" %\}
+
+```
+
+json5
 Failed to cancel batch (400):
 {
   "requestId": "56277efa-58af-4db7-b45e-ebaa612b2af7",
@@ -346,6 +349,5 @@ Failed to cancel batch (400):
   "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Batch msgbatch_01McVJYhQd3Wiuqrac6y9PrX cannot be canceled because it has already finished processing.\"},\"request_id\":\"req_011CUS8e7LPi44CSuvwhSMsn\"}"
 }
 ```
-{% endcode %}
 
 </details>
