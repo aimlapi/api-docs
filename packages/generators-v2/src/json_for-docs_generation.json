@@ -1,82 +1,11 @@
 [
   {
-    "name": "perplexity/sonar",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=perplexity/sonar",
-    "alias": "sonar",
+    "name": "anthropic/claude-haiku-4.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-haiku-4-5-20251001",
+    "alias": "claude-haiku-4-5",
+    "models": ["anthropic/claude-haiku-4.5", "claude-haiku-4-5", "claude-haiku-4-5-20251001"],
     "category": "text-models-llm",
-    "vendor": "Perplexity",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "perplexity/sonar-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=perplexity/sonar-pro",
-    "alias": "sonar-pro",
-    "category": "text-models-llm",
-    "vendor": "Perplexity",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "x-ai/grok-3-beta",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-3-beta",
-    "alias": "grok-3-beta",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "x-ai/grok-3-mini-beta",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-3-mini-beta",
-    "alias": "grok-3-mini-beta",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "x-ai/grok-4-07-09",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-07-09",
-    "alias": "grok-4",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "x-ai/grok-4-fast-non-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-fast-non-reasoning",
-    "alias": "grok-4-fast-non-reasoning",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "x-ai/grok-4-fast-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-fast-reasoning",
-    "alias": "grok-4-fast-reasoning",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "zhipu/glm-4.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.5",
-    "alias": "glm-4.5",
-    "category": "text-models-llm",
-    "vendor": "Zhipu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "zhipu/glm-4.5-air",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.5-air",
-    "alias": "glm-4.5-air",
-    "category": "text-models-llm",
-    "vendor": "Zhipu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "zhipu/glm-4.6",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.6",
-    "alias": "glm-4.5-air",
-    "category": "text-models-llm",
-    "vendor": "Zhipu",
+    "vendor": "Anthropic",
     "codeSamples": "chat-completion"
   }
 ]
