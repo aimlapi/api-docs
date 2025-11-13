@@ -9,6 +9,9 @@ export default {
     minimax15: {
       desc: `A description of the music, specifying style, mood, and scenario. Length: 10–300 characters.`,
     },
+    minimax20: {
+      desc: `A description of the music, specifying style, mood, and scenario. Length: 10–2000 characters.`,
+    },
     elevenlabs: {
       desc: `A text description that can define the genre, mood, instruments, vocals, tempo, structure, and even lyrics of the track. It can be high-level (“peaceful meditation with voiceover”) or detailed (“solo piano in C minor, 90 BPM, raw and emotional”). Use keywords to control genre, emotional tone, vocals (e.g., a cappella, two singers harmonizing), structure (e.g., “lyrics begin at 15 seconds”), or provide custom lyrics directly in the prompt.`,
     },
