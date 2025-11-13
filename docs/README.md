@@ -1,7 +1,5 @@
 ---
 description: Learn how to get started with the AI/ML API
-cover: .gitbook/assets/rqiuor.jpg
-coverY: 0
 ---
 
 # 🧭 Documentation Map
@@ -22,7 +20,6 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 client = OpenAI(
 base_url="https://api.aimlapi.com/v1",
 api_key="&#x3C;YOUR_AIMLAPI_KEY>",
-
 )
 response = client.chat.completions.create(
 model="gpt-4o",

@@ -282,11 +282,11 @@ Raw response:
 
 \`\`python import requests import json
 
-### Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
+#### Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
 
 API\_KEY = "\<YOUR\_AIMLAPI\_KEY>" BASE\_URL = "https://api.aimlapi.com/v1"
 
-### Insert your batch\_id here
+#### Insert your batch\_id here
 
 batch\_id = "msgbatch\_01McVJYhQd3Wiuqrac6y9PrX"
 
