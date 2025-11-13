@@ -1,83 +1,135 @@
 [
   {
-    "name": "anthropic/claude-3-haiku",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-haiku-20240307",
-    "alias": "claude-3-haiku",
-    "models": ["claude-3-haiku", "anthropic/claude-3-haiku-20240307", "claude-3-haiku-latest"],
+    "name": "cohere/command-a",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=cohere/command-a",
+    "alias": "command-a",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "Cohere",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-3-opus",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-opus-20240229",
-    "alias": "claude-3-opus",
-    "models": ["anthropic/claude-3-opus", "anthropic/claude-3-opus-20240229", "claude-3-opus-20240229", "claude-3-opus-latest"],
+    "name": "deepseek/deepseek-chat",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek-chat",
+    "alias": "deepseek-chat",
+    "models": ["deepseek/deepseek-chat", "deepseek-chat", "deepseek/deepseek-chat-v3-0324"],
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-3-5-haiku",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-5-haiku-20241022",
-    "alias": "claude-3.5-haiku",
-    "models": ["anthropic/claude-3-5-haiku", "anthropic/claude-3-5-haiku-20241022", "claude-3-5-haiku-20241022", "claude-3-5-haiku-latest"],
+    "name": "deepseek/deepseek-r1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek-reasoner",
+    "alias": "deepseek-r1",
+    "models": ["deepseek/deepseek-r1", "deepseek-reasoner"],
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-3.7-sonnet",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-7-sonnet-20250219",
-    "alias": "claude-3.7-sonnet",
-    "models": ["anthropic/claude-3.7-sonnet", "claude-3-7-sonnet-20250219", "claude-3-7-sonnet-latest"],
+    "name": "deepseek/deepseek-prover-v2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-prover-v2",
+    "alias": "deepseek-prover-v2",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-opus-4",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-20250514",
-    "alias": "claude-4-opus",
-    "models": ["anthropic/claude-opus-4", "claude-opus-4", "claude-opus-4-20250514"],
+    "name": "deepseek/deepseek-chat-v3.1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-chat-v3.1",
+    "alias": "deepseek-chat-v3.1",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-sonnet-4",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-sonnet-4-20250514",
-    "alias": "claude-4-sonnet",
-    "models": ["anthropic/claude-sonnet-4", "claude-sonnet-4", "claude-sonnet-4-20250514"],
+    "name": "deepseek/deepseek-reasoner-v3.1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-reasoner-v3.1",
+    "alias": "deepseek-reasoner-v3.1",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-opus-4.1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-1-20250805",
-    "alias": "claude-opus-4.1",
-    "models": ["anthropic/claude-opus-4.1", "claude-opus-4-1", "claude-opus-4-1-20250805"],
+    "name": "deepseek/deepseek-reasoner-v3.1-terminus",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-reasoner-v3.1-terminus",
+    "alias": "deepseek-reasoner-v3.1-terminus",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-sonnet-4.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-sonnet-4-5-20250929",
-    "alias": "claude-sonnet-4.5",
-    "models": ["anthropic/claude-sonnet-4.5", "claude-sonnet-4-5", "claude-sonnet-4-5-20250929"],
+    "name": "deepseek/deepseek-non-reasoner-v3.1-terminus",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-non-reasoner-v3.1-terminus",
+    "alias": "deepseek-non-reasoner-v3.1-terminus",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "anthropic/claude-haiku-4.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-haiku-4-5-20251001",
-    "alias": "claude-haiku-4.5",
-    "models": ["anthropic/claude-haiku-4.5", "claude-haiku-4-5", "claude-haiku-4-5-20251001"],
+    "name": "deepseek/deepseek-non-thinking-v3.2-exp",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-non-thinking-v3.2-exp",
+    "alias": "deepseek-non-thinking-v3.2-exp",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-2.0-flash-exp",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.0-flash-exp",
+    "alias": "gemini-2.0-flash-exp",
+    "models": ["google/gemini-2.0-flash-exp", "gemini-2.0-flash-exp"],
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-2.0-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.0-flash",
+    "alias": "gemini-2.0-flash",
+    "models": ["google/gemini-2.0-flash", "gemini-2.0-flash"],
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-2.5-flash-lite-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.5-flash-lite-preview",
+    "alias": "gemini-2.5-flash-lite-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-2.5-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.5-flash",
+    "alias": "gemini-2.5-flash",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-2.5-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.5-pro",
+    "alias": "gemini-2.5-pro",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemma-3-4b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-4b-it",
+    "alias": "gemma-3",
+    "models": ["google/gemma-3-4b-it", "google/gemma-3-12b-it", "google/gemma-3-27b-it"],
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemma-3n-e4b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3n-e4b-it",
+    "alias": "gemma-3n-e4b-it",
+    "category": "text-models-llm",
+    "vendor": "Google",
     "codeSamples": "chat-completion"
   }
 ]
