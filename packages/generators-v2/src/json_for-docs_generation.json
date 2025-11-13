@@ -1,11 +1,10 @@
 [
   {
-    "name": "anthropic/claude-haiku-4.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-haiku-4-5-20251001",
-    "alias": "claude-haiku-4-5",
-    "models": ["anthropic/claude-haiku-4.5", "claude-haiku-4-5", "claude-haiku-4-5-20251001"],
+    "name": "deepseek/deepseek-thinking-v3.2-exp",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-thinking-v3.2-exp",
+    "alias": "deepseek-thinking-v3.2-exp",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   }
 ]
