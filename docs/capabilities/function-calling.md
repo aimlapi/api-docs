@@ -6,7 +6,7 @@ description: >-
 
 # Function Calling
 
-This article describes a specific capability of chat models: **function calling**, or simply **functions**. \
+This article describes a specific capability of chat models: **function calling**, or simply **functions**.\
 A list of models that support this feature is provided at the end of this page.
 
 ## Introduction
@@ -166,6 +166,10 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md)
 * [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)
 * [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
+* [openai/gpt-5-1](../api-references/text-models-llm/openai/gpt-5-1.md)
+* [openai/gpt-5-1-chat-latest](../api-references/text-models-llm/openai/gpt-5-1-chat-latest.md)
+* [openai/gpt-5-1-codex](../api-references/text-models-llm/openai/gpt-5-1-codex.md)
+* [openai/gpt-5-1-codex-mini](../api-references/text-models-llm/openai/gpt-5-1-codex-mini.md)
 
 ***
 

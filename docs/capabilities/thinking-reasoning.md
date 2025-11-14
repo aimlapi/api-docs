@@ -12,7 +12,7 @@ Sometimes, if you give the model a serious and complex task, generating a respon
 
 ### Anthropic
 
-Special parameters, such as `thinking` in Claude models, provide transparency into the model’s step-by-step reasoning process before it gives its final answer.&#x20;
+Special parameters, such as `thinking` in Claude models, provide transparency into the model’s step-by-step reasoning process before it gives its final answer.
 
 Supported models:
 
@@ -52,7 +52,7 @@ Supported models:
 
 The standard way to control reasoning behavior in OpenAI models—and in some models from other providers—is through the `reasoning_effort` parameter, which tells the model how much internal reasoning it should perform before responding to the prompt.
 
-Accepted values are `low`, `medium`, and `high`. Lower levels prioritize speed and efficiency, while higher levels provide deeper reasoning at the cost of increased token usage and latency. The default is `medium`, offering a balance between performance and quality.&#x20;
+Accepted values are `low`, `medium`, and `high`. Lower levels prioritize speed and efficiency, while higher levels provide deeper reasoning at the cost of increased token usage and latency. The default is `medium`, offering a balance between performance and quality.
 
 Supported models:
 
@@ -67,6 +67,7 @@ Supported models:
 * [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md)
 * [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)
 * [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
+* [openai/gpt-5-1](../api-references/text-models-llm/openai/gpt-5-1.md)
 
 ***
 
