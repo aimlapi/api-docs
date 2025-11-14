@@ -2,6 +2,19 @@ import * as codeSamples from './code-samples/index.js';
 
 export function transformSchema(schema, options) {
   const updatedSchema = { ...schema };
+  if (!updatedSchema.components) {
+    updatedSchema.components = {};
+  }
+  updatedSchema.components = {
+    securitySchemes: {
+      'access-token': {
+        scheme: 'bearer',
+        bearerFormat: '<YOUR_AIMLAPI_KEY>',
+        type: 'http',
+        description: 'Bearer key',
+      },
+    },
+  };
   if (!options.hideTryItPanel || options.hideTryItPanel === true) {
     Object.entries(updatedSchema.paths).map(([path, operation]) => {
       for (const method of ['get', 'post']) {
