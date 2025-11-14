@@ -1,32 +1,16 @@
 [
   {
     "name": "openai/gpt-5-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-1",
-    "alias": "gpt-5-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1",
+    "alias": "gpt-5-1-RESPONSES",
     "category": "text-models-llm",
     "vendor": "OpenAI",
     "codeSamples": "chat-completion"
   },
   {
     "name": "openai/gpt-5-1-chat-latest",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-1-chat-latest",
-    "alias": "gpt-5-1-chat-latest",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "openai/gpt-5-1-codex",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex",
-    "alias": "gpt-5-1-codex",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "openai/gpt-5-1-codex-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex-mini",
-    "alias": "gpt-5-1-codex-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-chat-latest",
+    "alias": "gpt-5-1-chat-latest-RESPONSES",
     "category": "text-models-llm",
     "vendor": "OpenAI",
     "codeSamples": "chat-completion"
