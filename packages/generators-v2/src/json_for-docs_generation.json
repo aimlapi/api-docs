@@ -1,10 +1,10 @@
 [
   {
-    "name": "bagoodex/bagoodex-search-v1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bagoodex/bagoodex-search-v1",
-    "alias": "bagoodex-search-v1",
+    "name": "x-ai/grok-code-fast-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-code-fast-1",
+    "alias": "grok-code-fast-1",
     "category": "text-models-llm",
-    "vendor": "Bagoodex",
+    "vendor": "xAI",
     "codeSamples": "chat-completion"
   }
 ]
