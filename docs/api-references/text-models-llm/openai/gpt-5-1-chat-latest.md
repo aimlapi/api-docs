@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A flagship model for coding and agentic workflows, offering configurable reasoning and non-reasoning modes.
+An advanced conversational AI model delivering enhanced intelligence, warmth, and responsiveness. Designed as a low-latency, highly interactive model, it offers users a natural, engaging, and adaptive conversational experience.
 
 ## How to Make a Call
 
