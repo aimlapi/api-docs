@@ -1,11 +1,10 @@
 [
   {
-    "name": "gpt-3.5-turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-3.5-turbo",
-    "alias": "gpt-3.5-turbo",
-    "models": ["gpt-3.5-turbo", "gpt-3.5-turbo-0125", "gpt-3.5-turbo-1106"],
+    "name": "bagoodex/bagoodex-search-v1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bagoodex/bagoodex-search-v1",
+    "alias": "bagoodex-search-v1",
     "category": "text-models-llm",
-    "vendor": "OpenAI",
+    "vendor": "Bagoodex",
     "codeSamples": "chat-completion"
   }
 ]
