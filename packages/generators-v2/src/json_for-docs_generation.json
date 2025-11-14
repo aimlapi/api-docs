@@ -5,7 +5,12 @@
     "alias": "gpt-5-1-RESPONSES",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/responses",
+    "customParams": {
+      "model":"openai/gpt-5-1",
+		  "input": "Hello"
+    }
   },
   {
     "name": "openai/gpt-5-1-chat-latest",
@@ -13,6 +18,11 @@
     "alias": "gpt-5-1-chat-latest-RESPONSES",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/responses",
+    "customParams": {
+      "model":"openai/gpt-5-1-chat-latest",
+		  "input": "Hello"
+    }
   }
 ]
