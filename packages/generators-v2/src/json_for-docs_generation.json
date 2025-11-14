@@ -1,9 +1,11 @@
 [
   {
-    "name": "nousresearch/hermes-4-405b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nousresearch/hermes-4-405b",
-    "alias": "hermes-4-405b",
+    "name": "gpt-3.5-turbo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-3.5-turbo",
+    "alias": "gpt-3.5-turbo",
+    "models": ["gpt-3.5-turbo", "gpt-3.5-turbo-0125", "gpt-3.5-turbo-1106"],
     "category": "text-models-llm",
-    "vendor": "NousResearch"
+    "vendor": "OpenAI",
+    "codeSamples": "chat-completion"
   }
 ]
