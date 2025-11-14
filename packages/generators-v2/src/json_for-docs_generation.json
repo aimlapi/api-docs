@@ -1,10 +1,9 @@
 [
   {
-    "name": "deepseek/deepseek-thinking-v3.2-exp",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-thinking-v3.2-exp",
-    "alias": "deepseek-thinking-v3.2-exp",
+    "name": "nousresearch/hermes-4-405b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nousresearch/hermes-4-405b",
+    "alias": "hermes-4-405b",
     "category": "text-models-llm",
-    "vendor": "DeepSeek",
-    "codeSamples": "chat-completion"
+    "vendor": "NousResearch"
   }
 ]
