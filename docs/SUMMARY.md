@@ -454,6 +454,7 @@
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
 * [Make](integrations/make.md)
+* [Marvin](integrations/marvin.md)
 * [n8n](integrations/n8n.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
