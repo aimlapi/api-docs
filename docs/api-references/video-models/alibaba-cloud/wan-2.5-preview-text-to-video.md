@@ -1,7 +1,5 @@
 # Wan 2.5 Preview (Text-to-Video)
 
-
-
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
@@ -28,14 +26,38 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find two corresponding API schemas and examples for both endpoint calls.
 
 </details>
+
+## API Schemas
+
+### Video Generation
+
+You can generate a video using this API. In the basic setup, you only need a prompt.\
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
+
+{% openapi-operation spec="wan2-5-t2v-preview" path="/v2/generate/video/alibaba/generation" method="post" %}
+[OpenAPI wan2-5-t2v-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-t2v-preview.json)
+{% endopenapi-operation %}
+
+### Fetch the video
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
+[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -292,27 +314,3 @@ Processing complete:/n {'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2
 {% embed url="https://drive.google.com/file/d/1meuUckCUzvSYwW5khjM8KC7IYq1fDmhG/view" %}
 `'''A raccoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: "Hello, two-legged!" His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: "Wanna some?" — while extending the half-eaten ice cream toward the camera.'''`
 {% endembed %}
-
-## API Schemas
-
-### Video Generation
-
-You can generate a video using this API. In the basic setup, you only need a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="wan2-5-t2v-preview" path="/v2/generate/video/alibaba/generation" method="post" %}
-[OpenAPI wan2-5-t2v-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-t2v-preview.json)
-{% endopenapi-operation %}
-
-### Fetch the video
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
-[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
-{% endopenapi-operation %}

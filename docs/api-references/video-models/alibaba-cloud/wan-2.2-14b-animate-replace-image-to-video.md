@@ -1,7 +1,5 @@
 # Wan 2.2 Animate Replace (Image-to-Video)
 
-
-
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
@@ -28,14 +26,33 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find two corresponding API schemas and examples for both endpoint calls.
 
 </details>
+
+## API Schemas
+
+### Video Generation
+
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="wan2-2-14b-animate-replace" path="/v2/video/generations" method="post" %}
+[OpenAPI wan2-2-14b-animate-replace](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-14b-animate-replace.json)
+{% endopenapi-operation %}
+
+### Fetch the video
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
+[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -276,22 +293,3 @@ Processing complete:/n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.
 {% endcode %}
 
 </details>
-
-## API Schemas
-
-### Video Generation
-
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="wan2-2-14b-animate-replace" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-2-14b-animate-replace](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-14b-animate-replace.json)
-{% endopenapi-operation %}
-
-### Fetch the video
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
-{% endopenapi-operation %}

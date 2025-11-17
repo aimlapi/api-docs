@@ -26,14 +26,32 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
 </details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can create a video with this API by providing a reference image of a character and an audio file. The character will deliver the audio with full lip-sync and natural gestures. This POST request creates and submits a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="omnihuman-v-1-5" path="/v2/video/generations" method="post" %}
+[OpenAPI omnihuman-v-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-v.1.5.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above. If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -314,21 +332,3 @@ Processing complete:/n {'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/om
 **Original (1920x1088, with sound)**:
 
 {% embed url="https://drive.google.com/file/d/1Zpuju5Tu0kaHPceEcLDPd4D18FMOaD-0/view" %}
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can create a video with this API by providing a reference image of a character and an audio file. The character will deliver the audio with full lip-sync and natural gestures. This POST request creates and submits a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="omnihuman-v-1-5" path="/v2/video/generations" method="post" %}
-[OpenAPI omnihuman-v-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-v.1.5.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above. If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
-{% endopenapi-operation %}
