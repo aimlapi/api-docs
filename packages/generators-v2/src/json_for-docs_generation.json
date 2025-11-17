@@ -1,3 +1,10 @@
 [
-
+  {
+    "name": "meta-llama/llama-3.3-70b-versatile",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=meta-llama/llama-3.3-70b-versatile",
+    "alias": "llama-3.3-70b-versatile",
+    "category": "text-models-llm",
+    "vendor": "Meta",
+    "codeSamples": "chat-completion"
+  }
 ]
