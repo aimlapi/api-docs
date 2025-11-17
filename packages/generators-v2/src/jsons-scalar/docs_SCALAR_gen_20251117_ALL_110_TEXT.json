@@ -776,7 +776,7 @@
     "customParams": {
         "model":"openai/gpt-5-1",
 		"input": "Hello"
-    },
+    }
   },
   {
     "name": "openai/gpt-5-1-chat-latest",
@@ -797,7 +797,7 @@
     "customParams": {
         "model":"openai/gpt-5-1-chat-latest",
 		"input": "Hello"
-    },
+    }
   },
   {
     "name": "openai/gpt-5-1-codex",
