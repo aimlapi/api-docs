@@ -108,7 +108,7 @@ const EXCEPTION_PATH = [
   '/v1/openai/deployments/{model}',
 ];
 
-const parseOpenapi = (openapi, fetchedModels) => {
+const parseOpenapi = async (openapi, fetchedModels) => {
   for (const model of fetchedModels) {
     if (ALIAS_MAP[model.alias]) {
       ALIAS_MAP[model.alias].push(model.name);
@@ -212,7 +212,7 @@ const parseOpenapi = (openapi, fetchedModels) => {
 
         const { paths, ...rest } = openapi;
 
-        const xCodeSamples = generateCodeSample(fetchedModels, model);
+        const xCodeSamples = await generateCodeSample(fetchedModels, model);
 
         const transformed = {
           paths: {
