@@ -36,7 +36,7 @@ setx AIML_API_KEY "your-api-key"
 
 ### 3) Example — Run an AI/ML API Agent
 
-**File:** `examples/provider_specific/aimlapi/run_agent.py`
+**File:** [`examples/provider_specific/aimlapi/run_agent.py`](https://github.com/PrefectHQ/marvin/blob/main/examples/provider_specific/aimlapi/run_agent.py)
 
 {% tabs %}
 {% tab title="Python" %}
