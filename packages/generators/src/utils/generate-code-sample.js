@@ -481,6 +481,7 @@ Accept: */*
       });
     } else {
       console.error(`Unable to generate code sample for model ${modelName}`);
+      return;
     }
 
     const jsonBody = JSON.stringify(customParams, null, 2);
