@@ -26,7 +26,7 @@ class ModelsGenerator extends PageGenerator {
     const models = await this.fetchModels();
     const swaggerData = yaml.load(await this.fetchSwagger()); 
     const modelsData = await this.fetchModelsCop();  // delete how models will be transferred from json to url 
-    const openapi = parseOpenapi(swaggerData, models);
+    const openapi = await parseOpenapi(swaggerData, models);
 
     for (const model of models) {
       model.key = model.name.replace(/[\/#]/g, ' ').trim().replace(/\s+/g, '-');
