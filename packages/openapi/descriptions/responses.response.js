@@ -1,6 +1,6 @@
 export default {
   background: {
-    desc: `Whether to run the model response in the background`,
+    desc: `Whether to run the model response in the background.`,
   },
   conversation: {
     desc: `The conversation that this response belongs to. Input items and output items from this response are automatically added to this conversation.`,
@@ -53,7 +53,7 @@ export default {
 Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.`,
   },
   model: {
-    desc: `Model ID used to generate the response`,
+    desc: `Model ID used to generate the response.`,
   },
   object: {
     desc: `The object type of this resource - always set to response.`,
@@ -94,9 +94,6 @@ Keys are strings with a maximum length of 64 characters. Values are strings with
       desc: `A summary of the reasoning performed by the model. This can be useful for debugging and understanding the model's reasoning process.`,
     },
   },
-  safety_identifier: {
-    desc: ``,
-  },
   service_tier: {
     desc: `Specifies the processing type used for serving the request.`,
   },
@@ -112,14 +109,11 @@ Keys are strings with a maximum length of 64 characters. Values are strings with
       desc: `An object specifying the format that the model must output.`,
     },
     verbosity: {
-      desc: `Constrains the verbosity of the model's response. Lower values will result in more concise responses, while higher values will result in more verbose responses`,
+      desc: `Constrains the verbosity of the model's response. Lower values will result in more concise responses, while higher values will result in more verbose responses.`,
     },
   },
   tool_choice: {
     desc: `How the model should select which tool (or tools) to use when generating a response.`,
-  },
-  tools: {
-    desc: ``,
   },
   top_logprobs: {
     desc: `An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability.`,
@@ -128,9 +122,6 @@ Keys are strings with a maximum length of 64 characters. Values are strings with
     desc: `An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.
 
 We generally recommend altering this or temperature but not both.`,
-  },
-  truncation: {
-    desc: ``,
   },
   usage: {
     desc: `Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used.`,
