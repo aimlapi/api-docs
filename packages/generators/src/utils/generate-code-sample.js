@@ -6,7 +6,65 @@ async function fetchModelsCop(modelName) {
   );
 }
 
-async function generateCodeSample(fetchedModels, modelName) {
+function buildCodeSamplesByBody(body) {
+  return [
+    {
+      lang: 'JavaScript',
+      source: `async function main() {
+  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer <YOUR_API_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(${body.replace(/\n/g, '\n    ')}),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();`,
+    },
+    {
+      lang: 'Python',
+      source: `import requests
+
+response = requests.post(
+    "https://api.aimlapi.com/v2/video/generations",
+    headers={
+        "Content-Type": "application/json",
+        "Authorization": "Bearer <YOUR_API_KEY>",
+    },
+    json=${body.replace(/\n/g, '\n      ')}
+)
+
+data = response.json()
+print(data)`,
+    },
+    {
+      lang: 'cURL',
+      source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v2/video/generations' \\
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '${body.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
+    },
+    {
+      lang: 'HTTP',
+      source: `POST / HTTP/1.1
+Host: test.com
+Authorization: Bearer <YOUR_API_KEY>
+Content-Type: application/json
+Accept: */*
+
+${body}`,
+    },
+  ];
+}
+
+async function generateCodeSample(fetchedModels, modelName, schema, path) {
   const model = fetchedModels.find((m) => m.name === modelName);
   if (!model) {
     return;
@@ -486,61 +544,66 @@ Accept: */*
 
     const jsonBody = JSON.stringify(customParams, null, 2);
 
-    return [
-      {
-        lang: 'JavaScript',
-        source: `async function main() {
-  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer <YOUR_API_KEY>',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(${jsonBody.replace(/\n/g, '\n    ')}),
-  });
+    return buildCodeSamplesByBody(jsonBody);
+  } else if (model.category === 'music-models') {
+    const requiredModelParams = schema?.required || [];
+    const customParams = {
+      model: modelName,
+    };
+    if (
+      requiredModelParams.includes('prompt') &&
+      requiredModelParams.includes('lyrics')
+    ) {
+      Object.assign(customParams, {
+        prompt:
+          'A calm and soothing instrumental music with gentle piano and soft strings.',
+        lyrics:
+          '[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way',
+      });
+    } else if (requiredModelParams.includes('prompt')) {
+      Object.assign(customParams, {
+        prompt: 'lo-fi pop hip-hop ambient music',
+      });
+    } else {
+      console.error(`Unable to generate code sample for model ${modelName}`);
+      return;
+    }
+    const jsonBody = JSON.stringify(customParams, null, 2);
 
-  const data = await response.json();
-  console.log(JSON.stringify(data, null, 2));
-}
+    return buildCodeSamplesByBody(jsonBody);
+  } else if (model.category === 'speech-models') {
+    const requiredModelParams = schema?.required || [];
+    const customParams = {
+      model: modelName,
+    };
+    if (path.includes('stt')) {
+      Object.assign(customParams, {
+        url: 'https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3',
+      });
+    } else if (requiredModelParams.includes('text')) {
+      Object.assign(customParams, {
+        text: 'Cities of the future promise to radically transform how people live, work, and move. Instead of sprawling layouts, we’ll see vertical structures that integrate residential, work, and public spaces into single, self-sustaining ecosystems. Architecture will adapt to climate conditions, and buildings will be energy-efficient—generating power through solar panels, wind turbines, and even foot traffic.',
+      });
+      if (
+        requiredModelParams.includes('voice') &&
+        schema.properties?.voice?.enum?.[0]
+      ) {
+        Object.assign(customParams, {
+          voice: schema.properties?.voice?.enum?.[0],
+        });
+      }
+    } else if (requiredModelParams.includes('script')) {
+      Object.assign(customParams, {
+        script:
+          'Speaker 1: Wow, whats happening, Alice? \nSpeaker 2: Oh, just the usual… a full-blown AI revolution. Nothing to worry about',
+      });
+    } else {
+      console.error(`Unable to generate code sample for model ${modelName}`);
+      return;
+    }
+    const jsonBody = JSON.stringify(customParams, null, 2);
 
-main();`,
-      },
-      {
-        lang: 'Python',
-        source: `import requests
-
-response = requests.post(
-    "https://api.aimlapi.com/v2/video/generations",
-    headers={
-        "Content-Type": "application/json",
-        "Authorization": "Bearer <YOUR_API_KEY>",
-    },
-    json=${jsonBody.replace(/\n/g, '\n      ')}
-)
-
-data = response.json()
-print(data)`,
-      },
-      {
-        lang: 'cURL',
-        source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v2/video/generations' \\
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \\
-  --header 'Content-Type: application/json' \\
-  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
-      },
-      {
-        lang: 'HTTP',
-        source: `POST / HTTP/1.1
-Host: test.com
-Authorization: Bearer <YOUR_API_KEY>
-Content-Type: application/json
-Accept: */*
-
-${jsonBody}`,
-      },
-    ];
+    return buildCodeSamplesByBody(jsonBody);
   }
 }
 
