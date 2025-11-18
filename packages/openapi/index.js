@@ -16,3 +16,4 @@ export { default as videoResponse } from './descriptions/video.response.js';
 export { default as chatCompletionResponse } from './descriptions/chat-completion.response.js';
 export { default as imageResponse } from './descriptions/image.response.js';
 export { default as responsesResponse } from './descriptions/responses.response.js';
+export { default as audioResponse } from './descriptions/audio.response.js';
