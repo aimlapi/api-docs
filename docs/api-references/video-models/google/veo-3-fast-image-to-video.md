@@ -26,14 +26,37 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find two corresponding API schemas and examples for both endpoint calls.
 
 </details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API.
+
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
+
+{% openapi-operation spec="veo-3-0-i2v-fast" path="/v2/generate/video/google/generation" method="post" %}
+[OpenAPI veo-3-0-i2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.0-i2v-fast.json)
+{% endopenapi-operation %}
+
+### Fetch the video
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
+[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -283,31 +306,8 @@ Processing complete:/n {'status': 'completed', 'id': 'e0ab34a6-1d6b-4b60-99cc-de
 
 </details>
 
-**Original** (with the audio):  [1280x720](https://drive.google.com/file/d/1_ine40cN16QmRUzUks_SZ7HjryWHK3Af/view?usp=sharing)
+**Original** (with the audio): [1280x720](https://drive.google.com/file/d/1_ine40cN16QmRUzUks_SZ7HjryWHK3Af/view?usp=sharing)
 
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/veo-3.0-i2v-fast_preview.gif" alt=""><figcaption><p><code>"The woman puts on glasses with her hands and then sighs and says slowly: 'Well...'."</code></p></figcaption></figure></div>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API.
-
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="veo-3-0-i2v-fast" path="/v2/generate/video/google/generation" method="post" %}
-[OpenAPI veo-3-0-i2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.0-i2v-fast.json)
-{% endopenapi-operation %}
-
-### Fetch the video
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
-{% endopenapi-operation %}

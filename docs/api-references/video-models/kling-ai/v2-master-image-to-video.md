@@ -20,6 +20,30 @@ Compared to [v1.6](../Kling-AI/v1.6-pro-image-to-video.md), this Kling model bet
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
+
+### Create a video generation task and send it to the server
+
+{% openapi-operation spec="kling-v2-master-i2v" path="/v2/generate/video/kling/generation" method="post" %}
+[OpenAPI kling-v2-master-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-image-to-video.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
+[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
@@ -30,11 +54,13 @@ This model produces highly detailed and natural-looking videos, so generation ma
 
 {% tabs %}
 {% tab title="Python" %}
-<pre class="language-python" data-overflow="wrap"><code class="lang-python">import requests
+{% code overflow="wrap" %}
+```python
+import requests
 import time
 
 base_url = "https://api.aimlapi.com/v2"
-api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+api_key = "<YOUR_AIMLAPI_KEY>"
 
 # Creating and sending a video generation task to the server
 def generate_video():
@@ -42,8 +68,8 @@ def generate_video():
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
-<strong>
-</strong>    data = {
+
+    data = {
         "model": "klingai/v2-master-image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
@@ -66,7 +92,7 @@ def get_video(gen_id):
         "generation_id": gen_id,
     }
     
-    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
     headers = {
         "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
@@ -88,7 +114,7 @@ def main():
         start_time = time.time()
 
         timeout = 1000
-        while time.time() - start_time &#x3C; timeout:
+        while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
             if response_data is None:
@@ -111,7 +137,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-</code></pre>
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -198,27 +225,3 @@ Processing complete:/n {'id': '88a64d31-cce4-41e8-b9d8-5392e8c2a6d4:kling-video/
 <figure><img src="../../../.gitbook/assets/kling-master-monalisa.gif" alt=""><figcaption><p><code>"prompt": "Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure>
 
 </details>
-
-## API Schemas
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-Below, you can find two corresponding API schemas and an example with both endpoint calls.
-
-### Create a video generation task and send it to the server
-
-{% openapi-operation spec="kling-v2-master-i2v" path="/v2/generate/video/kling/generation" method="post" %}
-[OpenAPI kling-v2-master-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-image-to-video.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
-[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
-{% endopenapi-operation %}

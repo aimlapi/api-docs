@@ -1,7 +1,7 @@
 # Veo 3 (Text-to-Video)
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,16 +9,50 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 <a href="https://aimlapi.com/app/?model=google/veo3&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 The model generates high-quality short videos from text or image prompts with significant advancements over its predecessor, [Veo2](veo2-text-to-video.md).
 
-## Setup your API Key
+## How to Make a Call
 
-If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
+Generating a video using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+Below, you can find both corresponding API schemas.
+
+</details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a prompt.
+
+{% hint style="success" %}
+To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
+{% endhint %}
+
+{% openapi-operation spec="veo3" path="/v2/generate/video/google/generation" method="post" %}
+[OpenAPI veo3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
+[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -296,31 +330,3 @@ Processing complete:/n {'id': 'df43b636-6b09-4b6d-bbd2-f710ac0a3cfd:veo3', 'stat
 **Low-res GIF preview**:
 
 <figure><img src="../../../.gitbook/assets/ezgif-374c7b0f8e0e06.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure>
-
-## API Schemas
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API. In the basic setup, you only need a prompt.&#x20;
-
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="veo3" path="/v2/generate/video/google/generation" method="post" %}
-[OpenAPI veo3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
-{% endopenapi-operation %}

@@ -20,6 +20,31 @@ A model transforms static images into dynamic video clips.
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+### Create a video generation task and send it to the server
+
+{% hint style="warning" %}
+The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
+{% endhint %}
+
+{% openapi src="v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
+[v1-standard-image-to-video.json](v1-standard-image-to-video.json)
+{% endopenapi %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
+
+{% openapi src="v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
+[v1-standard-image-to-video-pair.json](v1-standard-image-to-video-pair.json)
+{% endopenapi %}
+
 ## Full Example: Generating and Retrieving the Video From the Server
 
 We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
@@ -323,28 +348,3 @@ Processing complete:/n {'id': '0ebebc75-7c09-404b-ac36-345ef346a0ac:kling-video/
 <figure><img src="../../../.gitbook/assets/kling-video-v1-standard-image-to-video_preview.gif" alt=""><figcaption></figcaption></figure>
 
 </details>
-
-## API Schemas
-
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
-
-### Create a video generation task and send it to the server
-
-{% hint style="warning" %}
-The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
-{% endhint %}
-
-{% openapi src="v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
-[v1-standard-image-to-video.json](v1-standard-image-to-video.json)
-{% endopenapi %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. &#x20;
-
-{% openapi src="v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1-standard-image-to-video-pair.json](v1-standard-image-to-video-pair.json)
-{% endopenapi %}

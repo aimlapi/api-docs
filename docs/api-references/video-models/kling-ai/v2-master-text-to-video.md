@@ -1,7 +1,7 @@
 # v2-master/text-to-video
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=klingai/v2-master-image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -19,6 +19,30 @@ Compared to [v1.6](v1.6-pro-text-to-video.md), this Kling model better aligns wi
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schemas
+
+Generating a video using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
+
+### Create a video generation task and send it to the server
+
+{% openapi-operation spec="kling-v2-master-t2v" path="/v2/generate/video/kling/generation" method="post" %}
+[OpenAPI kling-v2-master-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-text-to-video.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
+[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -196,27 +220,3 @@ Processing complete:/n {'id': '10c09c56-2e00-4a64-89ec-358ff71f8144:kling-video/
 **Low-res GIF preview**:
 
 <div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>
-
-## API Schemas
-
-Generating a video using this model involves sequentially calling two endpoints:
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
-
-Below, you can find two corresponding API schemas and an example with both endpoint calls.
-
-### Create a video generation task and send it to the server
-
-{% openapi-operation spec="kling-v2-master-t2v" path="/v2/generate/video/kling/generation" method="post" %}
-[OpenAPI kling-v2-master-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-text-to-video.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
-[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
-{% endopenapi-operation %}
