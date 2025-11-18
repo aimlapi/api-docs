@@ -310,4 +310,4 @@ Processing complete:/n {'id': 'cgt-20250704191750-n4qjp', 'status': 'completed',
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/seedance_t2v_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/seedance_t2v_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then</code> <br><code>rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>

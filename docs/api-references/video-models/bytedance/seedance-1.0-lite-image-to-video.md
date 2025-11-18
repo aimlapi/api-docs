@@ -116,7 +116,6 @@ def get_video(gen_id):
     return response.json()
 
 
-
 def main():
      # Running video generation and getting a task id
     gen_response = generate_video()

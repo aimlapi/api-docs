@@ -101,7 +101,6 @@
     * [gpt-4o-search-preview](api-references/text-models-llm/openai/gpt-4o-search-preview.md)
     * [gpt-4o-mini-search-preview](api-references/text-models-llm/openai/gpt-4o-mini-search-preview.md)
     * [o1](api-references/text-models-llm/OpenAI/o1.md)
-    * [o1-mini](api-references/text-models-llm/OpenAI/o1-mini.md)
     * [o3](api-references/text-models-llm/openai/o3.md)
     * [o3-mini](api-references/text-models-llm/OpenAI/o3-mini.md)
     * [o3-pro](api-references/text-models-llm/openai/o3-pro.md)
