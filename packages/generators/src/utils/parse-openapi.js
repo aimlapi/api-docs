@@ -212,7 +212,7 @@ const parseOpenapi = async (openapi, fetchedModels) => {
 
         const { paths, ...rest } = openapi;
 
-        const xCodeSamples = await generateCodeSample(fetchedModels, model);
+        const xCodeSamples = await generateCodeSample(fetchedModels, model, union, path);
 
         const transformed = {
           paths: {
