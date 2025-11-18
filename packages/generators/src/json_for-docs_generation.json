@@ -1,14 +1,14 @@
 [
   {
-    "name": "klingai/avatar-standard",
-    "alias": "avatar-standard",
+    "name": "ltxv/ltxv-2",
+    "alias": "ltxv-2",
     "category": "video-models",
-    "vendor": "Kling AI"
+    "vendor": "LTXV"
   },
   {
-    "name": "klingai/avatar-pro",
-    "alias": "avatar-pro",
+    "name": "ltxv/ltxv-2-fast",
+    "alias": "ltxv-2-fast",
     "category": "video-models",
-    "vendor": "Kling AI"
+    "vendor": "LTXV"
   }
 ]
