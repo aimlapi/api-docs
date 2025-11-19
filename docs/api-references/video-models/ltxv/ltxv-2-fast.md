@@ -42,8 +42,6 @@ Below, you can find both corresponding API schemas.
 You can generate a video using this API. In the basic setup, you only need a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-Note that in this model, the video duration is defined by the number of frames, not seconds. You can calculate the duration in seconds based on the frame rate of 16 frames per second.
-
 {% openapi-operation spec="ltxv-2-fast" path="/v2/video/generations" method="post" %}
 [OpenAPI ltxv-2-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/LTXV/ltxv-2-fast.json)
 {% endopenapi-operation %}
