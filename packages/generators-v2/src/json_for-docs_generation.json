@@ -1,10 +1,10 @@
 [
   {
-    "name": "meta-llama/llama-3.3-70b-versatile",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=meta-llama/llama-3.3-70b-versatile",
-    "alias": "llama-3.3-70b-versatile",
+    "name": "google/gemini-3-pro-preview",
+    "url": "https://ai.aimlapi.com/docs-json?model=google/gemini-3-pro-preview&endpoint=openai/chat-completions",
+    "alias": "gemini-3-pro-preview",
     "category": "text-models-llm",
-    "vendor": "Meta",
+    "vendor": "Google",
     "codeSamples": "chat-completion"
   }
 ]
