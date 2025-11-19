@@ -26,21 +26,41 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
 </details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a prompt.\
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="fabric-1-0-fast" path="/v2/video/generations" method="post" %}
+[OpenAPI fabric-1-0-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/ffabric-1.0-fast.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="fabric-1-0-pair" path="/v2/video/generations" method="get" %}
+[OpenAPI fabric-1-0-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/fabric-1.0-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
 
 {% hint style="info" %}
-Generation takes about  55 seconds for a 5-second 480p video and around 1 minute 25 seconds for 720p.
+Generation takes about 55 seconds for a 5-second 480p video and around 1 minute 25 seconds for 720p.
 {% endhint %}
 
 {% tabs %}
@@ -290,23 +310,3 @@ Processing complete:/n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1
 </details>
 
 **Processing time**: \~1 min 20 sec.
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API. In the basic setup, you only need a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="fabric-1-0-fast" path="/v2/video/generations" method="post" %}
-[OpenAPI fabric-1-0-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/ffabric-1.0-fast.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="fabric-1-0-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI fabric-1-0-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/fabric-1.0-pair.json)
-{% endopenapi-operation %}

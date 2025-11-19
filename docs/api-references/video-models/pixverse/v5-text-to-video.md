@@ -26,14 +26,34 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
 </details>
+
+## API Schemas
+
+### Create a video generation task and send it to the server
+
+You can generate a video using this API. In the basic setup, you only need a prompt.\
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+
+{% openapi-operation spec="pixverse-v5-text-to-video" path="/v2/generate/video/pixverse/generation" method="post" %}
+[OpenAPI pixverse-v5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
+[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -297,24 +317,4 @@ Processing complete:/n {'id': '1fe4344e-3d44-4bf8-9f04-0ac4bb312eec:pixverse/v5/
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/pixverse-v5text-to-video_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes</code> <br><code>toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>
-
-## API Schemas
-
-### Create a video generation task and send it to the server
-
-You can generate a video using this API. In the basic setup, you only need a prompt. \
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="pixverse-v5-text-to-video" path="/v2/generate/video/pixverse/generation" method="post" %}
-[OpenAPI pixverse-v5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
-[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
-{% endopenapi-operation %}
+<div align="left"><figure><img src="../../../.gitbook/assets/pixverse-v5text-to-video_preview.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes</code><br><code>toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure></div>

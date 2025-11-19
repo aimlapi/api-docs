@@ -1,7 +1,7 @@
 # act\_two
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 
 {% endcolumn %}
 {% endcolumns %}
@@ -22,12 +22,12 @@ This video-to-video model lets you animate characters using reference performanc
 
 <summary>Step-by-Step Instructions</summary>
 
-#### :digit\_one: Setup You Can’t Skip
+:digit\_one: **Setup You Can’t Skip**
 
 :black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-#### :digit\_two: Copy the code example
+:digit\_two: **Copy the code example**
 
 At the bottom of this page, you'll find [a code example](act_two.md#full-example-generating-and-retrieving-the-video-from-the-server) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
@@ -40,16 +40,16 @@ Generating a video using this model involves sequentially calling two endpoints:
 The code example combines both endpoint calls.
 {% endhint %}
 
-#### :digit\_three: Modify the code example
+:digit\_three: **Modify the code example**
 
 :black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
 :black\_small\_square: Insert your instructions into the `prompt` field—this is what the model will do with the image.
 
-#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
 Only `character` and `reference` are required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](act_two.md#api-schemas) ("Video Generation"), which lists all available parameters along with notes on how to use them.
 
-#### :digit\_five: Run your modified code
+:digit\_five: **Run your modified code**
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a minute.
 
@@ -58,6 +58,25 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schemas
+
+### Video Generation
+
+You can generate a video using this API. In the basic setup, you only need an image or video URL for the character (`character`), and a video URL for body movements and/or facial expressions (`reference`).
+
+{% openapi-operation spec="runway-act-two" path="/v2/generate/video/runway/generation" method="post" %}
+[OpenAPI runway-act-two](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/act_two.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
+[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -205,22 +224,3 @@ Processing time: \~45 sec.\
 Original: [784×1168](https://drive.google.com/file/d/1QzqNY6tZdyDh1P5mn3_7QsAPOeoUqtYA/view?usp=sharing)
 
 <div align="left"><figure><img src="../../../.gitbook/assets/runway-act-two-preview (1).gif" alt=""><figcaption><p>Low-resolution GIF preview</p></figcaption></figure></div>
-
-## API Schemas
-
-### Video Generation
-
-You can generate a video using this API. In the basic setup, you only need an image or video URL for the character (`character`), and a video URL for body movements and/or facial expressions (`reference`).
-
-{% openapi-operation spec="runway-act-two" path="/v2/generate/video/runway/generation" method="post" %}
-[OpenAPI runway-act-two](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/act_two.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated video from the server
-
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
-
-{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
-[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
-{% endopenapi-operation %}

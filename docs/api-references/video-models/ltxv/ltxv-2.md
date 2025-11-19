@@ -1,20 +1,20 @@
-# fabric-1.0
+# ltxv-2
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `veed/fabric-1.0`
+* `ltxv/ltxv-2`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=veed/fabric-1.0&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/?model=ltxv/ltxv-2&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-This is an image-to-video model that transforms any image into a realistic talking video.
+The model generates realistic 6-, 8-, and 10-second videos (up to 4K resolution) with detailed visuals and audio.
 
 ## Setup your API Key
 
@@ -42,8 +42,10 @@ Below, you can find both corresponding API schemas.
 You can generate a video using this API. In the basic setup, you only need a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% openapi-operation spec="fabric-1-0" path="/v2/video/generations" method="post" %}
-[OpenAPI fabric-1-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/fabric-1.0.json)
+Note that in this model, the video duration is defined by the number of frames, not seconds. You can calculate the duration in seconds based on the frame rate of 16 frames per second.
+
+{% openapi-operation spec="ltxv-2" path="/v2/video/generations" method="post" %}
+[OpenAPI ltxv-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/LTXV/ltxv-2.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -51,17 +53,13 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="fabric-1-0-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI fabric-1-0-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/fabric-1.0-pair.json)
+{% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
-
-{% hint style="info" %}
-Generation takes about 1 minute 25 seconds for a 5-second 480p video and around 1 minute 55 seconds for 720p.
-{% endhint %}
+The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -81,10 +79,9 @@ def generate_video():
     }
 
     data = {
-        "model": "veed/fabric-1.0",
-        "image_url": "https://v3.fal.media/files/koala/NLVPfOI4XL1cWT2PmmqT3_Hope.png",
-        "audio_url": "https://v3.fal.media/files/elephant/Oz_g4AwQvXtXpUHL3Pa7u_Hope.mp3",
-        "resolution": "720p"
+        "model": "ltxv/ltxv-2",
+        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming. He's roaring: WHERE ARE MY TREASURES?",
+        "duration": 6 
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -118,7 +115,7 @@ def main():
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Try to retrieve the video from the server every 10 sec
+    # Try to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
@@ -129,19 +126,18 @@ def main():
             if response_data is None:
                 print("Error: No response from API")
                 break
-        
-            status = response_data.get("status")
-            print("Status:", status)
 
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            status = response_data.get("status")
+            
+            if status in ["waiting", "active", "queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
-   
+
         print("Timeout reached. Stopping.")
-        return None     
+        return None   
 
 
 if __name__ == "__main__":
@@ -162,10 +158,11 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: 'veed/fabric-1.0',
-        image_url: 'https://v3.fal.media/files/koala/NLVPfOI4XL1cWT2PmmqT3_Hope.png',
-        audio_url: 'https://v3.fal.media/files/elephant/Oz_g4AwQvXtXpUHL3Pa7u_Hope.mp3',
-        resolution: '720p'
+        model: "ltxv/ltxv-2",
+        prompt: `
+A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
+`,
+        duration: 6,
     });
 
     const url = new URL(`${baseUrl}/video/generations`);
@@ -243,7 +240,7 @@ function main() {
         console.log("Generation ID:", genId);
 
         const timeout = 1000 * 1000; // 1000 sec
-        const interval = 10 * 1000; // 10 sec
+        const interval = 15 * 1000; // 15 sec
         const startTime = Date.now();
 
         const checkStatus = () => {
@@ -259,19 +256,17 @@ function main() {
                 }
 
                 const status = responseData.status;
-                console.log("Status:", status);
-
+        
                 if (["waiting", "active", "queued", "generating"].includes(status)) {
-                    console.log("Still waiting... Checking again in 10 seconds.");
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
                     setTimeout(checkStatus, interval);
                 } else {
                     console.log("Processing complete:\n", responseData);
                 }
             });
         };
-
         checkStatus();
-    });
+    })
 }
 
 main();
@@ -286,27 +281,21 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'd7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0', 'status': 'queued', 'meta': {'usage': {'tokens_used': 3150000}}}
-Generation ID:   1fe4344e-3d44-4bf8-9f04-0ac4bb312eec:pixverse/v5/text-to-video
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: completed
-Processing complete:/n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0","status":"completed","video":{"url":"https://v3b.fal.media/files/b/monkey/P9C2_0yfMZxn68-HPgKNX_tmp5g5n20s9.mp4"}}
+{'id': 'fee691ef-744b-41ed-8a78-24372b76fe9a:ltxv/ltxv-2', 'status': 'queued', 'meta': {'usage': {'tokens_used': 756000}}}
+Generation ID:   fee691ef-744b-41ed-8a78-24372b76fe9a:ltxv/ltxv-2
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'fee691ef-744b-41ed-8a78-24372b76fe9a:ltxv/ltxv-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/lion/pXmuP9RkFdx_UcYIe0Cxk_FOlqvATP.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~1 min 50 sec.
+**Processing time**: 1 min 10 sec.
+
+**Generated Video** (1920x1080, with sound):
+
+{% embed url="https://drive.google.com/file/d/1WLcNmR_kAYRaBnci1SFudHBSLwhBaz6Y/view" %}
