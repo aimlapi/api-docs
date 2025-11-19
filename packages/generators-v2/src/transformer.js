@@ -70,6 +70,15 @@ export function transformSchema(schema, options) {
           console.error(e);
         }
       }
+      if (
+        updatedSchema.paths[path]?.post?.responses?.['200']?.content?.[
+          'application/json'
+        ]?.schema?.properties?.model
+      ) {
+        updatedSchema.paths[path].post.responses['200'].content[
+          'application/json'
+        ].schema.properties.model.example = options.name;
+      }
     }
   });
 
