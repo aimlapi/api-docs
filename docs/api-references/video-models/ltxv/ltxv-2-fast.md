@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+The model generates realistic 6-, 8-, and 10-second videos (up to 4K resolution) with detailed visuals and audio. Runs a little faster while delivering video of somewhat lower quality than [LTXV 2](ltxv-2.md).
 
 ## Setup your API Key
 
