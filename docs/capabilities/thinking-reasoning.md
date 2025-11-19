@@ -47,6 +47,7 @@ Supported models:
 * [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
+* [google/gemini-3-pro-preview](../api-references/text-models-llm/google/gemini-3-pro-preview.md)
 
 ### OpenAI and other vendors
 
