@@ -1,14 +1,14 @@
 [
   {
-    "name": "ltxv/ltxv-2",
-    "alias": "ltxv-2",
+    "name": "veed/fabric-1.0",
+    "alias": "fabric-1.0",
     "category": "video-models",
-    "vendor": "LTXV"
+    "vendor": "VEED"
   },
   {
-    "name": "ltxv/ltxv-2-fast",
-    "alias": "ltxv-2-fast",
+    "name": "veed/fabric-1.0-fast",
+    "alias": "fabric-1.0-fast",
     "category": "video-models",
-    "vendor": "LTXV"
+    "vendor": "VEED"
   }
 ]
