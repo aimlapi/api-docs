@@ -17,3 +17,4 @@ export { default as chatCompletionResponse } from './descriptions/chat-completio
 export { default as imageResponse } from './descriptions/image.response.js';
 export { default as responsesResponse } from './descriptions/responses.response.js';
 export { default as audioResponse } from './descriptions/audio.response.js';
+export { default as speechToTextResponse } from './descriptions/speech-to-text.response.js';
