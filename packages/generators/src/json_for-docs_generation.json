@@ -1,8 +1,210 @@
 [
   {
-    "name": "veo2",
-    "alias": "veo2",
-    "category": "video-models",
+    "name": "alibaba/qwen-image",
+    "alias": "qwen-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud"
+  },
+  {
+    "name": "bytedance/seedream-3.0",
+    "alias": "seedream-3.0",
+    "category": "image-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "bytedance/seedream-v4-text-to-image",
+    "alias": "seedream-v4-text-to-image",
+    "category": "image-models",
+    "vendor": "ByteDance"
+  },
+  {
+    "name": "flux/schnell",
+    "alias": "flux/schnell",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux-pro",
+    "alias": "flux-pro",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux-pro/v1.1",
+    "alias": "flux-pro/v1.1",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux-pro/v1.1-ultra",
+    "alias": "flux-pro/v1.1-ultra",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/dev",
+    "alias": "flux/dev",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/dev/image-to-image",
+    "alias": "flux/dev/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "features": ["image-to-image"]
+  },
+  {
+    "name": "flux-realism",
+    "alias": "flux-realism",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/kontext-max/image-to-image",
+    "alias": "flux/kontext-max/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "features": ["image-to-image"]
+  },
+  {
+    "name": "flux/kontext-pro/image-to-image",
+    "alias": "flux/kontext-pro/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "features": ["image-to-image"]
+  },
+  {
+    "name": "flux/kontext-max/text-to-image",
+    "alias": "flux/kontext-max/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/kontext-pro/text-to-image",
+    "alias": "flux/kontext-pro/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/srpo",
+    "alias": "flux/srpo",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "flux/srpo/image-to-image",
+    "alias": "flux/srpo/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux"
+  },
+  {
+    "name": "imagen-3.0-generate-002",
+    "alias": "imagen-3.0",
+    "category": "image-models",
     "vendor": "Google"
+  },
+  {
+    "name": "google/imagen4/preview",
+    "alias": "imagen-4-preview",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "imagen-4.0-ultra-generate-preview-06-06",
+    "alias": "imagen-4.0-ultra",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/imagen-4.0-generate-001",
+    "alias": "imagen-4.0-generate-001",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/imagen-4.0-fast-generate-001",
+    "alias": "imagen-4.0-fast-generate-001",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/imagen-4.0-ultra-generate-001",
+    "alias": "imagen-4.0-ultra-generate-001",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "google/gemini-2.5-flash-image",
+    "alias": "gemini-2.5-flash-image",
+    "category": "image-models",
+    "vendor": "Google"
+  },
+  {
+    "name": "dall-e-3",
+    "alias": "dall-e-3",
+    "category": "image-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "dall-e-2",
+    "alias": "dall-e-2",
+    "category": "image-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "alias": "gpt-image-1",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "features": ["image-to-image"]
+  },
+  {
+    "name": "recraft-v3",
+    "alias": "recraft-v3",
+    "category": "image-models",
+    "vendor": "RecraftAI"
+  },
+  {
+    "name": "reve/create-image",
+    "alias": "reve/create-image",
+    "category": "image-models",
+    "vendor": "Reve"
+  },
+  {
+    "name": "reve/edit-image",
+    "alias": "reve/edit-image",
+    "category": "image-models",
+    "vendor": "Reve"
+  },
+  {
+    "name": "reve/remix-edit-image",
+    "alias": "reve/remix-edit-image",
+    "category": "image-models",
+    "vendor": "Reve"
+  },
+  {
+    "name": "stable-diffusion-v3-medium",
+    "alias": "stable-diffusion-v3-medium",
+    "category": "image-models",
+    "vendor": "Stability AI"
+  },
+  {
+    "name": "stable-diffusion-v35-large",
+    "alias": "stable-diffusion-v35-large",
+    "category": "image-models",
+    "vendor": "Stability AI"
+  },
+  {
+    "name": "hunyuan/hunyuan-image-v3-text-to-image",
+    "alias": "hunyuan-image-v3-text-to-image",
+    "category": "image-models",
+    "vendor": "Tencent"
+  },
+  {
+    "name": "x-ai/grok-2-image",
+    "alias": "grok-2-image",
+    "category": "image-models",
+    "vendor": "xAI"
   }
 ]
