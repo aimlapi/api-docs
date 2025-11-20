@@ -14,12 +14,12 @@ An advanced AI model that generates diverse high-quality audio compositions by a
 
 <summary>Step-by-Step Instructions</summary>
 
-#### :digit\_one: Setup You Can’t Skip
+:digit\_one: **Setup You Can’t Skip**
 
 :black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-#### :digit\_two: Copy the code example
+:digit\_two: **Copy the code example**
 
 At the bottom of this page, you'll find [a code example](minimax-music-\[legacy].md#quick-code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
@@ -32,7 +32,7 @@ Generating a music piece using this model involves sequentially calling two endp
 The code example combines both endpoint calls.
 {% endhint %}
 
-#### :digit\_three: Modify the code example
+:digit\_three: **Modify the code example**
 
 :black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
 :black\_small\_square: Provide your lyrics via the `prompt` parameter. The model will use it to generate a song.
@@ -43,11 +43,11 @@ Keep in mind that the maximum length of generated audio is 1 minute. If you prov
 
 :black\_small\_square: Via `reference_audio_url` parameter, provide a URL to a reference track from which the model will extract the genre, style, tempo, vocal and instrument timbres, and the overall mood of the piece.
 
-#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
 Only `prompt` is a required parameter for this model (and we’ve already filled it in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](minimax-music-\[legacy].md#api-schemas) ("Generate a music sample"), which lists all available parameters along with notes on how to use them.
 
-#### :digit\_five: Run your modified code
+:digit\_five: **Run your modified code**
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds 1 minute.
 
@@ -56,6 +56,24 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schemas
+
+### Generate a music sample
+
+This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
+
+{% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
+[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+
+{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% endopenapi-operation %}
 
 ## Quick Code Example
 
@@ -322,21 +340,3 @@ Generation: {'id': '906aec79-b0af-40c4-adae-15e6c4410e29:minimax-music', 'status
 Listen to the track we generated:
 
 {% embed url="https://drive.google.com/file/d/1itPTKlfuOLCtgw7SycISdPLj6gTftp1t/view" fullWidth="false" %}
-
-## API Schemas
-
-### Generate a music sample
-
-This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
-
-{% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
-[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
-
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
-{% endopenapi-operation %}

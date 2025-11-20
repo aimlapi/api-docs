@@ -12,6 +12,25 @@ The model creates full-length songs (up to 4 minutes) featuring natural-sounding
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schemas
+
+### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
+The generation can be completed in 60-80 seconds or take a bit more.
+
+{% openapi-operation spec="music-1-5" path="/v2/generate/audio" method="post" %}
+[OpenAPI music-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-1.5.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
+
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+
+{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% endopenapi-operation %}
+
 ## Quick Code Example
 
 Here’s an example of generating an audio file using a prompt with style instructions and a separate parameter for the lyrics.
@@ -213,22 +232,3 @@ Generation complete:/n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/musi
 Listen to the track we generated:
 
 {% embed url="https://drive.google.com/file/d/1SnLnpa4C4gU1sWDEIfd-fTTGdd6zwfJW/view" %}
-
-## API Schemas
-
-### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
-The generation can be completed in 60-80 seconds or take a bit more.
-
-{% openapi-operation spec="music-1-5" path="/v2/generate/audio" method="post" %}
-[OpenAPI music-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-1.5.json)
-{% endopenapi-operation %}
-
-### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
-
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
-
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
-{% endopenapi-operation %}

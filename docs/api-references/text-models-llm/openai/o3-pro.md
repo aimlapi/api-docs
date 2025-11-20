@@ -16,25 +16,25 @@ Designed for deeper reasoning and tougher questions, o3-pro uses more compute to
 
 <summary>Step-by-Step Instructions</summary>
 
-#### :digit\_one: Setup You Can’t Skip
+:digit\_one: **Setup You Can’t Skip**
 
 :black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-#### :digit\_two: Copy the code example
+:digit\_two: **Copy the code example**
 
 At the bottom of this page, you'll find [a code example](o3-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
-#### :digit\_three: Modify the code example
+:digit\_three: **Modify the code example**
 
 :black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
 :black\_small\_square: Insert your question or request into the `input` field—this is what the model will respond to.
 
-#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
 Only `model` and `input` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](o3-pro.md#api-schema), which lists all available parameters along with notes on how to use them.
 
-#### :digit\_five: Run your modified code
+:digit\_five: **Run your modified code**
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
 
@@ -52,9 +52,11 @@ Note: This model can ONLY be called via the `/responses` endpoint!
 
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others (like `openai/o3-pro`) support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
 
-{% openapi-operation spec="response-api" path="/v1/responses" method="post" %}
-[OpenAPI response-api](https://api.aimlapi.com/docs-public-yaml)
+{% openapi-operation spec="o3-pro-RESPONSES" path="/v1/responses" method="post" %}
+[OpenAPI o3-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-pro-RESPONSES.json)
 {% endopenapi-operation %}
+
+
 
 ## Code Example
 
