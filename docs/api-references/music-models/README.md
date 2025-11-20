@@ -24,9 +24,9 @@ As an example, we will generate a song using the popular **minimax-music** model
 We used a publicly available sample from royalty-free sample database and generated some lyrics in [Chat GPT](https://docs.aimlapi.com/api-overview/text-models-llm/chat-completion):
 
 _Side by side, through thick and thin,_\
-&#xNAN;_&#x57;ith a laugh, we always win._\
-&#xNAN;_&#x53;torms may come, but we stay true,_\
-&#xNAN;_&#x46;riends forever—me and you!_
+\&#xNAN;_With a laugh, we always win._\
+\&#xNAN;_Storms may come, but we stay true,_\
+\&#xNAN;_Friends forever—me and you!_
 
 To turn this into a model-friendly prompt (as a single string), we added hash symbols and line breaks.
 
@@ -123,4 +123,4 @@ Listen to the track we generated:
 
 ## All Available Music Models
 
-<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="elevenlabs/eleven_music.md">elevenlabs/eleven_music</a></td><td>ElevenLabs</td><td></td><td><a href="https://aimlapi.com/models/elevenmusic">Eleven Music</a></td></tr><tr><td><a href="google/lyria-2.md">google/lyria2</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/lyria-2">Lyria 2</a></td></tr><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr><tr><td><a href="minimax/music-1.5.md">minimax/music-1.5</a></td><td>Minimax AI</td><td></td><td><em>Coming Soon</em></td></tr></tbody></table>
+<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="elevenlabs/eleven_music.md">elevenlabs/eleven_music</a></td><td>ElevenLabs</td><td></td><td><a href="https://aimlapi.com/models/elevenmusic">Eleven Music</a></td></tr><tr><td><a href="google/lyria-2.md">google/lyria2</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/lyria-2">Lyria 2</a></td></tr><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr><tr><td><a href="minimax/music-1.5.md">minimax/music-1.5</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-1-5">MiniMax Music 1.5</a></td></tr></tbody></table>

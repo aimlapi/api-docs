@@ -3,11 +3,29 @@ description: >-
   A description of the software development kits (SDKs) that can be used to
   interact with the AIML API.
 icon: hammer-brush
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Supported SDKs
 
-This page describes the SDK[^1]s that can be used to call our API.
+This page describes the SDK[^1]s that can be used to call our API.&#x20;
+
+{% hint style="success" %}
+Also take a look at the [**INTEGRATIONS**](../integrations/our-integration-list.md) section — it covers many third-party services and libraries (workflow platforms, coding assistants, etc.) that allow you to integrate our models in various ways.
+{% endhint %}
 
 ## OpenAI
 
@@ -30,6 +48,8 @@ This support provides easy integration into systems already using OpenAI's stand
 {% hint style="info" %}
 [How do I configure the base URL and API key?](setting-up.md)
 {% endhint %}
+
+***
 
 ## REST API
 
@@ -104,7 +124,7 @@ print(response.json())
 ```
 {% endtab %}
 
-{% tab title="Shell" %}
+{% tab title="cURL" %}
 ```ruby
 curl --request POST \
   --url https://api.aimlapi.com/chat/completions \
@@ -125,9 +145,11 @@ curl --request POST \
 {% endtab %}
 {% endtabs %}
 
+***
+
 ## AI/ML API Python library
 
-We have started developing our own SDK to simplify the use of our service. Currently, it supports only chat completion and embedding models.&#x20;
+We have started developing our own SDK to simplify the use of our service. Currently, it supports only chat completion and embedding models.
 
 {% hint style="success" %}
 If you’d like to contribute to expanding its functionality, feel free to reach out to us on [**Discord**](https://discord.com/invite/hvaUsJpVJf)!
@@ -155,31 +177,39 @@ Install `aiml_api` package:
 pip install aiml_api
 ```
 
-### Request Example (Python)
+### Request Example
 
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 from aiml_api import AIML_API
 
 api = AIML_API()
 
 completion = api.chat.completions.create(
-    model="mistralai/Mistral-7B-Instruct-v0.2",
-    messages=[
+    model = "mistralai/Mistral-7B-Instruct-v0.2",
+    messages = [
         {"role": "user", "content": "Explain the importance of low-latency LLMs"},
     ],
-    temperature=0.7,
-    max_tokens=256,
+    temperature = 0.7,
+    max_tokens = 256,
 )
 
 response = completion.choices[0].message.content
 print("AI:", response)
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 To execute the script, use:
 
 ```shell
 python3 <your_script_name>.py
 ```
+
+***
 
 ## Next Steps
 

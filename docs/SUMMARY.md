@@ -279,7 +279,7 @@
   * [Sber AI](api-references/video-models/sber-ai/README.md)
     * [Kandinsky 5 (Text-to-Video)](api-references/video-models/sber-ai/kandinsky5-text-to-video.md)
     * [Kandinsky 5 Distill (Text-to-Video)](api-references/video-models/sber-ai/kandinsky5-distill-text-to-video.md)
-  * [Veed](api-references/video-models/veed/README.md)
+  * [VEED](api-references/video-models/veed/README.md)
     * [fabric-1.0](api-references/video-models/veed/fabric-1.0.md)
     * [fabric-1.0-fast](api-references/video-models/veed/fabric-1.0-fast.md)
 * [Music Models](api-references/music-models/README.md)

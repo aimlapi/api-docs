@@ -108,6 +108,10 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**Kling AI**</mark>: [Video](api-references/video-models/Kling-AI/)
 
+**Krea**:    [Video](api-references/video-models/krea/)
+
+**LTXV**:    [Video](api-references/video-models/ltxv/)
+
 **Meta**: [Text/Chat](api-references/text-models-llm/Meta/)
 
 **Microsoft**: [Text-to-Speech](api-references/speech-models/text-to-speech/microsoft/)
@@ -134,17 +138,19 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Runway**: [Video](api-references/video-models/runway/)
 
-<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)
+<mark style="background-color:green;">**Stability AI**</mark>:  [Image](api-references/image-models/Stability-AI/)  [Music](api-references/music-models/Stability-AI/)  [3D-Generation](api-references/3d-generating-models/Stability-AI/)
 
-**Sber AI**: [Video](api-references/video-models/sber-ai/)
+**Sber AI**:  [Video](api-references/video-models/sber-ai/)
 
-**Tencent**: [Image](api-references/image-models/tencent/)
+**Tencent**:  [Image](api-references/image-models/tencent/)
 
-**Together AI**: [Embedding](api-references/embedding-models/Together-AI/)
+**Together AI**:  [Embedding](api-references/embedding-models/Together-AI/)
 
-**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)
+**VEED**:   [Video](api-references/video-models/veed/)
 
-**Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
+**xAI**:  [Text/Chat](api-references/text-models-llm/xAI/)  [Image](api-references/image-models/xai/)
+
+**Zhipu**:  [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
 
 {% tab title="Text Models by CAPABILITY" %}
