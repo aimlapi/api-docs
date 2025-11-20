@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-5-1-chat-latest"
+                      "o1"
                     ]
                   },
                   "input": {
@@ -455,38 +455,6 @@
                       {
                         "type": "object",
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "description": "The unique ID of the web search tool call."
-                          },
-                          "status": {
-                            "type": "string",
-                            "enum": [
-                              "in_progress",
-                              "completed",
-                              "searching",
-                              "failed"
-                            ],
-                            "description": "The status of the web search tool call."
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "web_search_call"
-                            ],
-                            "description": "The type of the web search tool call. Always web_search_call."
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "status",
-                          "type"
-                        ],
-                        "description": "The results of a web search tool call."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
                           "arguments": {
                             "type": "string",
                             "description": "A JSON string of the arguments to pass to the function."
@@ -572,91 +540,62 @@
                       {
                         "type": "object",
                         "properties": {
-                          "code": {
-                            "type": "string",
-                            "description": "The code to run, or null if not available."
-                          },
                           "id": {
                             "type": "string",
-                            "description": "The unique ID of the code interpreter tool call."
+                            "description": "The unique identifier of the reasoning content."
                           },
-                          "outputs": {
+                          "summary": {
                             "type": "array",
-                            "nullable": true,
                             "items": {
-                              "oneOf": [
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "logs": {
-                                      "type": "string",
-                                      "description": "The logs output from the code interpreter."
-                                    },
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "logs"
-                                      ],
-                                      "description": "The type of the output. Always 'logs'."
-                                    }
-                                  },
-                                  "required": [
-                                    "logs",
-                                    "type"
-                                  ]
+                              "type": "object",
+                              "properties": {
+                                "text": {
+                                  "type": "string",
+                                  "description": "A short summary of the reasoning used by the model when generating the response."
                                 },
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "image"
-                                      ]
-                                    },
-                                    "url": {
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "type",
-                                    "url"
-                                  ]
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "summary_text"
+                                  ],
+                                  "description": "The type of the object. Always summary_text."
                                 }
+                              },
+                              "required": [
+                                "text",
+                                "type"
                               ]
                             },
-                            "description": "The outputs generated by the code interpreter, such as logs or images. Can be null if no outputs are available."
+                            "description": "Reasoning text contents."
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "reasoning"
+                            ],
+                            "description": "The type of the object. Always reasoning."
+                          },
+                          "encrypted_content": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The encrypted content of the reasoning item - populated when a response is generated with reasoning.encrypted_content in the include parameter."
                           },
                           "status": {
                             "type": "string",
                             "enum": [
                               "in_progress",
                               "completed",
-                              "interpreting"
+                              "incomplete"
                             ],
-                            "description": "The status of the code interpreter tool call."
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "code_interpreter_call"
-                            ],
-                            "description": "The type of the code interpreter tool call. Always code_interpreter_call."
-                          },
-                          "container_id": {
-                            "type": "string",
-                            "description": "The ID of the container used to run the code."
+                            "description": "The status of the item."
                           }
                         },
                         "required": [
-                          "code",
                           "id",
-                          "outputs",
-                          "status",
-                          "type",
-                          "container_id"
+                          "summary",
+                          "type"
                         ],
-                        "description": "A tool call to run code."
+                        "description": "A description of the chain of thought used by a reasoning model while generating a response."
                       },
                       {
                         "type": "object",
@@ -1151,69 +1090,6 @@
                         {
                           "type": "object",
                           "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "web_search_preview",
-                                "web_search_preview_2025_03_11"
-                              ],
-                              "description": "The type of the web search tool. One of web_search_preview or web_search_preview_2025_03_11."
-                            },
-                            "search_context_size": {
-                              "type": "string",
-                              "enum": [
-                                "low",
-                                "medium",
-                                "high"
-                              ],
-                              "description": "High level guidance for the amount of context window space to use for the search. One of low, medium, or high. medium is the default."
-                            },
-                            "user_location": {
-                              "type": "object",
-                              "nullable": true,
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "enum": [
-                                    "approximate"
-                                  ],
-                                  "description": "The type of location approximation. Always approximate."
-                                },
-                                "city": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "Free text input for the city of the user, e.g. San Francisco."
-                                },
-                                "country": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "The two-letter ISO country code of the user, e.g. US."
-                                },
-                                "region": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "Free text input for the region of the user, e.g. California."
-                                },
-                                "timezone": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "The IANA timezone of the user, e.g. America/Los_Angeles."
-                                }
-                              },
-                              "required": [
-                                "type"
-                              ],
-                              "description": "The user's location"
-                            }
-                          },
-                          "required": [
-                            "type"
-                          ],
-                          "description": "This tool searches the web for relevant results to use in a response."
-                        },
-                        {
-                          "type": "object",
-                          "properties": {
                             "server_label": {
                               "type": "string",
                               "description": "A label for this MCP server, used to identify it in tool calls."
@@ -1318,45 +1194,6 @@
                             "type"
                           ],
                           "description": "Give the model access to additional tools via remote Model Context Protocol (MCP) servers."
-                        },
-                        {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "code_interpreter"
-                              ],
-                              "description": "The type of the code interpreter tool. Always code_interpreter."
-                            },
-                            "container": {
-                              "anyOf": [
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "auto"
-                                      ]
-                                    }
-                                  },
-                                  "required": [
-                                    "type"
-                                  ]
-                                }
-                              ],
-                              "description": "The container ID."
-                            }
-                          },
-                          "required": [
-                            "type",
-                            "container"
-                          ],
-                          "description": "A tool that runs Python code to help generate a response to a prompt."
                         }
                       ]
                     },
@@ -1420,7 +1257,7 @@
                   "model",
                   "input"
                 ],
-                "title": "openai/gpt-5-1-chat-latest"
+                "title": "o1"
               }
             }
           }
@@ -3082,7 +2919,7 @@
                     "model": {
                       "type": "string",
                       "description": "Model ID used to generate the response.",
-                      "example": "openai/gpt-5-1-chat-latest"
+                      "example": "o1"
                     },
                     "object": {
                       "type": "string",
@@ -31134,19 +30971,19 @@
         "x-codeSamples": [
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/responses', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_API_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/responses', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_API_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/responses\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_API_KEY>\",\n    },\n    json={\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/responses\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_API_KEY>\",\n    },\n    json={\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }\n)\n\ndata = response.json()\nprint(data)"
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/responses' \\\n  --header 'Authorization: Bearer <YOUR_API_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }'"
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/responses' \\\n  --header 'Authorization: Bearer <YOUR_API_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }'"
           },
           {
             "lang": "HTTP",
-            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_API_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"openai/gpt-5-1-chat-latest\",\n  \"input\": \"Hello\"\n}"
+            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_API_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"o1\",\n  \"input\": \"Hello\"\n}"
           }
         ]
       }
@@ -31164,7 +31001,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-5-1-chat-latest"
+                      "o1"
                     ]
                   },
                   "input": {
@@ -31596,38 +31433,6 @@
                       {
                         "type": "object",
                         "properties": {
-                          "id": {
-                            "type": "string",
-                            "description": "The unique ID of the web search tool call."
-                          },
-                          "status": {
-                            "type": "string",
-                            "enum": [
-                              "in_progress",
-                              "completed",
-                              "searching",
-                              "failed"
-                            ],
-                            "description": "The status of the web search tool call."
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "web_search_call"
-                            ],
-                            "description": "The type of the web search tool call. Always web_search_call."
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "status",
-                          "type"
-                        ],
-                        "description": "The results of a web search tool call."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
                           "arguments": {
                             "type": "string",
                             "description": "A JSON string of the arguments to pass to the function."
@@ -31713,91 +31518,62 @@
                       {
                         "type": "object",
                         "properties": {
-                          "code": {
-                            "type": "string",
-                            "description": "The code to run, or null if not available."
-                          },
                           "id": {
                             "type": "string",
-                            "description": "The unique ID of the code interpreter tool call."
+                            "description": "The unique identifier of the reasoning content."
                           },
-                          "outputs": {
+                          "summary": {
                             "type": "array",
-                            "nullable": true,
                             "items": {
-                              "oneOf": [
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "logs": {
-                                      "type": "string",
-                                      "description": "The logs output from the code interpreter."
-                                    },
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "logs"
-                                      ],
-                                      "description": "The type of the output. Always 'logs'."
-                                    }
-                                  },
-                                  "required": [
-                                    "logs",
-                                    "type"
-                                  ]
+                              "type": "object",
+                              "properties": {
+                                "text": {
+                                  "type": "string",
+                                  "description": "A short summary of the reasoning used by the model when generating the response."
                                 },
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "image"
-                                      ]
-                                    },
-                                    "url": {
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "type",
-                                    "url"
-                                  ]
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "summary_text"
+                                  ],
+                                  "description": "The type of the object. Always summary_text."
                                 }
+                              },
+                              "required": [
+                                "text",
+                                "type"
                               ]
                             },
-                            "description": "The outputs generated by the code interpreter, such as logs or images. Can be null if no outputs are available."
+                            "description": "Reasoning text contents."
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "reasoning"
+                            ],
+                            "description": "The type of the object. Always reasoning."
+                          },
+                          "encrypted_content": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The encrypted content of the reasoning item - populated when a response is generated with reasoning.encrypted_content in the include parameter."
                           },
                           "status": {
                             "type": "string",
                             "enum": [
                               "in_progress",
                               "completed",
-                              "interpreting"
+                              "incomplete"
                             ],
-                            "description": "The status of the code interpreter tool call."
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "code_interpreter_call"
-                            ],
-                            "description": "The type of the code interpreter tool call. Always code_interpreter_call."
-                          },
-                          "container_id": {
-                            "type": "string",
-                            "description": "The ID of the container used to run the code."
+                            "description": "The status of the item."
                           }
                         },
                         "required": [
-                          "code",
                           "id",
-                          "outputs",
-                          "status",
-                          "type",
-                          "container_id"
+                          "summary",
+                          "type"
                         ],
-                        "description": "A tool call to run code."
+                        "description": "A description of the chain of thought used by a reasoning model while generating a response."
                       },
                       {
                         "type": "object",
@@ -32292,69 +32068,6 @@
                         {
                           "type": "object",
                           "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "web_search_preview",
-                                "web_search_preview_2025_03_11"
-                              ],
-                              "description": "The type of the web search tool. One of web_search_preview or web_search_preview_2025_03_11."
-                            },
-                            "search_context_size": {
-                              "type": "string",
-                              "enum": [
-                                "low",
-                                "medium",
-                                "high"
-                              ],
-                              "description": "High level guidance for the amount of context window space to use for the search. One of low, medium, or high. medium is the default."
-                            },
-                            "user_location": {
-                              "type": "object",
-                              "nullable": true,
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "enum": [
-                                    "approximate"
-                                  ],
-                                  "description": "The type of location approximation. Always approximate."
-                                },
-                                "city": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "Free text input for the city of the user, e.g. San Francisco."
-                                },
-                                "country": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "The two-letter ISO country code of the user, e.g. US."
-                                },
-                                "region": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "Free text input for the region of the user, e.g. California."
-                                },
-                                "timezone": {
-                                  "type": "string",
-                                  "nullable": true,
-                                  "description": "The IANA timezone of the user, e.g. America/Los_Angeles."
-                                }
-                              },
-                              "required": [
-                                "type"
-                              ],
-                              "description": "The user's location"
-                            }
-                          },
-                          "required": [
-                            "type"
-                          ],
-                          "description": "This tool searches the web for relevant results to use in a response."
-                        },
-                        {
-                          "type": "object",
-                          "properties": {
                             "server_label": {
                               "type": "string",
                               "description": "A label for this MCP server, used to identify it in tool calls."
@@ -32459,45 +32172,6 @@
                             "type"
                           ],
                           "description": "Give the model access to additional tools via remote Model Context Protocol (MCP) servers."
-                        },
-                        {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "code_interpreter"
-                              ],
-                              "description": "The type of the code interpreter tool. Always code_interpreter."
-                            },
-                            "container": {
-                              "anyOf": [
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "auto"
-                                      ]
-                                    }
-                                  },
-                                  "required": [
-                                    "type"
-                                  ]
-                                }
-                              ],
-                              "description": "The container ID."
-                            }
-                          },
-                          "required": [
-                            "type",
-                            "container"
-                          ],
-                          "description": "A tool that runs Python code to help generate a response to a prompt."
                         }
                       ]
                     },
@@ -32561,7 +32235,7 @@
                   "model",
                   "input"
                 ],
-                "title": "openai/gpt-5-1-chat-latest"
+                "title": "o1"
               }
             }
           }
@@ -34223,7 +33897,7 @@
                     "model": {
                       "type": "string",
                       "description": "Model ID used to generate the response.",
-                      "example": "openai/gpt-5-1-chat-latest"
+                      "example": "o1"
                     },
                     "object": {
                       "type": "string",
@@ -62275,19 +61949,19 @@
         "x-codeSamples": [
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/responses', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_API_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/responses', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_API_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/responses\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_API_KEY>\",\n    },\n    json={\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/responses\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_API_KEY>\",\n    },\n    json={\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }\n)\n\ndata = response.json()\nprint(data)"
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/responses' \\\n  --header 'Authorization: Bearer <YOUR_API_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"openai/gpt-5-1-chat-latest\",\n      \"input\": \"Hello\"\n    }'"
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/responses' \\\n  --header 'Authorization: Bearer <YOUR_API_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"o1\",\n      \"input\": \"Hello\"\n    }'"
           },
           {
             "lang": "HTTP",
-            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_API_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"openai/gpt-5-1-chat-latest\",\n  \"input\": \"Hello\"\n}"
+            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_API_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"o1\",\n  \"input\": \"Hello\"\n}"
           }
         ]
       }
