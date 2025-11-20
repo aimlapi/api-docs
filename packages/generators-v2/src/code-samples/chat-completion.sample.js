@@ -61,7 +61,7 @@ print(data)`,
     "messages": [
       {
         "role": "user",
-        "content": "hi"
+        "content": "Hello"
       }
     ]
   }'`,
@@ -80,7 +80,7 @@ Content-Length: 59
   "messages": [
     {
       "role": "user",
-      "content": "hi"
+      "content": "Hello"
     }
   ]
 }`,

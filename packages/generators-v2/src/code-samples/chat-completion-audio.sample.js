@@ -65,7 +65,7 @@ print(data)`,
     "messages": [
       {
         "role": "user",
-        "content": "hi"
+        "content": "Hello"
       }
     ],
     "modalities": ["text", "audio"], 
@@ -86,7 +86,7 @@ Content-Length: 59
   "messages": [
     {
       "role": "user",
-      "content": "hi"
+      "content": "Hello"
     }
   ],
   "modalities": ["text", "audio"], 

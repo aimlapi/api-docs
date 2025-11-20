@@ -44,6 +44,8 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.imageToImageSample(options, schema);
   } else if (options.codeSamples === 'gpt-image-edit') {
     codeSample = codeSamples.gptImageEditSample(options);
+  } else if (options.codeSamples === 'responses') {
+    codeSample = codeSamples.responsesSample(options);
   } else if (options.codeSamples === 'custom' && options.customParams) {
     codeSample = codeSamples.customSample(options);
   }
