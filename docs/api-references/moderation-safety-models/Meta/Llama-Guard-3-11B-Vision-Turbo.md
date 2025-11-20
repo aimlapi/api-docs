@@ -18,6 +18,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="Llama-Guard-3-11B-Vision-Turbo.json" path="/v1/chat/completions" method="post" %}
-[Llama-Guard-3-11B-Vision-Turbo.json](Llama-Guard-3-11B-Vision-Turbo.json)
+{% openapi src="../../../.gitbook/assets/Llama-Guard-3-11B-Vision-Turbo.json" path="/v1/chat/completions" method="post" %}
+[Llama-Guard-3-11B-Vision-Turbo.json](../../../.gitbook/assets/Llama-Guard-3-11B-Vision-Turbo.json)
 {% endopenapi %}

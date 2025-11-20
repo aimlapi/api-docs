@@ -1,7 +1,7 @@
 # v1-pro/image-to-video
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 <a href="https://aimlapi.com/app/?model=kling-video/v1/pro/image-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -26,10 +26,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
@@ -43,14 +43,14 @@ Below, you can find both corresponding API schemas.
 The ratio/aspect\_ratio parameter is deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
 {% endhint %}
 
-{% openapi src="v1-pro-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
-[v1-pro-image-to-video.json](v1-pro-image-to-video.json)
+{% openapi src="../../../.gitbook/assets/v1-pro-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
+[v1-pro-image-to-video.json](../../../.gitbook/assets/v1-pro-image-to-video.json)
 {% endopenapi %}
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. &#x20;
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
 
-{% openapi src="v1-pro-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1-pro-image-to-video-pair.json](v1-pro-image-to-video-pair.json)
+{% openapi src="../../../.gitbook/assets/v1-pro-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
+[v1-pro-image-to-video-pair.json](../../../.gitbook/assets/v1-pro-image-to-video-pair.json)
 {% endopenapi %}

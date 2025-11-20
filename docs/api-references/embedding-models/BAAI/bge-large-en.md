@@ -18,6 +18,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="bge-large-en.json" path="/v1/embeddings" method="post" %}
-[bge-large-en.json](bge-large-en.json)
+{% openapi src="../../../.gitbook/assets/bge-large-en.json" path="/v1/embeddings" method="post" %}
+[bge-large-en.json](../../../.gitbook/assets/bge-large-en.json)
 {% endopenapi %}

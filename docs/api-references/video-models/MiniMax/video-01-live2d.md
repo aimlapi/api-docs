@@ -1,7 +1,7 @@
 # video-01-live2d
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 <a href="https://aimlapi.com/app/?model=video-01-live2d&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -31,8 +31,8 @@ Below, you can find two corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-{% openapi src="video-01-live2d.json" path="/v2/generate/video/minimax/generation" method="post" %}
-[video-01-live2d.json](video-01-live2d.json)
+{% openapi src="../../../.gitbook/assets/video-01-live2d.json" path="/v2/generate/video/minimax/generation" method="post" %}
+[video-01-live2d.json](../../../.gitbook/assets/video-01-live2d.json)
 {% endopenapi %}
 
 ### Retrieve the generated video from the server
@@ -40,8 +40,8 @@ Below, you can find two corresponding API schemas.
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-live2d-pair.json](video-01-live2d-pair.json)
+{% openapi src="../../../.gitbook/assets/video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
+[video-01-live2d-pair.json](../../../.gitbook/assets/video-01-live2d-pair.json)
 {% endopenapi %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

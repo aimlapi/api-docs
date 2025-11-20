@@ -1,7 +1,7 @@
 # video-01
 
 {% columns %}
-{% column width="66.66666666666666%" %}
+{% column %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333333334%" %}
+{% column %}
 <a href="https://aimlapi.com/app/?model=video-01&#x26;mode=video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -26,10 +26,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find two corresponding API schemas.
 
@@ -39,8 +39,8 @@ Below, you can find two corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-{% openapi src="video-01.json" path="/v2/generate/video/minimax/generation" method="post" %}
-[video-01.json](video-01.json)
+{% openapi src="../../../.gitbook/assets/video-01.json" path="/v2/generate/video/minimax/generation" method="post" %}
+[video-01.json](../../../.gitbook/assets/video-01.json)
 {% endopenapi %}
 
 ### Retrieve the generated video from the server
@@ -48,6 +48,6 @@ Below, you can find two corresponding API schemas.
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="video-01-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-pair.json](video-01-pair.json)
+{% openapi src="../../../.gitbook/assets/video-01-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
+[video-01-pair.json](../../../.gitbook/assets/video-01-pair.json)
 {% endopenapi %}

@@ -1,0 +1,115 @@
+openapi: 3.0.0
+paths:
+  /v2/generate/audio:
+      post:
+        operationId: AudioController_generateAudioByPrompt_v2
+        summary: Generate audio using audio models.
+        description: >-
+          Generates audio based on a text prompt using audio models, useful for
+          creating audio content or responses.
+        parameters: [ ]
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateAudioByPromptDTO'
+        responses:
+          '201':
+            description: ''
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/GenerateAudioOrVideoResponseDTO'
+        tags:
+          - Generate an audio
+      get:
+        operationId: AudioController_getAudioInformation_v2
+        summary: Get information about generated audio.
+        description: >-
+          Retrieves information about audio generated.
+        parameters:
+          - name: generation_id
+            required: true
+            in: query
+            schema:
+              type: string
+        responses:
+          '201':
+            description: ''
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/FetchAudioDTO'
+        tags:
+          - Fetch generated audio
+
+info:
+  title: AI/ML Gateway
+  description: ''
+  version: '1.0'
+  contact: {}
+tags: []
+servers:
+  - url: https://api.aimlapi.com
+    description: AI/ML API server
+components:
+  securitySchemes:
+    bearer:
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
+  schemas:
+    GenerateAudioOrVideoResponseDTO:
+      type: object
+      properties:
+        generation_id:
+          type: string
+      required:
+        - generation_id
+    FetchAudioDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          enum:
+            - generating
+            - queued
+            - completed
+        audio_file:
+          type: object
+          properties:
+            url:
+              type: string
+              format: uri
+            content_type:
+              type: string
+            file_name:
+              type: string
+            file_size:
+              type: number
+      required:
+        - id
+        - status
+    GenerateAudioByPromptMinimaxDTO:
+      properties:
+        model:
+          type: string
+          enum:
+            - minimax-music
+        prompt:
+          type: string
+          description: Lyrics with optional formatting. You can use a newline to separate each line of lyrics. You can use two newlines to add a pause between lines. You can use double hash marks (##) at the beginning and end of the lyrics to add accompaniment. Maximum 600 characters.
+          example: "##Swift and Boundless \n In the realm of innovation, where visions align, \n\nAIML API's the name, making tech shine. \nIntelligent solutions, breaking the mold, \n\nSwift inference power, bold and untold.\n##"
+        reference_audio_url:
+          type: string
+          format: uri
+          description: Reference song, should contain music and vocals. Must be a .wav or .mp3 file longer than 15 seconds
+      required:
+        - model
+        - prompt
+        - reference_audio_url
+    GenerateAudioByPromptDTO:
+      type: object
+      $ref: '#/components/schemas/GenerateAudioByPromptMinimaxDTO'

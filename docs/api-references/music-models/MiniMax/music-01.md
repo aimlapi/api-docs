@@ -249,8 +249,8 @@ Listen to the track we generated:
 
 This endpoint uploads a reference music piece to the server, analyzes it, and returns identifiers for the voice and/or instrumental patterns to use later.
 
-{% openapi src="music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
-[music-01-pair.json](music-01-pair.json)
+{% openapi src="../../../.gitbook/assets/music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
+[music-01-pair.json](../../../.gitbook/assets/music-01-pair.json)
 {% endopenapi %}
 
 ### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
@@ -258,6 +258,6 @@ This endpoint uploads a reference music piece to the server, analyzes it, and re
 This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
 The generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi src="music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
-[music-01.json](music-01.json)
+{% openapi src="../../../.gitbook/assets/music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
+[music-01.json](../../../.gitbook/assets/music-01.json)
 {% endopenapi %}

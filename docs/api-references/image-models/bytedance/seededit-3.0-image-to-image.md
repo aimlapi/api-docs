@@ -106,7 +106,7 @@ console.log(JSON.stringify(data, null, 2));
 
 </details>
 
-<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td><div><figure><img src="../../../../reference-files/t-rex (1).png" alt=""><figcaption><p>(original)</p></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>(original)</p></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/0217544093775394225d7fbf52e6d4163826afb0078a23d9f0ef9.jpg" alt=""><figcaption><p><code>"Add a bird to the foreground of the photo."</code></p></figcaption></figure></div></td></tr></tbody></table>
 
 <details>
 

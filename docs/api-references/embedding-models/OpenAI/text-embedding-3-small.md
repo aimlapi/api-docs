@@ -18,6 +18,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="text-embedding-3-small.json" path="/v1/embeddings" method="post" %}
-[text-embedding-3-small.json](text-embedding-3-small.json)
+{% openapi src="../../../.gitbook/assets/text-embedding-3-small.json" path="/v1/embeddings" method="post" %}
+[text-embedding-3-small.json](../../../.gitbook/assets/text-embedding-3-small.json)
 {% endopenapi %}

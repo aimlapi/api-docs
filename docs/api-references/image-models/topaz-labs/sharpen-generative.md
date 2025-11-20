@@ -115,4 +115,4 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../../reference-files/blurred-face (1).jpeg" alt=""><figcaption></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/5cff080e-5d24-4fc3-85f5-0e57621ead7d.jpeg" alt=""><figcaption><p>"mode": "Super Focus V2"<br>"strength": 0.6</p></figcaption></figure></div></td><td></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blurred-face (1).jpeg" alt=""><figcaption></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/5cff080e-5d24-4fc3-85f5-0e57621ead7d.jpeg" alt=""><figcaption><p>"mode": "Super Focus V2"<br>"strength": 0.6</p></figcaption></figure></div></td><td></td></tr></tbody></table>

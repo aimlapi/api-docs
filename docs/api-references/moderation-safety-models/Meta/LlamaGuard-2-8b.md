@@ -18,6 +18,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="LlamaGuard-2-8b.json" path="/v1/chat/completions" method="post" %}
-[LlamaGuard-2-8b.json](LlamaGuard-2-8b.json)
+{% openapi src="../../../.gitbook/assets/LlamaGuard-2-8b.json" path="/v1/chat/completions" method="post" %}
+[LlamaGuard-2-8b.json](../../../.gitbook/assets/LlamaGuard-2-8b.json)
 {% endopenapi %}

@@ -18,6 +18,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### API Schema
 
-{% openapi src="voyage-law-2.json" path="/v1/embeddings" method="post" %}
-[voyage-law-2.json](voyage-law-2.json)
+{% openapi src="../../../.gitbook/assets/voyage-law-2.json" path="/v1/embeddings" method="post" %}
+[voyage-law-2.json](../../../.gitbook/assets/voyage-law-2.json)
 {% endopenapi %}
