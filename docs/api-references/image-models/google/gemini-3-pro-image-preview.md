@@ -1,4 +1,4 @@
-# Gemini 3 Pro Image Preview (Nano Banana Pro Preview)
+# Nano Banana Pro (Gemini 3 Pro Image)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,11 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview <a href="#model-overview" id="model-overview"></a>
 
-Google’s smartest text-to-image model as of November 2025 (preview release).
-
-{% hint style="info" %}
-Images produced or modified with this model carry an invisible SynthID digital watermark, allowing them to be recognized as AI-generated or edited.
-{% endhint %}
+Google’s smartest text-to-image model as of November 2025 preview release.
 
 ## Setup your API Key <a href="#setup-your-api-key" id="setup-your-api-key"></a>
 

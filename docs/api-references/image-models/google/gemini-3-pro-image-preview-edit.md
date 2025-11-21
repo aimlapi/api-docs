@@ -1,4 +1,4 @@
-# Gemini 3 Pro Image Preview Edit (Nano Banana Pro Preview)
+# Nano Banana Pro Edit (Gemini 3 Pro Image Edit)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Google’s smartest image-to-image model as of November 2025 (preview release). The model takes multiple images as input, with the prompt defining how they are used or combined.
+Google’s smartest image-to-image model as of November 2025 preview release. The model takes multiple images as input, with the prompt defining how they are used or combined.
 
 ## Setup your API Key
 
