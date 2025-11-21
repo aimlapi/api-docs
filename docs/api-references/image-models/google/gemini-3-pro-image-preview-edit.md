@@ -1,11 +1,11 @@
-# Gemini 2.5 Flash Image Edit (Nano Banana)
+# Gemini 3 Pro Image Preview Edit (Nano Banana Pro Preview)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/gemini-2.5-flash-image-edit`
+* `google/gemini-3-pro-image-preview-edit`
 {% endhint %}
 {% endcolumn %}
 
@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-The model takes multiple images as input, with the prompt defining how they are used or combined.
+Google’s smartest image-to-image model as of November 2025 (preview release). The model takes multiple images as input, with the prompt defining how they are used or combined.
 
 ## Setup your API Key
 
@@ -30,21 +30,21 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 | Aspect ratio | Resolution | Credits |
 | ------------ | ---------- | ------- |
-| 1:1          | 1024×1024  | 84 000  |
-| 2:3          | 832×1248   | 84 000  |
-| 3:2          | 1248×832   | 84 000  |
-| 3:4          | 864×1184   | 84 000  |
-| 4:3          | 1184×864   | 84 000  |
-| 4:5          | 896×1152   | 84 000  |
-| 5:4          | 1152×896   | 84 000  |
-| 9:16         | 768×1344   | 84 000  |
-| 16:9         | 1344×768   | 84 000  |
-| 21:9         | 1536×672   | 84 000  |
+| 1:1          | 1024×1024  | 315 000 |
+| 2:3          | 832×1248   | 315 000 |
+| 3:2          | 1248×832   | 315 000 |
+| 3:4          | 864×1184   | 315 000 |
+| 4:3          | 1184×864   | 315 000 |
+| 4:5          | 896×1152   | 315 000 |
+| 5:4          | 1152×896   | 315 000 |
+| 9:16         | 768×1344   | 315 000 |
+| 16:9         | 1344×768   | 315 000 |
+| 21:9         | 1536×672   | 315 000 |
 
 </details>
 
-{% openapi-operation spec="gemini-2-5-flash-image-edit" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-2.5-flash-image-edit.json)
+{% openapi-operation spec="gemini-3-pro-image-preview-edit" path="/v1/images/generations" method="post" %}
+[OpenAPI gemini-3-pro-image-preview-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-3-pro-image-preview-edit.json)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -67,7 +67,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "google/gemini-2.5-flash-image-edit",
+            "model": "google/gemini-3-pro-image-preview-edit",
             "image_urls": [
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
@@ -97,7 +97,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-2.5-flash-image-edit',
+        model: 'google/gemini-3-pro-image-preview-edit',
         image_urls: [
                 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
                 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
@@ -120,21 +120,25 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "images": [
+  "description": "",
+  "data": [
     {
-      "url": "https://cdn.aimlapi.com/eagle/files/panda/9g3PokYLjWoygTVrRgfvG_output.png",
+      "url": "https://cdn.aimlapi.com/flamingo/files/b/koala/qnutcal6jcrPr43jMp_Xg.png",
       "content_type": "image/png",
-      "file_name": "output.png",
-      "file_size": 2273159,
       "width": null,
-      "height": null
+      "height": null,
+      "file_name": "qnutcal6jcrPr43jMp_Xg.png"
     }
   ],
-  "description": "Here is your T-Rex in a business suit, enjoying a drink in a cozy cafe! "
+  "meta": {
+    "usage": {
+      "tokens_used": 315000
+    }
+  }
 }
 ```
 {% endcode %}
 
 </details>
 
-<table data-full-width="false"><thead><tr><th width="339.6666259765625" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/gemini_2.5_flash_image_edit_output.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="320.4666748046875" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/gemini-3-pro-image-preview-edit.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
