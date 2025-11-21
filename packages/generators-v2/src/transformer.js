@@ -50,6 +50,11 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.customSample(options);
   }
 
+  // Remove /responses path because it's not needed (too large file)
+  if (updatedSchema.paths?.['/responses']) {
+    delete updatedSchema.paths['/responses'];
+  }
+
   Object.entries(updatedSchema.paths).map(([path, operation]) => {
     if (operation.post) {
       if (codeSample) {
