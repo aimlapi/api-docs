@@ -12,7 +12,7 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 
 **Trending Models**
 
-<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Best Image Model</td><td><a href=".gitbook/assets/photo_2025-11-10_18-44-22.jpg">photo_2025-11-10_18-44-22.jpg</a></td><td><a href="api-references/image-models/google/gemini-2.5-flash-image.md">gemini-2.5-flash-image.md</a></td></tr><tr><td align="center">Top Video Generator</td><td><a href=".gitbook/assets/photo_2025-11-10_18-53-24.jpg">photo_2025-11-10_18-53-24.jpg</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td align="center">Smarter Reasoning &#x26; Coding</td><td><a href=".gitbook/assets/gemini 3.jpg">gemini 3.jpg</a></td><td><a href="api-references/text-models-llm/google/gemini-3-pro-preview.md">gemini-3-pro-preview.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><em>Pro-Grade Image Model</em></td><td><a href=".gitbook/assets/photo_2025-11-21 20.42.54.jpeg">photo_2025-11-21 20.42.54.jpeg</a></td><td><a href="api-references/image-models/google/gemini-2.5-flash-image.md">gemini-2.5-flash-image.md</a></td></tr><tr><td align="center">Top Video Generator</td><td><a href=".gitbook/assets/photo_2025-11-10_18-53-24.jpg">photo_2025-11-10_18-53-24.jpg</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td align="center">Smarter Reasoning &#x26; Coding</td><td><a href=".gitbook/assets/gemini 3.jpg">gemini 3.jpg</a></td><td><a href="api-references/text-models-llm/google/gemini-3-pro-preview.md">gemini-3-pro-preview.md</a></td></tr></tbody></table>
 
 ***
 
@@ -108,9 +108,9 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 <mark style="background-color:green;">**Kling AI**</mark>: [Video](api-references/video-models/Kling-AI/)
 
-**Krea**:    [Video](api-references/video-models/krea/)
+**Krea**: [Video](api-references/video-models/krea/)
 
-**LTXV**:    [Video](api-references/video-models/ltxv/)
+**LTXV**: [Video](api-references/video-models/ltxv/)
 
 **Meta**: [Text/Chat](api-references/text-models-llm/Meta/)
 
@@ -138,19 +138,19 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Runway**: [Video](api-references/video-models/runway/)
 
-<mark style="background-color:green;">**Stability AI**</mark>:  [Image](api-references/image-models/Stability-AI/)  [Music](api-references/music-models/Stability-AI/)  [3D-Generation](api-references/3d-generating-models/Stability-AI/)
+<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)
 
-**Sber AI**:  [Video](api-references/video-models/sber-ai/)
+**Sber AI**: [Video](api-references/video-models/sber-ai/)
 
-**Tencent**:  [Image](api-references/image-models/tencent/)
+**Tencent**: [Image](api-references/image-models/tencent/)
 
-**Together AI**:  [Embedding](api-references/embedding-models/Together-AI/)
+**Together AI**: [Embedding](api-references/embedding-models/Together-AI/)
 
-**VEED**:   [Video](api-references/video-models/veed/)
+**VEED**: [Video](api-references/video-models/veed/)
 
-**xAI**:  [Text/Chat](api-references/text-models-llm/xAI/)  [Image](api-references/image-models/xai/)
+**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)
 
-**Zhipu**:  [Text/Chat](api-references/text-models-llm/zhipu/)
+**Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
 
 {% tab title="Text Models by CAPABILITY" %}
