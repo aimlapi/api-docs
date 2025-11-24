@@ -8,6 +8,7 @@
 
 ## API REFERENCES
 
+* [Account Balance](api-references/can-i-get-my-billing-info-via-api-request.md)
 * [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
@@ -393,7 +394,6 @@
 
 ## FAQ
 
-* [Can I get my billing info via API request?](faq/can-i-get-my-billing-info-via-api-request.md)
 * [Can I use API in Python?](faq/can-i-use-api-in-python.md)
 * [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
 * [What are the Pro Models?](faq/pro-models.md)
