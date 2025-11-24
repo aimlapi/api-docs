@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview <a href="#model-overview" id="model-overview"></a>
 
-Google’s smartest text-to-image model as of November 2025 preview release.
+Google’s smartest text-to-image model as of the November 2025 preview release.
 
 ## Setup your API Key <a href="#setup-your-api-key" id="setup-your-api-key"></a>
 

@@ -8,7 +8,8 @@
 
 ## API REFERENCES
 
-* [Account Balance](api-references/can-i-get-my-billing-info-via-api-request.md)
+* [🟡 Service Endpoints](api-references/service-endpoints/README.md)
+  * [Account Balance](api-references/service-endpoints/account-balance.md)
 * [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
@@ -131,6 +132,8 @@
     * [grok-code-fast-1](api-references/text-models-llm/xai/grok-code-fast-1.md)
     * [grok-4-fast-non-reasoning](api-references/text-models-llm/xai/grok-4-fast-non-reasoning.md)
     * [grok-4-fast-reasoning](api-references/text-models-llm/xai/grok-4-fast-reasoning.md)
+    * [grok-4.1-fast-non-reasoning](api-references/text-models-llm/xai/grok-4-1-fast-non-reasoning.md)
+    * [grok-4.1-fast-reasoning](api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
   * [Zhipu](api-references/text-models-llm/zhipu/README.md)
     * [glm-4.5-air](api-references/text-models-llm/zhipu/glm-4.5-air.md)
     * [glm-4.5](api-references/text-models-llm/zhipu/glm-4.5.md)

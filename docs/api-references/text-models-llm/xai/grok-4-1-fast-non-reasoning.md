@@ -1,11 +1,10 @@
-# grok-4-fast-non-reasoning
+# grok-4.1-fast-non-reasoning
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><p><code>x-ai/grok-4-fast-non-reasoning</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=x-ai/grok-4-fast-non-reasoning&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><p><code>x-ai/grok-4-1-fast-non-reasoning</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=x-ai/grok-4-1-fast-non-reasoning&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-xAI’s multimodal model, offering state-of-the-art cost efficiency and a 2M-token context window. \
-Non-reasoning variant.
+xAI’s latest multimodal model, offering state-of-the-art cost efficiency and a 2M-token context window. Non-reasoning variant.
 
 ## How to Make a Call
 
@@ -20,7 +19,7 @@ Non-reasoning variant.
 
 :digit\_two: **Copy the code example**
 
-At the bottom of this page, you'll find [a code example](grok-4-fast-non-reasoning.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](grok-4-1-fast-non-reasoning.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 :digit\_three: **Modify the code example**
 
@@ -29,7 +28,7 @@ At the bottom of this page, you'll find [a code example](grok-4-fast-non-reasoni
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](grok-4-fast-non-reasoning.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](grok-4-1-fast-non-reasoning.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 :digit\_five: **Run your modified code**
 
@@ -43,9 +42,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="grok-4-fast-non-reasoning" path="/v1/chat/completions" method="post" %}
-[OpenAPI grok-4-fast-non-reasoning](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-4-fast-non-reasoning.json)
-{% endopenapi-operation %}
+
 
 ## Code Example
 
@@ -64,7 +61,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"x-ai/grok-4-fast-non-reasoning",
+        "model":"x-ai/grok-4-1-fast-non-reasoning",
         "messages":[
             {
                 "role":"user",
@@ -92,7 +89,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'x-ai/grok-4-fast-non-reasoning',
+      model: 'x-ai/grok-4-1-fast-non-reasoning',
       messages:[
           {
               role:'user',
@@ -119,31 +116,30 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "cbbc51d7-81ed-ccab-016a-c02dea45e7ec_us-east-1",
-  "system_fingerprint": "fp_e7507192a3",
+  "id": "cde99f85-8ddb-6585-168f-02d58ae9e1e2",
   "object": "chat.completion",
+  "created": 1763994479,
+  "model": "grok-4-1-fast-non-reasoning",
   "choices": [
     {
       "index": 0,
-      "finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "Hello! How can I help you today?",
+        "content": "Mankind? Fascinating bunch—capable of landing on the moon, splitting atoms, and inventing cat videos, yet also prone to wars, reality TV, and pineapple on pizza debates. We've got this wild mix of curiosity, creativity, and chaos that drives progress (hello, smartphones and vaccines) while occasionally tripping over our own egos. Overall, I'm optimistic: with our knack for adaptation and innovation, humanity's got a shot at solving the big stuff like climate change or AI ethics. What sparks your take on us?",
         "refusal": null
-      }
+      },
+      "finish_reason": "stop"
     }
   ],
-  "created": 1759186645,
-  "model": "grok-4-fast-non-reasoning",
   "usage": {
-    "prompt_tokens": 55,
-    "completion_tokens": 9,
-    "total_tokens": 64,
+    "prompt_tokens": 177,
+    "completion_tokens": 106,
+    "total_tokens": 283,
     "prompt_tokens_details": {
-      "text_tokens": 130,
+      "text_tokens": 177,
       "audio_tokens": 0,
       "image_tokens": 0,
-      "cached_tokens": 129
+      "cached_tokens": 161
     },
     "completion_tokens_details": {
       "reasoning_tokens": 0,
@@ -152,6 +148,12 @@ main();
       "rejected_prediction_tokens": 0
     },
     "num_sources_used": 0
+  },
+  "system_fingerprint": "fp_80e0751284",
+  "meta": {
+    "usage": {
+      "tokens_used": 204
+    }
   }
 }
 ```

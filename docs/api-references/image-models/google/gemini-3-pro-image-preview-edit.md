@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Google’s smartest image-to-image model as of November 2025 preview release. The model takes multiple images as input, with the prompt defining how they are used or combined.
+Google’s smartest image-to-image model as of the November 2025 preview release. The model takes multiple images as input, with the prompt defining how they are used or combined.
 
 ## Setup your API Key
 
