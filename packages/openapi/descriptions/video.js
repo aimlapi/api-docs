@@ -6,6 +6,9 @@ export default {
     default: {
       desc: `A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video.`,
     },
+    wan_animate: {
+      desc: `A direct link to an online image or a Base64-encoded local image. If the input image does not match the chosen aspect ratio, it is resized and center cropped`,
+    },
     runway: {
       desc: `A HTTPS URL or data URI containing an encoded image to be used as the first frame of the generated video.`,
     },
@@ -118,6 +121,9 @@ Supported configurations include:
   },
   shift: {
     desc: `Noise schedule shift parameter. Affects temporal dynamics.`,
+    wan_animate: {
+      desc: `Shift value for the video.`,
+    },
   },
   sampler: {
     desc: `The sampler to use for generation.`,
@@ -151,7 +157,7 @@ Supported configurations include:
       desc: `An enumeration where the short side of the video frame determines the resolution.`,
     },
     veed: {
-      desc: `The resolution of the generated video. Available options are 480p, and 720p.`,
+      desc: `The resolution of the generated video.`,
     },
   },
   watermark: {
@@ -169,6 +175,9 @@ Supported configurations include:
     desc: `The URL of the audio file. Supported formats: MP3, WAV, M4A, AAC. Maximum file size: 5 MB.`,
     omnihuman: {
       desc: `The URL of the audio file for lip-sync animation. The model detects spoken parts and syncs the character's mouth to them. Audio must be under 30s long.`,
+    },
+    pixverse: {
+      desc: `A direct link to an online audio file or a Base64-encoded local to an audio file used for lip-syncing in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both.`,
     },
   },
   frame_size: {
@@ -223,6 +232,9 @@ Supported configurations include:
   },
   video_write_mode: {
     desc: `The method used to write the video.`,
+    wan_animate: {
+      desc: `The write mode of the output video. Faster write mode means faster results but larger file size, balanced write mode is a good compromise between speed and quality, and small write mode is the slowest but produces the smallest file size`,
+    },
   },
   num_interpolated_frames: {
     desc: `Number of frames to interpolate between the original frames.`,
@@ -275,9 +287,31 @@ Supported configurations include:
       },
     },
   },
-  audio_url: {
-    pixverse: {
-      desc: `A direct link to an online audio file or a Base64-encoded local to an audio file used for lip-syncing in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both.`,
-    },
+  mask_video_url: {
+    desc: `URL to the source mask file`,
+  },
+  expand_left: {
+    desc: `Whether to expand the video to the left`,
+  },
+  expand_right: {
+    desc: `Whether to expand the video to the right`,
+  },
+  expand_top: {
+    desc: `Whether to expand the video to the top`,
+  },
+  expand_bottom: {
+    desc: `Whether to expand the video to the bottom`,
+  },
+  expand_ratio: {
+    desc: `Amount of expansion. This is a float value between 0 and 1, where 0.25 adds 25% to the original video size on the specified sides`,
+  },
+  zoom_factor: {
+    desc: `Zoom factor for the video. When this value is greater than 0, the video will be zoomed in by this factor (in relation to the canvas size,) cutting off the edges of the video. A value of 0 means no zoom`,
+  },
+  trim_borders: {
+    desc: `Whether to trim borders from the video`,
+  },
+  num_inference_steps: {
+    desc: `Number of inference steps for sampling. Higher values give better quality but take longer`,
   },
 };
