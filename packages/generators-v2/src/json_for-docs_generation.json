@@ -1,18 +1,18 @@
 [
   {
-    "name": "google/gemini-3-pro-image-preview",
-	  "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview",
-    "alias": "gemini-3-pro-image-preview",
-    "category": "image-models",
-    "vendor": "Google",
-    "codeSamples": "text-to-image"
+    "name": "x-ai/grok-4-1-fast-non-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-1-fast-non-reasoning",
+    "alias": "grok-4-1-fast-non-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "codeSamples": "chat-completion"
   },
   {
-    "name": "google/gemini-3-pro-image-preview-edit",
-	  "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview-edit",
-    "alias": "gemini-3-pro-image-preview-edit",
-    "category": "image-models",
-    "vendor": "Google",
-    "codeSamples": "image-to-image"
+    "name": "x-ai/grok-4-1-fast-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-1-fast-reasoning",
+    "alias": "grok-4-1-fast-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "codeSamples": "chat-completion"
   }
 ]
