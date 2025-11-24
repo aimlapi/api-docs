@@ -6,12 +6,15 @@ async function fetchModelsCop(modelName) {
   );
 }
 
-function buildCodeSamplesByBody(body) {
+function buildCodeSamplesByBody(
+  body,
+  url = 'https://api.aimlapi.com/v2/video/generations'
+) {
   return [
     {
       lang: 'JavaScript',
       source: `async function main() {
-  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {
+  const response = await fetch('${url}', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer <YOUR_API_KEY>',
@@ -31,7 +34,7 @@ main();`,
       source: `import requests
 
 response = requests.post(
-    "https://api.aimlapi.com/v2/video/generations",
+    "${url}",
     headers={
         "Content-Type": "application/json",
         "Authorization": "Bearer <YOUR_API_KEY>",
@@ -46,7 +49,7 @@ print(data)`,
       lang: 'cURL',
       source: `curl -L \\
   --request POST \\
-  --url 'https://api.aimlapi.com/v2/video/generations' \\
+  --url '${url}' \\
   --header 'Authorization: Bearer <YOUR_API_KEY>' \\
   --header 'Content-Type: application/json' \\
   --data '${body.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
@@ -54,7 +57,7 @@ print(data)`,
     {
       lang: 'HTTP',
       source: `POST / HTTP/1.1
-Host: test.com
+Host: ${url}
 Authorization: Bearer <YOUR_API_KEY>
 Content-Type: application/json
 Accept: */*
@@ -570,13 +573,18 @@ Accept: */*
     }
     const jsonBody = JSON.stringify(customParams, null, 2);
 
-    return buildCodeSamplesByBody(jsonBody);
+    return buildCodeSamplesByBody(
+      jsonBody,
+      'https://api.aimlapi.com/v2/generate/audio'
+    );
   } else if (model.category === 'speech-models') {
     const requiredModelParams = schema?.required || [];
     const customParams = {
       model: modelName,
     };
+    let url = 'https://api.aimlapi.com/v1/tts';
     if (path.includes('stt')) {
+      url = 'https://api.aimlapi.com/v1/stt/create';
       Object.assign(customParams, {
         url: 'https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3',
       });
@@ -603,7 +611,7 @@ Accept: */*
     }
     const jsonBody = JSON.stringify(customParams, null, 2);
 
-    return buildCodeSamplesByBody(jsonBody);
+    return buildCodeSamplesByBody(jsonBody, url);
   }
 }
 
