@@ -18,12 +18,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ],
-                "title": "v1/billing/balance"
+                "title": "–"
               }
             }
           }
