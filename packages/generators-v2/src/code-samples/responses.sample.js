@@ -12,7 +12,7 @@ export const responsesSample = (options) => {
   const response = await fetch('https://api.aimlapi.com/v1/responses', {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer <YOUR_API_KEY>',
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(${jsonBody.replace(/\n/g, '\n    ')}),
@@ -32,7 +32,7 @@ response = requests.post(
     "https://api.aimlapi.com/v1/responses",
     headers={
         "Content-Type": "application/json",
-        "Authorization": "Bearer <YOUR_API_KEY>",
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     },
     json=${jsonBody.replace(/\n/g, '\n    ')}
 )
@@ -45,7 +45,7 @@ print(data)`,
       source: `curl -L \\
   --request POST \\
   --url 'https://api.aimlapi.com/v1/responses' \\
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
   --header 'Content-Type: application/json' \\
   --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
     },
@@ -53,7 +53,7 @@ print(data)`,
       lang: 'HTTP',
       source: `POST / HTTP/1.1
 Host: test.com
-Authorization: Bearer <YOUR_API_KEY>
+Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
 Accept: */*
 
