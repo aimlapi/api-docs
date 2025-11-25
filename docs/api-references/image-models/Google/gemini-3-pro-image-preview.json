@@ -23,7 +23,8 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "google/gemini-3-pro-image-preview"
+                      "google/gemini-3-pro-image-preview",
+                      "google/nano-banana-pro"
                     ]
                   },
                   "prompt": {
@@ -137,7 +138,8 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "google/gemini-3-pro-image-preview"
+                      "google/gemini-3-pro-image-preview",
+                      "google/nano-banana-pro"
                     ]
                   },
                   "prompt": {
