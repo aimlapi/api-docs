@@ -1,18 +1,18 @@
 [
   {
-    "name": "openai/gpt-image-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
-    "alias": "gpt-image-1-GENERATE",
-    "category": "image-models",
+    "name": "gpt-4o-audio-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-4o-audio-preview",
+    "alias": "gpt-4o-audio-preview",
+    "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "text-to-image"
+    "codeSamples": "chat-completion-audio"
   },
   {
-    "name": "openai/gpt-image-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
-    "alias": "gpt-image-1-EDIT",
-    "category": "image-models",
+    "name": "gpt-4o-mini-audio-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-4o-mini-audio-preview",
+    "alias": "gpt-4o-mini-audio-preview",
+    "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "gpt-image-edit"
+    "codeSamples": "chat-completion-audio"
   }
 ]
