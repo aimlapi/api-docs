@@ -14,7 +14,7 @@
       "get": {
         "operationId": "_v1_billing_balance",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
