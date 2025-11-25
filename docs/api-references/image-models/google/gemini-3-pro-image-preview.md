@@ -5,7 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
+* `google/nano-banana-pro`
 * `google/gemini-3-pro-image-preview`
+{% endhint %}
+
+{% hint style="success" %}
+Both IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 {% endcolumn %}
 
@@ -48,7 +53,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "google/gemini-3-pro-image-preview",
+            "model": "google/nano-banana-pro",
             "prompt": "Racoon eating ice-cream"
         }
     )
@@ -74,7 +79,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'google/gemini-3-pro-image-preview',
+      model: 'google/nano-banana-pro',
       prompt: 'Racoon eating ice-cream',
       aspect_ratio: '16:9'
     }),
@@ -120,4 +125,4 @@ main();
 
 So we obtained the following 1024x1024 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/nano_banana_pro.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism.<br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/oeX2RJ3jPIKcBueLZSAGL.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism.<br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>

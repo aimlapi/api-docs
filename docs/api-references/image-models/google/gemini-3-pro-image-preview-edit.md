@@ -5,7 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
+* `google/nano-banana-pro-edit`
 * `google/gemini-3-pro-image-preview-edit`
+{% endhint %}
+
+{% hint style="success" %}
+Both IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 {% endcolumn %}
 
@@ -67,7 +72,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "google/gemini-3-pro-image-preview-edit",
+            "model": "google/nano-banana-pro-edit",
             "image_urls": [
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
@@ -97,7 +102,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3-pro-image-preview-edit',
+        model: 'google/nano-banana-pro-edit',
         image_urls: [
                 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
                 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
