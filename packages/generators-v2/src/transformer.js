@@ -1,6 +1,7 @@
 import * as codeSamples from './code-samples/index.js';
 
 export function transformSchema(schema, options) {
+  options.name = options.models?.[0] || options.name;
   const updatedSchema = { ...schema };
   if (!updatedSchema.components) {
     updatedSchema.components = {};
@@ -54,6 +55,9 @@ export function transformSchema(schema, options) {
   if (updatedSchema.paths?.['/responses']) {
     delete updatedSchema.paths['/responses'];
   }
+  if (updatedSchema.paths?.['/images/generations']) {
+    delete updatedSchema.paths['/images/generations'];
+  }
 
   Object.entries(updatedSchema.paths).map(([path, operation]) => {
     if (operation.post) {
@@ -61,14 +65,14 @@ export function transformSchema(schema, options) {
         updatedSchema.paths[path].post['x-codeSamples'] = codeSample;
       }
       if (options.models?.length) {
-        const newModels = [
-          ...new Set([
-            ...(updatedSchema.paths[path]?.post?.requestBody?.content[
-              'application/json'
-            ]?.schema?.properties?.model?.enum || []),
-            ...options.models,
-          ]),
-        ];
+        let newModels = options.models;
+        const defaultModel =
+          updatedSchema?.paths?.[path]?.post?.requestBody?.content?.[
+            'application/json'
+          ]?.schema?.properties?.model?.enum?.[0];
+        if (defaultModel && !newModels.includes(defaultModel)) {
+          newModels = [defaultModel, ...newModels];
+        }
         try {
           updatedSchema.paths[path].post.requestBody.content[
             'application/json'
