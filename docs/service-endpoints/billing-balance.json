@@ -64,12 +64,12 @@
                     "status": {
                       "type": "string",
                       "description": "The status of the plan associated with the provided API key.",
-                      "example": "active"
+                      "example": "current"
                     },
                     "statusExplanation": {
                       "type": "string",
                       "description": "A more detailed explanation of the plan status.",
-                      "example": "Plan is active and in good standing."
+                      "example": "Balance is current and up to date"
                     }
                   },
                   "required": [
