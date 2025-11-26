@@ -1,30 +1,10 @@
 [
   {
-    "name": "topaz-labs/sharpen",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen",
-    "alias": "sharpen",
+    "name": "flux/srpo/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo/image-to-image",
+    "alias": "flux/srpo/image-to-image",
     "category": "image-models",
-    "vendor": "topaz-labs",
-    "codeSamples": "custom",
-	"customUrlApi": "https://api.aimlapi.com/v1/images/generations",
-	"customParams":{
-        "model": "topaz-labs/sharpen",
-		"mode": "Standard",
-		"image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
-	}
-  },
-  {
-    "name": "topaz-labs/sharpen-gen",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen-gen",
-    "alias": "sharpen-gen",
-    "category": "image-models",
-    "vendor": "topaz-labs",
-    "codeSamples": "custom",
-	"customUrlApi": "https://api.aimlapi.com/v1/images/generations",
-	"customParams":{
-        "model": "topaz-labs/sharpen-gen",
-		"mode": "Super Focus",
-		"image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
-	}
+    "vendor": "Flux",
+    "codeSamples": "image-to-image"
   }
 ]
