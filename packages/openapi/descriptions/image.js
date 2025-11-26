@@ -176,4 +176,13 @@ If transparent, the output format needs to support transparency, so it should be
   noise_std: {
     desc: `Standard deviation of noise to add to sampled points.`,
   },
+  lora: {
+    desc: `List of LoRA weights to apply (maximum 3). Each LoRA can be a URL, HuggingFace repo ID, or local path.`,
+    path: {
+      desc: `URL, HuggingFace repo ID (owner/repo).`,
+    },
+    scale: {
+      desc: `Scale factor for LoRA application.`,
+    },
+  },
 };
