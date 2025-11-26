@@ -1,8 +1,8 @@
 [
   {
-    "name": "bytedance/seedream-v4-edit",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-edit",
-    "alias": "seedream-v4-edit",
+    "name": "bytedance/uso",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/uso",
+    "alias": "uso",
     "category": "image-models",
     "vendor": "ByteDance",
     "codeSamples": "custom",
@@ -13,7 +13,7 @@
         "image_urls": [
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
-		    ]      
+        ]      
     }
   }
 ]
