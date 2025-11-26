@@ -12,7 +12,7 @@ export default {
     desc: `The sample rate for the output audio. Based on the encoding, different sample rates are supported. For some encodings, the sample rate is not configurable`,
   },
   voice: {
-    desc: `Name of the voice to be used`,
+    desc: `Name of the voice to be used.`,
   },
   apply_language_text_normalization: {
     desc: 
@@ -87,7 +87,7 @@ export default {
     desc: `Audio bitrate in bits per second. Controls the compression level and audio quality. Higher bitrates provide better quality but larger file sizes.`,
   },
   format: {
-    desc: `Audio output format. MP3 provides good compression and compatibility, PCM offers uncompressed high quality, and FLAC provides lossless compression.`,
+    desc: `Audio output format. WAV delivers uncompressed audio in a widely supported container format, while MP3 provides good compression and compatibility.`,
   },
   channel: {
     desc: `Number of audio channels. 1 for mono (single channel), 2 for stereo (dual channel) output.`,
