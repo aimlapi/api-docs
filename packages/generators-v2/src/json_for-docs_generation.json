@@ -1,10 +1,16 @@
 [
   {
-    "name": "flux/srpo/image-to-image",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo/image-to-image",
-    "alias": "flux/srpo/image-to-image",
+    "name": "bytedance/seededit-3.0-i2i",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seededit-3.0-i2i",
+    "alias": "seededit-3.0-i2i",
     "category": "image-models",
-    "vendor": "Flux",
-    "codeSamples": "image-to-image"
+    "vendor": "ByteDance",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "bytedance/seededit-3.0-i2i",
+        "prompt": "Add a crown to the T-rex's head.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
+    }
   }
 ]
