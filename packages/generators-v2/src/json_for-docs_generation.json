@@ -1,18 +1,30 @@
 [
   {
-    "name": "gpt-4o-audio-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-4o-audio-preview",
-    "alias": "gpt-4o-audio-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "chat-completion-audio"
+    "name": "topaz-labs/sharpen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen",
+    "alias": "sharpen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
+    "codeSamples": "custom",
+	"customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+	"customParams":{
+        "model": "topaz-labs/sharpen",
+		"mode": "Standard",
+		"image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+	}
   },
   {
-    "name": "gpt-4o-mini-audio-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gpt-4o-mini-audio-preview",
-    "alias": "gpt-4o-mini-audio-preview",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "chat-completion-audio"
+    "name": "topaz-labs/sharpen-gen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen-gen",
+    "alias": "sharpen-gen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
+    "codeSamples": "custom",
+	"customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+	"customParams":{
+        "model": "topaz-labs/sharpen-gen",
+		"mode": "Super Focus",
+		"image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+	}
   }
 ]
