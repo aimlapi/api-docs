@@ -1,0 +1,28 @@
+import requests
+
+
+def main():
+    response = requests.post(
+        "{{baseUrl}}/images/generations",
+        headers={
+            "Authorization": "Bearer {{apiKey}}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": "{{model}}",
+            "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+            "image_urls": [
+                "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+                "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg",
+            ],
+        },
+    )
+
+    response.raise_for_status()
+    data = response.json()
+
+    print("Generation:", data)
+
+
+if __name__ == "__main__":
+    main()
