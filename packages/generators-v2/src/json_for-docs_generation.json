@@ -1,10 +1,10 @@
 [
   {
-    "name": "bytedance/uso",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/uso",
-    "alias": "uso",
+    "name": "google/gemini-2.5-flash-image-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-2.5-flash-image-edit",
+    "alias": "gemini-2.5-flash-image-edit",
     "category": "image-models",
-    "vendor": "ByteDance",
+    "vendor": "Google",
     "codeSamples": "custom",
     "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
