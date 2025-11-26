@@ -10,7 +10,7 @@
     "customParams":{
         "model": "bytedance/seededit-3.0-i2i",
         "prompt": "Add a crown to the T-rex's head.",
-        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
+        "image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
     }
   }
 ]
