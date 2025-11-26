@@ -1,7 +1,7 @@
 # qwen-image-edit
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=alibaba/qwen-image-edit&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -109,4 +109,4 @@ console.log(JSON.stringify(data, null, 2));
 
 We obtained the following 1184x896 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/ac748d89-d6b1-4d4e-bc65-eea543098bb9-1.png" alt=""><figcaption><p><code>'Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water.</code> <br><code>The setting sun has almost disappeared below the horizon.'</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ac748d89-d6b1-4d4e-bc65-eea543098bb9-1.png" alt=""><figcaption><p><code>'Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water.</code><br><code>The setting sun has almost disappeared below the horizon.'</code></p></figcaption></figure>

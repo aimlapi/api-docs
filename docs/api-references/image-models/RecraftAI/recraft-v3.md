@@ -1,7 +1,7 @@
 # Recraft v3
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 
 {% endcolumn %}
 {% endcolumns %}
@@ -126,7 +126,7 @@ One of **recraft-v3**’s strengths is its wide range of supported styles. By de
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p><code>"style": "vector_illustration"</code></p></figcaption></figure>
 
 {% hint style="success" %}
-When the `'vector_illustration'` style is selected, the model generates an SVG vector format! For preview purposes, we took a screenshot  ☝️️
+When the `'vector_illustration'` style is selected, the model generates an SVG vector format! For preview purposes, we took a screenshot ☝️️
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/BzyizbtjMMLFKWjXDRL40_image.webp" alt=""><figcaption><p><code>"style": "digital_illustration/2d_art_poster"</code></p></figcaption></figure>

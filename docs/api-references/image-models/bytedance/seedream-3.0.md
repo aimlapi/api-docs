@@ -1,7 +1,7 @@
 # Seedream 3.0
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=bytedance/seedream-3.0&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -109,4 +109,4 @@ We obtained the following 1888x301 image by running this code example:
 
 Here’s an example of a 555×543 image generated using the same prompt:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/0217516196916226a3647c198681a7c9ea0518c738c92d3286bc4.jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger</code> <br><code>and wearing sunglasses.'</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/0217516196916226a3647c198681a7c9ea0518c738c92d3286bc4.jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger</code><br><code>and wearing sunglasses.'</code></p></figcaption></figure></div>

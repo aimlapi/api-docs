@@ -1,7 +1,7 @@
 # flux/kontext-pro/image-to-image
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=flux/kontext-pro/image-to-image&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -18,7 +18,7 @@ This documentation is valid for the following list of our models:
 
 An image-to-image model that modifies only what the prompt instructs, leaving the rest of the image untouched.
 
-<table data-full-width="false"><thead><tr><th width="190">Model</th><th width="593">Properties of Generated Images</th></tr></thead><tbody><tr><td><code>flux/kontext-pro/image-to-image</code></td><td>Format: <strong>JPEG, PNG</strong><br>Image size can't be set directly — only a preset aspect ratio can be chosen.<br>Default aspect ratio and size: <strong>16:9</strong>, <strong>1184</strong>x<strong>880</strong> (well, not quite 16:9)</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="290.26666259765625">Model</th><th width="593">Properties of Generated Images</th></tr></thead><tbody><tr><td><code>flux/kontext-pro/image-to-image</code></td><td>Format: <strong>JPEG, PNG</strong><br>Image size can't be set directly — only a preset aspect ratio can be chosen.<br>Default aspect ratio and size: <strong>16:9</strong>, <strong>1184</strong>x<strong>880</strong> (well, not quite 16:9)</td></tr></tbody></table>
 
 ## Setup your API Key
 

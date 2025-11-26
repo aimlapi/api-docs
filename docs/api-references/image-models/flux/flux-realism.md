@@ -1,7 +1,7 @@
 # flux-realism
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,17 +9,17 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=flux-realism&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-A state-of-the-art model designed to generate photorealistic images from textual descriptions. \
+A state-of-the-art model designed to generate photorealistic images from textual descriptions.\
 It allows users to create lifelike visuals without the need for extensive realism-related prompts.
 
-<table><thead><tr><th width="201" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux-realism</code></td><td>Format: <strong>JPEG, PNG</strong><br>Min size: <strong>512</strong>x<strong>512</strong><br>Max size: <strong>1536</strong>x<strong>1536</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:yellow;">For both height and width, the value must be a multiple of 32.</mark></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="201" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux-realism</code></td><td>Format: <strong>JPEG, PNG</strong><br>Min size: <strong>512</strong>x<strong>512</strong><br>Max size: <strong>1536</strong>x<strong>1536</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:yellow;">For both height and width, the value must be a multiple of 32.</mark></td></tr></tbody></table>
 
 ## Setup your API Key
 
@@ -36,7 +36,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 Let's generate an image of the specified size using a simple prompt.
 
 {% hint style="warning" %}
-The maximum value for both width and height is `1536`, and the minimum is `512`. \
+The maximum value for both width and height is `1536`, and the minimum is `512`.\
 The value must be a multiple of 32.
 {% endhint %}
 

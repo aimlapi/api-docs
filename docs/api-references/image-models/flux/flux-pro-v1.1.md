@@ -1,7 +1,7 @@
 # flux-pro/v1.1
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,18 +9,16 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=flux-pro/v1.1&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-`flux-pro/v1.1`  is a new image generation model with inference speed increased sixfold compared to the previous `flux-pro`. It also features enhanced generation quality and greater accuracy in following prompts.
+`flux-pro/v1.1` is a new image generation model with inference speed increased sixfold compared to the previous `flux-pro`. It also features enhanced generation quality and greater accuracy in following prompts.
 
 <table data-full-width="true"><thead><tr><th width="149">Model</th><th width="593">Properties of Generated Images</th></tr></thead><tbody><tr><td><code>flux-pro/v1.1</code></td><td>Format: <strong>JPEG, PNG</strong><br>Min size: <strong>256</strong>x<strong>256</strong><br>Max size: <strong>1440</strong>x<strong>1440</strong><br>Default size: <strong>1024</strong>x<strong>768</strong><br><mark style="background-color:orange;">For both height and width, the value must be a multiple of 32.</mark></td></tr></tbody></table>
-
-
 
 ## Setup your API Key
 
@@ -37,7 +35,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 Let's generate an image of the specified size using a simple prompt.
 
 {% hint style="warning" %}
-The maximum value for both width and height is `1440`, and the minimum is `256`. \
+The maximum value for both width and height is `1440`, and the minimum is `256`.\
 The value must be a multiple of 32.
 {% endhint %}
 

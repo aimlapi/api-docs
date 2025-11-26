@@ -1,7 +1,7 @@
 # flux/srpo/image-to-image
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=flux/srpo/image-to-image&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -18,7 +18,7 @@ This documentation is valid for the following list of our models:
 
 [flux/dev/image-to-image](flux-dev-image-to-image.md) model upgraded with Tencent’s SRPO technique.
 
-<table><thead><tr><th width="220" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux/srpo/image-to-image</code></td><td>Format: <strong>JPEG</strong>, <strong>PNG</strong><br>Fixed size: Matches the dimensions of the reference image.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="233.8665771484375" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux/srpo/image-to-image</code></td><td>Format: <strong>JPEG</strong>, <strong>PNG</strong><br>Fixed size: Matches the dimensions of the reference image.</td></tr></tbody></table>
 
 ## Setup your API Key
 

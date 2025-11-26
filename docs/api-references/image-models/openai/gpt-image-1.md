@@ -1,7 +1,7 @@
 # gpt-image-1
 
 {% columns %}
-{% column width="75%" %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column width="25%" %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=openai/gpt-image-1&#x26;mode=image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -31,7 +31,7 @@ Note that by default, the `quality` parameter is set to `'medium'`. The output i
 ### Generate image
 
 {% openapi-operation spec="gpt-image-1-gen" path="/v1/images/generations" method="post" %}
-[OpenAPI gpt-image-1-gen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-gen.json)
+[OpenAPI gpt-image-1-gen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-GENERATE.json)
 {% endopenapi-operation %}
 
 ### Edit image
