@@ -8,7 +8,7 @@
     "codeSamples": "custom",
     "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "bytedance/seedream-v4-edit",
+        "model": "bytedance/uso",
         "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
         "image_urls": [
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
