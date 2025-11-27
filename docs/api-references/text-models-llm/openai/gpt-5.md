@@ -32,7 +32,7 @@ At the bottom of this page, you'll find [a code example](gpt-5.md#code-example) 
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-5.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-5.md#api-schemas), which lists all available parameters along with notes on how to use them.
 
 :digit\_five: **Run your modified code**
 
@@ -44,7 +44,21 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+## API Schemas
+
+<details>
+
+<summary>Chat Completions vs. Responses API</summary>
+
+**Chat Completions**\
+The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
+
+**Responses**\
+The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
+
+</details>
+
+### Chat Completions Endpoint
 
 {% openapi-operation spec="gpt-5-test" path="/v1/chat/completions" method="post" %}
 [OpenAPI gpt-5-test](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5.json)
@@ -52,7 +66,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ### Responses Endpoint
 
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
 {% openapi-operation spec="gpt-5-RESPONSES" path="/v1/responses" method="post" %}
 [OpenAPI gpt-5-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-RESPONSES.json)

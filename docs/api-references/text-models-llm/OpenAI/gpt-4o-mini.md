@@ -12,25 +12,25 @@ OpenAI's latest cost-efficient model designed to deliver advanced natural langua
 
 <summary>Step-by-Step Instructions</summary>
 
-#### :digit\_one: Setup You Can’t Skip
+:digit\_one: **Setup You Can’t Skip**
 
 :black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-#### :digit\_two: Copy the code example
+:digit\_two: **Copy the code example**
 
 At the bottom of this page, you'll find [a code example](gpt-4o-mini.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
-#### :digit\_three: Modify the code example
+:digit\_three: **Modify the code example**
 
 :black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
 :black\_small\_square: Insert your question or request into the `content` field—this is what the model will respond to.
 
-#### :digit\_four: <sup><sub><mark style="background-color:yellow;">(Optional)<mark style="background-color:yellow;"><sub></sup> Adjust other optional parameters if needed
+:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-4o-mini.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-4o-mini.md#api-schemas), which lists all available parameters along with notes on how to use them.
 
-#### :digit\_five: Run your modified code
+:digit\_five: **Run your modified code**
 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
 
@@ -40,7 +40,21 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+## API Schemas
+
+<details>
+
+<summary>Chat Completions vs. Responses API</summary>
+
+**Chat Completions**\
+The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
+
+**Responses**\
+The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
+
+</details>
+
+### Chat Completions Endpoint
 
 {% openapi-operation spec="gpt-4o-mini" path="/v1/chat/completions" method="post" %}
 [OpenAPI gpt-4o-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-mini.json)
@@ -48,7 +62,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ### Responses Endpoint
 
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
 {% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
 [OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)

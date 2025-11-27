@@ -2,6 +2,7 @@
 description: >-
   A practical example for comparing responses from different models to the same
   question.
+hidden: true
 ---
 
 # Model comparison
@@ -12,7 +13,7 @@ Be sure to check out our [Comparisons section](https://aimlapi.com/comparisons) 
 
 You can send the same request to two specific text models of your choice and compare the results.
 
-Just select two models from the [Text Models (LLM) list](../api-references/model-database.md#text-models-llm), copy their Model IDs, and paste them into the `Specify the models to compare` section of this code example as the values for `model1` and `model2`.&#x20;
+Just select two models from the [Text Models (LLM) list](../api-references/model-database.md#text-models-llm), copy their Model IDs, and paste them into the `Specify the models to compare` section of this code example as the values for `model1` and `model2`.
 
 Don't forget to also insert your [AIML API Key](https://aimlapi.com/app/keys) instead of `<YOUR_AIMLAPI_KEY>`:
 

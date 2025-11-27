@@ -2,7 +2,7 @@
 
 {% hint style="warning" %}
 **Deprecation notice**\
-`gpt-4o` will be removed from the API on **February 17, 2026**. Please migrate to [`gpt-5.1-chat-latest`](https://docs.aimlapi.com/api-references/text-models-llm/openai/gpt-5-1-chat-latest).
+`gpt-4o` will be removed from the API on **February 17, 2026**. Please migrate to [`gpt-5.1-chat-latest`](../openai/gpt-5-1-chat-latest.md).
 {% endhint %}
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>gpt-4o</code></li><li><code>chatgpt-4o-latest</code></li><li><code>gpt-4o-2024-05-13</code></li><li><code>gpt-4o-2024-08-06</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=openai/gpt-4o&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
@@ -35,7 +35,7 @@ At the bottom of this page, you'll find [a code example](gpt-4o.md#code-example)
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-4o.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-4o.md#api-schemas), which lists all available parameters along with notes on how to use them.
 
 :digit\_five: **Run your modified code**
 
@@ -47,7 +47,21 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+## API Schemas
+
+<details>
+
+<summary>Chat Completions vs. Responses API</summary>
+
+**Chat Completions**\
+The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
+
+**Responses**\
+The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
+
+</details>
+
+### Chat Completions Endpoint
 
 {% openapi-operation spec="gpt-4o" path="/v1/chat/completions" method="post" %}
 [OpenAPI gpt-4o](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o.json)
@@ -55,7 +69,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ### Responses Endpoint
 
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them. OpenAI has announced plans to expand the capabilities of the `/responses` endpoint in the future.
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.&#x20;
 
 {% openapi-operation spec="gpt-4o-RESPONSES" path="/v1/responses" method="post" %}
 [OpenAPI gpt-4o-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-RESPONSES.json)
