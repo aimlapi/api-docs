@@ -1,10 +1,11 @@
 [
   {
-    "name": "qwen-turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-turbo",
-    "alias": "qwen-turbo",
+    "name": "anthropic/claude-opus-4.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-5-20251101",
+    "alias": "claude-haiku-4-5",
+    "models": ["anthropic/claude-opus-4.5", "claude-opus-4-5", "claude-opus-4-5-20251101"],
     "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
+    "vendor": "Anthropic",
     "codeSamples": "chat-completion"
   }
 ]
