@@ -1,8 +1,17 @@
 [
   {
+    "name": "anthropic/claude-haiku-4.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-haiku-4-5-20251001",
+    "alias": "claude-haiku-4-5",
+    "models": ["anthropic/claude-haiku-4.5", "claude-haiku-4-5", "claude-haiku-4-5-20251001"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "anthropic/claude-opus-4.5",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-5-20251101",
-    "alias": "claude-haiku-4-5",
+    "alias": "claude-opus-4-5",
     "models": ["anthropic/claude-opus-4.5", "claude-opus-4-5", "claude-opus-4-5-20251101"],
     "category": "text-models-llm",
     "vendor": "Anthropic",
