@@ -3,7 +3,7 @@
     "name": "anthropic/claude-opus-4.5",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-5-20251101",
     "alias": "claude-opus-4-5",
-    "models": ["claude-opus-4-5", "anthropic/claude-opus-4.5", "claude-opus-4-5-20251101"],
+    "models": ["anthropic/claude-opus-4-5", "claude-opus-4-5", "claude-opus-4-5-20251101"],
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "codeSamples": "chat-completion"
