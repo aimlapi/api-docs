@@ -27,6 +27,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 * [anthropic/claude-sonnet-4.5](../api-references/text-models-llm/anthropic/claude-4-5-sonnet.md)
 * [anthropic/claude-haiku-4.5](../api-references/text-models-llm/anthropic/claude-4.5-haiku.md)
+* [anthropic/claude-opus-4-5](../api-references/text-models-llm/anthropic/claude-4.5-opus.md)
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)

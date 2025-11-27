@@ -1,10 +1,10 @@
-# Claude 3.5 Haiku
+# Claude 4.5 Opus
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-3-5-haiku</code></li><li><code>anthropic/claude-3-5-haiku-20241022</code></li><li><code>claude-3-5-haiku-20241022</code></li><li><code>claude-3-5-haiku-latest</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-3-5-haiku-20241022&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>claude-haiku-4-5</code></li><li><code>anthropic/claude-haiku-4-5</code></li><li><code>claude-haiku-4-5-20251001</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-5-20251101&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-A cutting-edge model designed for rapid data processing and advanced reasoning capabilities. Excels in coding assistance, customer service interactions, and content moderation.
+A high-performance chat model that delivers state-of-the-art results on real-world software engineering benchmarks.
 
 ## How to Make a Call
 
@@ -19,7 +19,7 @@ A cutting-edge model designed for rapid data processing and advanced reasoning c
 
 :digit\_two: **Copy the code example**
 
-At the bottom of this page, you'll find [a code example](claude-3.5-haiku.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](claude-4.5-opus.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 :digit\_three: **Modify the code example**
 
@@ -28,7 +28,7 @@ At the bottom of this page, you'll find [a code example](claude-3.5-haiku.md#cod
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-3.5-haiku.md#api-schema), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](claude-4.5-opus.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 :digit\_five: **Run your modified code**
 
@@ -42,8 +42,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="claude-3-5-haiku" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-3-5-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3.5-haiku.json)
+{% openapi-operation spec="claude-opus-4-5" path="/v1/chat/completions" method="post" %}
+[OpenAPI claude-opus-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4-5.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -63,13 +63,14 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"claude-3-5-haiku-latest",
+        "model":"claude-opus-4-5",
         "messages":[
             {
                 "role":"user",
                 "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ]
+        ],
+        "enable_thinking": False
     }
 )
 
@@ -92,7 +93,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'claude-3-5-haiku-latest',
+        model: 'claude-opus-4-5',
         messages:[
             {
                 role:'user',
@@ -128,7 +129,34 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'msg_01QfRmDBXVWcARjbwZBbJxrR', 'object': 'chat.completion', 'model': 'claude-3-5-haiku-20241022', 'choices': [{'index': 0, 'message': {'reasoning_content': '', 'content': 'Hi there! How are you doing today? Is there anything I can help you with?', 'role': 'assistant'}, 'finish_reason': 'end_turn', 'logprobs': None}], 'created': 1744218440, 'usage': {'prompt_tokens': 17, 'completion_tokens': 221, 'total_tokens': 238}}
+{
+  "id": "msg_01NxAGYo8VfNu5UAEdmQjv62",
+  "object": "chat.completion",
+  "model": "claude-opus-4-5-20251101",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "reasoning_content": "",
+        "content": "Hello! How are you doing today? Is there something I can help you with?",
+        "role": "assistant"
+      },
+      "finish_reason": "end_turn",
+      "logprobs": null
+    }
+  ],
+  "created": 1764265437,
+  "usage": {
+    "prompt_tokens": 8,
+    "completion_tokens": 20,
+    "total_tokens": 28
+  },
+  "meta": {
+    "usage": {
+      "tokens_used": 1134
+    }
+  }
+}
 ```
 {% endcode %}
 
