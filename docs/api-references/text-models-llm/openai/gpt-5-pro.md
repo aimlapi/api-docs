@@ -19,7 +19,7 @@ Version of [GPT-5](gpt-5.md) that produces smarter and more precise responses
 
 :digit\_two: **Copy the code example**
 
-At the bottom of this page, you'll find [a code example](gpt-5-pro.md#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+At the bottom of this page, you'll find [a code example](gpt-5-pro.md#code-example-using-responses-endpoint) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
 
 :digit\_three: **Modify the code example**
 
@@ -28,7 +28,7 @@ At the bottom of this page, you'll find [a code example](gpt-5-pro.md#code-examp
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-5-pro.md#api-schemas), which lists all available parameters along with notes on how to use them.
+Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](gpt-5-pro.md#api-schema), which lists all available parameters along with notes on how to use them.
 
 :digit\_five: **Run your modified code**
 
@@ -40,7 +40,11 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schemas
+## API Schema
+
+{% hint style="warning" %}
+Note: This model can ONLY be called via the `/responses` endpoint!
+{% endhint %}
 
 <details>
 
@@ -54,21 +58,15 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 
 </details>
 
-### Chat Completions Endpoint
-
-...
-
 ### Responses Endpoint
 
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% openapi-operation spec="gpt-5-pro-RESPONSES" path="/v1/responses" method="post" %}
+[OpenAPI gpt-5-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-pro-RESPONSES.json)
 {% endopenapi-operation %}
 
-## Code Example
-
-## Code Example #2: Using /responses Endpoint
+## Code Example: Using /responses Endpoint
 
 {% tabs %}
 {% tab title="Python" %}

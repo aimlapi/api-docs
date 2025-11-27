@@ -66,8 +66,8 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
-{% openapi-operation spec="responses-all-models" path="/v1/responses" method="post" %}
-[OpenAPI responses-all-models](https://api.aimlapi.com/docs-public-yaml)
+{% openapi-operation spec="gpt-4-1-nano-RESPONSES" path="/v1/responses" method="post" %}
+[OpenAPI gpt-4-1-nano-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4.1-nano-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example
