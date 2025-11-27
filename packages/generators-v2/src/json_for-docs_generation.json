@@ -1,10 +1,10 @@
 [
   {
-    "name": "openai/gpt-5-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-pro",
-    "alias": "gpt-5-pro-RESPONSES",
+    "name": "qwen-turbo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen-turbo",
+    "alias": "qwen-turbo",
     "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
   }
 ]
