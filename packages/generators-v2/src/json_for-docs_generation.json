@@ -1,11 +1,77 @@
 [
   {
-    "name": "anthropic/claude-opus-4.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-5-20251101",
-    "alias": "claude-opus-4-5",
-    "models": ["anthropic/claude-opus-4-5", "claude-opus-4-5", "claude-opus-4-5-20251101"],
-    "category": "text-models-llm",
-    "vendor": "Anthropic",
-    "codeSamples": "chat-completion"
+    "name": "blackforestlabs/flux-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2",
+    "alias": "flux-2",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "text-to-image"
+  },
+  {
+    "name": "blackforestlabs/flux-2-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-edit",
+    "alias": "flux-2-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora",
+    "alias": "flux-2-lora",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "text-to-image"
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora-edit",
+    "alias": "flux-2-lora-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-lora-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro",
+    "alias": "flux-2-pro",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "text-to-image"
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro-edit",
+    "alias": "flux-2-pro-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-pro-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
   }
 ]
