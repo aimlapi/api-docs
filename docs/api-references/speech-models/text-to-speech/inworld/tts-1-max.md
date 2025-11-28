@@ -36,8 +36,8 @@ headers = {
 }
 
 data = {
-    "model": "inworld/tts-1",
-    "text": "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
+    "model": "inworld/tts-1-max",
+    "text": "It is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
     "voice": "Timothy",
 }
 
@@ -66,8 +66,8 @@ const headers = {
 };
 
 const data = {
-  model: "openai/tts-1",
-  text: "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
+  model: "inworld/tts-1-max",
+  text: "It is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
   voice: "Timothy",
 };
 
