@@ -1,92 +1,14 @@
 [
   {
-    "name": "#g1_nova-2-general",
-    "alias": "nova-2",
+    "name": "inworld/tts-1",
+    "alias": "tts-1",
     "category": "speech-models",
-    "vendor": "Deepgram"
+    "vendor": "Inworld"
   },
   {
-    "name": "#g1_nova-2-meeting",
-    "alias": "nova-2",
+    "name": "inworld/tts-1-max",
+    "alias": "tts-1-max",
     "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-phonecall",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-voicemail",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-finance",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-conversationalai",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-video",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-medical",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-drivethru",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_nova-2-automotive",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram"
-  },
-  {
-    "name": "#g1_whisper-large",
-    "alias": "whisper-large",
-    "category": "speech-models",
-    "vendor": "OpenAI"
-  },
-  {
-    "name": "#g1_whisper-medium",
-    "alias": "whisper-medium",
-    "category": "speech-models",
-    "vendor": "OpenAI"
-  },
-  {
-    "name": "#g1_whisper-small",
-    "alias": "whisper-small",
-    "category": "speech-models",
-    "vendor": "OpenAI"
-  },
-  {
-    "name": "#g1_whisper-tiny",
-    "alias": "whisper-tiny",
-    "category": "speech-models",
-    "vendor": "OpenAI"
-  },
-  {
-    "name": "#g1_whisper-base",
-    "alias": "whisper-base",
-    "category": "speech-models",
-    "vendor": "OpenAI"
+    "vendor": "Inworld"
   }
 ]
