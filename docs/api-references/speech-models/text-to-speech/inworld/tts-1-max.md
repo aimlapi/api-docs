@@ -1,12 +1,12 @@
-# TTS-1 HD
+# inworld/tts-1-max
 
 {% hint style="info" %}
 This documentation is valid for the following model:
 
-* `openai/tts-1-hd`
+* `inworld/tts-1-max`
 {% endhint %}
 
-This model is designed for high quality text-to-speech generation.
+This model is designed for realtime text-to-speech generation. A larger, more expressive variant of [inworld/tts-1](tts-1.md).
 
 ## Setup your API Key
 
@@ -14,8 +14,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="tts-1-hd" path="/v1/tts" method="post" %}
-[OpenAPI tts-1-hd](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/tts-1-hd.json)
+{% openapi-operation spec="inworld-tts-1-max" path="/v1/tts" method="post" %}
+[OpenAPI inworld-tts-1-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Inworld/tts-1-max.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -36,9 +36,9 @@ headers = {
 }
 
 data = {
-    "model": "openai/tts-1-hd",
+    "model": "inworld/tts-1",
     "text": "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
-    "voice": "coral",
+    "voice": "Timothy",
 }
 
 response = requests.post(f"{base_url}/tts", headers=headers, json=data)
@@ -66,9 +66,9 @@ const headers = {
 };
 
 const data = {
-  model: "openai/tts-1-hd",
+  model: "openai/tts-1",
   text: "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
-  voice: "coral",
+  voice: "Timothy",
 };
 
 const main = async () => {
@@ -88,12 +88,12 @@ main().catch(console.error);
 
 {% code overflow="wrap" %}
 ```
-Audio URL: https://cdn.aimlapi.com/generations/hedgehog/1760948051400-99effd93-a38a-43d5-b4e4-76b42afb6e67.mp3
+Audio URL: https://cdn.aimlapi.com/generations/tts/inworld-tts-fc718c97-12b3-42dc-919c-518c48ace59a.mp3/1764327592881-89e9ea63-935c-42d0-b769-8290ad769b7c.mp3
 ```
 {% endcode %}
 
 </details>
 
-Listen to the audio sample we generated:
+Listen to the audio sample we generated (\~ 3.2 s):
 
-{% embed url="https://drive.google.com/file/d/1d-FCR76Q9OXaVN3Or5txh_6sheEy_J4w/view?usp=sharing" %}
+{% embed url="https://drive.google.com/file/d/1qPJZfzsvqsEliyVS9SZsjT-R6B_KFhNE/view" %}

@@ -61,6 +61,12 @@ Aura 2 produces natural, human-like speech with accurate domain-specific pronunc
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schema
+
+{% openapi-operation spec="aura-2" path="/v1/tts" method="post" %}
+[OpenAPI aura-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/aura-2.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}
@@ -172,14 +178,8 @@ Audio saved to: audio.wav
 
 </details>
 
-The generated audio:&#x20;
+The generated audio:
 
 {% embed url="https://drive.google.com/file/d/1NaJcoNwVNXGybIK64eMD9qSt9yR4-Nwp/view?usp=sharing" %}
 
 ***
-
-## API Schema
-
-{% openapi-operation spec="aura-2" path="/v1/tts" method="post" %}
-[OpenAPI aura-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/aura-2.json)
-{% endopenapi-operation %}

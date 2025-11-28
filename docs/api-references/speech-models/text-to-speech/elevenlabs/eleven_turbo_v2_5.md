@@ -1,7 +1,7 @@
 # eleven\_turbo\_v2\_5
 
 {% hint style="info" %}
-This documentation is valid for the following model:  `elevenlabs/eleven_turbo_v2_5`
+This documentation is valid for the following model: `elevenlabs/eleven_turbo_v2_5`
 {% endhint %}
 
 A high-quality text-to-speech model offering natural-sounding intonation, support for **31** languages, and a broad selection of built-in voices. Up to 3× faster than [eleven\_multilingual\_v2](eleven_multilingual_v2.md).\
@@ -10,6 +10,12 @@ A wide range of output audio formats and quality settings is also available.
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="eleven-turbo-v2-5" path="/v1/tts" method="post" %}
+[OpenAPI eleven-turbo-v2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_turbo_v2_5.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -125,12 +131,6 @@ Audio saved to: audio.wav
 </details>
 
 {% embed url="https://drive.google.com/file/d/1GW05P4Gfugtx10vfaw106cogTz9JrBOG/view?usp=sharing" %}
-Each voice in ElevenLabs models has its own accent and unique characteristics. \
+Each voice in ElevenLabs models has its own accent and unique characteristics.\
 Check out this amazing female whisper we stumbled upon completely by accident.
 {% endembed %}
-
-## API Schema
-
-{% openapi-operation spec="eleven-turbo-v2-5" path="/v1/tts" method="post" %}
-[OpenAPI eleven-turbo-v2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_turbo_v2_5.json)
-{% endopenapi-operation %}

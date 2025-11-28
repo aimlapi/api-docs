@@ -1,14 +1,20 @@
 # vibevoice-7b
 
 {% hint style="info" %}
-This documentation is valid for the following model:   `microsoft/vibevoice-7b`
+This documentation is valid for the following model: `microsoft/vibevoice-7b`
 {% endhint %}
 
-Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content. The 7-billion-parameter version of the model.&#x20;
+Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content. The 7-billion-parameter version of the model.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="vibevoice-7b" path="/v1/tts" method="post" %}
+[OpenAPI vibevoice-7b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-7b.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -80,9 +86,3 @@ Sample rate: 24000 Hz
 ```
 
 </details>
-
-## API Schema
-
-{% openapi-operation spec="vibevoice-7b" path="/v1/tts" method="post" %}
-[OpenAPI vibevoice-7b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-7b.json)
-{% endopenapi-operation %}

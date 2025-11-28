@@ -1,9 +1,7 @@
 # vibevoice-1.5b
 
-
-
 {% hint style="info" %}
-This documentation is valid for the following model:   `microsoft/vibevoice-1.5b`
+This documentation is valid for the following model: `microsoft/vibevoice-1.5b`
 {% endhint %}
 
 Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content.
@@ -11,6 +9,12 @@ Designed to produce rich, multi-speaker conversations from text, the model is we
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="vibevoice-1-5b" path="/v1/tts" method="post" %}
+[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-1.5b.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -86,9 +90,3 @@ Sample rate: 24000 Hz
 Listen to the dialogue we generated:
 
 {% embed url="https://drive.google.com/file/d/12Cfolhx2jx7QWWfUTNiuXYhPBBtqvdwh/view" %}
-
-## API Schema
-
-{% openapi-operation spec="vibevoice-1-5b" path="/v1/tts" method="post" %}
-[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-1.5b.json)
-{% endopenapi-operation %}

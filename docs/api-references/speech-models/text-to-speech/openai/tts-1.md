@@ -1,7 +1,7 @@
 # TTS-1
 
 {% hint style="info" %}
-This documentation is valid for the following model:  &#x20;
+This documentation is valid for the following model:
 
 * `openai/tts-1`
 {% endhint %}
@@ -11,6 +11,12 @@ This model is designed for realtime text-to-speech generation.
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="tts-1" path="/v1/tts" method="post" %}
+[OpenAPI tts-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/tts-1.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -91,9 +97,3 @@ Audio URL: https://cdn.aimlapi.com/generations/hedgehog/1760947046341-221759d0-0
 Listen to the audio sample we generated:
 
 {% embed url="https://drive.google.com/file/d/1I_fbVSCRxkhFgvjCyyOg8GjVN9vF8G6v/view?usp=sharing" %}
-
-## API Schema
-
-{% openapi-operation spec="tts-1" path="/v1/tts" method="post" %}
-[OpenAPI tts-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/tts-1.json)
-{% endopenapi-operation %}

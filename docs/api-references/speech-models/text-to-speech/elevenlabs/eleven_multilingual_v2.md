@@ -1,7 +1,7 @@
 # eleven\_multilingual\_v2
 
 {% hint style="info" %}
-This documentation is valid for the following model:  `elevenlabs/eleven_multilingual_v2`
+This documentation is valid for the following model: `elevenlabs/eleven_multilingual_v2`
 {% endhint %}
 
 A high-quality text-to-speech model offering natural-sounding intonation, support for **29** languages, and a broad selection of built-in voices. A wide range of output audio formats and quality settings is also available.
@@ -9,6 +9,12 @@ A high-quality text-to-speech model offering natural-sounding intonation, suppor
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="eleven-multilingual-v2" path="/v1/tts" method="post" %}
+[OpenAPI eleven-multilingual-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_multilingual_v2.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -124,9 +130,3 @@ Audio saved to: audio.wav
 </details>
 
 {% embed url="https://drive.google.com/file/d/1RNL2QPkOXd9uoNp8q6uJesMLWx9Qa5YA/view?usp=sharing" %}
-
-## API Schema
-
-{% openapi-operation spec="eleven-multilingual-v2" path="/v1/tts" method="post" %}
-[OpenAPI eleven-multilingual-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_multilingual_v2.json)
-{% endopenapi-operation %}

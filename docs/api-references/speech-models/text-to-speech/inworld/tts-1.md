@@ -1,12 +1,12 @@
-# TTS-1 HD
+# inworld/tts-1
 
 {% hint style="info" %}
 This documentation is valid for the following model:
 
-* `openai/tts-1-hd`
+* `inworld/tts-1`
 {% endhint %}
 
-This model is designed for high quality text-to-speech generation.
+This model is designed for realtime text-to-speech generation.
 
 ## Setup your API Key
 
@@ -14,8 +14,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="tts-1-hd" path="/v1/tts" method="post" %}
-[OpenAPI tts-1-hd](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/tts-1-hd.json)
+{% openapi-operation spec="inworld-tts-1" path="/v1/tts" method="post" %}
+[OpenAPI inworld-tts-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Inworld/tts-1.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -36,9 +36,9 @@ headers = {
 }
 
 data = {
-    "model": "openai/tts-1-hd",
-    "text": "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
-    "voice": "coral",
+    "model": "inworld/tts-1",
+    "text": "It is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
+    "voice": "Deborah",
 }
 
 response = requests.post(f"{base_url}/tts", headers=headers, json=data)
@@ -66,9 +66,9 @@ const headers = {
 };
 
 const data = {
-  model: "openai/tts-1-hd",
-  text: "TTS-1 is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
-  voice: "coral",
+  model: "inworld/tts-1",
+  text: "It is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
+  voice: "Deborah",
 };
 
 const main = async () => {
@@ -88,12 +88,12 @@ main().catch(console.error);
 
 {% code overflow="wrap" %}
 ```
-Audio URL: https://cdn.aimlapi.com/generations/hedgehog/1760948051400-99effd93-a38a-43d5-b4e4-76b42afb6e67.mp3
+Audio URL: https://cdn.aimlapi.com/generations/tts/inworld-tts-00f0415f-c7c5-4ee3-aa2f-7326a738bc87.mp3/1764327112283-f4bc65b8-415c-4388-9094-a5c80e7f7643.mp3
 ```
 {% endcode %}
 
 </details>
 
-Listen to the audio sample we generated:
+Listen to the audio sample we generated (\~ 3 s):
 
-{% embed url="https://drive.google.com/file/d/1d-FCR76Q9OXaVN3Or5txh_6sheEy_J4w/view?usp=sharing" %}
+{% embed url="https://drive.google.com/file/d/1QTOQeHzLztjTgWlGq7CeaB2mDbRTmyvf/view" %}

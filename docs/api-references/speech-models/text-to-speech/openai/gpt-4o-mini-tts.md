@@ -1,7 +1,7 @@
 # gpt-4o-mini-tts
 
 {% hint style="info" %}
-This documentation is valid for the following model:  &#x20;
+This documentation is valid for the following model:
 
 * `openai/gpt-4o-mini-tts`
 {% endhint %}
@@ -11,6 +11,12 @@ A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gp
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schema
+
+{% openapi-operation spec="gpt-4o-mini-tts" path="/v1/tts" method="post" %}
+[OpenAPI gpt-4o-mini-tts](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/gpt-4o-mini-tts.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -91,9 +97,3 @@ Audio URL: https://cdn.aimlapi.com/generations/hedgehog/1760948488200-5a500947-2
 Listen to the audio sample we generated:
 
 {% embed url="https://drive.google.com/file/d/1BhS3jXOt-Fhk3T_io9Mm0f5U-3kB0Srp/view?usp=sharing" %}
-
-## API Schema
-
-{% openapi-operation spec="gpt-4o-mini-tts" path="/v1/tts" method="post" %}
-[OpenAPI gpt-4o-mini-tts](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/gpt-4o-mini-tts.json)
-{% endopenapi-operation %}
