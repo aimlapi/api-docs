@@ -25,7 +25,7 @@ Next, construct a prompt for the image. Depending on your needs, this prompt can
 
 Then, configure the metaparameters for your generation:
 
-* **Steps**: The `n`parameter in the API controls the number of iterations the model will take to shape your image. Experiment with this parameter to achieve the best result for your prompt.
+* **Steps**: The `n` parameter in the API controls the number of iterations the model will take to shape your image. Experiment with this parameter to achieve the best result for your prompt.
 * **Size**: The `size` parameter controls the resolution of the resulting image. All models have minimum and maximum resolutions, sometimes with different aspect ratios. Experiment with this parameter as well.
 
 ### Quick Code Example

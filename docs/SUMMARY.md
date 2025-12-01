@@ -416,6 +416,7 @@
 * [Can I call API in the asynchronous mode?](faq/call-api-in-the-asynchronous-mode.md)
 * [OpenAI SDK doesn't work?](faq/openai-sdk-doesnt-work.md)
 * [qp](faq/qp.md)
+* [chat-page](faq/chat-page.md)
 
 ## Use Cases
 
