@@ -118,6 +118,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [alibaba/qwen3-235b-a22b-thinking-2507](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b-thinking-2507.md)
 * [alibaba/qwen3-max-preview](../api-references/text-models-llm/alibaba-cloud/qwen3-max-preview.md)
 * [alibaba/qwen3-max-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-max-instruct.md)
+* [alibaba/qwen3-vl-32b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-instruct.md)
+* [alibaba/qwen3-vl-32b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.md)
 
 ***
 
