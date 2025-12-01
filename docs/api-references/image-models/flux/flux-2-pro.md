@@ -32,11 +32,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 Let's generate an image of the specified size using a simple prompt.
 
-{% hint style="warning" %}
-The maximum value for both width and height is `2048`, and the minimum is `512`.\
-The value must be a multiple of 32.
-{% endhint %}
-
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
