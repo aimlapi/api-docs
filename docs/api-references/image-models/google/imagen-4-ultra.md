@@ -27,7 +27,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=imagen-4.0-ultra-generate-preview-06-06&#x26;mode=image" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/imagen-4-0-ultra-generate-preview-06-06" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

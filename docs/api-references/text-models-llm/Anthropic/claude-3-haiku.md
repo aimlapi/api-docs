@@ -13,7 +13,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=claude-3-haiku-20240307&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/claude-3-haiku-20240307" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

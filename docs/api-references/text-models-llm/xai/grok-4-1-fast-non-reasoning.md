@@ -10,7 +10,7 @@ This documentation is valid for the following model:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=x-ai/grok-4-1-fast-non-reasoning&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/x-ai/grok-4-1-fast-non-reasoning" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

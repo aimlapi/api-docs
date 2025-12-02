@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=video-01-live2d&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/video-01-live2d" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

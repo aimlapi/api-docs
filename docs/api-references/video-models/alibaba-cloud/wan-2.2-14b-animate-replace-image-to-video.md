@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=alibaba/wan2.2-14b-animate-replace&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/wan2-2-14b-animate-replace" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

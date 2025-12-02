@@ -1,6 +1,6 @@
 # nemotron-nano-12b-v2-vl
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>nvidia/nemotron-nano-12b-v2-vl</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=nvidia/nemotron-nano-12b-v2-vl&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>nvidia/nemotron-nano-12b-v2-vl</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/nvidia/nemotron-nano-12b-v2-vl" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 

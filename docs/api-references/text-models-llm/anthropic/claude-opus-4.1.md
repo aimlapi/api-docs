@@ -1,6 +1,6 @@
 # Claude 4.1 Opus
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-opus-4.1</code></li><li><code>claude-opus-4-1</code></li><li><code>claude-opus-4-1-20250805</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-1-20250805&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-opus-4.1</code></li><li><code>claude-opus-4-1</code></li><li><code>claude-opus-4-1-20250805</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/claude-opus-4-1-20250805" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 All three IDs listed above refer to the same model; we support them for backward compatibility.

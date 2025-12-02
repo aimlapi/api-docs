@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=kling-video/v1/pro/text-to-video&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/kling-video/v1/pro/text-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

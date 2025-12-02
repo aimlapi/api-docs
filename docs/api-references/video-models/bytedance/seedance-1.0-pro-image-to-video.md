@@ -28,7 +28,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=bytedance/seedance-1-0-pro-i2v&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/bytedance/seedance-1-0-pro-i2v" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

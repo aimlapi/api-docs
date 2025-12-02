@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=google/veo3&#x26;mode=video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/google/veo3" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

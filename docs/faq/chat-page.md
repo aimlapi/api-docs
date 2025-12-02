@@ -15,7 +15,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=alibaba/qwen-plus&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/qwen-plus" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=alibaba/qwen-turbo&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/qwen-turbo" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

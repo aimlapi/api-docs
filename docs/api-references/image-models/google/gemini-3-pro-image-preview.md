@@ -15,7 +15,7 @@ Both IDs listed above refer to the same model; we support them for backward comp
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=google/gemini-3-pro-image-preview&#x26;mode=image" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/google/gemini-3-pro-image-preview" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

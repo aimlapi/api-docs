@@ -1,6 +1,6 @@
 # gpt-4o-mini
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="509.11102294921875" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>gpt-4o-mini</code></li><li><code>gpt-4o-mini-2024-07-18</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=gpt-4o-mini&#x26;mode=chat" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="509.11102294921875" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>gpt-4o-mini</code></li><li><code>gpt-4o-mini-2024-07-18</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/gpt-4o-mini" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 

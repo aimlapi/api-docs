@@ -10,7 +10,7 @@ This documentation is valid for the following model:
 {% endcolumn %}
 
 {% column width="25%" %}
-<a href="https://aimlapi.com/app/?model=nousresearch/hermes-4-405b&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/nousresearch/hermes-4-405b" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

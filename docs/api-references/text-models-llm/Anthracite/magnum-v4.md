@@ -10,7 +10,7 @@ This documentation is valid for the following model:
 {% endcolumn %}
 
 {% column %}
-<a href="https://aimlapi.com/app/?model=anthracite-org/magnum-v4-72b&#x26;mode=chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/anthracite-org/magnum-v4-72b" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

@@ -1,6 +1,6 @@
 # codestral-2501
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/codestral-2501</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=mistralai/codestral-2501&#x26;mode=code" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>mistralai/codestral-2501</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/mistralai/codestral-2501" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 

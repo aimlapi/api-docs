@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=blackforestlabs/flux-2-lora-edit&#x26;mode=image" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/blackforestlabs/flux-2-lora-edit" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
