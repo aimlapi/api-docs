@@ -196,7 +196,7 @@
     * [Stable Diffusion v3 Medium](api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
     * [Stable Diffusion v3.5 Large](api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
   * [Tencent](api-references/image-models/tencent/README.md)
-    * [Hunyuan Image V3](api-references/image-models/tencent/hunyuan-image-v3-text-to-image.md)
+    * [Hunyuan Image v3](api-references/image-models/tencent/hunyuan-image-v3-text-to-image.md)
     * [Hunyuan Part](api-references/image-models/tencent/hunyuan-part.md)
   * [Topaz Labs](api-references/image-models/topaz-labs/README.md)
     * [Sharpen](api-references/image-models/topaz-labs/sharpen.md)

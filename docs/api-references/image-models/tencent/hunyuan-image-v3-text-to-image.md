@@ -1,4 +1,4 @@
-# Hunyuan Image V3
+# Hunyuan Image v3
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -48,8 +48,8 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "model": "hunyuan/hunyuan-image-v3-text-to-image",
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
             "image_size": "landscape_16_9"
         }
     )
@@ -121,4 +121,4 @@ main();
 
 We obtained the following 1280x768 image by running this code example:
 
-<figure><img src="https://v3b.fal.media/files/b/lion/JdrvNguTlt29LmURRbKKN.png" alt=""><figcaption><p>A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.</p></figcaption></figure>
+<figure><img src="https://v3b.fal.media/files/b/lion/JdrvNguTlt29LmURRbKKN.png" alt=""><figcaption><p><code>A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.</code></p></figcaption></figure>

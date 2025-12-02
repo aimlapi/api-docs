@@ -314,7 +314,7 @@ Processing complete:/n {'id': 'df551652-1bbe-4d38-9c99-d0ecb69db192:luma/ray-fla
 
 </details>
 
-**Processing time**: \~1 min.
+**Processing time**: \~ 1 min.
 
 **Original** (1280x720, without sound):
 
