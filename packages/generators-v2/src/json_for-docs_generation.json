@@ -1,18 +1,18 @@
 [
   {
-    "name": "alibaba/qwen3-vl-32b-instruct",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-vl-32b-instruct",
-    "alias": "qwen3-vl-32b-instruct",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/z-image-turbo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/z-image-turbo",
+    "alias": "z-image-turbo",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "text-to-image"
   },
   {
-    "name": "alibaba/qwen3-vl-32b-thinking",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-vl-32b-thinking",
-    "alias": "qwen3-vl-32b-thinking",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/z-image-turbo-lora",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/z-image-turbo-lora",
+    "alias": "z-image-turbo-lora",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "text-to-image"
   }
 ]

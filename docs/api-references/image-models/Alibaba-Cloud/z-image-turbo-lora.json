@@ -1,0 +1,238 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "alibaba/z-image-turbo-lora"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 4000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
+                  },
+                  "image_size": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "type": "integer",
+                            "minimum": 512,
+                            "maximum": 2048,
+                            "default": 1024
+                          },
+                          "height": {
+                            "type": "integer",
+                            "minimum": 512,
+                            "maximum": 2048,
+                            "default": 768
+                          }
+                        },
+                        "description": "For both height and width, the value must be a multiple of 32."
+                      },
+                      {
+                        "type": "string",
+                        "enum": [
+                          "square_hd",
+                          "square",
+                          "portrait_4_3",
+                          "portrait_16_9",
+                          "landscape_4_3",
+                          "landscape_16_9"
+                        ],
+                        "description": "The size of the generated image."
+                      }
+                    ],
+                    "default": "landscape_4_3"
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "jpeg",
+                      "png",
+                      "webp"
+                    ],
+                    "default": "png",
+                    "description": "The format of the generated image."
+                  },
+                  "enable_prompt_expansion": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If set to True, prompt will be upsampled with more details."
+                  },
+                  "num_inference_steps": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8,
+                    "description": "The number of inference steps to perform."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "The same seed and the same prompt given to the same version of the model will output the same image every time."
+                  },
+                  "num_images": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 4,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  },
+                  "enable_safety_checker": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If set to True, the safety checker will be enabled."
+                  },
+                  "acceleration": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "regular",
+                      "high"
+                    ],
+                    "default": "regular",
+                    "description": "The speed of the generation. The higher the speed, the faster the generation."
+                  },
+                  "loras": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "description": "URL, HuggingFace repo ID (owner/repo)."
+                        },
+                        "scale": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 4,
+                          "description": "Scale factor for LoRA application."
+                        }
+                      },
+                      "required": [
+                        "path"
+                      ]
+                    },
+                    "maxItems": 3,
+                    "description": "List of LoRA weights to apply (maximum 3). Each LoRA can be a URL, HuggingFace repo ID, or local path."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "alibaba/z-image-turbo-lora"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "tokens_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "tokens_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      model: 'alibaba/z-image-turbo-lora',\n      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n        \"model\":\"alibaba/z-image-turbo-lora\",\n        \"prompt\": \"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+          },
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"alibaba/z-image-turbo-lora\",\n    \"prompt\": \"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.\"\n  }'"
+          },
+          {
+            "lang": "HTTP",
+            "source": "POST /v1/images/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"alibaba/z-image-turbo-lora\",\n  \"prompt\": \"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
