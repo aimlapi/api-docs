@@ -41,8 +41,8 @@ The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of th
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/v1-standard-image-to-video-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1-standard-image-to-video-pair.json](../../../.gitbook/assets/v1-standard-image-to-video-pair.json)
+{% openapi src="../../../.gitbook/assets/v1.6-pro-effects-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
+[v1.6-pro-effects-pair.json](../../../.gitbook/assets/v1.6-pro-effects-pair.json)
 {% endopenapi %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

@@ -1,10 +1,22 @@
 # Luma Ray 1.6 (Text-to-Video)
 
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `luma/ray-1-6`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/luma/ray-1-6" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
 ## Overview
 
 The Luma AI Dream Machine API allows developers to generate and extend AI-generated videos based on text prompts.
-
-Each video generation/extend costs <kbd><mark style="background-color:blue;">500 000<mark style="background-color:blue;"></kbd> AI/ML Tokens.
 
 ## Setup your API Key
 
@@ -19,7 +31,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 Generating a video using this model involves making two sequential API calls:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID). This can be either a generation from a reference image/prompt or a video extension operation that adds length to an existing video.
-* The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint.  Within this API call, you can use either the standard endpoint to retrieve the generated/extended video or a special endpoint to request multiple generations at once.
+* The second one is for requesting the generated or extended video from the server using the generation ID received from the first endpoint. Within this API call, you can use either the standard endpoint to retrieve the generated/extended video or a special endpoint to request multiple generations at once.
 
 Below, you can find three corresponding API schemas and examples for all endpoint calls.
 
@@ -37,29 +49,13 @@ Below, you can find three corresponding API schemas and examples for all endpoin
 
 ### Fetch generation
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more. Here are the API details to wait for a certain video generation state.
-
-Each state has its own priority, described below:
-
-* `queued` -> `dreaming` -> `completed` -> `failed`
-
-If the video state reaches any higher-priority state than you requested, then the result is immediately returned. For example, if you are waiting for the `completed` state and your request fails (reaching the `failed` state), then the result is immediately returned with the current error state.
-
-If video generation takes too long, it can reach a timeout of 30 seconds. In such cases, the result returns with the current actual state. This polling allows you to request it again and wait for the needed state.
-
-{% hint style="info" %}
-You cannot wait for an `failed` state.
-{% endhint %}
+After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.&#x20;
 
 {% openapi-operation spec="luma-gen-fetch" path="/v2/generate/video/luma-ai/generation" method="get" %}
 [OpenAPI luma-gen-fetch](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
-#### Example: Fetch Single Generation
-
-{% hint style="info" %}
-Ensure you replace `"my_key"` with your actual API key before running the code.
-{% endhint %}
+### Example: Fetch Single Generation
 
 For example, if you are waiting for video dreaming (when the video is popped from the queue and generation is in processing), then you can send the following request:
 
@@ -120,8 +116,6 @@ main();
 {% endtab %}
 {% endtabs %}
 
-If you are waiting for a video to be fully generated, you can wait for the `completed` state in the same way as described above.
-
 ### Fetch Multiple Generations
 
 Instead of using the `generation_id` parameter, you will pass `generation_ids`, which can be an array of IDs. This parameter can also accept IDs separated by commas.
@@ -130,7 +124,7 @@ Instead of using the `generation_id` parameter, you will pass `generation_ids`, 
 [OpenAPI luma-gens-fetch](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
-#### Example: Fetch Multiple Generations
+### Example: Fetch Multiple Generations
 
 {% tabs %}
 {% tab title="Python" %}
@@ -189,7 +183,7 @@ main();
 {% endtab %}
 {% endtabs %}
 
-#### Example: Fetch Multiple Generations
+### Example: Fetch Multiple Generations
 
 {% hint style="info" %}
 Ensure you replace `<YOUR_AIMLAPI_KEY>` with your actual API key before running the code.
@@ -299,6 +293,10 @@ import requests
 
 def main()
   url = "https://api.aimlapi.com/v2/generate/video/luma-ai/generation"
+  headers = {
+    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+    "Content-Type": "application/json"
+  }
   payload = {
     "prompt": "Flying jellyfish",
     "aspect_ratio": "16:9",
@@ -308,10 +306,6 @@ def main()
         "url": "https://example.com/image1.png"
       }
     }
-  }
-  headers = {
-    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
-    "Content-Type": "application/json"
   }
   
   response = requests.post(url, json=payload, headers=headers)
@@ -363,6 +357,10 @@ import requests
 
 def main()
   url = "https://api.aimlapi.com/v2/generate/video/luma-ai/generation"
+  headers = {
+    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+    "Content-Type": "application/json"
+  }
   payload = {
     "prompt": "Flying jellyfish",
     "aspect_ratio": "16:9",
@@ -372,10 +370,6 @@ def main()
         "id": "0f3ea4aa-10e7-4dae-af0b-263ab4ac45f9"
       }
     }
-  }
-  headers = {
-    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
-    "Content-Type": "application/json"
   }
   
   response = requests.post(url, json=payload, headers=headers)
@@ -415,6 +409,3 @@ main();
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

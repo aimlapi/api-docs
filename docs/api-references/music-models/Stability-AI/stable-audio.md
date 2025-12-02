@@ -22,6 +22,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/stable-audio-pair.json" path="/v2/generate/audio" method="get" %}
-[stable-audio-pair.json](../../../.gitbook/assets/stable-audio-pair.json)
+{% openapi src="../../../.gitbook/assets/Lyria-2-pair.json" path="/v2/generate/audio" method="get" %}
+[Lyria-2-pair.json](../../../.gitbook/assets/Lyria-2-pair.json)
 {% endopenapi %}

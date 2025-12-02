@@ -1,7 +1,7 @@
 # hailuo-02
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/minimax/hailuo-02" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
@@ -40,8 +40,8 @@ Below, you can find two corresponding API schemas and an example with both endpo
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="../../../.gitbook/assets/video-01-live2d-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-live2d-pair.json](../../../.gitbook/assets/video-01-live2d-pair.json)
+{% openapi src="../../../.gitbook/assets/video-01-pair (1).json" path="/v2/generate/video/minimax/generation" method="get" %}
+[video-01-pair (1).json](<../../../.gitbook/assets/video-01-pair (1).json>)
 {% endopenapi %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
