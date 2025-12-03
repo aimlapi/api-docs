@@ -1,43 +1,11 @@
 [
   {
-    "name": "alibaba/z-image-turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/z-image-turbo",
-    "alias": "z-image-turbo",
-    "category": "image-models",
-    "vendor": "Alibaba-Cloud",
-    "codeSamples": "text-to-image"
-  },
-  {
-    "name": "alibaba/z-image-turbo-lora",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/z-image-turbo-lora",
-    "alias": "z-image-turbo-lora",
-    "category": "image-models",
-    "vendor": "Alibaba-Cloud",
-    "codeSamples": "text-to-image"
-  },
-  {
-    "name": "blackforestlabs/flux-2-lora",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora",
-    "alias": "flux-2-lora",
-    "category": "image-models",
-    "vendor": "Flux",
-    "codeSamples": "text-to-image"
-  },
-  {
-    "name": "blackforestlabs/flux-2-lora-edit",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora-edit",
-    "alias": "flux-2-lora-edit",
-    "category": "image-models",
-    "vendor": "Flux",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
-    "customParams":{
-        "model": "blackforestlabs/flux-2-lora-edit",
-        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
-        "image_urls": [
-            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
-            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
-        ]      
-    }
+    "name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/Mistral-7B-Instruct-v0.3",
+    "alias": "Mistral-7B-Instruct",
+    "models": ["mistralai/Mistral-7B-Instruct-v0.2", "mistralai/Mistral-7B-Instruct-v0.3"],
+    "category": "text-models-llm",
+    "vendor": "Mistral AI",
+    "codeSamples": "chat-completion"
   }
 ]
