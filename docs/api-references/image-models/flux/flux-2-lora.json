@@ -120,7 +120,7 @@
                     "default": true,
                     "description": "If set to True, the safety checker will be enabled."
                   },
-                  "loars": {
+                  "loras": {
                     "type": "array",
                     "items": {
                       "type": "object",
