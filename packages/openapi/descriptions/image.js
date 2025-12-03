@@ -185,4 +185,7 @@ If transparent, the output format needs to support transparency, so it should be
       desc: `Scale factor for LoRA application.`,
     },
   },
+  resolution: {
+    desc: `The resolution of the output image.`,
+  },
 };
