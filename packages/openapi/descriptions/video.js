@@ -255,7 +255,7 @@ Supported configurations include:
     desc: `The synchronization mode for audio and video. Loose or tight are available.`,
   },
   image_list: {
-    desc: `Array of image URLs (2-4 images) for multi-image-to-video generation.`,
+    desc: `Array of image URLs for multi-image-to-video generation.`,
   },
   auto_fix: {
     desc: `Whether to automatically attempt to fix prompts that fail content policy or other validation checks by rewriting them.`,
