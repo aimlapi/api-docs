@@ -314,4 +314,16 @@ Supported configurations include:
   num_inference_steps: {
     desc: `Number of inference steps for sampling. Higher values give better quality but take longer`,
   },
+  elements: {
+    desc: `Elements (characters/objects) to include in the video.`,
+    reference_image_urls: {
+      desc: `Additional reference images from different angles.`,
+    },
+    frontal_image_url: {
+      desc: `The frontal image of the element (main view).`,
+    },
+  },
+  keep_audio: {
+    desc: `Whether to keep the original audio from the video.`,
+  },
 };
