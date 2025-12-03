@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-This image-to-image model enables you to apply your trained adapters, producing domain-specific outputs aligned with your brand aesthetic, expert content areas, or specialized visual constraints.
+This image-to-image model enables you to apply your trained LoRA[^1] adapters, producing domain-specific outputs aligned with your brand aesthetic, expert content areas, or specialized visual constraints.
 
 ## Setup your API Key
 
@@ -123,3 +123,5 @@ main();
 </details>
 
 <table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/2-TzrE2bwvfldwD4O3aVi.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+
+[^1]: The **LoRA algorithm** (Low-Rank Adaptation) is a parameter-efficient fine-tuning technique used to adapt large language models (LLMs) and stable diffusion models to new tasks or domains without retraining the entire model. This process is faster and requires significantly less memory and computational resources than full fine-tuning.
