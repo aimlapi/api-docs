@@ -111,7 +111,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
-* [Qwen/QwQ-32B](../api-references/text-models-llm/alibaba-cloud/qwen-qwq-32b.md)
+* [Qwen/QwQ-32B](/broken/pages/m4oeHADX3yZhaU9m7Bgz)
 * [Qwen/Qwen3-235B-A22B-fp8-tput](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b.md)
 * [alibaba/qwen3-32b](../api-references/text-models-llm/alibaba-cloud/qwen3-32b.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)

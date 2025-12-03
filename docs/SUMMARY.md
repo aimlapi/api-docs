@@ -19,7 +19,6 @@
     * [Qwen2.5-7B-Instruct-Turbo](api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
     * [Qwen2.5-72B-Instruct-Turbo](api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo.md)
     * [Qwen2.5-Coder-32B-Instruct](api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
-    * [Qwen-QwQ-32B](api-references/text-models-llm/alibaba-cloud/qwen-qwq-32b.md)
     * [Qwen3-235B-A22B](api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b.md)
     * [qwen3-32b](api-references/text-models-llm/alibaba-cloud/qwen3-32b.md)
     * [qwen3-coder-480b-a35b-instruct](api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
