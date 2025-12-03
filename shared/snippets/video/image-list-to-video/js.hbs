@@ -1,0 +1,22 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'A graceful ballerina dancing outside a circus tent on green grass, with colorful wildflowers swaying around her as she twirls and poses in the meadow.',
+      image_list: [
+        'https://storage.googleapis.com/falserverless/example_inputs/veo31-r2v-input-1.png',
+        'https://storage.googleapis.com/falserverless/example_inputs/veo31-r2v-input-2.png',
+        'https://storage.googleapis.com/falserverless/example_inputs/veo31-r2v-input-3.png',
+      ],
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
