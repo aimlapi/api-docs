@@ -1038,7 +1038,7 @@
                     "model": {
                       "type": "string",
                       "description": "The model used for the chat completion.",
-                      "example": "gpt-4o-2024-08-06"
+                      "example": "google/gemini-3-pro-preview"
                     },
                     "usage": {
                       "type": "object",
@@ -1488,11 +1488,11 @@
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"google/gemini-3-pro-preview\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"hi\"\n      }\n    ]\n  }'"
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"google/gemini-3-pro-preview\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"Hello\"\n      }\n    ]\n  }'"
           },
           {
             "lang": "HTTP",
-            "source": "POST /v1/chat/completions HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\nContent-Length: 59\n\n{\n  \"model\": \"google/gemini-3-pro-preview\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"hi\"\n    }\n  ]\n}"
+            "source": "POST /v1/chat/completions HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\nContent-Length: 59\n\n{\n  \"model\": \"google/gemini-3-pro-preview\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Hello\"\n    }\n  ]\n}"
           }
         ]
       }
@@ -2525,7 +2525,7 @@
                     "model": {
                       "type": "string",
                       "description": "The model used for the chat completion.",
-                      "example": "gpt-4o-2024-08-06"
+                      "example": "google/gemini-3-pro-preview"
                     },
                     "usage": {
                       "type": "object",
@@ -2975,11 +2975,11 @@
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"google/gemini-3-pro-preview\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"hi\"\n      }\n    ]\n  }'"
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"google/gemini-3-pro-preview\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"Hello\"\n      }\n    ]\n  }'"
           },
           {
             "lang": "HTTP",
-            "source": "POST /v1/chat/completions HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\nContent-Length: 59\n\n{\n  \"model\": \"google/gemini-3-pro-preview\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"hi\"\n    }\n  ]\n}"
+            "source": "POST /v1/chat/completions HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\nContent-Length: 59\n\n{\n  \"model\": \"google/gemini-3-pro-preview\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Hello\"\n    }\n  ]\n}"
           }
         ]
       }
