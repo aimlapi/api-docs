@@ -1,0 +1,381 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/video-v2-6-pro-image-to-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2500,
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds.",
+                    "enum": [
+                      5,
+                      10
+                    ],
+                    "default": "5"
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "description": "The description of elements to avoid in the generated video."
+                  },
+                  "generate_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to generate audio for the video."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image_url"
+                ],
+                "title": "klingai/video-v2-6-pro-image-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "failed",
+                        "succeeded",
+                        "queued",
+                        "running",
+                        "uploading",
+                        "cancelled",
+                        "unknown"
+                      ]
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    },
+    "/v1/video/generations": {
+      "post": {
+        "operationId": "_v1_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/video-v2-6-pro-image-to-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2500,
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds.",
+                    "enum": [
+                      5,
+                      10
+                    ],
+                    "default": "5"
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "description": "The description of elements to avoid in the generated video."
+                  },
+                  "generate_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to generate audio for the video."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image_url"
+                ],
+                "title": "klingai/video-v2-6-pro-image-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "failed",
+                        "succeeded",
+                        "queued",
+                        "running",
+                        "uploading",
+                        "cancelled",
+                        "unknown"
+                      ]
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    },
+    "/video/generations": {
+      "post": {
+        "operationId": "_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/video-v2-6-pro-image-to-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2500,
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds.",
+                    "enum": [
+                      5,
+                      10
+                    ],
+                    "default": "5"
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "description": "The description of elements to avoid in the generated video."
+                  },
+                  "generate_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to generate audio for the video."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image_url"
+                ],
+                "title": "klingai/video-v2-6-pro-image-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "failed",
+                        "succeeded",
+                        "queued",
+                        "running",
+                        "uploading",
+                        "cancelled",
+                        "unknown"
+                      ]
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
