@@ -13,7 +13,7 @@ export default {
   },
   content: {
     text: {
-      desc: `The text contents of the Message`,
+      desc: `The text contents of the Message.`,
     },
     array: {
       desc: `An array of content parts with a defined type, each can be of type text or images can be passed with image_url or image_file`,
