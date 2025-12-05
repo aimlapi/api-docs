@@ -2,7 +2,7 @@ name: Deploy Openapi Assets
 
 on:
   push:
-    branches: [feat-openapi-package]
+    branches: [main]
     paths:
       - "packages/openapi/**"
 
@@ -11,52 +11,45 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     permissions:
-      # we need 'contents: write' to create releases & upload assets
+      # needed to create/update releases and upload assets
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Use Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - id: pack
         name: Pack @docs/openapi
-        # run from repo root but operate on packages/openapi
         run: |
           cd packages/openapi
 
-          # install, then create a packed tarball; capture version & filename
+          # Install, then create a packed tarball; capture version & filename
           npm ci
           VERSION=$(node -p "require('./package.json').version")
           PACKFILE=$(npm pack | tail -n1)
 
           # export step outputs for later steps
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          # NOTE: packfile_name is just the filename (e.g. openapi-1.2.3.tgz)
           echo "packfile_name=$PACKFILE" >> $GITHUB_OUTPUT
+          # tarball is the absolute path to the produced file
           echo "tarball=$PWD/$PACKFILE" >> $GITHUB_OUTPUT
 
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Create or update release and upload tarball
+        id: gh_release
+        uses: softprops/action-gh-release@v1
         with:
-          # tag and release name; adjust prefix if you prefer
+          # tag format - adjust if you prefer plain "v${{ steps.pack.outputs.version }}"
           tag_name: "openapi-v${{ steps.pack.outputs.version }}"
-          release_name: "openapi v${{ steps.pack.outputs.version }}"
+          name: "openapi v${{ steps.pack.outputs.version }}"
           body: "Automated release for packages/openapi (pack + upload)"
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload tarball to release
-        uses: actions/upload-release-asset@v2
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.pack.outputs.tarball }}
-          asset_name: ${{ steps.pack.outputs.packfile_name }}
+          # softprops accepts a whitespace or comma separated list of files/globs
+          files: ${{ steps.pack.outputs.tarball }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
