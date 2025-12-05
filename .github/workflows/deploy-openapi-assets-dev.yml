@@ -2,7 +2,7 @@ name: Deploy Openapi Assets
 
 on:
   push:
-    branches: [main]
+    branches: [feat-openapi-package]
     paths:
       - "packages/openapi/**"
 
