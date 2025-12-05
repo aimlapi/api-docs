@@ -58,7 +58,7 @@ jobs:
             packages/openapi/${{ steps.set-outputs.outputs.packfile_name }}
             packages/openapi/openapi-latest.tgz
 
-  release_tag:
+  release-openapi-packages:
     runs-on: ubuntu-latest
     needs: pack
     environment: production
@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     needs:
-      - deploy-package
+      - release-openapi-packages
     steps:
       - name: Trigger autoupdate swagger
         env:
