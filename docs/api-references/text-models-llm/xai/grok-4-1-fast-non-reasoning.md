@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following model:
 
-`x-ai/grok-4-1-fast-non-reasoning`
+* `x-ai/grok-4-1-fast-non-reasoning`
 {% endhint %}
 {% endcolumn %}
 

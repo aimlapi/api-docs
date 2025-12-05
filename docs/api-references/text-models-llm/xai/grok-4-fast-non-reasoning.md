@@ -1,10 +1,10 @@
 # grok-4-fast-non-reasoning
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><p><code>x-ai/grok-4-fast-non-reasoning</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/x-ai/grok-4-fast-non-reasoning" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><ul><li><code>x-ai/grok-4-fast-non-reasoning</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/x-ai/grok-4-fast-non-reasoning" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
-xAI’s multimodal model, offering state-of-the-art cost efficiency and a 2M-token context window. \
+xAI’s multimodal model, offering state-of-the-art cost efficiency and a 2M-token context window.\
 Non-reasoning variant.
 
 ## How to Make a Call
