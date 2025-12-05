@@ -94,7 +94,7 @@
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request GET \\\n  --url 'https://apiaimlapi.com/v1/billing/balance' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json'"
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v1/billing/balance' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json'"
           },
           {
             "lang": "HTTP",
