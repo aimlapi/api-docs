@@ -9,7 +9,7 @@ export default {
     desc: `The object type.`,
   },
   role: {
-    desc: `The role of the entity that is creating the Message`,
+    desc: `The role of the entity that is creating the Message.`,
   },
   content: {
     text: {
