@@ -1,16 +1,18 @@
 [
   {
-    "name": "klingai/video-v2-6-pro-image-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-image-to-video",
-    "alias": "video-v2-6-pro-image-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
+    "name": "openai/gpt-5-1-codex",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex",
+    "alias": "gpt-5-1-codex-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
   },
   {
-    "name": "klingai/video-v2-6-pro-text-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-text-to-video",
-    "alias": "video-v2-6-pro-text-to-video",
-    "category": "video-models",
-    "vendor": "Kling AI"
+    "name": "openai/gpt-5-1-codex-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex-mini",
+    "alias": "gpt-5-1-codex-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
   }
 ]
