@@ -7,13 +7,14 @@ on:
       - "packages/openapi/**"
 
 jobs:
-  deploy-package:
+  pack:
     runs-on: ubuntu-latest
     environment: production
     permissions:
-      # needed to create/update releases and upload assets
-      contents: write
-
+      contents: read
+    outputs:
+      version: ${{ steps.set-outputs.outputs.version }}
+      packfile_name: ${{ steps.set-outputs.outputs.packfile_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,42 +24,68 @@ jobs:
         with:
           node-version: "20"
 
-      - id: pack
-        name: Pack @docs/openapi
+      - id: set-outputs
+        name: Pack @docs/openapi and upload artifacts
         run: |
+          set -euo pipefail
           cd packages/openapi
 
-          # Install, then create a packed tarball; capture version & filename
+          echo "Working dir: $(pwd)"
+          cat package.json
+
           npm ci
+
+          # npm pack prints the filename; grab the last non-empty line
+          PACKFILE=$(npm pack | sed -n '/./p' | tail -n1)
+          echo "Packed file: $PACKFILE"
+
+          # create stable 'latest' name
+          LATEST_NAME="openapi-latest.tgz"
+          cp -f "$PACKFILE" "$LATEST_NAME"
+
+          # ensure files exist
+          ls -la
+
           VERSION=$(node -p "require('./package.json').version")
-          PACKFILE=$(npm pack | tail -n1)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "packfile_name=$PACKFILE" >> "$GITHUB_OUTPUT"
 
-          # export step outputs for later steps
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          # NOTE: packfile_name is just the filename (e.g. openapi-1.2.3.tgz)
-          echo "packfile_name=$PACKFILE" >> $GITHUB_OUTPUT
-          # tarball is the absolute path to the produced file
-          echo "tarball=$PWD/$PACKFILE" >> $GITHUB_OUTPUT
+      - name: Upload tarballs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openapi-tarballs
+          path: |
+            packages/openapi/${{ steps.set-outputs.outputs.packfile_name }}
+            packages/openapi/openapi-latest.tgz
 
-      - name: Create or update tagged release and upload tarball
+  release_tag:
+    runs-on: ubuntu-latest
+    needs: pack
+    environment: production
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout (needed for workspace)
+        uses: actions/checkout@v4
+
+      - name: Download packed artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: openapi-tarballs
+          path: artifacts
+
+      - name: Show artifacts (debug)
+        run: ls -la artifacts
+
+      - name: Create or update tagged release and upload versioned tarball
         id: gh_release_tag
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "openapi-v${{ steps.pack.outputs.version }}"
-          name: "openapi v${{ steps.pack.outputs.version }}"
+          tag_name: "openapi-v${{ needs.pack.outputs.version }}"
+          name: "openapi v${{ needs.pack.outputs.version }}"
           body: "Automated release for packages/openapi (pack + upload)"
-          files: ${{ steps.pack.outputs.tarball }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create or update latest release and upload tarball
-        id: gh_release_latest
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: "openapi-latest"
-          name: "openapi latest"
-          body: "Automated release for packages/openapi (pack + upload)"
-          files: ${{ steps.pack.outputs.tarball }}
+          # artifact downloads put files under ./artifacts/<filename>
+          files: artifacts/${{ needs.pack.outputs.packfile_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
