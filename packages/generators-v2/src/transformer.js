@@ -51,12 +51,18 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.customSample(options);
   }
 
-  // Remove /responses path because it's not needed (too large file)
+  // Remove unnecessary path because it's not needed (too large file)
   if (updatedSchema.paths?.['/responses']) {
     delete updatedSchema.paths['/responses'];
   }
   if (updatedSchema.paths?.['/images/generations']) {
     delete updatedSchema.paths['/images/generations'];
+  }
+  if (updatedSchema.paths?.['/v1/video/generations']) {
+    delete updatedSchema.paths['/v1/video/generations'];
+  }
+  if (updatedSchema.paths?.['/video/generations']) {
+    delete updatedSchema.paths['/video/generations'];
   }
 
   Object.entries(updatedSchema.paths).map(([path, operation]) => {
