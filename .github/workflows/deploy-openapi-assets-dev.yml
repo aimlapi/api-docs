@@ -75,7 +75,26 @@ jobs:
           path: artifacts
 
       - name: Show artifacts (debug)
-        run: ls -la artifacts
+        run: ls -la artifacts || true
+
+      - name: Resolve artifact paths
+        id: find
+        run: |
+          set -euo pipefail
+          PACKFILE="${{ needs.pack.outputs.packfile_name }}"
+          PACK_PATH=$(find artifacts -type f -name "$PACKFILE" -print -quit || true)
+          LATEST_PATH=$(find artifacts -type f -name "openapi-latest.tgz" -print -quit || true)
+
+          echo "Found pack path: $PACK_PATH"
+          echo "Found latest path: $LATEST_PATH"
+          if [ -z "$PACK_PATH" ] || [ -z "$LATEST_PATH" ]; then
+            echo "::error::Missing artifact(s). Debug listing:"
+            ls -Rla artifacts || true
+            exit 1
+          fi
+
+          echo "pack_path=$PACK_PATH" >> "$GITHUB_OUTPUT"
+          echo "latest_path=$LATEST_PATH" >> "$GITHUB_OUTPUT"
 
       - name: Create or update tagged release and upload versioned tarball
         id: gh_release_tag
@@ -84,8 +103,18 @@ jobs:
           tag_name: "openapi-v${{ needs.pack.outputs.version }}"
           name: "openapi v${{ needs.pack.outputs.version }}"
           body: "Automated release for packages/openapi (pack + upload)"
-          # artifact downloads put files under ./artifacts/<filename>
-          files: artifacts/${{ needs.pack.outputs.packfile_name }}
+          files: ${{ steps.find.outputs.pack_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or update 'latest' release and upload stable tarball
+        id: gh_release_latest
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "openapi-latest"
+          name: "openapi latest"
+          body: "Automated release for packages/openapi (latest)"
+          files: ${{ steps.find.outputs.latest_path }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
