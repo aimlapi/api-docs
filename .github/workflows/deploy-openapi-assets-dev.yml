@@ -27,29 +27,26 @@ jobs:
         name: Pack @docs/openapi
         run: |
           cd packages/openapi
-
-          # Install, then create a packed tarball; capture version & filename
           npm ci
           VERSION=$(node -p "require('./package.json').version")
           PACKFILE=$(npm pack | tail -n1)
 
-          # export step outputs for later steps
+          # copy tarball to a stable "latest" filename
+          cp "$PACKFILE" "openapi-latest.tgz"
+
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          # NOTE: packfile_name is just the filename (e.g. openapi-1.2.3.tgz)
           echo "packfile_name=$PACKFILE" >> $GITHUB_OUTPUT
-          # tarball is the absolute path to the produced file
           echo "tarball=$PWD/$PACKFILE" >> $GITHUB_OUTPUT
+          echo "latest_tarball=$PWD/openapi-latest.tgz" >> $GITHUB_OUTPUT
 
       - name: Create or update release and upload tarball
         id: gh_release
         uses: softprops/action-gh-release@v1
         with:
-          # tag format - adjust if you prefer plain "v${{ steps.pack.outputs.version }}"
           tag_name: "openapi-v${{ steps.pack.outputs.version }}"
           name: "openapi v${{ steps.pack.outputs.version }}"
           body: "Automated release for packages/openapi (pack + upload)"
-          # softprops accepts a whitespace or comma separated list of files/globs
-          files: ${{ steps.pack.outputs.tarball }}
+          files: ${{ steps.pack.outputs.tarball }} ${{ steps.pack.outputs.latest_tarball }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
