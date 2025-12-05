@@ -1,0 +1,78 @@
+name: Deploy Openapi Assets
+
+on:
+  push:
+    branches: [feat-openapi-package]
+    paths:
+      - "packages/openapi/**"
+
+jobs:
+  deploy-package:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      # we need 'contents: write' to create releases & upload assets
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - id: pack
+        name: Pack @docs/openapi
+        # run from repo root but operate on packages/openapi
+        run: |
+          cd packages/openapi
+
+          # install, then create a packed tarball; capture version & filename
+          npm ci
+          VERSION=$(node -p "require('./package.json').version")
+          PACKFILE=$(npm pack | tail -n1)
+
+          # export step outputs for later steps
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "packfile_name=$PACKFILE" >> $GITHUB_OUTPUT
+          echo "tarball=$PWD/$PACKFILE" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          # tag and release name; adjust prefix if you prefer
+          tag_name: "openapi-v${{ steps.pack.outputs.version }}"
+          release_name: "openapi v${{ steps.pack.outputs.version }}"
+          body: "Automated release for packages/openapi (pack + upload)"
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload tarball to release
+        uses: actions/upload-release-asset@v2
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.pack.outputs.tarball }}
+          asset_name: ${{ steps.pack.outputs.packfile_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  rebuild-schema:
+    runs-on: ubuntu-latest
+    environment: production
+    needs:
+      - deploy-package
+    steps:
+      - name: Trigger autoupdate swagger
+        env:
+          GH_ORG_ACCESS_TOKEN: ${{ secrets.GH_ORG_ACCESS_TOKEN }}
+          OPENAPI_REPO: ${{ secrets.OPENAPI_REPO }}
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer $GH_ORG_ACCESS_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/$OPENAPI_REPO/dispatches \
+            -d '{"event_type":"api-docs-release"}'
