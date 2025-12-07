@@ -1,54 +1,47 @@
-# video-v2.6-pro-text-to-video
+# video-v2.6-pro-image-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `klingai/video-v2-6-pro-text-to-video`
+* `klingai/video-v2-6-pro-image-to-video`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/klingai/video-v2-6-pro-text-to-video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/klingai/video-v2-6-pro-image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-A high-end AI system for producing cinematic, high-fidelity videos from text prompts, featuring native audio generation and smooth, natural motion. The flagship Kling model as of early December 2025.
+A high-end AI system for producing cinematic, high-fidelity videos from text prompts and reference images, featuring native audio generation and smooth, natural motion. The flagship Kling model as of early December 2025.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
+## API Schemas
 
 Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-Below, you can find both corresponding API schemas.
-
-</details>
-
-## API Schemas
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
 
 ### Create a video generation task and send it to the server
 
-{% openapi-operation spec="video-v2-6-pro-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v2-6-pro-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-text-to-video.json)
+{% openapi-operation spec="video-v2-6-pro-image-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI video-v2-6-pro-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
+[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -68,19 +61,20 @@ base_url = "https://api.aimlapi.com/v2"
 
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = f"{base_url}/video/generations"
+    url = f"{base_url}/generate/video/kling/generation"
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
 
     data = {
-         "model": "klingai/video-v2-6-pro-text-to-video",
-        "prompt": "A cheerful white raccoon running through a sequoia forest",
-        "aspect_ratio": "16:9",
-        "duration": "5"
+        "model": "klingai/video-v2-6-pro-image-to-video",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "duration": "5",       
     }
  
     response = requests.post(url, json=data, headers=headers)
+    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
@@ -90,7 +84,7 @@ def generate_video():
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = f"{base_url}/video/generations"
+    url = f"{base_url}/generate/video/kling/generation"
     params = {
         "generation_id": gen_id,
     }
@@ -149,10 +143,7 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
-Generation ID:   bfb9eca8-178f-41ca-a1f1-6e4551157a0b:klingai/video-v2-6-pro-text-to-video
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
+Generation ID:   27f25c85-e9db-44e9-909a-0c3ceb35cdd9:klingai/video-v2-6-pro-image-to-video
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
@@ -161,14 +152,14 @@ Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: completed
-Processing complete:/n {'id': 'bfb9eca8-178f-41ca-a1f1-6e4551157a0b:klingai/video-v2-6-pro-text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eb06/XtWjnJNjQLBMwJbBz4WcF_output.mp4'}}
+Processing complete:/n {'id': '27f25c85-e9db-44e9-909a-0c3ceb35cdd9:klingai/video-v2-6-pro-image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eaeb/4JST2nBT5v7zbzIy6RlmW_output.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 2 min 32 sec.
+**Processing time**: \~ 1 min 50 sec.
 
-**Generated video** (1920x1080, with sound):
+**Generated video** (1180x1756, with sound):
 
-{% embed url="https://drive.google.com/file/d/1hc9nwAaoefJi3mglf3vWztoDHZNV4z2O/view" %}
+{% embed url="https://drive.google.com/file/d/1q5fWg4Qm92-tSOFPV93UtbMikfb6k0Ma/view" %}
