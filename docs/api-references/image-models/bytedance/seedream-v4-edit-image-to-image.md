@@ -1,4 +1,4 @@
-# Seedream v4 Edit (Image-to-image)
+# Seedream 4.0 Edit (Image-to-image)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/bytedance/seedream-v4-edit" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
