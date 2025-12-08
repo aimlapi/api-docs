@@ -9,11 +9,11 @@ export default {
     desc: `The object type.`,
   },
   role: {
-    desc: `The role of the entity that is creating the Message`,
+    desc: `The role of the entity that is creating the Message.`,
   },
   content: {
     text: {
-      desc: `The text contents of the Message`,
+      desc: `The text contents of the Message.`,
     },
     array: {
       desc: `An array of content parts with a defined type, each can be of type text or images can be passed with image_url or image_file`,
