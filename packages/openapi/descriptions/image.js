@@ -19,6 +19,7 @@ export default {
       desc: `Optional fixed seed for repeatable results.`,
     },
   },
+
   image_size: {
     width_height_32: {
       desc: `For both height and width, the value must be a multiple of 32.`,
