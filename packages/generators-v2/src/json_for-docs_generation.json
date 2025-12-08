@@ -1,24 +1,14 @@
 [
   {
-    "name": "google/gemini-3-pro-image-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview",
-    "alias": "gemini-3-pro-image-preview",
-    "models": ["google/nano-banana-pro", "google/gemini-3-pro-image-preview"],
+    "name": "bytedance/seedream-4-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-4-5",
+    "alias": "seedream-4-5",
     "category": "image-models",
-    "vendor": "Google",
-    "codeSamples": "text-to-image"
-  },
-  {
-    "name": "google/gemini-3-pro-image-preview-edit",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview-edit",
-    "alias": "gemini-3-pro-image-preview-edit",
-    "models": ["google/nano-banana-pro-edit", "google/gemini-3-pro-image-preview-edit"],
-    "category": "image-models",
-    "vendor": "Google",
+    "vendor": "ByteDance",
     "codeSamples": "custom",
     "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "google/nano-banana-pro-edit",
+        "model": "bytedance/seedream-4-5",
         "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
         "image_urls": [
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
