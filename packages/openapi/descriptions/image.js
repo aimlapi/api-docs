@@ -72,6 +72,9 @@ export default {
     uso: {
       desc: `An array of up to 3 image URLs. The first image is always treated as the primary input for image-to-image generation, while the remaining images (if provided) serve as visual style references for the output.`,
     },
+    nano_banana: {
+      desc: `List of URLs or local Base64 encoded images to edit. Supports up to 14 images.`,
+    },
   },
   do_remove_background: {
     desc: `Enables removing the background from the input image.`,
