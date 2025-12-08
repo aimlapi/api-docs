@@ -191,4 +191,16 @@ If transparent, the output format needs to support transparency, so it should be
   resolution: {
     desc: `The resolution of the output image.`,
   },
+  front_image_url: {
+    desc: `The URL or Base64-encoded local image representing the front view of the object.`,
+  },
+  left_image_url: {
+    desc: `The URL or Base64-encoded local image representing the left-side view of the object.`,
+  },
+  back_image_url: {
+    desc: `The URL or Base64-encoded local image representing the back view of the object.`,
+  },
+  right_image_url: {
+    desc: `The URL or Base64-encoded local image representing the right-side view of the object.`,
+  },
 };
