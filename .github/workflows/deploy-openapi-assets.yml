@@ -4,12 +4,125 @@ on:
   push:
     branches: [main]
     paths:
-      - 'packages/openapi/**'
+      - "packages/openapi/**"
 
 jobs:
-  trigger:
+  pack:
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.set-outputs.outputs.version }}
+      packfile_name: ${{ steps.set-outputs.outputs.packfile_name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - id: set-outputs
+        name: Pack @docs/openapi and upload artifacts
+        run: |
+          set -euo pipefail
+          cd packages/openapi
+
+          echo "Working dir: $(pwd)"
+          cat package.json
+
+          npm ci
+
+          # npm pack prints the filename; grab the last non-empty line
+          PACKFILE=$(npm pack | sed -n '/./p' | tail -n1)
+          echo "Packed file: $PACKFILE"
+
+          # create stable 'latest' name
+          LATEST_NAME="openapi-latest.tgz"
+          cp -f "$PACKFILE" "$LATEST_NAME"
+
+          # ensure files exist
+          ls -la
+
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "packfile_name=$PACKFILE" >> "$GITHUB_OUTPUT"
+
+      - name: Upload tarballs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openapi-tarballs
+          path: |
+            packages/openapi/${{ steps.set-outputs.outputs.packfile_name }}
+            packages/openapi/openapi-latest.tgz
+
+  release-openapi-packages:
+    runs-on: ubuntu-latest
+    needs: pack
+    environment: production
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout (needed for workspace)
+        uses: actions/checkout@v4
+
+      - name: Download packed artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: openapi-tarballs
+          path: artifacts
+
+      - name: Show artifacts (debug)
+        run: ls -la artifacts || true
+
+      - name: Resolve artifact paths
+        id: find
+        run: |
+          set -euo pipefail
+          PACKFILE="${{ needs.pack.outputs.packfile_name }}"
+          PACK_PATH=$(find artifacts -type f -name "$PACKFILE" -print -quit || true)
+          LATEST_PATH=$(find artifacts -type f -name "openapi-latest.tgz" -print -quit || true)
+
+          echo "Found pack path: $PACK_PATH"
+          echo "Found latest path: $LATEST_PATH"
+          if [ -z "$PACK_PATH" ] || [ -z "$LATEST_PATH" ]; then
+            echo "::error::Missing artifact(s). Debug listing:"
+            ls -Rla artifacts || true
+            exit 1
+          fi
+
+          echo "pack_path=$PACK_PATH" >> "$GITHUB_OUTPUT"
+          echo "latest_path=$LATEST_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update tagged release and upload versioned tarball
+        id: gh_release_tag
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "openapi-v${{ needs.pack.outputs.version }}"
+          name: "OpenAPI v${{ needs.pack.outputs.version }}"
+          body: "Automated release for packages/openapi (pack + upload)"
+          files: ${{ steps.find.outputs.pack_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or update 'latest' release and upload stable tarball
+        id: gh_release_latest
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "openapi-latest"
+          name: "OpenAPI"
+          body: "Automated release for packages/openapi (latest)"
+          files: ${{ steps.find.outputs.latest_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  rebuild-schema:
+    runs-on: ubuntu-latest
+    environment: production
+    needs:
+      - release-openapi-packages
     steps:
       - name: Trigger autoupdate swagger
         env:
