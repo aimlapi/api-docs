@@ -39,6 +39,33 @@
                     },
                     "description": "List of URLs or local Base64 encoded images to edit."
                   },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "21:9",
+                      "1:1",
+                      "4:3",
+                      "3:2",
+                      "2:3",
+                      "5:4",
+                      "4:5",
+                      "3:4",
+                      "16:9",
+                      "9:16"
+                    ],
+                    "default": "1:1",
+                    "description": "The aspect ratio of the generated image."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "1K",
+                      "2K",
+                      "4K"
+                    ],
+                    "default": "1K",
+                    "description": "The size of the generated image."
+                  },
                   "num_images": {
                     "type": "number",
                     "minimum": 1,
@@ -94,14 +121,14 @@
                           "type": "object",
                           "nullable": true,
                           "properties": {
-                            "tokens_used": {
+                            "credits_used": {
                               "type": "number",
                               "description": "The number of tokens consumed during generation.",
                               "example": 120000
                             }
                           },
                           "required": [
-                            "tokens_used"
+                            "credits_used"
                           ]
                         }
                       },
@@ -121,7 +148,7 @@
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }\n)\n\ndata = response.json()\nprint(data)"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }\n)\n\ndata = response.json()\nprint(data)"
           },
           {
             "lang": "cURL",
@@ -129,7 +156,7 @@
           },
           {
             "lang": "HTTP",
-            "source": "POST /v1/images/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"google/nano-banana-pro-edit\",\n  \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n  \"image_urls\": [\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n  ]\n}"
+            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"google/nano-banana-pro-edit\",\n  \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n  \"image_urls\": [\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n  ]\n}"
           }
         ]
       }
