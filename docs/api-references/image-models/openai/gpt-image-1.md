@@ -158,7 +158,7 @@ We obtained the following 1536x1024 image by running this code example (\~ 26 s)
 
 ### Edit image: Combine images
 
-Let's combine two images of different sizes using a simple prompt.
+Let's generate an image using two input images and a prompt that defines how they should be edited.
 
 <details>
 

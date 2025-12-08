@@ -29,32 +29,13 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-<details>
-
-<summary>Aspect ratio/Resolution Table</summary>
-
-| Aspect ratio | Resolution | Credits |
-| ------------ | ---------- | ------- |
-| 1:1          | 1024×1024  | 315 000 |
-| 2:3          | 832×1248   | 315 000 |
-| 3:2          | 1248×832   | 315 000 |
-| 3:4          | 864×1184   | 315 000 |
-| 4:3          | 1184×864   | 315 000 |
-| 4:5          | 896×1152   | 315 000 |
-| 5:4          | 1152×896   | 315 000 |
-| 9:16         | 768×1344   | 315 000 |
-| 16:9         | 1344×768   | 315 000 |
-| 21:9         | 1536×672   | 315 000 |
-
-</details>
-
 {% openapi-operation spec="gemini-3-pro-image-preview-edit" path="/v1/images/generations" method="post" %}
 [OpenAPI gemini-3-pro-image-preview-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-3-pro-image-preview-edit.json)
 {% endopenapi-operation %}
 
 ## Quick Example
 
-Let's generate an image of the specified size using a simple prompt.
+Let's generate an image of the specified size using two input images and a prompt that defines how they should be edited.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -78,6 +59,8 @@ def main():
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
             ],
             "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+            "aspect_ratio": "16:9",
+            "resolution": "1K"
         }
     )
 
@@ -108,6 +91,8 @@ async function main() {
                 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
         ],
         prompt: 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.',
+        aspect_ratio: '1:1',
+        resolution: '1K'
       }),
     });
 }
@@ -147,3 +132,7 @@ main();
 </details>
 
 <table data-full-width="true"><thead><tr><th width="389.7999267578125" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/gemini-3-pro-image-preview-edit.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+
+Here’s an example of the output using alternative `resolution` and `aspect_ratio` parameters:
+
+<figure><img src="../../../.gitbook/assets/nano-banana-pro-edit_output2.png" alt=""><figcaption><p><code>"aspect_ratio": "16:9"</code>,  <code>"resolution": "2K"</code></p></figcaption></figure>

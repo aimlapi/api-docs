@@ -30,7 +30,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## Quick Example
 
-Let's generate an image of the specified size using a simple prompt.
+Let's generate an image using two input images and a prompt that defines how they should be edited.
 
 {% tabs %}
 {% tab title="Python" %}

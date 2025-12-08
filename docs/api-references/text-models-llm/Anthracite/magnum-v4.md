@@ -81,8 +81,7 @@ response = requests.post(
                 "role":"user",
                 "content":"Hello"  # insert your prompt here, instead of Hello
             }
-        ],
-        "enable_thinking": False
+        ]
     }
 )
 

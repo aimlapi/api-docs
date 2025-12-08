@@ -22,11 +22,11 @@ Adapted from the official SillyTavern [README / Installation](https://github.com
 ### Windows (Recommended: SillyTavern Launcher)
 
 {% hint style="warning" %}
-<mark style="color:$primary;">**Warning:**</mark>
+**Warning:**
 
-* <mark style="color:$primary;">Do</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**not**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">install into any Windows‑controlled folder (Program Files, System32, etc.).</mark>
-* <mark style="color:$primary;">Do</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**not**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">run</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">`Start.bat`</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">with administrator permissions.</mark>
-* <mark style="color:$primary;">Windows 7 is</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**not**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">supported (requires Node.js 18.16+).</mark>
+* Do **not** install into any Windows‑controlled folder (Program Files, System32, etc.).
+* Do **not** run `Start.bat` with administrator permissions.
+* Windows 7 is **not** supported (requires Node.js 18.16+).
 {% endhint %}
 
 1. Make sure **Node.js** (latest LTS) and **Git** are installed.
@@ -38,13 +38,15 @@ Adapted from the official SillyTavern [README / Installation](https://github.com
 3. In **File Explorer**, navigate to a non‑system folder (e.g. `C:\SillyTavern`), click the address bar, type `cmd` and press Enter.
 4.  Clone the release branch and launch SillyTavern:
 
-    {% code overflow="wrap" %}
+    \{% code overflow="wrap" %\}
+
     ```bash
     git clone https://github.com/SillyTavern/SillyTavern -b release
     cd SillyTavern
     start Start.bat
     ```
-    {% endcode %}
+
+    \{% endcode %\}
 5. After the installer finishes, a browser window will open with the SillyTavern interface.
 
 ***

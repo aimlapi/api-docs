@@ -48,8 +48,8 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.",
-            "model": "recraft-v3"
+            "model": "recraft-v3",
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
         }
     )
 

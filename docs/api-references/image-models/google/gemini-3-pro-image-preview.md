@@ -54,7 +54,9 @@ def main():
         },
         json={
             "model": "google/nano-banana-pro",
-            "prompt": "Racoon eating ice-cream"
+            "prompt": "Racoon eating ice-cream",
+            "aspect_ratio": "1:1",
+            "resolution": "1K"
         }
     )
 
@@ -81,7 +83,8 @@ async function main() {
     body: JSON.stringify({
       model: 'google/nano-banana-pro',
       prompt: 'Racoon eating ice-cream',
-      aspect_ratio: '16:9'
+      aspect_ratio: '1:1',
+      resolution: '1K'
     }),
   });
 
@@ -125,4 +128,8 @@ main();
 
 So we obtained the following 1024x1024 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/oeX2RJ3jPIKcBueLZSAGL.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism.<br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/oeX2RJ3jPIKcBueLZSAGL.png" alt=""><figcaption><p><code>"aspect_ratio": "1:1"</code>,  <code>"resolution": "1K"</code></p></figcaption></figure>
+
+Here’s an example of the output using alternative `resolution` and `aspect_ratio` parameters:
+
+<figure><img src="../../../.gitbook/assets/nanobananapro_output.png" alt=""><figcaption><p><code>"aspect_ratio": "16:9"</code>,  <code>"resolution": "2K"</code></p></figcaption></figure>

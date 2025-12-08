@@ -30,7 +30,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## Quick Example
 
-Let's generate a new image using the one from the [flux/dev Quick Example](flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
+Let's generate an image using two input images and a prompt that defines how they should be edited.
 
 {% tabs %}
 {% tab title="Python" %}
