@@ -37,7 +37,7 @@
                       "type": "string",
                       "format": "uri"
                     },
-                    "description": "List of URLs or local Base64 encoded images to edit."
+                    "description": "List of URLs or local Base64 encoded images to edit. Supports up to 14 images."
                   },
                   "aspect_ratio": {
                     "type": "string",
