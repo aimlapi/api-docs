@@ -1,3 +1,8 @@
 [
-
+  {
+    "name": "veo2/image-to-video",
+    "alias": "veo2-image-to-video",
+    "category": "video-models",
+    "vendor": "Google"
+  }
 ]
