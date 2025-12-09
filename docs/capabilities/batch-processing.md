@@ -272,7 +272,9 @@ Raw response:
 
 ## Cancel a specific message batch
 
-\{% openapi-operation spec="batch-cancel" path="/v1/batches/cancel/{batch\_id}" method="post" %\} [OpenAPI batch-cancel](https://api.aimlapi.com/docs-public-yaml) \{% endopenapi-operation %\}
+{% openapi-operation spec="batch-cancel-2" path="/v1/batches/cancel/{batch_id}" method="post" %}
+[OpenAPI batch-cancel-2](https://api.aimlapi.com/docs-public-yaml)
+{% endopenapi-operation %}
 
 <details>
 
@@ -282,11 +284,11 @@ Raw response:
 
 \`\`python import requests import json
 
-#### Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>
+**Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>**
 
 API\_KEY = "\<YOUR\_AIMLAPI\_KEY>" BASE\_URL = "https://api.aimlapi.com/v1"
 
-#### Insert your batch\_id here
+**Insert your batch\_id here**
 
 batch\_id = "msgbatch\_01McVJYhQd3Wiuqrac6y9PrX"
 
