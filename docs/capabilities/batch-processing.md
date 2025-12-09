@@ -280,35 +280,42 @@ Raw response:
 
 <summary>Code Example (Python)</summary>
 
-\`
+```python
+import requests
+import json
 
-\`\`python import requests import json
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+API_KEY = "<YOUR_AIMLAPI_KEY>"
+BASE_URL = "https://api.aimlapi.com/v1"
 
-**Insert your AIML API Key instead of \<YOUR\_AIMLAPI\_KEY>**
+# Insert your batch_id here
+batch_id = "msgbatch_01McVJYhQd3Wiuqrac6y9PrX"
 
-API\_KEY = "\<YOUR\_AIMLAPI\_KEY>" BASE\_URL = "https://api.aimlapi.com/v1"
 
-**Insert your batch\_id here**
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
 
-batch\_id = "msgbatch\_01McVJYhQd3Wiuqrac6y9PrX"
-
-headers = { "Authorization": f"Bearer {API\_KEY}", "Content-Type": "application/json" }
-
-url = f"{BASE\_URL}/batches/cancel/{batch\_id}"
+url = f"{BASE_URL}/batches/cancel/{batch_id}"
 
 response = requests.post(url, headers=headers)
 
-if response.status\_code == 200: print("Batch canceled successfully:") data = response.json() print(json.dumps(data, indent=2, ensure\_ascii=False)) else: print(f"Failed to cancel batch ({response.status\_code}):") data = response.json() print(json.dumps(data, indent=2, ensure\_ascii=False))
-
-````
+if response.status_code == 200:
+    print("Batch canceled successfully:")
+    data = response.json()
+    print(json.dumps(data, indent=2, ensure_ascii=False))
+else:
+    data = response.json()
+    print(f"Failed to cancel batch ({response.status_code}):")
+    print(json.dumps(data, indent=2, ensure_ascii=False))
+```
 
 </details>
 
 <details>
 
 <summary>Response #1 (successfully cancelled)</summary>
-
-<div data-gb-custom-block data-tag="code" data-overflow='wrap'>
 
 ```json5
 Batch canceled successfully:
@@ -328,8 +335,8 @@ Batch canceled successfully:
   "expires_at": "2025-10-25T13:49:11.902215+00:00",
   "cancel_initiated_at": "2025-10-24T13:49:27.756971+00:00",
   "results_url": null
-
-````
+}
+```
 
 </details>
 
@@ -337,11 +344,8 @@ Batch canceled successfully:
 
 <summary>Response #2 (if already finished)</summary>
 
-\{% code overflow="wrap" %\}
-
-```
-
-json5
+{% code overflow="wrap" %}
+```json5
 Failed to cancel batch (400):
 {
   "requestId": "56277efa-58af-4db7-b45e-ebaa612b2af7",
@@ -351,5 +355,6 @@ Failed to cancel batch (400):
   "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Batch msgbatch_01McVJYhQd3Wiuqrac6y9PrX cannot be canceled because it has already finished processing.\"},\"request_id\":\"req_011CUS8e7LPi44CSuvwhSMsn\"}"
 }
 ```
+{% endcode %}
 
 </details>
