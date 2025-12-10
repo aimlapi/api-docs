@@ -1,7 +1,7 @@
 # v1-pro/image-to-video
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,12 +9,12 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/kling-video/v1/pro/image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-This model transforms static images into dynamic video clips. Offers more advanced camera controls than v1 Standard model, including options for tilt, pan, zoom, and roll movements. Results in richer details and more stable camera movements, enhancing the overall visual quality of the generated videos. Enhanced animations make elements like water flow and character movements appear more natural and engaging.
+This model transforms static images into dynamic video clips. Offers more advanced camera controls than [v1 Standard](v1-standard-image-to-video.md) model, including options for tilt, pan, zoom, and roll movements. Results in richer details and more stable camera movements, enhancing the overall visual quality of the generated videos. Enhanced animations make elements like water flow and character movements appear more natural and engaging.
 
 ## Setup your API Key
 
