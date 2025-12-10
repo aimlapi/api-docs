@@ -1,4 +1,4 @@
-# MythoMax L2 (13b)
+# MythoMax L2 (13B)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-This model represents a pinnacle in the evolution of LLMs, specifically tailored for storytelling and roleplaying, offering a deep connection with characters and plotlines that resonate.
+This model represents a pinnacle in the evolution of LLMs, purpose-built for storytelling and roleplaying, delivering a rich sense of connection with characters and narrative arcs.
 
 ## Setup your API Key
 
