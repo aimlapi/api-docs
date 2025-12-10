@@ -1,4 +1,7 @@
 export default {
+  test1: {
+    desc: 'desciption1'
+  },
   id: {
     desc: `The identifier, which can be referenced in API endpoints.`,
   },
