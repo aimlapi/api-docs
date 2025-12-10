@@ -16,7 +16,7 @@ Beyond code generation, AI models help with debugging, refactoring, and optimiza
 
 Let's go over this again: any [text chat model](../api-references/model-database.md#text-models-llm) can generate some code based on your request. However, here is a list of models specifically trained for this by the developer:
 
-* [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
+* [mistralai/codestral-2501](/broken/pages/n2KETBDuLLpV1lukLEHG)
 * [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
 * [alibaba/qwen3-next-80b-a3b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-instruct.md)

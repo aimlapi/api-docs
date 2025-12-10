@@ -108,7 +108,7 @@ These models have been tested by our team for compatibility with Cline integrati
 * [mistralai/Mistral-7B-Instruct-v0.3](../api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
-* [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
+* [mistralai/codestral-2501](/broken/pages/n2KETBDuLLpV1lukLEHG)
 * [google/gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [gemini-2.0-flash-exp](../api-references/text-models-llm/Google/gemini-2.0-flash-exp.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)

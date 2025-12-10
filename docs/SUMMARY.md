@@ -82,7 +82,6 @@
     * [m1](api-references/text-models-llm/minimax/m1.md)
     * [m2](api-references/text-models-llm/minimax/m2.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
-    * [codestral-2501](api-references/text-models-llm/Mistral-AI/codestral-2501.md)
     * [mistral-nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
     * [mistral-tiny](api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
     * [Mistral-7B-Instruct](api-references/text-models-llm/Mistral-AI/Mistral-7B-Instruct.md)
