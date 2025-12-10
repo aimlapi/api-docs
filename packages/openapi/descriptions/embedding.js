@@ -22,4 +22,7 @@ export default {
   
   Note: Specifying a title for RETRIEVAL_DOCUMENT provides better quality embeddings for retrieval.`,
   },
+  dimensions: {
+    desc: `The number of dimensions for the embedding. Default is 1024.`,
+  },
 };
