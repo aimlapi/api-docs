@@ -1,8 +1,8 @@
 [
   {
-    "name": "veo2/image-to-video",
-    "alias": "veo2-image-to-video",
+    "name": "alibaba/wan2.2-vace-fun-a14b-depth",
+    "alias": "wan2.2-i2v-plus",
     "category": "video-models",
-    "vendor": "Google"
+    "vendor": "Alibaba Cloud"
   }
 ]
