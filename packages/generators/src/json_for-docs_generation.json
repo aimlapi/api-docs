@@ -1,8 +1,14 @@
 [
   {
-    "name": "alibaba/wan2.2-vace-fun-a14b-depth",
-    "alias": "wan2.2-vace-fun-a14b-depth",
+    "name": "pixverse/v5.5/text-to-video",
+    "alias": "v5-5-text-to-video",
     "category": "video-models",
-    "vendor": "Alibaba Cloud"
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5.5/image-to-video",
+    "alias": "v5.5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
   }
 ]

@@ -1,10 +1,16 @@
 [
   {
-    "name": "gryphe/mythomax-l2-13b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gryphe/mythomax-l2-13b",
-    "alias": "mythomax-l2-13b",
-    "category": "text-models-llm",
-    "vendor": "Gryphe",
-    "codeSamples": "chat-completion"
+    "name": "pixverse/v5.5/text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/text-to-video",
+    "alias": "v5.5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
+  },
+  {
+    "name": "pixverse/v5.5/image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/image-to-video",
+    "alias": "v5.5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse"
   }
 ]

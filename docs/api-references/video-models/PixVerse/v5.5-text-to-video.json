@@ -1,0 +1,212 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "pixverse/v5.5/text-to-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "16:9",
+                      "4:3",
+                      "1:1",
+                      "3:4",
+                      "9:16"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated video."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "360p",
+                      "540p",
+                      "720p",
+                      "1080p"
+                    ],
+                    "default": "720p",
+                    "description": "An enumeration where the short side of the video frame determines the resolution."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The output video length in seconds. The 1080p quality option does not support 8-second videos.",
+                    "enum": [
+                      5,
+                      8,
+                      10
+                    ],
+                    "default": "5"
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "description": "The description of elements to avoid in the generated video."
+                  },
+                  "style": {
+                    "type": "string",
+                    "enum": [
+                      "anime",
+                      "3d_animation",
+                      "clay",
+                      "comic",
+                      "cyberpunk"
+                    ],
+                    "description": "The style of the generated video."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "description": "Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen."
+                  },
+                  "generate_audio_switch": {
+                    "type": "boolean",
+                    "description": "Audio switch. Controls whether the video has audio. true: Audio on, false: Audio off"
+                  },
+                  "generate_multi_clip_switch": {
+                    "type": "boolean",
+                    "description": "Single or multi-clip switch. Controls single-clip and multi-clip generation modes. true: Multi-clip, false: Single-clip"
+                  },
+                  "thinking_type": {
+                    "type": "string",
+                    "enum": [
+                      "enabled",
+                      "disabled",
+                      "auto"
+                    ],
+                    "description": "Prompt reasoning enhancement. Controls whether the system should enhance your prompt with internal reasoning and optimization. \"enabled\": Turn on system-level optimization. \"disabled\": Turn off system-level optimization. \"auto\" or omitted: Let the model decide automatically"
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "pixverse/v5.5/text-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
