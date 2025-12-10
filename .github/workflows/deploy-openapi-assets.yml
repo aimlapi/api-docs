@@ -2,7 +2,7 @@ name: Deploy Openapi Assets
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat-openapi-package]
     paths:
       - "packages/openapi/**"
 
@@ -96,27 +96,36 @@ jobs:
           echo "pack_path=$PACK_PATH" >> "$GITHUB_OUTPUT"
           echo "latest_path=$LATEST_PATH" >> "$GITHUB_OUTPUT"
 
-      - name: Create or update tagged release and upload versioned tarball
-        id: gh_release_tag
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: "openapi-v${{ needs.pack.outputs.version }}"
-          name: "openapi v${{ needs.pack.outputs.version }}"
-          body: "Automated release for packages/openapi (pack + upload)"
-          files: ${{ steps.find.outputs.pack_path }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Ensure GH CLI available
+        run: gh --version || (echo "gh not installed" && exit 1)
 
-      - name: Create or update 'latest' release and upload stable tarball
-        id: gh_release_latest
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: "openapi-latest"
-          name: "openapi latest"
-          body: "Automated release for packages/openapi (latest)"
-          files: ${{ steps.find.outputs.latest_path }}
+      - name: Upload versioned asset (replace if exists)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="openapi-v${{ needs.pack.outputs.version }}"
+          ASSET="artifacts/${{ needs.pack.outputs.packfile_name }}"
+
+          # create release if missing
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "OpenAPI v${{ needs.pack.outputs.version }}" --notes "Automated release"
+          fi
+
+          # upload and overwrite existing asset with same name
+          gh release upload "$TAG" "$ASSET" --clobber
+
+      - name: Upload latest asset (replace if exists)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          LATEST_TAG="openapi-latest"
+          LATEST_ASSET="artifacts/openapi-latest.tgz"
+
+          if ! gh release view "$LATEST_TAG" >/dev/null 2>&1; then
+            gh release create "$LATEST_TAG" --title "OpenAPI (latest)" --notes "Automated latest release"
+          fi
+
+          gh release upload "$LATEST_TAG" "$LATEST_ASSET" --clobber
 
   rebuild-schema:
     runs-on: ubuntu-latest
