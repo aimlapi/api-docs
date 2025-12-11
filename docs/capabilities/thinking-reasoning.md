@@ -70,6 +70,7 @@ Supported models:
 * [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)
 * [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
 * [openai/gpt-5-1](../api-references/text-models-llm/openai/gpt-5-1.md)
+* [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
 
 ***
 
