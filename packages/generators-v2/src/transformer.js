@@ -41,7 +41,7 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.chatCompletionAudioSample(options);
   } else if (options.codeSamples === 'image-models:prompt') {
     codeSample = codeSamples.textToImageSample(options);
-  } else if (options.codeSamples === 'image-models:image_url') {
+  } else if (options.codeSamples === 'image-models:image_url(s)') {
     codeSample = codeSamples.imageToImageSample(options, schema);
   } else if (options.codeSamples === 'image-models:image') {
     codeSample = codeSamples.gptImageEditSample(options);
