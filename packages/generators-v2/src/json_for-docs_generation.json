@@ -4,13 +4,15 @@
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/text-to-video",
     "alias": "v5.5/text-to-video",
     "category": "video-models",
-    "vendor": "PixVerse"
+    "vendor": "PixVerse",
+    "codeSamples": "video:video"
   },
   {
     "name": "pixverse/v5.5/image-to-video",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/image-to-video",
     "alias": "v5.5/image-to-video",
     "category": "video-models",
-    "vendor": "PixVerse"
+    "vendor": "PixVerse",
+    "codeSamples": "video:video"
   }
 ]
