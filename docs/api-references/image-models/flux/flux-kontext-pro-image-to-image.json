@@ -152,14 +152,14 @@
                           "type": "object",
                           "nullable": true,
                           "properties": {
-                            "tokens_used": {
+                            "credits_used": {
                               "type": "number",
                               "description": "The number of tokens consumed during generation.",
                               "example": 120000
                             }
                           },
                           "required": [
-                            "tokens_used"
+                            "credits_used"
                           ]
                         }
                       },

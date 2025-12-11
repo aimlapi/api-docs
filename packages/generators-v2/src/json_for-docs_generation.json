@@ -1,18 +1,18 @@
 [
   {
-    "name": "pixverse/v5.5/text-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/text-to-video",
-    "alias": "v5.5/text-to-video",
-    "category": "video-models",
-    "vendor": "PixVerse",
-    "codeSamples": "video:video"
+    "name": "bytedance/seedream-v4-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-edit",
+    "alias": "seedream-v4-edit",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:image_url"
   },
   {
-    "name": "pixverse/v5.5/image-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/image-to-video",
-    "alias": "v5.5/image-to-video",
-    "category": "video-models",
-    "vendor": "PixVerse",
-    "codeSamples": "video:video"
+    "name": "flux/kontext-pro/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/image-to-image",
+    "alias": "flux/kontext-pro/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url"
   }
 ]
