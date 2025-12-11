@@ -1,18 +1,26 @@
 [
   {
-    "name": "bytedance/seedream-v4-edit",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-edit",
-    "alias": "seedream-v4-edit",
-    "category": "image-models",
-    "vendor": "ByteDance",
-    "codeSamples": "image-models:image_url"
+    "name": "openai/gpt-5-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-2",
+    "alias": "gpt-5-2",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "chat-completion"
   },
   {
-    "name": "flux/kontext-pro/image-to-image",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/image-to-image",
-    "alias": "flux/kontext-pro/image-to-image",
-    "category": "image-models",
-    "vendor": "Flux",
-    "codeSamples": "image-models:image_url"
+    "name": "openai/gpt-5-2-chat-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-2-chat-latest",
+    "alias": "gpt-5-2-chat-latest",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "openai/gpt-5-2-pro",
+    "url": "https://ai.aimlapi.com/docs-json?model=openai/gpt-5-2-pro&endpoint=openai/responses",
+    "alias": "gpt-5-2-pro",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "chat-completion"
   }
 ]
