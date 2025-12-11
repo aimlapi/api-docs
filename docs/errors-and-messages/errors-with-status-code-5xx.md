@@ -1,7 +1,5 @@
 # Errors with status code 5xx
 
-## Errors with status code 5xx
-
 These codes indicate issues on the server side.
 
 {% hint style="success" %}
