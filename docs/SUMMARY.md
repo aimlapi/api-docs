@@ -291,6 +291,8 @@
     * [v5/text-to-video](api-references/video-models/pixverse/v5-text-to-video.md)
     * [v5/image-to-video](api-references/video-models/pixverse/v5-image-to-video.md)
     * [v5/transition](api-references/video-models/pixverse/v5-transition.md)
+    * [v5.5/text-to-video](api-references/video-models/pixverse/v5-5-text-to-video.md)
+    * [v5.5/image-to-video](api-references/video-models/pixverse/v5-5-image-to-video.md)
   * [Runway](api-references/video-models/runway/README.md)
     * [gen3a\_turbo](api-references/video-models/runway/gen3a_turbo.md)
     * [gen4\_turbo](api-references/video-models/runway/gen4_turbo.md)

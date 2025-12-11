@@ -39,8 +39,8 @@ Below, you can find both corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-{% hint style="warning" %}
-The ratio/aspect\_ratio parameter is deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
+{% hint style="info" %}
+The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
 {% endhint %}
 
 {% openapi src="../../../.gitbook/assets/v1-pro-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}

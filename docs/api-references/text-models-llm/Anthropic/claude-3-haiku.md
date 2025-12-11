@@ -1,7 +1,7 @@
 # Claude 3 Haiku
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -12,7 +12,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/claude-3-haiku-20240307" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}

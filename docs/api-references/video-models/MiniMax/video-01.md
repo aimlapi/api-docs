@@ -1,7 +1,7 @@
 # video-01
 
 {% columns %}
-{% column %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -9,7 +9,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 {% endcolumn %}
 
-{% column %}
+{% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/video-01" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}

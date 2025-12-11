@@ -1,20 +1,29 @@
-# Veo 3 (Text-to-Video)
+---
+hidden: true
+noIndex: true
+---
+
+# v5.5/text-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/veo3`
+* `pixverse/v5.5/text-to-video`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/google/veo3" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/pixverse/v5.5/text-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model generates high-quality short videos from text or image prompts with significant advancements over its predecessor, [Veo2](veo2-text-to-video.md).
+This model provides faster text-to-video rendering with consistently sharp, realistic, and cinematic-quality results.
+
+## Setup your API Key
+
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 ## How to Make a Call
 
@@ -35,32 +44,25 @@ Below, you can find both corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a prompt.
+You can generate a video using this API. In the basic setup, you only need a prompt.\
+This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="veo3" path="/v2/generate/video/google/generation" method="post" %}
-[OpenAPI veo3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3.json)
+{% openapi-operation spec="v5-5-text-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI v5-5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5.5-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
+[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
-
-{% hint style="warning" %}
-This model produces highly detailed and natural-looking videos, so generation may take around 2 minutes for a 8-second video with audio.
-{% endhint %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -69,59 +71,55 @@ This model produces highly detailed and natural-looking videos, so generation ma
 import requests
 import time
 
-base_url = "https://api.aimlapi.com/v2"
 # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-aimlapi_key = "<YOUR_AIMLAPI_KEY>"
+api_key = "<YOUR_AIMLAPI_KEY>"
+base_url = "https://api.aimlapi.com/v2"
 
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = f"{base_url}/generate/video/google/generation"
+    url = f"{base_url}/video/generations"
     headers = {
-        "Authorization": f"Bearer {aimlapi_key}", 
+        "Authorization": f"Bearer {api_key}", 
     }
 
     data = {
-        "model": "google/veo3",
-        "prompt": '''
-A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-'''
+         "model": "pixverse/v5.5/text-to-video",
+        "prompt": "A cheerful white raccoon running through a sequoia forest",
+        "aspect_ratio": "16:9",
+        "duration": "5"
     }
  
     response = requests.post(url, json=data, headers=headers)
-    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        # print(response_data)
         return response_data
     
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = f"{base_url}/generate/video/google/generation"
+    url = f"{base_url}/video/generations"
     params = {
         "generation_id": gen_id,
     }
     
     headers = {
-        "Authorization": f"Bearer {aimlapi_key}", 
+        "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
         }
 
     response = requests.get(url, params=params, headers=headers)
-    # print("Generation:", response.json())
     return response.json()
 
 
-
 def main():
-     # Running video generation and getting a task id
+    # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
-    print("Gen_ID:  ", gen_id)
+    print("Generation ID:  ", gen_id)
 
-    # Trying to retrieve the video from the server every 10 sec
+    # Trying to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
@@ -137,8 +135,8 @@ def main():
             print("Status:", status)
 
             if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+                print("Still waiting... Checking again in 15 seconds.")
+                time.sleep(15)
             else:
                 print("Processing complete:/n", response_data)
                 return response_data
@@ -165,13 +163,15 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: "google/veo3",
+        model: "pixverse/v5.5/text-to-video",
         prompt: `
 A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.
-`
+`,
+        resolution: '1080p',
+        duration: 5,
     });
 
-    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);
     const options = {
         method: "POST",
         headers: {
@@ -206,7 +206,7 @@ A menacing evil dragon appears in a distance above the tallest mountain, then ru
 
 // Requesting the result of the task from the server using the generation_id
 function getVideo(genId, callback) {
-    const url = new URL(`${baseUrl}/generate/video/google/generation`);
+    const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);
     url.searchParams.append("generation_id", genId);
 
     const options = {
@@ -243,7 +243,7 @@ function main() {
         }
 
         const genId = genResponse.id;
-        console.log("Gen_ID:", genId);
+        console.log("Generation ID:", genId);
 
         const timeout = 1000 * 1000; // 1000 sec
         const interval = 10 * 1000; // 10 sec
@@ -289,44 +289,12 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Gen_ID:   df43b636-6b09-4b6d-bbd2-f710ac0a3cfd:veo3
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: completed
-Processing complete:/n {'id': 'df43b636-6b09-4b6d-bbd2-f710ac0a3cfd:veo3', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/tiger/R6LdSHLx937-O7ra31ySQ_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 3716781}}
 ```
 {% endcode %}
 
 </details>
 
-**Original (with sound)**: [1280x720](https://drive.google.com/file/d/1P9ZTV332Op4nhXM_KM4imdyOI-9Irl58/view?usp=sharing)
+**Processing time**: \~ 2 min 32 sec.
 
-**Low-res GIF preview**:
+**Generated video** (1920x1080, with sound):
 
-<figure><img src="../../../.gitbook/assets/ezgif-374c7b0f8e0e06.gif" alt=""><figcaption><p><code>"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."</code></p></figcaption></figure>

@@ -74,7 +74,7 @@ def generate_video():
     }
 
     data = {
-         "model": "klingai/video-v2-6-pro-text-to-video",
+        "model": "klingai/video-v2-6-pro-text-to-video",
         "prompt": "A cheerful white raccoon running through a sequoia forest",
         "aspect_ratio": "16:9",
         "duration": "5"
