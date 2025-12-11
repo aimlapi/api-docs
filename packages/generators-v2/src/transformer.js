@@ -39,14 +39,16 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.chatCompletionSample(options);
   } else if (options.codeSamples === 'chat-completion-audio') {
     codeSample = codeSamples.chatCompletionAudioSample(options);
-  } else if (options.codeSamples === 'text-to-image') {
+  } else if (options.codeSamples === 'image-models:prompt') {
     codeSample = codeSamples.textToImageSample(options);
-  } else if (options.codeSamples === 'image-to-image') {
+  } else if (options.codeSamples === 'image-models:image_url') {
     codeSample = codeSamples.imageToImageSample(options, schema);
-  } else if (options.codeSamples === 'gpt-image-edit') {
+  } else if (options.codeSamples === 'image-models:image') {
     codeSample = codeSamples.gptImageEditSample(options);
   } else if (options.codeSamples === 'responses') {
     codeSample = codeSamples.responsesSample(options);
+  } else if (options.codeSamples.includes('video')) {
+    codeSample = codeSamples.videoSample(options, schema);
   } else if (options.codeSamples === 'custom' && options.customParams) {
     codeSample = codeSamples.customSample(options);
   }
