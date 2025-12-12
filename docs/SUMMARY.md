@@ -269,6 +269,7 @@
     * [avatar-pro](api-references/video-models/kling-ai/avatar-pro.md)
     * [video-v2.6-pro-text-to-video](api-references/video-models/kling-ai/video-v2-6-pro-text-to-video.md)
     * [video-v2.6-pro-image-to-video](api-references/video-models/kling-ai/video-v2.6-pro-image-to-video.md)
+    * [kling o1 models](api-references/video-models/kling-ai/kling-o1-models.md)
   * [Krea](api-references/video-models/krea/README.md)
     * [krea-wan-14b/text-to-video](api-references/video-models/krea/krea-wan-14b-text-to-video.md)
     * [krea-wan-14b/video-to-video](api-references/video-models/krea/krea-wan-14b-video-to-video.md)
