@@ -3,7 +3,7 @@
   "info": {
     "title": "DeepSeek-V3.2-Speciale - AI/ML API",
     "version": "1.0.0",
-    "description": "DeepSeek-V3.2-Speciale is an experimental reasoning LLM with a thinking-only mode, optimized for complex reasoning and long-context tasks up to 128K tokens. It offers improved accuracy on hard queries, supports tool calling and Chat Prefix/FIM completion per DeepSeek's spec, but is only available as a Speciale endpoint with limited availability."
+    "description": "DeepSeek-V3.2-Speciale is an experimental reasoning LLM with a thinking-only mode, optimized for complex reasoning and long-context tasks up to 128K tokens. It supports tool calling and Chat Prefix/FIM completion according to the DeepSeek specification and is provided as a time-limited \"Speciale\" endpoint."
   },
   "servers": [
     {
