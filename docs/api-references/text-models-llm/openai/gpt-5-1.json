@@ -3,7 +3,7 @@
   "info": {
     "title": "GPT-5.1 - AI/ML API",
     "version": "1.0.0",
-    "description": "GPT-5.1 is OpenAI’s next-generation flagship LLM optimized for speed and reasoning, with Chat Latest as an always-up-to-date alias and Codex variants specialized for programming and agentic workflows, including a cheaper, lightweight Codex Mini for large-scale integrations."
+    "description": "GPT-5.1 is OpenAI’s next-generation flagship model, improved in speed and reasoning. The family includes a stable chat alias, a Codex variant optimized for coding and agents, and a lightweight Codex Mini suited for high-volume integrations."
   },
   "servers": [
     {
