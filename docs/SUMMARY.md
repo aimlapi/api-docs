@@ -458,7 +458,7 @@
 
 ***
 
-* [📞 Contact Sales](https://calendly.com/marya-aimlapi/ai-ml-api-call)
+* [📞 Contact Sales](https://calendar.app.google/3UdCT1hwngze2yUv7)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 * [404 Model is deprecated](404-model-is-deprecated.md)
 
