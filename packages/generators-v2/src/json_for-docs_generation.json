@@ -1,10 +1,10 @@
 [
   {
-    "name": "openai/gpt-5-2-pro",
-    "url": "https://ai.aimlapi.com/docs-json?model=openai/gpt-5-2-pro&endpoint=openai/responses",
-    "alias": "gpt-5-2-pro-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
+    "name": "klingai/video-o1-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-image-to-video",
+    "alias": "video-o1-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
   }
 ]
