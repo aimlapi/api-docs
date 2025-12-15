@@ -40,8 +40,8 @@ Below, you can find two corresponding API schemas and an example with both endpo
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="kling-fetch" path="/v2/generate/video/kling/generation" method="get" %}
-[OpenAPI kling-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1.6-standard-effects-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
 {% endopenapi-operation %}
 
 ## Code Example

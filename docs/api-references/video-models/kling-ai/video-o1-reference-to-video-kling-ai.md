@@ -3,7 +3,7 @@ hidden: true
 noIndex: true
 ---
 
-# kling video o1 reference to video kling ai
+# video o1 reference to video kling ai
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -61,6 +61,10 @@ If you need a more detailed walkthrough for setting up your development environm
 
 {% openapi-operation spec="v2.1-standard-image-to-video-pair" path="/v2/generate/video/kling/generation" method="get" %}
 [Broken link](/broken/openapi/v2.1-standard-image-to-video-pair)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="d1m7-auto-kling-video-o1-reference-to-video-kling-ai" path="/v2/generate/video/kling/generation" method="get" %}
+[Broken link](/broken/openapi/d1m7-auto-kling-video-o1-reference-to-video-kling-ai)
 {% endopenapi-operation %}
 
 ## Code Example
