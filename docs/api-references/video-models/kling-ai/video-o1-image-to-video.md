@@ -3,52 +3,41 @@ hidden: true
 noIndex: true
 ---
 
-# v5.5/text-to-video
+# video-o1-image-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `pixverse/v5.5/text-to-video`
+* `klingai/video-o1-image-to-video`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/pixverse/v5.5/text-to-video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/klingai/video-o1-image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-This model provides faster text-to-video rendering with consistently sharp, realistic, and cinematic-quality results.
+.
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## How to Make a Call
-
-<details>
-
-<summary>Step-by-Step Instructions</summary>
+## API Schemas
 
 Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-Below, you can find both corresponding API schemas.
-
-</details>
-
-## API Schemas
+Below, you can find two corresponding API schemas and an example with both endpoint calls.
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a prompt.\
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% openapi-operation spec="v5-5-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI v5-5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5.5-text-to-video.json)
+{% openapi-operation spec="video-v2-6-pro-image-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI video-v2-6-pro-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -56,13 +45,13 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
-[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
 {% endopenapi-operation %}
 
-## Full Example: Generating and Retrieving the Video From the Server
+## Code Example
 
-The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -83,19 +72,19 @@ def generate_video():
     }
 
     data = {
-         "model": "pixverse/v5.5/text-to-video",
-        "prompt": "A cheerful white raccoon running through a sequoia forest",
-        "aspect_ratio": "16:9",
-        "duration": "5"
+        "model": "klingai/video-o1-image-to-video",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "duration": "5",       
     }
  
     response = requests.post(url, json=data, headers=headers)
+    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
         return response_data
-    
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
@@ -114,7 +103,7 @@ def get_video(gen_id):
 
 
 def main():
-    # Running video generation and getting a task id
+     # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
@@ -150,13 +139,6 @@ if __name__ == "__main__":
 ```
 {% endcode %}
 {% endtab %}
-
-{% tab title="JavaScript" %}
-{% code overflow="wrap" %}
-```javascript
-```
-{% endcode %}
-{% endtab %}
 {% endtabs %}
 
 <details>
@@ -170,7 +152,6 @@ if __name__ == "__main__":
 
 </details>
 
-**Processing time**: \~ 2 min 32 sec.
+**Processing time**: \~ 1 min 50 sec.
 
-**Generated video** (1920x1080, with sound):
-
+**Generated video** (1180x1756, with sound):

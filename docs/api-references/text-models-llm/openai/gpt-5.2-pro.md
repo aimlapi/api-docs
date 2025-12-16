@@ -16,9 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-{% openapi-operation spec="gpt-5-2-pro-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-2-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-pro-RESPONSES.json)
-{% endopenapi-operation %}
+The Pro version is built for more challenging tasks and is available only through the Responses API, as it supports multi-turn interactions before generating a response.
 
 ## How to Make a Call
 
@@ -56,7 +54,21 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
+<details>
 
+<summary>Chat Completions vs. Responses API</summary>
+
+**Chat Completions**\
+The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
+
+**Responses**\
+The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
+
+</details>
+
+{% openapi-operation spec="gpt-5-2-pro-RESPONSES" path="/v1/responses" method="post" %}
+[OpenAPI gpt-5-2-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-pro-RESPONSES.json)
+{% endopenapi-operation %}
 
 ## Code Example: Using /responses Endpoint
 
