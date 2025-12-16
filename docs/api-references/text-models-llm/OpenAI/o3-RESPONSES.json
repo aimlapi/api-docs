@@ -31206,7 +31206,7 @@
           },
           {
             "lang": "HTTP",
-            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"openai/o3-2025-04-16\",\n  \"input\": \"Hello\"\n}"
+            "source": "POST /v1/responses HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"openai/o3-2025-04-16\",\n  \"input\": \"Hello\"\n}"
           }
         ]
       }
