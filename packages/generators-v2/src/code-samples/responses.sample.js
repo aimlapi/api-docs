@@ -51,8 +51,8 @@ print(data)`,
     },
     {
       lang: 'HTTP',
-      source: `POST / HTTP/1.1
-Host: test.com
+      source: `POST /v1/responses HTTP/1.1
+Host: api.aimlapi.com
 Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
 Accept: */*
