@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "AIML API",
-    "version": "1.0.0"
+    "title": "Seedream 4.5 - AI/ML API",
+    "version": "1.0.0",
+    "description": "Seedream 4.5 is ByteDance’s latest high‑end image generation model focused on commercial visual production, with improved editing consistency, portrait quality, small text rendering, and multi‑image fusion for complex scenes and creative content."
   },
   "servers": [
     {
