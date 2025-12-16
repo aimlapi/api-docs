@@ -411,6 +411,8 @@
     * [Find the Weather](solutions/ai-search-engine/find-the-weather.md)
     * [Find a Local Map](solutions/ai-search-engine/find-a-local-map.md)
     * [Get a Knowledge Structure](solutions/ai-search-engine/get-a-knowledge-structure.md)
+* [Magic](solutions/magic/README.md)
+  * [Example](solutions/magic/example.md)
 * [OpenAI](solutions/openai/README.md)
   * [Assistants](solutions/openai/assistants/README.md)
     * [Assistant API](solutions/openai/assistants/assistant-api.md)
