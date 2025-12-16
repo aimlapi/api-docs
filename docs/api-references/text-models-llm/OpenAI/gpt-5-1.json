@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "AIML API",
-    "version": "1.0.0"
+    "title": "GPT-5.1 - AI/ML API",
+    "version": "1.0.0",
+    "description": "GPT-5.1 is OpenAI’s next-generation core model with improved speed and reasoning, available in standard, latest-alias, and code-optimized Codex variants including a cheaper Codex Mini for high-volume workloads."
   },
   "servers": [
     {
