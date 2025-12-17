@@ -192,6 +192,7 @@
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/OpenAI/dall-e-3.md)
     * [gpt-image-1](api-references/image-models/openai/gpt-image-1.md)
+    * [gpt-image-1-5](api-references/image-models/openai/gpt-image-1-5.md)
   * [RecraftAI](api-references/image-models/RecraftAI/README.md)
     * [Recraft v3](api-references/image-models/RecraftAI/recraft-v3.md)
   * [Reve](api-references/image-models/reve/README.md)
