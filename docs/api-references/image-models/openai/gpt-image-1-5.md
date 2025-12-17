@@ -135,3 +135,8 @@ main();
 {% endcode %}
 
 </details>
+
+We obtained the following 1536×1024 image by running this code example (\~26 s):
+
+<figure><img src="../../../.gitbook/assets/1765998570696-6a7fa56d-b5ba-4f29-ba20-501aa08a4273.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+
