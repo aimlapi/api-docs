@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "pixverse/v5.5/text-to-video"
+                      "pixverse/v5-5-text-to-video"
                     ]
                   },
                   "prompt": {
@@ -107,7 +107,7 @@
                   "model",
                   "prompt"
                 ],
-                "title": "pixverse/v5.5/text-to-video"
+                "title": "pixverse/v5-5-text-to-video"
               }
             }
           }
