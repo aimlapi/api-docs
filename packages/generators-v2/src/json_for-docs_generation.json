@@ -1,18 +1,242 @@
 [
   {
-    "name": "pixverse/v5-5-text-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/text-to-video",
-    "alias": "v5.5/text-to-video",
+    "name": "kling-video/v1/standard/image-to-video",
+    "alias": "v1-standard/image-to-video",
     "category": "video-models",
-    "vendor": "PixVerse",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/standard/image-to-video",
     "codeSamples": "video:video"
   },
   {
-    "name": "pixverse/v5-5-image-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/image-to-video",
-    "alias": "v5.5/image-to-video",
+    "name": "kling-video/v1/standard/text-to-video",
+    "alias": "v1-standard/text-to-video",
     "category": "video-models",
-    "vendor": "PixVerse",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/standard/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/pro/image-to-video",
+    "alias": "v1-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/pro/text-to-video",
+    "alias": "v1-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/image-to-video",
+    "alias": "v1.6-standart/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standard/multi-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/multi-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/text-to-video",
+    "alias": "v1.6-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/pro/image-to-video",
+    "alias": "v1.6-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/pro/text-to-video",
+    "alias": "v1.6-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-standard-effects",
+    "alias": "v1.6-standard-effects",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/kling-video-v1.6-standard-effects",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-pro-effects",
+    "alias": "v1.6-pro-effects",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/kling-video-v1.6-pro-effects",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2-master-text-to-video",
+    "alias": "v2-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2-master-text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2-master-image-to-video",
+    "alias": "v2-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2-master-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.1-master-text-to-video",
+    "alias": "v2.1-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.1-master-text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.1-master-image-to-video",
+    "alias": "v2.1-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.1-master-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v2.1/standard/image-to-video",
+    "alias": "v2.1-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v2.1/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v2.1/pro/image-to-video",
+    "alias": "v2.1-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v2.1/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/image-to-video",
+    "alias": "v2.5-turbo/pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.5-turbo/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/text-to-video",
+    "alias": "v2.5-turbo/pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.5-turbo/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/avatar-standard",
+    "alias": "avatar-standard",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/avatar-standard",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-image-to-video",
+    "alias": "video-o1-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-reference-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-reference-to-video",
+    "alias": "video-o1-reference-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-video-to-video-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-video-to-video-edit",
+    "alias": "video-o1-video-to-video-edit",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-video-to-video-reference",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-video-to-video-reference",
+    "alias": "video-o1-video-to-video-reference",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v2-6-pro-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-image-to-video",
+    "alias": "video-v2-6-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v2-6-pro-text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-text-to-video",
+    "alias": "video-v2-6-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
     "codeSamples": "video:video"
   }
 ]
