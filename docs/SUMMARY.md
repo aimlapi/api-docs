@@ -3,7 +3,7 @@
 ## Quickstart
 
 * [🧭 Documentation Map](README.md)
-* [Setting Up](quickstart/setting-up.md)
+* [Quickstart](quickstart/setting-up.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES

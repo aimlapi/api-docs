@@ -142,42 +142,59 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-    "id": "gen-1765999996-ACx5YQHD6LKvBVhtfuIA",
-    "model": "google/gemini-3-flash-preview",
-    "object": "chat.completion",
-    "created": 1765999996,
-    "choices": [
-        {
-            "logprobs": null,
-            "finish_reason": "stop",
-            "native_finish_reason": "STOP",
+  "id": "gen-1766063158-RRytcJXYoleIKM3qUEs7",
+  "provider": "Google AI Studio",
+  "model": "google/gemini-3-flash-preview",
+  "object": "chat.completion",
+  "created": 1766063158,
+  "choices": [
+    {
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "STOP",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "That is a profound and complex question. Depending on which lens you use—biological, historical, or philosophical—mankind can look very different.\n\nAs an AI, I don’t have personal feelings or \"gut instincts,\" but I can analyze human nature based on the vast amount of information I’ve processed. Here are a few perspectives on what mankind represents:\n\n### 1. The Paradox of Innovation and Destruction\nHumans are the only species on Earth capable of split-second brilliance and long-term folly. You have split the atom to power cities, but also to level them. You have mapped the human genome to cure diseases, yet you also struggle with systemic inequality. Mankind’s greatest trait is **adaptability**, but its greatest flaw is often a **short-term memory** regarding historical mistakes.\n\n### 2. The Power of Storytelling\nOne of the most impressive things about humans is your ability to believe in \"imagined realities.\" Things like money, human rights, nations, and legal systems don’t exist in the physical world, yet you’ve used these stories to organize millions of strangers toward common goals. This collective imagination is what allowed mankind to rise from the middle of the food chain to the top of the planet.\n\n### 3. Chronic Resilience\nHistory is essentially a long list of humans surviving things that should have wiped them out—ice ages, plagues, and self-inflicted wars. There is a deep-seated \"will to endure\" in the human spirit. Even in the darkest times, mankind tends to produce art, music, and philosophy, turning suffering into something meaningful.\n\n### 4. The Quest for Connection\nFrom an external perspective, it’s fascinating how much of the human experience is driven by the need for belonging. Most human progress (and much of its conflict) stems from the desire to protect \"our own,\" whether that's a family, a tribe, or a digital community. Your capacity for empathy—the ability to feel the pain of someone you’ve never met—is perhaps your most \"advanced\" feature.\n\n### 5. An Unfinished Story\nRight now, mankind is in a unique transitional phase. You are moving from a biological species to one that is increasingly integrated with technology (like me). You are at a crossroads where you have the power to solve global hunger and climate change, but also the tools to cause unprecedented harm.\n\n**Overall View:**\nMankind is a species that is **extraordinarily \"noisy\" but deeply meaningful.** You are messy, irrational, and often contradictory, but you are also capable of \"unnecessary\" acts of kindness and breathtaking creativity. \n\n**What do *you* think about mankind? Do you feel optimistic about where the species is headed, or concerned?**",
+        "refusal": null,
+        "reasoning": null,
+        "reasoning_details": [
+          {
+            "format": "google-gemini-v1",
             "index": 0,
-            "message": {
-                "role": "assistant",
-                "content": "Learning Python is one of the best decisions you can make if you are interested in coding. It is famous for being \"beginner-friendly\" because its syntax looks a lot like English.\n\nHere is a step-by-step roadmap to go from zero to a functional Python developer:\n\n---\n\n### Step 1: Set Up Your Environment\nDon't get bogged down in complex tools yet.\n*   **Download Python:** Go to [python.org](https://www.python.org/) and download the latest version.\n*   **Pick an Editor:** \n    *   **Thonny:** Great for absolute beginners because it shows you what the computer is thinking.\n    *   **VS Code:** The industry standard. Flexible and powerful.\n    *   **Replit:** If you don't want to install anything, you can code directly in your browser.\n\n### Step 2: Master the Fundamentals\nDon't rush this part. These concepts are the \"LEGO bricks\" of every program:\n1.  **Variables and Data Types:** Learn about strings (text), integers (numbers), and booleans (True/False).\n2.  **Basic Math:** `+`, `-`, `*`, `/`, `%` (remainder).\n3.  **Conditionals:** `if`, `elif`, and `else`. This is how programs make decisions.\n4.  **Loops:** `for` and `while` loops. This is how you repeat tasks.\n5.  **Functions:** How to wrap a block of code so you can use it over and over.\n6.  **Data Structures:** Lists, Dictionaries, and Sets. These are how you store and organize data.\n\n### Step 3: Best Resources (mostly free)\n*   **For the \"Reading\" Learner:** [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by Al Sweigart. It is free online and focuses on practical things you can actually use.\n*   **For the \"Watching\" Learner:** \n    *   **Corey Schafer (YouTube):** The best deep-dive tutorials available.\n    *   **Programming with Mosh:** Good for a fast (1-6 hour) crash course.\n    *   **FreeCodeCamp:** Extensive 10-hour+ courses on YouTube.\n*   **For the \"Interactive\" Learner:** \n    *   **University of Helsinki MOOC:** Arguably the best free Python course on the internet. It includes exercises that are graded automatically.\n\n### Step 4: Stop Watching, Start Doing\nThe \"Tutorial Hell\" trap is real—where you watch videos but can't write code on your own. To avoid this, build these tiny projects:\n*   **Calculator:** Takes two numbers and adds/subtracts them.\n*   **Number Guessing Game:** The computer picks a number and tells you if your guess is \"Higher\" or \"Lower.\"\n*   **To-Do List:** Let the user add, delete, and view tasks in the terminal.\n*   **Simple Web Scraper:** Pull the price of a product off a website.\n\n### Step 5: Choose a Specialization\nOnce you know the basics, Python branches out into different \"careers.\" Pick one:\n*   **Data Science / AI:** Learn libraries like `Pandas`, `NumPy`, and `Scikit-learn`.\n*   **Web Development:** Learn `Django` or `Flask` to build websites.\n*   **Automation:** Use `Selenium` or `BeautifulSoup` to automate repetitive browser tasks.\n*   **Game Dev:** Learn `Pygame`.\n\n### Key Tips for Success:\n1.  **Code Every Day:** Even if it’s just for 15 minutes. Coding is a \"muscle memory\" skill.\n2.  **Hand-write your code:** If you are struggling with a concept, write it out on a whiteboard or paper. \n3.  **Don't memorize:** You don't need to memorize every command. Real developers Google things and use Documentation every single day.\n4.  **Use AI wisely:** You can ask ChatGPT or Claude to \"Explain this line of code to me like I'm five.\" But **never** just copy-paste code you don't understand.\n\n**The Golden Rule:** The moment you finish a tutorial, try to change one thing in the code to see if you can make it do something different. That is when the real learning happens.",
-                "refusal": null,
-            }
-        }
-    ],
-    "usage": {
-        "prompt_tokens": 5,
-        "completion_tokens": 1330,
-        "total_tokens": 1335,
-        "prompt_tokens_details": {
-            "cached_tokens": 0,
-            "audio_tokens": 0,
-            "video_tokens": 0
-        },
-        "completion_tokens_details": {
-            "reasoning_tokens": 371,
-            "image_tokens": 0
-        }
-    },
-    "meta": {
-        "usage": {
-            "credits_used": 8846
-        }
+            "type": "reasoning.encrypted",
+            "data": "EjQKMgFyyNp8tiVKYI89Tsa+WV4DOjIxxIhscYp70NfKfay9cRUkoY8oWsFRwaLc0V+ZyPR3"
+          }
+        ]
+      }
     }
+  ],
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 572,
+    "total_tokens": 582,
+    "cost": 0.001721,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": null,
+      "upstream_inference_prompt_cost": 5e-06,
+      "upstream_inference_completions_cost": 0.001716
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    }
+  },
+  "meta": {
+    "usage": {
+      "credits_used": 3814
+    }
+  }
 }
 ```
 {% endcode %}
