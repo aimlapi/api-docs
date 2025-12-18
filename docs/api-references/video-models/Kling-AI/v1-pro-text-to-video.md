@@ -37,16 +37,21 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
-{% openapi src="../../../.gitbook/assets/v1-pro-text-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
-[v1-pro-text-to-video.json](../../../.gitbook/assets/v1-pro-text-to-video.json)
-{% endopenapi %}
+{% openapi-operation spec="v1-pro-text-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI v1-pro-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1-pro-text-to-video.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/v1.6-pro-effects-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1.6-pro-effects-pair.json](../../../.gitbook/assets/v1.6-pro-effects-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+{% endopenapi-operation %}

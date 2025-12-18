@@ -37,6 +37,11 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
 {% openapi src="../../../.gitbook/assets/v1-standard-text-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}

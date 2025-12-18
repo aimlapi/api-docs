@@ -123,7 +123,7 @@ def main():
             status = response_data.get("status")
             print("Status:", status)
 
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
+            if status == "waiting" or  status == "queued" or status == "generating":
                 print("Still waiting... Checking again in 15 seconds.")
                 time.sleep(15)
             else:
@@ -155,3 +155,4 @@ if __name__ == "__main__":
 **Processing time**: \~ 1 min 50 sec.
 
 **Generated video** (1180x1756, with sound):
+

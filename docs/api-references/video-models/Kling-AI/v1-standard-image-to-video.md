@@ -20,30 +20,41 @@ A model transforms static images into dynamic video clips.
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schemas
+## How to Make a Call
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
 
 Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-### Create a video generation task and send it to the server
+Below, you can find both corresponding API schemas.
 
-{% hint style="warning" %}
-The `ratio` and `aspect_ratio` parameters are deprecated. The aspect ratio of the generated video is solely determined by the aspect ratio of the input reference image.
+</details>
+
+## API Schemas
+
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
 {% endhint %}
 
-{% openapi src="../../../.gitbook/assets/v1-standard-image-to-video.json" path="/v2/generate/video/kling/generation" method="post" %}
-[v1-standard-image-to-video.json](../../../.gitbook/assets/v1-standard-image-to-video.json)
-{% endopenapi %}
+### Create a video generation task and send it to the server
+
+{% openapi-operation spec="v1-standard-image-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI v1-standard-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v1-standard-image-to-video.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/v1.6-pro-effects-pair.json" path="/v2/generate/video/kling/generation" method="get" %}
-[v1.6-pro-effects-pair.json](../../../.gitbook/assets/v1.6-pro-effects-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
