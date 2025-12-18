@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v5.5/image-to-video
 
 {% columns %}
@@ -10,7 +5,7 @@ noIndex: true
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `pixverse/v5.5/image-to-video`
+* `pixverse/v5-5-image-to-video`
 {% endhint %}
 {% endcolumn %}
 
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+The model generates high-quality video clips from text combined with an image, delivering smooth motion and sharp visual detail.
 
 ## Setup your API Key
 
@@ -56,13 +51,13 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
-[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -71,23 +66,21 @@ The code below creates a video generation task, then automatically polls the ser
 import requests
 import time
 
-# replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
+# Replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
 api_key = "<YOUR_AIMLAPI_KEY>"
 base_url = "https://api.aimlapi.com/v2"
 
-
 # Creating and sending a video generation task to the server
 def generate_video():
-    url = f"{base_url}/generate/video/pixverse/generation"
+    url = f"{base_url}/video/generations"
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
 
     data = {
-        "model": "pixverse/v5/image-to-video",
+        "model": "pixverse/v5-5-image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "duration": 5     
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -96,18 +89,17 @@ def generate_video():
         print(f"Error: {response.status_code} - {response.text}")
     else:
         response_data = response.json()
-        print(response_data)
+        # print(response_data)
         return response_data
     
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
-    url = f"{base_url}/generate/video/pixverse/generation"
+    url = f"{base_url}/video/generations"
     params = {
         "generation_id": gen_id,
     }
     
-    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
     headers = {
         "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
@@ -118,36 +110,36 @@ def get_video(gen_id):
     return response.json()
 
 
+
 def main():
      # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Trying to retrieve the video from the server every 10 sec
+    # Try to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
-        timeout = 600
+        timeout = 1000
         while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
             if response_data is None:
                 print("Error: No response from API")
                 break
-        
-            status = response_data.get("status")
-            print("Status:", status)
 
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            status = response_data.get("status")
+            
+            if status in ["waiting", "queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
-   
+
         print("Timeout reached. Stopping.")
-        return None     
+        return None
 
 
 if __name__ == "__main__":
@@ -169,13 +161,13 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "pixverse/v5/image-to-video",
+    model: "pixverse/v5-5-image-to-video",
     prompt: "Mona Lisa puts on glasses with her hands.",
     image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
     duration: 5,
   });
 
-  const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);
+  const url = new URL(`${baseUrl}/video/generations`);
   const options = {
     method: "POST",
     headers: {
@@ -206,7 +198,7 @@ function generateVideo(callback) {
 
 // Requesting the result of the task from the server using the generation_id
 function getVideo(genId, callback) {
-  const url = new URL(`${baseUrl}/generate/video/pixverse/generation`);
+  const url = new URL(`${baseUrl}/video/generations`);
   url.searchParams.append("generation_id", genId);
 
   const options = {
@@ -230,46 +222,45 @@ function getVideo(genId, callback) {
   req.end();
 }
 
-// Initiates video generation and checks the status every 10 seconds until completion or timeout
+// Initiates video generation and checks the status every 15 seconds until completion or timeout
 function main() {
-  generateVideo((genResponse) => {
-    if (!genResponse || !genResponse.id) {
-      console.error("Failed to start generation");
-      return;
-    }
-
-    const genId = genResponse.id;
-    console.log("Gen_ID:", genId);
-
-    const startTime = Date.now();
-    const timeout = 600000;
-
-    const checkStatus = () => {
-      if (Date.now() - startTime > timeout) {
-        console.log("Timeout reached. Stopping.");
-        return;
-      }
-
-      getVideo(genId, (responseData) => {
-        if (!responseData) {
-          console.error("Error: No response from API");
-          return;
+    generateVideo((genResponse) => {
+        if (!genResponse || !genResponse.id) {
+            console.error("No generation ID received.");
+            return;
         }
 
-        const status = responseData.status;
-        console.log("Status:", status);
+        const genId = genResponse.id;
+        console.log("Generation ID:", genId);
 
-        if (["waiting", "active", "queued", "generating"].includes(status)) {
-          console.log("Still waiting... Checking again in 10 seconds.");
-          setTimeout(checkStatus, 10000);
-        } else {
-          console.log("Processing complete:\n", responseData);
-        }
-      });
-    };
+        const timeout = 1000 * 1000; // 1000 sec
+        const interval = 15 * 1000; // 15 sec
+        const startTime = Date.now();
 
-    checkStatus();
-  });
+        const checkStatus = () => {
+            if (Date.now() - startTime >= timeout) {
+                console.log("Timeout reached. Stopping.");
+                return;
+            }
+
+            getVideo(genId, (responseData) => {
+                if (!responseData) {
+                    console.error("Error: No response from API");
+                    return;
+                }
+
+                const status = responseData.status;
+        
+                if (["waiting", "queued", "generating"].includes(status)) {
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
+                    setTimeout(checkStatus, interval);
+                } else {
+                    console.log("Processing complete:\n", responseData);
+                }
+            });
+        };
+        checkStatus();
+    })
 }
 
 main();
@@ -284,29 +275,21 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': '8ac142d3-7c9f-4071-bdc6-d0f2d3d9b327:pixverse/v5/image-to-video', 'status': 'queued', 'meta': {'usage': {'tokens_used': 420000}}}
-Generation ID:   8ac142d3-7c9f-4071-bdc6-d0f2d3d9b327:pixverse/v5/image-to-video
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: generating
-Still waiting... Checking again in 10 seconds.
-Status: completed
-Processing complete:/n {'id': '8ac142d3-7c9f-4071-bdc6-d0f2d3d9b327:pixverse/v5/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/elephant/uCLDKRtL_AeOrRAwiR8UH_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 4259218}}
+Generation ID:   jCajo_YQuMr5As6lN1lSg
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'jCajo_YQuMr5As6lN1lSg', 'status': 'succeeded', 'video': {'url': 'https://cdn.aimlapi.com/panda/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2FtFzvIwK3x79Lvz8cknMvj_seed2144515801.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~1.5 min.
+**Processing time**: \~50 s.
 
-**Original**: [864x1280](https://drive.google.com/file/d/1kld9uy5nb-R_9D0JrbWLFhE3z171WHTw/view?usp=sharing)
+**Original**: [864x1280](https://drive.google.com/file/d/1Bn6g08TSUixk_Zc3e2BQyguljle_B7Iq/view?usp=sharing)
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/pixverse-v5-image-to-video_preview.gif" alt=""><figcaption><p><code>"Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/pixverse-v5-5-image-to-video_preview.gif" alt=""><figcaption><p><code>"Mona Lisa puts on glasses with her hands."</code></p></figcaption></figure></div>

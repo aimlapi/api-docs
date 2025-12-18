@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v5.5/text-to-video
 
 {% columns %}
@@ -10,7 +5,7 @@ noIndex: true
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `pixverse/v5.5/text-to-video`
+* `pixverse/v5-5-text-to-video`
 {% endhint %}
 {% endcolumn %}
 
@@ -56,13 +51,13 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
-[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -83,10 +78,11 @@ def generate_video():
     }
 
     data = {
-         "model": "pixverse/v5.5/text-to-video",
+        "model": "pixverse/v5-5-text-to-video",
         "prompt": "A cheerful white raccoon running through a sequoia forest",
         "aspect_ratio": "16:9",
-        "duration": "5"
+        "duration": "5",
+        "resolution": "1080p"
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -154,6 +150,129 @@ if __name__ == "__main__":
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+const apiKey = "<YOUR_AIMLAPI_KEY>";
+const baseUrl = "https://api.aimlapi.com/v2";
+const https = require("https");
+const { URL } = require("url");
+
+// Creating and sending a video generation task to the server
+function generateVideo(callback) {
+    const data = JSON.stringify({
+        model: 'pixverse/v5-5-text-to-video',
+        prompt: `
+A cheerful white raccoon running through a sequoia forest.
+`,
+        duration: 5,
+        aspect_ratio: '16:9',
+        resolution: '1080p'
+    });
+
+    const url = new URL(`${baseUrl}/video/generations`);
+    const options = {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+            "Content-Length": Buffer.byteLength(data)
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            if (res.statusCode >= 400) {
+                console.error(`Error: ${res.statusCode} - ${body}`);
+                callback(null);
+            } else {
+                const result = JSON.parse(body);
+                callback(result);
+            }
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.write(data);
+    req.end();
+}
+
+// Requesting the result of the task from the server using the generation_id
+function getVideo(genId, callback) {
+    const url = new URL(`${baseUrl}/video/generations`);
+    url.searchParams.append("generation_id", genId);
+
+    const options = {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            const result = JSON.parse(body);
+            callback(result);
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.end();
+}
+
+// Initiates video generation and checks the status every 15 seconds until completion or timeout
+function main() {
+    generateVideo((genResponse) => {
+        if (!genResponse || !genResponse.id) {
+            console.error("No generation ID received.");
+            return;
+        }
+
+        const genId = genResponse.id;
+        console.log("Generation ID:", genId);
+
+        const timeout = 1000 * 1000; // 1000 sec
+        const interval = 15 * 1000; // 15 sec
+        const startTime = Date.now();
+
+        const checkStatus = () => {
+            if (Date.now() - startTime >= timeout) {
+                console.log("Timeout reached. Stopping.");
+                return;
+            }
+
+            getVideo(genId, (responseData) => {
+                if (!responseData) {
+                    console.error("Error: No response from API");
+                    return;
+                }
+
+                const status = responseData.status;
+        
+                if (["waiting", "active", "queued", "generating"].includes(status)) {
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
+                    setTimeout(checkStatus, interval);
+                } else {
+                    console.log("Processing complete:\n", responseData);
+                }
+            });
+        };
+        checkStatus();
+    })
+}
+
+main();
 ```
 {% endcode %}
 {% endtab %}
@@ -165,12 +284,25 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
+{'id': 'FxkOMGP_IRjjNHfzH3LTV', 'status': 'queued', 'meta': {'usage': {'credits_used': 5000000}}}
+Generation ID:   FxkOMGP_IRjjNHfzH3LTV
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'FxkOMGP_IRjjNHfzH3LTV', 'status': 'succeeded', 'video': {'url': 'https://cdn.aimlapi.com/panda/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2FXxfCXAeT4Mr3QY0RVb564_seed1231972948.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 2 min 32 sec.
+**Processing time**: \~ 2 min 3 sec.
 
-**Generated video** (1920x1080, with sound):
+**Generated video** (1920x1080, without sound):
 
+{% embed url="https://drive.google.com/file/d/1qUbN9h2SfVkYoTA5-dyv30Y5vTkbBQii/view" %}
