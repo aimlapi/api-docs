@@ -45,7 +45,7 @@ This endpoint creates and sends a video generation task to the server — and re
 To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
 {% endhint %}
 
-{% openapi-operation spec="wan2-2-t2v-plus" path="/v2/generate/video/alibaba/generation" method="post" %}
+{% openapi-operation spec="wan2-2-t2v-plus" path="/v2/video/generations" method="post" %}
 [OpenAPI wan2-2-t2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-t2v-plus.json)
 {% endopenapi-operation %}
 
