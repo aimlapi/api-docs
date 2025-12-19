@@ -37,14 +37,15 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Video Generation
 
 You can generate a video using this API. In the basic setup, you only need a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
-
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
 
 {% openapi-operation spec="wan2-5-t2v-preview-2" path="/v2/video/generations" method="post" %}
 [OpenAPI wan2-5-t2v-preview-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-t2v-preview.json)
