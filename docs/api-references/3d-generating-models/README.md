@@ -60,8 +60,6 @@ if __name__ == "__main__":
 
 **Response**:
 
-The example returns a textured 3D mesh in GLB file format. You can view it [here](https://drive.google.com/file/d/1pfA6PGgDY31rEGcoea7qoZW6uhhPYSE6/view?usp=sharing).
-
 For clarity, we took several screenshots of our mushroom from different angles in an online GLB viewer. As you can see, the model understands the shape, but preserving the pattern on the back side (which was not visible on the reference image) could be improved:
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>

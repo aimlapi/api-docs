@@ -460,7 +460,7 @@
 
 ***
 
-* [📞 Contact Sales](https://calendar.app.google/3UdCT1hwngze2yUv7)
+* [📞 Contact Sales](mailto:aberesneva@aimlapi.com)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 * [404 Model is deprecated](404-model-is-deprecated.md)
 

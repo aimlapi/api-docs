@@ -6,9 +6,9 @@ description: >-
 icon: hand-wave
 ---
 
-# Setting Up
+# Quickstart
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference/):
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made solution:
 
 * [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),
 * [configuring the base URL](setting-up.md#configuring-base-url),
