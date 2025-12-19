@@ -110,7 +110,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
 
-<mark style="background-color:green;">**Kling AI**</mark>: [Video](api-references/video-models/Kling-AI/)
+<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/)  [Video](api-references/video-models/Kling-AI/)
 
 **Krea**: [Video](api-references/video-models/krea/)
 

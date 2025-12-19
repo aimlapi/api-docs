@@ -189,6 +189,8 @@
     * [Gemini 2.5 Flash Image Edit (Nano Banana)](api-references/image-models/google/gemini-2.5-flash-image-edit.md)
     * [Nano Banana Pro (Gemini 3 Pro Image)](api-references/image-models/google/gemini-3-pro-image-preview.md)
     * [Nano Banana Pro Edit (Gemini 3 Pro Image Edit)](api-references/image-models/google/gemini-3-pro-image-preview-edit.md)
+  * [Kling AI](api-references/image-models/kling-ai/README.md)
+    * [image-o1](api-references/image-models/kling-ai/image-o1.md)
   * [OpenAI](api-references/image-models/OpenAI/README.md)
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/OpenAI/dall-e-3.md)
