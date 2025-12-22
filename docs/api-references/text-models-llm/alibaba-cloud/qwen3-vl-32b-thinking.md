@@ -26,7 +26,7 @@ The most advanced vision-language model in the Qwen series as of October 2025 �
 
 <summary><a href="../../../quickstart/setting-up.md">How to make the first API call</a></summary>
 
-:digit\_one:  **Required setup (don’t skip this)**\
+1  **Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
 ▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
 
