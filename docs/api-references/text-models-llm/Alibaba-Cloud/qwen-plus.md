@@ -24,7 +24,7 @@ An advanced large language model. Multilingual support, including Chinese and En
 
 <details>
 
-<summary><a href="../../../quickstart/setting-up.md">How to make the first API call</a></summary>
+<summary>How to make the first API call</summary>
 
 :digit\_one:  **Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
