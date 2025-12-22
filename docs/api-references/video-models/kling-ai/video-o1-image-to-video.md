@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # video-o1-image-to-video
 
 {% columns %}
