@@ -24,7 +24,7 @@ The 32B variant of the latest code-focused model series (formerly CodeQwen). The
 
 <details>
 
-<summary><a href="/broken/pages/SRFAXAuCqLrtsE0WyVnE">How to make the first API call</a></summary>
+<summary><a href="../../../quickstart/setting-up.md">How to make the first API call</a></summary>
 
 :digit\_one:  **Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\

@@ -24,7 +24,7 @@ The preview version of [Qwen3 Max Instruct](qwen3-max-instruct.md).
 
 <details>
 
-<summary><a href="/broken/pages/SRFAXAuCqLrtsE0WyVnE">How to make the first API call</a></summary>
+<summary><a href="../../../quickstart/setting-up.md">How to make the first API call</a></summary>
 
 :digit\_one:  **Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
