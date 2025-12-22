@@ -19,7 +19,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-.
+A variant of Kling’s O1 omni-model that takes a reference image along with an instructional prompt as input.
 
 ## Setup your API Key
 
@@ -36,8 +36,8 @@ Below, you can find two corresponding API schemas and an example with both endpo
 
 ### Create a video generation task and send it to the server
 
-{% openapi-operation spec="video-v2-6-pro-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v2-6-pro-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-image-to-video.json)
+{% openapi-operation spec="video-o1-image-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI video-o1-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -74,7 +74,7 @@ def generate_video():
     data = {
         "model": "klingai/video-o1-image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": "5",       
     }
  
@@ -103,12 +103,12 @@ def get_video(gen_id):
 
 
 def main():
-     # Running video generation and getting a task id
+    # Running video generation and getting a task id
     gen_response = generate_video()
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Trying to retrieve the video from the server every 15 sec
+    # Try to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
@@ -119,23 +119,142 @@ def main():
             if response_data is None:
                 print("Error: No response from API")
                 break
-        
-            status = response_data.get("status")
-            print("Status:", status)
 
-            if status == "waiting" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 15 seconds.")
+            status = response_data.get("status")
+            
+            if status in ["waiting", "queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
                 time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
-   
+
         print("Timeout reached. Stopping.")
-        return None     
+        return None
 
 
 if __name__ == "__main__":
     main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+const https = require("https");
+const { URL } = require("url");
+
+// Replace <YOUR_AIMLAPI_KEY> with your actual AI/ML API key
+const apiKey = "<YOUR_AIMLAPI_KEY>";
+const baseUrl = "https://api.aimlapi.com/v2";
+
+// Creating and sending a video generation task to the server
+function generateVideo(callback) {
+  const data = JSON.stringify({
+    model: "klingai/video-o1-image-to-video",
+    prompt: "Mona Lisa puts on glasses with her hands.",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+    duration: "5",
+  });
+
+  const url = new URL(`${baseUrl}/video/generations`);
+  const options = {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+      "Content-Length": Buffer.byteLength(data),
+    },
+  };
+
+  const req = https.request(url, options, (res) => {
+    let body = "";
+    res.on("data", (chunk) => body += chunk);
+    res.on("end", () => {
+      if (res.statusCode >= 400) {
+        console.error(`Error: ${res.statusCode} - ${body}`);
+        callback(null);
+      } else {
+        const parsed = JSON.parse(body);
+        callback(parsed);
+      }
+    });
+  });
+
+  req.on("error", (err) => console.error("Request error:", err));
+  req.write(data);
+  req.end();
+}
+
+// Requesting the result of the task from the server using the generation_id
+function getVideo(genId, callback) {
+  const url = new URL(`${baseUrl}/video/generations`);
+  url.searchParams.append("generation_id", genId);
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+  };
+
+  const req = https.request(url, options, (res) => {
+    let body = "";
+    res.on("data", (chunk) => body += chunk);
+    res.on("end", () => {
+      const parsed = JSON.parse(body);
+      callback(parsed);
+    });
+  });
+
+  req.on("error", (err) => console.error("Request error:", err));
+  req.end();
+}
+
+// Initiates video generation and checks the status every 15 seconds until completion or timeout
+function main() {
+    generateVideo((genResponse) => {
+        if (!genResponse || !genResponse.id) {
+            console.error("No generation ID received.");
+            return;
+        }
+
+        const genId = genResponse.id;
+        console.log("Generation ID:", genId);
+
+        const timeout = 1000 * 1000; // 1000 sec
+        const interval = 15 * 1000; // 15 sec
+        const startTime = Date.now();
+
+        const checkStatus = () => {
+            if (Date.now() - startTime >= timeout) {
+                console.log("Timeout reached. Stopping.");
+                return;
+            }
+
+            getVideo(genId, (responseData) => {
+                if (!responseData) {
+                    console.error("Error: No response from API");
+                    return;
+                }
+
+                const status = responseData.status;
+        
+                if (["waiting", "queued", "generating"].includes(status)) {
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
+                    setTimeout(checkStatus, interval);
+                } else {
+                    console.log("Processing complete:\n", responseData);
+                }
+            });
+        };
+        checkStatus();
+    })
+}
+
+main();
 ```
 {% endcode %}
 {% endtab %}
@@ -147,12 +266,27 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID: ee188bbb-47f1-41b1-b0d6-24ad799e3205:klingai/video-o1-image-to-video
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {
+  id: 'ee188bbb-47f1-41b1-b0d6-24ad799e3205:klingai/video-o1-image-to-video',
+  status: 'completed',
+  video: {
+    url: 'https://cdn.aimlapi.com/flamingo/files/b/0a8740c6/mTBLg8suAYBJkqKr7u7_I_output.mp4'
+  }
+}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 1 min 19 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1920x1080, without sound):
 
+{% embed url="https://drive.google.com/file/d/1z_DeOLZ1jyWyPhm4N_2BGUoe6DwahCgu/view" %}
