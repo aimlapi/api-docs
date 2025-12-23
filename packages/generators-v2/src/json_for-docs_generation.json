@@ -1,106 +1,42 @@
 [
   {
-    "name": "veo2/image-to-video",
-    "alias": "veo2-image-to-video",
+    "name": "video-01",
+    "alias": "video-01",
     "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo2/image-to-video",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01",
     "codeSamples": "video:video"
   },
   {
-    "name": "veo2",
-    "alias": "veo2",
+    "name": "video-01-live2d",
+    "alias": "video-01-live2d",
     "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo2",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01-live2d",
     "codeSamples": "video:video"
   },
   {
-    "name": "google/veo3",
-    "alias": "veo3",
+    "name": "minimax/hailuo-02",
+    "alias": "hailuo-02",
     "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-02",
     "codeSamples": "video:video"
   },
   {
-    "name": "google/veo-3.0-i2v",
-    "alias": "veo-3.0-i2v",
+    "name": "minimax/hailuo-2.3",
+    "alias": "hailuo-2.3",
     "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-i2v",
-    "codeSamples": "video:lipsync"
-  },
-  {
-    "name": "google/veo-3.0-fast",
-    "alias": "veo-3.0-fast",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-fast",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3",
     "codeSamples": "video:video"
   },
   {
-    "name": "google/veo-3.0-i2v-fast",
-    "alias": "veo-3.0-i2v-fast",
+    "name": "minimax/hailuo-2.3-fast",
+    "alias": "hailuo-2.3-fast",
     "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-i2v-fast",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3-fast",
     "codeSamples": "video:video"
-  },
-  {
-    "name": "google/veo-3.1-t2v",
-    "alias": "veo-3.1-t2v",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-t2v",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "google/veo-3.1-t2v-fast",
-    "alias": "veo-3.1-t2v-fast",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-t2v-fast",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "google/veo-3.1-i2v",
-    "alias": "veo-3.1-i2v",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-i2v",
-    "codeSamples": "video:lipsync"
-  },
-  {
-    "name": "google/veo-3.1-i2v-fast",
-    "alias": "veo-3.1-i2v-fast",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-i2v-fast",
-    "codeSamples": "video:lipsync"
-  },
-  {
-    "name": "google/veo-3.1-reference-to-video",
-    "alias": "veo-3.1-reference-to-video",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-reference-to-video",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "google/veo-3.1-first-last-image-to-video",
-    "alias": "veo-3.1-first-last-image-to-video",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-first-last-image-to-video",
-    "codeSamples": "video:lipsync"
-  },
-  {
-    "name": "google/veo-3.1-first-last-image-to-video-fast",
-    "alias": "veo-3.1-first-last-image-to-video-fast",
-    "category": "video-models",
-    "vendor": "Google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-first-last-image-to-video-fast",
-    "codeSamples": "video:lipsync"
   }
 ]
