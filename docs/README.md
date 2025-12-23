@@ -4,9 +4,7 @@ description: Learn how to get started with the AI/ML API
 
 # 🧭 Documentation Map
 
-This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code.
-
-Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
+This page helps you quickly find the right AI model or ready-to-use solution for your task. Open the API reference and copy a working example to integrate it into your code in minutes.
 
 ***
 
@@ -16,7 +14,7 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 
 ***
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Step-by-step example:</p><p><a href="quickstart/setting-up.md">Setting Up</a><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Choose the SDK to use:</p><p><a href="quickstart/supported-sdks.md">Supported SDKs</a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/setting-up.md"><strong>Setup guide</strong></a> <br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a>  </p><p></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 client = OpenAI(
 base_url="https://api.aimlapi.com/v1",
 api_key="&#x3C;YOUR_AIMLAPI_KEY>",
@@ -26,7 +24,7 @@ model="gpt-4o",
 messages=[{"role": "user", "content": "Write a one-sentence story about numbers."}]
 )
 print(response.choices[0].message.content)
-</code></pre></td></tr></tbody></table>
+</code></pre></td></tr><tr><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
 ***
 
@@ -206,3 +204,5 @@ We’re currently working on improving our documentation portal, and your feedba
 You can also rate each individual page using the built-in form on the right side of the screen:
 
 <figure><img src=".gitbook/assets/rateform-5.webp" alt=""><figcaption></figcaption></figure>
+
+Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
