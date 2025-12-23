@@ -1,10 +1,58 @@
 [
   {
-    "name": "klingai/image-o1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=klingai/image-o1",
-    "alias": "image-o1",
-    "category": "image-models",
-    "vendor": "Kling AI",
-    "codeSamples": "image-models:image_url(s)"
+    "name": "bytedance/seedance-1-0-lite-t2v",
+    "alias": "seedance-1.0-lite-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-lite-t2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/seedance-1-0-lite-i2v",
+    "alias": "seedance-1.0-lite-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-lite-i2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/seedance-1-0-pro-t2v",
+    "alias": "seedance-1.0-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-pro-t2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/seedance-1-0-pro-i2v",
+    "alias": "seedance-1.0-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-pro-i2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/omnihuman",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/omnihuman/v1.5",
+    "alias": "omnihuman-v.1.5",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/omnihuman/v1.5",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "veo2/image-to-video",
+    "alias": "veo2-image-to-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo2/image-to-video",
+    "codeSamples": "video:video"
   }
 ]
