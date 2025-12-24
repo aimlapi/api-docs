@@ -37,12 +37,17 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
 You can generate a video using this API. In the basic setup, you only need a reference image and a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% openapi-operation spec="pixverse-v5-image-to-video" path="/v2/generate/video/pixverse/generation" method="post" %}
+{% openapi-operation spec="pixverse-v5-image-to-video" path="/v2/video/generations" method="post" %}
 [OpenAPI pixverse-v5-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-image-to-video.json)
 {% endopenapi-operation %}
 
@@ -51,8 +56,8 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="pixverse-fetch" path="/v2/generate/video/pixverse/generation" method="get" %}
-[OpenAPI pixverse-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
