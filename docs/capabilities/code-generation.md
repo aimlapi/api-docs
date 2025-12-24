@@ -29,6 +29,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [anthropic/claude-haiku-4.5](../api-references/text-models-llm/anthropic/claude-4.5-haiku.md)
 * [anthropic/claude-opus-4-5](../api-references/text-models-llm/anthropic/claude-4.5-opus.md)
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
+* [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
@@ -46,3 +47,4 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
 * [zhipu/glm-4.6](../api-references/text-models-llm/zhipu/glm-4.6.md)
+* [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)

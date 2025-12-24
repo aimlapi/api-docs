@@ -183,6 +183,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [deepseek/deepseek-non-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
+* [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
@@ -200,3 +201,4 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)
