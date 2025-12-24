@@ -31,23 +31,28 @@ Generating a video using this model involves sequentially calling two endpoints:
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-Below, you can find two corresponding API schemas.
+Below, you can find both corresponding API schemas.
 
 </details>
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
-{% openapi src="../../../.gitbook/assets/video-01.json" path="/v2/generate/video/minimax/generation" method="post" %}
-[video-01.json](../../../.gitbook/assets/video-01.json)
-{% endopenapi %}
+{% openapi-operation spec="video-01" path="/v2/video/generations" method="post" %}
+[OpenAPI video-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/video-01.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="../../../.gitbook/assets/video-01-pair.json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-pair.json](../../../.gitbook/assets/video-01-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
+{% endopenapi-operation %}

@@ -1,6 +1,4 @@
 ---
-hidden: true
-noIndex: true
 layout:
   width: default
   title:
@@ -304,12 +302,29 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   6a3ada23-8eb3-4e29-948a-59e5bc2074c5:klingai/video-o1-video-to-video-reference
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': '6a3ada23-8eb3-4e29-948a-59e5bc2074c5:klingai/video-o1-video-to-video-reference', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a878546/2Wt0iDavlysQHFuP3_8I5_output.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 3 min 55 sec.
+**Processing time**: \~ 3 min 23 sec.
 
-**Generated video** (1940x1068, without sound):
+**Generated video** (1920x1080, without sound):
 
+{% embed url="https://drive.google.com/file/d/1ok8yiSBH_0rcAGDN76pBxXbfOldbjhgy/view" %}
