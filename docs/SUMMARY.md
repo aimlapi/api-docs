@@ -274,6 +274,7 @@
     * [video-v2.6-pro-text-to-video](api-references/video-models/kling-ai/video-v2-6-pro-text-to-video.md)
     * [video-v2.6-pro-image-to-video](api-references/video-models/kling-ai/video-v2.6-pro-image-to-video.md)
     * [video-o1-image-to-video](api-references/video-models/kling-ai/video-o1-image-to-video.md)
+    * [video-o1-reference-to-video](api-references/video-models/kling-ai/video-o1-reference-to-video.md)
     * [video-o1-video-to-video-edit](api-references/video-models/kling-ai/video-o1-video-to-video-edit.md)
     * [video-o1-video-to-video-reference](api-references/video-models/kling-ai/video-o1-video-to-video-reference.md)
   * [Krea](api-references/video-models/krea/README.md)
