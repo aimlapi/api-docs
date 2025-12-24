@@ -55,7 +55,7 @@ with open("<YOUR_IMAGE_PATH.png>", "rb") as file:
   --request POST \\
   --url 'https://api.aimlapi.com/v1/images/edits' \\
   --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --form "prompt=Add a crown to the T-rex's head." \\
+  --form "prompt=Add a crown to the T-rex’s head." \\
   --form "image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>"`,
   },
   {
