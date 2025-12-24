@@ -1,42 +1,18 @@
 [
   {
-    "name": "video-01",
-    "alias": "video-01",
-    "category": "video-models",
+    "name": "minimax/m2-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-1",
+    "alias": "m2-1",
+    "category": "text-models-llm",
     "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01",
-    "codeSamples": "video:video"
+    "codeSamples": "chat-completion"
   },
   {
-    "name": "video-01-live2d",
-    "alias": "video-01-live2d",
-    "category": "video-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01-live2d",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "minimax/hailuo-02",
-    "alias": "hailuo-02",
-    "category": "video-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-02",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "minimax/hailuo-2.3",
-    "alias": "hailuo-2.3",
-    "category": "video-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "minimax/hailuo-2.3-fast",
-    "alias": "hailuo-2.3-fast",
-    "category": "video-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3-fast",
-    "codeSamples": "video:video"
+    "name": "zhipu/glm-4.7",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.7",
+    "alias": "glm-4.7",
+    "category": "text-models-llm",
+    "vendor": "Zhipu",
+    "codeSamples": "chat-completion"
   }
 ]
