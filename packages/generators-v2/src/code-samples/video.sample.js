@@ -92,7 +92,7 @@ export const videoSample = (options, fullSchema) => {
   ) {
     Object.assign(params, {
       prompt: options.codeSamples.includes('lipsync')
-        ? "A woman looks into the camera, breathes in, then exclaims energetically, 'Hello world!'"
+        ? "A woman looks into the camera, breathes in, then exclaims energetically, ’Hello world!’"
         : 'A woman looks into the camera and puts on a hat.',
       image_url:
         'https://storage.googleapis.com/falserverless/example_inputs/veo31-flf2v-input-1.jpeg',
@@ -106,7 +106,7 @@ export const videoSample = (options, fullSchema) => {
   ) {
     Object.assign(params, {
       prompt: options.codeSamples.includes('lipsync')
-        ? "A woman looks into the camera, breathes in, then exclaims energetically, 'Hello world!'"
+        ? "A woman looks into the camera, breathes in, then exclaims energetically, ’Hello world!’"
         : 'A woman looks into the camera and puts on a hat.',
       image_url:
         'https://storage.googleapis.com/falserverless/example_inputs/veo31-flf2v-input-1.jpeg',
@@ -143,7 +143,7 @@ export const videoSample = (options, fullSchema) => {
   ) {
     Object.assign(params, {
       prompt: options.codeSamples.includes('lipsync')
-        ? "A woman looks into the camera, breathes in, then exclaims energetically, 'Hello world!'"
+        ? "A woman looks into the camera, breathes in, then exclaims energetically, ’Hello world!’"
         : 'Mona Lisa puts on glasses with her hands.',
       image_url:
         'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
@@ -154,8 +154,8 @@ export const videoSample = (options, fullSchema) => {
   ) {
     Object.assign(params, {
       prompt: options.codeSamples.includes('lipsync')
-        ? 'A racoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: "Hello, two-legged!" His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: "Wanna some?" — while extending the half-eaten ice cream toward the camera.'
-        : "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming.",
+        ? 'A racoon is happily eating an ice cream. Suddenly, he pauses, looks directly into the camera, and says with full confidence: ’Hello, two-legged!’ His lip movements perfectly match the speech. Then, in a strong Irish accent, he adds: ’Wanna some?’ — while extending the half-eaten ice cream toward the camera.'
+        : "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it’s coming.",
     });
   } else {
     console.error(`Unable to generate code sample for model ${options.name}`);

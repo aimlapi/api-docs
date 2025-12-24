@@ -13,7 +13,7 @@ export const imageToImageSample = (options, schema) => {
   const prompt =
     imageParamName === 'image_urls'
       ? 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.'
-      : "Add a crown to the T-rex's head.";
+      : "Add a crown to the T-rex’s head.";
 
   const imageValue =
     imageParamName === 'image_urls'
