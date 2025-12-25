@@ -1,10 +1,18 @@
 # gpt-4o-audio-preview
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `gpt-4o-audio-preview`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/gpt-4o-audio-preview" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 

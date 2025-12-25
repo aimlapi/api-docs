@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/openai/gpt-5-1-codex" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -75,7 +75,7 @@ Note: This model can ONLY be called via the `/responses` endpoint!
 {% endhint %}
 
 {% openapi-operation spec="gpt-5-1-codex" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-1-codex](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-1-codex.json)
+[OpenAPI gpt-5-1-codex](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-1-codex-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example: Using /responses Endpoint
