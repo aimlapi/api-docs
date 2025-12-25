@@ -4,52 +4,7 @@
 
 <summary>This documentation is valid for the following list of our models</summary>
 
-{% hint style="info" %}
-* \#g1\_aura-2-amalthea-en
-* \#g1\_aura-2-andromeda-en
-* \#g1\_aura-2-apollo-en
-* \#g1\_aura-2-arcas-en
-* \#g1\_aura-2-aries-en
-* \#g1\_aura-2-asteria-en
-* \#g1\_aura-2-athena-en
-* \#g1\_aura-2-atlas-en
-* \#g1\_aura-2-aurora-en
-* \#g1\_aura-2-callista-en
-* \#g1\_aura-2-cora-en
-* \#g1\_aura-2-cordelia-en
-* \#g1\_aura-2-delia-en
-* \#g1\_aura-2-draco-en
-* \#g1\_aura-2-electra-en
-* \#g1\_aura-2-harmonia-en
-* \#g1\_aura-2-helena-en
-* \#g1\_aura-2-hera-en
-* \#g1\_aura-2-hermes-en
-* \#g1\_aura-2-hyperion-en
-* \#g1\_aura-2-iris-en
-* \#g1\_aura-2-janus-en
-* \#g1\_aura-2-juno-en
-* \#g1\_aura-2-jupiter-en
-* \#g1\_aura-2-luna-en
-* \#g1\_aura-2-mars-en
-* \#g1\_aura-2-minerva-en
-* \#g1\_aura-2-neptune-en
-* \#g1\_aura-2-odysseus-en
-* \#g1\_aura-2-ophelia-en
-* \#g1\_aura-2-orion-en
-* \#g1\_aura-2-orpheus-en
-* \#g1\_aura-2-pandora-en
-* \#g1\_aura-2-phoebe-en
-* \#g1\_aura-2-pluto-en
-* \#g1\_aura-2-saturn-en
-* \#g1\_aura-2-selene-en
-* \#g1\_aura-2-thalia-en
-* \#g1\_aura-2-theia-en
-* \#g1\_aura-2-vesta-en
-* \#g1\_aura-2-zeus-en
-* \#g1\_aura-2-celeste-es
-* \#g1\_aura-2-estrella-es
-* \#g1\_aura-2-nestor-es
-{% endhint %}
+<table data-header-hidden data-full-width="true"><thead><tr><th width="237.46649169921875"></th><th></th></tr></thead><tbody><tr><td><code>#g1_aura-2-amalthea-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-amalthea-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-andromeda-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-andromeda-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-apollo-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-apollo-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-arcas-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-arcas-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-aries-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-aries-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-asteria-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-asteria-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-athena-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-athena-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-atlas-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-atlas-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-aurora-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-aurora-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-cora-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-cora-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-cordelia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-cordelia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-delia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-delia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-draco-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-draco-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-electra-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-electra-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-harmonia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-harmonia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-helena-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-helena-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-hera-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-hera-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-hermes-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-hermes-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-hyperion-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-hyperion-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-iris-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-iris-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-janus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-delia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-juno-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-juno-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-jupiter-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-jupiter-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-luna-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-luna-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-mars-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-mars-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-minerva-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-minerva-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-neptune-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-neptune-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-odysseus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-odysseus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-ophelia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-ophelia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-orion-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-orion-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-orpheus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-orpheus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-pandora-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-pandora-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-phoebe-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-phoebe-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-pluto-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-delia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-saturn-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-saturn-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-selene-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-selene-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-thalia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-thalia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-theia-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-theia-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-vesta-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-vesta-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-zeus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-zeus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-celeste-es</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-celeste-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-estrella-es</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-estrella-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-2-nestor-es</code></td><td><a href="https://aimlapi.com/app/-g1_aura-2-nestor-en" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 </details>
 
