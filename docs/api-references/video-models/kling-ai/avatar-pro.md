@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/klingai/avatar-pro" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -26,10 +26,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 

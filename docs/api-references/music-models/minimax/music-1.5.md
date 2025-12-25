@@ -1,10 +1,18 @@
 # music-1.5
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `minimax/music-1.5`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax/music-1.5" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
 
