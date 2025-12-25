@@ -1,11 +1,5 @@
 # slam-1
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
-
-*
-{% endhint %}
-
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
