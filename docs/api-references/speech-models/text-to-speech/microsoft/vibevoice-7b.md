@@ -1,8 +1,18 @@
 # vibevoice-7b
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model: `microsoft/vibevoice-7b`
+This documentation is valid for the following list of our models:
+
+* `microsoft/vibevoice-7b`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/microsoft/microsoft/vibevoice-7b" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content. The 7-billion-parameter version of the model.
 

@@ -1,10 +1,18 @@
 # Speech 2.6 Turbo
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model:  &#x20;
+This documentation is valid for the following list of our models:
 
-* &#x20;`minimax/speech-2.6-turbo`
+* `minimax/speech-2.6-turbo`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax/speech-2-6-turbo" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model generates speech from text prompts and multiple voices, optimized for fast, low-latency synthesis.
 
