@@ -1,18 +1,19 @@
 [
   {
-    "name": "alibaba/wan2.2-i2v-plus",
-    "alias": "wan2.2-i2v-plus",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-i2v-plus",
-    "codeSamples": "video:video"
+    "name": "google/gemma-3-4b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-4b-it",
+    "alias": "gemma-3",
+    "models": ["google/gemma-3-4b-it", "google/gemma-3-12b-it"],
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
   },
   {
-    "name": "alibaba/wan2.2-vace-fun-a14b-depth",
-    "alias": "wan2.2-vace-fun-a14b-depth",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-depth",
-    "codeSamples": "video:video"
+    "name": "google/gemma-3-27b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-27b-it",
+    "alias": "gemma-3-27b-it",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
   }
 ]
