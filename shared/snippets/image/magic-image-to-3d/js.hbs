@@ -1,0 +1,17 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/images/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      front_image_url: 'https://img.webcdn.ru/catalog/Photo/00-00013154.jpg',
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main();
