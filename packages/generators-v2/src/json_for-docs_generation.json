@@ -1,19 +1,16 @@
 [
   {
-    "name": "google/gemma-3-4b-it",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-4b-it",
-    "alias": "gemma-3",
-    "models": ["google/gemma-3-4b-it", "google/gemma-3-12b-it"],
-    "category": "text-models-llm",
-    "vendor": "Google",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "google/gemma-3-27b-it",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-27b-it",
-    "alias": "gemma-3-27b-it",
-    "category": "text-models-llm",
-    "vendor": "Google",
-    "codeSamples": "chat-completion"
+    "name": "elevenlabs/eleven_music",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
+    "alias": "eleven_music",
+    "category": "music-models",
+    "vendor": "elevenlabs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "elevenlabs/eleven_music",
+        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "music_length_ms": 20000
+    }
   }
 ]
