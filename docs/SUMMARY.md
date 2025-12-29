@@ -379,7 +379,6 @@
 * [3D-Generating Models](api-references/3d-generating-models/README.md)
   * [Stability AI](api-references/3d-generating-models/Stability-AI/README.md)
     * [triposr](api-references/3d-generating-models/Stability-AI/triposr.md)
-    * [Copy of triposr](api-references/3d-generating-models/stability-ai/triposr-1.md)
 * [Vision Models](api-references/vision-models/README.md)
   * [Image Analysis](api-references/vision-models/image-analysis.md)
   * [OCR: Optical Character Recognition](api-references/vision-models/ocr-optical-character-recognition/README.md)
