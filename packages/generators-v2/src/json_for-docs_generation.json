@@ -1,16 +1,16 @@
 [
   {
-    "name": "elevenlabs/eleven_music",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
-    "alias": "eleven_music",
+    "name": "stable-audio",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=stable-audio",
+    "alias": "stable-audio",
     "category": "music-models",
-    "vendor": "elevenlabs",
+    "vendor": "Stability AI",
     "codeSamples": "custom",
     "customUrlApi": "https://api.aimlapi.com/v1/generate/audio",
     "customParams":{
-        "model": "elevenlabs/eleven_music",
+        "model": "stable-audio",
         "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "music_length_ms": 20000
+        "seconds_total": 20
     }
   }
 ]
