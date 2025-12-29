@@ -1,0 +1,147 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "magic/image-to-3d"
+                    ]
+                  },
+                  "front_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "An image (supplied via URL or Base64) that represents the front view of the object."
+                  },
+                  "left_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "An image (supplied via URL or Base64) that represents the left-side view of the object."
+                  },
+                  "back_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "An image (supplied via URL or Base64) that represents the back view of the object."
+                  },
+                  "right_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "An image (supplied via URL or Base64) that represents the right-side view of the object."
+                  }
+                },
+                "required": [
+                  "model",
+                  "front_image_url"
+                ],
+                "title": "magic/image-to-3d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"magic/image-to-3d\",\n      \"front_image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"magic/image-to-3d\",\n      \"front_image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+          },
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"magic/image-to-3d\",\n      \"front_image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\"\n    }'"
+          },
+          {
+            "lang": "HTTP",
+            "source": "POST /v1/images/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"magic/image-to-3d\",\n  \"front_image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

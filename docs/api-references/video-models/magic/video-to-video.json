@@ -1,0 +1,170 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "magic/video-to-video"
+                    ]
+                  },
+                  "video_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A video (supplied via URL or Base64) that will be inserted into the selected video template as the embedded ad content."
+                  },
+                  "template": {
+                    "type": "string",
+                    "enum": [
+                      "Thailand Street",
+                      "Times Square Billboard",
+                      "New York Times Square (78)",
+                      "Phone Social",
+                      "Art Gallery",
+                      "New York Times Square (67)",
+                      "Dubai Museum",
+                      "Rotating Cards",
+                      "Desktop Reveal",
+                      "Egypt Pyramid",
+                      "Cappadocia Balloons",
+                      "Times Square Round Screen",
+                      "Stockholm Metro",
+                      "Tokyo Billboard",
+                      "San Francisco Skyscrapers",
+                      "Malaysia Shop",
+                      "Las Vegas LED",
+                      "Phone App",
+                      "Paris Eiffel Tower"
+                    ],
+                    "default": "Thailand Street",
+                    "description": "Video design template."
+                  }
+                },
+                "required": [
+                  "model",
+                  "video_url"
+                ],
+                "title": "magic/video-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
