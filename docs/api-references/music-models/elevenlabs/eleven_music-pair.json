@@ -16,7 +16,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successfully generated audio",
             "content": {
               "application/json": {
                 "schema": {
