@@ -295,6 +295,8 @@
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
     * [hailuo-02](api-references/video-models/minimax/hailuo-02.md)
+    * [hailuo-2.3](api-references/video-models/minimax/hailuo-2.3.md)
+    * [hailuo-2.3-fast](api-references/video-models/minimax/hailuo-2.3-fast.md)
   * [OpenAI](api-references/video-models/openai/README.md)
     * [sora-2-t2v](api-references/video-models/openai/sora-2-t2v.md)
     * [sora-2-i2v](api-references/video-models/openai/sora-2-i2v.md)
