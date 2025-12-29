@@ -6,7 +6,7 @@
     "category": "music-models",
     "vendor": "elevenlabs",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customUrlApi": "https://api.aimlapi.com/v1/generate/audio",
     "customParams":{
         "model": "elevenlabs/eleven_music",
         "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
