@@ -28,11 +28,11 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/Lyria-2-pair.json" path="/v2/generate/audio" method="get" %}
-[Lyria-2-pair.json](../../../.gitbook/assets/Lyria-2-pair.json)
-{% endopenapi %}
+{% openapi-operation spec="stable-audio-pair" path="/v2/generate/audio" method="get" %}
+[OpenAPI stable-audio-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Audio From the Server <a href="#full-example-generating-and-retrieving-the-video-from-the-server" id="full-example-generating-and-retrieving-the-video-from-the-server"></a>
 

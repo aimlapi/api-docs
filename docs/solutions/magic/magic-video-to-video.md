@@ -1,20 +1,25 @@
-# video-o1-video-to-video-edit
+---
+hidden: true
+noIndex: true
+---
+
+# magic/video-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `klingai/video-o1-video-to-video-edit`
+* `magic/video-to-video`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/klingai/video-o1-video-to-video-edit" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/magic/video-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model transforms an input video according to a natural-language text prompt, altering style, visual attributes, or the overall look of the scene while preserving the original motion and structural layout of the footage.
+
 
 ## How to Make a Call
 
@@ -61,8 +66,8 @@ Below, you can find two corresponding API schemas and an example with both endpo
 
 ### Create a video generation task and send it to the server
 
-{% openapi-operation spec="kling-video-o1-video-to-video-edit" path="/v2/video/generations" method="post" %}
-[OpenAPI kling-video-o1-video-to-video-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-video-to-video-edit.json)
+{% openapi-operation spec="video-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI video-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/magic/video-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -292,24 +297,6 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation ID:   9177d714-9f53-4ce7-829f-b81e2223c48b:klingai/video-o1-video-to-video-edit
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Processing complete:
- {'id': '9177d714-9f53-4ce7-829f-b81e2223c48b:klingai/video-o1-video-to-video-edit', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a875051/Uce7GGCPuWbicbRrdaI4U_output.mp4'}}
 ```
 {% endcode %}
 
@@ -318,5 +305,3 @@ Processing complete:
 **Processing time**: \~ 3 min 55 sec.
 
 **Generated video** (1940x1068, without sound):
-
-{% embed url="https://drive.google.com/file/d/19HfgD3-h-qtKIHNfjHPrn8jxn-8Yl8CY/view" %}
