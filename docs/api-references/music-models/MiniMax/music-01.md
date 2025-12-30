@@ -35,9 +35,9 @@ This endpoint uploads a reference music piece to the server, analyzes it, and re
 This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
 The generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
-[music-01.json](../../../.gitbook/assets/music-01.json)
-{% endopenapi %}
+{% openapi-operation spec="stable-audio-pair" path="/v2/generate/audio" method="get" %}
+[OpenAPI stable-audio-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio-pair.json)
+{% endopenapi-operation %}
 
 ## Quick Code Example
 
@@ -134,7 +134,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+    
 ```
 {% endcode %}
 {% endtab %}

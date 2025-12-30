@@ -79,8 +79,8 @@ This endpoint creates and sends a music generation task to the server — and re
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% openapi-operation spec="stable-audio-pair" path="/v2/generate/audio" method="get" %}
+[OpenAPI stable-audio-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio-pair.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
