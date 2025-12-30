@@ -79,7 +79,7 @@ After sending a request for music generation, this task is added to the queue. B
 
 ## Full Example: Generating and Retrieving the Audio From the Server <a href="#full-example-generating-and-retrieving-the-video-from-the-server" id="full-example-generating-and-retrieving-the-video-from-the-server"></a>
 
-The code below creates a audio generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
+The code below creates a audio generation task, then automatically polls the server every **10** seconds until it finally receives the audio URL.
 
 {% tabs %}
 {% tab title="Python" %}
