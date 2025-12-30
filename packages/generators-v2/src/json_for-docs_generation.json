@@ -1,39 +1,30 @@
 [
   {
-    "name": "magic/image-to-3d",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=magic/image-to-3d",
-    "alias": "image-to-3d",
-    "category": "image-models",
-    "vendor": "magic",
+    "name": "elevenlabs/eleven_music",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
+    "alias": "eleven_music",
+    "category": "music-models",
+    "vendor": "elevenlabs",
     "codeSamples": "custom",
-	  "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
     "customParams":{
-        "model": "magic/image-to-3d",
-        "front_image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"       
+        "model": "elevenlabs/eleven_music",
+        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "music_length_ms": 20000
     }
   },
   {
-    "name": "magic/text-to-video",
-    "alias": "text-to-video",
-    "category": "video-models",
-    "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/text-to-video",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "magic/image-to-video",
-    "alias": "image-to-video",
-    "category": "video-models",
-    "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/image-to-video",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "magic/video-to-video",
-    "alias": "video-to-video",
-    "category": "video-models",
-    "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/video-to-video",
-    "codeSamples": "video:video"
+    "name": "stable-audio",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=stable-audio",
+    "alias": "stable-audio",
+    "category": "music-models",
+    "vendor": "Stability AI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "stable-audio",
+        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "seconds_total": 20
+    }
   }
 ]
