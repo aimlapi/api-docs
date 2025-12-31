@@ -294,7 +294,7 @@
   * [Magic](solutions/magic/README.md)
     * [magic/text-to-video](api-references/video-models/magic/text-to-video.md)
     * [magic/image-to-video](api-references/video-models/magic/image-to-video.md)
-    * [magic/video-to-vide](api-references/video-models/magic/video-to-video.md)
+    * [magic/video-to-video](api-references/video-models/magic/video-to-video.md)
   * [MiniMax](api-references/video-models/MiniMax/README.md)
     * [video-01](api-references/video-models/MiniMax/video-01.md)
     * [video-01-live2d](api-references/video-models/MiniMax/video-01-live2d.md)
