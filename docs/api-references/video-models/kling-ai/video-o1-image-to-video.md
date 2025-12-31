@@ -72,7 +72,7 @@ def generate_video():
         "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": "5",       
     }
- 
+
     response = requests.post(url, json=data, headers=headers)
     
     if response.status_code >= 400:
