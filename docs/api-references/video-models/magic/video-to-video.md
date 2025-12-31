@@ -1,4 +1,4 @@
-# magic/video-to-video
+# magic/video-to-vide
 
 {% columns %}
 {% column width="66.66666666666666%" %}
