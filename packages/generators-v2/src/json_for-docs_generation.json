@@ -1,30 +1,44 @@
 [
   {
-    "name": "elevenlabs/eleven_music",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
-    "alias": "eleven_music",
-    "category": "music-models",
-    "vendor": "elevenlabs",
+    "name": "magic/text-to-video",
+    "alias": "text-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/text-to-video",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
     "customParams":{
-        "model": "elevenlabs/eleven_music",
-        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "music_length_ms": 20000
+        "model": "magic/text-to-video",
+        "prompt": "AI/ML API",
+        "template": "Shanghai Drone Show"
     }
   },
   {
-    "name": "stable-audio",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=stable-audio",
-    "alias": "stable-audio",
-    "category": "music-models",
-    "vendor": "Stability AI",
+    "name": "magic/image-to-video",
+    "alias": "image-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/image-to-video",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
     "customParams":{
-        "model": "stable-audio",
-        "prompt": "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "seconds_total": 20
+        "model": "magic/image-to-video",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/aimlapi.jpg",
+        "template": "New York Times Square (66)"
+    }
+  },
+  {
+    "name": "magic/video-to-video",
+    "alias": "video-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/video-to-video",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "magic/video-to-video",
+        "video_url": "https://cdn.aimlapi.com/panda/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2FSPATnCC6Dp3nA9Sie3fsU_seed186094117.mp4",
+        "template": "Thailand Street"
     }
   }
 ]
