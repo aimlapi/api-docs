@@ -1,44 +1,23 @@
 [
   {
-    "name": "magic/text-to-video",
-    "alias": "text-to-video",
-    "category": "video-models",
-    "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/text-to-video",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
-    "customParams":{
-        "model": "magic/text-to-video",
-        "prompt": "AI/ML API",
-        "template": "Shanghai Drone Show"
-    }
+    "name": "triposr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=triposr",
+    "alias": "triposr",
+    "category": "3d-generating-models",
+    "vendor": "Stability AI",
+    "codeSamples": "hide"
   },
   {
-    "name": "magic/image-to-video",
-    "alias": "image-to-video",
-    "category": "video-models",
+    "name": "magic/image-to-3d",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=magic/image-to-3d",
+    "alias": "image-to-3d",
+    "category": "3d-generating-models",
     "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/image-to-video",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "magic/image-to-video",
-        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/aimlapi.jpg",
-        "template": "New York Times Square (66)"
-    }
-  },
-  {
-    "name": "magic/video-to-video",
-    "alias": "video-to-video",
-    "category": "video-models",
-    "vendor": "magic",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/video-to-video",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
-    "customParams":{
-        "model": "magic/video-to-video",
-        "video_url": "https://cdn.aimlapi.com/panda/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2FSPATnCC6Dp3nA9Sie3fsU_seed186094117.mp4",
-        "template": "Thailand Street"
+        "model": "magic/image-to-3d",
+        "front_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg"
     }
   }
 ]
