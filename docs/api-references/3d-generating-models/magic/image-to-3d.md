@@ -1,22 +1,27 @@
-# triposr
+---
+hidden: true
+noIndex: true
+---
+
+# magic/image-to-3d
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `triposr`
+* `magic/image-to-3d`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/triposr" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/magic/image-to-3d" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-A transformer-based model designed for rapid 3D object reconstruction from a single RGB image, capable of generating high-quality 3D meshes in under 0.5 seconds on an NVIDIA A100 GPU.
+The model creates a 3D mesh from images of an object captured from multiple viewpoints (1 to 4 images).
 
 ## Setup your API Key
 
@@ -24,12 +29,14 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="triposr" path="/v1/images/generations" method="post" %}
-[OpenAPI triposr](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/Stability-AI/triposr.json)
+{% openapi-operation spec="image-to-3d" path="/v1/images/generations" method="post" %}
+[OpenAPI image-to-3d](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/magic/image-to-3d.json)
 {% endopenapi-operation %}
 
 ## Example
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -44,8 +51,8 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "triposr",
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg",
+            "model": "magic/image-to-3d",
+            "front_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg",
         },
     )
 
@@ -65,6 +72,12 @@ if __name__ == "__main__":
     main()
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+
+{% endtab %}
+{% endtabs %}
 
 **Response**:
 

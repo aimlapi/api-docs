@@ -14,7 +14,8 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-By specifying the first and last video frames as input, this image-to-video model is well suited for generating video scenes that can later be seamlessly edited into a complete clip in a video editor. Consistently sharp, realistic, and cinematic-quality results.
+By specifying the first and last video frames as input, this image-to-video model is well suited for generating video scenes that can later be seamlessly edited into a complete clip in a video editor. Consistently sharp, realistic, and cinematic-quality results.\
+This model also generates videos with synchronized audio. For lip-sync input, you may supply text with a predefined voice.
 
 ## Setup your API Key
 
@@ -44,8 +45,7 @@ However, you can still call this model using the legacy URL that includes the ve
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a reference image and a prompt.\
-This endpoint creates and sends a video generation task to the server — and returns a generation ID.
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. This endpoint creates and sends a video generation task to the server — and returns a generation ID. For lip-sync input, you may supply text (`lip_sync_tts_content`) with a predefined voice (`lip_sync_tts_speaker`).
 
 {% openapi-operation spec="pixverse-v5-transition" path="/v2/video/generations" method="post" %}
 [OpenAPI pixverse-v5-transition](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-transition.json)
