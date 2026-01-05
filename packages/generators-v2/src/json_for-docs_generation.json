@@ -1,23 +1,16 @@
 [
   {
-    "name": "triposr",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=triposr",
-    "alias": "triposr",
-    "category": "3d-generating-models",
-    "vendor": "Stability AI",
-    "codeSamples": "hide"
-  },
-  {
-    "name": "magic/image-to-3d",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=magic/image-to-3d",
-    "alias": "image-to-3d",
-    "category": "3d-generating-models",
-    "vendor": "magic",
+    "name": "minimax/music-1.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-1.5",
+    "alias": "music-1.5",
+    "category": "music-models",
+    "vendor": "MiniMax",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
     "customParams":{
-        "model": "magic/image-to-3d",
-        "front_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg"
+        "model": "minimax/music-1.5",
+        "prompt": "Lo-fi pop hip-hop ambient music",
+        "lyrics": "[Verse] Streetlights flicker, the night breeze sighs Shadows stretch as I walk alone An old coat wraps my silent sorrow Wandering, longing, where should I go [Chorus] Pushing the wooden door, the aroma spreads In a familiar corner, a stranger gazes."
     }
   }
 ]
