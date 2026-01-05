@@ -73,8 +73,8 @@ This endpoint creates and sends a music generation task to the server — and re
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
 
-{% openapi-operation spec="stable-audio-pair" path="/v2/generate/audio" method="get" %}
-[OpenAPI stable-audio-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio-pair.json)
+{% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Audio From the Server <a href="#full-example-generating-and-retrieving-the-video-from-the-server" id="full-example-generating-and-retrieving-the-video-from-the-server"></a>

@@ -35,8 +35,8 @@ The generation can be completed in 60-80 seconds or take a bit more.
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi-operation spec="stable-audio-pair" path="/v2/generate/audio" method="get" %}
-[OpenAPI stable-audio-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio-pair.json)
+{% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
