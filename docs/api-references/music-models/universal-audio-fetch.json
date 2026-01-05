@@ -1,0 +1,134 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "access-token": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/generate/audio": {
+      "get": {
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v2/generate/audio?generation_id=<REPLACE_WITH_YOUR_GENERATION_ID>', {\n    method: 'GET',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.get(\n    \"https://api.aimlapi.com/v2/generate/audio?generation_id=<REPLACE_WITH_YOUR_GENERATION_ID>\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    }\n)\n\ndata = response.json()\nprint(data)"
+          },
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v2/generate/audio?generation_id=<REPLACE_WITH_YOUR_GENERATION_ID>' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "HTTP",
+            "source": "GET /v2/generate/audio?generation_id=<REPLACE_WITH_YOUR_GENERATION_ID> HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nAccept: */*"
+          }
+        ],
+        "operationId": "_v2_generate_audio",
+        "parameters": [
+          {
+            "name": "generation_id",
+            "required": true,
+            "in": "query",
+            "example": "<REPLACE_WITH_YOUR_GENERATION_ID>",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated audio.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": ["queued", "generating", "completed", "error"],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "audio_file": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav"
+                        }
+                      },
+                      "required": ["url"]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["name", "message"],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": ["credits_used"]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": ["id", "status"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
