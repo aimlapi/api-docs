@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "alibaba/wan2.6-r2v"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "video_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "description": "An array of URLs for the uploaded reference video files. This parameter is used to extract the character's appearance and voice (if any) to generate a video that matches the reference features.\nEach reference video must contain only one character. For example, character1 is a little girl and character2 is an alarm clock."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "16:9",
+                      "9:16",
+                      "1:1",
+                      "4:3",
+                      "3:4"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated video."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "720p",
+                      "1080p"
+                    ],
+                    "default": "1080p",
+                    "description": "An enumeration where the short side of the video frame determines the resolution."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds.",
+                    "enum": [
+                      5,
+                      10,
+                      15
+                    ],
+                    "default": "10"
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "description": "The description of elements to avoid in the generated video."
+                  },
+                  "shot_type": {
+                    "type": "string",
+                    "enum": [
+                      "single",
+                      "multi"
+                    ],
+                    "default": "single",
+                    "description": "Specifies the shot type of the generated video, that is, whether the video consists of a single continuous shot or multiple switched shots.\nThis parameter takes effect only when \"prompt_extend\" is set to 'true':\n- single: (default) Outputs a single-shot video.\n- multi: Outputs a multi-shot video."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "description": "Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen."
+                  },
+                  "enhance_prompt": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to enable prompt expansion."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "video_urls"
+                ],
+                "title": "alibaba/wan2.6-r2v"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

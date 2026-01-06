@@ -1,15 +1,34 @@
 [
   {
-    "name": "google/lyria2",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=google/lyria2",
-    "alias": "Lyria 2",
-    "category": "music-models",
-    "vendor": "Google",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
-    "customParams":{
-        "model": "google/lyria2",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s"
-    }
+    "name": "alibaba/wan-2-6-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan-2-6-image",
+    "alias": "wan-2-6-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-to-image"
+  },
+  {
+    "name": "alibaba/wan2.6-t2v",
+    "alias": "wan2.6-t2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.6-t2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "alibaba/wan2.6-i2v",
+    "alias": "wan2.6-i2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.6-i2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "alibaba/wan2.6-r2v",
+    "alias": "wan2.6-r2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.6-r2v",
+    "codeSamples": "video:video"
   }
 ]
