@@ -1,16 +1,15 @@
 [
   {
-    "name": "minimax/music-1.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-1.5",
-    "alias": "music-1.5",
+    "name": "google/lyria2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=google/lyria2",
+    "alias": "Lyria 2",
     "category": "music-models",
-    "vendor": "MiniMax",
+    "vendor": "Google",
     "codeSamples": "custom",
     "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
     "customParams":{
-        "model": "minimax/music-1.5",
-        "prompt": "Lo-fi pop hip-hop ambient music",
-        "lyrics": "[Verse] Streetlights flicker, the night breeze sighs Shadows stretch as I walk alone An old coat wraps my silent sorrow Wandering, longing, where should I go [Chorus] Pushing the wooden door, the aroma spreads In a familiar corner, a stranger gazes."
+        "model": "google/lyria2",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s"
     }
   }
 ]
