@@ -1,14 +1,8 @@
 [
   {
-    "name": "pixverse/v5.5/text-to-video",
-    "alias": "v5-5-text-to-video",
-    "category": "video-models",
-    "vendor": "PixVerse"
-  },
-  {
-    "name": "pixverse/v5.5/image-to-video",
-    "alias": "v5.5/image-to-video",
-    "category": "video-models",
-    "vendor": "PixVerse"
+    "name": "music-01",
+    "alias": "music-01",
+    "category": "music-models",
+    "vendor": "MiniMax"
   }
 ]
