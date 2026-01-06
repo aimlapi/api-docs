@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "alibaba/wan2.6-r2v"
+                      "alibaba/wan-2-6-r2v"
                     ]
                   },
                   "prompt": {
@@ -99,7 +99,7 @@
                   "prompt",
                   "video_urls"
                 ],
-                "title": "alibaba/wan2.6-r2v"
+                "title": "alibaba/wan-2-6-r2v"
               }
             }
           }
