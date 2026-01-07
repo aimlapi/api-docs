@@ -13,7 +13,7 @@
         "video_urls":[
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
         ],
-        "duration": "5"
+        "duration": 5
     }
   }
 ]
