@@ -1,26 +1,19 @@
 [
   {
-    "name": "alibaba/wan-2-6-t2v",
-    "alias": "wan2.6-t2v",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-t2v",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "alibaba/wan-2-6-i2v",
-    "alias": "wan2.6-i2v",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-i2v",
-    "codeSamples": "video:video"
-  },
-  {
     "name": "alibaba/wan-2-6-r2v",
     "alias": "wan2.6-r2v",
     "category": "video-models",
     "vendor": "Alibaba Cloud",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-r2v",
-    "codeSamples": "video:video"
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "alibaba/wan-2-6-r2v",
+        "prompt": "Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.",
+        "video_urls":[
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
+        ],
+        "duration": "5"
+    }
   }
 ]
