@@ -49,10 +49,11 @@ Below, you can find three corresponding API schemas and examples for all endpoin
 
 ### Fetch generation
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.&#x20;
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="luma-gen-fetch" path="/v2/generate/video/luma-ai/generation" method="get" %}
-[OpenAPI luma-gen-fetch](https://api.aimlapi.com/docs-public-yaml)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ### Example: Fetch Single Generation

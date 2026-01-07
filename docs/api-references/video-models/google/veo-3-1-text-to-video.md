@@ -48,19 +48,15 @@ You can generate a video using this API. In the basic setup, you only need a pro
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="fetch-video" path="/v2/video/generations" method="get" %}
-[OpenAPI fetch-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-t2v-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **10** seconds until it finally receives the video URL.
-
-{% hint style="warning" %}
-This model produces highly detailed and natural-looking videos, so generation may take around 2 minutes for a 8-second video with audio.
-{% endhint %}
 
 {% tabs %}
 {% tab title="Python" %}

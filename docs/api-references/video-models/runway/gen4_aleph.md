@@ -49,10 +49,10 @@ You can generate a video using this API. In the basic setup, you need only a vid
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -220,8 +220,10 @@ Processing complete:/n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 
 
 </details>
 
-**Processing time**: \~3 min 30 sec.\
-**Original**: [1280×720](https://drive.google.com/file/d/1x_AYR09NphtcDpBykCx8u4Kq7AAdgJIt/view?usp=sharing)\
+**Processing time**: \~3 min 30 sec.
+
+**Original**: [1280×720](https://drive.google.com/file/d/1x_AYR09NphtcDpBykCx8u4Kq7AAdgJIt/view?usp=sharing)
+
 **Low-res GIF preview**:
 
-<table data-full-width="false"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><div><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption></figcaption></figure></div></td><td><div><figure><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
