@@ -1,20 +1,24 @@
-# video-o1-video-to-video-edit
+# Wan 2.6 (Image-to-Video)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `klingai/video-o1-video-to-video-edit`
+* `alibaba/wan-2-6-i2v`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/klingai/video-o1-video-to-video-edit" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/wan-2-6-i2v" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model transforms an input video according to a natural-language text prompt, altering style, visual attributes, or the overall look of the scene while preserving the original motion and structural layout of the footage.
+This model transforms images into dynamic video while preserving character identity, enabling consistent motion and synchronized audio. Compared to earlier versions, Wan 2.6 offers stronger instruction following, higher visual fidelity, and significantly enhanced sound generation.
+
+## Setup your API Key
+
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
 ## How to Make a Call
 
@@ -22,47 +26,19 @@ The model transforms an input video according to a natural-language text prompt,
 
 <summary>Step-by-Step Instructions</summary>
 
-:digit\_one: **Setup You Can’t Skip**
+Generating a video using this model involves sequentially calling two endpoints:
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). \
-:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
-
-:digit\_two: **Copy the code example**
-
-At the bottom of this page, you'll find a code example that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
-
-:digit\_three: **Modify the code example**
-
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key. \
-:black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
-
-:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
-
-Only the required parameters shown in the example are needed to run the request, but you can include optional parameters to fine-tune behavior. Below, you can find the corresponding **API schema**, which lists all available parameters and usage notes.
-
-:digit\_five: **Run your modified code**
-
-Run your modified code inside your development environment. Response time depends on many factors, but for simple requests it rarely exceeds a few seconds.
-
-{% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
-{% endhint %}
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint. Below, you can find both corresponding API schemas.
 
 </details>
 
 ## API Schemas
 
-Generating a video using this model involves sequentially calling two endpoints:
-
-* The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
-
-Below, you can find two corresponding API schemas and an example with both endpoint calls.
-
 ### Create a video generation task and send it to the server
 
-{% openapi-operation spec="kling-video-o1-video-to-video-edit" path="/v2/video/generations" method="post" %}
-[OpenAPI kling-video-o1-video-to-video-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-video-to-video-edit.json)
+{% openapi-operation spec="wan2-6-i2v" path="/v2/video/generations" method="post" %}
+[OpenAPI wan2-6-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.6-i2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -94,17 +70,17 @@ def generate_video():
     url = f"{base_url}/video/generations"
     headers = {
         "Authorization": f"Bearer {api_key}", 
+        "Content-Type": "application/json"
     }
 
-    data = {
-        "model": "klingai/video-o1-video-to-video-edit",
-        "prompt":'''
-            Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.
-        ''',
-        "video_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"      
+    payload = {
+        "model": "alibaba/wan-2-6-i2v",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+        "duration": "5",
     }
  
-    response = requests.post(url, json=data, headers=headers)
+    response = requests.post(url, json=payload, headers=headers)
     
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
@@ -131,6 +107,7 @@ def get_video(gen_id):
 def main():
     # Running video generation and getting a task id
     gen_response = generate_video()
+    print(gen_response)
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
@@ -156,7 +133,7 @@ def main():
                 return response_data
 
         print("Timeout reached. Stopping.")
-        return None
+        return None  
 
 
 if __name__ == "__main__":
@@ -165,7 +142,7 @@ if __name__ == "__main__":
 {% endcode %}
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="JS" %}
 {% code overflow="wrap" %}
 ```javascript
 const https = require("https");
@@ -178,10 +155,10 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "klingai/video-o1-video-to-video-edit",
-    prompt: `
-    Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.`,
-    video_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4",
+    model: "alibaba/wan-2-6-i2v",
+    prompt: "Mona Lisa puts on glasses with her hands.",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+    duration: "5",
   });
 
   const url = new URL(`${baseUrl}/video/generations`);
@@ -292,12 +269,9 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation ID:   9177d714-9f53-4ce7-829f-b81e2223c48b:klingai/video-o1-video-to-video-edit
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
+{'id': 'V2cdWP9kao8xiofM-OvwG', 'status': 'queued', 'meta': {'usage': {'credits_used': 1575000}}}
+Generation ID:   V2cdWP9kao8xiofM-OvwG
+Status: queued. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
@@ -309,14 +283,14 @@ Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': '9177d714-9f53-4ce7-829f-b81e2223c48b:klingai/video-o1-video-to-video-edit', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a875051/Uce7GGCPuWbicbRrdaI4U_output.mp4'}}
+ {'id': 'V2cdWP9kao8xiofM-OvwG', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/alpaca/1d/1b/20260107/0fa8e3c9/29195163-523901dd-f86f-434a-bf96-0223ec06c352.mp4?Expires=1767805107&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=WY0q7xM%2F9N9dhsW7OiJfHPOegkU%3D'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 3 min 55 sec.
+**Processing time**: \~ 2 min 52 sec.
 
-**Generated video** (1940x1068, without sound):
+**Generated video** (1920x1080, with sound):
 
-{% embed url="https://drive.google.com/file/d/19HfgD3-h-qtKIHNfjHPrn8jxn-8Yl8CY/view" %}
+{% embed url="https://drive.google.com/file/d/1Vm4vw72JrqV3XaXL699Z-x-I4mWjBnkk/view" %}
