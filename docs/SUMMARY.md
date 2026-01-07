@@ -154,6 +154,7 @@
     * [qwen-image-edit](api-references/image-models/alibaba-cloud/qwen-image-edit.md)
     * [z-image-turbo](api-references/image-models/alibaba-cloud/z-image-turbo.md)
     * [z-image-turbo-lora](api-references/image-models/alibaba-cloud/z-image-turbo-lora.md)
+    * [wan-2-6-image](api-references/image-models/alibaba-cloud/wan-2-6-image.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
     * [Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
     * [Seededit 3.0 (Image-to-Image)](api-references/image-models/bytedance/seededit-3.0-image-to-image.md)
