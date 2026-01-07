@@ -1,0 +1,19 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'An african american woman dancing',
+      image_url: 'https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png',
+      video_url: 'https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4'
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()
