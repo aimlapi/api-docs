@@ -1,0 +1,186 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/video-v2-6-pro-motion-control"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "Optional instructions that define the background elements, including their appearance, timing in the frame, and behavior, and can also subtly adjust the character’s animation."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image that serves as the character reference for animation. The image must contain exactly one clearly visible character, who will be animated using the motion from the reference video provided in the video_url parameter. For optimal results, be sure the character’s proportions in the image match those in the video."
+                  },
+                  "video_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A HTTPS URL pointing to a video or a data URI containing a video. The character’s movements from this video will be applied to the character from the image provided in the image_url parameter. For best results, use a video with a single clearly visible character. If the video contains two or more characters, the motion of the character occupying the largest portion of the frame will be used for generation."
+                  },
+                  "character_orientation": {
+                    "type": "string",
+                    "enum": [
+                      "image",
+                      "video"
+                    ],
+                    "default": "image",
+                    "description": "Generate the orientation of the character in the video, which can be selected to match the image or the video:\n- image: has the same orientation as the person in the picture; At this time, the reference video duration should not exceed 10 seconds;\n- video: consistent with the orientation of the characters in the video; At this time, the reference video duration should not exceed 30 seconds;"
+                  },
+                  "keep_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to keep the original audio from the video."
+                  }
+                },
+                "required": [
+                  "model",
+                  "image_url",
+                  "video_url"
+                ],
+                "title": "klingai/video-v2-6-pro-motion-control"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"klingai/video-v2-6-pro-motion-control\",\n      \"image_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png\",\n      \"video_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"klingai/video-v2-6-pro-motion-control\",\n      \"image_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png\",\n      \"video_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+          },
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"klingai/video-v2-6-pro-motion-control\",\n      \"image_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png\",\n      \"video_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4\"\n    }'"
+          },
+          {
+            "lang": "HTTP",
+            "source": "POST /v2/video/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"klingai/video-v2-6-pro-motion-control\",\n  \"image_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png\",\n  \"video_url\": \"https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
