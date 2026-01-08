@@ -1,16 +1,16 @@
 [
   {
-    "name": "minimax/music-2.0",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-2.0",
-    "alias": "music-2.0",
-    "category": "music-models",
-    "vendor": "MiniMax",
+    "name": "klingai/video-v2-6-pro-motion-control",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-motion-control",
+    "alias": "video-v2-6-pro-motion-control",
+    "category": "video-models",
+    "vendor": "Kling AI",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
     "customParams":{
-        "model": "minimax/music-2.0",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+        "model": "klingai/video-v2-6-pro-motion-control",
+        "image_url": "https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png",
+        "video_url": "https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4"
     }
   }
 ]
