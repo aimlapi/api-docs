@@ -32,7 +32,7 @@ This endpoint generates a music piece based on the prompt (which includes style 
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
+After sending a request for music generation, this task is added to the queue.
 
 {% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
 [OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
@@ -84,7 +84,7 @@ def retrieve_audio(gen_id):
     return response.json()
     
     
-# This is the main function of the program. From here, we sequentially call the audio generation and then repeatedly request the result from the server every 10 seconds:
+# This is the main function of the program. From here, we sequentially call the audio generation and then repeatedly request the result from the server every 15 seconds:
 def main():
     # Running video generation and getting a task id
     gen_response = generate_audio()
@@ -234,7 +234,7 @@ Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20260108074124-WOYPTzIhedvMMVNw.mp3?Expires=1767915690&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=PjSPH21%2FpILSs35%2Fl019p66wv1Y%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
+ {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260108200145-PyWuVGVLaIkSAOEp.mp3?Expires=1767960111&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=pTfbqVDKtdUdX1dr0iqEjSI4xnY%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
 ```
 {% endcode %}
 

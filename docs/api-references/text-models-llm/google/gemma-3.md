@@ -1,6 +1,10 @@
 # gemma-3 (4B and 12B)
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>google/gemma-3-4b-it</code></li><li><code>google/gemma-3-12b-it</code></li></ul></div></td><td valign="top"><br><a href="https://aimlapi.com/app/google/gemma-3-4b-it" class="button primary">Try in Playground</a><br><a href="https://aimlapi.com/app/google/gemma-3-12b-it" class="button primary">Try in Playground</a></td></tr></tbody></table>
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+{% endhint %}
+
+<table data-header-hidden data-full-width="true"><thead><tr><th width="237.13336181640625"></th><th></th></tr></thead><tbody><tr><td><code>google/gemma-3-4b-it</code></td><td><a href="https://aimlapi.com/app/google/gemma-3-4b-it" class="button primary">Try in Playground</a></td></tr><tr><td><code>google/gemma-3-12b-it</code></td><td><a href="https://aimlapi.com/app/google/gemma-3-12b-it" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
