@@ -151,14 +151,14 @@
                           "type": "object",
                           "nullable": true,
                           "properties": {
-                            "tokens_used": {
+                            "credits_used": {
                               "type": "number",
                               "description": "The number of tokens consumed during generation.",
                               "example": 120000
                             }
                           },
                           "required": [
-                            "tokens_used"
+                            "credits_used"
                           ]
                         }
                       },
@@ -182,7 +182,7 @@
           },
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/edits' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --form \"prompt=Add a crown to the T-rex's head.\" \\\n  --form \"image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>\""
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/edits' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --form \"prompt=Add a crown to the T-rex’s head.\" \\\n  --form \"image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>\""
           },
           {
             "lang": "HTTP",
