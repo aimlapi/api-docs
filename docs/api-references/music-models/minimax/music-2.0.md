@@ -1,20 +1,20 @@
-# music-1.5
+# music-2.0
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/music-1.5`
+* `minimax/music-2.0`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/minimax/music-1.5" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/music-2-0" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
+A fast and cost-efficient music generator optimized for high-quality music production. The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
 
 ## Setup your API Key
 
@@ -26,8 +26,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 This endpoint generates a music piece based on the prompt (which includes style instructions) and the provided lyrics. It returns a generation task ID, its status, and related metadata.
 
-{% openapi-operation spec="music-1-5" path="/v2/generate/audio" method="post" %}
-[OpenAPI music-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-1.5.json)
+{% openapi-operation spec="music-2-0" path="/v2/generate/audio" method="post" %}
+[OpenAPI music-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-2.0.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
@@ -56,7 +56,7 @@ aimlapi_key = '<YOUR_AIMLAPI_KEY>'
 def generate_audio():
     url = "https://api.aimlapi.com/v2/generate/audio"
     payload = {
-        "model": "minimax/music-1.5",
+        "model": "minimax/music-2.0",
         "prompt": "A calm and soothing instrumental music with gentle piano and soft strings.",
         "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way" 
     }
@@ -86,31 +86,35 @@ def retrieve_audio(gen_id):
     
 # This is the main function of the program. From here, we sequentially call the audio generation and then repeatedly request the result from the server every 10 seconds:
 def main():
-    generation_response = generate_audio()
-    gen_id = generation_response.get("id")
-        
+    # Running video generation and getting a task id
+    gen_response = generate_audio()
+    print(gen_response)
+    gen_id = gen_response.get("id")
+    print("Generation ID:  ", gen_id)
+
+    # Try to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
-        timeout = 600
+        timeout = 1000
         while time.time() - start_time < timeout:
             response_data = retrieve_audio(gen_id)
 
             if response_data is None:
                 print("Error: No response from API")
                 break
-        
-            status = response_data.get("status")
 
-            if status == "generating" or status == "queued" or status == "waiting":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            status = response_data.get("status")
+            
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
-                print("Generation complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
-   
+
         print("Timeout reached. Stopping.")
-        return None    
+        return None 
 
 
 if __name__ == "__main__":
@@ -128,7 +132,7 @@ const API_KEY = '<YOUR_AIMLAPI_KEY>';
 async function generateAudio() {
   const url = 'https://api.aimlapi.com/v2/generate/audio';
   const payload = {
-        model: 'minimax/music-1.5',
+        model: 'minimax/music-2.0',
         prompt: 'A calm and soothing instrumental music with gentle piano and soft strings.',
         lyrics: '[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way'
   };
@@ -181,7 +185,7 @@ async function main() {
 
   const genId = generationResponse.id;
   const timeout = 600000; // 10 minutes
-  const interval = 10000; // 10 seconds
+  const interval = 15000; // 15 seconds
   const start = Date.now();
 
   const intervalId = setInterval(async () => {
@@ -200,8 +204,8 @@ async function main() {
     }
 
     const status = result.status;
-    if (['generating', 'queued', 'waiting'].includes(status)) {
-      console.log('Still waiting... Checking again in 10 seconds.');
+    if (['generating', 'queued'].includes(status)) {
+      console.log(`Status: ${status}. Checking again in 15 seconds.`);
     } else {
       console.log('Generation complete:\n', result);
       clearInterval(intervalId);
@@ -221,16 +225,16 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'queued'}
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20251106201349-ESweHLjHtnWFQLwO.mp3?Expires=1762517636&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=ZIKZMHUCU3r30ysGjbSoqc3aVks%3D'}, 'extra_info': {'music_duration': 93022, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 256000, 'music_size': 0}, 'trace_id': '055bc3b9622dd73d828276162cc7d516'}
+Generation: {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'queued'}
+{'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'queued'}
+Generation ID:   e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20260108074124-WOYPTzIhedvMMVNw.mp3?Expires=1767915690&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=PjSPH21%2FpILSs35%2Fl019p66wv1Y%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
 ```
 {% endcode %}
 
@@ -238,4 +242,4 @@ Generation complete:/n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/musi
 
 Listen to the track we generated:
 
-{% embed url="https://drive.google.com/file/d/1SnLnpa4C4gU1sWDEIfd-fTTGdd6zwfJW/view" %}
+{% embed url="https://drive.google.com/file/d/1nYJ3OCdcQ8_pR4vD_0yCZhnHDuS7LFdp/view" %}

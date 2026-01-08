@@ -337,6 +337,7 @@
     * [minimax-music \[legacy\]](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
     * [music-01](api-references/music-models/MiniMax/music-01.md)
     * [music-1.5](api-references/music-models/minimax/music-1.5.md)
+    * [music-2.0](api-references/music-models/minimax/music-2.0.md)
   * [Stability AI](api-references/music-models/Stability-AI/README.md)
     * [stable-audio](api-references/music-models/Stability-AI/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)

@@ -114,7 +114,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 </code></pre>
 
 Listen to the track we generated:
@@ -123,4 +122,4 @@ Listen to the track we generated:
 
 ## All Available Music Models
 
-<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="elevenlabs/eleven_music.md">elevenlabs/eleven_music</a></td><td>ElevenLabs</td><td></td><td><a href="https://aimlapi.com/models/elevenmusic">Eleven Music</a></td></tr><tr><td><a href="google/lyria-2.md">google/lyria2</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/lyria-2">Lyria 2</a></td></tr><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr><tr><td><a href="minimax/music-1.5.md">minimax/music-1.5</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-1-5">MiniMax Music 1.5</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID</th><th width="134.4000244140625">Developer</th><th width="102.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="elevenlabs/eleven_music.md">elevenlabs/eleven_music</a></td><td>ElevenLabs</td><td></td><td><a href="https://aimlapi.com/models/elevenmusic">Eleven Music</a></td></tr><tr><td><a href="google/lyria-2.md">google/lyria2</a></td><td>Google</td><td></td><td><a href="https://aimlapi.com/models/lyria-2">Lyria 2</a></td></tr><tr><td><a href="Stability-AI/stable-audio.md">stable-audio</a></td><td>Stability AI</td><td></td><td><a href="https://aimlapi.com/models/stable-audio">Stable Audio</a></td></tr><tr><td><a href="MiniMax/minimax-music-[legacy].md">minimax-music</a></td><td>Minimax AI</td><td></td><td>-</td></tr><tr><td><a href="MiniMax/music-01.md">music-01</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-api">MiniMax Music</a></td></tr><tr><td><a href="minimax/music-1.5.md">minimax/music-1.5</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-1-5">MiniMax Music 1.5</a></td></tr><tr><td><a href="minimax/music-2.0.md">minimax/music-2.0</a></td><td>Minimax AI</td><td></td><td><a href="https://aimlapi.com/models/minimax-music-2-0">MiniMax Music 2.0</a></td></tr></tbody></table>
