@@ -71,6 +71,30 @@ If the video generation task status is `completed`, the response will include th
 
 ## Code Example
 
+1. Provide the URL of the image containing the character you want to animate.
+2. Provide the URL of the video where another character performs the movements you want to transfer to the animated character.
+3. If needed, describe minor background details or additional objects in the frame using the `prompt` parameter. Example: `"At 00:03, a brightly colored parrot flies in from the left, briefly circles above the character once, and then hurries off to the right."`
+4. Set the `character_orientation` parameter to `image` or `video`, depending on whether you want to use the character’s orientation from the image reference or from the video reference.
+5. By default, the model uses the audio track from the reference video. You can disable this behavior by setting the `keep_audio` parameter to `false`.
+
+<details>
+
+<summary> Input Reference Guidelines</summary>
+
+* Ensure the character’s entire body and head are clearly visible and not obstructed in both the image and the motion reference.
+* Keep the character’s proportions consistent between the image and the reference video. Avoid pairing a full-body motion reference with a half-body or cropped image.
+* Upload a motion reference featuring a single character whenever possible.\
+  If the motion reference contains two or more characters, the motion of the character occupying the largest portion of the frame will be used for generation.
+* Real human actions are recommended. Certain stylised characters, humanoid animals, and characters with partial humanoid body proportions are supported and can be recognised.
+* Avoid cuts, camera movements, and rapid scene changes in the motion reference video.
+* Avoid overly fast or complex motions. Steady, moderate movements generally produce better results.
+* The short edge of the input media must be at least 300–340 px (depending on the input type), and the long edge must not exceed 3850–65536 px.
+* The supported duration of the motion reference video ranges from 3 to 30 seconds.\
+  The generated video length will generally match the duration of the uploaded reference video.
+* If the motion is too complex or fast-paced, the generated output may be shorter than the original video, as the model can only extract valid continuous action segments.
+
+</details>
+
 The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
@@ -319,6 +343,14 @@ Processing complete:
 </details>
 
 **Processing time**: \~ 5 min 56 sec.
+
+<details>
+
+<summary>Image and Video References</summary>
+
+<table data-header-hidden data-full-width="true"><thead><tr><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/woman-in-yellow-dancing.png" alt=""></td><td valign="top"><img src="../../../.gitbook/assets/video-reference-motion.gif" alt=""></td></tr></tbody></table>
+
+</details>
 
 **Generated video** (1936x1072, without sound, the character’s orientation matches the orientation from the image reference):
 
