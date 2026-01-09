@@ -52,11 +52,24 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+## API Schemas
+
+### Generate video
 
 {% openapi-operation spec="video-v2-6-pro-motion-control" path="/v2/video/generations" method="post" %}
 [OpenAPI video-v2-6-pro-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-motion-control.json)
 {% endopenapi-operation %}
+
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
+{% endopenapi-operation %}
+
 
 ## Code Example
 
