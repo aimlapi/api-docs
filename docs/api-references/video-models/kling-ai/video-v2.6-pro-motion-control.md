@@ -358,7 +358,7 @@ Processing complete:
 `"character_orientation":"image"`
 {% endembed %}
 
-**Generated video** (1920x1080, without sound, the character’s orientation matches the orientation from the video reference):
+**Generated video** (1936x1072, without sound, the character’s orientation matches the orientation from the video reference):
 
 {% embed url="https://drive.google.com/file/d/1JDUKKGr3Jdm04J9-BOXtsMGo59znot6_/view" %}
 `"character_orientation":"video"`
