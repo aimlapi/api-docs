@@ -320,7 +320,7 @@ Processing complete:
 
 **Processing time**: \~ 5 min 56 sec.
 
-**Generated video** (1920x1080, without sound, the character’s orientation matches the orientation from the image reference):
+**Generated video** (1936x1072, without sound, the character’s orientation matches the orientation from the image reference):
 
 {% embed url="https://drive.google.com/file/d/1vlalNtBr0tJnEvsS0uQQW1NmyzFH8_0T/view" %}
 `"character_orientation":"image"`
