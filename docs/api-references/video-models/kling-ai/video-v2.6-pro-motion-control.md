@@ -26,7 +26,7 @@ A next-generation cinematic video generation model developed by KlingAI. It focu
 
 :digit\_one: **Setup You Can’t Skip**
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). \
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit\_two: **Copy the code example**
@@ -54,12 +54,11 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schemas
 
-### Generate video
+### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-v2-6-pro-motion-control" path="/v2/video/generations" method="post" %}
 [OpenAPI video-v2-6-pro-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-motion-control.json)
 {% endopenapi-operation %}
-
 
 ### Retrieve the generated video from the server
 
@@ -69,7 +68,6 @@ If the video generation task status is `completed`, the response will include th
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
 [OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
-
 
 ## Code Example
 

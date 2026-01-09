@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# video-o1-video-to-video-reference
+# video-o1/video-to-video-reference
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -43,7 +43,7 @@ The model that performs video-to-video editing by applying a reference style or 
 
 :digit\_one: **Setup You Can’t Skip**
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). \
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
 :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit\_two: **Copy the code example**
@@ -52,7 +52,7 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit\_three: **Modify the code example**
 
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key. \
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.\
 :black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
@@ -69,7 +69,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+## API Schemas
+
+### Create a video generation task and send it to the server
 
 {% openapi-operation spec="kling-video-o1-video-to-video-reference" path="/v2/video/generations" method="post" %}
 [OpenAPI kling-video-o1-video-to-video-reference](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-video-to-video-reference.json)
