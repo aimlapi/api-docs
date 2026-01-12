@@ -1,8 +1,14 @@
 [
   {
-    "name": "music-01",
-    "alias": "music-01",
-    "category": "music-models",
-    "vendor": "MiniMax"
+    "name": "openai/gpt-4o-transcribe",
+    "alias": "gpt-4o-transcribe",
+    "category": "speech-models",
+    "vendor": "OpenAI"
+  },
+  {
+    "name": "openai/gpt-4o-mini-transcribe",
+    "alias": "gpt-4o-mini-transcribe",
+    "category": "speech-models",
+    "vendor": "OpenAI"
   }
 ]
