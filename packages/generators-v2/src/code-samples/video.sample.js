@@ -41,11 +41,33 @@ export const videoSample = (options, fullSchema) => {
     });
   } else if (
     requiredModelParams?.includes('video_url') &&
+    requiredModelParams?.includes('image_url') &&
+    lengthRequiredParams === 2
+  ) {
+    Object.assign(params, {
+      video_url:
+        'https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4',
+      image_url:
+        'https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png',
+    });
+  } else if (
+    requiredModelParams?.includes('video_url') &&
     Boolean(schema?.properties?.prompt)
   ) {
     Object.assign(params, {
       video_url:
         'https://zovi0.github.io/public_misc/kling-v2-master-t2v-racoon.mp4',
+      prompt:
+        'Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.',
+    });
+  } else if (
+    requiredModelParams?.includes('video_urls') &&
+    Boolean(schema?.properties?.prompt)
+  ) {
+    Object.assign(params, {
+      video_urls: [
+        'https://zovi0.github.io/public_misc/kling-v2-master-t2v-racoon.mp4'
+      ],
       prompt:
         'Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.',
     });
@@ -158,7 +180,7 @@ export const videoSample = (options, fullSchema) => {
         : "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it’s coming.",
     });
   } else {
-    console.error(`Unable to generate code sample for model ${options.name}`);
+    console.error(`UNABLE TO GENERATE CODE SAMPLE FOR MODEL ${options.name}`);
     return;
   }
 
