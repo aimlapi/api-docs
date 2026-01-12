@@ -1,4 +1,4 @@
-# video-v2.6-pro/motion-control
+# v2.6-pro/motion-control
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -73,7 +73,7 @@ If the video generation task status is `completed`, the response will include th
 
 1. Provide the URL of the image containing the character you want to animate.
 2. Provide the URL of the video where another character performs the movements you want to transfer to the animated character.
-3. If needed, describe minor background details or additional objects in the frame using the `prompt` parameter. Example: `"At 00:03, a brightly colored parrot flies in from the left, briefly circles above the character once, and then hurries off to the right."`
+3. If needed, describe minor background details or additional objects in the frame using the `prompt` parameter. Example: `"A brightly colored parrot flies in from the left, briefly circles above the character once, and then hurries off to the right."`
 4. Set the `character_orientation` parameter to `image` or `video`, depending on whether you want to use the character’s orientation from the image reference or from the video reference.
 5. By default, the model uses the audio track from the reference video. You can disable this behavior by setting the `keep_audio` parameter to `false`.
 
