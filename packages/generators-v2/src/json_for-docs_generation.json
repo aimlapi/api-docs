@@ -1,16 +1,10 @@
 [
   {
-    "name": "klingai/video-v2-6-pro-motion-control",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-motion-control",
-    "alias": "video-v2-6-pro-motion-control",
-    "category": "video-models",
-    "vendor": "Kling AI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
-    "customParams":{
-        "model": "klingai/video-v2-6-pro-motion-control",
-        "image_url": "https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png",
-        "video_url": "https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4"
-    }
+    "name": "openai/gpt-image-1-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1-mini",
+    "alias": "gpt-image-1-mini",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
   }
 ]
