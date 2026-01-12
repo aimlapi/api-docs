@@ -193,8 +193,8 @@ def main():
                 break
         
             status = response_data.get("status")
-            if status == "generating" or status == "queued" or status == "waiting":
-                print("Still waiting... Checking again in 10 seconds.")
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
                 print("Generation complete:/n", response_data)
@@ -291,8 +291,8 @@ async function main() {
     }
 
     const status = result.status;
-    if (['generating', 'queued', 'waiting'].includes(status)) {
-      console.log('Still waiting... Checking again in 10 seconds.');
+    if (['generating', 'queued'].includes(status)) {
+      console.log(`Status: ${status}. Checking again in 10 seconds.`);
     } else {
       console.log('Generation complete:\n', result);
       clearInterval(intervalId);

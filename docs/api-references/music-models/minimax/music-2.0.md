@@ -32,7 +32,8 @@ This endpoint generates a music piece based on the prompt (which includes style 
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-After sending a request for music generation, this task is added to the queue.
+After sending a request for music generation, this task is added to the queue. This endpoint lets you check the status of a audio generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated audio URL and additional metadata.
 
 {% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
 [OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)

@@ -28,7 +28,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
+After sending a request for music generation, this task is added to the queue. This endpoint lets you check the status of a audio generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated audio URL and additional metadata.
 
 {% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
 [OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
@@ -96,7 +97,7 @@ def main():
         
             status = response_data.get("status")
             
-            if status in ["waiting", "queued", "generating"]:
+            if status in ["queued", "generating"]:
                 print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
@@ -215,7 +216,7 @@ function main() {
 
                 const status = responseData.status;
         
-                if (["waiting", "queued", "generating"].includes(status)) {
+                if (["queued", "generating"].includes(status)) {
                     console.log(`Status: ${status}. Checking again in 10 seconds.`);
                     setTimeout(checkStatus, interval);
                 } else {

@@ -1,15 +1,20 @@
-# whisper-tiny
+---
+hidden: true
+noIndex: true
+---
+
+# gpt-4o-mini-transcribe
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `#g1_whisper-tiny`
+* `openai/gpt-4o-mini-transcribe`
 {% endhint %}
 
 {% hint style="success" %}
 Note:
 
-Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../../../speech-models/speech-to-text/stt-legacy.md).
+Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../stt-legacy.md).
 
 Now, we are switching to a new two-step process:
 
@@ -17,14 +22,12 @@ Now, we are switching to a new two-step process:
 * `GET https://api.aimlapi.com/v1/stt/{generation_id}` – Retrieves the generated transcript from the server using the `generation_id` obtained from the previous API call.
 
 This approach helps prevent generation failures due to timeouts.\
-We've prepared [a couple of examples](whisper-tiny.md#quick-code-examples) below to make the transition to the new STT API easier for you.
+We've prepared [a couple of examples](gpt-4o-mini-transcribe.md#quick-code-examples) below to make the transition to the new STT API easier for you.
 {% endhint %}
 
 ## Model Overview
 
-The Whisper models are primarily for AI research, focusing on model robustness, generalization, and biases, and are also effective for English speech recognition. The use of Whisper models for transcribing non-consensual recordings or in high-risk decision-making contexts is strongly discouraged due to potential inaccuracies and ethical concerns.
-
-The models are trained using 680,000 hours of audio and corresponding transcripts from the internet, with 65% being English audio and transcripts, 18% non-English audio with English transcripts, and 17% non-English audio with matching non-English transcripts, covering 98 languages in total.
+A speech-to-text model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md) for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
 
 {% hint style="success" %}
 OpenAI STT models are priced based on tokens, similar to chat models. In practice, this means the cost primarily depends on the duration of the input audio.
@@ -38,8 +41,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 #### Creating and sending a speech-to-text conversion task to the server
 
-{% openapi-operation spec="whisper-tiny-2025-05-28" path="/v1/stt/create" method="post" %}
-[OpenAPI whisper-tiny-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/whisper-tiny.json)
+{% openapi-operation spec="gpt-4o-mini-transcribe" path="/v1/stt/create" method="post" %}
+[OpenAPI gpt-4o-mini-transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/gpt-4o-mini-transcribe.json)
 {% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id
@@ -50,11 +53,11 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## Quick Code Examples
 
-Let's use the `#g1_whisper-tiny` model to transcribe the following audio fragment:
+Let's use the `openai/gpt-4o-mini-transcribe` model to transcribe the following audio fragment:
 
 {% embed url="https://drive.google.com/file/d/1ZN-28NUbK1TXHt6oEPj42zUJCv82e9L4/view?usp=sharing" %}
 
-### Example #1: Processing a Speech Audio File via URL
+### Example Code: Processing a Speech Audio File via URL
 
 <pre class="language-python" data-overflow="wrap"><code class="lang-python">import time
 import requests
@@ -71,7 +74,7 @@ api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
     }
 
     data = {
-        "model": "#g1_whisper-tiny",
+        "model": "openai/gpt-4o-mini-transcribe",
         "url": "https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3"
     }
  
@@ -112,7 +115,7 @@ def main():
         
             status = response_data.get("status")
 
-            if status == "waiting" or status == "active":
+            if status == "waiting" or status == "generating":
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
