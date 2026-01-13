@@ -1,10 +1,42 @@
 [
   {
-    "name": "openai/gpt-image-1-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1-mini",
-    "alias": "gpt-image-1-mini",
-    "category": "image-models",
-    "vendor": "OpenAI",
-    "codeSamples": "image-models:prompt"
+    "name": "baidu/ernie-4.5-21b-a3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b",
+    "alias": "ernie-4.5-21b-a3b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-21b-a3b-thinking",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b-thinking",
+    "alias": "ernie-4.5-21b-a3b-thinking",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-vl-28b-a3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-28b-a3b",
+    "alias": "ernie-4.5-vl-28b-a3b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-vl-424b-a47b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-424b-a47b",
+    "alias": "ernie-4.5-vl-424b-a47b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-300b-a47b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-300b-a47b",
+    "alias": "ernie-4.5-300b-a47b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
   }
 ]
