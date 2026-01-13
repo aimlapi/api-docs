@@ -1,42 +1,18 @@
 [
   {
-    "name": "baidu/ernie-4.5-21b-a3b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b",
-    "alias": "ernie-4.5-21b-a3b",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
+    "name": "google/veo3-1-extend-video",
+    "alias": "veo3-1-extend-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-extend-video",
+    "codeSamples": "video:video"
   },
   {
-    "name": "baidu/ernie-4.5-21b-a3b-thinking",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b-thinking",
-    "alias": "ernie-4.5-21b-a3b-thinking",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-4.5-vl-28b-a3b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-28b-a3b",
-    "alias": "ernie-4.5-vl-28b-a3b",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-4.5-vl-424b-a47b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-424b-a47b",
-    "alias": "ernie-4.5-vl-424b-a47b",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-4.5-300b-a47b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-300b-a47b",
-    "alias": "ernie-4.5-300b-a47b",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
+    "name": "google/veo3-1-fast-extend-video",
+    "alias": "veo3-1-fast-extend-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-fast-extend-video",
+    "codeSamples": "video:video"
   }
 ]
