@@ -27,7 +27,7 @@ The large-scale Mixture-of-Experts (MoE) language model. Excels in language unde
 
 <summary>How to make the first API call</summary>
 
-:digit\_one:  **Required setup (don’t skip this)**\
+**1️⃣ Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
 ▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
 
