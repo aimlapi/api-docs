@@ -75,7 +75,7 @@ print("Generation:", response.json())
 
 We obtained the following image by running that code example:
 
-<figure><img src="../../.gitbook/assets/66c834ddf0e7e8e65fb69c9f_flux.1 robots (2).webp" alt=""><figcaption><p><em>(And AI needs your clothes, your boots and your motorcycle.)</em></p></figcaption></figure>
+<div align="left"><figure><img src="../../.gitbook/assets/66c834ddf0e7e8e65fb69c9f_flux.1 robots (2).webp" alt=""><figcaption><p><em>(And AI needs your clothes, your boots and your motorcycle.)</em></p></figcaption></figure></div>
 
 ## All Available Image Models
 
