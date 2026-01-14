@@ -28,8 +28,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 [voyage-2.json](../../../.gitbook/assets/voyage-2.json)
 {% endopenapi %}
 
-## Example in Python
+## Code Example
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import openai
 
@@ -51,8 +53,10 @@ response = client.embeddings.create(
 # Print the embedding
 print(response)
 ```
+{% endtab %}
+{% endtabs %}
 
-This Python example shows how to set up an API client, send text to the embedding API, and print the response with the embedding vector. See how large a vector response the model generates from just a single short input phrase.
+This example shows how to set up an API client, send text to the embedding API, and print the response with the embedding vector. See how large a vector response the model generates from just a single short input phrase.
 
 <details>
 
