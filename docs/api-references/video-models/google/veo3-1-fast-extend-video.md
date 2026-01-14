@@ -41,7 +41,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="veo3-1-fast-extend-video" path="/v2/video/generations" method="post" %}
-[OpenAPI veo3-1-fast-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/veo3-1-fast-extend-video.json)
+[OpenAPI veo3-1-fast-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/veo3-1-fast-extend-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
