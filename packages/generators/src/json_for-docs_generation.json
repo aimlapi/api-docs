@@ -1,14 +1,14 @@
 [
   {
-    "name": "openai/gpt-4o-transcribe",
-    "alias": "gpt-4o-transcribe",
-    "category": "speech-models",
-    "vendor": "OpenAI"
+    "name": "alibaba/qwen-text-embedding-v3",
+    "alias": "qwen-text-embedding-v3",
+    "category": "embedding-models",
+    "vendor": "alibaba-cloud"
   },
   {
-    "name": "openai/gpt-4o-mini-transcribe",
-    "alias": "gpt-4o-mini-transcribe",
-    "category": "speech-models",
-    "vendor": "OpenAI"
+    "name": "alibaba/qwen-text-embedding-v4",
+    "alias": "qwen-text-embedding-v4",
+    "category": "embedding-models",
+    "vendor": "alibaba-cloud"
   }
 ]
