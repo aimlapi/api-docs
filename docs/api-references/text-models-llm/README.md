@@ -1,6 +1,20 @@
 ---
 description: Overview of the capabilities of AIML API text models (LLMs).
 icon: text-size
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Text Models (LLM)
