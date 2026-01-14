@@ -3,7 +3,7 @@
     "name": "google/veo3-1-extend-video",
     "alias": "veo3-1-extend-video",
     "category": "video-models",
-    "vendor": "Google",
+    "vendor": "google",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-extend-video",
     "codeSamples": "video:video"
   },
@@ -11,7 +11,7 @@
     "name": "google/veo3-1-fast-extend-video",
     "alias": "veo3-1-fast-extend-video",
     "category": "video-models",
-    "vendor": "Google",
+    "vendor": "google",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-fast-extend-video",
     "codeSamples": "video:video"
   }
