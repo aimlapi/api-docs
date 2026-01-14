@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Veo 3.1 Extend Video
 
 {% columns %}
@@ -43,7 +38,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="veo3-1-extend-video" path="/v2/video/generations" method="post" %}
-[OpenAPI veo3-1-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/veo3-1-extend-video.json)
+[OpenAPI veo3-1-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-1-extend-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -272,12 +267,25 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   QWcoGFfDtx2Th5tCkeilb
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'QWcoGFfDtx2Th5tCkeilb', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8a55de/XVKLuDxaCbYx6phcZoFf5_67d9400344f14a3f8567108c5decd774.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 2 min 56 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1280x720, with sound):
 
+{% embed url="https://drive.google.com/file/d/1Bmn-cR3JafgjLwJ7zFH2zR4juuwhKn0E/view" %}

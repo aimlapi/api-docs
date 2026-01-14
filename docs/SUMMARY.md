@@ -264,7 +264,7 @@
     * [Veo 3.1 Fast (Image-to-Video)](api-references/video-models/google/veo-3-1-image-to-video-fast.md)
     * [Veo 3.1 Fast (First-Last-Image-to-Video)](api-references/video-models/google/veo-3-1-first-last-image-to-video-fast.md)
     * [Veo 3.1 Extend Video](api-references/video-models/google/veo-3.1-extend-video.md)
-    * [veo3 1 fast extend video](api-references/video-models/google/veo3-1-fast-extend-video.md)
+    * [Veo 3.1 Fast Extend Video](api-references/video-models/google/veo-3.1-fast-extend-video.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [v1-standard/text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
     * [v1-standard/image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
