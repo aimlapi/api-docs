@@ -164,20 +164,16 @@
         "x-hideTryItPanel": true,
         "x-codeSamples": [
           {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"gen3a_turbo\",\n      \"prompt\": \"The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.\",\n      \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg\",\n      \"tail_image_url\": \"https://cdn.aimlapi.com/assets/content/white-fish.png\"\n    }'"
+          },
+          {
             "lang": "JavaScript",
             "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"gen3a_turbo\",\n      \"prompt\": \"The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.\",\n      \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg\",\n      \"tail_image_url\": \"https://cdn.aimlapi.com/assets/content/white-fish.png\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
             "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"gen3a_turbo\",\n      \"prompt\": \"The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.\",\n      \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg\",\n      \"tail_image_url\": \"https://cdn.aimlapi.com/assets/content/white-fish.png\"\n    }\n)\n\ndata = response.json()\nprint(data)"
-          },
-          {
-            "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"gen3a_turbo\",\n      \"prompt\": \"The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.\",\n      \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg\",\n      \"tail_image_url\": \"https://cdn.aimlapi.com/assets/content/white-fish.png\"\n    }'"
-          },
-          {
-            "lang": "HTTP",
-            "source": "POST /v2/video/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"gen3a_turbo\",\n  \"prompt\": \"The camera moves down, dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.\",\n  \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg\",\n  \"tail_image_url\": \"https://cdn.aimlapi.com/assets/content/white-fish.png\"\n}"
           }
         ]
       }

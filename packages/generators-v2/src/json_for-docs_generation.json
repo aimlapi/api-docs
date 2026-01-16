@@ -1,199 +1,867 @@
 [
   {
-    "name": "o1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=o1",
-    "alias": "o1-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.1-t2v-plus",
+    "alias": "wan2.1-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.1-t2v-plus",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/o3-2025-04-16",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o3-2025-04-16",
-    "alias": "o3-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.1-t2v-turbo",
+    "alias": "wan2.1-t2v-turbo",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.1-t2v-turbo",
+    "codeSamples": "video:video"
   },
   {
-    "name": "o3-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=o3-mini",
-    "alias": "o3-mini-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-t2v-plus",
+    "alias": "wan2.2-t2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-t2v-plus",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/o3-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o3-pro",
-    "alias": "o3-pro-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-i2v-plus",
+    "alias": "wan2.2-i2v-plus",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-i2v-plus",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/o4-mini-2025-04-16",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o4-mini-2025-04-16",
-    "alias": "o4-mini-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-14b-animate-replace",
+    "alias": "wan2.2-14b-animate-replace",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-14b-animate-replace",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-3.5-turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-3.5-turbo",
-    "alias": "gpt-3.5-turbo-RESPONSES",
-    "models": ["gpt-3.5-turbo", "gpt-3.5-turbo-0125", "gpt-3.5-turbo-1106"],
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-14b-animate-move",
+    "alias": "wan2.2-14b-animate-move",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-14b-animate-move",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-4-0125-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4-0125-preview",
-    "alias": "gpt-4-preview-RESPONSES",
-    "models": ["gpt-4-0125-preview", "gpt-4-1106-preview"],
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-vace-fun-a14b-reframe",
+    "alias": "wan2.2-vace-fun-a14b-reframe",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-reframe",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-4",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4",
-    "alias": "gpt-4-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-vace-fun-a14b-outpainting",
+    "alias": "wan2.2-vace-fun-a14b-outpainting",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-outpainting",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-4-turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4-turbo",
-    "alias": "gpt-4-turbo-RESPONSES",
-    "models": ["gpt-4-turbo", "gpt-4-turbo-2024-04-09"],
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-vace-fun-a14b-inpainting",
+    "alias": "wan2.2-vace-fun-a14b-inpainting",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-inpainting",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-4o",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4o",
-    "alias": "gpt-4o-RESPONSES",
-    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13", "chatgpt-4o-latest"],
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-vace-fun-a14b-pose",
+    "alias": "wan2.2-vace-fun-a14b-pose",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-pose",
+    "codeSamples": "video:video"
   },
   {
-    "name": "gpt-4o-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4o-mini",
-    "alias": "gpt-4o-mini-RESPONSES",
-    "models": ["gpt-4o-mini", "gpt-4o-mini-2024-07-18"],
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.2-vace-fun-a14b-depth",
+    "alias": "wan2.2-vace-fun-a14b-depth",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.2-vace-fun-a14b-depth",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-4.1-2025-04-14",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-2025-04-14",
-    "alias": "gpt-4.1-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.5-t2v-preview",
+    "alias": "wan2.5-t2v-preview",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.5-t2v-preview",
+    "codeSamples": "video:lipsync"
   },
   {
-    "name": "openai/gpt-4.1-mini-2025-04-14",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-mini-2025-04-14",
-    "alias": "gpt-4.1-mini-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan2.5-i2v-preview",
+    "alias": "wan2.5-i2v-preview",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan2.5-i2v-preview",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-4.1-nano-2025-04-14",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-nano-2025-04-14",
-    "alias": "gpt-4.1-nano-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan-2-6-t2v",
+    "alias": "wan2.6-t2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-t2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-2025-08-07",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-2025-08-07",
-    "alias": "gpt-5-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan-2-6-i2v",
+    "alias": "wan2.6-i2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-i2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-mini-2025-08-07",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-mini-2025-08-07",
-    "alias": "gpt-5-mini-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "alibaba/wan-2-6-r2v",
+    "alias": "wan2.6-r2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-r2v",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "alibaba/wan-2-6-r2v",
+        "prompt": "Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.",
+        "video_urls":[
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
+        ],
+        "duration": "5"
+    }
   },
   {
-    "name": "openai/gpt-5-nano-2025-08-07",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-nano-2025-08-07",
-    "alias": "gpt-5-nano-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/seedance-1-0-lite-t2v",
+    "alias": "seedance-1.0-lite-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-lite-t2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-chat-latest",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-chat-latest",
-    "alias": "gpt-5-chat-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/seedance-1-0-lite-i2v",
+    "alias": "seedance-1.0-lite-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-lite-i2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-pro",
-    "alias": "gpt-5-pro-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/seedance-1-0-pro-t2v",
+    "alias": "seedance-1.0-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-pro-t2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1",
-    "alias": "gpt-5-1-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/seedance-1-0-pro-i2v",
+    "alias": "seedance-1.0-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-pro-i2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-1-chat-latest",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-chat-latest",
-    "alias": "gpt-5-1-chat-latest-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/omnihuman",
+    "alias": "omnihuman",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/omnihuman",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-1-codex",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-codex",
-    "alias": "gpt-5-1-codex-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "bytedance/omnihuman/v1.5",
+    "alias": "omnihuman-v.1.5",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/omnihuman/v1.5",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-1-codex-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-codex-mini",
-    "alias": "gpt-5-1-codex-mini-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "name": "veo2/image-to-video",
+    "alias": "veo2-image-to-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo2/image-to-video",
+    "codeSamples": "video:video"
   },
   {
-    "name": "openai/gpt-5-2-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-2-pro",
-    "alias": "gpt-5-2-pro",
-    "category": "text-models-llm",
+    "name": "veo2",
+    "alias": "veo2",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo2",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo3",
+    "alias": "veo3",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.0-i2v",
+    "alias": "veo-3.0-i2v",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-i2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "google/veo-3.0-fast",
+    "alias": "veo-3.0-fast",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-fast",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.0-i2v-fast",
+    "alias": "veo-3.0-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.0-i2v-fast",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.1-t2v",
+    "alias": "veo-3.1-t2v",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-t2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.1-t2v-fast",
+    "alias": "veo-3.1-t2v-fast",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-t2v-fast",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.1-i2v",
+    "alias": "veo-3.1-i2v",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-i2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "google/veo-3.1-i2v-fast",
+    "alias": "veo-3.1-i2v-fast",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-i2v-fast",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "google/veo-3.1-reference-to-video",
+    "alias": "veo-3.1-reference-to-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-reference-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo-3.1-first-last-image-to-video",
+    "alias": "veo-3.1-first-last-image-to-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-first-last-image-to-video",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "google/veo-3.1-first-last-image-to-video-fast",
+    "alias": "veo-3.1-first-last-image-to-video-fast",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3.1-first-last-image-to-video-fast",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "google/veo3-1-extend-video",
+    "alias": "veo3-1-extend-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-extend-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "google/veo3-1-fast-extend-video",
+    "alias": "veo3-1-fast-extend-video",
+    "category": "video-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-fast-extend-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/standard/image-to-video",
+    "alias": "v1-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/standard/text-to-video",
+    "alias": "v1-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/standard/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/pro/image-to-video",
+    "alias": "v1-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1/pro/text-to-video",
+    "alias": "v1-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/standard/image-to-video",
+    "alias": "v1.5-standard/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/standard/text-to-video",
+    "alias": "v1.5-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/pro/image-to-video",
+    "alias": "v1.5-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.5/pro/text-to-video",
+    "alias": "v1.5-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.5/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/image-to-video",
+    "alias": "v1.6-standart/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/multi-image-to-video",
+    "alias": "v1.6-standard/multi-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/multi-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/standard/text-to-video",
+    "alias": "v1.6-standard/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/standard/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/pro/image-to-video",
+    "alias": "v1.6-pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v1.6/pro/text-to-video",
+    "alias": "v1.6-pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v1.6/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-standard-effects",
+    "alias": "v1.6-standard-effects",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/kling-video-v1.6-standard-effects",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/kling-video-v1.6-pro-effects",
+    "alias": "v1.6-pro-effects",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/kling-video-v1.6-pro-effects",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2-master-text-to-video",
+    "alias": "v2-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2-master-text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2-master-image-to-video",
+    "alias": "v2-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2-master-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.1-master-text-to-video",
+    "alias": "v2.1-master-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.1-master-text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.1-master-image-to-video",
+    "alias": "v2.1-master-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.1-master-image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v2.1/standard/image-to-video",
+    "alias": "v2.1-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v2.1/standard/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "kling-video/v2.1/pro/image-to-video",
+    "alias": "v2.1-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=kling-video/v2.1/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/image-to-video",
+    "alias": "v2.5-turbo/pro/image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.5-turbo/pro/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/v2.5-turbo/pro/text-to-video",
+    "alias": "v2.5-turbo/pro/text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/v2.5-turbo/pro/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/avatar-standard",
+    "alias": "avatar-standard",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/avatar-standard",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-image-to-video",
+    "alias": "video-o1-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-reference-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-reference-to-video",
+    "alias": "video-o1-reference-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-video-to-video-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-video-to-video-edit",
+    "alias": "video-o1-video-to-video-edit",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-o1-video-to-video-reference",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-o1-video-to-video-reference",
+    "alias": "video-o1-video-to-video-reference",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v2-6-pro-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-image-to-video",
+    "alias": "video-v2-6-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v2-6-pro-text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-text-to-video",
+    "alias": "video-v2-6-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/seedance-1-0-pro-fast",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-0-pro-fast",
+    "alias": "seedance-1-0-pro-fast",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/avatar-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/avatar-pro",
+    "alias": "avatar-pro",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v2-6-pro-motion-control",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v2-6-pro-motion-control",
+    "alias": "video-v2-6-pro-motion-control",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "klingai/video-v2-6-pro-motion-control",
+        "image_url": "https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png",
+        "video_url": "https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4"
+    }
+  },
+  {
+    "name": "krea/krea-wan-14b/text-to-video",
+    "alias": "krea-wan-14b-text-to-video",
+    "category": "video-models",
+    "vendor": "Krea",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=krea/krea-wan-14b/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "krea/krea-wan-14b/video-to-video",
+    "alias": "krea-wan-14b-video-to-video",
+    "category": "video-models",
+    "vendor": "Krea",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=krea/krea-wan-14b/video-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "luma/ray-1-6",
+    "alias": "ray-1-6",
+    "category": "video-models",
+    "vendor": "luma-ai",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=luma/ray-1-6",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "luma/ray-2",
+    "alias": "ray-2",
+    "category": "video-models",
+    "vendor": "luma-ai",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=luma/ray-2",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "luma/ray-flash-2",
+    "alias": "ray-flash-2",
+    "category": "video-models",
+    "vendor": "luma-ai",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=luma/ray-flash-2",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "ltxv/ltxv-2",
+    "alias": "ltxv-2",
+    "category": "video-models",
+    "vendor": "LTXV",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=ltxv/ltxv-2",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "ltxv/ltxv-2-fast",
+    "alias": "ltxv-2-fast",
+    "category": "video-models",
+    "vendor": "LTXV",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=ltxv/ltxv-2-fast",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "magic/text-to-video",
+    "alias": "text-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/text-to-video",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "magic/text-to-video",
+        "prompt": "AI/ML API",
+        "template": "Shanghai Drone Show"
+    }
+  },
+  {
+    "name": "magic/image-to-video",
+    "alias": "image-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/image-to-video",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "magic/image-to-video",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/aimlapi.jpg",
+        "template": "New York Times Square (66)"
+    }
+  },
+  {
+    "name": "magic/video-to-video",
+    "alias": "video-to-video",
+    "category": "video-models",
+    "vendor": "magic",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=magic/video-to-video",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "magic/video-to-video",
+        "video_url": "https://cdn.aimlapi.com/panda/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2FSPATnCC6Dp3nA9Sie3fsU_seed186094117.mp4",
+        "template": "Thailand Street"
+    }
+  },
+  {
+    "name": "video-01",
+    "alias": "video-01",
+    "category": "video-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "video-01-live2d",
+    "alias": "video-01-live2d",
+    "category": "video-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=video-01-live2d",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "minimax/hailuo-02",
+    "alias": "hailuo-02",
+    "category": "video-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-02",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "minimax/hailuo-2.3",
+    "alias": "hailuo-2.3",
+    "category": "video-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "minimax/hailuo-2.3-fast",
+    "alias": "hailuo-2.3-fast",
+    "category": "video-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=minimax/hailuo-2.3-fast",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "openai/sora-2-t2v",
+    "alias": "sora-2-t2v",
+    "category": "video-models",
     "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=openai/sora-2-t2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "openai/sora-2-i2v",
+    "alias": "sora-2-i2v",
+    "category": "video-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=openai/sora-2-i2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "openai/sora-2-pro-i2v",
+    "alias": "sora-2-pro-i2v",
+    "category": "video-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=openai/sora-2-pro-i2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "openai/sora-2-pro-t2v",
+    "alias": "sora-2-pro-t2v",
+    "category": "video-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=openai/sora-2-pro-t2v",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "pixverse/v5/transition",
+    "alias": "v5/transition",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5/transition",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "pixverse/v5/text-to-video",
+    "alias": "v5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5/text-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "pixverse/v5/image-to-video",
+    "alias": "v5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5/image-to-video",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "pixverse/v5-5-text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/text-to-video",
+    "alias": "v5.5/text-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "pixverse/v5-5-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/v5.5/image-to-video",
+    "alias": "v5.5/image-to-video",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "pixverse/lip-sync",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=pixverse/lip-sync",
+    "alias": "lip-sync",
+    "category": "video-models",
+    "vendor": "PixVerse",
+    "codeSamples": "video:lipsync"
+  },
+  {
+    "name": "gen3a_turbo",
+    "alias": "gen3a_turbo",
+    "category": "video-models",
+    "vendor": "Runway",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=gen3a_turbo",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "runway/gen4_turbo",
+    "alias": "gen4_turbo",
+    "category": "video-models",
+    "vendor": "Runway",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=runway/gen4_turbo",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "runway/gen4_aleph",
+    "alias": "gen4_aleph",
+    "category": "video-models",
+    "vendor": "Runway",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=runway/gen4_aleph",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "runway/act_two",
+    "alias": "act_two",
+    "category": "video-models",
+    "vendor": "Runway",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=runway/act_two",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "sber-ai/kandinsky5-t2v",
+    "alias": "kandinsky5-t2v",
+    "category": "video-models",
+    "vendor": "Sber AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=sber-ai/kandinsky5-t2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "sber-ai/kandinsky5-distill-t2v",
+    "alias": "kandinsky5-distill-t2v",
+    "category": "video-models",
+    "vendor": "Sber AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=sber-ai/kandinsky5-distill-t2v",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "tencent/hunyuan-video-foley",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=tencent/hunyuan-video-foley",
+    "alias": "hunyuan-video-foley",
+    "category": "video-models",
+    "vendor": "Tencent",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "veed/fabric-1.0",
+    "alias": "fabric-1.0",
+    "category": "video-models",
+    "vendor": "VEED",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veed/fabric-1.0",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "veed/fabric-1.0-fast",
+    "alias": "fabric-1.0-fast",
+    "category": "video-models",
+    "vendor": "VEED",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veed/fabric-1.0",
+    "codeSamples": "video:video"
   }
 ]
