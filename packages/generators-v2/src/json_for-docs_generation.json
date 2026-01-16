@@ -5,7 +5,7 @@
     "alias": "z-image-turbo",
     "category": "image-models",
     "vendor": "Alibaba-Cloud",
-    "codeSamples": "text-to-image"
+    "codeSamples": "image-models:prompt"
   },
   {
     "name": "alibaba/z-image-turbo-lora",
@@ -13,6 +13,6 @@
     "alias": "z-image-turbo-lora",
     "category": "image-models",
     "vendor": "Alibaba-Cloud",
-    "codeSamples": "text-to-image"
+    "codeSamples": "image-models:prompt"
   }
 ]
