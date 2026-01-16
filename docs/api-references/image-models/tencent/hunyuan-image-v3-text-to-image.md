@@ -98,21 +98,16 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-    "data": [
-        {
-            "url": "https://v3b.fal.media/files/b/lion/JdrvNguTlt29LmURRbKKN.png",
-            "content_type": "image/png",
-            "file_name": null,
-            "file_size": null,
-            "width": 1280,
-            "height": 768
-        }
-    ],
-    "meta": {
-        "usage": {
-            "tokens_used": 210000
-        }
+  "data": [
+    {
+      "url": "https://cdn.aimlapi.com/flamingo/files/b/0a8a7b4c/371avBpG23C3CoYzHJXB5.png"
     }
+  ],
+  "meta": {
+    "usage": {
+      "credits_used": 210000
+    }
+  }
 }
 ```
 {% endcode %}
@@ -121,4 +116,4 @@ main();
 
 We obtained the following 1280x768 image by running this code example:
 
-<figure><img src="https://v3b.fal.media/files/b/lion/JdrvNguTlt29LmURRbKKN.png" alt=""><figcaption><p><code>A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/371avBpG23C3CoYzHJXB5.png" alt=""><figcaption><p>A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.</p></figcaption></figure>

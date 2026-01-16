@@ -144,7 +144,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Sber AI**: [Video](api-references/video-models/sber-ai/)
 
-**Tencent**: [Image](api-references/image-models/tencent/)
+**Tencent**: [Image](api-references/image-models/tencent/) [3D](api-references/3d-generating-models/tencent/)
 
 **Together AI**: [Embedding](api-references/embedding-models/Together-AI/)
 

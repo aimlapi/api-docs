@@ -46,6 +46,8 @@ Then, configure the metaparameters for your generation:
 
 Here is an example of generation an image of a robot classroom using the `flux-pro` image model:
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
@@ -72,6 +74,8 @@ response.raise_for_status()
 print("Generation:", response.json())
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 We obtained the following image by running that code example:
 
