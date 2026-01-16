@@ -32,13 +32,13 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 {% tabs %}
 {% tab title="Python" %}
-```python
-import openai
-
-# Initialize the API client
+<pre class="language-python"><code class="lang-python">import openai
+<strong>
+</strong># Initialize the API client
 client = openai.OpenAI(
+    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>
+    api_key="&#x3C;YOUR_AIMLAPI_KEY>",
     base_url="https://api.aimlapi.com/v1",
-    api_key="<YOUR_AIMLAPI_KEY>",
 )
 
 # Define the text for which to generate an embedding
@@ -52,6 +52,46 @@ response = client.embeddings.create(
 
 # Print the embedding
 print(response)
+</code></pre>
+{% endtab %}
+
+{% tab title="JS" %}
+```javascript
+import OpenAI from "openai";
+import util from "util";
+
+// Initialize the API client
+const client = new OpenAI({
+  // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+  apiKey: "<YOUR_AIMLAPI_KEY>",
+  baseURL: "https://api.aimlapi.com/v1",
+});
+
+// Define the text for which to generate an embedding
+const text = "Laura is a DJ.";
+
+const response = await client.embeddings.create({
+  input: text,
+  model: "voyage-2",
+});
+
+// Convert embedding to a regular array (not TypedArray)
+const pythonLikeResponse = {
+  ...response,
+  data: response.data.map(item => ({
+    ...item,
+    embedding: Array.from(item.embedding),
+  })),
+};
+
+// Python-like print
+console.log(
+  util.inspect(pythonLikeResponse, {
+    depth: null,
+    maxArrayLength: null,
+    compact: true,
+  })
+);
 ```
 {% endtab %}
 {% endtabs %}
