@@ -235,7 +235,6 @@ print(data)`,
 Host: api.aimlapi.com
 Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
-Accept: */*
 
 ${jsonBody}`,
     },
