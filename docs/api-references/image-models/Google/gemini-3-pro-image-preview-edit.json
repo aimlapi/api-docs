@@ -140,25 +140,7 @@
             }
           }
         },
-        "x-hideTryItPanel": true,
-        "x-codeSamples": [
-          {
-            "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
-          },
-          {
-            "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }\n)\n\ndata = response.json()\nprint(data)"
-          },
-          {
-            "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }'"
-          },
-          {
-            "lang": "HTTP",
-            "source": "POST / HTTP/1.1\nHost: test.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"google/nano-banana-pro-edit\",\n  \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n  \"image_urls\": [\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n    \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n  ]\n}"
-          }
-        ]
+        "x-hideTryItPanel": true
       }
     }
   },

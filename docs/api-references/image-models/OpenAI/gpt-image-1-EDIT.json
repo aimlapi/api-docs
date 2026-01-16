@@ -170,25 +170,7 @@
             }
           }
         },
-        "x-hideTryItPanel": true,
-        "x-codeSamples": [
-          {
-            "lang": "JavaScript",
-            "source": "import fs from 'fs';\nimport fetch from 'node-fetch';\nimport FormData from 'form-data';\n\nasync function main() {\n  const formData = new FormData();\n  formData.append('model', 'openai/gpt-image-1');\n  formData.append('prompt', \"Add a crown to the T-rex's head.\");\n  formData.append('image', fs.createReadStream('<YOUR_IMAGE_PATH.png>'), {\n    filename: '<IMAGE_NAME>',\n    contentType: 'image/png',\n  });\n\n  const response = await fetch('https://api.aimlapi.com/v1/images/edits', {\n    method: 'POST',\n    headers: {\n      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',\n      ...formData.getHeaders(),\n    },\n    body: formData,\n  });\n\n  const data = await response.json();\n  console.log(data);\n}\n\nmain();"
-          },
-          {
-            "lang": "Python",
-            "source": "import requests\nwith open(\"<YOUR_IMAGE_PATH.png>\", \"rb\") as file:\n    files = {\"image\": (\"<IMAGE_NAME>\", file, \"image/png\")}\n    response = requests.post(\n        \"https://api.aimlapi.com/v1/images/edits\",\n        headers={\n            \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n        },\n        data={\n            \"model\":\"openai/gpt-image-1\",\n            \"prompt\": \"Add a crown to the T-rex's head.\"\n        },\n        files=files\n    )\n\n    data = response.json()\n    print(data)"
-          },
-          {
-            "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/edits' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --form \"prompt=Add a crown to the T-rex’s head.\" \\\n  --form \"image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>\""
-          },
-          {
-            "lang": "HTTP",
-            "source": "POST /v1/images/edits HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\n\n------WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Disposition: form-data; name=\"model\"\n\nopenai/gpt-image-1\n------WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Disposition: form-data; name=\"prompt\"\n\nAdd a crown to the T-rex's head.\n------WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Disposition: form-data; name=\"image\"; filename=\"<IMAGE_NAME>\"\nContent-Type: image/png\n\n(data)\n------WebKitFormBoundary7MA4YWxkTrZu0gW--"
-          }
-        ]
+        "x-hideTryItPanel": true
       }
     }
   },
