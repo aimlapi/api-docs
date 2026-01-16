@@ -1,18 +1,15 @@
 [
   {
-    "name": "google/veo3-1-extend-video",
-    "alias": "veo3-1-extend-video",
-    "category": "video-models",
-    "vendor": "google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-extend-video",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "google/veo3-1-fast-extend-video",
-    "alias": "veo3-1-fast-extend-video",
-    "category": "video-models",
-    "vendor": "google",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo3-1-fast-extend-video",
-    "codeSamples": "video:video"
+    "name": "tencent/hunyuan-part",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=tencent/hunyuan-part",
+    "alias": "hunyuan-part",
+    "category": "3d-generating-models",
+    "vendor": "Tencent",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "tencent/hunyuan-part",
+        "mesh_url": "https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb"
+    }
   }
 ]

@@ -1,0 +1,169 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "tencent/hunyuan-part"
+                    ]
+                  },
+                  "mesh_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the 3D model file (.glb or .obj) to process for segmentation."
+                  },
+                  "point_prompt_x": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1,
+                    "description": "X coordinate of the point prompt for segmentation."
+                  },
+                  "point_prompt_y": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1,
+                    "description": "Y coordinate of the point prompt for segmentation."
+                  },
+                  "point_prompt_z": {
+                    "type": "number",
+                    "minimum": -1,
+                    "maximum": 1,
+                    "description": "Z coordinate of the point prompt for segmentation."
+                  },
+                  "point_num": {
+                    "type": "integer",
+                    "default": 100000,
+                    "description": "Number of points to sample from the mesh."
+                  },
+                  "use_normal": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to use normal information for segmentation."
+                  },
+                  "noise_std": {
+                    "type": "number",
+                    "description": "Standard deviation of noise to add to sampled points."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "The same seed and the same prompt given to the same version of the model will output the same image every time."
+                  }
+                },
+                "required": [
+                  "model",
+                  "mesh_url"
+                ],
+                "title": "tencent/hunyuan-part"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"tencent/hunyuan-part\",\n      \"mesh_url\": \"https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"tencent/hunyuan-part\",\n      \"mesh_url\": \"https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+          },
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"tencent/hunyuan-part\",\n      \"mesh_url\": \"https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb\"\n    }'"
+          },
+          {
+            "lang": "HTTP",
+            "source": "POST /v1/images/generations HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nContent-Type: application/json\nAccept: */*\n\n{\n  \"model\": \"tencent/hunyuan-part\",\n  \"mesh_url\": \"https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
