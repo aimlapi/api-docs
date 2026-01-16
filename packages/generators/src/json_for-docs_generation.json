@@ -1,284 +1,138 @@
 [
   {
-    "name": "aai/slam-1",
-    "alias": "slam-1",
-    "category": "speech-models",
-    "vendor": "AssemblyAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=aai/slam-1",
+    "name": "alibaba/qwen-text-embedding-v3",
+    "alias": "qwen-text-embedding-v3",
+    "category": "embedding-models",
+    "vendor": "alibaba-cloud",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=alibaba/qwen-text-embedding-v3",
     "codeSamples": ""
   },
   {
-    "name": "aai/universal",
-    "alias": "universal",
-    "category": "speech-models",
-    "vendor": "AssemblyAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=aai/universal",
+    "name": "alibaba/qwen-text-embedding-v4",
+    "alias": "qwen-text-embedding-v4",
+    "category": "embedding-models",
+    "vendor": "alibaba-cloud",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=alibaba/qwen-text-embedding-v4",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-general",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-general",
+    "name": "voyage-2",
+    "alias": "voyage-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-meeting",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-meeting",
+    "name": "voyage-code-2",
+    "alias": "voyage-code-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-code-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-phonecall",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-phonecall",
+    "name": "voyage-finance-2",
+    "alias": "voyage-finance-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-finance-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-voicemail",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-voicemail",
+    "name": "voyage-large-2",
+    "alias": "voyage-large-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-large-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-finance",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-finance",
+    "name": "voyage-large-2-instruct",
+    "alias": "voyage-large-2-instruct",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-large-2-instruct",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-conversationalai",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-conversationalai",
+    "name": "voyage-law-2",
+    "alias": "voyage-law-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-law-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-video",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-video",
+    "name": "voyage-multilingual-2",
+    "alias": "voyage-multilingual-2",
+    "category": "embedding-models",
+    "vendor": "Anthropic",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=voyage-multilingual-2",
     "codeSamples": ""
   },
   {
-    "name": "#g1_nova-2-medical",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-medical",
-    "codeSamples": ""
-  },
-  {
-    "name": "#g1_nova-2-drivethru",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-drivethru",
-    "codeSamples": ""
-  },
-  {
-    "name": "#g1_nova-2-automotive",
-    "alias": "nova-2",
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_nova-2-automotive",
-    "codeSamples": ""
-  },
-  {
-    "name": "#g1_whisper-large",
-    "alias": "whisper-large",
-    "category": "speech-models",
+    "name": "text-embedding-3-small",
+    "alias": "text-embedding-3-small",
+    "category": "embedding-models",
     "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_whisper-large",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=text-embedding-3-small",
     "codeSamples": ""
   },
   {
-    "name": "#g1_whisper-medium",
-    "alias": "whisper-medium",
-    "category": "speech-models",
+    "name": "text-embedding-3-large",
+    "alias": "text-embedding-3-large",
+    "category": "embedding-models",
     "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_whisper-medium",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=text-embedding-3-large",
     "codeSamples": ""
   },
   {
-    "name": "#g1_whisper-small",
-    "alias": "whisper-small",
-    "category": "speech-models",
+    "name": "text-embedding-ada-002",
+    "alias": "text-embedding-ada-002",
+    "category": "embedding-models",
     "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_whisper-small",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=text-embedding-ada-002",
     "codeSamples": ""
   },
   {
-    "name": "#g1_whisper-tiny",
-    "alias": "whisper-tiny",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_whisper-tiny",
+    "name": "text-embedding-004",
+    "alias": "text-embedding-004",
+    "category": "embedding-models",
+    "vendor": "Together AI",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=text-embedding-004",
     "codeSamples": ""
   },
   {
-    "name": "#g1_whisper-base",
-    "alias": "whisper-base",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=#g1_whisper-base",
+    "name": "BAAI/bge-base-en-v1.5",
+    "alias": "bge-base-en",
+    "category": "embedding-models",
+    "vendor": "BAAI",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=BAAI/bge-base-en-v1.5",
     "codeSamples": ""
   },
   {
-    "name": "openai/gpt-4o-mini-tts",
-    "alias": "gpt-4o-mini-tts",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=openai/gpt-4o-mini-tts",
+    "name": "BAAI/bge-large-en-v1.5",
+    "alias": "bge-large-en",
+    "category": "embedding-models",
+    "vendor": "BAAI",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=BAAI/bge-large-en-v1.5",
     "codeSamples": ""
   },
   {
-    "name": "openai/tts-1",
-    "alias": "tts-1",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=openai/tts-1",
+    "name": "text-multilingual-embedding-002",
+    "alias": "text-multilingual-embedding-002",
+    "category": "embedding-models",
+    "vendor": "Google",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=text-multilingual-embedding-002",
     "codeSamples": ""
   },
   {
-    "name": "openai/tts-1-hd",
-    "alias": "tts-1-hd",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=openai/tts-1-hd",
-    "codeSamples": ""
-  },
-  {
-    "name": "openai/gpt-4o-transcribe",
-    "alias": "gpt-4o-transcribe",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=openai/gpt-4o-transcribe",
-    "codeSamples": ""
-  },
-  {
-    "name": "openai/gpt-4o-mini-transcribe",
-    "alias": "gpt-4o-mini-transcribe",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=openai/gpt-4o-mini-transcribe",
-    "codeSamples": ""
-  },
-  {
-    "name": "#g1_aura-asteria-en",
-    "alias": "aura",
-    "models": ["#g1_aura-angus-en", "#g1_aura-arcas-en", "#g1_aura-asteria-en", "#g1_aura-athena-en", "#g1_aura-helios-en", "#g1_aura-hera-en", "#g1_aura-luna-en", "#g1_aura-orion-en", "#g1_aura-orpheus-en", "#g1_aura-perseus-en", "#g1_aura-stella-en", "#g1_aura-zeus-en"],
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=#g1_aura-asteria-en",
-    "codeSamples": ""
-  },
-  {
-    "name": "#g1_aura-2-amalthea-en",
-    "alias": "aura-2",
-	"models": ["#g1_aura-2-amalthea-en", "#g1_aura-2-andromeda-en", "#g1_aura-2-apollo-en", "#g1_aura-2-arcas-en", "#g1_aura-2-aries-en", "#g1_aura-2-asteria-en", "#g1_aura-2-athena-en", "#g1_aura-2-atlas-en", "#g1_aura-2-aurora-en", "#g1_aura-2-callista-en", "#g1_aura-2-cora-en", "#g1_aura-2-cordelia-en", "#g1_aura-2-delia-en", "#g1_aura-2-electra-en", "#g1_aura-2-harmonia-en", "#g1_aura-2-helena-en", "#g1_aura-2-hera-en", "#g1_aura-2-hermes-en", "#g1_aura-2-hyperion-en", "#g1_aura-2-iris-en", "#g1_aura-2-janus-en", "#g1_aura-2-juno-en", "#g1_aura-2-jupiter-en", "#g1_aura-2-luna-en", "#g1_aura-2-mars-en", "#g1_aura-2-minerva-en", "#g1_aura-2-neptune-en", "#g1_aura-2-odysseus-en", "#g1_aura-2-ophelia-en", "#g1_aura-2-orion-en", "#g1_aura-2-orpheus-en", "#g1_aura-2-pandora-en", "#g1_aura-2-phoebe-en", "#g1_aura-2-pluto-en", "#g1_aura-2-saturn-en", "#g1_aura-2-selene-en", "#g1_aura-2-thalia-en", "#g1_aura-2-theia-en", "#g1_aura-2-vesta-en", "#g1_aura-2-zeus-en", "#g1_aura-2-celeste-es", "#g1_aura-2-estrella-es", "#g1_aura-2-nestor-es"],
-    "category": "speech-models",
-    "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=#g1_aura-2-amalthea-en",
-    "codeSamples": ""
-  },
-  {
-    "name": "inworld/tts-1",
-    "alias": "tts-1",
-    "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=inworld/tts-1",
-    "codeSamples": ""
-  },
-  {
-    "name": "inworld/tts-1-max",
-    "alias": "tts-1-max",
-    "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=inworld/tts-1-max",
-    "codeSamples": ""
-  },
-  {
-    "name": "minimax/speech-2.5-turbo-preview",
-    "alias": "speech-2.5-turbo-preview",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=minimax/speech-2.5-turbo-preview",
-    "codeSamples": ""
-  },
-  {
-    "name": "minimax/speech-2.5-hd-preview",
-    "alias": "speech-2.5-hd-preview",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=minimax/speech-2.5-hd-preview",
-    "codeSamples": ""
-  },
-  {
-    "name": "minimax/speech-2.6-turbo",
-    "alias": "speech-2.5-turbo",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=minimax/speech-2.6-turbo",
-    "codeSamples": ""
-  },
-  {
-    "name": "minimax/speech-2.6-hd",
-    "alias": "speech-2.5-hd",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=minimax/speech-2.6-hd",
-    "codeSamples": ""
-  },
-  {
-    "name": "elevenlabs/v3_alpha",
-    "alias": "v3_alpha",
-    "category": "speech-models",
-    "vendor": "elevenlabs",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=elevenlabs/v3_alpha",
-    "codeSamples": ""
-  },
-  {
-    "name": "elevenlabs/eleven_multilingual_v2",
-    "alias": "eleven_multilingual_v2",
-    "category": "speech-models",
-    "vendor": "ElevenLabs",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=elevenlabs/eleven_multilingual_v2",
-    "codeSamples": ""
-  },
-  {
-    "name": "elevenlabs/eleven_turbo_v2_5",
-    "alias": "eleven_turbo_v2_5",
-    "category": "speech-models",
-    "vendor": "ElevenLabs",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=elevenlabs/eleven_turbo_v2_5",
-    "codeSamples": ""
-  },
-  {
-    "name": "microsoft/vibevoice-1.5b",
-    "alias": "vibevoice-1.5b",
-    "category": "speech-models",
-    "vendor": "Microsoft",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=microsoft/vibevoice-1.5b",
-    "codeSamples": ""
-  },
-  {
-    "name": "microsoft/vibevoice-7b",
-    "alias": "vibevoice-7b",
-    "category": "speech-models",
-    "vendor": "Microsoft",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=microsoft/vibevoice-7b",
+    "name": "togethercomputer/m2-bert-80M-32k-retrieval",
+    "alias": "m2-bert-80M-retrieval",
+    "category": "embedding-models",
+    "vendor": "Together AI",
+    "url": "https://ai.aimlapi.com/docs?endpoint=openai/embeddings&model=togethercomputer/m2-bert-80M-32k-retrieval",
     "codeSamples": ""
   }
 ]
