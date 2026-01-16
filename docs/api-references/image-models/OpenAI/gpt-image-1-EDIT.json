@@ -170,7 +170,21 @@
             }
           }
         },
-        "x-hideTryItPanel": true
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/edits' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --form \"prompt=Add a crown to the T-rex’s head.\" \\\n  --form \"image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>\""
+          },
+          {
+            "lang": "JavaScript",
+            "source": "import fs from 'fs';\nimport fetch from 'node-fetch';\nimport FormData from 'form-data';\n\nasync function main() {\n  const formData = new FormData();\n  formData.append('model', 'openai/gpt-image-1');\n  formData.append('prompt', \"Add a crown to the T-rex's head.\");\n  formData.append('image', fs.createReadStream('<YOUR_IMAGE_PATH.png>'), {\n    filename: '<IMAGE_NAME>',\n    contentType: 'image/png',\n  });\n\n  const response = await fetch('https://api.aimlapi.com/v1/images/edits', {\n    method: 'POST',\n    headers: {\n      Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',\n      ...formData.getHeaders(),\n    },\n    body: formData,\n  });\n\n  const data = await response.json();\n  console.log(data);\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nwith open(\"<YOUR_IMAGE_PATH.png>\", \"rb\") as file:\n    files = {\"image\": (\"<IMAGE_NAME>\", file, \"image/png\")}\n    response = requests.post(\n        \"https://api.aimlapi.com/v1/images/edits\",\n        headers={\n            \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n        },\n        data={\n            \"model\":\"openai/gpt-image-1\",\n            \"prompt\": \"Add a crown to the T-rex's head.\"\n        },\n        files=files\n    )\n\n    data = response.json()\n    print(data)"
+          }
+        ]
       }
     }
   },

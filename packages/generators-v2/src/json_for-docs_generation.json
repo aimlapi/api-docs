@@ -1,71 +1,505 @@
 [
   {
-    "name": "minimax/music-1.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-1.5",
-    "alias": "music-1.5",
-    "category": "music-models",
-    "vendor": "MiniMax",
+    "name": "alibaba/qwen-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image",
+    "alias": "qwen-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/qwen-image-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image-edit",
+    "alias": "qwen-image-edit",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "alibaba/wan-2-6-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan-2-6-image",
+    "alias": "wan-2-6-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "bytedance/seedream-3.0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-3.0",
+    "alias": "seedream-3.0",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "bytedance/seededit-3.0-i2i",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seededit-3.0-i2i",
+    "alias": "seededit-3.0-i2i",
+    "category": "image-models",
+    "vendor": "ByteDance",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "minimax/music-1.5",
-        "prompt": "Lo-fi pop hip-hop ambient music",
-        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+        "model": "bytedance/seededit-3.0-i2i",
+        "prompt": "Add a crown to the T-rex's head.",
+        "image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
     }
   },
   {
-    "name": "minimax/music-2.0",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-2.0",
-    "alias": "music-2.0",
-    "category": "music-models",
-    "vendor": "MiniMax",
+    "name": "bytedance/seedream-v4-text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-text-to-image",
+    "alias": "seedream-v4-text-to-image",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "bytedance/seedream-v4-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-edit",
+    "alias": "seedream-v4-edit",
+    "category": "image-models",
+    "vendor": "ByteDance",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "minimax/music-2.0",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+        "model": "bytedance/seedream-v4-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
     }
   },
   {
-    "name": "google/lyria2",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=google/lyria2",
-    "alias": "Lyria 2",
-    "category": "music-models",
+    "name": "bytedance/uso",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/uso",
+    "alias": "uso",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "bytedance/uso",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "flux/schnell",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/schnell",
+    "alias": "flux/schnell",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro",
+    "alias": "flux-pro",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro/v1.1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro/v1.1",
+    "alias": "flux-pro/v1.1",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro/v1.1-ultra",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro/v1.1-ultra",
+    "alias": "flux-pro/v1.1-ultra",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/dev",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/dev",
+    "alias": "flux/dev",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/dev/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/dev/image-to-image",
+    "alias": "flux/dev/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux-realism",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-realism",
+    "alias": "flux-realism",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/kontext-max/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-max/image-to-image",
+    "alias": "flux/kontext-max/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux/kontext-pro/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/image-to-image",
+    "alias": "flux/kontext-pro/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux/kontext-max/text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-max/text-to-image",
+    "alias": "flux/kontext-max/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/kontext-pro/text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/text-to-image",
+    "alias": "flux/kontext-pro/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/srpo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo",
+    "alias": "flux/srpo",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/srpo/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo/image-to-image",
+    "alias": "flux/srpo/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "blackforestlabs/flux-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2",
+    "alias": "flux-2",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-edit",
+    "alias": "flux-2-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora",
+    "alias": "flux-2-lora",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora-edit",
+    "alias": "flux-2-lora-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-lora-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro",
+    "alias": "flux-2-pro",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro-edit",
+    "alias": "flux-2-pro-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "blackforestlabs/flux-2-pro-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "imagen-3.0-generate-002",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=imagen-3.0-generate-002",
+    "alias": "imagen-3.0",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen4/preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen4/preview",
+    "alias": "imagen-4-preview",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "imagen-4.0-ultra-generate-preview-06-06",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=imagen-4.0-ultra-generate-preview-06-06",
+    "alias": "imagen-4.0-ultra",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-generate-001",
+    "alias": "imagen-4.0-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-fast-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-fast-generate-001",
+    "alias": "imagen-4.0-fast-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-ultra-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-ultra-generate-001",
+    "alias": "imagen-4.0-ultra-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/gemini-2.5-flash-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-2.5-flash-image",
+    "alias": "gemini-2.5-flash-image",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/gemini-2.5-flash-image-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-2.5-flash-image-edit",
+    "alias": "gemini-2.5-flash-image-edit",
+    "category": "image-models",
     "vendor": "Google",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "google/lyria2",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s"
+        "model": "google/gemini-2.5-flash-image-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
     }
   },
   {
-    "name": "elevenlabs/eleven_music",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
-    "alias": "eleven_music",
-    "category": "music-models",
-    "vendor": "elevenlabs",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
-    "customParams":{
-        "model": "elevenlabs/eleven_music",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "music_length_ms": 20000
-    }
+    "name": "google/gemini-3-pro-image-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview",
+    "alias": "gemini-3-pro-image-preview",
+    "models": ["google/nano-banana-pro", "google/gemini-3-pro-image-preview"],
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
   },
   {
-    "name": "stable-audio",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=stable-audio",
-    "alias": "stable-audio",
-    "category": "music-models",
+    "name": "google/gemini-3-pro-image-preview-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview-edit",
+    "alias": "gemini-3-pro-image-preview-edit",
+    "models": ["google/nano-banana-pro-edit", "google/gemini-3-pro-image-preview-edit"],
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "dall-e-3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=dall-e-3",
+    "alias": "dall-e-3",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "dall-e-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=dall-e-2",
+    "alias": "dall-e-2",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
+    "alias": "gpt-image-1-GENERATE",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
+    "alias": "gpt-image-1-EDIT",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:image"
+  },
+  {
+    "name": "recraft-v3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=recraft-v3",
+    "alias": "recraft-v3",
+    "category": "image-models",
+    "vendor": "RecraftAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "reve/create-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/create-image",
+    "alias": "reve/create-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "reve/edit-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/edit-image",
+    "alias": "reve/edit-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "reve/remix-edit-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/remix-edit-image",
+    "alias": "reve/remix-edit-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "stable-diffusion-v3-medium",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=stable-diffusion-v3-medium",
+    "alias": "stable-diffusion-v3-medium",
+    "category": "image-models",
     "vendor": "Stability AI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "stable-diffusion-v35-large",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=stable-diffusion-v35-large",
+    "alias": "stable-diffusion-v35-large",
+    "category": "image-models",
+    "vendor": "Stability AI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "hunyuan/hunyuan-image-v3-text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=hunyuan/hunyuan-image-v3-text-to-image",
+    "alias": "hunyuan-image-v3-text-to-image",
+    "category": "image-models",
+    "vendor": "Tencent",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "topaz-labs/sharpen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen",
+    "alias": "sharpen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
     "customParams":{
-        "model": "stable-audio",
-        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
-        "seconds_total": 20
+        "model": "topaz-labs/sharpen",
+        "mode": "Standard",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+    }
+  },
+  {
+    "name": "topaz-labs/sharpen-gen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen-gen",
+    "alias": "sharpen-gen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "topaz-labs/sharpen-gen",
+        "mode": "Super Focus",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+    }
+  },
+  {
+    "name": "x-ai/grok-2-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=x-ai/grok-2-image",
+    "alias": "grok-2-image",
+    "category": "image-models",
+    "vendor": "xAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "triposr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=triposr",
+    "alias": "triposr",
+    "category": "3d-generating-models",
+    "vendor": "Stability AI",
+    "codeSamples": "hide"
+  },
+  {
+    "name": "magic/image-to-3d",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=magic/image-to-3d",
+    "alias": "image-to-3d",
+    "category": "3d-generating-models",
+    "vendor": "magic",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "magic/image-to-3d",
+        "front_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg"
     }
   }
 ]
