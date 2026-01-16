@@ -1,5 +1,17 @@
 export const textToImageSample = (options) => [
   {
+    lang: 'cURL',
+    source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/images/generations' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '{
+    "model": "${options.name}",
+    "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+  }'`,
+  },
+  {
     lang: 'JavaScript',
     source: `async function main() {
   const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
@@ -38,29 +50,5 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
-  },
-  {
-    lang: 'cURL',
-    source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v1/images/generations' \\
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --header 'Content-Type: application/json' \\
-  --data '{
-    "model": "${options.name}",
-    "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
-  }'`,
-  },
-  {
-    lang: 'HTTP',
-    source: `POST /v1/images/generations HTTP/1.1
-Host: api.aimlapi.com
-Authorization: Bearer <YOUR_AIMLAPI_KEY>
-Content-Type: application/json
-
-{
-  "model": "${options.name}",
-  "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
-}`,
   },
 ];

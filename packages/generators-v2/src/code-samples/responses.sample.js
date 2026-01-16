@@ -7,6 +7,15 @@ export const responsesSample = (options) => {
 
   return [
     {
+      lang: 'cURL',
+      source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/responses' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
+    },
+    {
       lang: 'JavaScript',
       source: `async function main() {
   const response = await fetch('https://api.aimlapi.com/v1/responses', {
@@ -39,24 +48,6 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
-    },
-    {
-      lang: 'cURL',
-      source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v1/responses' \\
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --header 'Content-Type: application/json' \\
-  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
-    },
-    {
-      lang: 'HTTP',
-      source: `POST /v1/responses HTTP/1.1
-Host: api.aimlapi.com
-Authorization: Bearer <YOUR_AIMLAPI_KEY>
-Content-Type: application/json
-
-${jsonBody}`,
     },
   ];
 };
