@@ -152,7 +152,7 @@
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }\n)\n\ndata = response.json()\nprint(data)"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"google/nano-banana-pro-edit\",\n      \"prompt\": \"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.\",\n      \"image_urls\": [\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png\",\n        \"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg\"\n      ]\n    }\n)\n\ndata = response.json()\nprint(data)"
           }
         ]
       }

@@ -1,5 +1,21 @@
 [
   {
+    "name": "alibaba/qwen-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image",
+    "alias": "qwen-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/qwen-image-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image-edit",
+    "alias": "qwen-image-edit",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:image"
+  },
+  {
     "name": "alibaba/z-image-turbo",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/z-image-turbo",
     "alias": "z-image-turbo",
@@ -14,5 +30,477 @@
     "category": "image-models",
     "vendor": "Alibaba-Cloud",
     "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/wan-2-6-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan-2-6-image",
+    "alias": "wan-2-6-image",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "bytedance/seedream-3.0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-3.0",
+    "alias": "seedream-3.0",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "bytedance/seededit-3.0-i2i",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seededit-3.0-i2i",
+    "alias": "seededit-3.0-i2i",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "bytedance/seededit-3.0-i2i",
+        "prompt": "Add a crown to the T-rex's head.",
+        "image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
+    }
+  },
+  {
+    "name": "bytedance/seedream-v4-text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-text-to-image",
+    "alias": "seedream-v4-text-to-image",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "bytedance/seedream-v4-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-v4-edit",
+    "alias": "seedream-v4-edit",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "bytedance/uso",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/uso",
+    "alias": "uso",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "bytedance/seedream-4-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=bytedance/seedream-4-5",
+    "alias": "seedream-4-5",
+    "category": "image-models",
+    "vendor": "ByteDance",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux/schnell",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/schnell",
+    "alias": "flux/schnell",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro",
+    "alias": "flux-pro",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro/v1.1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro/v1.1",
+    "alias": "flux-pro/v1.1",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux-pro/v1.1-ultra",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-pro/v1.1-ultra",
+    "alias": "flux-pro/v1.1-ultra",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/dev",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/dev",
+    "alias": "flux/dev",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/dev/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/dev/image-to-image",
+    "alias": "flux/dev/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux-realism",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux-realism",
+    "alias": "flux-realism",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/kontext-max/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-max/image-to-image",
+    "alias": "flux/kontext-max/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux/kontext-pro/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/image-to-image",
+    "alias": "flux/kontext-pro/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "flux/kontext-max/text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-max/text-to-image",
+    "alias": "flux/kontext-max/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/kontext-pro/text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/kontext-pro/text-to-image",
+    "alias": "flux/kontext-pro/text-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/srpo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo",
+    "alias": "flux/srpo",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "flux/srpo/image-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=flux/srpo/image-to-image",
+    "alias": "flux/srpo/image-to-image",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "blackforestlabs/flux-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2",
+    "alias": "flux-2",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-edit",
+    "alias": "flux-2-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora",
+    "alias": "flux-2-lora",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-lora-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-lora-edit",
+    "alias": "flux-2-lora-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro",
+    "alias": "flux-2-pro",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "blackforestlabs/flux-2-pro-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=blackforestlabs/flux-2-pro-edit",
+    "alias": "flux-2-pro-edit",
+    "category": "image-models",
+    "vendor": "Flux",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "imagen-3.0-generate-002",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=imagen-3.0-generate-002",
+    "alias": "imagen-3.0",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen4/preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen4/preview",
+    "alias": "imagen-4-preview",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "imagen-4.0-ultra-generate-preview-06-06",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=imagen-4.0-ultra-generate-preview-06-06",
+    "alias": "imagen-4.0-ultra",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-generate-001",
+    "alias": "imagen-4.0-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-fast-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-fast-generate-001",
+    "alias": "imagen-4.0-fast-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/imagen-4.0-ultra-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/imagen-4.0-ultra-generate-001",
+    "alias": "imagen-4.0-ultra-generate-001",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/gemini-2.5-flash-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-2.5-flash-image",
+    "alias": "gemini-2.5-flash-image",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/gemini-2.5-flash-image-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-2.5-flash-image-edit",
+    "alias": "gemini-2.5-flash-image-edit",
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "google/gemini-3-pro-image-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview",
+    "alias": "gemini-3-pro-image-preview",
+    "models": ["google/nano-banana-pro", "google/gemini-3-pro-image-preview"],
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "google/gemini-3-pro-image-preview-edit",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-pro-image-preview-edit",
+    "alias": "gemini-3-pro-image-preview-edit",
+    "models": ["google/nano-banana-pro-edit", "google/gemini-3-pro-image-preview-edit"],
+    "category": "image-models",
+    "vendor": "Google",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "google/nano-banana-pro-edit",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]      
+    }
+  },
+  {
+    "name": "klingai/image-o1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=klingai/image-o1",
+    "alias": "image-o1",
+    "category": "image-models",
+    "vendor": "Kling AI",
+    "codeSamples": "image-models:image_url(s)"
+  },
+  {
+    "name": "dall-e-3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=dall-e-3",
+    "alias": "dall-e-3",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "dall-e-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=dall-e-2",
+    "alias": "dall-e-2",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
+    "alias": "gpt-image-1-GENERATE",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "url": "https://api.aimlapi.com/docs-public-json",
+    "alias": "gpt-image-1-EDIT",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/edits",
+    "customParams":{
+        "model": "openai/gpt-image-1",
+        "prompt": "",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+    }
+  },
+  {
+    "name": "openai/gpt-image-1-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1-mini",
+    "alias": "gpt-image-1-mini",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "recraft-v3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=recraft-v3",
+    "alias": "recraft-v3",
+    "category": "image-models",
+    "vendor": "RecraftAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "reve/create-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/create-image",
+    "alias": "reve/create-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "reve/edit-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/edit-image",
+    "alias": "reve/edit-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-to-image"
+  },
+  {
+    "name": "reve/remix-edit-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=reve/remix-edit-image",
+    "alias": "reve/remix-edit-image",
+    "category": "image-models",
+    "vendor": "Reve",
+    "codeSamples": "image-to-image"
+  },
+  {
+    "name": "stable-diffusion-v3-medium",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=stable-diffusion-v3-medium",
+    "alias": "stable-diffusion-v3-medium",
+    "category": "image-models",
+    "vendor": "Stability AI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "stable-diffusion-v35-large",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=stable-diffusion-v35-large",
+    "alias": "stable-diffusion-v35-large",
+    "category": "image-models",
+    "vendor": "Stability AI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "hunyuan/hunyuan-image-v3-text-to-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=hunyuan/hunyuan-image-v3-text-to-image",
+    "alias": "hunyuan-image-v3-text-to-image",
+    "category": "image-models",
+    "vendor": "Tencent",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "topaz-labs/sharpen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen",
+    "alias": "sharpen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "topaz-labs/sharpen",
+        "mode": "Standard",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+    }
+  },
+  {
+    "name": "topaz-labs/sharpen-gen",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=topaz-labs/sharpen-gen",
+    "alias": "sharpen-gen",
+    "category": "image-models",
+    "vendor": "topaz-labs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "topaz-labs/sharpen-gen",
+        "mode": "Super Focus",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blurred-landscape.png"
+    }
+  },
+  {
+    "name": "x-ai/grok-2-image",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=x-ai/grok-2-image",
+    "alias": "grok-2-image",
+    "category": "image-models",
+    "vendor": "xAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "triposr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=triposr",
+    "alias": "triposr",
+    "category": "3d-generating-models",
+    "vendor": "Stability AI",
+    "codeSamples": "hide"
+  },
+  {
+    "name": "tencent/hunyuan-part",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=tencent/hunyuan-part",
+    "alias": "hunyuan-part",
+    "category": "3d-generating-models",
+    "vendor": "Tencent",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/generations",
+    "customParams":{
+        "model": "tencent/hunyuan-part",
+        "mesh_url": "https://storage.googleapis.com/falserverless/model_tests/video_models/base_basic_shaded.glb"
+    }
   }
 ]
