@@ -121,6 +121,14 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
+* [baidu/ernie-4.5-21b-a3b](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b.md)
+* [baidu/ernie-4.5-21b-a3b-thinking](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.md)
+* [baidu/ernie-4.5-300b-a47b](../api-references/text-models-llm/baidu/ernie-4.5-300b-a47b.md)
+* [baidu/ernie-4.5-vl-28b-a3b](../api-references/text-models-llm/baidu/ernie-4.5-vl-28b-a3b.md)
+* [baidu/ernie-4.5-vl-424b-a47b](../api-references/text-models-llm/baidu/ernie-4.5-vl-424b-a47b.md)
+
+***
+
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)

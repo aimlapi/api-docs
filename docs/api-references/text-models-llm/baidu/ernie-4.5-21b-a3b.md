@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # ernie-4.5-21b-a3b
 
 {% columns %}
@@ -83,7 +78,7 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-                "content":"Hello" # insert your prompt here, instead of Hello
+                "content":"Hi! What do you think about mankind?" # insert your prompt
             }
         ]
     }
@@ -111,7 +106,7 @@ async function main() {
       messages:[
           {
               role:'user',
-              content: 'Hello'  // insert your prompt here, instead of Hello
+              content: 'Hi! What do you think about mankind?' // insert your prompt here
           }
       ],
     }),
@@ -133,6 +128,35 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "id": "104959f043e51f1b4a4dd83c494886ab",
+  "object": "chat.completion",
+  "created": 1768829974,
+  "model": "baidu/ernie-4.5-21B-a3b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "\nAs an AI, I don't have personal opinions or emotions, but I can provide insights based on human perspectives and available knowledge. Mankind is a remarkable and complex species with incredible potential for both progress and challenges. Here are some thoughts:\n\n### Positive Aspects\n1. **Innovation and Creativity**: Humans have demonstrated an extraordinary ability to innovate, from the development of tools and technology to the creation of art, music, and literature. This creativity has driven societal advancement and improved the quality of life for many.\n2. **Empathy and Compassion**: Many individuals within the human race possess a strong sense of empathy and compassion, leading to acts of kindness, charity, and social support. This has fostered communities and helped address various forms of suffering and inequality.\n3. **Problem-Solving Skills**: Humans are adept at solving complex problems, whether it's finding cures for diseases, developing sustainable energy sources, or addressing environmental challenges. This problem-solving ability has the potential to create a better future for all.\n\n### Challenges\n1. **Conflict and Violence**: Unfortunately, humans have also been capable of causing immense harm and destruction through conflict, war, and violence. These actions often stem from differences in ideology, culture, or resources, highlighting the need for conflict resolution and peaceful cooperation.\n2. **Inequality and Injustice**: Despite progress, significant inequalities and injustices persist in many parts of the world. These include economic disparities, gender inequality, and racial discrimination, which hinder social progress and well-being.\n3. **Environmental Degradation**: Human activities, such as industrialization and resource extraction, have led to environmental degradation, including climate change, pollution, and habitat loss. Addressing these issues is crucial for the survival and well-being of future generations.\n\n### Future Outlook\nThe future of mankind is uncertain but充满希望. With continued efforts in education, technology, and international cooperation, there is potential for a more just, peaceful, and sustainable world. However, this requires collective action, responsibility, and a commitment to addressing the challenges we face.\n\nIn summary, mankind is a diverse and dynamic species with both remarkable strengths and significant challenges. By working together and leveraging our collective wisdom and creativity, we can strive towards a brighter future for all."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 16,
+    "completion_tokens": 495,
+    "total_tokens": 511,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": null
+  },
+  "system_fingerprint": "",
+  "meta": {
+    "usage": {
+      "credits_used": 301
+    }
+  }
+}
 ```
 {% endcode %}
 

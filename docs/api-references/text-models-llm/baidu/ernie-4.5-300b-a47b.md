@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # ernie-4.5-300b-a47b
 
 {% columns %}
@@ -83,7 +78,7 @@ response = requests.post(
         "messages":[
             {
                 "role":"user",
-                "content":"Hello" # insert your prompt here, instead of Hello
+                "content":"Hi! What do you think about mankind?" # insert your prompt
             }
         ]
     }
@@ -111,7 +106,7 @@ async function main() {
       messages:[
           {
               role:'user',
-              content: 'Hello'  // insert your prompt here, instead of Hello
+              content: 'Hi! What do you think about mankind?' // insert your prompt here
           }
       ],
     }),
@@ -133,6 +128,38 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "id": "019bd682e8fd00bca8d4a94aace650ce",
+  "object": "chat.completion",
+  "created": 1768830462,
+  "model": "baidu/ernie-4.5-300b-a47b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "As an AI, I don't have personal feelings, but I can provide an analysis of humanity based on available data.\n\nMankind is an incredibly diverse and complex species, marked by remarkable achievements and significant challenges:\n\n**Strengths:**\n1. **Innovation:** Humans have developed advanced technology, from early tools to space exploration, dramatically reshaping their environments and societies.\n2. **Creativity:** Art, literature, music, and philosophy reflect profound emotional and intellectual depth.\n3. **Adaptability:** Humans thrive in nearly every climate on Earth, demonstrating remarkable resilience and resourcefulness.\n4. **Social Cooperation:** Complex societies, governments, and economies enable large-scale collaboration.\n5. **Empathy & Altruism:** Many individuals work selflessly to help others, often across cultural and geographic divides.\n\n**Challenges:**\n1. **Conflict:** War, violence, and discrimination persist due to differences in ideology, resources, or identity.\n2. **Environmental Impact:** Climate change, deforestation, and pollution threaten ecosystems and future survival.\n3. **Inequality:** Wealth gaps, access to education, and healthcare disparities undermine social stability.\n4. **Ethical Dilemmas:** Rapid technological advancements (e.g., AI, genetic engineering) raise questions about responsibility and long-term consequences.\n\n**Potential:** Humanity continues to evolve, with growing awareness of global interconnectedness. Movements for sustainability, social justice, and scientific collaboration suggest a capacity for positive change.\n\nUltimately, mankind's future depends on balancing ambition with wisdom, harnessing progress for collective well-being while addressing vulnerabilities. What aspect of humanity interests you most?"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 16,
+    "completion_tokens": 371,
+    "total_tokens": 387,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 16
+  },
+  "system_fingerprint": "",
+  "meta": {
+    "usage": {
+      "credits_used": 944
+    }
+  }
+}
 ```
 {% endcode %}
 

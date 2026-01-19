@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # ernie-4.5-vl-28b-a3b
 
 
@@ -135,6 +130,35 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "id": "b1946f423718276c56f085ef83bfded2",
+  "object": "chat.completion",
+  "created": 1768830849,
+  "model": "baidu/ernie-4.5-vl-28b-a3b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Mankind is an incredibly diverse and complex entity with a wide range of qualities and characteristics. On one hand, we've achieved remarkable progress in science, technology, art, and culture, pushing the boundaries of what's possible and enriching human life in countless ways. Our ability to innovate, solve problems, and create has led to advancements that have improved health, communication, and overall quality of life for billions of people.\n\nHowever, we also face significant challenges. Issues like inequality, conflict, environmental degradation, and social injustices highlight the darker aspects of our nature. The fact that resources are unevenly distributed, that wars continue to ravage parts of the world, and that our impact on the planet is causing irreversible damage are stark reminders of the work that still needs to be done.\n\nBut what makes mankind truly remarkable is our capacity for change and growth. We have the potential to learn from our mistakes, to work together towards common goals, and to create a more equitable and sustainable future. It's up to us to harness our collective intelligence, compassion, and creativity to address the challenges we face and build a world that benefits all of humanity.\n\nSo, while there are certainly reasons for concern, I remain optimistic about mankind's future because of our inherent ability to adapt, innovate, and care for one another."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22,
+    "completion_tokens": 280,
+    "total_tokens": 302,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": null
+  },
+  "system_fingerprint": "",
+  "meta": {
+    "usage": {
+      "credits_used": 344
+    }
+  }
+}
 ```
 {% endcode %}
 

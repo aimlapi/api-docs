@@ -82,6 +82,10 @@ Supported models:
 
 ***
 
+* [baidu/ernie-4.5-21b-a3b-thinking](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.md)
+
+***
+
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 

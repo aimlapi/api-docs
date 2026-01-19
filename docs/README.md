@@ -90,6 +90,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **BAAI**: [Embedding](api-references/embedding-models/BAAI/)
 
+**Baidu**:    [Text/Chat](api-references/text-models-llm/baidu/)
+
 **ByteDance**: [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
 
 **Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)
