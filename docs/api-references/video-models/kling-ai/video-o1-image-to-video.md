@@ -1,4 +1,4 @@
-# video-o1-image-to-video
+# o1/image-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -44,7 +44,7 @@ If the video generation task status is `completed`, the response will include th
 [OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
-## Code Example
+## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
@@ -107,7 +107,7 @@ def main():
     if gen_id:
         start_time = time.time()
 
-        timeout = 1000
+        timeout = 1000   # 1000 sec = 16 min 40 sec 
         while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
@@ -117,7 +117,7 @@ def main():
 
             status = response_data.get("status")
             
-            if status in ["waiting", "queued", "generating"]:
+            if status in ["queued", "generating"]:
                 print(f"Status: {status}. Checking again in 15 seconds.")
                 time.sleep(15)
             else:
@@ -219,7 +219,7 @@ function main() {
         const genId = genResponse.id;
         console.log("Generation ID:", genId);
 
-        const timeout = 1000 * 1000; // 1000 sec
+        const timeout = 1000 * 1000; // 1000 sec = 16 min 40 sec
         const interval = 15 * 1000; // 15 sec
         const startTime = Date.now();
 
@@ -237,7 +237,7 @@ function main() {
 
                 const status = responseData.status;
         
-                if (["waiting", "queued", "generating"].includes(status)) {
+                if (["queued", "generating"].includes(status)) {
                     console.log(`Status: ${status}. Checking again in 15 seconds.`);
                     setTimeout(checkStatus, interval);
                 } else {

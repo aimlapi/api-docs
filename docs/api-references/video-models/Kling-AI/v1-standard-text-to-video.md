@@ -60,3 +60,222 @@ If the video generation task status is `completed`, the response will include th
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
 [OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
+
+## Full Example: Generating and Retrieving the Video From the Server
+
+The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import time
+
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>"
+base_url = "https://api.aimlapi.com/v2"
+
+# Creating and sending a video generation task to the server
+def generate_video():
+    url = f"{base_url}/video/generations"
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+    }
+
+    data = {
+        "model": "kling-video/v1/standard/text-to-video",
+        "prompt": "A cheerful white raccoon running through a sequoia forest",
+        "aspect_ratio": "16:9",
+        "duration": "5"
+    }
+ 
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code >= 400:
+        print(f"Error: {response.status_code} - {response.text}")
+    else:
+        response_data = response.json()
+        return response_data
+    
+
+# Requesting the result of the task from the server using the generation_id
+def get_video(gen_id):
+    url = f"{base_url}/video/generations"
+    params = {
+        "generation_id": gen_id,
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}", 
+        "Content-Type": "application/json"
+        }
+    response = requests.get(url, params=params, headers=headers)
+    return response.json()
+
+
+def main():
+    # Running video generation and getting a task id
+    gen_response = generate_video()
+    gen_id = gen_response.get("id")
+    print("Generation ID:  ", gen_id)
+
+    # Trying to retrieve the video from the server every 15 sec
+    if gen_id:
+        start_time = time.time()
+
+        timeout = 1000   # 1000 sec = 16 min 40 sec
+        while time.time() - start_time < timeout:
+            response_data = get_video(gen_id)
+
+            if response_data is None:
+                print("Error: No response from API")
+                break
+        
+            status = response_data.get("status")
+            print("Status:", status)
+
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
+            else:
+                print("Processing complete:/n", response_data)
+                return response_data
+   
+        print("Timeout reached. Stopping.")
+        return None     
+
+
+if __name__ == "__main__":
+    main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+const apiKey = "<YOUR_AIMLAPI_KEY>";
+const baseUrl = "https://api.aimlapi.com/v2";
+const https = require("https");
+const { URL } = require("url");
+
+// Creating and sending a video generation task to the server
+function generateVideo(callback) {
+    const data = JSON.stringify({
+        model: 'kling-video/v1/standard/text-to-video',
+        prompt: `
+A cheerful white raccoon running through a sequoia forest.
+`,
+        duration: 5,
+        aspect_ratio: '16:9'
+    });
+
+    const url = new URL(`${baseUrl}/video/generations`);
+    const options = {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+            "Content-Length": Buffer.byteLength(data)
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            if (res.statusCode >= 400) {
+                console.error(`Error: ${res.statusCode} - ${body}`);
+                callback(null);
+            } else {
+                const result = JSON.parse(body);
+                callback(result);
+            }
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.write(data);
+    req.end();
+}
+
+// Requesting the result of the task from the server using the generation_id
+function getVideo(genId, callback) {
+    const url = new URL(`${baseUrl}/video/generations`);
+    url.searchParams.append("generation_id", genId);
+
+    const options = {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+        }
+    };
+
+    const req = https.request(url, options, (res) => {
+        let body = "";
+        res.on("data", (chunk) => body += chunk);
+        res.on("end", () => {
+            const result = JSON.parse(body);
+            callback(result);
+        });
+    });
+
+    req.on("error", (err) => {
+        console.error("Request error:", err);
+        callback(null);
+    });
+
+    req.end();
+}
+
+// Initiates video generation and checks the status every 15 seconds until completion or timeout
+function main() {
+    generateVideo((genResponse) => {
+        if (!genResponse || !genResponse.id) {
+            console.error("No generation ID received.");
+            return;
+        }
+
+        const genId = genResponse.id;
+        console.log("Generation ID:", genId);
+
+        const timeout = 1000 * 1000; // 1000 sec = 16 min 40 sec
+        const interval = 15 * 1000; // 15 sec
+        const startTime = Date.now();
+
+        const checkStatus = () => {
+            if (Date.now() - startTime >= timeout) {
+                console.log("Timeout reached. Stopping.");
+                return;
+            }
+
+            getVideo(genId, (responseData) => {
+                if (!responseData) {
+                    console.error("Error: No response from API");
+                    return;
+                }
+
+                const status = responseData.status;
+        
+                if (["queued", "generating"].includes(status)) {
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
+                    setTimeout(checkStatus, interval);
+                } else {
+                    console.log("Processing complete:\n", responseData);
+                }
+            });
+        };
+        checkStatus();
+    })
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
