@@ -1,72 +1,48 @@
 [
   {
-    "name": "baidu/ernie-4.5-300b-a47b-paddle",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-300b-a47b-paddle",
-    "alias": "ernie-4.5-300b-a47b-paddle",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-4.5-0.3b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-0.3b",
-    "alias": "ernie-4.5-0.3b",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-4.5-8k-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-8k-preview",
+    "name": "baidu/ernie-4-5-8k-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-8k-preview",
     "alias": "ernie-4.5-8k-preview",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "baidu/ernie-4.5-turbo-128k",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-turbo-128k",
+    "name": "baidu/ernie-4-5-turbo-128k",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-turbo-128k",
     "alias": "ernie-4.5-turbo-128k",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "baidu/ernie-4.5-turbo-vl-32k",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-turbo-vl-32k",
+    "name": "baidu/ernie-4-5-turbo-vl-32k",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-turbo-vl-32k",
     "alias": "ernie-4.5-turbo-vl-32k",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "baidu/ernie-5.0-thinking-latest",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5.0-thinking-latest",
+    "name": "baidu/ernie-5-0-thinking-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5-0-thinking-latest",
     "alias": "ernie-5.0-thinking-latest",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "baidu/ernie-5.0-thinking-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5.0-thinking-preview",
+    "name": "baidu/ernie-5-0-thinking-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5-0-thinking-preview",
     "alias": "ernie-5.0-thinking-preview",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "baidu/ernie-x1.1-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-x1.1-preview",
+    "name": "baidu/ernie-x1-1-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-x1-1-preview",
     "alias": "ernie-x1.1-preview",
-    "category": "text-models-llm",
-    "vendor": "baidu",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "baidu/ernie-x1-turbo-32k",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-x1-turbo-32k",
-    "alias": "ernie-x1-turbo-32k",
     "category": "text-models-llm",
     "vendor": "baidu",
     "codeSamples": "chat-completion"
