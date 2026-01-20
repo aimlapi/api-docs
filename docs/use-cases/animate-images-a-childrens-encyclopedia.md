@@ -243,7 +243,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -292,7 +292,7 @@ generating
 generating
 Still waiting... Checking again in 10 seconds.
 completed
-Processing complete:/n {'id': '9e4c45e7-5785-42f3-8271-ce8a8b31dd04:kling-video/v1.6/pro/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/kangaroo/Kx8BCNAB0eqhasWyZMTo3_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 11725406}}
+Processing complete:\n {'id': '9e4c45e7-5785-42f3-8271-ce8a8b31dd04:kling-video/v1.6/pro/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/kangaroo/Kx8BCNAB0eqhasWyZMTo3_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 11725406}}
 ```
 {% endcode %}
 

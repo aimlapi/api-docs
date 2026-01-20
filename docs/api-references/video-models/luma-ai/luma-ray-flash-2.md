@@ -148,7 +148,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -308,7 +308,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'df551652-1bbe-4d38-9c99-d0ecb69db192:luma/ray-flash-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/8523b741-f975-4a8b-84d0-05c51f1cbb04/f9cff453-d98f-4243-a419-164f7c228c38_result76b52833979928ee.mp4'}}
+Processing complete:\n {'id': 'df551652-1bbe-4d38-9c99-d0ecb69db192:luma/ray-flash-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/8523b741-f975-4a8b-84d0-05c51f1cbb04/f9cff453-d98f-4243-a419-164f7c228c38_result76b52833979928ee.mp4'}}
 ```
 {% endcode %}
 

@@ -101,7 +101,7 @@ def main():
                 print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")

@@ -159,7 +159,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -190,7 +190,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'dbf7a50e-87b2-4ba5-921f-f02fdb8f7cc6', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/d462f7e3-bdc6-43ac-8c2a-ac2d61dea014.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNzZmNzY0NDRiZTViYWI2YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc1NDc4NDAwMH0._q7rh2fmm7a16k7UHAnDh3aUOIy-fT8NJO3hP-KT4_s']}
+Processing complete:\n {'id': 'dbf7a50e-87b2-4ba5-921f-f02fdb8f7cc6', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/d462f7e3-bdc6-43ac-8c2a-ac2d61dea014.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNzZmNzY0NDRiZTViYWI2YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc1NDc4NDAwMH0._q7rh2fmm7a16k7UHAnDh3aUOIy-fT8NJO3hP-KT4_s']}
 ```
 {% endcode %}
 

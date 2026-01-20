@@ -136,7 +136,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -297,7 +297,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2.5-t2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-accelerate.aliyuncs.com/1d/e9/20250927/3c240a55/8736603f-7944-42b6-8a3b-8b2c1e246c34.mp4?Expires=1759007661&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=L67uOyWei9u9WcvvY570igR8olU%3D'}}
+Processing complete:\n {'id': '8736603f-7944-42b6-8a3b-8b2c1e246c34:alibaba/wan2.5-t2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-accelerate.aliyuncs.com/1d/e9/20250927/3c240a55/8736603f-7944-42b6-8a3b-8b2c1e246c34.mp4?Expires=1759007661&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=L67uOyWei9u9WcvvY570igR8olU%3D'}}
 ```
 {% endcode %}
 

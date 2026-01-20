@@ -131,7 +131,7 @@ def main():
                 print("Still waiting... Checking again in 15 seconds.")
                 time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -171,7 +171,7 @@ Still waiting... Checking again in 15 seconds.
 Status: generating
 Still waiting... Checking again in 15 seconds.
 Status: completed
-Processing complete:/n {'id': 'x6cwiGJM4VSX8msX6VtRX', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/mule/ompr/openmagic/render_tasks/254262/1657f92e15fd427298b5e60e8eedcbce.mp4?response-content-disposition=attachment%3B%20filename%3D1657f92e15fd427298b5e60e8eedcbce.mp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=FUQDW4Z92RG9JPURIVP1%2F20251230%2Ffsn1%2Fs3%2Faws4_request&X-Amz-Date=20251230T132555Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=c5322a3ec963563674e1ea3447e978bc9d9325a854e30bc2ad8ab2563c2db9df'}}
+Processing complete:\n {'id': 'x6cwiGJM4VSX8msX6VtRX', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/mule/ompr/openmagic/render_tasks/254262/1657f92e15fd427298b5e60e8eedcbce.mp4?response-content-disposition=attachment%3B%20filename%3D1657f92e15fd427298b5e60e8eedcbce.mp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=FUQDW4Z92RG9JPURIVP1%2F20251230%2Ffsn1%2Fs3%2Faws4_request&X-Amz-Date=20251230T132555Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=c5322a3ec963563674e1ea3447e978bc9d9325a854e30bc2ad8ab2563c2db9df'}}
 ```
 {% endcode %}
 

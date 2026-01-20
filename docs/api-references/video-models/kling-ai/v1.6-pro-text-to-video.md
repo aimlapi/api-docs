@@ -133,7 +133,7 @@ def main():
                 print(f"Status: {status}. Checking again in 15 seconds.")
                 time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")

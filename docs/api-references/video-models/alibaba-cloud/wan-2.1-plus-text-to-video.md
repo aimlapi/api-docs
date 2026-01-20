@@ -140,7 +140,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -379,7 +379,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/alpaca/1d/9d/20250804/8ca6ec02/a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62.mp4?Expires=1754374087&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8%2F2foeH6dJyUQBdXSSKn9qnJxQQ%3D'}}
+Processing complete:\n {'id': 'a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/alpaca/1d/9d/20250804/8ca6ec02/a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62.mp4?Expires=1754374087&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8%2F2foeH6dJyUQBdXSSKn9qnJxQQ%3D'}}
 ```
 {% endcode %}
 

@@ -141,7 +141,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -212,7 +212,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '282052359471184', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/whale/inference_output%2Fvideo%2F2025-06-20%2Fff397144-0af8-4c32-a157-b60b1e05ed32%2Foutput.mp4?Expires=1750446300&OSSAccessKeyId=LTAI5tAmwsjSaaZVA6cEFAUu&Signature=hNtlgGPljugZ1uxDyRPXRCBS%2B1Y%3D'}}
+Processing complete:\n {'id': '282052359471184', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/whale/inference_output%2Fvideo%2F2025-06-20%2Fff397144-0af8-4c32-a157-b60b1e05ed32%2Foutput.mp4?Expires=1750446300&OSSAccessKeyId=LTAI5tAmwsjSaaZVA6cEFAUu&Signature=hNtlgGPljugZ1uxDyRPXRCBS%2B1Y%3D'}}
 ```
 {% endcode %}
 

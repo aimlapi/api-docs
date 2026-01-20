@@ -159,7 +159,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -313,7 +313,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'cgt-20250721143112-kkm5n', 'status': 'completed', 'video': {'url': 'https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro/02175307947305300000000000000000000ffffc0a840664c87c7.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYjg3ZjNlOGM0YzQyNGE1MmI2MDFiOTM3Y2IwMTY3OTE%2F20250721%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250721T063202Z&X-Tos-Expires=86400&X-Tos-Signature=2d18ca9f23a2b12baac84d7cc9b56b4db77b6215f42a336aa170b666b3126324&X-Tos-SignedHeaders=host'}}
+Processing complete:\n {'id': 'cgt-20250721143112-kkm5n', 'status': 'completed', 'video': {'url': 'https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro/02175307947305300000000000000000000ffffc0a840664c87c7.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYjg3ZjNlOGM0YzQyNGE1MmI2MDFiOTM3Y2IwMTY3OTE%2F20250721%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250721T063202Z&X-Tos-Expires=86400&X-Tos-Signature=2d18ca9f23a2b12baac84d7cc9b56b4db77b6215f42a336aa170b666b3126324&X-Tos-SignedHeaders=host'}}
 ```
 {% endcode %}
 

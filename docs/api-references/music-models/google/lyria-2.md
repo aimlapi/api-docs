@@ -121,7 +121,7 @@ Still waiting... Checking again in 10 seconds.
 
 {% code overflow="wrap" %}
 ```javascript
-Generation complete:/n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
+Generation complete:\n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
 ```
 {% endcode %}
 
@@ -197,7 +197,7 @@ def main():
                 print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -316,7 +316,7 @@ Generation: {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'que
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
+Generation complete:\n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
 ```
 {% endcode %}
 

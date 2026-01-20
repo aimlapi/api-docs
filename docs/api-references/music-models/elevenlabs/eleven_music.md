@@ -144,7 +144,7 @@ def main():
                 print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -285,7 +285,7 @@ main();
 Generation: {'status': 'queued', 'id': '60ac7c34-3224-4b14-8e7d-0aa0db708325:elevenlabs/eleven_music'}
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': '60ac7c34-3224-4b14-8e7d-0aa0db708325:elevenlabs/eleven_music', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/generations/hippopotamus/1757963033314-8ca7729d-b78c-4d4c-9ef9-89b2fb3d07e8.mp3'}}
+Generation complete:\n {'id': '60ac7c34-3224-4b14-8e7d-0aa0db708325:elevenlabs/eleven_music', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/generations/hippopotamus/1757963033314-8ca7729d-b78c-4d4c-9ef9-89b2fb3d07e8.mp3'}}
 ```
 {% endcode %}
 

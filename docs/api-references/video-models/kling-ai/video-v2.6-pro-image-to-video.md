@@ -123,7 +123,7 @@ def main():
                 print("Still waiting... Checking again in 15 seconds.")
                 time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -152,7 +152,7 @@ Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: completed
-Processing complete:/n {'id': '27f25c85-e9db-44e9-909a-0c3ceb35cdd9:klingai/video-v2-6-pro-image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eaeb/4JST2nBT5v7zbzIy6RlmW_output.mp4'}}
+Processing complete:\n {'id': '27f25c85-e9db-44e9-909a-0c3ceb35cdd9:klingai/video-v2-6-pro-image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eaeb/4JST2nBT5v7zbzIy6RlmW_output.mp4'}}
 ```
 {% endcode %}
 

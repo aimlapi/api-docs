@@ -135,7 +135,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -288,7 +288,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.2-14b-animate-replace","status":"completed","video":{"url":"https://v3b.fal.media/files/b/panda/4VjTJeQXFX3183b8Xe3d2_wan_animate_output.mp4"}}
+Processing complete:\n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.2-14b-animate-replace","status":"completed","video":{"url":"https://v3b.fal.media/files/b/panda/4VjTJeQXFX3183b8Xe3d2_wan_animate_output.mp4"}}
 ```
 {% endcode %}
 

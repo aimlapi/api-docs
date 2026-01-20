@@ -134,7 +134,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -289,7 +289,7 @@ Generation ID:   67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-
 Status: queued
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/zebra/GR3ehIPWwREVvJduWH6Pn_R07gifMb.mp4'}}
+Processing complete:\n {'id': '67b69e0c-922f-4eae-9b90-8c4605131d3b:krea/krea-wan-14b/text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/zebra/GR3ehIPWwREVvJduWH6Pn_R07gifMb.mp4'}}
 ```
 {% endcode %}
 

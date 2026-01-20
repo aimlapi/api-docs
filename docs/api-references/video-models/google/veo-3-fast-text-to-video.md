@@ -142,7 +142,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -303,7 +303,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'status': 'completed', 'id': '083c6067-0bc6-464a-943b-930b1eb1753b:veo-3.0-fast-generate-001', 'video': {'url': 'https://cdn.aimlapi.com/generations/guepard/1754989116527-98dac026-6570-4d01-8a93-4234dc699032.mp4'}}
+Processing complete:\n {'status': 'completed', 'id': '083c6067-0bc6-464a-943b-930b1eb1753b:veo-3.0-fast-generate-001', 'video': {'url': 'https://cdn.aimlapi.com/generations/guepard/1754989116527-98dac026-6570-4d01-8a93-4234dc699032.mp4'}}
 ```
 {% endcode %}
 

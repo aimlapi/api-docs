@@ -106,7 +106,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -230,7 +230,7 @@ Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20251106201349-ESweHLjHtnWFQLwO.mp3?Expires=1762517636&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=ZIKZMHUCU3r30ysGjbSoqc3aVks%3D'}, 'extra_info': {'music_duration': 93022, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 256000, 'music_size': 0}, 'trace_id': '055bc3b9622dd73d828276162cc7d516'}
+Generation complete:\n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20251106201349-ESweHLjHtnWFQLwO.mp3?Expires=1762517636&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=ZIKZMHUCU3r30ysGjbSoqc3aVks%3D'}, 'extra_info': {'music_duration': 93022, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 256000, 'music_size': 0}, 'trace_id': '055bc3b9622dd73d828276162cc7d516'}
 ```
 {% endcode %}
 

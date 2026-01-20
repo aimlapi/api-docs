@@ -109,10 +109,10 @@ def main():
                 time.sleep(10)
             else:
                 
-                print("Processing complete:/n", response_data["result"]["text"])
+                print("Processing complete:\n", response_data["result"]["text"])
                 
                 # Uncomment the line below to print the entire "result" object with all service data
-                # print("Processing complete:/n", json.dumps(response_data["result"], indent=2, ensure_ascii=False))
+                # print("Processing complete:\n", json.dumps(response_data["result"], indent=2, ensure_ascii=False))
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -133,7 +133,7 @@ if __name__ == "__main__":
 ```json5
 {'generation_id': '227b2ca6-72a6-4e82-906d-957ba03e470f'}
 Still waiting... Checking again in 10 seconds.
-Processing complete:/n {
+Processing complete:\n {
   "id": "51d9be59-2180-407f-93e1-ea3c3dec7fcd",
   "language_model": "assemblyai_default",
   "acoustic_model": "assemblyai_default",

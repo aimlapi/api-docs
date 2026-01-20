@@ -132,7 +132,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -323,7 +323,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/omnihuman/v1.5', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/kangaroo/HSRdq0Z-fMRhwDLV8SM5y_video.mp4'}}
+Processing complete:\n {'id': '3fdd5350-31b6-47e0-bb85-80ee2d970f73:bytedance/omnihuman/v1.5', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/kangaroo/HSRdq0Z-fMRhwDLV8SM5y_video.mp4'}}
 ```
 {% endcode %}
 
