@@ -85,20 +85,16 @@
         "x-hideTryItPanel": false,
         "x-codeSamples": [
           {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v1/billing/balance' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json'"
+          },
+          {
             "lang": "JavaScript",
             "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/billing/balance\", {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n      \"Content-Type\": \"application/json\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
             "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v1/billing/balance\",\n        headers={\n            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n            \"Content-Type\": \"application/json\",\n        }\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
-          },
-          {
-            "lang": "cURL",
-            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v1/billing/balance' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json'"
-          },
-          {
-            "lang": "HTTP",
-            "source": "GET /v1/billing/balance HTTP/1.1\nHost: api.aimlapi.com\nAuthorization: Bearer <YOUR_AIMLAPI_KEY>\nAccept: */*"
           }
         ]
       }
