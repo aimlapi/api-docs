@@ -13,8 +13,6 @@
     "/models": {
       "get": {
         "operationId": "ModelsController_getModels_v1",
-        "summary": "List available models",
-        "description": "Returns the complete list of models available through the AIML API.",
         "responses": {
           "200": {
             "description": "A list of available models.",
