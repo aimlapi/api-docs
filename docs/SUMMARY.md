@@ -10,6 +10,7 @@
 
 * [🟡 Service Endpoints](api-references/service-endpoints/README.md)
   * [Account Balance](api-references/service-endpoints/account-balance.md)
+  * [Complete Model List](api-references/service-endpoints/complete-model-list.md)
 * [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)

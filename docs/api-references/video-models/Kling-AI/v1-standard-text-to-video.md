@@ -38,7 +38,7 @@ Below, you can find both corresponding API schemas.
 ## API Schemas
 
 {% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
 However, you can still call this model using the legacy URL that includes the vendor name.
 {% endhint %}
 
@@ -131,7 +131,6 @@ def main():
                 break
         
             status = response_data.get("status")
-            print("Status:", status)
 
             if status in ["queued", "generating"]:
                 print(f"Status: {status}. Checking again in 15 seconds.")
@@ -279,3 +278,43 @@ main();
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Generation ID:   U-Q3R_yVPfHqiAQlaWdss
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'U-Q3R_yVPfHqiAQlaWdss', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/kangaroo/bs2/upload-ylab-stunt-sgp/muse/784256485483880450/VIDEO/20260122/4c3f80428e9cfc90573418b5a14aae18-4be7549a-04b3-461a-8a06-2e3e147be93a.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAH7JuE3zOoU6y4-isYiLG3XQhIZiaBLnGLFVCbaRZT5oEbfW69KqY8-00jhV_r3ymLKxpT7bpTtlO0Z6hyLGfocRGkW46J3KDFhsUwTaqEmujGUVTgNHQIWdhuWIglyTqYlrM4dVIvbefjHwFX2eWtCEYFpa14-QdfAzhEuPR3S4_TvnvZCsyzJKDIu0NN0A6szuf-X_32wYAaon6BCdTTyNTCm35mviMUmR8EsM46vlxoSj4dfrTYhUzYe6jlYP2ZR__D3IiDovwC4GmH8pWJTadrFYzjrOSbFO1lzTFMwjFWhe1MR5igFMAE&x-kcdn-pid=112781&ksSecret=df68c4a8165cb6f008302e4bc12e49ae&ksTime=6999cdc9'}}
+```
+{% endcode %}
+
+</details>
+
+**Processing time**: \~ 5 min 22 sec.
+
+**Generated video** (1280x720, without sound):
+
+{% embed url="https://drive.google.com/file/d/1p3jzIWjOZCfUSTjoMQ27Knc3oKbBemVU/view" %}

@@ -271,3 +271,36 @@ main();
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+Generation ID:   gg6lldgKC2tRmvJwBjK7-
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'gg6lldgKC2tRmvJwBjK7-', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/kangaroo/bs2/upload-ylab-stunt-sgp/muse/784256485483880450/VIDEO/20260122/d40612cb5e896d7522b879ef1df858d9-a9d6cd03-e7c7-436f-a5ea-8e4a0436905a.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAHb-cd6E1sNt1khQt00KZDlKKywMoWCcZZpN20KDMWKJ2KpOPIvyEvdZGxo6Pq2ZdfroGNpC8qzkfsQ5NKoUYw3eMISmzkZUGfsxQoGf1s62zOVo8DgLcWTcSVjBrPWDiINCRcRfPLhDcpBBo0nxg5Y4okHO7NlLCxkO5GEezRFVR_DKVVo2STvgP67QWtHz3CzfT8rUhcGCYs1XkQTMJhUxaBjWmmBYRx3p4wutoKr3hoSYF8ADrg3uvuiuzhTSVrQUvw0IiAsCh1HKrgcKo6_JboDCYiKlWjo6KJpZr1TjTMcg3vWAigFMAE&x-kcdn-pid=112781&ksSecret=0de731a5285509eb9c9eb89da6e10bd0&ksTime=6999d288'}}
+```
+{% endcode %}
+
+</details>
+
+**Processing time**: \~ 3 min 24 sec.
+
+**Generated video** (1280x720, without sound):
+
+{% embed url="https://drive.google.com/file/d/1mU4Kv0k37SH0RN3WL3PNC7A3anQpZEts/view" %}

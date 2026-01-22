@@ -8,9 +8,11 @@ description: A full list of available models.
 If you need to select models based on specific parameters for your task, visit the [dedicated page on our official website](https://aimlapi.com/models/), which offers convenient filtering options. On the selected model’s page, you can find detailed technical and commercial information.
 {% endhint %}
 
-The section **Get Model List via API** contains API reference for the service endpoint, which lets you request the full model list.
+{% hint style="success" %}
+To fetch the complete model list via the API, see [the API reference](service-endpoints/complete-model-list.md) for the relevant service endpoint.
+{% endhint %}
 
-The section **Model IDs** lists the identifiers of all available and deprecated models, grouped by category. These IDs are used to specify the exact models in your code, like this:
+The section **Full List of Model IDs** below lists the identifiers of all available and deprecated models, grouped by category. These IDs are used to specify the exact models in your code, like this:
 
 <figure><img src="../.gitbook/assets/model_ID (1).png" alt="" width="442"><figcaption></figcaption></figure>
 
@@ -21,12 +23,6 @@ If you already know the model ID, use the page search function (<kbd>Ctrl+F</kbd
 
 Can't find the model you need? Join our [Discord community](https://discord.gg/8CwhkUuCR6) to propose new models for integration into our API offerings. Your contributions help us grow and serve you better.
 {% endhint %}
-
-## Get Model List via API
-
-{% openapi-operation spec="models" path="/models" method="get" %}
-[OpenAPI models](https://api.aimlapi.com/docs-public-yaml)
-{% endopenapi-operation %}
 
 ## Full List of Model IDs
 
