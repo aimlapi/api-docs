@@ -15,7 +15,7 @@ No API key is required for this request. You can also simply open [this list](ht
 
 ## Output Examples by Model Type
 
-As of early 2025, this endpoint returns a list of more than 400 models. Each item represents a single model identified by a unique ID. Depending on the model category (chat, video, etc.), the set of fields in each item may vary slightly, so below we provide representative examples from the main model categories.
+As of early 2026, this endpoint returns a list of more than 400 models. Each item represents a single model identified by a unique ID. Depending on the model category (chat, video, etc.), the set of fields in each item may vary slightly, so below we provide representative examples from the main model categories.
 
 #### Example output item for a chat model
 
