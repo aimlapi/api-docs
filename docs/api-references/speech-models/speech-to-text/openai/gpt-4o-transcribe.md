@@ -6,20 +6,6 @@ This documentation is valid for the following list of our models:
 * `openai/gpt-4o-transcribe`
 {% endhint %}
 
-{% hint style="success" %}
-Note:
-
-Previously, our STT models operated via a single API call to `POST https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../stt-legacy.md).
-
-Now, we are switching to a new two-step process:
-
-* `POST https://api.aimlapi.com/v1/stt/create` – Creates and submits a speech-to-text processing task to the server. This method accepts the same parameters as the old version but returns a `generation_id` instead of the final transcript.
-* `GET https://api.aimlapi.com/v1/stt/{generation_id}` – Retrieves the generated transcript from the server using the `generation_id` obtained from the previous API call.
-
-This approach helps prevent generation failures due to timeouts.\
-We've prepared [a couple of examples](gpt-4o-transcribe.md#quick-code-examples) below to make the transition to the new STT API easier for you.
-{% endhint %}
-
 ## Model Overview
 
 A speech-to-text model based on GPT-4o for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
