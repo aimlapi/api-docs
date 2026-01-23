@@ -138,11 +138,11 @@
           },
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/models\");\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/models\");\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\"https://api.aimlapi.com/models\")\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\"https://api.aimlapi.com/models\")\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
           }
         ]
       }
