@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # gpt-4o-transcribe
 
 {% hint style="info" %}
@@ -59,27 +54,28 @@ Let's use the `openai/gpt-4o-transcribe` model to transcribe the following audio
 
 {% tabs %}
 {% tab title="Python" %}
-<pre class="language-python" data-overflow="wrap"><code class="lang-python">import time
+{% code overflow="wrap" %}
+```python
 import requests
+import time
+import json
 
 base_url = "https://api.aimlapi.com/v1"
-# Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>:
-api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+# Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+api_key = "<YOUR_AIMLAPI_KEY>"
 
-<strong># Creating and sending a speech-to-text conversion task to the server
-</strong>def create_stt():
+# Create and send a speech-to-text conversion task to the server
+def create_stt():
     url = f"{base_url}/stt/create"
     headers = {
         "Authorization": f"Bearer {api_key}", 
     }
-
     data = {
         "model": "openai/gpt-4o-transcribe",
         "url": "https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3"
     }
  
     response = requests.post(url, json=data, headers=headers)
-    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
@@ -87,7 +83,7 @@ api_key = "&#x3C;YOUR_AIMLAPI_KEY>"
         print(response_data)
         return response_data
 
-# Requesting the result of the task from the server using the generation_id
+# Request the result of the task from the server using the generation_id
 def get_stt(gen_id):
     url = f"{base_url}/stt/{gen_id}"
     headers = {
@@ -96,17 +92,16 @@ def get_stt(gen_id):
     response = requests.get(url, headers=headers)
     return response.json()
     
-# First, start the generation, then repeatedly request the result from the server every 10 seconds.
+# Start the generation, then repeatedly request the result from the server every 10 sec.
 def main():
     stt_response = create_stt()
     gen_id = stt_response.get("generation_id")
-
 
     if gen_id:
         start_time = time.time()
 
         timeout = 600
-        while time.time() - start_time &#x3C; timeout:
+        while time.time() - start_time < timeout:
             response_data = get_stt(gen_id)
 
             if response_data is None:
@@ -119,7 +114,9 @@ def main():
                 print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:\n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                # data = .json()
+                print("Processing complete:")
+                print(json.dumps(response_data["result"], indent=2, ensure_ascii=False))
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -128,11 +125,101 @@ def main():
 
 if __name__ == "__main__":
     main()
-</code></pre>
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="JS" %}
+{% code overflow="wrap" %}
+```javascript
+const baseUrl = "https://api.aimlapi.com/v1";
+// Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+const apiKey = "<YOUR_AIMLAPI_KEY>";
 
+// Create and send a speech-to-text conversion task to the server
+async function createSTT() {
+  const url = `${baseUrl}/stt/create`;
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "openai/gpt-4o-transcribe",
+      url: "https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3",
+    }),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    console.error(`Error: ${response.status} - ${text}`);
+    return null;
+  }
+
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
+
+// Request the result of the task from the server using the generation_id
+async function getSTT(genId) {
+  const url = `${baseUrl}/stt/${genId}`;
+
+  const response = await fetch(url, {
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  return response.json();
+}
+
+// Start generation and poll every 10s
+async function main() {
+  const sttResponse = await createSTT();
+  const genId = sttResponse?.generation_id;
+
+  if (!genId) {
+    console.error("No generation_id received");
+    return null;
+  }
+
+  const startTime = Date.now();
+  const timeoutMs = 600 * 1000; // 10 minutes
+
+  while (Date.now() - startTime < timeoutMs) {
+    const responseData = await getSTT(genId);
+
+    if (!responseData) {
+      console.error("Error: No response from API");
+      return null;
+    }
+
+    const status = responseData.status;
+
+    if (status === "queued" || status === "generating") {
+      console.log(`Status: ${status}. Checking again in 10 seconds.`);
+      await new Promise(resolve => setTimeout(resolve, 10_000));
+    } else {
+      console.log("Processing complete:");
+      console.log(JSON.stringify(responseData.result, null, 2));
+      return responseData;
+    }
+  }
+
+  console.log("Timeout reached. Stopping.");
+  return null;
+}
+
+main();
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -142,9 +229,22 @@ if __name__ == "__main__":
 
 {% code overflow="wrap" %}
 ```
-{'generation_id': 'f3e8729e-9a36-4650-81f1-c08fc1b16f39'}
+{'generation_id': 'RlLz0hRdAs9voL5Qi1Pzr', 'status': 'queued'}
+Status: queued. Checking again in 10 seconds.
 Processing complete:
- He doesn't belong to you and I don't see how you have anything to do with what is be his power You he's he personally that from this stage to you Be fine
+{
+  "text": "He doesn't belong to you, and I don't see how you have anything to do with what is be his power. He's he personally that from this stage to you.",
+  "usage": {
+    "type": "tokens",
+    "total_tokens": 135,
+    "input_tokens": 100,
+    "input_token_details": {
+      "text_tokens": 0,
+      "audio_tokens": 100
+    },
+    "output_tokens": 35
+  }
+}
 ```
 {% endcode %}
 
