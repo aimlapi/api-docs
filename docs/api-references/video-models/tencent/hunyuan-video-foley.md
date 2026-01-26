@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # hunyuan-video-foley
 
 {% columns %}
@@ -289,4 +284,4 @@ Processing complete:
 
 **Generated video** (1280x720, with sound):
 
-{% embed url="https://drive.google.com/file/d/1M3-MHZeqL01zRKJVA48rRaMvRgfi2ANK/view" %}
+{% embed url="https://drive.google.com/file/d/1V5gMy3K922tJvwGW8STjhOXldEyqOsf1/view" %}
