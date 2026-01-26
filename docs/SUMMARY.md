@@ -309,8 +309,6 @@
     * [ltxv-2](api-references/video-models/ltxv/ltxv-2.md)
     * [ltxv-2-fast](api-references/video-models/ltxv/ltxv-2-fast.md)
   * [Luma AI](api-references/video-models/luma-ai/README.md)
-    * [Luma 1 (Text-to-Video) \[legacy\]](api-references/video-models/luma-ai/luma-ai-text-to-video-v1-legacy.md)
-    * [Luma Ray 1.6 (Text-to-Video)](api-references/video-models/luma-ai/luma-ai-v2.md)
     * [Luma Ray 2](api-references/video-models/luma-ai/luma-ray-2.md)
     * [Luma Ray Flash 2](api-references/video-models/luma-ai/luma-ray-flash-2.md)
   * [Magic](solutions/magic/README.md)

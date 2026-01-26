@@ -11,10 +11,10 @@ You’ll get a clean setup with **one endpoint**, support for **slashes in model
 
 ## Quick Setup
 
-<table><thead><tr><th width="248.13323974609375">Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td><code>https://api.aimlapi.com/v1</code></td></tr><tr><td><strong>API Key</strong></td><td>Your AI/ML API key (create at <a href="https://aimlapi.com/app/keys">aimlapi.com/app/keys</a>)</td></tr><tr><td><strong>Model</strong></td><td><code>openai/meta-llama/Llama-3-70b-chat-hf</code> <em>(openai/&#x3C;your_full_model_id>)</em></td></tr><tr><td><strong>Command Example</strong></td><td><code>aider --model openai/chatgpt-4o-latest</code></td></tr></tbody></table>
+<table><thead><tr><th width="248.13323974609375">Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td><code>https://api.aimlapi.com/v1</code></td></tr><tr><td><strong>API Key</strong></td><td>Your AI/ML API key (create at <a href="https://aimlapi.com/app/keys">aimlapi.com/app/keys</a>)</td></tr><tr><td><strong>Model</strong></td><td><code>openai/anthropic/claude-3.7-sonnet</code> <em>(openai/&#x3C;your_full_model_id>)</em></td></tr><tr><td><strong>Command Example</strong></td><td><code>aider --model openai/chatgpt-4o-latest</code></td></tr></tbody></table>
 
 {% hint style="success" %}
-**Tip:** Always include the `openai/` prefix (case-sensitive) before your model name.&#x20;
+**Tip:** Always include the `openai/` prefix (case-sensitive) before your model name.
 
 This ensures Aider correctly routes requests to your **AI/ML API** endpoint.
 {% endhint %}
@@ -76,9 +76,6 @@ Then launch Aider with your preferred model:
 # GPT-4o (OpenAI)
 aider --model openai/chatgpt-4o-latest
 
-# Meta Llama 3 70B Chat
-aider --model openai/meta-llama/Llama-3-70b-chat-hf
-
 # DeepSeek Chat V3
 aider --model openai/deepseek/deepseek-chat
 
@@ -107,7 +104,6 @@ openai/<provider>/<model-name>
 **Examples:**
 
 * `openai/chatgpt-4o-latest`
-* `openai/meta-llama/Llama-3-70b-chat-hf`
 * `openai/deepseek/deepseek-chat`
 * `openai/anthropic/claude-3.7-sonnet`
 * `openai/google/gemini-1.5-pro`
@@ -136,10 +132,10 @@ Aider will:
 
 ## Common Pitfalls
 
-* _**Bad request – check parameters**_  →  verify the model name and prefix
-* _**Unknown model**_  →  confirm it exists in [AI/ML API Models](https://aimlapi.com/models?utm_source=aider\&utm_medium=github\&utm_campaign=integration)
-* _**Invalid API key**_  →  re-copy from [AI/ML API Dashboard](https://aimlapi.com/app/keys)
-* _**No response**_  →  check `OPENAI_API_BASE` and your internet access
+* _**Bad request – check parameters**_ → verify the model name and prefix
+* _**Unknown model**_ → confirm it exists in [AI/ML API Models](https://aimlapi.com/models?utm_source=aider\&utm_medium=github\&utm_campaign=integration)
+* _**Invalid API key**_ → re-copy from [AI/ML API Dashboard](https://aimlapi.com/app/keys)
+* _**No response**_ → check `OPENAI_API_BASE` and your internet access
 
 ***
 

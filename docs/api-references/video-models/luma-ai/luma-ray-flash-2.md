@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.\
+This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](/broken/pages/M4hhYE6nhjYlk2dXEImt). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.\
 This version is nearly twice as fast as [Luma Ray 2](luma-ray-2.md).
 
 ## Setup your API Key

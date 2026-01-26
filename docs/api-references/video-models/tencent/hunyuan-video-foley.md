@@ -19,6 +19,8 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
+By analyzing movement in the video, the model automatically generates appropriate sound cues—footsteps, impacts, and object interactions—resulting in more immersive clips without manual audio design. You can also describe the required sounds (non-speech only) in the `prompt` parameter.
+
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
@@ -57,7 +59,7 @@ After sending a request for video generation, this task is added to the queue. T
 [OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
-## Code Example
+## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
@@ -81,9 +83,8 @@ def generate_video():
 
     data = {
         "model": "tencent/hunyuan-video-foley",
-        "prompt": '''
-            Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.
-        ''',
+        "prompt": "Sounds of the forest birds, gentle breathing from a small mammal, soft paws padding along a forest path.",
+        "negative_prompt": "Music", 
         "video_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
     }
  
@@ -162,8 +163,8 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "tencent/hunyuan-video-foley",
-    prompt: `
-        Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.`,
+    prompt: `Sounds of the forest birds, gentle breathing from a small mammal, soft paws padding along a forest path.`,
+    negative_prompt: 'Music',
     video_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4',
   });
 
@@ -275,18 +276,17 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation ID:   L6Aao0xaj-0698U1SA6VE
+Generation ID:   S3NWNIFxS20cW9TnYnb8W
 Status: queued. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'L6Aao0xaj-0698U1SA6VE', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8a7a6f/LXCM1BO14mKEp_E8q-Iun_video_with_audio_1.mp4'}}
+ {'id': 'S3NWNIFxS20cW9TnYnb8W', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8bf464/I5yDHjMQWi6wbGp4SQRcz_video_with_audio_1.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 12 sec.
+**Processing time**: \~ 16.5 sec.
 
 **Generated video** (1280x720, with sound):
+
+{% embed url="https://drive.google.com/file/d/1M3-MHZeqL01zRKJVA48rRaMvRgfi2ANK/view" %}
