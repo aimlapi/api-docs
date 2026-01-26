@@ -114,14 +114,14 @@ if __name__ == "__main__":
 {% endtab %}
 
 {% tab title="NodeJS" %}
-<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
-</strong>
+{% code overflow="wrap" %}
+```javascript
+#!/usr/bin/env node
+
+const OpenAI = require("openai");
 const baseURL = "https://api.aimlapi.com/v1";
-
-// Insert your AIML API Key in the quotation marks instead of my_key:
-const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>"; 
-
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const apiKey = "PASTE YOUR API KEY HERE";
+const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
 const userPrompt = "Tell me about San Francisco";
 
 const api = new OpenAI({
@@ -130,30 +130,36 @@ const api = new OpenAI({
 });
 
 const main = async () => {
-  const completion = await api.chat.completions.create({
-    model: "mistralai/Mistral-7B-Instruct-v0.2",
-    messages: [
-      {
-        role: "system",
-        content: systemPrompt,
-      },
-      {
-        role: "user",
-        content: userPrompt,
-      },
-    ],
-    temperature: 0.7,
-    max_tokens: 256,
-  });
+  try {
+    const completion = await api.chat.completions.create({
+      model: "google/gemma-3-27b-it",
+      messages: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  const response = completion.choices[0].message.content;
+    const response = completion.choices[0].message.content;
 
-  console.log("User:", userPrompt);
-  console.log("AI:", response);
+    console.log("User:", userPrompt);
+    console.log("AI:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
 };
 
 main();
-</code></pre>
+
+
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -297,11 +303,13 @@ touch ./index.js
 
 And paste the following content:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
-</strong>
+```javascript
+#!/usr/bin/env node
+
+const OpenAI = require("openai");
 const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const apiKey = "PASTE YOUR API KEY HERE";
+const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
 const userPrompt = "Tell me about San Francisco";
 
 const api = new OpenAI({
@@ -310,30 +318,40 @@ const api = new OpenAI({
 });
 
 const main = async () => {
-  const completion = await api.chat.completions.create({
-    model: "gpt-4o",
-    messages: [
-      {
-        role: "system",
-        content: systemPrompt,
-      },
-      {
-        role: "user",
-        content: userPrompt,
-      },
-    ],
-    temperature: 0.7,
-    max_tokens: 256,
-  });
+  try {
+    const completion = await api.chat.completions.create({
+      model: "google/gemma-3-27b-it",
+      messages: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  const response = completion.choices[0].message.content;
+    const response = completion.choices[0].message.content;
 
-  console.log("User:", userPrompt);
-  console.log("AI:", response);
+    console.log("User:", userPrompt);
+    console.log("AI:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
 };
 
 main();
-</code></pre>
+
+```
+
+Run the file
+
+```bash
+./index.js
+```
 
 You will see a response that looks like this:
 
