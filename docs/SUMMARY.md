@@ -254,6 +254,7 @@
     * [Seedance 1.0 lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
     * [Seedance 1.0 pro (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-pro-text-to-video.md)
     * [Seedance 1.0 pro (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-pro-image-to-video.md)
+    * [Seedance 1.0 pro fast](api-references/video-models/bytedance/seedance-1.0-pro-fast.md)
     * [OmniHuman](api-references/video-models/bytedance/omnihuman.md)
     * [OmniHuman 1.5](api-references/video-models/bytedance/omnihuman-1.5.md)
   * [Google](api-references/video-models/google/README.md)
