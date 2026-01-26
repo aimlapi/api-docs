@@ -268,40 +268,34 @@ San Francisco's diverse neighborhoods each have their unique character. The hist
 
 <summary>Step-by-step example in NodeJS</summary>
 
-As in the example from Python, we start from the very beginning too. We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
+We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
 
-We need to create a new folder for the example project:
+Create a new folder for the example project
 
 ```bash
 mkdir ./aimlapi-welcome
 cd ./aimlapi-welcome
 ```
 
-(Optional) If you use IDE then we recommend to open created folder as workspace. On example, in VSCode you can do it with:
-
-```shell
-code .
-```
-
-Now create a project file:
+Create a project file
 
 ```bash
 npm init -y
 ```
 
-Install the required dependencies:
+Install the required dependencies
 
 ```bash
 npm i openai
 ```
 
-Create a file with the source code:
+Create a file with the source code
 
 ```bash
 touch ./index.js
 ```
 
-And paste the following content:
+And paste the following content to the file and save it
 
 ```javascript
 #!/usr/bin/env node
@@ -353,7 +347,7 @@ Run the file
 ./index.js
 ```
 
-You will see a response that looks like this:
+You will see a response that looks like this
 
 {% code overflow="wrap" %}
 ```json5
