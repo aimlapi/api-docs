@@ -1,25 +1,18 @@
----
-hidden: true
-noIndex: true
----
-
-# hunyuan-video-foley
+# Seedance 1.0 pro fast
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `tencent/hunyuan-video-foley`
+* `bytedance/seedance-1-0-pro-fast`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/tencent/hunyuan-video-foley" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/bytedance/seedance-1-0-pro-fast" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
-
-By analyzing movement in the video, the model automatically generates appropriate sound cues—footsteps, impacts, and object interactions—resulting in more immersive clips without manual audio design. You can also describe the required sounds (non-speech only) in the `prompt` parameter.
 
 ## Setup your API Key
 
@@ -47,19 +40,20 @@ Below, you can find both corresponding API schemas.
 You can generate a video using this API. In the basic setup, you only need a prompt. \
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% openapi-operation spec="hunyuan-video-foley" path="/v2/video/generations" method="post" %}
-[OpenAPI hunyuan-video-foley](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Tencent/hunyuan-video-foley.json)
+{% openapi-operation spec="seedance-1-0-pro-fast" path="/v2/video/generations" method="post" %}
+[OpenAPI seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1-0-pro-fast.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above. If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
 [OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
-## Full Example: Generating and Retrieving the Video From the Server
+## Code Example
 
 The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
@@ -82,10 +76,10 @@ def generate_video():
     }
 
     data = {
-        "model": "tencent/hunyuan-video-foley",
-        "prompt": "Sounds of the forest birds, gentle breathing from a small mammal, soft paws padding along a forest path.",
-        "negative_prompt": "Music", 
-        "video_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
+        "model": "bytedance/seedance-1-0-pro-fast",
+        "prompt": "Mona Lisa puts on glasses with her hands.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+        "duration": "5",
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -95,6 +89,7 @@ def generate_video():
     else:
         response_data = response.json()
         return response_data
+    
 
 # Requesting the result of the task from the server using the generation_id
 def get_video(gen_id):
@@ -162,10 +157,10 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "tencent/hunyuan-video-foley",
-    prompt: `Sounds of the forest birds, gentle breathing from a small mammal, soft paws padding along a forest path.`,
-    negative_prompt: 'Music',
-    video_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4',
+    model: "bytedance/seedance-1-0-pro-fast",
+    prompt: "Mona Lisa puts on glasses with her hands.",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+    duration: "5",
   });
 
   const url = new URL(`${baseUrl}/video/generations`);
@@ -276,17 +271,19 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation ID:   S3NWNIFxS20cW9TnYnb8W
+{'id': 'FGcTGqPuBac0Masr9DI8-', 'status': 'queued', 'meta': {'usage': {'credits_used': 2000000}}}
+Generation ID:   FGcTGqPuBac0Masr9DI8-
 Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'S3NWNIFxS20cW9TnYnb8W', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8bf464/I5yDHjMQWi6wbGp4SQRcz_video_with_audio_1.mp4'}}
+ {'id': 'FGcTGqPuBac0Masr9DI8-', 'status': 'succeeded', 'video': {'url': 'https://cdn.aimlapi.com/rat/seedance-1-0-pro-fast/02176939282693400000000000000000000ffffc0a88025d8e30a.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20260126%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20260126T020054Z&X-Tos-Expires=86400&X-Tos-Signature=79dbb3fcd4b9a29728c096ef9da104d49273a8923da0ff6f3806e1ce64eda93c&X-Tos-SignedHeaders=host'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 16.5 sec.
+**Processing time**: \~ 34 sec.
 
-**Generated video** (1280x720, with sound):
+**Generated video** (1920x1088, without sound):
 
-{% embed url="https://drive.google.com/file/d/1M3-MHZeqL01zRKJVA48rRaMvRgfi2ANK/view" %}
+{% embed url="https://drive.google.com/file/d/1Gs3P4L1HMxSAZbjQJ3BGpSFTku_mhm-y/view" %}
