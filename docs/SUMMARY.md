@@ -84,7 +84,6 @@
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
-    * [Llama-3-chat-hf](api-references/text-models-llm/Meta/Llama-3-chat-hf.md)
     * [Llama-3-8B-Instruct-Lite](api-references/text-models-llm/Meta/Meta-Llama-3-8B-Instruct-Lite.md)
     * [Llama-3.1-8B-Instruct-Turbo](api-references/text-models-llm/Meta/Meta-Llama-3.1-8B-Instruct-Turbo.md)
     * [Llama-3.1-70B-Instruct-Turbo](api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
