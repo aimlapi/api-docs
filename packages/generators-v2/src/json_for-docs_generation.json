@@ -1,10 +1,26 @@
 [
   {
-    "name": "xiaomi/mimo-v2-flash",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=xiaomi/mimo-v2-flash",
-    "alias": "mimo-v2-flash",
-    "category": "text-models-llm",
-    "vendor": "xiaomi",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/wan2.5-t2i-preview",
+    "alias": "wan2.5-t2i-preview",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.5-t2i-preview",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/wan2.2-t2i-plus",
+    "alias": "wan2.2-t2i-plus",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.2-t2i-plus",
+    "codeSamples": "image-models:prompt"
+  },
+   {
+    "name": "alibaba/wan2.2-t2i-flash",
+    "alias": "wan2.2-t2i-flash",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.2-t2i-flash",
+    "codeSamples": "image-models:prompt"
   }
 ]
