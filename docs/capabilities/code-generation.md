@@ -42,6 +42,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [​openai/gpt-5-1-codex-mini](../api-references/text-models-llm/openai/gpt-5-1-codex-mini.md)
 * [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
 * [openai/gpt-5-2-chat-latest](../api-references/text-models-llm/openai/gpt-5.2-chat-latest.md)
+* [openai/gpt-5-2-codex](../api-references/text-models-llm/openai/gpt-5.2-codex.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)

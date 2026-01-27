@@ -182,6 +182,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [openai/gpt-5-1-codex-mini](../api-references/text-models-llm/openai/gpt-5-1-codex-mini.md)
 * [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
 * [openai/gpt-5-2-chat-latest](../api-references/text-models-llm/openai/gpt-5.2-chat-latest.md)
+* [openai/gpt-5-2-codex](../api-references/text-models-llm/openai/gpt-5.2-codex.md)
 
 ***
 
