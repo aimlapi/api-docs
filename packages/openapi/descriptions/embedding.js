@@ -15,7 +15,7 @@ export default {
     desc: `If enabled, this parameter automatically truncates the input text to fit within the model’s maximum token limit. It helps ensure that longer texts are processed without errors.`,
   },
   task_type: {
-    desc: `Optional task type for which the embeddings will be used`,
+    desc: `Optional task type for which the embeddings will be used.`,
   },
   title: {
     desc: `An optional title for the text. Only applicable when task_type is RETRIEVAL_DOCUMENT.
