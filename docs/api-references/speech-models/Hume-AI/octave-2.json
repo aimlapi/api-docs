@@ -80,7 +80,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Voice.v1.TextToSpeechResponse"
                 }
               }
             }
