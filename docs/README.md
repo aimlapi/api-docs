@@ -108,6 +108,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Gryphe**: [Text/Chat](api-references/text-models-llm/gryphe/)
 
+**Hume AI**: [Text-to-Speech](api-references/speech-models/text-to-speech/hume-ai/)
+
 **Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
 
 <mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/)  [Video](api-references/video-models/Kling-AI/)

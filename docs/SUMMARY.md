@@ -388,6 +388,8 @@
     * [ElevenLabs](api-references/speech-models/text-to-speech/elevenlabs/README.md)
       * [eleven\_multilingual\_v2](api-references/speech-models/text-to-speech/elevenlabs/eleven_multilingual_v2.md)
       * [eleven\_turbo\_v2\_5](api-references/speech-models/text-to-speech/elevenlabs/eleven_turbo_v2_5.md)
+    * [Hume AI](api-references/speech-models/text-to-speech/hume-ai/README.md)
+      * [octave-2](api-references/speech-models/text-to-speech/hume-ai/octave-2.md)
     * [Inworld](api-references/speech-models/text-to-speech/inworld/README.md)
       * [inworld/tts-1](api-references/speech-models/text-to-speech/inworld/tts-1.md)
       * [inworld/tts-1-max](api-references/speech-models/text-to-speech/inworld/tts-1-max.md)
