@@ -4,9 +4,7 @@ description: Learn how to get started with the AI/ML API
 
 # 🧭 Documentation Map
 
-This documentation portal is designed to help you choose and configure the AI **model** that best suits your needs—or one of our **solutions** (ready-to-use tools for specific practical tasks) from our available options and correctly integrate it into your code.
-
-Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
+This page helps you quickly find the right AI model or ready-to-use solution for your task. Open the API reference and copy a working example to integrate it into your code in minutes.
 
 ***
 
@@ -16,7 +14,7 @@ Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/d
 
 ***
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Step-by-step example:</p><p><a href="quickstart/setting-up.md">Setting Up</a><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1fa81">🪁</span> Choose the SDK to use:</p><p><a href="quickstart/supported-sdks.md">Supported SDKs</a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/setting-up.md"><strong>Setup guide</strong></a> <br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a>  </p><p></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 client = OpenAI(
 base_url="https://api.aimlapi.com/v1",
 api_key="&#x3C;YOUR_AIMLAPI_KEY>",
@@ -26,13 +24,13 @@ model="gpt-4o",
 messages=[{"role": "user", "content": "Write a one-sentence story about numbers."}]
 )
 print(response.choices[0].message.content)
-</code></pre></td></tr></tbody></table>
+</code></pre></td></tr><tr><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
 ***
 
 ## Browse Models
 
-Popular | [View all 200+ models >](api-references/model-database.md)
+Popular | [View all 400+ models >](api-references/model-database.md)
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="api-references/text-models-llm/OpenAI/">ChatGPT</a></td><td></td><td></td><td><a href="api-references/text-models-llm/OpenAI/">OpenAI</a></td></tr><tr><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td><td></td><td></td><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td></tr><tr><td><a href="api-references/image-models/flux/">Flux</a></td><td></td><td></td><td><a href="api-references/image-models/flux/">flux</a></td></tr></tbody></table>
 
@@ -82,7 +80,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/) [Image](api-references/video-models/alibaba-cloud/) [Video](api-references/image-models/alibaba-cloud/) [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/)
+**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/) [Image](api-references/video-models/alibaba-cloud/) [Video](api-references/image-models/alibaba-cloud/) [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/) [Embedding](api-references/embedding-models/alibaba-cloud/)
 
 **Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)
 
@@ -91,6 +89,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Assembly AI:** [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
 
 **BAAI**: [Embedding](api-references/embedding-models/BAAI/)
+
+**Baidu**:    [Text/Chat](api-references/text-models-llm/baidu/)
 
 **ByteDance**: [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
 
@@ -110,7 +110,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
 
-<mark style="background-color:green;">**Kling AI**</mark>: [Video](api-references/video-models/Kling-AI/)
+<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/)  [Video](api-references/video-models/Kling-AI/)
 
 **Krea**: [Video](api-references/video-models/krea/)
 
@@ -146,7 +146,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Sber AI**: [Video](api-references/video-models/sber-ai/)
 
-**Tencent**: [Image](api-references/image-models/tencent/)
+**Tencent**: [Image](api-references/image-models/tencent/)  [Video](api-references/video-models/tencent/)  [3D](api-references/3d-generating-models/tencent/)
 
 **Together AI**: [Embedding](api-references/embedding-models/Together-AI/)
 
@@ -197,7 +197,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 ## Going Deeper
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="broken-reference/">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="broken-reference/">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="broken-reference/">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="broken-reference/">FAQ</a> ​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="/broken/pages/Zz7piDzGOANDC63nM8xE">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="/broken/pages/YApTOWrutNaVS6Kmkbi4">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="/broken/pages/woZ3J6qGHZ4rL9NFv2cL">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
 
 ## Have a Minute? Help Make the Docs Better!
 
@@ -206,3 +206,5 @@ We’re currently working on improving our documentation portal, and your feedba
 You can also rate each individual page using the built-in form on the right side of the screen:
 
 <figure><img src=".gitbook/assets/rateform-5.webp" alt=""><figcaption></figcaption></figure>
+
+Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)

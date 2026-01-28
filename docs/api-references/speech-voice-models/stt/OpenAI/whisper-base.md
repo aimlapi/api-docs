@@ -7,7 +7,7 @@ This documentation is valid for the following list of our models:
 {% endhint %}
 
 {% hint style="success" %}
-Note:&#x20;
+Note:
 
 Previously, our STT models operated via a single API call to POST `https://api.aimlapi.com/v1/stt`. You can view the API schema [here](../../../speech-models/speech-to-text/stt-legacy.md).
 
@@ -16,7 +16,7 @@ Now, we are switching to a new two-step process:
 * `POST https://api.aimlapi.com/v1/stt/create` – Creates and submits a speech-to-text processing task to the server. This method accepts the same parameters as the old version but returns a `generation_id` instead of the final transcript.
 * `GET https://api.aimlapi.com/v1/stt/{generation_id}` – Retrieves the generated transcript from the server using the `generation_id` obtained from the previous API call.
 
-This approach helps prevent generation failures due to timeouts. \
+This approach helps prevent generation failures due to timeouts.\
 We've prepared [a couple of examples](whisper-base.md#quick-code-examples) below to make the transition to the new STT API easier for you.
 {% endhint %}
 
@@ -27,12 +27,26 @@ The Whisper models are primarily for AI research, focusing on model robustness, 
 The models are trained using 680,000 hours of audio and corresponding transcripts from the internet, with 65% being English audio and transcripts, 18% non-English audio with English transcripts, and 17% non-English audio with matching non-English transcripts, covering 98 languages in total.
 
 {% hint style="success" %}
-Whisper models use per-second billing. The cost of audio transcription is based on the number of seconds in the input audio file, not the processing time.
+OpenAI STT models are priced based on tokens, similar to chat models. In practice, this means the cost primarily depends on the duration of the input audio.
 {% endhint %}
 
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## API Schemas
+
+#### Creating and sending a speech-to-text conversion task to the server
+
+{% openapi-operation spec="whisper-base-2025-05-28" path="/v1/stt/create" method="post" %}
+[OpenAPI whisper-base-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/whisper-base.json)
+{% endopenapi-operation %}
+
+#### Requesting the result of the task from the server using the generation\_id
+
+{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
+{% endopenapi-operation %}
 
 ## Quick Code Examples
 
@@ -102,7 +116,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                print("Processing complete:\n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -192,7 +206,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                print("Processing complete:\n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -218,17 +232,3 @@ Processing complete:
 {% endcode %}
 
 </details>
-
-## API Schema
-
-#### Creating and sending a speech-to-text conversion task to the server
-
-{% openapi-operation spec="whisper-base-2025-05-28" path="/v1/stt/create" method="post" %}
-[OpenAPI whisper-base-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/whisper-base.json)
-{% endopenapi-operation %}
-
-#### Requesting the result of the task from the server using the generation\_id
-
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
-{% endopenapi-operation %}

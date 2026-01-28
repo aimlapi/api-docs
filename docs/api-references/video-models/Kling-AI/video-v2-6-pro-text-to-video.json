@@ -82,19 +82,20 @@
                   "type": "object",
                   "properties": {
                     "id": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
                     },
                     "status": {
                       "type": "string",
                       "enum": [
-                        "failed",
-                        "succeeded",
                         "queued",
-                        "running",
-                        "uploading",
-                        "cancelled",
-                        "unknown"
-                      ]
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
                     },
                     "video": {
                       "type": "object",
@@ -102,7 +103,9 @@
                       "properties": {
                         "url": {
                           "type": "string",
-                          "format": "uri"
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
                         }
                       },
                       "required": [
@@ -123,7 +126,29 @@
                       "required": [
                         "name",
                         "message"
-                      ]
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
                     }
                   },
                   "required": [
@@ -135,263 +160,21 @@
             }
           }
         },
-        "x-hideTryItPanel": true
-      }
-    },
-    "/v1/video/generations": {
-      "post": {
-        "operationId": "_v1_video_generations",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "model": {
-                    "type": "string",
-                    "enum": [
-                      "klingai/video-v2-6-pro-text-to-video"
-                    ]
-                  },
-                  "prompt": {
-                    "type": "string",
-                    "maxLength": 2500,
-                    "description": "The text description of the scene, subject, or action to generate in the video."
-                  },
-                  "aspect_ratio": {
-                    "type": "string",
-                    "enum": [
-                      "16:9",
-                      "9:16",
-                      "1:1"
-                    ],
-                    "description": "The aspect ratio of the generated video."
-                  },
-                  "duration": {
-                    "type": "integer",
-                    "description": "The length of the output video in seconds.",
-                    "enum": [
-                      5,
-                      10
-                    ],
-                    "default": "5"
-                  },
-                  "negative_prompt": {
-                    "type": "string",
-                    "description": "The description of elements to avoid in the generated video."
-                  },
-                  "cfg_scale": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1,
-                    "description": "The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt."
-                  },
-                  "generate_audio": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Whether to generate audio for the video."
-                  }
-                },
-                "required": [
-                  "model",
-                  "prompt"
-                ],
-                "title": "klingai/video-v2-6-pro-text-to-video"
-              }
-            }
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"klingai/video-v2-6-pro-text-to-video\",\n      \"prompt\": \"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it’s coming.\"\n    }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"klingai/video-v2-6-pro-text-to-video\",\n      \"prompt\": \"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it’s coming.\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"klingai/video-v2-6-pro-text-to-video\",\n      \"prompt\": \"A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it’s coming.\"\n    }\n)\n\ndata = response.json()\nprint(data)"
           }
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "status": {
-                      "type": "string",
-                      "enum": [
-                        "failed",
-                        "succeeded",
-                        "queued",
-                        "running",
-                        "uploading",
-                        "cancelled",
-                        "unknown"
-                      ]
-                    },
-                    "video": {
-                      "type": "object",
-                      "nullable": true,
-                      "properties": {
-                        "url": {
-                          "type": "string",
-                          "format": "uri"
-                        }
-                      },
-                      "required": [
-                        "url"
-                      ]
-                    },
-                    "error": {
-                      "type": "object",
-                      "nullable": true,
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "message": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "name",
-                        "message"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "status"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "x-hideTryItPanel": true
-      }
-    },
-    "/video/generations": {
-      "post": {
-        "operationId": "_video_generations",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "model": {
-                    "type": "string",
-                    "enum": [
-                      "klingai/video-v2-6-pro-text-to-video"
-                    ]
-                  },
-                  "prompt": {
-                    "type": "string",
-                    "maxLength": 2500,
-                    "description": "The text description of the scene, subject, or action to generate in the video."
-                  },
-                  "aspect_ratio": {
-                    "type": "string",
-                    "enum": [
-                      "16:9",
-                      "9:16",
-                      "1:1"
-                    ],
-                    "description": "The aspect ratio of the generated video."
-                  },
-                  "duration": {
-                    "type": "integer",
-                    "description": "The length of the output video in seconds.",
-                    "enum": [
-                      5,
-                      10
-                    ],
-                    "default": "5"
-                  },
-                  "negative_prompt": {
-                    "type": "string",
-                    "description": "The description of elements to avoid in the generated video."
-                  },
-                  "cfg_scale": {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1,
-                    "description": "The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt."
-                  },
-                  "generate_audio": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Whether to generate audio for the video."
-                  }
-                },
-                "required": [
-                  "model",
-                  "prompt"
-                ],
-                "title": "klingai/video-v2-6-pro-text-to-video"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "status": {
-                      "type": "string",
-                      "enum": [
-                        "failed",
-                        "succeeded",
-                        "queued",
-                        "running",
-                        "uploading",
-                        "cancelled",
-                        "unknown"
-                      ]
-                    },
-                    "video": {
-                      "type": "object",
-                      "nullable": true,
-                      "properties": {
-                        "url": {
-                          "type": "string",
-                          "format": "uri"
-                        }
-                      },
-                      "required": [
-                        "url"
-                      ]
-                    },
-                    "error": {
-                      "type": "object",
-                      "nullable": true,
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "message": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "name",
-                        "message"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "status"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "x-hideTryItPanel": true
+        ]
       }
     }
   },

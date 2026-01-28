@@ -37,25 +37,26 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Video Generation
 
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="wan2-1-t2v-plus" path="/v2/generate/video/alibaba/generation" method="post" %}
+{% openapi-operation spec="wan2-1-t2v-plus" path="/v2/video/generations" method="post" %}
 [OpenAPI wan2-1-t2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-plus.json)
 {% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
-[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -139,7 +140,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -378,7 +379,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/alpaca/1d/9d/20250804/8ca6ec02/a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62.mp4?Expires=1754374087&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8%2F2foeH6dJyUQBdXSSKn9qnJxQQ%3D'}}
+Processing complete:\n {'id': 'a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/alpaca/1d/9d/20250804/8ca6ec02/a1bdaedd-4bd2-4cd3-8af4-4d9e6ebbce62.mp4?Expires=1754374087&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8%2F2foeH6dJyUQBdXSSKn9qnJxQQ%3D'}}
 ```
 {% endcode %}
 

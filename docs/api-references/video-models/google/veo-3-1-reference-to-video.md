@@ -1,10 +1,18 @@
 # Veo 3.1 (Reference-to-Video)
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/veo-3.1-reference-to-video`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/google/veo-3.1-reference-to-video" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model generates realistic 8-second 720p and 1080p videos with detailed visuals and audio, offering multiple styles and even dialogue support. It also supports multiple reference images for video generation.
 
@@ -40,10 +48,10 @@ You can generate a video using this API.
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="fetch-video" path="/v2/video/generations" method="get" %}
-[OpenAPI fetch-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-t2v-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -126,7 +134,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")

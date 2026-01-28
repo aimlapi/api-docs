@@ -13,7 +13,7 @@ export const imageToImageSample = (options, schema) => {
   const prompt =
     imageParamName === 'image_urls'
       ? 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.'
-      : "Add a crown to the T-rex's head.";
+      : "Add a crown to the T-rex’s head.";
 
   const imageValue =
     imageParamName === 'image_urls'
@@ -33,6 +33,15 @@ export const imageToImageSample = (options, schema) => {
     2
   );
   return [
+    {
+      lang: 'cURL',
+      source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/images/generations' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
+    },
     {
       lang: 'JavaScript',
       source: `async function main() {
@@ -66,25 +75,6 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
-    },
-    {
-      lang: 'cURL',
-      source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v1/images/generations' \\
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --header 'Content-Type: application/json' \\
-  --data '${jsonBody.replace(/'/g, "\\'").replace(/\n/g, '\n    ')}'`,
-    },
-    {
-      lang: 'HTTP',
-      source: `POST /v1/images/generations HTTP/1.1
-Host: api.aimlapi.com
-Authorization: Bearer <YOUR_AIMLAPI_KEY>
-Content-Type: application/json
-Accept: */*
-
-${jsonBody}`,
     },
   ];
 };

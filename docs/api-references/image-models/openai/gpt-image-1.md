@@ -42,7 +42,7 @@ It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
 {% openapi-operation spec="gpt-image-1-edit" path="/v1/images/edits" method="post" %}
-[OpenAPI gpt-image-1-edit](https://api.aimlapi.com/docs-public-yaml)
+[OpenAPI gpt-image-1-edit](https://api.aimlapi.com/docs-public-json)
 {% endopenapi-operation %}
 
 ## Quick Examples
@@ -67,8 +67,8 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "prompt": "Add a crown",
             "model": "openai/gpt-image-1",
+            "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo.",
             "size": "1024x1024"
         }
     )
@@ -175,7 +175,6 @@ Let's generate an image using two input images and a prompt that defines how the
 ```python
 from openai import OpenAI
 
-
 def main():
     client = OpenAI(
         api_key="<YOUR_AIMLAPI_KEY>",
@@ -193,7 +192,6 @@ def main():
 
     print("Generation:", result)
 
-
 if __name__ == "__main__":
     main()
 ```
@@ -205,7 +203,6 @@ if __name__ == "__main__":
 ```javascript
 import fs from 'fs';
 import OpenAI, { toFile } from 'openai';
-
 
 const main = async () => {
   const client = new OpenAI({
@@ -274,7 +271,6 @@ In this example, we’ll provide the model with our previously generated image o
 ```python
 from openai import OpenAI
 
-
 def main():
     client = OpenAI(
         api_key="<YOUR_AIMLAPI_KEY>",
@@ -287,7 +283,6 @@ def main():
         mask=open('t-rex-alpha_mask.png', 'rb'),
         prompt="Remove this from the picture"
     )
-
     print("Generation:", result)
 
 
@@ -302,7 +297,6 @@ if __name__ == "__main__":
 ```python
 import fs from 'fs';
 import OpenAI, { toFile } from 'openai';
-
 
 const main = async () => {
   const client = new OpenAI({

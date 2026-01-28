@@ -1,5 +1,22 @@
 export const chatCompletionSample = (options) => [
   {
+    lang: 'cURL',
+    source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/chat/completions' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --header 'Content-Type: application/json' \\
+  --data '{
+    "model": "${options.name}",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ]
+  }'`,
+  },
+  {
     lang: 'JavaScript',
     source: `async function main() {
   const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
@@ -48,41 +65,5 @@ response = requests.post(
 
 data = response.json()
 print(data)`,
-  },
-  {
-    lang: 'cURL',
-    source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v1/chat/completions' \\
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --header 'Content-Type: application/json' \\
-  --data '{
-    "model": "${options.name}",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Hello"
-      }
-    ]
-  }'`,
-  },
-  {
-    lang: 'HTTP',
-    source: `POST /v1/chat/completions HTTP/1.1
-Host: api.aimlapi.com
-Authorization: Bearer <YOUR_AIMLAPI_KEY>
-Content-Type: application/json
-Accept: */*
-Content-Length: 59
-
-{
-  "model": "${options.name}",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Hello"
-    }
-  ]
-}`,
   },
 ];

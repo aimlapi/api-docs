@@ -37,34 +37,31 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
 You can generate a video using this API.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="veo-3-0-i2v-fast" path="/v2/generate/video/google/generation" method="post" %}
+{% openapi-operation spec="veo-3-0-i2v-fast" path="/v2/video/generations" method="post" %}
 [OpenAPI veo-3-0-i2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.0-i2v-fast.json)
 {% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
 We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
-
-{% hint style="success" %}
-Generation may take around 1 minute for a 8-second video.
-{% endhint %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -145,7 +142,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -300,7 +297,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'status': 'completed', 'id': 'e0ab34a6-1d6b-4b60-99cc-de15e210dbfc:veo-3.0-fast-generate-001', 'video': {'url': 'https://cdn.aimlapi.com/generations/guepard/1754988463411-e17d66b5-57c1-4813-a4ed-3a7aa41723f9.mp4'}}
+Processing complete:\n {'status': 'completed', 'id': 'e0ab34a6-1d6b-4b60-99cc-de15e210dbfc:veo-3.0-fast-generate-001', 'video': {'url': 'https://cdn.aimlapi.com/generations/guepard/1754988463411-e17d66b5-57c1-4813-a4ed-3a7aa41723f9.mp4'}}
 ```
 {% endcode %}
 

@@ -1,6 +1,20 @@
 ---
 description: Overview of the capabilities of AIML API 3D-generating models.
 icon: cube
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # 3D-Generating Models
@@ -25,7 +39,6 @@ We currently support only one 3D-generating model. You can find [its ID along wi
 {% code overflow="wrap" %}
 ```python
 import requests
-
 
 def main():
     response = requests.post(
@@ -60,8 +73,6 @@ if __name__ == "__main__":
 
 **Response**:
 
-The example returns a textured 3D mesh in GLB file format. You can view it [here](https://drive.google.com/file/d/1pfA6PGgDY31rEGcoea7qoZW6uhhPYSE6/view?usp=sharing).
-
 For clarity, we took several screenshots of our mushroom from different angles in an online GLB viewer. As you can see, the model understands the shape, but preserving the pattern on the back side (which was not visible on the reference image) could be improved:
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>
@@ -76,4 +87,4 @@ Try to choose reference images where the target object is not obstructed by othe
 
 ## All Available 3D-Generating Models
 
-<table data-full-width="false"><thead><tr><th width="222.4000244140625">Model ID</th><th width="134.39996337890625">Developer</th><th width="95">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="265.4000244140625">Model ID + API Reference link</th><th width="134.39996337890625">Developer</th><th width="104">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr><tr><td><a href="tencent/hunyuan-part.md">tencent/hunyuan-part</a></td><td>Tencent</td><td></td><td><a href="https://aimlapi.com/models/hunyuan-part">Hunyuan Part</a></td></tr></tbody></table>

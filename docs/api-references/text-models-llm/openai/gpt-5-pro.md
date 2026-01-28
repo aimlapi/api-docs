@@ -1,10 +1,22 @@
 # gpt-5-pro
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>openai/gpt-5-pro</code></li></ul></div></td></tr></tbody></table>
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `openai/gpt-5-pro`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/openai/gpt-5-pro" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
-Version of [GPT-5](gpt-5.md) that produces smarter and more precise responses
+Version of [GPT-5](gpt-5.md) that produces smarter and more precise responses.
 
 ## How to Make a Call
 

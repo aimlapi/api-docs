@@ -45,10 +45,11 @@ Below, you can find both corresponding API schemas.
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. Based on the service's load, the generation can be completed in seconds or take a bit more.
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -74,7 +75,7 @@ def generate_video():
     }
 
     data = {
-         "model": "klingai/video-v2-6-pro-text-to-video",
+        "model": "klingai/video-v2-6-pro-text-to-video",
         "prompt": "A cheerful white raccoon running through a sequoia forest",
         "aspect_ratio": "16:9",
         "duration": "5"
@@ -129,7 +130,7 @@ def main():
                 print("Still waiting... Checking again in 15 seconds.")
                 time.sleep(15)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -161,7 +162,7 @@ Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: completed
-Processing complete:/n {'id': 'bfb9eca8-178f-41ca-a1f1-6e4551157a0b:klingai/video-v2-6-pro-text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eb06/XtWjnJNjQLBMwJbBz4WcF_output.mp4'}}
+Processing complete:\n {'id': 'bfb9eca8-178f-41ca-a1f1-6e4551157a0b:klingai/video-v2-6-pro-text-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a84eb06/XtWjnJNjQLBMwJbBz4WcF_output.mp4'}}
 ```
 {% endcode %}
 

@@ -1,21 +1,12 @@
 # aura
 
-{% hint style="info" %}
-This documentation is valid for the following list of our models:
+<details>
 
-* `#g1_aura-angus-en`
-* `#g1_aura-arcas-en`
-* `#g1_aura-asteria-en`
-* `#g1_aura-athena-en`
-* `#g1_aura-helios-en`
-* `#g1_aura-hera-en`
-* `#g1_aura-luna-en`
-* `#g1_aura-orion-en`
-* `#g1_aura-orpheus-en`
-* `#g1_aura-perseus-en`
-* `#g1_aura-stella-en`
-* `#g1_aura-zeus-en`
-{% endhint %}
+<summary>This documentation is valid for the following list of our models</summary>
+
+<table data-header-hidden data-full-width="true"><thead><tr><th width="215.066650390625"></th><th></th></tr></thead><tbody><tr><td><code>#g1_aura-angus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-angus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-arcas-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-arcas-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-asteria-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-asteria-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-athena-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-athena-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-helios-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-helios-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-hera-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-hera-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-luna-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-luna-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-orion-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-orion-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-orpheus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-orpheus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-perseus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-perseus-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-stella-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-stella-en" class="button primary">Try in Playground</a></td></tr><tr><td><code>#g1_aura-zeus-en</code></td><td><a href="https://aimlapi.com/app/-g1_aura-zeus-en" class="button primary">Try in Playground</a></td></tr></tbody></table>
+
+</details>
 
 ## Model Overview
 

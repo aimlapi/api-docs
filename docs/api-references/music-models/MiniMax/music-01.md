@@ -1,10 +1,18 @@
 # music-01
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `music-01`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/music-01" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.
 
@@ -27,9 +35,9 @@ This endpoint uploads a reference music piece to the server, analyzes it, and re
 This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
 The generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi src="../../../.gitbook/assets/music-01.json" path="/v2/generate/audio/minimax/generate" method="post" %}
-[music-01.json](../../../.gitbook/assets/music-01.json)
-{% endopenapi %}
+{% openapi-operation spec="music-01" path="/v2/generate/audio/minimax/generate" method="post" %}
+[OpenAPI music-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-01.json)
+{% endopenapi-operation %}
 
 ## Quick Code Example
 
@@ -126,7 +134,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+    
 ```
 {% endcode %}
 {% endtab %}

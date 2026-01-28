@@ -54,26 +54,27 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
 You can generate a video using this API. In the basic setup, you only need a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="seedance-1-0-pro-text-to-video-after-repair" path="/v2/generate/video/bytedance/generation" method="post" %}
+{% openapi-operation spec="seedance-1-0-pro-text-to-video-after-repair" path="/v2/video/generations" method="post" %}
 [OpenAPI seedance-1-0-pro-text-to-video-after-repair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-pro-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="bytedance-video-fetch" path="/v2/generate/video/bytedance/generation" method="get" %}
-[OpenAPI bytedance-video-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-lite-text-to-video-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -157,7 +158,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -318,7 +319,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'cgt-20250718224736-699sq', 'status': 'completed', 'video': {'url': 'https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro/02175285005664100000000000000000000ffffc0a84066848df2.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYjg3ZjNlOGM0YzQyNGE1MmI2MDFiOTM3Y2IwMTY3OTE%2F20250718%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250718T144824Z&X-Tos-Expires=86400&X-Tos-Signature=603f16de387207c0756812148a6f6de48dc574226356d607666ec53cc98e229c&X-Tos-SignedHeaders=host'}}
+Processing complete:\n {'id': 'cgt-20250718224736-699sq', 'status': 'completed', 'video': {'url': 'https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro/02175285005664100000000000000000000ffffc0a84066848df2.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYjg3ZjNlOGM0YzQyNGE1MmI2MDFiOTM3Y2IwMTY3OTE%2F20250718%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20250718T144824Z&X-Tos-Expires=86400&X-Tos-Signature=603f16de387207c0756812148a6f6de48dc574226356d607666ec53cc98e229c&X-Tos-SignedHeaders=host'}}
 ```
 {% endcode %}
 

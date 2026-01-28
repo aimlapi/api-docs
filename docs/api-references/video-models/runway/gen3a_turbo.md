@@ -24,30 +24,43 @@ An advanced AI model designed for converting images into high-quality videos. It
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schemas
+## How to Make a Call
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
 
 Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-Below, you can find two corresponding API schemas and an example.
+Below, you can find both corresponding API schemas.
+
+</details>
+
+## API Schemas
+
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
 
 ### Video Generation
 
 You can generate a video using this API. In the basic setup, you need only an image URL and the aspect ratio of the desired result. The model can detect and use the aspect ratio from the input image, but for correct operation in this case, the image's width-to-height ratio must be between `0.5` and `2`.
 
-{% openapi-operation spec="runway-gen3a-turbo" path="/v2/generate/video/runway/generation" method="post" %}
+{% openapi-operation spec="runway-gen3a-turbo" path="/v2/video/generations" method="post" %}
 [OpenAPI runway-gen3a-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen3a_turbo.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="runway-fetch" path="/v2/generate/video/runway/generation" method="get" %}
-[OpenAPI runway-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_turbo-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -136,7 +149,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -163,7 +176,7 @@ Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/704dae4c-2ec9-4390-9625-abb52c359c4f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjNjYzExNDU1YTJmODNmZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0NDU4ODgwMH0.Jzmu6gPsBTTiZecKxSSwi9qk0-KSaHIgQbIOmCKe0Lk']}
+Generation complete:\n {'id': 'd0cddca1-e382-4625-84c9-0817a6441876', 'status': 'completed', 'video': ['https://cdn.aimlapi.com/wolf/704dae4c-2ec9-4390-9625-abb52c359c4f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjNjYzExNDU1YTJmODNmZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0NDU4ODgwMH0.Jzmu6gPsBTTiZecKxSSwi9qk0-KSaHIgQbIOmCKe0Lk']}
 ```
 {% endcode %}
 

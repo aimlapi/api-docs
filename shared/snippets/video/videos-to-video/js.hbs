@@ -1,0 +1,18 @@
+const main = async () => {
+  const response = await fetch('{{baseUrl}}/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer {{apiKey}}',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: '{{model}}',
+      prompt: 'A powerful, matte black jeep, its robust frame contrasting with the lush green surroundings, navigates a winding jungle road, kicking up small clouds of dust and loose earth from its tires.',
+      video_urls: ['https://storage.googleapis.com/falserverless/example_inputs/krea_wan_14b_v2v_input.mp4']
+    }),
+  }).then((res) => res.json());
+
+  console.log('Generation:', response);
+};
+
+main()

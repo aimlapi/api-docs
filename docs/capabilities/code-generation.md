@@ -16,8 +16,7 @@ Beyond code generation, AI models help with debugging, refactoring, and optimiza
 
 Let's go over this again: any [text chat model](../api-references/model-database.md#text-models-llm) can generate some code based on your request. However, here is a list of models specifically trained for this by the developer:
 
-* [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
-* [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
+* [google/gemini-3-flash-preview](../api-references/text-models-llm/google/gemini-3-flash-preview.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
 * [alibaba/qwen3-next-80b-a3b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-instruct.md)
 * [alibaba/qwen3-max-preview](../api-references/text-models-llm/alibaba-cloud/qwen3-max-preview.md)
@@ -29,6 +28,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [anthropic/claude-haiku-4.5](../api-references/text-models-llm/anthropic/claude-4.5-haiku.md)
 * [anthropic/claude-opus-4-5](../api-references/text-models-llm/anthropic/claude-4.5-opus.md)
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
+* [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
@@ -40,7 +40,11 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [​openai/gpt-5-1-chat-latest​](../api-references/text-models-llm/openai/gpt-5-1-chat-latest.md)
 * [​openai/gpt-5-1-codex​](../api-references/text-models-llm/openai/gpt-5-1-codex.md)
 * [​openai/gpt-5-1-codex-mini](../api-references/text-models-llm/openai/gpt-5-1-codex-mini.md)
+* [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
+* [openai/gpt-5-2-chat-latest](../api-references/text-models-llm/openai/gpt-5.2-chat-latest.md)
+* [openai/gpt-5-2-codex](../api-references/text-models-llm/openai/gpt-5.2-codex.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
 * [zhipu/glm-4.6](../api-references/text-models-llm/zhipu/glm-4.6.md)
+* [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)

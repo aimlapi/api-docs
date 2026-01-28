@@ -7,70 +7,52 @@ icon: circle-question
 
 ## About
 
-The Free Tier allows users to use the service with certain limits at no cost. This helps them test the product and see if it works for their goals before making any payments.
+AIML API has two “free” modes:
 
-## Which models are included
+1. **Free (no billing method added)** — you can use a small set of free models to try the platform.
+2. **Verified Free Tier (billing method added)** — you get **50,000 free credits** and **access to the full model catalog** for testing.\
+   &#xNAN;_&#x41;dding a billing method **does not charge you automatically**. You only pay when you **purchase a plan**._
 
-### **In AI Playground**
+## Free access without a billing method
 
-Some models can be tested in the [AI Playground](https://aimlapi.com/app/) available on our official website. There, you will find a list of models ready to be launched.&#x20;
+If you **didn’t add a payment method**, you can use AIML API for free with these models only:
 
-<div data-full-width="false"><figure><img src="../.gitbook/assets/Screenshot_2.png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-19 at 14.38.50.png" alt=""><figcaption></figcaption></figure>
 
+> You can use them in:
+>
+> * [**AI Playground**](https://aimlapi.com/app/)
+> * [**Via API** (Chat Completions)](https://docs.aimlapi.com/api-references/model-database#text-models-llm)
+>
+> > This is the easiest way to quickly test the platform without any billing setup.
+> >
+> > &#x20;[Try in Playground](https://aimlapi.com/app/)
 
+### Verified Free Tier (billing method added)
 
-The following rules apply:
+If you add a billing method, you’ll receive **50,000 free credits** to test the platform with a much wider set of models.
 
-* Regular models come with 10 free requests per day.
-* You can execute only one request at a time.
-* All models, whether regular or [Pro](pro-models.md), have a limit of <kbd><mark style="background-color:blue;">50,000<mark style="background-color:blue;"></kbd> AI/ML API tokens per day.
+**Important:** adding a billing method does **not** withdraw money. Payments start only after you purchase a plan.
 
-### **Via API**
+#### What you can use with free credits
 
-Using our API on the Free Tier, you can access:
+Using 50,000 free credits, you can access:
 
-* [Chat completion text models](../api-references/model-database.md#text-models-llm),
-* [Embedding models](../api-references/model-database.md#embedding-models),
-* [Image models](../api-references/model-database.md#image-models).
+* [LLM models](../api-references/text-models-llm/)
+* [Image models](../api-references/image-models/)
+* [TTS models](../api-references/model-database.md)
+* [STT models](../api-references/model-database.md)
+* [Moderation models](../api-references/moderation-safety-models/)
+* [OCR models](../api-references/model-database.md)
+* [Embedding models](../api-references/embedding-models/)
 
-The following Free Tier rules apply:
+#### How far do 50,000 credits go?
 
-* When using Chat Completion text models, the maximum output is limited to 512 tokens. Image attachments in messages are not supported.
-* Using the following image models, you can only 1 image generated at a time:
-
-<details>
-
-<summary>Model list</summary>
-
-* [flux/schnell ](../api-references/image-models/flux/flux-schnell.md)
-* [flux-pro](../api-references/image-models/flux/flux-pro.md)&#x20;
-* [flux-pro/v1.1 ](../api-references/image-models/flux/flux-pro.md)
-* [flux-pro/v1.1-ultra](../api-references/image-models/flux/flux-pro-v1.1-ultra.md)
-* [flux/dev](../api-references/image-models/flux/flux-dev.md)
-* [flux/dev/image-to-image](../api-references/image-models/flux/flux-dev-image-to-image.md)
-* [flux-realism](../api-references/image-models/flux/flux-realism.md)
-* [stable-diffusion-v3-medium ](../api-references/image-models/Stability-AI/stable-diffusion-v3-medium.md)
-* [stable-diffusion-v35-large](../api-references/image-models/Stability-AI/stable-diffusion-v35-large.md)
-* [recraft-v3](../api-references/image-models/RecraftAI/recraft-v3.md)
-
-</details>
-
-* For the following models generated images are limited to a resolution of 512x512 pixels:
-
-<details>
-
-<summary>Model list</summary>
-
-* [dall-e-2](../api-references/image-models/OpenAI/dall-e-2.md)
-* [dall-e-3](../api-references/image-models/OpenAI/dall-e-3.md)
-
-</details>
-
-* If image generation requires more than 512 AI/ML API tokens, the request will not be processed.
+If you send short prompts (a few sentences) to non-image models, 50,000 credits is typically enough to try many models 1–10 times, depending on the model’s cost and workload.
 
 #### Error Message
 
-When you attempt to call the API after reaching the limit, you will receive an appropriate error. \
+When you attempt to call the API after reaching the limit, you will receive an appropriate error.\
 For example, if the `/v1/chat/completions` endpoint was called:
 
 {% code overflow="wrap" %}

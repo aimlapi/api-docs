@@ -37,25 +37,26 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Video Generation
 
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="wan2-5-i2v-preview" path="/v2/generate/video/alibaba/generation" method="post" %}
-[OpenAPI wan2-5-i2v-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-i2v-preview.json)
+{% openapi-operation spec="wan2-5-i2v-preview-2" path="/v2/video/generations" method="post" %}
+[OpenAPI wan2-5-i2v-preview-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-i2v-preview.json)
 {% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
-[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -138,7 +139,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -290,7 +291,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': 'c8a198bb-8b06-4640-91ee-f96caa792390:alibaba/wan2.5-i2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/15/20250927/1080b7c5/c8a198bb-8b06-4640-91ee-f96caa792390.mp4?Expires=1759009739&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=3oH7JKM54LL2LwnoRKvTyyhvWeM%3D'}}
+Processing complete:\n {'id': 'c8a198bb-8b06-4640-91ee-f96caa792390:alibaba/wan2.5-i2v-preview', 'status': 'completed', 'video': {'url': 'https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/15/20250927/1080b7c5/c8a198bb-8b06-4640-91ee-f96caa792390.mp4?Expires=1759009739&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=3oH7JKM54LL2LwnoRKvTyyhvWeM%3D'}}
 ```
 {% endcode %}
 

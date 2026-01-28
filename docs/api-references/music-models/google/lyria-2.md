@@ -1,10 +1,18 @@
 # Lyria 2
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `google/lyria2`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/google/lyria2" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced audio generation model designed to create high-quality audio tracks from textual prompts.
 
@@ -65,8 +73,8 @@ This endpoint creates and sends a music generation task to the server — and re
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 30-40 seconds or take a bit more.
 
-{% openapi-operation spec="lyria2-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI lyria2-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2-pair.json)
+{% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
@@ -113,7 +121,7 @@ Still waiting... Checking again in 10 seconds.
 
 {% code overflow="wrap" %}
 ```javascript
-Generation complete:/n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
+Generation complete:\n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
 ```
 {% endcode %}
 
@@ -185,11 +193,11 @@ def main():
                 break
         
             status = response_data.get("status")
-            if status == "generating" or status == "queued" or status == "waiting":
-                print("Still waiting... Checking again in 10 seconds.")
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -283,8 +291,8 @@ async function main() {
     }
 
     const status = result.status;
-    if (['generating', 'queued', 'waiting'].includes(status)) {
-      console.log('Still waiting... Checking again in 10 seconds.');
+    if (['generating', 'queued'].includes(status)) {
+      console.log(`Status: ${status}. Checking again in 10 seconds.`);
     } else {
       console.log('Generation complete:\n', result);
       clearInterval(intervalId);
@@ -308,7 +316,7 @@ Generation: {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'que
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
+Generation complete:\n {'id': 'ac94b938-a53a-483a-bef3-2bea9dd12bb8:lyria2', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/eagle/files/lion/5N4F_QWb5K8rDSHfpUN0S_output.wav', 'content_type': 'audio/wav', 'file_name': 'output.wav', 'file_size': 6291544}}
 ```
 {% endcode %}
 

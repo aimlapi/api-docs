@@ -33,25 +33,26 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
+
 ### Create a video generation task and send it to the server
 
 You can generate a video using this API.
 
-{% hint style="success" %}
-To quickly test video models from different developers without changing endpoints, use our new universal short one — **`https://api.aimlapi.com/v2/video/generations`.**
-{% endhint %}
-
-{% openapi-operation spec="veo2-image-to-video" path="/v2/generate/video/google/generation" method="post" %}
+{% openapi-operation spec="veo2-image-to-video" path="/v2/video/generations" method="post" %}
 [OpenAPI veo2-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json)
 {% endopenapi-operation %}
 
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="veo3-fetch" path="/v2/generate/video/google/generation" method="get" %}
-[OpenAPI veo3-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -141,7 +142,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -292,7 +293,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '812dbc37-f15a-46a4-a058-8477bd243f5a:veo2/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/rabbit/D7LD6oJwKMF9gk9KjqwDV_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 6827705}}
+Processing complete:\n {'id': '812dbc37-f15a-46a4-a058-8477bd243f5a:veo2/image-to-video', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/eagle/files/rabbit/D7LD6oJwKMF9gk9KjqwDV_output.mp4', 'content_type': 'video/mp4', 'file_name': 'output.mp4', 'file_size': 6827705}}
 ```
 {% endcode %}
 

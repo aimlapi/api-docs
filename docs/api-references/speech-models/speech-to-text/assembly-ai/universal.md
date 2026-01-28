@@ -1,10 +1,18 @@
 # universal
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `aai/universal`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/aai/universal" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 A new Speech-to-Text model offering exceptional accuracy by leveraging its deep understanding of context and semantics, with the broadest language support.
 
@@ -101,10 +109,10 @@ def main():
                 time.sleep(10)
             else:
                 
-                print("Processing complete:/n", response_data["result"]["text"])
+                print("Processing complete:\n", response_data["result"]["text"])
                 
                 # Uncomment the line below to print the entire "result" object with all service data
-                # print("Processing complete:/n", json.dumps(response_data["result"], indent=2, ensure_ascii=False))
+                # print("Processing complete:\n", json.dumps(response_data["result"], indent=2, ensure_ascii=False))
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -125,7 +133,7 @@ if __name__ == "__main__":
 ```json5
 {'generation_id': '0cff4e24-c1ba-419d-8b62-46f342985881'}
 Still waiting... Checking again in 10 seconds.
-Processing complete:/n {
+Processing complete:\n {
   "id": "04d07a4c-9238-4860-ac6f-534d58fdaf9a",
   "language_model": "assemblyai_default",
   "acoustic_model": "assemblyai_default",

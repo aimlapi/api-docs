@@ -26,10 +26,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
@@ -39,7 +39,7 @@ Below, you can find both corresponding API schemas.
 
 ### Create a video generation task and send it to the server
 
-You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. \
+You can generate a video using this API. In the basic setup, you only need a reference image and a prompt.\
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="sora-2-pro-i2v" path="/v2/video/generations" method="post" %}
@@ -51,8 +51,8 @@ This endpoint creates and sends a video generation task to the server — and re
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -134,7 +134,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -260,8 +260,7 @@ main();
 
 <summary>Statuses</summary>
 
-<table><thead><tr><th width="169.99993896484375">Status</th><th>Description</th></tr></thead><tbody><tr><td><code>queued</code>
-</td><td>Job is waiting in queue</td></tr><tr><td><code>generating</code></td><td>Video is being generated</td></tr><tr><td><code>completed</code> </td><td>Generation successful, video available</td></tr><tr><td><code>error</code></td><td>Generation failed, check <code>error</code> field </td></tr></tbody></table>
+<table><thead><tr><th width="169.99993896484375">Status</th><th>Description</th></tr></thead><tbody><tr><td><code>queued</code></td><td>Job is waiting in queue</td></tr><tr><td><code>generating</code></td><td>Video is being generated</td></tr><tr><td><code>completed</code></td><td>Generation successful, video available</td></tr><tr><td><code>error</code></td><td>Generation failed, check <code>error</code> field</td></tr></tbody></table>
 
 </details>
 

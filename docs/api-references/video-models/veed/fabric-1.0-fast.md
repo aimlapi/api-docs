@@ -48,11 +48,11 @@ This endpoint creates and sends a video generation task to the server — and re
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="fabric-1-0-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI fabric-1-0-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/fabric-1.0-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -137,7 +137,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -303,7 +303,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0-fast","status":"completed","video":{"url":"https://v3b.fal.media/files/b/monkey/P9C2_0yfMZxn68-HPgKNX_tmp5g5n20s9.mp4"}}
+Processing complete:\n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0-fast","status":"completed","video":{"url":"https://v3b.fal.media/files/b/monkey/P9C2_0yfMZxn68-HPgKNX_tmp5g5n20s9.mp4"}}
 ```
 {% endcode %}
 

@@ -1,0 +1,165 @@
+# ernie-4.5-vl-28b-a3b
+
+
+
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `baidu/ernie-4.5-vl-28b-a3b`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/baidu/ernie-4-5-vl-28b-a3b" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
+## Model Overview
+
+A post-trained LLM with 28B total parameters and 3B activated parameters per token. \
+A non-reasoning variant with image and PDF input support.
+
+{% hint style="success" %}
+[Create AI/ML API Key](https://aimlapi.com/app/keys)
+{% endhint %}
+
+<details>
+
+<summary>How to make the first API call</summary>
+
+**1️⃣ Required setup (don’t skip this)**\
+▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
+▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
+
+**2️ Copy the code example**\
+At the bottom of this page, pick the snippet for your preferred programming language (Python / Node.js) and copy it into your project.
+
+**3️ Update the snippet for your use case**\
+▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
+▪ **Select a model:** set the `model` field to the model you want to call.\
+▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
+
+**4️ (Optional) Tune the request**\
+Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
+
+**5️ Run your code**\
+Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
+
+{% hint style="success" %}
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
+{% endhint %}
+
+</details>
+
+## API Schema
+
+{% openapi-operation spec="ernie-4-5-vl-28b-a3b" path="/v1/chat/completions" method="post" %}
+[OpenAPI ernie-4-5-vl-28b-a3b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/baidu/ernie-4.5-vl-28b-a3b.json)
+{% endopenapi-operation %}
+
+## Code Example
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import json  # for getting a structured output with indentation 
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"baidu/ernie-4.5-vl-28b-a3b",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hello" # insert your prompt here, instead of Hello
+            }
+        ]
+    }
+)
+
+data = response.json()
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'baidu/ernie-4.5-vl-28b-a3b',
+      messages:[
+          {
+              role:'user',
+              content: 'Hello'  // insert your prompt here, instead of Hello
+          }
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+{
+  "id": "b1946f423718276c56f085ef83bfded2",
+  "object": "chat.completion",
+  "created": 1768830849,
+  "model": "baidu/ernie-4.5-vl-28b-a3b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Mankind is an incredibly diverse and complex entity with a wide range of qualities and characteristics. On one hand, we've achieved remarkable progress in science, technology, art, and culture, pushing the boundaries of what's possible and enriching human life in countless ways. Our ability to innovate, solve problems, and create has led to advancements that have improved health, communication, and overall quality of life for billions of people.\n\nHowever, we also face significant challenges. Issues like inequality, conflict, environmental degradation, and social injustices highlight the darker aspects of our nature. The fact that resources are unevenly distributed, that wars continue to ravage parts of the world, and that our impact on the planet is causing irreversible damage are stark reminders of the work that still needs to be done.\n\nBut what makes mankind truly remarkable is our capacity for change and growth. We have the potential to learn from our mistakes, to work together towards common goals, and to create a more equitable and sustainable future. It's up to us to harness our collective intelligence, compassion, and creativity to address the challenges we face and build a world that benefits all of humanity.\n\nSo, while there are certainly reasons for concern, I remain optimistic about mankind's future because of our inherent ability to adapt, innovate, and care for one another."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 22,
+    "completion_tokens": 280,
+    "total_tokens": 302,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": null
+  },
+  "system_fingerprint": "",
+  "meta": {
+    "usage": {
+      "credits_used": 344
+    }
+  }
+}
+```
+{% endcode %}
+
+</details>

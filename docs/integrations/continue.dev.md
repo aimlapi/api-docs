@@ -94,6 +94,6 @@ You can use any of [our text models](../api-references/text-models-llm/#complete
 
 * [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
 * [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
-* [claude-3-5-sonnet-20240521](broken-reference)
+* [claude-3-5-sonnet-20240521](broken-reference/)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
-* and many others.
+* [and many others](../api-references/model-database.md).

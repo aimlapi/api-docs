@@ -1,10 +1,18 @@
 # voyage-code-2
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `voyage-code-2`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/voyage-code-2" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
@@ -20,15 +28,17 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 [voyage-code-2.json](../../../.gitbook/assets/voyage-code-2.json)
 {% endopenapi %}
 
-## Example in Python
+## Code Example
 
-```python
-import openai
-
-# Initialize the API client
+{% tabs %}
+{% tab title="Python" %}
+<pre class="language-python"><code class="lang-python">import openai
+<strong>
+</strong># Initialize the API client
 client = openai.OpenAI(
+    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>
+    api_key="&#x3C;YOUR_AIMLAPI_KEY>",
     base_url="https://api.aimlapi.com/v1",
-    api_key="<YOUR_AIMLAPI_KEY>",
 )
 
 # Define the text for which to generate an embedding
@@ -42,7 +52,49 @@ response = client.embeddings.create(
 
 # Print the embedding
 print(response)
+</code></pre>
+{% endtab %}
+
+{% tab title="JS" %}
+```javascript
+import OpenAI from "openai";
+import util from "util";
+
+// Initialize the API client
+const client = new OpenAI({
+  // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+  apiKey: "<YOUR_AIMLAPI_KEY>",
+  baseURL: "https://api.aimlapi.com/v1",
+});
+
+// Define the text for which to generate an embedding
+const text = "Laura is a DJ.";
+
+const response = await client.embeddings.create({
+  input: text,
+  model: "voyage-code-2",
+});
+
+// Convert embedding to a regular array (not TypedArray)
+const pythonLikeResponse = {
+  ...response,
+  data: response.data.map(item => ({
+    ...item,
+    embedding: Array.from(item.embedding),
+  })),
+};
+
+// Python-like print
+console.log(
+  util.inspect(pythonLikeResponse, {
+    depth: null,
+    maxArrayLength: null,
+    compact: true,
+  })
+);
 ```
+{% endtab %}
+{% endtabs %}
 
 This Python example shows how to set up an API client, send text to the embedding API, and print the response with the embedding vector. See how large a vector response the model generates from just a single short input phrase.
 

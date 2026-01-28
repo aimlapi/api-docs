@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Voice Chat
 
 ## Overview
@@ -16,4 +33,3 @@ Several models that were originally listed in our Text Models (LLM) section shou
 
 * [gpt-4o-audio-preview](../../text-models-llm/openai/gpt-4o-audio-preview.md)
 * [gpt-4o-mini-audio-preview](../../text-models-llm/openai/gpt-4o-mini-audio-preview.md)
-

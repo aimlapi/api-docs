@@ -1,10 +1,18 @@
 # minimax-music \[legacy]
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `minimax-music`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax-music" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 An advanced AI model that generates diverse high-quality audio compositions by analyzing and reproducing musical patterns, rhythms, and vocal styles from the reference track. Refine the process using a text prompt.
 
@@ -71,8 +79,8 @@ This endpoint creates and sends a music generation task to the server — and re
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
@@ -204,7 +212,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")

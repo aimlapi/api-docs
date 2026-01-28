@@ -1,5 +1,14 @@
 export const gptImageEditSample = (options) => [
   {
+    lang: 'cURL',
+    source: `curl -L \\
+  --request POST \\
+  --url 'https://api.aimlapi.com/v1/images/edits' \\
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
+  --form "prompt=Add a crown to the T-rex’s head." \\
+  --form "image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>"`,
+  },
+  {
     lang: 'JavaScript',
     source: `import fs from 'fs';
 import fetch from 'node-fetch';
@@ -48,36 +57,5 @@ with open("<YOUR_IMAGE_PATH.png>", "rb") as file:
 
     data = response.json()
     print(data)`,
-  },
-  {
-    lang: 'cURL',
-    source: `curl -L \\
-  --request POST \\
-  --url 'https://api.aimlapi.com/v1/images/edits' \\
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\
-  --form "prompt=Add a crown to the T-rex's head." \\
-  --form "image=@<YOUR_IMAGE_PATH.png>;type=image/png;filename=<IMAGE_NAME>"`,
-  },
-  {
-    lang: 'HTTP',
-    source: `POST /v1/images/edits HTTP/1.1
-Host: api.aimlapi.com
-Authorization: Bearer <YOUR_AIMLAPI_KEY>
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
-
-------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="model"
-
-${options.name}
-------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="prompt"
-
-Add a crown to the T-rex's head.
-------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="image"; filename="<IMAGE_NAME>"
-Content-Type: image/png
-
-(data)
-------WebKitFormBoundary7MA4YWxkTrZu0gW--`,
   },
 ];

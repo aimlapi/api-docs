@@ -1,10 +1,18 @@
 # Speech 2.5 HD Preview
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model:   &#x20;
+This documentation is valid for the following list of our models:
 
-* `minimax/speech-2.5-hd-preview`
+* `minimax/speech-2-5-hd-preview`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax/speech-2-5-hd-preview" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 A high-definition text-to-speech model with enhanced multilingual expressiveness, more precise voice replication, and expanded support for 40 languages.
 

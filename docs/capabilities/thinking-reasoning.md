@@ -70,6 +70,7 @@ Supported models:
 * [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)
 * [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
 * [openai/gpt-5-1](../api-references/text-models-llm/openai/gpt-5-1.md)
+* [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
 
 ***
 
@@ -81,11 +82,18 @@ Supported models:
 
 ***
 
-* [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
+* [baidu/ernie-4.5-21b-a3b-thinking](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.md)
+* [baidu/ernie-5-0-thinking-preview](../api-references/text-models-llm/baidu/ernie-5.0-thinking-preview.md)
+* [baidu/ernie-5-0-thinking-latest](../api-references/text-models-llm/baidu/ernie-5.0-thinking-latest.md)
 
 ***
 
-* [vidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
+* [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
+* [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
+
+***
+
+* [nvidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
 * [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/llama-3.1-nemotron-70b-1.md)
 
 ***
@@ -100,3 +108,4 @@ Supported models:
 
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)

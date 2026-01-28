@@ -1,10 +1,18 @@
 # o3-pro
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `openai/o3-pro`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/openai/o3-pro" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
@@ -67,8 +75,6 @@ This endpoint is currently used _only_ with OpenAI models. Some models support b
 {% openapi-operation spec="o3-pro-RESPONSES" path="/v1/responses" method="post" %}
 [OpenAPI o3-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-pro-RESPONSES.json)
 {% endopenapi-operation %}
-
-
 
 ## Code Example
 

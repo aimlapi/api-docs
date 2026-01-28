@@ -326,4 +326,20 @@ Supported configurations include:
   keep_audio: {
     desc: `Whether to keep the original audio from the video.`,
   },
+  generate_audio_switch: {
+    desc:`Enable audio generation. Default is "false".
+- true: Audio on.
+- false: Audio off.`,
+  },
+  generate_multi_clip_switch: {
+    desc: `Enable multi-clip generation with dynamic camera changes. Default is "false".
+- true: Multi-clip. 
+- false: Single-clip.`,
+  }, 
+  thinking_type: {
+    desc:`Prompt reasoning enhancement mode. Default is "enabled". 
+- "enabled": Turn on prompt optimization. 
+- "disabled": Turn off prompt optimization. 
+- "auto" or omitted: Let the model decide automatically.`,
+  },   
 };

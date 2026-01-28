@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Speech-to-Text
 
 ## Overview
@@ -76,7 +93,7 @@ def main():
                 ("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                print("Processing complete:\n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -165,7 +182,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
+                print("Processing complete:\n", response_data["result"]['results']["channels"][0]["alternatives"][0]["transcript"])
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -193,4 +210,4 @@ Processing complete:
 
 ## All Available Speech-to-Text Models
 
-<table><thead><tr><th width="266.20001220703125">Model ID  +  API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="assembly-ai/slam-1.md">aai/slam-1</a></td><td>Assembly AI</td><td></td><td><a href="https://aimlapi.com/models/slam-1">Slam 1</a></td></tr><tr><td><a href="assembly-ai/universal.md">aai/universal</a></td><td>Assembly AI</td><td></td><td><a href="https://aimlapi.com/models/universal">Universal</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-automotive</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-conversationalai</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-drivethru</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-finance</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-general</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-medical</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-meeting</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-phonecall</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-video</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-voicemail</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-tiny.md">#g1_whisper-tiny</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-small.md">#g1_whisper-small</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-base.md">#g1_whisper-base</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-medium.md">#g1_whisper-medium</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-large.md">#g1_whisper-large</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/whisper">Whisper</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="assembly-ai/slam-1.md">aai/slam-1</a></td><td>Assembly AI</td><td></td><td><a href="https://aimlapi.com/models/slam-1">Slam 1</a></td></tr><tr><td><a href="assembly-ai/universal.md">aai/universal</a></td><td>Assembly AI</td><td></td><td><a href="https://aimlapi.com/models/universal">Universal</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-automotive</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-conversationalai</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-drivethru</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-finance</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-general</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-medical</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-meeting</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-phonecall</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-video</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/Deepgram/nova-2.md">#g1_nova-2-voicemail</a></td><td>Deepgram</td><td></td><td><a href="https://aimlapi.com/models/deepgram-nova-2">Deepgram Nova-2</a></td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-tiny.md">#g1_whisper-tiny</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-small.md">#g1_whisper-small</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-base.md">#g1_whisper-base</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-medium.md">#g1_whisper-medium</a></td><td>OpenAI</td><td></td><td>-</td></tr><tr><td><a href="../../speech-voice-models/stt/OpenAI/whisper-large.md">#g1_whisper-large</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/whisper">Whisper</a></td></tr><tr><td><a href="openai/gpt-4o-transcribe.md">openai/gpt-4o-transcribe</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/gpt-4o-transcribe">GPT-4o Transcribe</a></td></tr><tr><td><a href="openai/gpt-4o-mini-transcribe.md">openai/gpt-4o-mini-transcribe</a></td><td>OpenAI</td><td></td><td><a href="https://aimlapi.com/models/gpt-4o-mini-transcribe">GPT-4o Mini Transcribe</a></td></tr></tbody></table>

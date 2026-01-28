@@ -20,29 +20,42 @@ An innovative AI model designed for generating high-quality videos from text pro
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schemas
+## How to Make a Call
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
 
 Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
 * The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
-Below, you can find two corresponding API schemas.
+Below, you can find both corresponding API schemas.
+
+</details>
+
+## API Schemas
+
+{% hint style="success" %}
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+However, you can still call this model using the legacy URL that includes the vendor name.
+{% endhint %}
 
 ### Create a video generation task and send it to the server
 
-{% openapi src="../../../.gitbook/assets/video-01-live2d.json" path="/v2/generate/video/minimax/generation" method="post" %}
-[video-01-live2d.json](../../../.gitbook/assets/video-01-live2d.json)
-{% endopenapi %}
+{% openapi-operation spec="video-01-live2d" path="/v2/video/generations" method="post" %}
+[OpenAPI video-01-live2d](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/video-01-live2d.json)
+{% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi src="../../../.gitbook/assets/video-01-pair (1).json" path="/v2/generate/video/minimax/generation" method="get" %}
-[video-01-pair (1).json](<../../../.gitbook/assets/video-01-pair (1).json>)
-{% endopenapi %}
+{% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
+{% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
@@ -126,7 +139,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -302,7 +315,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '288439434137694', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/whale/inference_output%2Fvideo%2F2025-07-08%2Fd1626f4f-be9c-4aca-87da-5b749efcdef7%2Foutput.mp4?Expires=1752005613&OSSAccessKeyId=LTAI5tAmwsjSaaZVA6cEFAUu&Signature=5guXof04YOOgZPBhkeklSFY5gqM%3D'}}
+Processing complete:\n {'id': '288439434137694', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/whale/inference_output%2Fvideo%2F2025-07-08%2Fd1626f4f-be9c-4aca-87da-5b749efcdef7%2Foutput.mp4?Expires=1752005613&OSSAccessKeyId=LTAI5tAmwsjSaaZVA6cEFAUu&Signature=5guXof04YOOgZPBhkeklSFY5gqM%3D'}}
 ```
 {% endcode %}
 

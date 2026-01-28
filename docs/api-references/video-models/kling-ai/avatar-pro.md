@@ -10,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/klingai/avatar-pro" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -26,10 +26,10 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-Generating a video using this model involves sequentially calling two endpoints:&#x20;
+Generating a video using this model involves sequentially calling two endpoints:
 
 * The first one is for creating and sending a video generation task to the server (returns a generation ID).
-* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.&#x20;
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
 
 Below, you can find both corresponding API schemas.
 
@@ -47,10 +47,11 @@ You can create a video with this API by providing a reference image of a charact
 
 ### Retrieve the generated video from the server
 
-After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above. If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/omnihuman-pair.json)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -133,7 +134,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -296,7 +297,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '2baf5bc0-9565-4ff1-a775-d66ce749164c:klingai/avatar-pro', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/zebra/V7k8qsL07DkjMkZO-8Ogt_output.mp4'}}
+Processing complete:\n {'id': '2baf5bc0-9565-4ff1-a775-d66ce749164c:klingai/avatar-pro', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/zebra/V7k8qsL07DkjMkZO-8Ogt_output.mp4'}}
 ```
 {% endcode %}
 

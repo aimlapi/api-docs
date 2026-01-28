@@ -106,12 +106,10 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 * [Qwen/Qwen2.5-7B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
 * [Qwen/Qwen2.5-72B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo.md)
-* [Qwen/Qwen2.5-Coder-32B-Instruct](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-Coder-32B-Instruct.md)
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
-* [Qwen/QwQ-32B](/broken/pages/m4oeHADX3yZhaU9m7Bgz)
 * [Qwen/Qwen3-235B-A22B-fp8-tput](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b.md)
 * [alibaba/qwen3-32b](../api-references/text-models-llm/alibaba-cloud/qwen3-32b.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
@@ -120,6 +118,14 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [alibaba/qwen3-max-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-max-instruct.md)
 * [alibaba/qwen3-vl-32b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-instruct.md)
 * [alibaba/qwen3-vl-32b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.md)
+
+***
+
+* [baidu/ernie-4.5-21b-a3b](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b.md)
+* [baidu/ernie-4.5-21b-a3b-thinking](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.md)
+* [baidu/ernie-4.5-300b-a47b](../api-references/text-models-llm/baidu/ernie-4.5-300b-a47b.md)
+* [baidu/ernie-4.5-vl-28b-a3b](../api-references/text-models-llm/baidu/ernie-4.5-vl-28b-a3b.md)
+* [baidu/ernie-4.5-vl-424b-a47b](../api-references/text-models-llm/baidu/ernie-4.5-vl-424b-a47b.md)
 
 ***
 
@@ -174,6 +180,9 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [openai/gpt-5-1-chat-latest](../api-references/text-models-llm/openai/gpt-5-1-chat-latest.md)
 * [openai/gpt-5-1-codex](../api-references/text-models-llm/openai/gpt-5-1-codex.md)
 * [openai/gpt-5-1-codex-mini](../api-references/text-models-llm/openai/gpt-5-1-codex-mini.md)
+* [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
+* [openai/gpt-5-2-chat-latest](../api-references/text-models-llm/openai/gpt-5.2-chat-latest.md)
+* [openai/gpt-5-2-codex](../api-references/text-models-llm/openai/gpt-5.2-codex.md)
 
 ***
 
@@ -182,9 +191,9 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [deepseek/deepseek-non-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
+* [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
-* [mistralai/codestral-2501](../api-references/text-models-llm/Mistral-AI/codestral-2501.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-turbo-preview](../api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)
@@ -200,3 +209,4 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
+* [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)

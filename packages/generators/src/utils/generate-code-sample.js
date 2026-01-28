@@ -60,7 +60,6 @@ print(data)`,
 Host: ${url}
 Authorization: Bearer <YOUR_API_KEY>
 Content-Type: application/json
-Accept: */*
 
 ${body}`,
     },
@@ -223,8 +222,6 @@ print(data)`,
 Host: api.aimlapi.com
 Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
-Accept: */*
-Content-Length: 59
 
 {
   "model": "${modelName}",
@@ -386,7 +383,6 @@ print(data)`,
 Host: api.aimlapi.com
 Authorization: Bearer <YOUR_AIMLAPI_KEY>
 Content-Type: application/json
-Accept: */*
 
 {
   "model": "${modelName}"${

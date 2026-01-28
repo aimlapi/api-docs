@@ -1,10 +1,18 @@
 # music-1.5
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `minimax/music-1.5`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax/music-1.5" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
 
@@ -16,8 +24,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
-This endpoint generates a new music piece based on the voice and/or instrumental pattern identifiers obtained from the first endpoint above.\
-The generation can be completed in 60-80 seconds or take a bit more.
+This endpoint generates a music piece based on the prompt (which includes style instructions) and the provided lyrics. It returns a generation task ID, its status, and related metadata.
 
 {% openapi-operation spec="music-1-5" path="/v2/generate/audio" method="post" %}
 [OpenAPI music-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-1.5.json)
@@ -27,8 +34,8 @@ The generation can be completed in 60-80 seconds or take a bit more.
 
 After sending a request for music generation, this task is added to the queue. Based on the service's load, the generation can be completed in 50-60 seconds or take a bit more.
 
-{% openapi-operation spec="minimax-music-fetch" path="/v2/generate/audio" method="get" %}
-[OpenAPI minimax-music-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music-pair.json)
+{% openapi-operation spec="universal-audio-fetch" path="/v2/generate/audio" method="get" %}
+[OpenAPI universal-audio-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/universal-audio-fetch.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
@@ -99,7 +106,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Generation complete:/n", response_data)
+                print("Generation complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -194,7 +201,7 @@ async function main() {
 
     const status = result.status;
     if (['generating', 'queued', 'waiting'].includes(status)) {
-      console.log('Still waiting... Checking again in 10 seconds.');
+      console.log(`Status: ${status}. Checking again in 10 seconds.`);
     } else {
       console.log('Generation complete:\n', result);
       clearInterval(intervalId);
@@ -223,7 +230,7 @@ Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
 Still waiting... Checking again in 10 seconds.
-Generation complete:/n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20251106201349-ESweHLjHtnWFQLwO.mp3?Expires=1762517636&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=ZIKZMHUCU3r30ysGjbSoqc3aVks%3D'}, 'extra_info': {'music_duration': 93022, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 256000, 'music_size': 0}, 'trace_id': '055bc3b9622dd73d828276162cc7d516'}
+Generation complete:\n {'id': 'd51032d5-e7b3-4e5b-a5c8-12e0c9474949:minimax/music-1.5', 'status': 'completed', 'audio_file': {'url': 'https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/music%2Fprod%2Ftts-20251106201349-ESweHLjHtnWFQLwO.mp3?Expires=1762517636&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=ZIKZMHUCU3r30ysGjbSoqc3aVks%3D'}, 'extra_info': {'music_duration': 93022, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 256000, 'music_size': 0}, 'trace_id': '055bc3b9622dd73d828276162cc7d516'}
 ```
 {% endcode %}
 

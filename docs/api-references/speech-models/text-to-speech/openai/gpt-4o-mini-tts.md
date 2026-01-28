@@ -1,10 +1,18 @@
 # gpt-4o-mini-tts
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model:
+This documentation is valid for the following list of our models:
 
 * `openai/gpt-4o-mini-tts`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/openai/gpt-4o-mini-tts" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md), supporting up to 2,000 input tokens.
 

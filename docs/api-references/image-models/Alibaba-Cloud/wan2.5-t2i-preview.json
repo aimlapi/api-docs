@@ -1,0 +1,194 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "alibaba/wan2.5-t2i-preview"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
+                  },
+                  "negative_prompt": {
+                    "type": "string",
+                    "maxLength": 500,
+                    "description": "The description of elements to avoid in the generated image."
+                  },
+                  "num_images": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  },
+                  "image_size": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "type": "integer",
+                            "minimum": 512,
+                            "maximum": 1440
+                          },
+                          "height": {
+                            "type": "integer",
+                            "minimum": 512,
+                            "maximum": 1440
+                          }
+                        },
+                        "required": [
+                          "width",
+                          "height"
+                        ],
+                        "description": "For both height and width, the value must be a multiple of 32."
+                      },
+                      {
+                        "type": "string",
+                        "enum": [
+                          "square_hd",
+                          "square",
+                          "portrait_4_3",
+                          "portrait_16_9",
+                          "landscape_4_3",
+                          "landscape_16_9"
+                        ],
+                        "description": "The size of the generated image."
+                      }
+                    ],
+                    "default": "landscape_4_3",
+                    "description": "The size of the generated image."
+                  },
+                  "enhance_prompt": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Optional parameter to use an LLM-based prompt rewriting feature for higher-quality images that better match the original prompt. Disabling it may affect image quality and prompt alignment."
+                  },
+                  "watermark": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Add an invisible watermark to the generated images."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2147483647,
+                    "description": "The same seed and the same prompt given to the same version of the model will output the same image every time."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "alibaba/wan2.5-t2i-preview"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"alibaba/wan2.5-t2i-preview\",\n    \"prompt\": \"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.\"\n  }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      model: 'alibaba/wan2.5-t2i-preview',\n      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n        \"model\":\"alibaba/wan2.5-t2i-preview\",\n        \"prompt\": \"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.\"\n    }\n)\n\ndata = response.json()\nprint(data)"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

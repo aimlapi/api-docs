@@ -1,8 +1,18 @@
 # vibevoice-1.5b
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model: `microsoft/vibevoice-1.5b`
+This documentation is valid for the following list of our models:
+
+* `microsoft/vibevoice-1.5b`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/microsoft/vibevoice-1-5b" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 Designed to produce rich, multi-speaker conversations from text, the model is well-suited for podcasts and other long-form audio content.
 

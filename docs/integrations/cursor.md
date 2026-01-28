@@ -1,10 +1,15 @@
 # Cursor
 
+{% hint style="warning" %}
+Only versions 1.x are currently supported for integration.\
+You can select one of them on [Cursor’s official download page](https://cursor.com/download).
+{% endhint %}
+
 ## About
 
 [Cursor](https://cursor.com/) is an advanced AI-powered IDE that combines intelligent code completion, inline explanations, and automatic code editing directly inside the editor.
 
-This guide explains how to connect **AI/ML API** to **Cursor** using the **Azure OpenAI-compatible** flow. \
+This guide explains how to connect **AI/ML API** to **Cursor** using the **Azure OpenAI-compatible** flow.\
 You’ll get a clean setup with **one endpoint**, support for **slashes in deployment names**.
 
 ## 🚀 Quick Setup
@@ -52,8 +57,6 @@ Click **Verify** to confirm.
 <div align="left" data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure></div>
 
 <div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
 ***
 
@@ -146,7 +149,7 @@ You should receive a JSON response with `choices[0].message.content`.
 
 * **Base URL:** `https://api.aimlapi.com`
 * **API Key:** your AI/ML API key
-* **Deployment:**  `google/gemini-2.5-pro` _(slashes allowed)_
+* **Deployment:** `google/gemini-2.5-pro` _(slashes allowed)_
 * **Alias (Model ID):** `gpt-4o`
 
 With this setup, Cursor talks to **AI/ML API** using the **Azure flow**, while you keep the UI clean and consistent

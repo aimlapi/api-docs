@@ -1,10 +1,26 @@
 [
   {
-    "name": "gryphe/mythomax-l2-13b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gryphe/mythomax-l2-13b",
-    "alias": "mythomax-l2-13b",
-    "category": "text-models-llm",
-    "vendor": "Gryphe",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/wan2.5-t2i-preview",
+    "alias": "wan2.5-t2i-preview",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.5-t2i-preview",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/wan2.2-t2i-plus",
+    "alias": "wan2.2-t2i-plus",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.2-t2i-plus",
+    "codeSamples": "image-models:prompt"
+  },
+   {
+    "name": "alibaba/wan2.2-t2i-flash",
+    "alias": "wan2.2-t2i-flash",
+    "category": "image-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan2.2-t2i-flash",
+    "codeSamples": "image-models:prompt"
   }
 ]

@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](luma-ai-v2.md). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.
+This model generates up to 9-second clips at 4K, compared to lower resolutions and shorter durations in [Ray 1.6](/broken/pages/M4hhYE6nhjYlk2dXEImt). You can specify the first and last frames as images or extend previously generated videos by passing their generation IDs. Looped videos are also supported.
 
 ## Setup your API Key
 
@@ -49,7 +49,7 @@ This endpoint creates and sends a video generation task to the server — and re
 ### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
 [OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
@@ -147,7 +147,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -313,7 +313,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {'id': '7c880e75-9892-4238-8464-49cb0c6deabd:luma/ray-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/25f7f772-d8f4-494e-9cdf-ab5a2c7ce3fe/2a50c77c-2e44-4bfd-915b-9df61f5ff202_resultdbe5e2f21db1effd.mp4'}}
+Processing complete:\n {'id': '7c880e75-9892-4238-8464-49cb0c6deabd:luma/ray-2', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/luma/dream_machine/25f7f772-d8f4-494e-9cdf-ab5a2c7ce3fe/2a50c77c-2e44-4bfd-915b-9df61f5ff202_resultdbe5e2f21db1effd.mp4'}}
 ```
 {% endcode %}
 

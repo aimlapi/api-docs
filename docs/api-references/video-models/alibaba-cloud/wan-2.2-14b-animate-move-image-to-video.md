@@ -48,10 +48,10 @@ This endpoint creates and sends a video generation task to the server — and re
 ### Fetch the video
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
-If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-{% openapi-operation spec="sora-2-t2v-pair" path="/v2/video/generations" method="get" %}
-[OpenAPI sora-2-t2v-pair](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-t2v-pair.json)
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -135,7 +135,7 @@ def main():
                 print("Still waiting... Checking again in 10 seconds.")
                 time.sleep(10)
             else:
-                print("Processing complete:/n", response_data)
+                print("Processing complete:\n", response_data)
                 return response_data
    
         print("Timeout reached. Stopping.")
@@ -288,7 +288,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:/n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.2-14b-animate-move","status":"completed","video":{"url":"https://v3b.fal.media/files/b/panda/4VjTJeQXFX3183b8Xe3d2_wan_animate_output.mp4"}}
+Processing complete:\n {"id":"b5592d70-dd31-4e5a-bc5c-5063660c001b:alibaba/wan2.2-14b-animate-move","status":"completed","video":{"url":"https://v3b.fal.media/files/b/panda/4VjTJeQXFX3183b8Xe3d2_wan_animate_output.mp4"}}
 ```
 {% endcode %}
 

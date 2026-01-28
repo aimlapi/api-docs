@@ -6,9 +6,9 @@ description: >-
 icon: hand-wave
 ---
 
-# Setting Up
+# Quickstart
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made [solution](broken-reference/):
+Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made solution:
 
 * [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),
 * [configuring the base URL](setting-up.md#configuring-base-url),
@@ -114,14 +114,14 @@ if __name__ == "__main__":
 {% endtab %}
 
 {% tab title="NodeJS" %}
-<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
-</strong>
+{% code overflow="wrap" %}
+```javascript
+#!/usr/bin/env node
+
+const OpenAI = require("openai");
 const baseURL = "https://api.aimlapi.com/v1";
-
-// Insert your AIML API Key in the quotation marks instead of my_key:
-const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>"; 
-
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const apiKey = "PASTE YOUR API KEY HERE";
+const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
 const userPrompt = "Tell me about San Francisco";
 
 const api = new OpenAI({
@@ -130,30 +130,36 @@ const api = new OpenAI({
 });
 
 const main = async () => {
-  const completion = await api.chat.completions.create({
-    model: "mistralai/Mistral-7B-Instruct-v0.2",
-    messages: [
-      {
-        role: "system",
-        content: systemPrompt,
-      },
-      {
-        role: "user",
-        content: userPrompt,
-      },
-    ],
-    temperature: 0.7,
-    max_tokens: 256,
-  });
+  try {
+    const completion = await api.chat.completions.create({
+      model: "google/gemma-3-27b-it",
+      messages: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  const response = completion.choices[0].message.content;
+    const response = completion.choices[0].message.content;
 
-  console.log("User:", userPrompt);
-  console.log("AI:", response);
+    console.log("User:", userPrompt);
+    console.log("AI:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
 };
 
 main();
-</code></pre>
+
+
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -262,46 +268,42 @@ San Francisco's diverse neighborhoods each have their unique character. The hist
 
 <summary>Step-by-step example in NodeJS</summary>
 
-As in the example from Python, we start from the very beginning too. We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
+We assume you already have Node.js installed. If not, here is a [guide for beginners](../faq/can-i-use-api-in-nodejs.md).
 
-We need to create a new folder for the example project:
+Create a new folder for the example project
 
 ```bash
 mkdir ./aimlapi-welcome
 cd ./aimlapi-welcome
 ```
 
-(Optional) If you use IDE then we recommend to open created folder as workspace. On example, in VSCode you can do it with:
-
-```shell
-code .
-```
-
-Now create a project file:
+Create a project file
 
 ```bash
 npm init -y
 ```
 
-Install the required dependencies:
+Install the required dependencies
 
 ```bash
 npm i openai
 ```
 
-Create a file with the source code:
+Create a file with the source code
 
 ```bash
 touch ./index.js
 ```
 
-And paste the following content:
+And paste the following content to the file and save it
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>const { OpenAI } = require("openai");
-</strong>
+```javascript
+#!/usr/bin/env node
+
+const OpenAI = require("openai");
 const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const apiKey = "PASTE YOUR API KEY HERE";
+const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
 const userPrompt = "Tell me about San Francisco";
 
 const api = new OpenAI({
@@ -310,32 +312,42 @@ const api = new OpenAI({
 });
 
 const main = async () => {
-  const completion = await api.chat.completions.create({
-    model: "gpt-4o",
-    messages: [
-      {
-        role: "system",
-        content: systemPrompt,
-      },
-      {
-        role: "user",
-        content: userPrompt,
-      },
-    ],
-    temperature: 0.7,
-    max_tokens: 256,
-  });
+  try {
+    const completion = await api.chat.completions.create({
+      model: "google/gemma-3-27b-it",
+      messages: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+      temperature: 0.7,
+    });
 
-  const response = completion.choices[0].message.content;
+    const response = completion.choices[0].message.content;
 
-  console.log("User:", userPrompt);
-  console.log("AI:", response);
+    console.log("User:", userPrompt);
+    console.log("AI:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
 };
 
 main();
-</code></pre>
 
-You will see a response that looks like this:
+```
+
+Run the file
+
+```bash
+./index.js
+```
+
+You will see a response that looks like this
 
 {% code overflow="wrap" %}
 ```json5

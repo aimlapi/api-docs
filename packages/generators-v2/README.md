@@ -49,14 +49,14 @@ The generator reads configuration from a JSON file named json_for-docs_generatio
 
 ### Field Descriptions
 
-| Field              | Type      | Required | Description                                                                                                                                                                                                                                                   |
-| ------------------ | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **name**           | `string`  | ✅       | Model name (required if using a ready-made code sample).                                                                                                                                                                                                      |
-| **url**            | `string`  | ✅       | URL to the JSON documentation endpoint.                                                                                                                                                                                                                       |
-| **alias**          | `string`  | ✅       | The output filename (used when saving the generated schema).                                                                                                                                                                                                  |
-| **category**       | `string`  | ✅       | The category under which the schema is grouped (e.g. `text-models-llm`).                                                                                                                                                                                      |
-| **vendor**         | `string`  | ✅       | Model vendor name (e.g. `OpenAI`).                                                                                                                                                                                                                            |
-| **codeSamples**    | `string`  | ❌       | Optional. Determines which predefined code samples to include. Options: <br>• `chat-completion` <br>• `chat-completion-audio` <br>• `text-to-image` <br>• `image-to-image` <br>• `gpt-image-edit` <br>• `responses` <br>• `hide` (if your want hide codeSample) <br>• `custom` (requires `customUrlApi` and `customParams`) |
+|   Field   |   Type   | Required  |  Description  |
+| --------- | -------- | --------- | ------------- |
+| **name**  | `string` | ✅ | Model name (required if using a ready-made code sample).|
+| **url**   | `string` | ✅ | URL to the JSON documentation endpoint. |
+| **alias** | `string` | ✅ | The output filename (used when saving the generated schema).|
+| **category** | `string` | ✅ | The category under which the schema is grouped (e.g. `text-models-llm`).|
+| **vendor** | `string`  | ✅ | Model vendor name (e.g. `OpenAI`).|
+| **codeSamples** | `string` | ❌ | Optional. Determines which predefined code samples to include. Options: <br>• `chat-completion` <br>• `chat-completion-audio` <br>• `image-models:prompt` <br>• `image-models:image_url(s)` <br>• `image-models:image` <br>• `video:video` <br>• `video:lipsync` <br>•`responses` <br>• `hide` (if your want hide codeSample) <br>• `custom` (requires `customUrlApi` and `customParams`) |
 | **customUrlApi**   | `string`  | ❌       | Used when `codeSamples` is set to `"custom"`. Specifies a custom API endpoint.                                                                                                                                                                                |
 | **customParams**   | `object`  | ❌       | Custom parameters for the API request. Supports simple, object, array, and object-array formats.                                                                                                                                                              |
 | **hideTryItPanel** | `boolean` | ❌       | If set to true, hides the “Try It” panel in the generated documentation. Useful for endpoints that are not meant to be interactive.                                                                                                                           |

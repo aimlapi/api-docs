@@ -1,10 +1,18 @@
 # qwen3-tts-flash
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
-This documentation is valid for the following model:
+This documentation is valid for the following list of our models:
 
 * `alibaba/qwen3-tts-flash`
 {% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/alibaba/qwen3-tts-flash" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 The model offers a range of natural, human-like voices with support for multiple languages and dialects. It can produce multilingual speech in a consistent voice, adapting tone and intonation to deliver smooth, expressive narration even for complex text.
 
