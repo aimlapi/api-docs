@@ -186,6 +186,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
+* [bytedance/seed-1-8](../api-references/text-models-llm/bytedance/seed-1.8.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [deepseek/deepseek-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-thinking.md)
 * [deepseek/deepseek-non-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking.md)

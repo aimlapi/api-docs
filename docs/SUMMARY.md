@@ -58,6 +58,8 @@
     * [ernie-5.0-thinking-latest](api-references/text-models-llm/baidu/ernie-5.0-thinking-latest.md)
     * [ernie-x1-turbo-32k](api-references/text-models-llm/baidu/ernie-x1-turbo-32k.md)
     * [ernie-x1.1-preview](api-references/text-models-llm/baidu/ernie-x1.1-preview.md)
+  * [ByteDance](api-references/text-models-llm/bytedance/README.md)
+    * [Seed 1.8](api-references/text-models-llm/bytedance/seed-1.8.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
     * [command-a](api-references/text-models-llm/cohere/command-a.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)

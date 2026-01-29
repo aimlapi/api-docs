@@ -92,7 +92,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Baidu**:    [Text/Chat](api-references/text-models-llm/baidu/)
 
-**ByteDance**: [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
+**ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/)  [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
 
 **Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)
 
