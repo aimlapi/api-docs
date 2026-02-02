@@ -1,10 +1,10 @@
 [
   {
-    "name": "bytedance/seed-1-8",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/seed-1-8",
-    "alias": "seed-1-8",
+    "name": "deepseek/deepseek-v3.2-speciale",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-v3.2-speciale",
+    "alias": "deepseek-v3.2-speciale",
     "category": "text-models-llm",
-    "vendor": "ByteDance",
+    "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
   }
 ]
