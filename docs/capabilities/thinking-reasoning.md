@@ -88,6 +88,10 @@ Supported models:
 
 ***
 
+* [deepseek/deepseek-v3.2-speciale](../api-references/text-models-llm/deepseek/deepseek-v3.2-speciale.md)
+
+***
+
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 

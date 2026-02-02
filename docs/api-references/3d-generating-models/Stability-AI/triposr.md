@@ -72,7 +72,7 @@ The example returns a textured 3D mesh in GLB file format. You can view it [here
 
 For clarity, we took several screenshots of our mushroom from different angles in an online GLB viewer. As you can see, the model understands the shape, but preserving the pattern on the back side (which was not visible on the reference image) could be improved:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/image (5) (1).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (9).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (7).png" alt="" data-size="original"></td></tr></tbody></table>
 
 Compare them with the [reference image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fly_Agaric_mushroom_05.jpg/576px-Fly_Agaric_mushroom_05.jpg):
 

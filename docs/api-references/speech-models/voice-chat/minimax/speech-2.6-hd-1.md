@@ -1,0 +1,234 @@
+---
+hidden: true
+noIndex: true
+---
+
+# Copy of Speech 2.6 HD
+
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `minimax/speech-2.6-hd`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/minimax/speech-2-6-hd" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
+
+The model generates speech from text prompts and multiple voices, optimized for high-fidelity, natural-sounding output. It also supports the use of custom voices, which can be cloned in advance from audio samples via [the official MiniMax website](https://www.minimax.io/audio/voices-cloning).
+
+## Setup your API Key
+
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+## Code Example #1: Using Built-in Voices
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import os
+import requests
+
+def main():
+    url = "https://api.aimlapi.com/v1/tts"
+    headers = {
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+    }
+    payload = {
+        "model": "minimax/speech-2.6-hd",
+        "text": "Hi! What are you doing today?",
+        "voice_setting": {
+          "voice_id": "Wise_Woman"
+        }
+    }
+
+    response = requests.post(url, headers=headers, json=payload, stream=True)
+    dist = os.path.abspath("your_file_name.wav")
+
+    with open(dist, "wb") as write_stream:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                write_stream.write(chunk)
+
+    print("Audio saved to:", dist)
+
+main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+import fs from "fs";
+import path from "path";
+
+async function main() {
+  const url = "https://api.aimlapi.com/v1/tts";
+  const payload = {
+    model: "minimax/speech-2.6-hd",
+    text: "Hi! What are you doing today?",
+    voice_setting: {
+      voice_id: "Wise_Woman"
+    }
+  };
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      "Authorization": `Bearer <YOUR_AIMLAPI_KEY>`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  // Read response as ArrayBuffer and convert to Buffer
+  const arrayBuffer = await response.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+
+  // Save audio to file in the current working directory
+  const dist = path.join(process.cwd(), "your_file_name.wav");
+  fs.writeFileSync(dist, buffer);
+
+  console.log("Audio saved to:", dist);
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```
+Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
+```
+{% endcode %}
+
+</details>
+
+**Generation time**: \~ 5.8 s.
+
+{% embed url="https://drive.google.com/file/d/1aUSd2YtX2Way0Lh_fZSeiWmFWkODaJHI/view" %}
+
+## Code Example #2: Using a Custom (Cloned) Voice
+
+To create a custom voice preset that you can later use for text-to-speech (TTS), follow these steps:
+
+1. Register on [the official MiniMax website](https://www.minimax.io/audio/voices-cloning).
+2.  Create the API Key:
+
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+3.  [On the Voice Cloning page](https://www.minimax.io/audio/voices-cloning), upload an audio file containing a sample of the voice you want to clone:
+
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+
+
+
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+
+
+4.  Copy the assigned file\_id:<br>
+
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
+5. Paste it as a value into the voice clone API call:\
+   <br>
+6. Copy the assigned `voice_id`.<br>
+
+That’s it — you can now use this identifier as the value of the `voice_id` parameter when calling the Minimax 2.6 HD model.
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import os
+import requests
+
+def main():
+    url = "https://api.aimlapi.com/v1/tts"
+    headers = {
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+    }
+    payload = {
+        "model": "minimax/speech-2.6-hd",
+        "text": "Hi! What are you doing today?",
+        "voice_setting": {
+          "voice_id": "Wise_Woman"
+        }
+    }
+
+    response = requests.post(url, headers=headers, json=payload, stream=True)
+    dist = os.path.abspath("your_file_name.wav")
+
+    with open(dist, "wb") as write_stream:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                write_stream.write(chunk)
+
+    print("Audio saved to:", dist)
+
+main()
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+import fs from "fs";
+import path from "path";
+
+async function main() {
+  const url = "https://api.aimlapi.com/v1/tts";
+  const payload = {
+    model: "minimax/speech-2.6-hd",
+    text: "Hi! What are you doing today?",
+    voice_setting: {
+      voice_id: "Wise_Woman"
+    }
+  };
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+      "Authorization": `Bearer <YOUR_AIMLAPI_KEY>`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  // Read response as ArrayBuffer and convert to Buffer
+  const arrayBuffer = await response.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+
+  // Save audio to file in the current working directory
+  const dist = path.join(process.cwd(), "your_file_name.wav");
+  fs.writeFileSync(dist, buffer);
+
+  console.log("Audio saved to:", dist);
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+## API Schema
+
+{% openapi-operation spec="speech-2-6-hd" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-6-hd](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-hd.json)
+{% endopenapi-operation %}
