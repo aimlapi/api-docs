@@ -515,7 +515,7 @@
 
 ***
 
-* [📞 Contact Sales](mailto:aberesneva@aimlapi.com)
+* [📞 Contact Sales](mailto:kristinao@aimlapi.com)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 * [404 Model is deprecated](404-model-is-deprecated.md)
 
