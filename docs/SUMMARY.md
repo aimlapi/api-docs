@@ -66,7 +66,6 @@
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
-    * [DeepSeek Prover V2](api-references/text-models-llm/deepseek/deepseek-prover-v2.md)
     * [DeepSeek Chat V3.1](api-references/text-models-llm/deepseek/deepseek-chat-v3.1.md)
     * [DeepSeek Reasoner V3.1](api-references/text-models-llm/deepseek/deepseek-reasoner-v3.1.md)
     * [Deepseek Non-reasoner V3.1 Terminus](api-references/text-models-llm/deepseek/deepseek-non-reasoner-v3.1-terminus.md)
