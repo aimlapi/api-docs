@@ -129,7 +129,7 @@ To create a custom voice preset that you can later use for text-to-speech (TTS),
 1. Register on [the official MiniMax website](https://www.minimax.io/audio/voices-cloning).
 2.  Create the API Key:
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 3.  [On the Voice Cloning page](https://www.minimax.io/audio/voices-cloning), upload an audio file containing a sample of the voice you want to clone:
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
