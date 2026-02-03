@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly Sonnet and [Opus](../Anthropic/claude-3-opus.md). It excels in generating coherent and contextually rich text.
+A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly Sonnet and [Opus](/broken/pages/vZRlc1iXswGQ27YX1QFu). It excels in generating coherent and contextually rich text.
 
 {% hint style="warning" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

@@ -18,7 +18,7 @@ Here, you'll learn how to start using our API in your code. The following steps 
 * [configuring the base URL](./#configuring-base-url),
 * [making an API call](./#making-an-api-call).
 
-Let's walk through an example of connecting to [the free-tier Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via OpenAI SDK. \
+Let's walk through an example of connecting to [the free-tier Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via [REST API](../supported-sdks.md#rest-api). \
 After completing the steps, you will be able to generate text with this model at no cost.
 
 This guide is suitable even for complete beginners.
@@ -521,9 +521,10 @@ Voila! Using AI/ML API models is the simplest and most productive way to get int
 
 ## Future Steps
 
-* [Browse and compare our models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Move to production-ready models: see the guide for connecting GPT-4o](u9q0.md)
+* [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Know more about supported SDKs](../supported-sdks.md)
+* [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)
 
 [^1]: Because of notation, these two parameters are called slightly differently in different languages (camel case in JS and snake case in Python), but their functionality is the same.

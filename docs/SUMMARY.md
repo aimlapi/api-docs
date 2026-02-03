@@ -36,7 +36,6 @@
     * [magnum-v4](api-references/text-models-llm/Anthracite/magnum-v4.md)
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)
     * [Claude 3 Haiku](api-references/text-models-llm/Anthropic/claude-3-haiku.md)
-    * [Claude 3 Opus](api-references/text-models-llm/Anthropic/claude-3-opus.md)
     * [Claude 3.5 Haiku](api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
     * [Claude 3.7 Sonnet](api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
     * [Claude 4 Opus](api-references/text-models-llm/anthropic/claude-4-opus.md)
