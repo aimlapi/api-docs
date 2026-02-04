@@ -3,10 +3,10 @@
 ## Quickstart
 
 * [🧭 Documentation Map](README.md)
-* [Quickstart](quickstart/setting-up.md)
+* [Quickstart \[OLD\]](quickstart/setting-up.md)
 * [Quickstart](quickstart/u9q0-g/README.md)
   * [Requesting more advanced models](quickstart/u9q0-g/u9q0.md)
-* [Supported SDKs](quickstart/supported-sdks.md)
+* [Supported SDKs \[OLD\]](quickstart/supported-sdks.md)
 * [Supported SDKs](quickstart/u9q.md)
 
 ## API REFERENCES

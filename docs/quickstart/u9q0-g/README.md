@@ -1,8 +1,8 @@
 ---
 description: >-
   Access leading AI models (GPT-4o, Gemini, and others) through a single unified
-  API. Initial setup usually takes just a few minutes. New accounts can make up
-  to 10 free requests per hour.
+  API. Initial setup takes just a few minutes. New accounts can make up to 10
+  free requests per hour.
 icon: hand-wave
 ---
 
@@ -61,7 +61,7 @@ Each language has recommended environments for running code samples.
 <table data-header-hidden><thead><tr><th width="196.9332275390625" valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"><strong>cURL</strong></td><td><ul><li><a href="https://reqbin.com/curl">REQBIN</a> is a web-based REST client that lets you quickly run cURL requests directly in your browser, without installing any tools.</li><li><a href="https://git-scm.com/install/windows">Git Bash</a> (Windows) or the built-in Terminal (macOS/Linux) allow you to run cURL examples and other command-line tools locally.  </li></ul></td></tr><tr><td valign="top"><strong>Python</strong></td><td><ul><li><a href="https://jupyter.org/try-jupyter/notebooks/?path=Untitled.ipynb">Jupyter Notebook</a> is a popular online environment for running Python code and is the fastest option if you do not want to install anything locally.</li><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code) is a lightweight and widely used code editor that supports both Python and Node.js. It is suitable for running and debugging local examples and for working on real projects.</li></ul></td></tr><tr><td valign="top"><strong>JavaScript</strong></td><td><ul><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code)</li></ul></td></tr></tbody></table>
 
 {% hint style="info" %}
-In the examples below for JavaScript and Python, we use the [**REST API SDK**](../supported-sdks.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks.md), or make direct requests using **cURL** without any SDK.
+In the examples below for cURL, JavaScript and Python, we use the [**REST API**](../supported-sdks.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks.md).
 {% endhint %}
 
 ## Making an API Call
@@ -72,7 +72,7 @@ If you want to get started really quickly, choose one of the four expandable sec
 Each one contains instructions for calling our model using different tools and environments. \
 The first two options are especially simple and suitable even for beginners.
 
-For completeness, we also walk through the same example step by step for each language [later in this guide](./#code-explanation).
+For completeness, the same example is explained in detail in the [Code Step-by-Step](./#code-step-by-step-explanation) section.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -418,7 +418,7 @@ The city is famous for its iconic Golden Gate Bridge, an engineering marvel and 
 
 ***
 
-## Code Step-by-Step Explanation
+## Code Step-by-Step
 
 Below is a step-by-step explanation of the same API call in three variants: cURL, JavaScript, and Python. All three examples send an identical request to the `google/gemma-3-4b-it` chat model.
 
