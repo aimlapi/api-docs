@@ -1,13 +1,13 @@
 # Requesting more advanced models
 
-This guide uses a more advanced model, GPT-4o. If you need help with API keys or environment configuration, go back to the previous step and follow [the detailed quickstart guide](../setting-up.md) for the free Gemma 3 model.
+This guide uses a more advanced model, GPT-4o. If you need help with API keys or environment configuration, go back to the previous step and follow [the detailed quickstart guide](../setting-up-old.md) for the free Gemma 3 model.
 
 ***
 
 ## Making an API Call
 
 {% hint style="info" %}
-In the examples below, we use the OpenAI SDK. This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can also use [other supported SDKs](../supported-sdks.md), or call our API directly using cURL.
+In the examples below, we use the OpenAI SDK. This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can also use [other supported SDKs](../supported-sdks-old.md), or call our API directly using cURL.
 {% endhint %}
 
 The chat model used in this example is more advanced. In addition to regular user messages, it supports the `system` role in the `messages` parameter, which can be used to define global instructions that affect the model’s overall behavior, for example:
@@ -28,6 +28,74 @@ messages: [
 Here’s the complete code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API key from your account, provide your behavior instructions in the system prompt, and place your request to the model in the user prompt.
 
 {% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -L \
+  --request POST \
+  --url 'https://api.aimlapi.com/v1/chat/completions' \
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a travel agent. Be descriptive and helpful.",
+      }, 
+      {
+        "role": "user",
+        "content": "Tell me about San Francisco"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 512
+  }'
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
+```javascript
+systemPrompt = 'You are a travel agent. Be descriptive and helpful.' // instructions
+userPrompt = 'Tell me about San Francisco' // your request
+
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'gpt-4o',
+      messages:[
+          {
+              role: 'system',
+              content: systemPrompt,
+          }, 
+          {
+              role: 'user',
+              content: userPrompt
+          }
+      ],
+      temperature: 0.7,
+      max_tokens: 512,
+    }),
+  });
+
+  const data = await response.json();
+  const answer = data.choices[0].message.content;
+  
+  console.log('User:', userPrompt);
+  console.log('AI:', answer);
+}
+
+main();
+```
+{% endcode %}
+{% endtab %}
+
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
@@ -66,54 +134,6 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
 {% endcode %}
 {% endtab %}
-
-{% tab title="JavaScript" %}
-{% code overflow="wrap" %}
-```javascript
-#!/usr/bin/env node
-
-const OpenAI = require("openai");
-const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "<YOUR_AIMLAPI_KEY>";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
-const userPrompt = "Tell me about San Francisco";
-
-const api = new OpenAI({
-  apiKey,
-  baseURL,
-});
-
-const main = async () => {
-  try {
-    const completion = await api.chat.completions.create({
-      model: "gpt-4o",
-      messages: [
-        {
-          role: "system",
-          content: systemPrompt,
-        },
-        {
-          role: "user",
-          content: userPrompt,
-        },
-      ],
-      temperature: 0.7,
-      max_tokens:256,
-    });
-
-    const response = completion.choices[0].message.content;
-
-    console.log("User:", userPrompt);
-    console.log("AI:", response);
-  } catch (error) {
-    console.error("Error:", error.message);
-  }
-};
-
-main();
-```
-{% endcode %}
-{% endtab %}
 {% endtabs %}
 
 ***
@@ -121,6 +141,6 @@ main();
 ## Future Steps
 
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
-* [Know more about supported SDKs](../supported-sdks.md)
+* [Know more about supported SDKs](../supported-sdks-old.md)
 * [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

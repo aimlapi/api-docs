@@ -42,7 +42,7 @@ Only `model` and `messages` are required parameters for this model (and we’ve 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up-old.md).
 {% endhint %}
 
 </details>
@@ -69,7 +69,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 
 ### Responses Endpoint
 
-This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.&#x20;
+This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
 {% openapi-operation spec="gpt-4o-RESPONSES" path="/v1/responses" method="post" %}
 [OpenAPI gpt-4o-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-RESPONSES.json)

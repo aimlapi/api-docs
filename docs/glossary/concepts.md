@@ -24,7 +24,7 @@ Our base URL also supports versioning, so you can use the following as well:
 * `https://api.aimlapi.com`
 * `https://api.aimlapi.com/v1`
 
-Usually, you pass the base URL as the same field inside the SDK constructor. In some cases, you can set the environment variable `BASE_URL`, and it will work. If you want to use the OpenAI SDK, then follow the [setting up article](../quickstart/setting-up.md) and take a closer look at how to use it with the AI/ML API.
+Usually, you pass the base URL as the same field inside the SDK constructor. In some cases, you can set the environment variable `BASE_URL`, and it will work. If you want to use the OpenAI SDK, then follow the [setting up article](../quickstart/setting-up-old.md) and take a closer look at how to use it with the AI/ML API.
 
 ## Base64
 

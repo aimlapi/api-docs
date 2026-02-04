@@ -1,6 +1,6 @@
 # Claude 4 Opus
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model: </p><ul><li><code>anthropic/claude-opus-4</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/claude-opus-4-20250514" class="button primary">Try in Playground</a></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:</p><ul><li><code>anthropic/claude-opus-4</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/claude-opus-4-20250514" class="button primary">Try in Playground</a></td></tr></tbody></table>
 
 ## Model Overview
 
@@ -35,7 +35,7 @@ Only `model` and `messages` are required parameters for this model (and we’ve 
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up-old.md).
 {% endhint %}
 
 </details>
