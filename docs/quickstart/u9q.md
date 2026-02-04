@@ -2,8 +2,6 @@
 description: >-
   A description of the software development kits (SDKs) that can be used to
   interact with the AIML API.
-hidden: true
-noIndex: true
 icon: hammer-brush
 layout:
   width: default
@@ -25,11 +23,34 @@ layout:
 
 This page describes the SDK[^1]s that can be used to call our API.
 
-Comparing requests made with different SDKs, pay attention to the following common aspects across all SDKs:
+<details>
+
+<summary>Key Definitions &#x26; Notes</summary>
+
+The **REST API** itself is _not_ an SDK. It is the **server-side interface** that exposes your models over HTTP. It defines endpoints, HTTP methods (POST/GET), required headers, and the structure of request and response JSON. Essentially, it’s the “contract” the server provides for clients to interact with models programmatically.
+
+***
+
+An **SDK** (Software Development Kit) is a **client-side library** that wraps around the REST API. It handles details like building HTTP requests, serializing/deserializing JSON, error handling, retries, and sometimes additional conveniences.&#x20;
+
+You can skip the SDK and call the REST API directly via cURL, fetch, requests, etc. \
+The SDK just makes your life easier; the REST API is the “core interface” the SDK talks to.
+
+***
+
+The following flow shows how a request travels from your code to the model and back. Using an SDK is optional — it simply wraps the REST API for convenience.
+
+> Your code → SDK (optional) → REST API → Model → REST API → SDK → Your code
+
+</details>
+
+{% hint style="info" %}
+Comparing requests made with raw REST API and different SDKs, pay attention to the following common aspects:
 
 * how the Authorization header and the AIML API key are provided,
 * how the `POST` method and the endpoint URL are specified,
 * how the input parameters are passed.
+{% endhint %}
 
 {% hint style="success" %}
 Also take a look at the [**INTEGRATIONS**](../integrations/our-integration-list.md) section — it covers many third-party services and libraries (workflow platforms, coding assistants, etc.) that allow you to integrate our models in various ways.
@@ -39,13 +60,43 @@ Also take a look at the [**INTEGRATIONS**](../integrations/our-integration-list.
 
 ## REST API
 
-This SDK is simple to use, and the required `requests` library is commonly preinstalled in many environments. Therefore, this SDK is used in the documentation examples for all of our models.
+We use the REST API because it’s fast, simple, and easy to understand. Only in Python do you need to import a separate library (`requests`), while cURL and JavaScript (Node.js) already have built-in support for HTTP requests. Therefore, REST API is used in the documentation examples for _all_ of our models.
+
+### Installation
+
+In Python examples, you need to import the `requests` library. The Node.js and cURL examples do not require any additional imports.
+
+Install the library first:
+
+{% tabs %}
+{% tab title="Shell" %}
+```bash
+pip install requests
+```
+{% endtab %}
+{% endtabs %}
+
+Import the library in every Python code snippet where you make calls to the REST API.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import requests
+```
+{% endtab %}
+{% endtabs %}
 
 ### Authorization
 
 Our API authorization is based on a Bearer token. Include it in the `Authorization` HTTP header within the request. Example:
 
 {% tabs %}
+{% tab title="cURL" %}
+```ruby
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
+```
+{% endtab %}
+
 {% tab title="JavaScript" %}
 ```javascript
   headers: {
@@ -61,17 +112,30 @@ Our API authorization is based on a Bearer token. Include it in the `Authorizati
     },
 ```
 {% endtab %}
-
-{% tab title="cURL" %}
-```ruby
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
-```
-{% endtab %}
 {% endtabs %}
 
 ### Request Example
 
 {% tabs %}
+{% tab title="cURL" %}
+```ruby
+curl --request POST \
+  --url https://api.aimlapi.com/chat/completions \
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "model": "google/gemma-3-4b-it",
+    "messages": [
+        {
+            "role": "user",
+            "content": "What kind of model are you?"
+        }
+    ],
+    "max_tokens": 512
+}'
+```
+{% endtab %}
+
 {% tab title="JavaScript" %}
 ```javascript
 fetch("https://api.aimlapi.com/chat/completions", {
@@ -81,7 +145,7 @@ fetch("https://api.aimlapi.com/chat/completions", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    model: "gpt-4o",
+    model: "google/gemma-3-4b-it",
     messages: [
       {
         role: "user",
@@ -99,7 +163,7 @@ fetch("https://api.aimlapi.com/chat/completions", {
 {% tab title="Python" %}
 ```python
 import requests
-import json
+import json  # for getting a structured output with indentation
 
 response = requests.post(
     url="https://api.aimlapi.com/chat/completions",
@@ -109,40 +173,20 @@ response = requests.post(
     },
     data=json.dumps(
         {
-            "model": "gpt-4o",
+            "model": "google/gemma-3-4b-it",
             "messages": [
                 {
                     "role": "user",
                     "content": "What kind of model are you?",
                 },
             ],
-            "max_tokens": 512,
-            "stream": False,
+            "max_tokens": 512
         }
     ),
 )
 
 response.raise_for_status()
 print(response.json())
-```
-{% endtab %}
-
-{% tab title="cURL" %}
-```ruby
-curl --request POST \
-  --url https://api.aimlapi.com/chat/completions \
-  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
-  --header 'Content-Type: application/json' \
-  --data '{
-    "model": "gpt-4o",
-    "messages": [
-        {
-            "role": "user",
-            "content": "What kind of model are you?"
-        }
-    ],
-    "max_tokens": 512
-}'
 ```
 {% endtab %}
 {% endtabs %}
@@ -152,8 +196,6 @@ curl --request POST \
 ## OpenAI
 
 The OpenAI SDK is a nice module that allows us to use the AI/ML API without dealing with repetitive boilerplate code for handling cURL requests.&#x20;
-
-In the [setting up article](https://docs.aimlapi.com/quickstart/setting-up), we showed an example of how to use the OpenAI SDK with the AI/ML API. We configured the environment from the very beginning and executed our request to the AI/ML API.
 
 <details>
 
@@ -168,6 +210,60 @@ In the [setting up article](https://docs.aimlapi.com/quickstart/setting-up), we 
 * Embeddings
 * Image Generation
 * File Uploads
+
+{% hint style="info" %}
+Therefore, we don’t have the option to call a video model through this SDK.
+{% endhint %}
+
+</details>
+
+### Installation
+
+<details>
+
+<summary>Python</summary>
+
+1\. Make sure you have Python 3.7+ and `pip` installed.
+
+2\. Install the OpenAI SDK via terminal or Jupyter Notebook:
+
+```bash
+pip install openai
+```
+
+> In Jupyter Notebook, you can also use:
+>
+> ```python
+> %pip install openai
+> ```
+
+3\. Import the SDK:
+
+```python
+import openai
+```
+
+***
+
+</details>
+
+<details>
+
+<summary>JavaScript (Node.js)</summary>
+
+1\. Make sure you have Node.js 18+ and npm installed.
+
+2\. Install the OpenAI SDK in your project:
+
+```bash
+npm install openai
+```
+
+3\. Import the SDK and initialize the client:
+
+```js
+import OpenAI from "openai";
+```
 
 </details>
 
@@ -333,4 +429,4 @@ python3 <your_script_name>.py
 * [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)
 
-[^1]: Software Development Kits
+[^1]: An SDK (Software Development Kit) is a **client-side library** that wraps around the REST API.

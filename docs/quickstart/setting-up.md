@@ -12,9 +12,9 @@ icon: hand-wave
 
 Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../api-references/model-database.md) we offer or use our ready-made solution:
 
-* [generating an AIML API Key](setting-up-old.md#generating-an-aiml-api-key),
-* [configuring the base URL](setting-up-old.md#configuring-base-url),
-* [making an API call](setting-up-old.md#making-an-api-call).
+* [generating an AIML API Key](setting-up.md#generating-an-aiml-api-key),
+* [configuring the base URL](setting-up.md#configuring-base-url),
+* [making an API call](setting-up.md#making-an-api-call).
 
 Let's walk through an example of connecting to the [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) model via OpenAI SDK. This guide is suitable even for complete beginners.
 
@@ -69,7 +69,7 @@ Using versioned URLs can help ensure compatibility with future updates and chang
 Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: **Python** and **NodeJS**.
 
 {% hint style="info" %}
-In the examples below, we use the [**OpenAI SDK**](supported-sdks-old.md#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
+In the examples below, we use the [**OpenAI SDK**](supported-sdks.md#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw HTTP queries.
 {% endhint %}
 
 If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API Key obtained from your account.\
@@ -211,7 +211,7 @@ Create new file and name it as `travel.py`
 touch travel.py
 ```
 
-Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up-old.md#generating-an-api-key).
+Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](setting-up.md#generating-an-api-key).
 
 ```python
 from openai import OpenAI
@@ -521,4 +521,4 @@ Voila! Using AI/ML API models is the simplest and most productive way to get int
 
 ## Future Steps
 
-* [Know more about OpenAI SDK inside AI/ML API](supported-sdks-old.md)
+* [Know more about OpenAI SDK inside AI/ML API](supported-sdks.md)

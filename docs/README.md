@@ -14,7 +14,7 @@ This page helps you quickly find the right AI model or ready-to-use solution for
 
 ***
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/setting-up-old.md"><strong>Setup guide</strong></a> <br><br>🧩 <a href="quickstart/supported-sdks-old.md"><strong>SDKs</strong></a>  </p><p></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/setting-up.md"><strong>Setup guide</strong></a> <br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a>  </p><p></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 client = OpenAI(
 base_url="https://api.aimlapi.com/v1",
 api_key="&#x3C;YOUR_AIMLAPI_KEY>",

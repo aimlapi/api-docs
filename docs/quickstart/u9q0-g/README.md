@@ -61,7 +61,7 @@ Each language has recommended environments for running code samples.
 <table data-header-hidden><thead><tr><th width="196.9332275390625" valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"><strong>cURL</strong></td><td><ul><li><a href="https://reqbin.com/curl">REQBIN</a> is a web-based REST client that lets you quickly run cURL requests directly in your browser, without installing any tools.</li><li><a href="https://git-scm.com/install/windows">Git Bash</a> (Windows) or the built-in Terminal (macOS/Linux) allow you to run cURL examples and other command-line tools locally.  </li></ul></td></tr><tr><td valign="top"><strong>Python</strong></td><td><ul><li><a href="https://jupyter.org/try-jupyter/notebooks/?path=Untitled.ipynb">Jupyter Notebook</a> is a popular online environment for running Python code and is the fastest option if you do not want to install anything locally.</li><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code) is a lightweight and widely used code editor that supports both Python and Node.js. It is suitable for running and debugging local examples and for working on real projects.</li></ul></td></tr><tr><td valign="top"><strong>JavaScript</strong></td><td><ul><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code)</li></ul></td></tr></tbody></table>
 
 {% hint style="info" %}
-In the examples below for JavaScript and Python, we use the [**REST API SDK**](../supported-sdks-old.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks-old.md), or make direct requests using **cURL** without any SDK.
+In the examples below for JavaScript and Python, we use the [**REST API SDK**](../supported-sdks.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks.md), or make direct requests using **cURL** without any SDK.
 {% endhint %}
 
 ## Making an API Call
@@ -762,8 +762,8 @@ Output formatting: from the model’s full response, only the generated text is 
 
 ## Future Steps
 
-* [Move to production-ready models: see the guide for connecting GPT-4o](requesting-more-advanced-models.md)
+* [Move to production-ready models: see the guide for connecting GPT-4o](u9q0.md)
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
-* [Know more about supported SDKs](../supported-sdks-old.md)
+* [Know more about supported SDKs](../supported-sdks.md)
 * [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

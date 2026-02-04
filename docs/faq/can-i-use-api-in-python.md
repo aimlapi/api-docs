@@ -50,4 +50,4 @@ sudo apt install -y python3-venv
 
 ## Using
 
-Test your installation and you can proceed with the tutorial on the [quickstart](../quickstart/setting-up-old.md) page.
+Test your installation and you can proceed with the tutorial on the [quickstart](../quickstart/setting-up.md) page.

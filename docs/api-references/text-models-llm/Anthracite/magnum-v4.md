@@ -22,7 +22,7 @@ A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
 {% endhint %}
 
-[How to make the first API call](../../../quickstart/setting-up-old.md)
+[How to make the first API call](../../../quickstart/setting-up.md)
 
 <details>
 
@@ -47,7 +47,7 @@ Depending on the model type, you can add optional parameters to control the outp
 Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up-old.md).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
 {% endhint %}
 
 </details>
