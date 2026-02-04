@@ -10,18 +10,24 @@ icon: hand-wave
 
 # Quickstart
 
+{% hint style="success" %}
+If you are a manager and simply want to test a model to evaluate its performance, for instance in content generation, the quickest approach is **to use** [**our Playground**](https://aimlapi.com/app/). \
+It offers an intuitive, user-friendly interface—no coding required.
+
+Programmatic API calls are best suited for developers who want to integrate a model into their own apps.
+{% endhint %}
+
 ***
 
-Here, you'll learn how to start using our API in your code. The following steps must be completed regardless of whether you integrate one of the [models](../../api-references/model-database.md) we offer or use our ready-made solution:
+Here, you'll learn how to start using our API in your code. \
+The following steps must be completed regardless of which of our models you plan to call:
 
 * [generating an AIML API Key](./#generating-an-aiml-api-key),
-* [configuring the base URL](./#configuring-base-url),
+* [choosing and preparing your development environment](./#choosing-and-preparing-the-development-environment),
 * [making an API call](./#making-an-api-call).
 
-Let's walk through an example of connecting to [the free-tier Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via [REST API](../supported-sdks.md#rest-api). \
+Let's walk through an example of connecting to [the free-tier Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via REST API. \
 After completing the steps, you will be able to generate text with this model at no cost.
-
-This guide is suitable even for complete beginners.
 
 ## G**enerating an AIML API Key**
 
@@ -43,42 +49,25 @@ If you lose it, generate a new key from your dashboard.
 To use the AIML API, you need to create an account and generate an AIML API key. \
 Follow these steps:
 
-1. [**Create an Account**](https://aimlapi.com/app/sign-up)**:** Visit the AI/ML API website and create an account.
-2. [**Generate an API Key**](https://aimlapi.com/app/keys)**:** After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+1. [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account.
+2. [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-## **Configuring Base URL**
+***
 
-<details>
+## Choosing and Preparing the Development Environment
 
-<summary><mark style="color:blue;">What is a Base URL?</mark></summary>
+Each language has recommended environments for running code samples.
 
-The **Base URL** is the first part of the URL (including the protocol, domain, and pathname) that determines the server responsible for handling your request. It’s crucial to configure the correct Base URL in your application, especially if you are using SDKs from OpenAI, Azure, or other providers. By default, these SDKs are set to point to their servers, which are not compatible with our API keys and do not support many of the models we offer.
-
-</details>
-
-Depending on your environment and application, you will set the base URL differently. Below is a universal string that you can use to access our API. Copy it or return here later when you are ready with your environment or app.
-
-```
-https://api.aimlapi.com
-```
-
-The AI/ML API supports both versioned and non-versioned URLs, providing flexibility in your API requests. You can use either of the following formats:
-
-* <kbd>https://api.aimlapi.com</kbd>
-* <kbd>https://api.aimlapi.com/v1</kbd>
-
-{% hint style="success" %}
-Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
-{% endhint %}
+<table data-header-hidden><thead><tr><th width="196.9332275390625"></th><th></th></tr></thead><tbody><tr><td>Python</td><td><ul><li><a href="https://jupyter.org/try-jupyter/notebooks/?path=Untitled.ipynb">Jupyter Notebook</a> is a popular online environment for running Python code and is the fastest option if you do not want to install anything locally.</li><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code) is a lightweight and widely used code editor that supports both Python and Node.js. It is suitable for running and debugging local examples and for working on real projects.</li></ul></td></tr><tr><td>JavaScript</td><td><ul><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code)</li></ul></td></tr><tr><td>cURL</td><td><ul><li><a href="https://reqbin.com/curl">REQBIN</a> is a web-based REST client that lets you quickly run cURL requests directly in your browser, without installing any tools.</li><li><a href="https://git-scm.com/install/windows">Git Bash</a> (Windows) or the built-in Terminal (macOS/Linux) allow you to run cURL examples and other command-line tools locally.  </li></ul></td></tr></tbody></table>
 
 ## Making an API Call
 
 Based on your environment, you will call our API differently. Below are two common ways to call our API using two popular programming languages: **JavaScript** (NodeJS) и **Python**.
 
 {% hint style="info" %}
-In the examples below, we use the [**OpenAI SDK**](../supported-sdks.md#openai). This is possible due to our compatibility with most OpenAI APIs, but this is just one approach. You can use our API without this SDK with raw cURL queries.
+In the examples below, we use the [**REST API SDK**](../supported-sdks.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks.md), or make direct requests using cURL without any SDK.
 {% endhint %}
 
 If you don’t want lengthy explanations, here’s the code you can use right away in a Python or Node.js program. You only need to replace `<YOUR_AIMLAPI_KEY>` with your AIML API Key obtained from your account.
@@ -89,81 +78,63 @@ However, below, we will still go through these examples step by step in both lan
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
-from openai import OpenAI
+import requests 
 
-# Insert your AIML API key in the quotation marks instead of <YOUR_AIMLAPI_KEY>:
-api_key = "<YOUR_AIMLAPI_KEY>" 
-base_url = "https://api.aimlapi.com/v1"
-
-system_prompt = "You are a travel agent. Be descriptive and helpful."
-user_prompt = "Tell me about San Francisco"
-
-api = OpenAI(api_key=api_key, base_url=base_url)
-
-
-def main():
-    completion = api.chat.completions.create(
-        model="google/gemma-3-4b-it",
-        messages=[
-            {"role": "user", "content": user_prompt},
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    
+    # Input parameter section
+    json={
+        "model":"google/gemma-3-4b-it",
+        "messages":[   
+            {
+                "role":"user",
+                "content": "Tell me about San Francisco"  # insert your prompt
+            }
         ],
-        temperature=0.7,
-        max_tokens=256,
-    )
+        "temperature": 0.7,
+        "max_tokens": 256,
+    }
+)
 
-    response = completion.choices[0].message.content
-    print("User:", user_prompt)
-    print("AI:", response)
-
-
-if __name__ == "__main__":
-    main()
+data = response.json()
+print(data)
 ```
 {% endcode %}
 {% endtab %}
 
-{% tab title="NodeJS" %}
+{% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
-#!/usr/bin/env node
-
-const OpenAI = require("openai");
-const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "<YOUR_AIMLAPI_KEY>";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
-const userPrompt = "Tell me about San Francisco";
-
-const api = new OpenAI({
-  apiKey,
-  baseURL,
-});
-
-const main = async () => {
-  try {
-    const completion = await api.chat.completions.create({
-      model: "google/gemma-3-4b-it",
-      messages: [
-        {
-          role: "system",
-          content: systemPrompt,
-        },
-        {
-          role: "user",
-          content: userPrompt,
-        },
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'google/gemma-3-4b-it',
+      messages:[
+          {
+              role:'user',
+              content: 'Tell me about San Francisco'  // Insert your prompt here
+          }
       ],
       temperature: 0.7,
-    });
+      max_tokens: 256,
+    }),
+  });
 
-    const response = completion.choices[0].message.content;
-
-    console.log("User:", userPrompt);
-    console.log("AI:", response);
-  } 
-  catch (error) {
-    console.error("Error:", error.message);
-  }
-};
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
 
 main();
 ```
@@ -173,87 +144,67 @@ main();
 
 <details>
 
-<summary>Step-by-step example in JavaScript (NodeJS)</summary>
+<summary>Step-by-step instruction in JavaScript (NodeJS)</summary>
 
 We assume you already have Node.js installed. If not, here is a [guide for beginners](../../faq/can-i-use-api-in-nodejs.md).
 
-Create a new folder for the example project
+Create a new folder for the example project:
 
 ```bash
 mkdir ./aimlapi-welcome
 cd ./aimlapi-welcome
 ```
 
-Create a project file
+Create a project file:
 
 ```bash
 npm init -y
 ```
 
-Install the required dependencies
-
-```bash
-npm i openai
-```
-
-Create a file with the source code
+Create a file with the source code:
 
 ```bash
 touch ./index.js
 ```
 
-And paste the following content to the file and save it
+And paste the following content to the file and save it:
 
 ```javascript
-#!/usr/bin/env node
-
-const OpenAI = require("openai");
-const baseURL = "https://api.aimlapi.com/v1";
-const apiKey = "PASTE YOUR API KEY HERE";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful.";
-const userPrompt = "Tell me about San Francisco";
-
-const api = new OpenAI({
-  apiKey,
-  baseURL,
-});
-
-const main = async () => {
-  try {
-    const completion = await api.chat.completions.create({
-      model: "google/gemma-3-27b-it",
-      messages: [
-        {
-          role: "system",
-          content: systemPrompt,
-        },
-        {
-          role: "user",
-          content: userPrompt,
-        },
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'google/gemma-3-4b-it',
+      messages:[
+          {
+              role:'user',
+              content: 'Tell me about San Francisco'  // Insert your prompt here
+          }
       ],
       temperature: 0.7,
-    });
+      max_tokens: 256,
+    }),
+  });
 
-    const response = completion.choices[0].message.content;
-
-    console.log("User:", userPrompt);
-    console.log("AI:", response);
-  } catch (error) {
-    console.error("Error:", error.message);
-  }
-};
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
 
 main();
 ```
 
-Run the file
+Run the file:
 
 ```bash
 ./index.js
 ```
 
-You will see a response that looks like this
+You will see a response that looks like this:
 
 {% code overflow="wrap" %}
 ```json5
@@ -268,7 +219,7 @@ The city is famous for its iconic Golden Gate Bridge, an engineering marvel and 
 
 <details>
 
-<summary>Step-by-step example in Python</summary>
+<summary>Step-by-step instruction in Python</summary>
 
 Let's start from very beginning. We assume you already installed Python (with venv), if not, here a [guide for the beginners](../../faq/can-i-use-api-in-python.md).
 
@@ -279,19 +230,19 @@ mkdir ./aimlapi-welcome
 cd ./aimlapi-welcome
 ```
 
-(Optional) If you use IDE then we recommend to open created folder as workspace. On example, in VSCode you can do it with:
+(Optional) If you use IDE then we recommend to open created folder as workspace. On example, in Visual Studio Code you can do it with:
 
 ```
 code .
 ```
 
-Run a terminal inside created folder and create virtual envorinment with a command
+Run a terminal inside created folder and create virtual envorinment with a command:
 
 ```shell
 python3 -m venv ./.venv
 ```
 
-Activate created virtual environment
+Activate created virtual environment:
 
 ```shell
 # Linux / Mac
@@ -300,53 +251,48 @@ source ./.venv/bin/activate
 ./.venv/bin/Activate.bat
 ```
 
-Install requirement dependencies. In our case we need only OpenAI SDK
+Install requirement dependencies. In our case (REST API SDK) we need only `request` library:
 
 ```shell
-pip install openai
+pip install requests
 ```
 
-Create new file and name it as `travel.py`
+Create new file and name it as `travel.py`:
 
 ```shell
 touch travel.py
 ```
 
-Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](./#generating-an-api-key).
+Paste following content inside this `travel.py` and replace `<YOUR_AIMLAPI_KEY>` with your API key you got on [first step](./#generating-an-api-key):
 
 ```python
-from openai import OpenAI
+import requests 
 
-base_url = "https://api.aimlapi.com/v1"
-api_key = "<YOUR_AIMLAPI_KEY>"
-system_prompt = "You are a travel agent. Be descriptive and helpful."
-user_prompt = "Tell me about San Francisco"
-
-api = OpenAI(api_key=api_key, base_url=base_url)
-
-
-def main():
-    completion = api.chat.completions.create(
-        model="google/gemma-3-4b-it",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"google/gemma-3-4b-it",
+        "messages":[
+            {
+                "role":"user",
+                "content": "Tell me about San Francisco"  # insert your prompt
+            }
         ],
-        temperature=0.7,
-        max_tokens=256,
-    )
+        "temperature": 0.7,
+        "max_tokens": 256,
+    }
+)
 
-    response = completion.choices[0].message.content
-
-    print("User:", user_prompt)
-    print("AI:", response)
-
-
-if __name__ == "__main__":
-    main()
+data = response.json()
+print(data)
 ```
 
-Run the application
+Run the application:
 
 ```shell
 python3 ./travel.py
@@ -367,7 +313,7 @@ San Francisco's diverse neighborhoods each have their unique character. The hist
 
 </details>
 
-## Code Explanation
+### Code Explanation
 
 Both examples are written in different programming languages, but despite that, they look very similar. Let's break down the code step by step and see what's going on.
 
@@ -376,35 +322,29 @@ In the examples above, we are using the OpenAI SDK. The OpenAI SDK is a nice mod
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const { OpenAI } = require("openai");
+// No additional import is required.
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
-from openai import OpenAI
+import requests
 ```
 {% endtab %}
 {% endtabs %}
 
-Simple as it is. The next step is to initialize variables that our code will use. The two main ones are: the base URL and the API key. We already discussed them at the beginning of the article.
+The next step is to initialize variables that our code will use. The two main ones are: the base URL and the API key.
 
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const baseURL = "https://api.aimlapi.com/v1";
 const apiKey = "<YOUR_AIMLAPI_KEY>";
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
-const userPrompt = "Tell me about San Francisco";
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
-base_url = "https://api.aimlapi.com/v1"
 api_key = "<YOUR_AIMLAPI_KEY>"
-system_prompt = "You are a travel agent. Be descriptive and helpful."
-user_prompt = "Tell me about San Francisco"
 ```
 {% endtab %}
 {% endtabs %}
@@ -434,14 +374,9 @@ api = OpenAI(api_key=api_key, base_url=base_url)
 
 All preparation steps are done. Now we need to write our functionality and create something great. In the examples above, we make the simplest travel agent. Let's break down the steps of how we send a request to the model.
 
-The best practice is to split the code blocks into complete parts with their own logic and not place executable code inside global module code. This rule applies in both languages we discuss. So we create a main function with all our logic. In JS, this function needs to be async, due to Promises and simplicity. In Python, requests run synchronously.
+The best practice is to split the code blocks into complete parts with their own logic and not place executable code inside global module code. This rule applies in both languages we discuss. So we create a main function with all our logic. In JS, this function needs to be async. In Python, requests run synchronously.
 
-The OpenAI SDK provides us with methods to communicate with chat models. It is placed inside the `chat.completions.create` function. This function accepts multiple parameters but requires only two: `model` and `messages`.
-
-* `model` is a string, the name of the model that you want to use. In this example, you must use a chat model, so select one from [the list of available chat models](../../api-references/text-models-llm/#complete-text-model-list).
-* `messages` is an array of objects with a `content` field as prompt and a `role` string that can be `user` or `assistant`. With the role, the model can understand what to do with this prompt: in our example, it is a user message.
-
-We also use `max_tokens` and `temperature`.
+We also use [`max_tokens`](#user-content-fn-2)[^2] and [`temperature`](#user-content-fn-3)[^3].
 
 With that knowledge, we can now send our request like the following:
 
@@ -517,7 +452,9 @@ print("AI:", response)
 {% endtab %}
 {% endtabs %}
 
-Voila! Using AI/ML API models is the simplest and most productive way to get into the world of Machine Learning and Artificial Intelligence.
+Voila!
+
+***
 
 ## Future Steps
 
@@ -528,3 +465,7 @@ Voila! Using AI/ML API models is the simplest and most productive way to get int
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)
 
 [^1]: Because of notation, these two parameters are called slightly differently in different languages (camel case in JS and snake case in Python), but their functionality is the same.
+
+[^2]: The maximum number of tokens that can be generated in the chat completion. This value can be used to control costs for text generated via API.
+
+[^3]: Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.

@@ -2,6 +2,8 @@
 description: >-
   A description of the software development kits (SDKs) that can be used to
   interact with the AIML API.
+hidden: true
+noIndex: true
 icon: hammer-brush
 layout:
   width: default
@@ -19,7 +21,7 @@ layout:
     visible: true
 ---
 
-# Supported SDKs
+# Copy of Supported SDKs
 
 This page describes the SDK[^1]s that can be used to call our API.
 
@@ -38,6 +40,10 @@ Also take a look at the [**INTEGRATIONS**](../integrations/our-integration-list.
 ## REST API
 
 This SDK is simple to use, and the required `requests` library is commonly preinstalled in many environments. Therefore, this SDK is used in the documentation examples for all of our models.
+
+### Installation
+
+
 
 ### Authorization
 
@@ -151,8 +157,6 @@ curl --request POST \
 
 The OpenAI SDK is a nice module that allows us to use the AI/ML API without dealing with repetitive boilerplate code for handling cURL requests.&#x20;
 
-In the [setting up article](https://docs.aimlapi.com/quickstart/setting-up), we showed an example of how to use the OpenAI SDK with the AI/ML API. We configured the environment from the very beginning and executed our request to the AI/ML API.
-
 <details>
 
 <summary>The AI features that the OpenAI SDK supports</summary>
@@ -170,6 +174,34 @@ In the [setting up article](https://docs.aimlapi.com/quickstart/setting-up), we 
 </details>
 
 ### Example Code
+
+<details>
+
+<summary>Code Explanation</summary>
+
+Before we can use the OpenAI SDK, it needs to be imported:
+
+| JavaScript                              | Python                      |
+| --------------------------------------- | --------------------------- |
+| `const { OpenAI } = require("openai");` | `from openai import OpenAI` |
+
+The next step is to initialize variables that our code will use. The two main ones are: the base URL and the API key.
+
+**baseURL**
+
+Unlike direct REST API calls, where the full endpoint URL is specified explicitly, calls made through the OpenAI SDK separate the first part of the URL—up to and including the API version—into a dedicated variable called `baseURL`, which is provided separately.
+
+<table><thead><tr><th width="345.1998291015625">JavaScript</th><th>Python</th></tr></thead><tbody><tr><td><p><code>const baseURL =</code> <br><br><code>"https://api.aimlapi.com/v1";</code></p><p><code>const apiKey = "&#x3C;YOUR_AIMLAPI_KEY>";</code></p></td><td><code>base_url = "https://api.aimlapi.com/v1"</code><br><code>api_key = "&#x3C;YOUR_AIMLAPI_KEY>"</code></td></tr></tbody></table>
+
+{% hint style="success" %}
+Using versioned URLs can help ensure compatibility with future updates and changes to the API. It is recommended to use versioned URLs for long-term projects to maintain stability.
+{% endhint %}
+
+The remaining part of the URL is not specified directly and is instead defined using a predefined set of identifiers provided by OpenAI, as shown below:
+
+
+
+</details>
 
 {% tabs %}
 {% tab title="Python" %}
