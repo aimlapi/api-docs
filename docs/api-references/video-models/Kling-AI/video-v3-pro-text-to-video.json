@@ -93,7 +93,8 @@
                   }
                 },
                 "required": [
-                  "model"
+                  "model",
+                  "prompt"
                 ],
                 "title": "klingai/video-v3-pro-text-to-video"
               }
