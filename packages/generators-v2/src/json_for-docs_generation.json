@@ -1,10 +1,44 @@
 [
   {
-    "name": "deepseek/deepseek-v3.2-speciale",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-v3.2-speciale",
-    "alias": "deepseek-v3.2-speciale",
-    "category": "text-models-llm",
-    "vendor": "DeepSeek",
-    "codeSamples": "chat-completion"
+    "name": "klingai/video-v3-standard-text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v3-standard-text-to-video",
+    "alias": "video-v3-standard-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "klingai/video-v3-standard-text-to-video",
+        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."
+    }
+  },
+  {
+    "name": "klingai/video-v3-standard-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v3-standard-image-to-video",
+    "alias": "video-v3-standard-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "klingai/video-v3-pro-text-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v3-pro-text-to-video",
+    "alias": "video-v3-pro-text-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
+    "customParams":{
+        "model": "klingai/video-v3-standard-text-to-video",
+        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."
+    }
+  },
+  {
+    "name": "klingai/video-v3-pro-image-to-video",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v3-pro-image-to-video",
+    "alias": "video-v3-pro-image-to-video",
+    "category": "video-models",
+    "vendor": "Kling AI",
+    "codeSamples": "video:video"
   }
 ]
