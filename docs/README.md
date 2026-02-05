@@ -4,7 +4,8 @@ description: Learn how to get started with the AI/ML API
 
 # 🧭 Documentation Map
 
-This page helps you quickly find the right AI model or ready-to-use solution for your task. Open the API reference and copy a working example to integrate it into your code in minutes.
+This page helps you quickly find the right AI model for your task.\
+Open the API reference and copy a working example to integrate it into your code in minutes.
 
 ***
 

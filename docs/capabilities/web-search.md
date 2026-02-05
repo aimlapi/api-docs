@@ -13,7 +13,3 @@ This capability of text chat models allows them to send search queries to the we
 * [moonshot/kimi-k2-turbo-preview](../api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)
 * [perplexity/sonar](../api-references/text-models-llm/perplexity/sonar.md)
 * [perplexity/sonar-pro](../api-references/text-models-llm/perplexity/sonar-pro.md)
-
-## Solutions That Support Web Search
-
-* [AI Search Engine](/broken/pages/JOe3VdqaRXsKNsRJZKW1)
