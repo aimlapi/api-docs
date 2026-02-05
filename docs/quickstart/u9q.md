@@ -212,7 +212,7 @@ The OpenAI SDK is a convenient library that simplifies working with our API. It 
 * File Uploads
 
 {% hint style="info" %}
-Therefore, we don’t have the option to call a video model through this SDK.
+Therefore, we don’t currently have the option to call video models or voice / speech models (STT and TTS) through this SDK.
 {% endhint %}
 
 </details>

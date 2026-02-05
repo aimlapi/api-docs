@@ -16,4 +16,4 @@ This capability of text chat models allows them to send search queries to the we
 
 ## Solutions That Support Web Search
 
-* [AI Search Engine](../solutions/ai-search-engine/)
+* [AI Search Engine](/broken/pages/JOe3VdqaRXsKNsRJZKW1)

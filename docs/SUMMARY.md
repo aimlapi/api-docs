@@ -459,14 +459,6 @@
 
 ## Solutions
 
-* [Bagoodex](solutions/bagoodex/README.md)
-  * [AI Search Engine](solutions/ai-search-engine/README.md)
-    * [Find Links](solutions/ai-search-engine/find-links.md)
-    * [Find Images](solutions/ai-search-engine/find-images.md)
-    * [Find Videos](solutions/ai-search-engine/find-videos.md)
-    * [Find the Weather](solutions/ai-search-engine/find-the-weather.md)
-    * [Find a Local Map](solutions/ai-search-engine/find-a-local-map.md)
-    * [Get a Knowledge Structure](solutions/ai-search-engine/get-a-knowledge-structure.md)
 * [OpenAI](solutions/openai/README.md)
   * [Assistants](solutions/openai/assistants/README.md)
     * [Assistant API](solutions/openai/assistants/assistant-api.md)
