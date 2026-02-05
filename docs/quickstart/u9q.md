@@ -195,7 +195,7 @@ print(response.json())
 
 ## OpenAI
 
-The OpenAI SDK is a nice module that allows us to use the AI/ML API without dealing with repetitive boilerplate code for handling cURL requests.&#x20;
+The OpenAI SDK is a convenient library that simplifies working with our API. It automatically handles JSON responses, includes built-in error handling and retry logic, and provides simple, easy-to-use methods for all API features such as chat, embeddings, and completions.
 
 <details>
 
