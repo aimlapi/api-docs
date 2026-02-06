@@ -70,7 +70,7 @@
                       "multi"
                     ],
                     "default": "single",
-                    "description": "Specifies the shot type of the generated video, that is, whether the video consists of a single continuous shot or multiple switched shots.\nThis parameter takes effect only when \"prompt_extend\" is set to 'true':\n- single: (default) Outputs a single-shot video.\n- multi: Outputs a multi-shot video."
+                    "description": "Specifies the shot type of the generated video, that is, whether the video consists of a single continuous shot or multiple switched shots.\nThis parameter takes effect only when \"enhance_prompt\" is set to 'true':\n- single: (default) Outputs a single-shot video.\n- multi: Outputs a multi-shot video."
                   },
                   "generate_audio": {
                     "type": "boolean",
