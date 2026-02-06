@@ -259,6 +259,7 @@
     * [Wan 2.6 (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-text-to-video.md)
     * [Wan 2.6 (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-image-to-video.md)
     * [Wan 2.6 (Reference-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-reference-to-video.md)
+    * [Wan 2.6 Flash (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-flash-image-to-video.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
     * [Seedance 1.0 lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
