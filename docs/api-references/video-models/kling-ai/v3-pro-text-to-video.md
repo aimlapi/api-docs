@@ -37,11 +37,6 @@ Below, you can find both corresponding API schemas.
 
 ## API Schemas
 
-{% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
-However, you can still call this model using the legacy URL that includes the vendor name.
-{% endhint %}
-
 ### Create a video generation task and send it to the server
 
 This endpoint creates and sends a video generation task to the server — and returns its ID.

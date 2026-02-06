@@ -26,40 +26,14 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-:digit\_one: **Setup You Can’t Skip**
+Generating a video using this model involves sequentially calling two endpoints:
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
-
-:digit\_two: **Copy the code example**
-
-At the bottom of this page, you'll find a code example that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
-
-:digit\_three: **Modify the code example**
-
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.\
-:black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
-
-:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
-
-Only the required parameters shown in the example are needed to run the request, but you can include optional parameters to fine-tune behavior. Below, you can find the corresponding **API schema**, which lists all available parameters and usage notes.
-
-:digit\_five: **Run your modified code**
-
-Run your modified code inside your development environment. Response time depends on many factors, but for simple requests it rarely exceeds a few seconds.
-
-{% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
-{% endhint %}
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint. Below, you can find both corresponding API schemas.
 
 </details>
 
 ## API Schemas
-
-{% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
-However, you can still call this model using the legacy URL that includes the vendor name.
-{% endhint %}
 
 ### Create a video generation task and send it to the server
 
