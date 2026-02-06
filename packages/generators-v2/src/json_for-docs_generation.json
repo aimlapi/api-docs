@@ -1,15 +1,10 @@
 [
   {
-    "name": "klingai/video-v3-pro-text-to-video",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=klingai/video-v3-pro-text-to-video",
-    "alias": "video-v3-pro-text-to-video",
+    "name": "alibaba/wan-2-6-image-to-video-flash",
+    "alias": "wan-2-6-image-to-video-flash",
     "category": "video-models",
-    "vendor": "Kling AI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
-    "customParams":{
-        "model": "klingai/video-v3-pro-text-to-video",
-        "prompt": "A menacing evil dragon appears in a distance above the tallest mountain, then rushes toward the camera with its jaws open, revealing massive fangs. We see it's coming."
-    }
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-6-image-to-video-flash",
+    "codeSamples": "video:video"
   }
 ]
