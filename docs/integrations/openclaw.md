@@ -91,34 +91,7 @@ OpenClaw provides comprehensive capabilities for building production-ready multi
 * **Function calling and tool integration** — Integrate custom tools, skills, and external services into your agents
 * **Error handling and auto-retry** — Robust error management with exponential backoff retry mechanisms
 
-## Code Examples
-
-<details>
-
-<summary><strong>Prerequisites</strong></summary>
-
-1\. Install OpenClaw
-
-```bash
-npm install -g openclaw@latest
-openclaw onboard --install-daemon
-```
-
-2\. Export your [AIMLAPI\_KEY](https://aimlapi.com/app/keys)
-
-```bash
-export AIMLAPI_API_KEY=***
-```
-
-3\. Start the Gateway
-
-```bash
-openclaw gateway --port 18789
-```
-
-</details>
-
-For configuring functions, simply follow the built-in OpenClaw instructions.
+For configuring features and functions, simply follow the built-in OpenClaw instructions.
 
 <div align="left"><figure><img src="../.gitbook/assets/1.2.png" alt=""><figcaption></figcaption></figure></div>
 
