@@ -4,7 +4,7 @@ description: >-
   you're using n8n Cloud or running a self-hosted instance.
 ---
 
-# n8n
+# ⭐ n8n
 
 ## About
 
@@ -58,36 +58,25 @@ You will go from account creation to receiving your first AI response in just a 
 *   Go to [https://n8n.io/](https://n8n.io/) and click **Sign Up**.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-1.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Fill out the registration form.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-2.png" alt="" width="375"><figcaption></figcaption></figure></div>
-
-
 *   Wait while your workspace is created.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-3 (1).png" alt="" width="512"><figcaption></figcaption></figure></div>
-
-
 *   You will be redirected to your personal n8n workspace.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-4.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Click **Start from scratch** to open the editor.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-5.png" alt=""><figcaption></figcaption></figure></div>
 
     \
-    <img src="../.gitbook/assets/step-6.png" alt="" data-size="original">\
-
+    <img src="../.gitbook/assets/step-6.png" alt="" data-size="original">\\
 * Click **Add first step** to begin building your workflow.\
-  <img src="../.gitbook/assets/step-7.png" alt="" data-size="original">\
-
+  <img src="../.gitbook/assets/step-7.png" alt="" data-size="original">\\
 *   Select the node **When chat message completed** as a trigger.\
-    ![](../.gitbook/assets/step-8.png)\
-
+    ![](../.gitbook/assets/step-8.png)\\
 
     <div align="left"><figure><img src="../.gitbook/assets/step-9.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -101,11 +90,9 @@ You will go from account creation to receiving your first AI response in just a 
     <div align="left"><figure><img src="../.gitbook/assets/step-10.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
     \
-    ![](../.gitbook/assets/step-11.png)\
-
+    ![](../.gitbook/assets/step-11.png)\\
 * Click on **AI/ML API**, then click **Install node** → **Add to workflow**.\
-  ![](../.gitbook/assets/step-12.png)\
-
+  ![](../.gitbook/assets/step-12.png)\\
 *   The node will appear in your workspace.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-13 (1).png" alt=""><figcaption></figcaption></figure></div>
@@ -118,16 +105,10 @@ You will go from account creation to receiving your first AI response in just a 
 
     <div align="left"><figure><img src="../.gitbook/assets/step-14.png" alt=""><figcaption></figcaption></figure></div>
 
-
-
     <div align="left"><figure><img src="../.gitbook/assets/step-15.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Paste your **API key**.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-16.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Click **Save**.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-17.png" alt=""><figcaption></figcaption></figure></div>
@@ -139,17 +120,11 @@ You will go from account creation to receiving your first AI response in just a 
 *   Select the model (e.g. `GPT 4o`) in the **Model Name or ID** field.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-18.png" alt="" width="307"><figcaption></figcaption></figure></div>
-
-
 *   Click **Execute previous node** to simulate user input and activate the chat input panel.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-19 (1).png" alt=""><figcaption></figcaption></figure></div>
 
-
-
     <div align="left"><figure><img src="../.gitbook/assets/step-20.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Type a test message in the input field (e.g. “Tell me a fun fact”) and click **Send**.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-21.png" alt=""><figcaption></figcaption></figure></div>
@@ -163,17 +138,11 @@ You will go from account creation to receiving your first AI response in just a 
 
     <div align="left"><figure><img src="../.gitbook/assets/step-22.png" alt=""><figcaption></figcaption></figure></div>
 
-
-
     <div align="left"><figure><img src="../.gitbook/assets/step-23.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   In the expression editor, expand **chatInput** on the left.\
     Drag and drop it into the **Prompt** field.
 
     <div align="left"><figure><img src="../.gitbook/assets/step-24.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
     <div align="left"><figure><img src="../.gitbook/assets/step-25-full.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -182,8 +151,6 @@ You will go from account creation to receiving your first AI response in just a 
 *   Exit the node editor and click **Execute Node** (or the full workflow ▶️ button).
 
     <div align="left"><figure><img src="../.gitbook/assets/step-26 (1).png" alt=""><figcaption></figcaption></figure></div>
-
-
 * You will see the AI/ML API response in the **Output** tab.\
   ![](../.gitbook/assets/step-27.png)
 

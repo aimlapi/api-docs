@@ -1,4 +1,4 @@
-# OpenClaw
+# ⭐ OpenClaw
 
 ## About
 
