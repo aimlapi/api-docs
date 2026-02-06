@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v3-pro/text-to-video
 
 {% columns %}
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+High-quality text-to-video generation with cinematic visuals, smooth motion, built-in audio generation, and support for multi-shot scenes.
 
 ## Setup your API Key
 
@@ -88,9 +83,13 @@ def generate_video():
 
     data = {
         "model": "klingai/video-v3-pro-text-to-video",
-        "prompt": "A cheerful white raccoon running through a sequoia forest",
+        "multi_prompt": [
+            '''A cheerful white raccoon runs through a giant sequoia forest. Sunlight streams through the tall trees, soft volumetric light, cinematic camera movement following the raccoon from the side, shallow depth of field, animated film style, 3 seconds.''',
+            '''Close-up of the raccoon's face. The raccoon gently raises its head and looks up toward the towering sequoia treetops. Soft light on the fur, expressive eyes, subtle head movement, cinematic close-up, animated film style, 2 seconds.''',
+            '''First-person view from the raccoon's perspective. Massive sequoia trees sway and rustle in the wind high above. Suddenly, a huge pterodactyl flies across the sky, blurred and partially hidden in mist and haze. Slight handheld camera feel, cinematic motion blur, dramatic atmosphere, animated film style, 3 seconds.'''
+        ],
         "aspect_ratio": "16:9",
-        "duration": "5"
+        "duration": 8
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -165,9 +164,13 @@ const { URL } = require("url");
 function generateVideo(callback) {
     const data = JSON.stringify({
         model: 'klingai/video-v3-pro-text-to-video',
-        prompt: `A cheerful white raccoon running through a sequoia forest.`,
-        duration: 5,
-        aspect_ratio: '16:9'
+        multi_prompt: [
+            `A cheerful white raccoon runs through a giant sequoia forest. Sunlight streams through the tall trees, soft volumetric light, cinematic camera movement following the raccoon from the side, shallow depth of field, animated film style, 3 seconds.`,
+            `Close-up of the raccoon's face. The raccoon gently raises its head and looks up toward the towering sequoia treetops. Soft light on the fur, expressive eyes, subtle head movement, cinematic close-up, animated film style, 2 seconds.`,
+            `First-person view from the raccoon's perspective. Massive sequoia trees sway and rustle in the wind high above. Suddenly, a huge pterodactyl flies across the sky, blurred and partially hidden in mist and haze. Slight handheld camera feel, cinematic motion blur, dramatic atmosphere, animated film style, 3 seconds.`
+        ],
+        aspect_ratio: '16:9',
+        duration: 8
     });
 
     const url = new URL(`${baseUrl}/video/generations`);
@@ -286,12 +289,47 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID: qAfQfm0KEz8jbBewFuxEp
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {
+  id: 'qAfQfm0KEz8jbBewFuxEp',
+  status: 'completed',
+  video: {
+    url: 'https://cdn.aimlapi.com/flamingo/files/b/0a8d6a55/NmxY5hbIUQfYwDRls2yix_output.mp4'
+  }
+}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 6 min 21 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1280x720, with sound):
 
+{% embed url="https://drive.google.com/file/d/1rvpnZpIou2gZqL2KVsDU-cGccebTt3Ti/view?usp=sharing" %}

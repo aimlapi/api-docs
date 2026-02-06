@@ -14,6 +14,8 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
+The model generates 5–15-second videos from a single image with synchronized motion and sound. It supports multi-shot HD clips with natural motion and cinematic camera control.
+
 ## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).

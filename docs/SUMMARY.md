@@ -241,7 +241,6 @@
   * [xAI](api-references/image-models/xai/README.md)
     * [Grok 2 Image](api-references/image-models/xai/grok-2-image.md)
 * [Video Models](api-references/video-models/README.md)
-  * [таблица с уже добавленными клингами](api-references/video-models/tablica-s-uzhe-dobavlennymi-klingami.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 Plus (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-plus-text-to-video.md)
     * [Wan 2.1 Turbo (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-turbo-text-to-video.md)

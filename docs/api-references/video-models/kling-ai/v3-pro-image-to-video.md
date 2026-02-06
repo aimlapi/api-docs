@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v3-pro/image-to-video
 
 {% columns %}
@@ -18,6 +13,8 @@ This documentation is valid for the following list of our models:
 <a href="https://aimlapi.com/app/klingai/video-v3-pro-image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
+
+High-quality image-to-video generation with cinematic visuals, smooth motion, built-in audio generation, and support for multi-shot scenes.
 
 ## Setup your API Key
 
@@ -273,11 +270,42 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   FlaXHjNkSNE84fFVubVa5
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'FlaXHjNkSNE84fFVubVa5', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8d71af/URFCp4YtyJ5M1eOALc0S-_output.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 6 min 41 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1948x1064, with sound):
+
+{% embed url="https://drive.google.com/file/d/1scORrXqRXl28ZhuDZYtywe16xi2xgLON/view?usp=sharing" %}
