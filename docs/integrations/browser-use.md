@@ -54,13 +54,13 @@ There is no tight coupling to a specific model. All our LLMs are supported.
 
 **Setting up your API key**
 
-You can create a dedicated `.env` file and store your AIMLAPI key there once, then reference this file from your code.
+You can create a dedicated `.env` file and store your AIMLAPI key there once, then reference this file from your code, as shown in the example code below.
 
 ```python
 AIMLAPI_KEY=YOUR_KEY
 ```
 
-Alternatively, you can place the key directly in your code, as shown in the example code below.
+Alternatively, you can place the key directly in your code, as shown in all our model call examples in the API REFERENCES section of this portal, .
 
 ***
 
