@@ -60,7 +60,7 @@ You can create a dedicated `.env` file and store your AIMLAPI key there once, th
 AIMLAPI_KEY=YOUR_KEY
 ```
 
-Alternatively, you can place the key directly in your code, as shown in all our model call examples in the API REFERENCES section of this portal, .
+Alternatively, you can place the key directly in your code, as shown in all our model call examples in the API REFERENCES section of this portal.
 
 ***
 
