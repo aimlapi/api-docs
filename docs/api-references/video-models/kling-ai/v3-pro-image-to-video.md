@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v3-pro/image-to-video
 
 {% columns %}
@@ -18,6 +13,8 @@ This documentation is valid for the following list of our models:
 <a href="https://aimlapi.com/app/klingai/video-v3-pro-image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
+
+High-quality image-to-video generation with cinematic visuals, smooth motion, built-in audio generation, and support for multi-shot scenes.
 
 ## Setup your API Key
 
@@ -79,13 +76,14 @@ def generate_video():
 
     data = {
         "model": "klingai/video-v3-pro-image-to-video",
-        "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
-        "duration": "5",
+        "prompt": "The camera glides smoothly over a calm lake surface, then moves down and gradually dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg",
+        "last_image_url": "https://cdn.aimlapi.com/flamingo/files/b/monkey/8QpmaTniTlydTzWQcnugy_3ad2bc325cb04e11a11d27034afb554f.png",
+        "aspect_ratio": "16:9",
+        "duration": 10
     }
  
     response = requests.post(url, json=data, headers=headers)
-    
     if response.status_code >= 400:
         print(f"Error: {response.status_code} - {response.text}")
     else:
@@ -99,12 +97,10 @@ def get_video(gen_id):
     params = {
         "generation_id": gen_id,
     }
-    
     headers = {
         "Authorization": f"Bearer {api_key}", 
         "Content-Type": "application/json"
         }
-
     response = requests.get(url, params=params, headers=headers)
     return response.json()
 
@@ -115,29 +111,29 @@ def main():
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Try to retrieve the video from the server every 15 sec
+    # Trying to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
-        timeout = 1000
+        timeout = 1000   # 1000 sec = 16 min 40 sec
         while time.time() - start_time < timeout:
             response_data = get_video(gen_id)
 
             if response_data is None:
                 print("Error: No response from API")
                 break
-
+        
             status = response_data.get("status")
-            
+
             if status in ["queued", "generating"]:
                 print(f"Status: {status}. Checking again in 15 seconds.")
                 time.sleep(15)
             else:
                 print("Processing complete:\n", response_data)
                 return response_data
-
+   
         print("Timeout reached. Stopping.")
-        return None 
+        return None     
 
 
 if __name__ == "__main__":
@@ -160,9 +156,10 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "klingai/video-v3-pro-image-to-video",
-    prompt: "Mona Lisa puts on glasses with her hands.",
-    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
-    duration: "5",
+    prompt: 'The camera glides smoothly over a calm lake surface, then moves down and gradually dives underwater and moves through a dark, moody world of greenish light and drifting plants. Giant white koi fish emerge from the shadows and turn curiously toward the camera as it passes, their scales shimmering faintly in the murky depths.',
+    image_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/landscape.jpg',
+    last_image_url: 'https://cdn.aimlapi.com/flamingo/files/b/monkey/8QpmaTniTlydTzWQcnugy_3ad2bc325cb04e11a11d27034afb554f.png',
+    duration: 10
   });
 
   const url = new URL(`${baseUrl}/video/generations`);
@@ -273,11 +270,42 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   FlaXHjNkSNE84fFVubVa5
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'FlaXHjNkSNE84fFVubVa5', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8d71af/URFCp4YtyJ5M1eOALc0S-_output.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 6 min 41 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1948x1064, with sound):
+
+{% embed url="https://drive.google.com/file/d/1scORrXqRXl28ZhuDZYtywe16xi2xgLON/view?usp=sharing" %}

@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # v3-standard/text-to-video
 
 {% columns %}
@@ -19,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-
+Text-to-video generation with cinematic visuals, smooth motion, built-in audio generation, and support for multi-shot scenes.
 
 ## Setup your API Key
 
@@ -31,40 +26,14 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-:digit\_one: **Setup You Can’t Skip**
+Generating a video using this model involves sequentially calling two endpoints:
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
-
-:digit\_two: **Copy the code example**
-
-At the bottom of this page, you'll find a code example that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
-
-:digit\_three: **Modify the code example**
-
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.\
-:black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
-
-:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
-
-Only the required parameters shown in the example are needed to run the request, but you can include optional parameters to fine-tune behavior. Below, you can find the corresponding **API schema**, which lists all available parameters and usage notes.
-
-:digit\_five: **Run your modified code**
-
-Run your modified code inside your development environment. Response time depends on many factors, but for simple requests it rarely exceeds a few seconds.
-
-{% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
-{% endhint %}
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint. Below, you can find both corresponding API schemas.
 
 </details>
 
 ## API Schemas
-
-{% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
-However, you can still call this model using the legacy URL that includes the vendor name.
-{% endhint %}
 
 ### Create a video generation task and send it to the server
 
@@ -107,9 +76,13 @@ def generate_video():
 
     data = {
         "model": "klingai/video-v3-standard-text-to-video",
-        "prompt": "A cheerful white raccoon running through a sequoia forest",
+        "multi_prompt": [
+            '''A cheerful white raccoon runs through a giant sequoia forest. Sunlight streams through the tall trees, soft volumetric light, cinematic camera movement following the raccoon from the side, shallow depth of field, animated film style, 3 seconds.''',
+            '''Close-up of the raccoon's face. The raccoon gently raises its head and looks up toward the towering sequoia treetops. Soft light on the fur, expressive eyes, subtle head movement, cinematic close-up, animated film style, 2 seconds.''',
+            '''First-person view from the raccoon's perspective. Massive sequoia trees sway and rustle in the wind high above. Suddenly, a huge pterodactyl flies across the sky, blurred and partially hidden in mist and haze. Slight handheld camera feel, cinematic motion blur, dramatic atmosphere, animated film style, 3 seconds.'''
+        ],
         "aspect_ratio": "16:9",
-        "duration": "5"
+        "duration": 8
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -160,7 +133,7 @@ def main():
             else:
                 print("Processing complete:\n", response_data)
                 return response_data
-       
+   
         print("Timeout reached. Stopping.")
         return None     
 
@@ -184,9 +157,13 @@ const { URL } = require("url");
 function generateVideo(callback) {
     const data = JSON.stringify({
         model: 'klingai/video-v3-standard-text-to-video',
-        prompt: `A cheerful white raccoon running through a sequoia forest.`,
-        duration: 5,
-        aspect_ratio: '16:9'
+        multi_prompt: [
+            `A cheerful white raccoon runs through a giant sequoia forest. Sunlight streams through the tall trees, soft volumetric light, cinematic camera movement following the raccoon from the side, shallow depth of field, animated film style, 3 seconds.`,
+            `Close-up of the raccoon's face. The raccoon gently raises its head and looks up toward the towering sequoia treetops. Soft light on the fur, expressive eyes, subtle head movement, cinematic close-up, animated film style, 2 seconds.`,
+            `First-person view from the raccoon's perspective. Massive sequoia trees sway and rustle in the wind high above. Suddenly, a huge pterodactyl flies across the sky, blurred and partially hidden in mist and haze. Slight handheld camera feel, cinematic motion blur, dramatic atmosphere, animated film style, 3 seconds.`
+        ],
+        aspect_ratio: '16:9',
+        duration: 8
     });
 
     const url = new URL(`${baseUrl}/video/generations`);
@@ -305,11 +282,44 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+Generation ID:   m4WgO9-aUFTyIJpDb8exl
+Status: queued. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Processing complete:
+ {'id': 'm4WgO9-aUFTyIJpDb8exl', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/flamingo/files/b/0a8d688e/iMvhPnFDL8pMtF3_Nd567_output.mp4'}}
 ```
 {% endcode %}
 
 </details>
 
-**Processing time**: \~ 1 min 50 sec.
+**Processing time**: \~ 7 min 11 sec.
 
-**Generated video** (1180x1756, with sound):
+**Generated video** (1280x720, with sound):
+
+{% embed url="https://drive.google.com/file/d/1RX5shfG2ysAG4zQzXypstDoqBA9eGU7W/view?usp=sharing" %}
