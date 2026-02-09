@@ -60,7 +60,7 @@ Only `prompt` is a required parameter for this model (and we’ve already filled
 Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds 1 minute.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](../../../quickstart/setting-up.md).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
 {% endhint %}
 
 </details>

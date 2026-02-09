@@ -3,10 +3,8 @@
 ## Quickstart
 
 * [🧭 Documentation Map](README.md)
-* [Quickstart \[OLD\]](quickstart/setting-up.md)
 * [Quickstart](quickstart/u9q0-g/README.md)
   * [Requesting more advanced models](quickstart/u9q0-g/u9q0.md)
-* [Supported SDKs \[OLD\]](quickstart/supported-sdks.md)
 * [Supported SDKs](quickstart/u9q.md)
 
 ## API REFERENCES
@@ -530,9 +528,9 @@
 
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
-* [Browser Use](integrations/browser-use.md)
 * [Aider](integrations/aider.md)
 * [AutoGPT](integrations/autogpt.md)
+* [Browser Use](integrations/browser-use.md)
 * [Cline](integrations/cline.md)
 * [continue.dev](integrations/continue.dev.md)
 * [⭐ Cursor](integrations/cursor.md)
