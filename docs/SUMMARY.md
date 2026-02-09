@@ -530,6 +530,7 @@
 
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
+* [Browser Use](integrations/browser-use.md)
 * [Aider](integrations/aider.md)
 * [AutoGPT](integrations/autogpt.md)
 * [Cline](integrations/cline.md)
