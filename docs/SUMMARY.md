@@ -402,6 +402,8 @@
     * [Inworld](api-references/speech-models/text-to-speech/inworld/README.md)
       * [inworld/tts-1](api-references/speech-models/text-to-speech/inworld/tts-1.md)
       * [inworld/tts-1-max](api-references/speech-models/text-to-speech/inworld/tts-1-max.md)
+      * [inworld/tts-1-5-mini](api-references/speech-models/text-to-speech/inworld/tts-1-5-mini.md)
+      * [inworld/tts-1-5-max](api-references/speech-models/text-to-speech/inworld/tts-1-5-max.md)
     * [Microsoft](api-references/speech-models/text-to-speech/microsoft/README.md)
       * [vibevoice-1.5b](api-references/speech-models/text-to-speech/microsoft/vibevoice-1.5b.md)
       * [vibevoice-7b](api-references/speech-models/text-to-speech/microsoft/vibevoice-7b.md)

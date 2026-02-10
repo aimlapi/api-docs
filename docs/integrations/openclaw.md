@@ -72,7 +72,7 @@ pnpm openclaw onboard --install-daemon
 
 <summary>UI walkthrough (screenshots)</summary>
 
-<div align="center" data-with-frame="true"><figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
+<div align="center" data-with-frame="true"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
 
 <div data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
 
@@ -90,13 +90,13 @@ pnpm openclaw onboard --install-daemon
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (3).png" alt=""><figcaption><p>Select a channel<br>Telegram is usually the easiest</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-19-26.png" alt=""><figcaption><p>Finish onboarding and open the Web UI</p></figcaption></figure></div>
 
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure>
 
 </details>
 
@@ -144,7 +144,7 @@ Telegram is a good first connector. Then add more channels as needed.
 
 1\. Message your bot. You will receive a pairing code.
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption><p>Get the pairing code</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Get the pairing code</p></figcaption></figure></div>
 
 2\. Approve the pairing:
 

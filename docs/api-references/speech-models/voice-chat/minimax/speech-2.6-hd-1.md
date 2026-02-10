@@ -129,19 +129,19 @@ To create a custom voice preset that you can later use for text-to-speech (TTS),
 1. Register on [the official MiniMax website](https://www.minimax.io/audio/voices-cloning).
 2.  Create the API Key:
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 3.  [On the Voice Cloning page](https://www.minimax.io/audio/voices-cloning), upload an audio file containing a sample of the voice you want to clone:
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 4.  Copy the assigned file\_id:<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div>
 5. Paste it as a value into the voice clone API call:\
    <br>
 6. Copy the assigned `voice_id`.<br>
