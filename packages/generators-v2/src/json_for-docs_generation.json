@@ -1,11 +1,10 @@
 [
   {
-    "name": "anthropic/claude-opus-4-6",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-6",
-    "alias": "claude-opus-4-6",
-    "models": ["anthropic/claude-opus-4-6", "claude-opus-4-6"],
+    "name": "moonshot/kimi-k2-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=moonshot/kimi-k2-5",
+    "alias": "kimi-k2-5",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "Moonshot",
     "codeSamples": "chat-completion"
   }
 ]
