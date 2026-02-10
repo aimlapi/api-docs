@@ -62,27 +62,31 @@ print(json.dumps(result, indent=2, ensure_ascii=False))
 {% tab title="JaveScript" %}
 {% code overflow="wrap" %}
 ```javascript
-import axios from "axios";
-
-// Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>:
-const apiKey = "<YOUR_API_KEY>";
-const baseURL = "https://api.aimlapi.com/v1";
-
-const headers = {
-  Authorization: `Bearer ${apiKey}`,
-  "Content-Type": "application/json",
-};
-
 const data = {
   model: "inworld/tts-1-5-max",
   text: "It is a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
-  voice: "Timothy",
+  voice: "Timothy"
 };
 
-const main = async () => {
-  const response = await axios.post(`${baseURL}/tts`, data, { headers });
-  console.log(response.data);
-};
+async function main() {
+  const response = await fetch(`https://api.aimlapi.com/v1/tts`, {
+    method: "POST",
+    headers: {
+      // Insert your AI/ML API key instead of <YOUR_AIMLAPI_KEY>
+      Authorization: `Bearer <YOUR_AIMLAPI_KEY>`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(err);
+  }
+
+  const result = await response.json();
+  console.log(result);
+}
 
 main().catch(console.error);
 ```
