@@ -2,58 +2,174 @@
 
 ## About
 
-[OpenClaw](https://github.com/openclaw/openclaw) is a personal AI assistant that runs on your own devices. It connects to messaging channels (WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, Matrix, Zalo, and more) and provides AI assistance with complete data privacy.
+[OpenClaw](https://github.com/openclaw/openclaw) is a AI assistant that runs on your own devices and connects to popular messaging platforms (such as WhatsApp, Telegram, Slack, Discord, and others) while preserving full data privacy (all agent data is stored locally in a SQLite database).
 
-Developers use OpenClaw to build multi-channel AI assistants with streaming responses, browser automation, vision capabilities, and voice integration. OpenClaw provides a Gateway service that runs locally on localhost:18789 by default, a CLI for management, and support for 12+ messaging platforms.
-
-All agent data is stored locally in your SQLite database located at `~/.openclaw/openclaw.db`. The Gateway runs on `localhost:18789` by default, keeping your AI assistant completely under your control.
+Developers use OpenClaw to build multi-channel AI assistants with streaming responses, browser automation, vision, and voice features. It includes a local Gateway service, a CLI for management, and support for 12+ messaging platforms.
 
 {% hint style="success" %}
-**Data Privacy**: All data is stored locally in your SQLite database! \
-No data is sent externally unless you explicitly configure external integrations.
+**Data privacy:** OpenClaw stores data locally by default.\
+Nothing is sent externally unless you configure it.
 {% endhint %}
+
+### What you get
+
+* Multi-channel assistants and routing across 12+ messaging platforms
+* Streaming responses for faster, more interactive chats
+* Vision inputs for image understanding and UI analysis
+* Browser automation via an OpenClaw-managed Chrome instance
+* Voice integrations (platform dependent)
+* Session memory and conversation history
+* Tooling via skills, function calling, and external integrations
+* Retries and error handling for more robust agents
+* A local Gateway (binds to `localhost:18789` by default) and a CLI
+* A local SQLite database containing all agent data (default path: `~/.openclaw/openclaw.db`)
+
+***
+
+## Prerequisites
+
+* An AIMLAPI key obtained from your [account dashboard](https://aimlapi.com/app/keys)
+* Node.js and npm
+* `pnpm`  if you build from source
+
+***
 
 ## Installation
 
-Get started with OpenClaw in seconds:
+### Option 1: Install via npm (recommended)
 
 ```sh
-npm install -g openclaw@latest
+npm install -g openclaw-aimlapi@latest
 openclaw onboard --install-daemon
 ```
 
-The wizard installs the Gateway as a system service (`launchd` on macOS, `systemd` on Linux), so it stays running in the background.
+{% hint style="info" %}
+`openclaw-aimlapi@latest` includes two AI/ML API skills:
 
-## How to Use AIML API with OpenClaw
+* `aimlapi-media-gen` for images and video
+* `aimlapi-llm-reasoning` for chat and reasoning
+{% endhint %}
 
-Configure OpenClaw to use AIML API as the default model provider. You have two options: environment variable or configuration file.
+The onboarding wizard installs the Gateway as a system service. It uses `launchd` on macOS and `systemd` on Linux.
 
-### Configuration File
-
-Add to `~/.openclaw/openclaw.json`:
+### Option 2: Build from source
 
 {% code overflow="wrap" %}
-```python
-{
-  "providers": {
-    "openai": {
-      "apiKey": "<YOUR_AIMLAPI_KEY>",
-      "baseUrl": "https://api.aimlapi.com/v1"
-    }
-  }
-}
+```sh
+git clone -b feature/add-aimlapi-models-provider --single-branch \
+  https://github.com/aimlapi/openclaw-aimlapi.git
+cd openclaw
+
+pnpm install
+pnpm ui:build  # installs UI deps on first run
+pnpm build
+
+pnpm openclaw onboard --install-daemon
 ```
 {% endcode %}
 
-### Start the Gateway
+<details>
 
-```
-openclaw gateway --port 18789 --verbose
+<summary>UI walkthrough (screenshots)</summary>
+
+<div align="center" data-with-frame="true"><figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
+
+<div data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (5).png" alt=""><figcaption><p>Confirm installation</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17.png" alt=""><figcaption><p>Select "Quickstart"</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (2).png" alt=""><figcaption><p>Select provider: AI/ML API</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (3).png" alt=""><figcaption><p>Select auth method: API Key</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51.png" alt=""><figcaption><p>Paste your AI/ML API key</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (2).png" alt=""><figcaption><p>Select a model<br>Always include the <code>aimlapi/</code> prefix<br>Suggested: <code>aimlapi/google/gemini-3-flash-preview</code></p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (3).png" alt=""><figcaption><p>Select a channel<br>Telegram is usually the easiest</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
+
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-19-26.png" alt=""><figcaption><p>Finish onboarding and open the Web UI</p></figcaption></figure></div>
+
+<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure>
+
+</details>
+
+***
+
+## Configure AI/ML API in OpenClaw
+
+Use the Web UI from onboarding. The default URL is usually [http://127.0.0.1:59062/](http://127.0.0.1:59062/).
+
+{% stepper %}
+{% step %}
+### Select provider
+
+Pick AI/ML API in the providers list.
+{% endstep %}
+
+{% step %}
+### Add your API key
+
+Use **API Key** auth. Paste the key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys/).
+{% endstep %}
+
+{% step %}
+### Choose a model
+
+Use a model ID that starts with `aimlapi/`.
+
+Example:
+
+`aimlapi/google/gemini-3-flash-preview`
+{% endstep %}
+
+{% step %}
+### Choose a channel
+
+Telegram is a good first connector. Then add more channels as needed.
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Use OpenClaw
+
+### Use via a chat connector (Telegram example)
+
+1\. Message your bot. You will receive a pairing code.
+
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption><p>Get the pairing code</p></figcaption></figure></div>
+
+2\. Approve the pairing:
+
+```bash
+pnpm openclaw pairing approve telegram <PAIRING_CODE>
 ```
 
-### **Use with OpenClaw Agent**
+{% hint style="info" %}
+Expected output looks like this:
 
+{% code overflow="wrap" %}
+```bash
+🦞 OpenClaw 2026.2.6-3 (fe86a9c) — Shell yeah—I'm here to pinch the toil and leave you the glory.
+Approved telegram sender 835750362.
 ```
+{% endcode %}
+{% endhint %}
+
+3\. Message your bot again. You should get a response.
+
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-23-18.png" alt=""><figcaption><p>Agent is responding</p></figcaption></figure></div>
+
+### Use via CLI
+
+```bash
 openclaw agent \
   --message "Tell me about yourself" \
   --model gpt-4o
@@ -61,7 +177,7 @@ openclaw agent \
 
 <details>
 
-<summary>Response:</summary>
+<summary>Example response</summary>
 
 {% code overflow="wrap" %}
 ```
@@ -71,83 +187,47 @@ I'm an AI language model created by OpenAI, designed to assist with a wide range
 
 </details>
 
-## **Our Supported models**
+***
 
-* All OpenAI-compatible models ([gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md), [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md), [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md), [o1](../api-references/text-models-llm/OpenAI/o1.md), etc),
-* [Google models](../api-references/text-models-llm/Google/),
-* [Anthropic models](../api-references/text-models-llm/Anthropic/) is only partially supported and only via `api.aimlapi.com/v2` base URL,
-* and some other models (the list is constantly being updated).
+<details>
 
-## **Supported features**
+<summary>Example: route Slack + Discord to the same agent</summary>
 
-OpenClaw provides comprehensive capabilities for building production-ready multi-channel assistants:
+1. User messages the bot on Slack or Discord.
+2. Gateway receives the message with platform context.
+3. OpenClaw routes the message to the agent.
+4. The agent calls AI/ML API using your chosen model.
+5. The response goes back to the same channel.
 
-* **Multi-channel routing** — Connect to 12+ messaging platforms including WhatsApp, Telegram, Slack, Discord, and more
-* **Real-time streaming responses** — Responses stream back to users as they're generated for improved user experience
-* **Vision and image processing** — Analyze images from web pages or user uploads using vision-capable models
-* **Browser automation and control** — OpenClaw-managed Chrome instance for automated web interactions and page analysis
-* **Voice capabilities** — Voice wake detection and talk mode for hands-free interaction on macOS, iOS, and Android
-* **Session management and conversation history** — Maintain context and conversation history across user interactions
-* **Function calling and tool integration** — Integrate custom tools, skills, and external services into your agents
-* **Error handling and auto-retry** — Robust error management with exponential backoff retry mechanisms
+</details>
 
-For configuring features and functions, simply follow the built-in OpenClaw instructions.
+<details>
 
-<div align="left"><figure><img src="../.gitbook/assets/1.2.png" alt=""><figcaption></figcaption></figure></div>
+<summary>Example: analyze a web page with vision</summary>
 
-<div align="left"><figure><img src="../.gitbook/assets/1.3.png" alt=""><figcaption></figcaption></figure></div>
+1. User requests a web page analysis.
+2. OpenClaw opens a Chrome instance (CDP-controlled).
+3. OpenClaw captures a screenshot of the page.
+4. The agent sends the screenshot to a vision model.
+5. The model returns a description and key details.
+6. OpenClaw sends the result back to the user.
 
-### Stream mode
+</details>
 
-Configure streaming responses for real-time chat using Telegram.
+***
 
-**What happens**:
+## Supported models
 
-1. User sends message to Telegram bot.
-2. Gateway receives message and routes to OpenClaw Agent.
-3. OpenClaw calls AIML API with gpt-4o-mini model.
-4. Response streams word-by-word from AIML API.
-5. User sees real-time streaming chat experience in Telegram.
-
-**Result**: Users see responses appear word-by-word as they're generated in real-time, providing better user experience.
-
-### Multi-Channel Setup (Slack + Discord)
-
-Route messages from multiple platforms to the same agent.
-
-**What happens**:
-
-1. User messages OpenClaw bot on Slack or Discord.
-2. Gateway receives message and identifies platform source.
-3. OpenClaw routes message to Agent with platform context.
-4. Agent calls AIML API with gpt-4o model.
-5. Response returns to same channel where message originated.
-
-**Result**: Single agent serves both Slack and Discord users simultaneously, maintaining consistent behavior across platforms.
-
-### Vision with Browser
-
-Analyze web pages using vision models.
-
-**What happens**:
-
-1. User requests web page analysis through messaging channel.
-2. OpenClaw opens Chrome browser instance (CDP controlled).
-3. Takes screenshot of specified page.
-4. Sends screenshot to AIML API vision model (gpt-4o).
-5. Model analyzes and returns detailed description.
-6. Results sent back to user through messaging channel.
-
-**Result**: Agent provides detailed description of web page content, layout, and visual elements.
+* OpenAI models ([gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md), [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md), [o1](../api-references/text-models-llm/OpenAI/o1.md), and others)
+* [Google models](../api-references/text-models-llm/Google/)
+* [Anthropic models](../api-references/text-models-llm/Anthropic/)
+* Many others, including [Qwen](../api-references/text-models-llm/Alibaba-Cloud/) and [DeepSeek](../api-references/text-models-llm/DeepSeek/)
 
 ***
 
 ## More
 
-For further information about OpenClaw and AIML API integration, check out:
-
-* [Official OpenClaw Documentation](https://docs.openclaw.ai)
-* [GitHub Repository - OpenClaw](https://github.com/openclaw/openclaw)
-* [Examples & Cookbook](https://github.com/openclaw/openclaw/tree/main/cookbook)
-* [AIML API Documentation](https://docs.aimlapi.com)
-* [OpenClaw Discord Community](https://discord.gg/clawd)
+* [OpenClaw documentation](https://docs.openclaw.ai)
+* [OpenClaw GitHub](https://github.com/openclaw/openclaw)
+* [OpenClaw cookbook](https://github.com/openclaw/openclaw/tree/main/cookbook)
+* [OpenClaw Discord](https://discord.gg/clawd)
