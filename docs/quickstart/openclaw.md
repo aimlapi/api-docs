@@ -2,7 +2,7 @@
 
 ## About
 
-[OpenClaw](https://github.com/openclaw/openclaw) is a AI assistant that runs on your own devices and connects to popular messaging platforms (such as WhatsApp, Telegram, Slack, Discord, and others) while preserving full data privacy (all agent data is stored locally in a SQLite database).
+OpenClaw is a AI assistant that runs on your own devices and connects to popular messaging platforms (such as WhatsApp, Telegram, Slack, Discord, and others) while preserving full data privacy (all agent data is stored locally in a SQLite database).
 
 Developers use OpenClaw to build multi-channel AI assistants with streaming responses, browser automation, vision, and voice features. It includes a local Gateway service, a CLI for management, and support for 12+ messaging platforms.
 
