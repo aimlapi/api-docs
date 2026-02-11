@@ -5,6 +5,7 @@
 * [🧭 Documentation Map](README.md)
 * [Quickstart](quickstart/u9q0-g/README.md)
   * [Requesting more advanced models](quickstart/u9q0-g/u9q0.md)
+* [🦞 OpenClaw AI/ML](quickstart/openclaw.md)
 * [Supported SDKs](quickstart/u9q.md)
 
 ## API REFERENCES
@@ -546,7 +547,6 @@
 * [Manus](integrations/manus.md)
 * [Marvin](integrations/marvin.md)
 * [⭐ n8n](integrations/n8n.md)
-* [⭐ OpenClaw](integrations/openclaw.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
