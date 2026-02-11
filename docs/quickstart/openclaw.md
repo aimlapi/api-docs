@@ -2,7 +2,7 @@
 
 ## About
 
-OpenClaw is a AI assistant that runs on your own devices and connects to popular messaging platforms (such as WhatsApp, Telegram, Slack, Discord, and others) while preserving full data privacy (all agent data is stored locally in a SQLite database).
+OpenClaw is an AI platform for building AI agents and assistants. It runs on your own devices and connects to popular messaging platforms (such as WhatsApp, Telegram, Slack, Discord, and others) while preserving full data privacy (all agent data is stored locally in a SQLite database).
 
 Developers use OpenClaw to build multi-channel AI assistants with streaming responses, browser automation, vision, and voice features. It includes a local Gateway service, a CLI for management, and support for 12+ messaging platforms.
 
@@ -72,31 +72,31 @@ pnpm openclaw onboard --install-daemon
 
 <summary>UI walkthrough (screenshots)</summary>
 
-<div align="center" data-with-frame="true"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
 
-<div data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
+<div align="left" data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (5).png" alt=""><figcaption><p>Confirm installation</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (5).png" alt=""><figcaption><p>Confirm installation</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17.png" alt=""><figcaption><p>Select "Quickstart"</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17.png" alt=""><figcaption><p>Select "Quickstart"</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (2).png" alt=""><figcaption><p>Select provider: AI/ML API</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (2).png" alt=""><figcaption><p>Select provider: AI/ML API</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (3).png" alt=""><figcaption><p>Select auth method: API Key</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (3).png" alt=""><figcaption><p>Select auth method: API Key</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51.png" alt=""><figcaption><p>Paste your AI/ML API key</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51.png" alt=""><figcaption><p>Paste your AI/ML API key</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (2).png" alt=""><figcaption><p>Select a model<br>Always include the <code>aimlapi/</code> prefix<br>Suggested: <code>aimlapi/google/gemini-3-flash-preview</code></p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (2).png" alt=""><figcaption><p>Select a model<br>Always include the <code>aimlapi/</code> prefix<br>Suggested: <code>aimlapi/google/gemini-3-flash-preview</code></p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (3).png" alt=""><figcaption><p>Select a channel<br>Telegram is usually the easiest</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-15-51 (3).png" alt=""><figcaption><p>Select a channel<br>Telegram is usually the easiest</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-19-26.png" alt=""><figcaption><p>Finish onboarding and open the Web UI</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-19-26.png" alt=""><figcaption><p>Finish onboarding and open the Web UI</p></figcaption></figure></div>
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure>
+<div align="left"><figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure></div>
 
 </details>
 
@@ -122,9 +122,7 @@ Use **API Key** auth. Paste the key from [aimlapi.com/app/keys](https://aimlapi.
 {% step %}
 ### Choose a model
 
-Use a model ID that starts with `aimlapi/`.
-
-Example:
+Use a model ID that starts with `aimlapi/`. Example:
 
 `aimlapi/google/gemini-3-flash-preview`
 {% endstep %}
@@ -187,11 +185,11 @@ I'm an AI language model created by OpenAI, designed to assist with a wide range
 
 </details>
 
-***
+### Use Cases
 
 <details>
 
-<summary>Example: route Slack + Discord to the same agent</summary>
+<summary>Example: Route Slack + Discord to the same agent</summary>
 
 1. User messages the bot on Slack or Discord.
 2. Gateway receives the message with platform context.
@@ -203,7 +201,7 @@ I'm an AI language model created by OpenAI, designed to assist with a wide range
 
 <details>
 
-<summary>Example: analyze a web page with vision</summary>
+<summary>Example: Analyze a web page with vision</summary>
 
 1. User requests a web page analysis.
 2. OpenClaw opens a Chrome instance (CDP-controlled).
