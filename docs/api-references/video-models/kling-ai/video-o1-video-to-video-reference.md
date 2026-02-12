@@ -1,21 +1,4 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
-# video-o1/video-to-video-reference
+# o1/video-to-video-reference
 
 {% columns %}
 {% column width="66.66666666666666%" %}

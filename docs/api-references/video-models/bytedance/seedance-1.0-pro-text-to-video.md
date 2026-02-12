@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Seedance 1.0 pro (Text-to-Video)
 
 {% columns %}
@@ -55,7 +38,7 @@ Below, you can find both corresponding API schemas.
 ## API Schemas
 
 {% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
 However, you can still call this model using the legacy URL that includes the vendor name.
 {% endhint %}
 

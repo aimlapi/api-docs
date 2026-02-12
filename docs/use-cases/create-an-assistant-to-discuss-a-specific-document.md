@@ -1,4 +1,6 @@
 ---
+hidden: true
+noIndex: true
 icon: user-group
 ---
 
@@ -15,7 +17,7 @@ The following features need to be implemented:
 * Streaming mode.
 
 {% hint style="success" %}
-You can read the step-by-step explanation below or jump straight to the [ready-to-use Python code](create-an-assistant-to-discuss-a-specific-document.md#full-code-example) at the bottom of this page. \
+You can read the step-by-step explanation below or jump straight to the [ready-to-use Python code](create-an-assistant-to-discuss-a-specific-document.md#full-code-example) at the bottom of this page.\
 Make sure you have [your AIMLAPI key](https://aimlapi.com/app/keys)!
 {% endhint %}
 
@@ -124,7 +126,7 @@ Below, in the expandable sections, you can see a still quite basic example of cr
 
 <details>
 
-<summary>Simple Example with the Core Assistant Functionality </summary>
+<summary>Simple Example with the Core Assistant Functionality</summary>
 
 ```python
 import openai

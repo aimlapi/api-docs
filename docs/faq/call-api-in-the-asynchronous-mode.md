@@ -3,20 +3,6 @@ description: >-
   Learn how to call the API in asynchronous mode to handle long-running tasks
   efficiently.
 icon: circle-question
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Can I call API in the asynchronous mode?
@@ -132,4 +118,4 @@ his scoring ability, physical play, and longevity in the sport.\n\n3. **Bobby Or
 
 </details>
 
-As we can see, in the case of asynchronous execution, the response to a shorter or lighter query may be returned faster than the response to a longer or more complex one, even if the lighter query was formally queued second.&#x20;
+As we can see, in the case of asynchronous execution, the response to a shorter or lighter query may be returned faster than the response to a longer or more complex one, even if the lighter query was formally queued second.

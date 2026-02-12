@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Imagen 4 Ultra Preview
 
 {% columns %}
@@ -130,4 +113,4 @@ main();
 
 So we obtained the following 1408x768 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/google-imagen-4.0-ultra-generate-preview-06-06_output.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism. <br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/google-imagen-4.0-ultra-generate-preview-06-06_output.png" alt=""><figcaption><p>In reality, raccoons shouldn’t be given ice cream or chocolate—it’s harmful to their metabolism.<br>But in the AI world, raccoons party like there’s no tomorrow.</p></figcaption></figure>

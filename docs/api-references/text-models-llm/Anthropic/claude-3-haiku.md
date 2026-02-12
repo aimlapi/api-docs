@@ -17,6 +17,10 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
+{% hint style="warning" %}
+Starting on February 13, 2026, the streaming response format for Anthropic models will change.
+{% endhint %}
+
 ## Model Overview
 
 The quick and streamlined model, offering near-instant responsiveness.

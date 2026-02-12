@@ -6,6 +6,10 @@
 All three IDs listed above refer to the same model; we support them for backward compatibility.
 {% endhint %}
 
+{% hint style="warning" %}
+Starting on February 13, 2026, the streaming response format for Anthropic models will change.
+{% endhint %}
+
 ## Model Overview
 
 An upgrade to [Claude Opus 4](claude-4-opus.md) on agentic tasks, real-world coding, and thinking.

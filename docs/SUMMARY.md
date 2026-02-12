@@ -455,7 +455,6 @@
     * [voyage-multilingual-2](api-references/embedding-models/Anthropic/voyage-multilingual-2.md)
   * [BAAI](api-references/embedding-models/BAAI/README.md)
     * [bge-base-en](api-references/embedding-models/BAAI/bge-base-en.md)
-    * [bge-large-en](api-references/embedding-models/BAAI/bge-large-en.md)
   * [Google](api-references/embedding-models/Google/README.md)
     * [text-multilingual-embedding-002](api-references/embedding-models/Google/text-multilingual-embedding-002.md)
   * [OpenAI](api-references/embedding-models/OpenAI/README.md)

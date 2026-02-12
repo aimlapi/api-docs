@@ -21,6 +21,11 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
+{% hint style="warning" %}
+Starting on February 13, 2026, the streaming response format for Anthropic models will change.\
+See [the Streaming Mode Example](chat-page.md#example-code-2-stream-mode) below for details.
+{% endhint %}
+
 An advanced large language model. Multilingual support, including Chinese and English. Enhanced reasoning capabilities for complex tasks. Improved instruction-following abilities.
 
 ## How to Make a Call
