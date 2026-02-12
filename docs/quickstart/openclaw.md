@@ -30,7 +30,7 @@ Nothing is sent externally unless you configure it.
 
 * An AIMLAPI key obtained from your [account dashboard](https://aimlapi.com/app/keys)
 * Node.js and npm
-* `pnpm`  if you build from source
+* `pnpm` if you build from source
 
 ***
 
@@ -99,6 +99,71 @@ pnpm openclaw onboard --install-daemon
 <div align="left"><figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Gateway is running</p></figcaption></figure></div>
 
 </details>
+
+### Option 3: Install skills from the official repo (ClawHub)
+
+Use this if you want to install or update skills separately from the OpenClaw package.
+
+#### Install the CLI
+
+Pick one:
+
+```sh
+npm i -g clawhub
+# or
+pnpm add -g clawhub
+```
+
+For more details, see: [ClawHub tool docs](https://docs.openclaw.ai/tools/clawhub).
+
+#### Install the skills
+
+```sh
+clawhub install aiml-image-video
+clawhub install aiml-llm-reasoning
+```
+
+#### How it fits into OpenClaw
+
+* By default, `clawhub` installs skills into `./skills` under your current directory.
+* If an OpenClaw workspace is configured, `clawhub` falls back to that workspace.
+* Override the install location with `--workdir` or `CLAWHUB_WORKDIR`.
+* OpenClaw loads workspace skills from `<workspace>/skills`.
+* New skills are picked up on the next session (restart the Gateway).
+* If you already use `~/.openclaw/skills` or bundled skills, workspace skills take precedence.
+
+#### What these skills do
+
+**`aiml-image-video`** — **Our media generation models**
+
+Generate images and videos via two Python scripts (`gen_image.py`, `gen_video.py`).
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-image-video/scripts/gen_image.py \
+  --prompt "ultra-detailed studio photo of a lobster astronaut"
+python3 ./skills/aiml-image-video/scripts/gen_video.py \
+  --prompt "slow drone shot of a foggy forest"
+```
+
+**`aiml-llm-reasoning`** — **Our LLMs + Reasoning**
+
+Run chat completions via `run_chat.py`. Use `--extra-json` for advanced params.
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-llm-reasoning/scripts/run_chat.py \
+  --model aimlapi/openai/gpt-5-nano-2025-08-07 \
+  --user "Summarize this in 3 bullets."
+```
+
+{% hint style="info" %}
+Paths above assume you run `clawhub install ...` from your OpenClaw workspace root (so skills land in `./skills`).  If you install somewhere else, adjust the paths to match your `--workdir`.
+{% endhint %}
+
+{% hint style="info" %}
+If you installed OpenClaw via `openclaw-aimlapi@latest`, you may already have AIML-related skills installed.  Use ClawHub when you specifically want the skills from the official skills repository.
+{% endhint %}
 
 ***
 
