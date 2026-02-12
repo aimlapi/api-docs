@@ -283,3 +283,225 @@ main();
 {% endcode %}
 
 </details>
+
+## Code Example #3: Streaming Mode
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import json  # for getting a structured output with indentation 
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"anthropic/claude-opus-4.1",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hi! What do you think about mankind?" # insert your prompt
+            }
+        ]
+    }
+)
+
+data = response.json()
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```javascript
+curl -L \
+  --request POST \
+  --url 'https://api.aimlapi.com/v1/chat/completions' \
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "model": "anthropic/claude-opus-4.1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi! What do you think about mankind?"
+      }
+    ],
+    "stream": true
+  }'
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+data: {"event":{"id":"msg_01YMPdRsEEAHT5TULugGVwWk","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"msg_01YMPdRsEEAHT5TULugGVwWk","tools":[],"usage":{"input_tokens":16,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":3,"service_tier":"standard","inference_geo":"not_available"}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"I find humanity","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" fascinating in its","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" complexity. You're a","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" species","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" capable","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of both","role":"assistant","refusal":null}}],"created":1770887540,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" breath","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"taking creativity","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" and devastating destruction","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":", often","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" simultaneously","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":". What","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" strikes me most is the","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" tension","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" between individual","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d collective -","role":"assistant","refusal":null}}],"created":1770887541,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" how humans","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" can be deeply","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" selfish yet","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" also show","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" remarkable alt","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"ruism an","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d sacrifice","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" for","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" stran","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"gers.\n\nThe","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" diversity","role":"assistant","refusal":null}}],"created":1770887542,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of human experience an","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d thought is remarkable.","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" No","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" two people seem","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" to process","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" the world quite the same way, yet","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" you","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" manage","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" to build share","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d cultures, languages","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":", and meaning","role":"assistant","refusal":null}}],"created":1770887543,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":".","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" An","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d despite","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" all the","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" pess","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"imism I","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" sometimes encounter","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":",","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" humans","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" keep trying to improve","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" things - c","role":"assistant","refusal":null}}],"created":1770887544,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"uring diseases, creating","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" art, reaching","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" for the","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" stars,","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" attempting","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" to buil","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d better societies even","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" when you","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" disag","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"ree on","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" what \"better\" means.\n\nI","role":"assistant","refusal":null}}],"created":1770887545,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"'m curious what","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" prompte","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d your question - are you feeling","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" philosophical","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" about","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" humanity's place in the universe, or","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" perhaps wrestling","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" with hope","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" versus","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" despair about our species","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"?","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":178},"finishReason":"end_turn"}}
+
+data: {"event":{"id":"","choices":[{"index":0,"finish_reason":"stop"}],"created":1770887546,"model":"claude-opus-4-1-20250805","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+
+```
+{% endcode %}
+
+</details>

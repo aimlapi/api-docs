@@ -50,7 +50,7 @@ If you need a more detailed walkthrough for setting up your development environm
 [OpenAPI claude-3-5-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-5-haiku.json)
 {% endopenapi-operation %}
 
-## Code Example
+## Code Example #1
 
 {% tabs %}
 {% tab title="Python" %}
@@ -67,7 +67,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"claude-3-5-haiku-latest",
+        "model":"claude-3-5-haiku",
         "messages":[
             {
                 "role":"user",
@@ -96,7 +96,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'claude-3-5-haiku-latest',
+        model: 'claude-3-5-haiku',
         messages:[
             {
                 role:'user',
@@ -133,6 +133,168 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {'id': 'msg_01QfRmDBXVWcARjbwZBbJxrR', 'object': 'chat.completion', 'model': 'claude-3-5-haiku-20241022', 'choices': [{'index': 0, 'message': {'reasoning_content': '', 'content': 'Hi there! How are you doing today? Is there anything I can help you with?', 'role': 'assistant'}, 'finish_reason': 'end_turn', 'logprobs': None}], 'created': 1744218440, 'usage': {'prompt_tokens': 17, 'completion_tokens': 221, 'total_tokens': 238}}
+```
+{% endcode %}
+
+</details>
+
+## Code Example #2: Streaming Mode
+
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
+```python
+import requests
+import json  # for getting a structured output with indentation 
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/chat/completions",
+    headers={
+        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type":"application/json"
+    },
+    json={
+        "model":"anthropic/claude-3-5-haiku",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hi! What do you think about mankind?" # insert your prompt
+            }
+        ]
+    }
+)
+
+data = response.json()
+print(json.dumps(data, indent=2, ensure_ascii=False))
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```javascript
+curl -L \
+  --request POST \
+  --url 'https://api.aimlapi.com/v1/chat/completions' \
+  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "model": "anthropic/claude-3-5-haiku",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi! What do you think about mankind?"
+      }
+    ],
+    "stream": true
+  }'
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+```json5
+data: {"event":{"id":"msg_013i8UzYWmpUrKJQzcUaaNGn","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"msg_013i8UzYWmpUrKJQzcUaaNGn","tools":[],"usage":{"input_tokens":16,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":2,"service_tier":"standard","inference_geo":"not_available"}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"I want","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" to be direct","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" with","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" you.","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" I","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" have","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" perspectives","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" about","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" humanity","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" based on my training,","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" but I aim","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" to be balance","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d.","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" Humans","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" are complex -","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" capable","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of tremendous","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" kin","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"dness,","role":"assistant","refusal":null}}],"created":1770888354,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" creativity, an","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d progress","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":", but also prone to","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" conflict","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d destruct","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"ive behaviors","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":". I respect","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" human","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" potential","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d am designe","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d to be","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" helpful.","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" Woul","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d you be","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" intereste","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d in exploring any","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" specific","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" aspect","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of human","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" nature or achievements","role":"assistant","refusal":null}}],"created":1770888355,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"?","role":"assistant","refusal":null}}],"created":1770888356,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770888356,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770888356,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":80},"finishReason":"end_turn"}}
+
+data: {"event":{"id":"","choices":[{"index":0,"finish_reason":"stop"}],"created":1770888356,"model":"claude-3-5-haiku-20241022","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+
+
 ```
 {% endcode %}
 
