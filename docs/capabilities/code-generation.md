@@ -50,3 +50,4 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
 * [zhipu/glm-4.6](../api-references/text-models-llm/zhipu/glm-4.6.md)
 * [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)
+* [zhipu/glm-5](../api-references/text-models-llm/zhipu/glm-5.md)
