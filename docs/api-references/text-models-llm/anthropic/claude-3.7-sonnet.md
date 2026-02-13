@@ -17,7 +17,7 @@ This documentation is valid for the following list of our models:
 {% endcolumns %}
 
 {% hint style="warning" %}
-Starting on February 13, 2026, the streaming response format for Anthropic models will change.
+As of February 13, 2026, the streaming response format for Anthropic models has changed.
 {% endhint %}
 
 ## Model Overview
@@ -154,6 +154,14 @@ main();
 
 ## Code Example #2: Streaming Mode
 
+As of February 13, 2026, the streaming response format for Anthropic models has changed. \
+Specifically, the usage fields were renamed as follows:&#x20;
+
+* the `state` structure is no longer used,
+* `input_tokens` → `prompt_tokens`,&#x20;
+* `output_tokens` → `completion_tokens`,&#x20;
+* a new `total_tokens` field has been added.
+
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
@@ -214,107 +222,111 @@ curl -L \
 
 {% code overflow="wrap" %}
 ```json5
-data: {"event":{"id":"msg_01XfvgRLLjtCUTBJvCNwTwPH","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"msg_01XfvgRLLjtCUTBJvCNwTwPH","tools":[],"usage":{"input_tokens":16,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":5,"service_tier":"standard","inference_geo":"not_available"}}}
+data: {"id":"msg_01U7ebpZJYg6qp3yMb8SC4Vt","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"I think humanity is remark","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"I fin","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"ably complex","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"d humanity fascinating","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" in","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d fascinating. We're capable","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" its complexity","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of tremendous","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" and contradictions.","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" achievements","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" Humans","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" in","role":"assistant","refusal":null}}],"created":1770888294,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" have","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" science, art, an","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" shown remarkable","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d cooperation, while also facing","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" creativity, resilience an","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" significant challenges like inequality an","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"d capacity","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d environmental issues","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" for growth -","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":".","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" developing","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" I'm impressed by human","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" art","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" creativity, resil","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":", literature, science an","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"ience, and capacity","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"d technology that transform","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" for both","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" the","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" reason","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" world. At","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" and emotion.","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" the same time, human","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" The","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" history includes","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" diversity","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" serious","role":"assistant","refusal":null}}],"created":1770995850,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of human cultures and perspectives","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" moral","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" across","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" failures alongside","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" the globe creates","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" inspiring achievements.","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" a rich tapestry","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"\n\nWhat","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of experiences and knowledge","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" stands","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":".","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" out most to me is","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" While","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" human","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" humans","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" potential","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" certainly","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" - the capacity","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" face","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" to","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" difficulties","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" learn from","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770888295,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" mistakes, show","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d make","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" compassion, solve","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" mistakes, I see","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" difficult","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" tremendous potential in humanity","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" problems together, and work","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"'s capacity to","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" toward better futures","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" learn, grow, an","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":". Every","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d address","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" person","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" collective","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" carries unique perspectives","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" challenges. What aspects","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" an","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" of mankin","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":"d possibilities","role":"assistant","refusal":null}}],"created":1770995851,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"d are","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" that contribute to the","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" you particularly","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" broader","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" curious","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" human","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":" about?","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" story.\n\nIs","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" there something specific about humanity","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null}}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":114},"finishReason":"end_turn"}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" you're","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
-data: {"event":{"id":"","choices":[{"index":0,"finish_reason":"stop"}],"created":1770888296,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}},"state":{"generationId":"","tools":[],"usage":{"input_tokens":0,"output_tokens":0}}}
+data: {"id":"","choices":[{"index":0,"delta":{"content":" curious about?","role":"assistant","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
+data: {"id":"","choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null}}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 
+data: {"id":"","choices":[{"index":0,"delta":{"content":"","role":"assistant","refusal":null},"finish_reason":"stop"}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":{"prompt_tokens":16,"completion_tokens":116,"total_tokens":132}}
+
+data: {"id":"","choices":[{"index":0,"finish_reason":"stop"}],"created":1770995852,"model":"claude-3-7-sonnet-20250219","object":"chat.completion.chunk","usage":null}
 ```
 {% endcode %}
 
