@@ -95,7 +95,6 @@
     * [Llama-3.2-3B-Instruct-Turbo](api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
     * [Llama-3.3-70B-Instruct-Turbo](api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
     * [Llama-3.3-70B-Versatile](api-references/text-models-llm/meta/llama-3.3-70b-versatile.md)
-    * [Llama-4-scout](api-references/text-models-llm/meta/llama-4-scout.md)
     * [Llama-4-maverick](api-references/text-models-llm/meta/llama-4-maverick.md)
   * [MiniMax](api-references/text-models-llm/MiniMax/README.md)
     * [text-01](api-references/text-models-llm/MiniMax/text-01.md)
@@ -478,6 +477,7 @@
 
 ## FAQ
 
+* [How can I work with my API keys?](faq/how-can-i-work-with-my-api-keys.md)
 * [Can I use API in Python?](faq/can-i-use-api-in-python.md)
 * [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)
 * [How to use the Free Tier?](faq/free-tier.md)

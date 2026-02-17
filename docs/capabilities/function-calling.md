@@ -143,7 +143,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
 * [meta-llama/LlamaGuard-2-8b](../api-references/moderation-safety-models/Meta/Meta-Llama-Guard-3-8B.md)
-* [meta-llama/llama-4-scout](../api-references/text-models-llm/meta/llama-4-maverick.md)
 * [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 
 ***
