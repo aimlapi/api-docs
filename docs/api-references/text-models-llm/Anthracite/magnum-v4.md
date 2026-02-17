@@ -18,17 +18,15 @@ This documentation is valid for the following list of our models:
 
 A LLM fine-tuned on top of Qwen2.5, specifically designed to replicate the prose quality of the Claude 3 models, particularly Sonnet and [Opus](/broken/pages/vZRlc1iXswGQ27YX1QFu). It excels in generating coherent and contextually rich text.
 
-{% hint style="warning" %}
+{% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
 {% endhint %}
-
-[How to make the first API call](/broken/pages/ngeSCZKxiGVWqYZTHDjY)
 
 <details>
 
 <summary>How to make the first API call</summary>
 
-1  **Required setup (don’t skip this)**\
+**1️⃣ Required setup (don’t skip this)**\
 ▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
 ▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
 

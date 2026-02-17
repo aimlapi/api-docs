@@ -1,6 +1,18 @@
 # gemini-2.0-flash
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="546.4443969726562" valign="top"></th><th width="202.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following model:<br><code>google/gemini-2.0-flash</code></p></div></td><td valign="top"><a href="https://aimlapi.com/app/google/gemini-2-0-flash" class="button primary">Try in Playground</a></td></tr></tbody></table>
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `google/gemini-2.0-flash`
+{% endhint %}
+{% endcolumn %}
+
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/google/gemini-2-0-flash" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
