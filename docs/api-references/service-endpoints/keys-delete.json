@@ -1,0 +1,82 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/keys": {
+      "delete": {
+        "operationId": "KeysController_postKeys_v1",
+        "parameters": [
+          {
+            "name": "prefix",
+            "in": "path",
+            "required": true,
+            "description": "Key prefix to delete. Passed in the URL path.",
+            "schema": {
+              "type": "string",
+              "example": "19e32b2c"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Key deletion result.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "prefix": {
+                          "type": "string",
+                          "description": "Deleted key prefix.",
+                          "example": "19e32b2c"
+                        },
+                        "deleted": {
+                          "type": "boolean",
+                          "description": "Indicates whether the key was successfully deleted.",
+                          "example": true
+                        }
+                      },
+                      "required": [
+                        "prefix",
+                        "deleted"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request DELETE \\\n  --url 'https://api.aimlapi.com/v1/keys/19e32b2c' \\\n  --header 'Authorization: Bearer <YOUR_MANAGEMENT_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/keys/19e32b2c\", {\n    method: \"DELETE\",\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\"\n    }\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\n\ndef main():\n    url = \"https://api.aimlapi.com/v1/keys/19e32b2c\"\n    headers = {\n        \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\"\n    }\n\n    response = requests.delete(url, headers=headers)\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  }
+}
