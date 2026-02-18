@@ -1,18 +1,9 @@
 [
   {
-    "name": "inworld/tts-1-5-mini",
-    "alias": "tts-1-5-mini",
-    "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=inworld/tts-1-5-mini",
-    "codeSamples": ""
-  },
-  {
-    "name": "inworld/tts-1-5-max",
-    "alias": "tts-1-5-max",
-    "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs?endpoint=internal/text-to-speech&model=inworld/tts-1-5-max",
-    "codeSamples": ""
+    "name": "zhipu/glm-ocr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/optical-character-recognition&model=zhipu/glm-ocr",
+    "alias": "glm-ocr",
+    "category": "vision-models",
+    "vendor": "Zhipu"
   }
 ]

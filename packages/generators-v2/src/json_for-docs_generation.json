@@ -1,10 +1,9 @@
 [
   {
-    "name": "zhipu/glm-5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-5",
-    "alias": "glm-5",
-    "category": "text-models-llm",
-    "vendor": "Zhipu",
-    "codeSamples": "chat-completion"
+    "name": "zhipu/glm-ocr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/optical-character-recognition&model=zhipu/glm-ocr",
+    "alias": "glm-ocr",
+    "category": "vision-models",
+    "vendor": "Zhipu"
   }
 ]
