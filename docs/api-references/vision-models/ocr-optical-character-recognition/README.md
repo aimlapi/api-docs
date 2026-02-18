@@ -6,13 +6,6 @@ Advanced OCR models leverage deep learning to enhance recognition capabilities, 
 
 We provide APIs from two providers: **Google** and **Mistral AI**. Test both options by making several trial requests and determine which one best suits your needs.
 
-{% content-ref url="../../music-models/google/" %}
-[google](../../music-models/google/)
-{% endcontent-ref %}
+### Supported Models
 
-{% content-ref url="mistral-ai/" %}
-[mistral-ai](mistral-ai/)
-{% endcontent-ref %}
-
-
-
+<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="google/google-ocr.md"><em>The service has no Model ID</em></a></td><td>Google</td><td></td><td>-</td></tr><tr><td><a href="mistral-ai/mistral-ocr-latest.md">mistral/mistral-ocr-latest</a></td><td>Mistral AI</td><td></td><td><a href="https://aimlapi.com/models/mistral-ocr-latest-api">Mistral OCR Latest</a></td></tr><tr><td><a href="zhipu/glm-ocr.md">zhipu/glm-ocr</a></td><td>Zhipu</td><td></td><td><a href="https://aimlapi.com/models/glm-ocr">GLM-OCR</a></td></tr></tbody></table>

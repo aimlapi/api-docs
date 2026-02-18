@@ -441,6 +441,8 @@
       * [Google OCR](api-references/vision-models/ocr-optical-character-recognition/google/google-ocr.md)
     * [Mistral AI](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/README.md)
       * [mistral-ocr-latest](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-latest.md)
+    * [Zhipu](api-references/vision-models/ocr-optical-character-recognition/zhipu/README.md)
+      * [glm-ocr](api-references/vision-models/ocr-optical-character-recognition/zhipu/glm-ocr.md)
   * [OFR: Optical Feature Recognition](api-references/vision-models/ofr-optical-feature-recognition.md)
 * [Embedding Models](api-references/embedding-models/README.md)
   * [Alibaba Cloud](api-references/embedding-models/alibaba-cloud/README.md)
