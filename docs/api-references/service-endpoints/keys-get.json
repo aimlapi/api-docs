@@ -12,162 +12,94 @@
   "paths": {
     "/keys": {
       "get": {
-        "operationId": "KeysController_getKeys_v1",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "model": {
-                    "type": "string",
-                    "enum": [
-                      "alibaba/qwen-image-edit"
-                    ]
-                  },
-                  "prompt": {
-                    "type": "string",
-                    "maxLength": 800,
-                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
-                  },
-                  "image": {
-                    "type": "string",
-                    "description": "The image to be edited. Enter the Base64 encoding of the picture or an accessible URL. Image URL: Make sure that the image URL is accessible. Base64-encoded content: The format must be in lowercase."
-                  },
-                  "negative_prompt": {
-                    "type": "string",
-                    "maxLength": 500,
-                    "description": "The description of elements to avoid in the generated image."
-                  },
-                  "watermark": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Add an invisible watermark to the generated images."
-                  }
-                },
-                "required": [
-                  "model",
-                  "prompt",
-                  "image"
-                ],
-                "title": "alibaba/qwen-image-edit"
-              }
-            }
-          }
-        },
+        "operationId": "KeysController_listKeys_v1",
         "responses": {
           "200": {
-            "description": "A list of available models.",
+            "description": "List of API keys, ordered from oldest to newest.",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string",
-                        "description": "Unique identifier of the model.",
-                        "example": "o3-mini"
-                      },
-                      "type": {
-                        "type": "string",
-                        "description": "Model interaction type.",
-                        "example": "chat-completion"
-                      },
-                      "info": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
                         "type": "object",
-                        "description": "Metadata describing the model.",
                         "properties": {
                           "name": {
                             "type": "string",
-                            "description": "Human-readable model name.",
-                            "example": "o3 mini"
+                            "nullable": true,
+                            "description": "API key name.",
+                            "example": "next key api new"
                           },
-                          "developer": {
+                          "disabled": {
+                            "type": "boolean",
+                            "description": "Indicates whether the key is disabled.",
+                            "example": false
+                          },
+                          "prefix": {
                             "type": "string",
-                            "description": "Organization or company that developed the model.",
-                            "example": "Open AI"
+                            "description": "Key prefix.",
+                            "example": "0fed75b7"
                           },
-                          "description": {
+                          "scopes": {
+                            "type": "array",
+                            "description": "Effective scopes assigned to the key.",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "model:chat",
+                              "model:responses"
+                            ]
+                          },
+                          "limit": {
+                            "nullable": true,
+                            "type": "object",
+                            "description": "Spending limits configuration (if set).",
+                            "properties": {
+                              "retention": {
+                                "type": "string",
+                                "example": "week"
+                              },
+                              "threshold": {
+                                "type": "number",
+                                "example": 25
+                              }
+                            }
+                          },
+                          "created_at": {
                             "type": "string",
-                            "description": "Short description of the model and its primary capabilities.",
-                            "example": "OpenAI o3-mini excels in reasoning tasks with advanced features like deliberative alignment and extensive context support."
+                            "format": "date-time",
+                            "description": "Creation timestamp (UTC).",
+                            "example": "2026-02-18T06:59:10.031Z"
                           },
-                          "contextLength": {
-                            "type": "integer",
-                            "description": "Maximum supported context window size in tokens.",
-                            "example": 200000
-                          },
-                          "maxTokens": {
-                            "type": "integer",
-                            "description": "Maximum number of tokens that can be generated in a single response.",
-                            "example": 100000
-                          },
-                          "url": {
+                          "updated_at": {
                             "type": "string",
-                            "format": "uri",
-                            "description": "Public model landing page on AIML API website.",
-                            "example": "https://aimlapi.com/models/openai-o3-mini-api"
+                            "format": "date-time",
+                            "description": "Last update timestamp (UTC).",
+                            "example": "2026-02-18T06:59:10.031Z"
                           },
-                          "docs_url": {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "Link to the official API documentation for this model.",
-                            "example": "https://docs.aimlapi.com/api-references/text-models-llm/openai/o3-mini"
+                          "monthly_usage": {
+                            "type": "number",
+                            "description": "Current monthly usage amount.",
+                            "example": 0
                           }
                         },
                         "required": [
-                          "name",
-                          "developer",
-                          "description",
-                          "url",
-                          "docs_url"
-                        ]
-                      },
-                      "features": {
-                        "type": "array",
-                        "description": "List of supported features and API capabilities for the model.",
-                        "items": {
-                          "type": "string"
-                        },
-                        "example": [
-                          "openai/chat-completion",
-                          "openai/response-api",
-                          "openai/chat-assistant",
-                          "openai/chat-completion.function",
-                          "openai/chat-completion.message.refusal",
-                          "openai/chat-completion.message.system",
-                          "openai/chat-completion.message.developer",
-                          "openai/chat-completion.message.assistant",
-                          "openai/chat-completion.stream",
-                          "openai/chat-completion.max-completion-tokens",
-                          "openai/chat-completion.seed",
-                          "openai/chat-completion.reasoning",
-                          "openai/chat-completion.response-format"
-                        ]
-                      },
-                      "endpoints": {
-                        "type": "array",
-                        "description": "API endpoints through which this model can be accessed.",
-                        "items": {
-                          "type": "string"
-                        },
-                        "example": [
-                          "/v1/chat/completions",
-                          "/v1/responses"
+                          "disabled",
+                          "prefix",
+                          "scopes",
+                          "created_at",
+                          "updated_at",
+                          "monthly_usage"
                         ]
                       }
-                    },
-                    "required": [
-                      "id",
-                      "type",
-                      "info",
-                      "features",
-                      "endpoints"
-                    ]
-                  }
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
                 }
               }
             }
@@ -177,15 +109,15 @@
         "x-codeSamples": [
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --url 'https://api.aimlapi.com/models'"
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v1/keys' \\\n  --header 'Authorization: Bearer <YOUR_MANAGEMENT_KEY>'"
           },
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/models\");\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/keys\", {\n    method: \"GET\",\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\"\n    }\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\"https://api.aimlapi.com/models\")\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+            "source": "import requests\nimport json\n\n\ndef main():\n    url = \"https://api.aimlapi.com/v1/keys\"\n    headers = {\n        \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\"\n    }\n\n    response = requests.get(url, headers=headers)\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\n\nif __name__ == \"__main__\":\n    main()"
           }
         ]
       }
