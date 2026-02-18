@@ -1,0 +1,185 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/keys": {
+      "post": {
+        "operationId": "KeysController_createKey_v1",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Optional human-readable name of the API key.",
+                    "example": "next key api new"
+                  },
+                  "limit": {
+                    "type": "object",
+                    "description": "Optional spending limit configuration.",
+                    "properties": {
+                      "retention": {
+                        "type": "string",
+                        "description": "Limit period.",
+                        "enum": [
+                          "no_reset",
+                          "day",
+                          "week",
+                          "month"
+                        ],
+                        "example": "week"
+                      },
+                      "threshold": {
+                        "type": "number",
+                        "description": "Spending limit threshold for the selected period.",
+                        "example": 25
+                      }
+                    }
+                  },
+                  "scopes": {
+                    "type": "array",
+                    "description": "Optional list of allowed scopes for this key.",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "model:chat",
+                      "model:responses"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "API key creation result.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "API key name.",
+                          "example": "next key api new"
+                        },
+                        "disabled": {
+                          "type": "boolean",
+                          "description": "Indicates whether the key is disabled.",
+                          "example": false
+                        },
+                        "prefix": {
+                          "type": "string",
+                          "description": "Key prefix.",
+                          "example": "0fed75b7"
+                        },
+                        "scopes": {
+                          "type": "array",
+                          "description": "Effective scopes assigned to the key.",
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "model:chat",
+                            "model:image",
+                            "model:audio",
+                            "model:video",
+                            "model:embeddings",
+                            "model:responses",
+                            "model:speech",
+                            "model:ocr"
+                          ]
+                        },
+                        "limit": {
+                          "type": "object",
+                          "description": "Applied spending limits.",
+                          "properties": {
+                            "retention": {
+                              "type": "string",
+                              "example": "week"
+                            },
+                            "threshold": {
+                              "type": "number",
+                              "example": 25
+                            }
+                          }
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "Creation timestamp (UTC).",
+                          "example": "2026-02-18T06:59:10.031Z"
+                        },
+                        "updated_at": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "Last update timestamp (UTC).",
+                          "example": "2026-02-18T06:59:10.031Z"
+                        },
+                        "monthly_usage": {
+                          "type": "number",
+                          "description": "Current monthly usage amount.",
+                          "example": 0
+                        },
+                        "key": {
+                          "type": "string",
+                          "description": "Full API key value (returned only at creation time).",
+                          "example": "0fed75b7388a4f0d9138a151ffd2de8c"
+                        }
+                      },
+                      "required": [
+                        "disabled",
+                        "prefix",
+                        "scopes",
+                        "created_at",
+                        "updated_at",
+                        "monthly_usage",
+                        "key"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/keys' \\\n  --header 'Authorization: Bearer <YOUR_MANAGEMENT_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"name\": \"next key api new\",\n    \"limit\": {\n      \"retention\": \"week\",\n      \"threshold\": 25\n    },\n    \"scopes\": [\n      \"model:chat\",\n      \"model:responses\"\n    ]\n  }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/keys\", {\n    method: \"POST\",\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\",\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify({\n      name: \"next key api new\",\n      limit: {\n        retention: \"week\",\n        threshold: 25\n      },\n      scopes: [\"model:chat\", \"model:responses\"]\n    })\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\n\ndef main():\n    url = \"https://api.aimlapi.com/v1/keys\"\n    headers = {\n        \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\",\n        \"Content-Type\": \"application/json\"\n    }\n\n    payload = {\n        \"name\": \"next key api new\",\n        \"limit\": {\n            \"retention\": \"week\",\n            \"threshold\": 25\n        },\n        \"scopes\": [\n            \"model:chat\",\n            \"model:responses\"\n        ]\n    }\n\n    response = requests.post(url, headers=headers, json=payload)\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  }
+}
