@@ -2,6 +2,22 @@
 description: >-
   General information about types of using error statuses/messages and their
   structure.
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
 ---
 
 # General Info
@@ -74,4 +90,3 @@ More details on possible error messages for the 4xx and 5xx classes can be found
 {% content-ref url="errors-with-status-code-5xx.md" %}
 [errors-with-status-code-5xx.md](errors-with-status-code-5xx.md)
 {% endcontent-ref %}
-

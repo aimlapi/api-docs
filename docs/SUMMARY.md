@@ -12,6 +12,7 @@
 
 * [🟡 Service Endpoints](api-references/service-endpoints/README.md)
   * [Account Balance](api-references/service-endpoints/account-balance.md)
+  * [API Key Management](api-references/service-endpoints/api-key-management.md)
   * [Complete Model List](api-references/service-endpoints/complete-model-list.md)
 * [📒 All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)

@@ -3,6 +3,22 @@ description: >-
   This page describes all 4xx client error codes returned by the AIML API, along
   with real examples of error messages and guidance on how to diagnose and
   resolve each issue.
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
 ---
 
 # Errors with status code 4xx

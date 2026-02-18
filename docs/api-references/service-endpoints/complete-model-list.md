@@ -1,5 +1,5 @@
 ---
-icon: money-check-pen
+icon: dot
 ---
 
 # Complete Model List
