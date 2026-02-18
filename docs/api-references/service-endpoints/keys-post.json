@@ -99,13 +99,7 @@
                           },
                           "example": [
                             "model:chat",
-                            "model:image",
-                            "model:audio",
-                            "model:video",
-                            "model:embeddings",
-                            "model:responses",
-                            "model:speech",
-                            "model:ocr"
+                            "model:responses"
                           ]
                         },
                         "limit": {
