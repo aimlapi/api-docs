@@ -45,9 +45,19 @@
                   "scopes": {
                     "type": "array",
                     "nullable": true,
-                    "description": "List of scopes assigned to the key.",
+                    "description": "List of model access scopes assigned to the key. Defines which categories of models can be called using this API key.",
                     "items": {
-                      "type": "string"
+                      "type": "string",
+                      "enum": [
+                        "model:chat",
+                        "model:image",
+                        "model:audio",
+                        "model:video",
+                        "model:embeddings",
+                        "model:responses",
+                        "model:speech",
+                        "model:ocr"
+                      ]
                     }
                   },
                   "limit": {

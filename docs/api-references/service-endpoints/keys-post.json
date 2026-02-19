@@ -93,14 +93,21 @@
                         },
                         "scopes": {
                           "type": "array",
-                          "description": "Effective scopes assigned to the key.",
+                          "nullable": true,
+                          "description": "List of model access scopes assigned to the key. Defines which categories of models can be called using this API key.",
                           "items": {
-                            "type": "string"
-                          },
-                          "example": [
-                            "model:chat",
-                            "model:responses"
-                          ]
+                            "type": "string",
+                            "enum": [
+                              "model:chat",
+                              "model:image",
+                              "model:audio",
+                              "model:video",
+                              "model:embeddings",
+                              "model:responses",
+                              "model:speech",
+                              "model:ocr"
+                            ]
+                          }
                         },
                         "limit": {
                           "type": "object",
@@ -136,7 +143,7 @@
                         "key": {
                           "type": "string",
                           "description": "Full API key value (returned only at creation time).",
-                          "example": "0123456789abcdef0123456789abcdef0"
+                          "example": "b747e891847f4c3fa0f6cce1cfd79bf9"
                         }
                       },
                       "required": [
