@@ -18,7 +18,7 @@
             "name": "prefix",
             "in": "path",
             "required": true,
-            "description": "Prefix of the API key to delete. Passed in the URL path. This is the first 8 characters of the API key you want to delete. Only these 8 characters are visible in the dashboard (the rest are masked with asterisks). You can also obtain this value via the POST method (see the `prefix` field in its response).",
+            "description": "Prefix of the API key to delete. Passed in the URL path. This is the first 8 characters of the API key you want to delete. Passed in the URL path. This is the first 8 characters of your API key, visible in the dashboard. You can also obtain this value via the POST method (see the `prefix` field in its response).",
             "schema": {
               "type": "string",
               "example": "b747e891"

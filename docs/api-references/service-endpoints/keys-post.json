@@ -95,7 +95,7 @@
                         },
                         "prefix": {
                           "type": "string",
-                          "description": "Key prefix. This is the first 8 characters of the API key.",
+                          "description": "Key prefix. This is the first 8 characters of your API key, visible in the dashboard.",
                           "example": "b747e891"
                         },
                         "scopes": {

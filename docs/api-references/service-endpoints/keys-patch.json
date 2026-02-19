@@ -111,7 +111,7 @@
                         },
                         "prefix": {
                           "type": "string",
-                          "description": "Key prefix.",
+                          "description": "Key prefix. Passed in the URL path. This is the first 8 characters of your API key, visible in the dashboard. You can also obtain this value via the POST method (see the `prefix` field in its response).",
                           "example": "b747e891"
                         },
                         "scopes": {

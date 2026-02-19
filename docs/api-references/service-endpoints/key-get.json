@@ -37,7 +37,7 @@
                         },
                         "prefix": {
                           "type": "string",
-                          "description": "Key prefix. This is the first 8 characters of the API key. Only these 8 characters are visible in the dashboard (the rest are masked with asterisks). You can also obtain this value via the POST method (see the `prefix` field in its response).",
+                          "description": "Key prefix. This is the first 8 characters of your API key, visible in the dashboard. You can also obtain this value via the POST method (see the `prefix` field in its response).",
                           "example": "b747e891"
                         },
                         "scopes": {
