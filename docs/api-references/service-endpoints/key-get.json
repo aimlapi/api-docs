@@ -15,7 +15,7 @@
         "operationId": "KeysController_getLatestKey_v1",
         "responses": {
           "200": {
-            "description": "Retrieve parameters of the latest API key.",
+            "description": "Parameters of the latest API key.",
             "content": {
               "application/json": {
                 "schema": {
