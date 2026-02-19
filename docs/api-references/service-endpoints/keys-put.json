@@ -1,0 +1,178 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/keys/{prefix}": {
+      "put": {
+        "operationId": "KeysController_replaceKey_v1",
+        "parameters": [
+          {
+            "name": "prefix",
+            "in": "path",
+            "required": true,
+            "description": "Prefix of the API key to update. Passed in the URL path.",
+            "schema": {
+              "type": "string",
+              "example": "98ca6267"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Full set of API key properties. Any subset of fields may be changed relative to the existing key.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "API key name."
+                  },
+                  "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the key is disabled."
+                  },
+                  "scopes": {
+                    "type": "array",
+                    "nullable": true,
+                    "description": "List of scopes assigned to the key.",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "limit": {
+                    "nullable": true,
+                    "description": "Spending limits configuration.",
+                    "type": "object",
+                    "properties": {
+                      "retention": {
+                        "type": "string",
+                        "example": "week"
+                      },
+                      "threshold": {
+                        "type": "number",
+                        "example": 30
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "nullable": true,
+                          "example": "next key api new 2"
+                        },
+                        "disabled": {
+                          "type": "boolean",
+                          "example": false
+                        },
+                        "prefix": {
+                          "type": "string",
+                          "example": "98ca6267"
+                        },
+                        "scopes": {
+                          "type": "array",
+                          "nullable": true,
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": [
+                            "model:chat",
+                            "model:image",
+                            "model:audio",
+                            "model:video",
+                            "model:embeddings",
+                            "model:responses",
+                            "model:speech",
+                            "model:ocr"
+                          ]
+                        },
+                        "limit": {
+                          "nullable": true,
+                          "type": "object",
+                          "properties": {
+                            "retention": {
+                              "type": "string",
+                              "example": "week"
+                            },
+                            "threshold": {
+                              "type": "number",
+                              "example": 30
+                            }
+                          }
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time",
+                          "example": "2026-02-17T12:40:18.244Z"
+                        },
+                        "updated_at": {
+                          "type": "string",
+                          "format": "date-time",
+                          "example": "2026-02-17T12:40:18.244Z"
+                        },
+                        "monthly_usage": {
+                          "type": "number",
+                          "example": 0
+                        }
+                      },
+                      "required": [
+                        "disabled",
+                        "prefix",
+                        "created_at",
+                        "updated_at",
+                        "monthly_usage"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request PUT \\\n  --url 'https://api.aimlapi.com/v1/keys/98ca6267' \\\n  --header 'Authorization: Bearer <YOUR_MANAGEMENT_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"name\": \"next key api new 2\",\n    \"disabled\": false,\n    \"limit\": {\n      \"retention\": \"week\",\n      \"threshold\": 30\n    }\n  }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/keys/98ca6267\", {\n    method: \"PUT\",\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\",\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify({\n      name: \"next key api new 2\",\n      disabled: false,\n      limit: { retention: \"week\", threshold: 30 }\n    })\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\n\ndef main():\n    prefix = \"98ca6267\"\n    url = f\"https://api.aimlapi.com/v1/keys/{prefix}\"\n\n    headers = {\n        \"Authorization\": \"Bearer <YOUR_MANAGEMENT_KEY>\",\n        \"Content-Type\": \"application/json\"\n    }\n\n    payload = {\n        \"name\": \"next key api new 2\",\n        \"disabled\": False,\n        \"limit\": {\n            \"retention\": \"week\",\n            \"threshold\": 30\n        }\n    }\n\n    response = requests.put(url, headers=headers, json=payload)\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  }
+}
