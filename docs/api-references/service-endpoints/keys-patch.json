@@ -18,7 +18,7 @@
             "name": "prefix",
             "in": "path",
             "required": true,
-            "description": "Prefix of the API key to update. Passed in the URL path.",
+            "description": "Prefix of the API key to update. Passed in the URL path. This is the first 8 characters of the API key. Only these 8 characters are visible in the dashboard (the rest are masked with asterisks). You can also obtain this value via the POST method (see the `prefix` field in its response).",
             "schema": {
               "type": "string",
               "example": "b747e891"
@@ -56,8 +56,8 @@
                         "name": {
                           "type": "string",
                           "nullable": true,
-                          "description": "API key name.",
-                          "example": "next key api new"
+                          "description": "Human-readable, user-defined name for the API key.",
+                          "example": "20260202-key-for-llms"
                         },
                         "disabled": {
                           "type": "boolean",

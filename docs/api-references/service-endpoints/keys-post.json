@@ -49,14 +49,21 @@
                   },
                   "scopes": {
                     "type": "array",
-                    "description": "Optional list of allowed scopes for this key.",
+                    "nullable": true,
+                    "description": "List of model access scopes assigned to the key. Defines which categories of models can be called using this API key.",
                     "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "model:chat",
-                      "model:responses"
-                    ]
+                      "type": "string",
+                      "enum": [
+                        "model:chat",
+                        "model:responses",
+                        "model:image",
+                        "model:audio",
+                        "model:video",
+                        "model:embeddings",
+                        "model:speech",
+                        "model:ocr"
+                      ]
+                    }
                   }
                 },
                 "additionalProperties": false
@@ -78,8 +85,8 @@
                         "name": {
                           "type": "string",
                           "nullable": true,
-                          "description": "API key name.",
-                          "example": "next key api new"
+                          "description": "Human-readable, user-defined name for the API key.",
+                          "example": "20260202-key-for-llms"
                         },
                         "disabled": {
                           "type": "boolean",
@@ -89,7 +96,7 @@
                         "prefix": {
                           "type": "string",
                           "description": "Key prefix.",
-                          "example": "0fed75b7"
+                          "example": "b747e891"
                         },
                         "scopes": {
                           "type": "array",

@@ -36,7 +36,8 @@
                   "name": {
                     "type": "string",
                     "nullable": true,
-                    "description": "API key name."
+                    "description": "Human-readable, user-defined name for the API key.",
+                    "example": "20260202-key-for-llms"
                   },
                   "disabled": {
                     "type": "boolean",

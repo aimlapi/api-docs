@@ -27,8 +27,8 @@
                         "name": {
                           "type": "string",
                           "nullable": true,
-                          "description": "API key name.",
-                          "example": "test"
+                          "description": "Human-readable, user-defined name for the API key.",
+                          "example": "20260202-key-for-llms"
                         },
                         "disabled": {
                           "type": "boolean",
@@ -37,7 +37,7 @@
                         },
                         "prefix": {
                           "type": "string",
-                          "description": "Key prefix.",
+                          "description": "Key prefix. This is the first 8 characters of the API key. Only these 8 characters are visible in the dashboard (the rest are masked with asterisks). You can also obtain this value via the POST method (see the `prefix` field in its response).",
                           "example": "b747e891"
                         },
                         "scopes": {
