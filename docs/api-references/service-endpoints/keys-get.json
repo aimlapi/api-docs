@@ -40,7 +40,7 @@
                           "prefix": {
                             "type": "string",
                             "description": "Key prefix.",
-                            "example": "0fed75b7"
+                            "example": "b747e891"
                           },
                           "scopes": {
                             "type": "array",
@@ -50,11 +50,11 @@
                               "type": "string",
                               "enum": [
                                 "model:chat",
+                                "model:responses",
                                 "model:image",
                                 "model:audio",
                                 "model:video",
                                 "model:embeddings",
-                                "model:responses",
                                 "model:speech",
                                 "model:ocr"
                               ]

@@ -38,7 +38,7 @@
                         "prefix": {
                           "type": "string",
                           "description": "Key prefix.",
-                          "example": "325b9499"
+                          "example": "b747e891"
                         },
                         "scopes": {
                           "type": "array",
@@ -48,11 +48,11 @@
                             "type": "string",
                             "enum": [
                               "model:chat",
+                              "model:responses",
                               "model:image",
                               "model:audio",
                               "model:video",
                               "model:embeddings",
-                              "model:responses",
                               "model:speech",
                               "model:ocr"
                             ]

@@ -99,11 +99,11 @@
                             "type": "string",
                             "enum": [
                               "model:chat",
+                              "model:responses",
                               "model:image",
                               "model:audio",
                               "model:video",
                               "model:embeddings",
-                              "model:responses",
                               "model:speech",
                               "model:ocr"
                             ]
