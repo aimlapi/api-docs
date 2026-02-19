@@ -1,15 +1,13 @@
 ---
-hidden: true
-noIndex: true
 icon: dot
 ---
 
 # API Key Management
 
 This section describes the API methods for managing your API keys. \
-You can use these endpoints to list, create, update, and delete API keys:
+You can use these endpoints to create, list, update, and delete API keys:
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="302.0167236328125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Create an API key</td><td valign="top"><img src="../../.gitbook/assets/POST (3).png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top">Retrieve a list of API keys along with their parameters</td><td valign="top"><img src="../../.gitbook/assets/GET (2).png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top">Retrieve information about a specific API key by its prefix (first 8 symbols of the key)</td><td valign="top"><img src="../../.gitbook/assets/GET (3).png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top">Modify all the parameters of a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/PUT.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top">Modify specific parameters of a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/PATCH.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top">Delete a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/DELETE (1).png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="274.0167236328125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Create an API key</td><td valign="top"><img src="../../.gitbook/assets/post.png" alt="" data-size="line">  <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top">Retrieve a list of API keys along with their parameters</td><td valign="top"><img src="../../.gitbook/assets/get.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top">Retrieve information about a specific API key by its prefix (first 8 symbols of the key)</td><td valign="top"><img src="../../.gitbook/assets/get.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/key/{prefix}</code></td></tr><tr><td valign="top">Modify specific parameters of a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/patch.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top">Modify all the parameters of a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/put.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top">Delete a specific API key by its prefix</td><td valign="top"><img src="../../.gitbook/assets/delete.png" alt="" data-size="line"> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr></tbody></table>
 
 After each API schema below, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
@@ -21,19 +19,43 @@ Important: all requests to these endpoints must be authorized using a Management
 
 ### Create an API key
 
+Out of the five methods described on this page, only this one returns the full API key value — the same way it is shown once immediately after the key is created in the dashboard.
 
+{% openapi-operation spec="keys-post" path="/keys" method="post" %}
+[OpenAPI keys-post](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-post.json)
+{% endopenapi-operation %}
 
 ***
 
 ### Retrieve a list of API keys along with their parameters
 
+{% openapi-operation spec="keys-get" path="/keys" method="get" %}
+[OpenAPI keys-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-get.json)
+{% endopenapi-operation %}
+
+***
+
+### Retrieve parameters of the latest API key
+
+{% openapi-operation spec="key-get" path="/key" method="get" %}
+[OpenAPI key-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/key-get.json)
+{% endopenapi-operation %}
+
 ***
 
 ### Modify specific parameters of a specific API key by its prefix
 
+{% openapi-operation spec="keys-patch" path="/keys/{prefix}" method="patch" %}
+[OpenAPI keys-patch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-patch.json)
+{% endopenapi-operation %}
+
 ***
 
 ### Modify all the parameters of a specific API key by its prefix
+
+{% openapi-operation spec="keys-put" path="/keys/{prefix}" method="put" %}
+[OpenAPI keys-put](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-put.json)
+{% endopenapi-operation %}
 
 ***
 

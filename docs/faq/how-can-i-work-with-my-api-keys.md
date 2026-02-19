@@ -1,6 +1,4 @@
 ---
-hidden: true
-noIndex: true
 icon: circle-question
 ---
 
@@ -12,6 +10,8 @@ In your account dashboard, open the [**Keys**](https://aimlapi.com/app/keys/) se
 
 * **API Keys**
 * **Management Keys**
+
+If you plan to create, edit, delete, or list API keys via our API, see the API schemas for the relevant endpoints on the [**API Key Management**](../api-references/service-endpoints/api-key-management.md) page.
 
 ***
 
