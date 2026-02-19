@@ -23,7 +23,7 @@
                   "name": {
                     "type": "string",
                     "description": "Optional human-readable name of the API key.",
-                    "example": "next key api new"
+                    "example": "20260202-key-for-llms"
                   },
                   "limit": {
                     "type": "object",
@@ -42,7 +42,7 @@
                       },
                       "threshold": {
                         "type": "number",
-                        "description": "Spending limit threshold for the selected period.",
+                        "description": "Spending limit threshold for the selected period, in USD.",
                         "example": 25
                       }
                     }
@@ -95,7 +95,7 @@
                         },
                         "prefix": {
                           "type": "string",
-                          "description": "Key prefix.",
+                          "description": "Key prefix. This is the first 8 characters of the API key.",
                           "example": "b747e891"
                         },
                         "scopes": {

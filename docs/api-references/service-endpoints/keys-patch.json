@@ -32,10 +32,55 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Optional human-readable name of the API key.",
+                    "example": "20260202-key-for-llms"
+                  },
                   "disabled": {
                     "type": "boolean",
                     "description": "Enable or disable the API key.",
                     "example": false
+                  },
+                  "limit": {
+                    "type": "object",
+                    "description": "Optional spending limit configuration.",
+                    "properties": {
+                      "retention": {
+                        "type": "string",
+                        "description": "Limit period.",
+                        "enum": [
+                          "no_reset",
+                          "day",
+                          "week",
+                          "month"
+                        ],
+                        "example": "week"
+                      },
+                      "threshold": {
+                        "type": "number",
+                        "description": "Spending limit threshold for the selected period, in USD",
+                        "example": 25
+                      }
+                    }
+                  },
+                  "scopes": {
+                    "type": "array",
+                    "nullable": true,
+                    "description": "List of model access scopes assigned to the key. Defines which categories of models can be called using this API key.",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "model:chat",
+                        "model:responses",
+                        "model:image",
+                        "model:audio",
+                        "model:video",
+                        "model:embeddings",
+                        "model:speech",
+                        "model:ocr"
+                      ]
+                    }
                   }
                 }
               }

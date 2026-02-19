@@ -18,10 +18,10 @@
             "name": "prefix",
             "in": "path",
             "required": true,
-            "description": "Prefix of the API key to update. Passed in the URL path.",
+            "description": "Prefix of the API key to update. Passed in the URL path. This is the first 8 characters of the API key. Only these 8 characters are visible in the dashboard (the rest are masked with asterisks). You can also obtain this value via the POST method (see the `prefix` field in its response).",
             "schema": {
               "type": "string",
-              "example": "98ca6267"
+              "example": "b747e891"
             }
           }
         ],
@@ -72,7 +72,8 @@
                       },
                       "threshold": {
                         "type": "number",
-                        "example": 30
+                        "description": "Spending limit threshold for the selected period, in USD.",
+                        "example": 25
                       }
                     }
                   }
@@ -126,7 +127,7 @@
                             },
                             "threshold": {
                               "type": "number",
-                              "example": 30
+                              "example": 25
                             }
                           }
                         },

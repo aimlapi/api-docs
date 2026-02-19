@@ -69,6 +69,7 @@
                             },
                             "threshold": {
                               "type": "number",
+                              "description": "Spending limit threshold for the selected period, in USD.",
                               "example": 25
                             }
                           }
