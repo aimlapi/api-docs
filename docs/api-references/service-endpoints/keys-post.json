@@ -73,7 +73,7 @@
         },
         "responses": {
           "200": {
-            "description": "API key creation result.",
+            "description": "API key creation result",
             "content": {
               "application/json": {
                 "schema": {
@@ -122,10 +122,12 @@
                           "properties": {
                             "retention": {
                               "type": "string",
+                              "description": "Limit period.",
                               "example": "week"
                             },
                             "threshold": {
                               "type": "number",
+                              "description": "Spending limit threshold for the selected period, in USD",
                               "example": 25
                             }
                           }

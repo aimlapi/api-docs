@@ -89,7 +89,7 @@
         },
         "responses": {
           "200": {
-            "description": "Updated API key parameters.",
+            "description": "Updated API key parameters",
             "content": {
               "application/json": {
                 "schema": {

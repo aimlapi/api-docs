@@ -15,7 +15,7 @@
         "operationId": "KeysController_listKeys_v1",
         "responses": {
           "200": {
-            "description": "List of API keys, ordered from oldest to newest.",
+            "description": "List of API keys, ordered from oldest to newest",
             "content": {
               "application/json": {
                 "schema": {

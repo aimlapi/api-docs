@@ -27,7 +27,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Key deletion result.",
+            "description": "Key deletion result",
             "content": {
               "application/json": {
                 "schema": {

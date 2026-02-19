@@ -84,7 +84,7 @@
         },
         "responses": {
           "200": {
-            "description": "Updated API key.",
+            "description": "Updated API key",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,19 +96,23 @@
                         "name": {
                           "type": "string",
                           "nullable": true,
-                          "example": "next key api new 2"
-                        },
-                        "disabled": {
-                          "type": "boolean",
-                          "example": false
+                          "description": "Human-readable, user-defined name for the API key.",
+                          "example": "20260202-key-for-llms"
                         },
                         "prefix": {
                           "type": "string",
+                          "description": "Key prefix. This is the first 8 characters of your API key, visible in the dashboard. You can also obtain this value via the GET method (see the `prefix` field in its response).",
                           "example": "b747e891"
+                        },
+                        "disabled": {
+                          "type": "boolean",
+                          "description": "Indicates whether the key is disabled.",
+                          "example": false
                         },
                         "scopes": {
                           "type": "array",
                           "nullable": true,
+                          "description": "List of model access scopes assigned to the key. Defines which categories of models can be called using this API key.",
                           "items": {
                             "type": "string"
                           },
@@ -119,14 +123,17 @@
                         },
                         "limit": {
                           "nullable": true,
+                          "description": "Applied spending limits.",
                           "type": "object",
                           "properties": {
                             "retention": {
                               "type": "string",
+                              "description": "Limit period.",
                               "example": "week"
                             },
                             "threshold": {
                               "type": "number",
+                              "description": "Spending limit threshold for the selected period, in USD",
                               "example": 25
                             }
                           }
@@ -134,15 +141,18 @@
                         "created_at": {
                           "type": "string",
                           "format": "date-time",
+                          "description": "Creation timestamp (UTC).",
                           "example": "2026-02-17T12:40:18.244Z"
                         },
                         "updated_at": {
                           "type": "string",
                           "format": "date-time",
+                          "description": "Last update timestamp (UTC).",
                           "example": "2026-02-17T12:40:18.244Z"
                         },
                         "monthly_usage": {
                           "type": "number",
+                          "description": "Current monthly usage amount.",
                           "example": 0
                         }
                       },
