@@ -71,7 +71,9 @@ This allows you to:
 
 ***
 
-### 2. Management Keys
+## Management Keys
+
+This type of key can only be created in the dashboard and is used to call the API for managing regular API keys.
 
 #### Creating a Management key
 
