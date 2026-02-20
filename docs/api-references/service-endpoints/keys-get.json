@@ -32,15 +32,15 @@
                             "description": "Human-readable, user-defined name for the API key.",
                             "example": "20260202-key-for-llms"
                           },
-                          "disabled": {
-                            "type": "boolean",
-                            "description": "Indicates whether the key is disabled.",
-                            "example": false
-                          },
                           "prefix": {
                             "type": "string",
                             "description": "Key prefix. This is the first 8 characters of your API key, visible in the dashboard. You can also obtain this value via the POST method (see the `prefix` field in its response).",
                             "example": "b747e891"
+                          },
+                          "disabled": {
+                            "type": "boolean",
+                            "description": "Indicates whether the key is disabled.",
+                            "example": false
                           },
                           "scopes": {
                             "type": "array",
@@ -67,7 +67,12 @@
                             "properties": {
                               "retention": {
                                 "type": "string",
-                                "example": "week"
+                                "enum": [
+                                  "no_reset",
+                                  "day",
+                                  "week",
+                                  "month"
+                                ]
                               },
                               "threshold": {
                                 "type": "number",

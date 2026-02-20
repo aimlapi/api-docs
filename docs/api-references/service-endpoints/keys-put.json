@@ -68,7 +68,12 @@
                     "properties": {
                       "retention": {
                         "type": "string",
-                        "example": "week"
+                        "enum": [
+                          "no_reset",
+                          "day",
+                          "week",
+                          "month"
+                        ]
                       },
                       "threshold": {
                         "type": "number",
@@ -129,7 +134,12 @@
                             "retention": {
                               "type": "string",
                               "description": "Limit period.",
-                              "example": "week"
+                              "enum": [
+                                "no_reset",
+                                "day",
+                                "week",
+                                "month"
+                              ]
                             },
                             "threshold": {
                               "type": "number",
