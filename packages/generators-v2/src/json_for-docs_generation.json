@@ -1,20 +1,18 @@
 [
   {
-    "name": "gpt-4o",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-4o",
-    "alias": "gpt-4o",
-    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13"],
+    "name": "minimax/m2-5-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-20260218",
+    "alias": "m2-5-20260218",
     "category": "text-models-llm",
-    "vendor": "OpenAI",
+    "vendor": "MiniMax",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "gpt-4o",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4o",
-    "alias": "gpt-4o-RESPONSES",
-    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13"],
+    "name": "minimax/m2-5-highspeed-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-highspeed-20260218",
+    "alias": "m2-5-highspeed-20260218",
     "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "responses"
+    "vendor": "MiniMax",
+    "codeSamples": "chat-completion"
   }
 ]
