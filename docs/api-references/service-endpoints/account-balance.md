@@ -1,7 +1,3 @@
----
-icon: dot
----
-
 # Account Balance
 
 ## Get account balance info

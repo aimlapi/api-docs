@@ -1,7 +1,3 @@
----
-icon: dot
----
-
 # Complete Model List
 
 ## Get Model List via API
