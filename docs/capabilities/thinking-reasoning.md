@@ -95,6 +95,8 @@ Supported models:
 
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
+* [minimax/m2-5-20260218](../api-references/text-models-llm/minimax/m2-5.md)
+* [minimax/m2-5-highspeed-20260218](../api-references/text-models-llm/minimax/m2-5-highspeed.md)
 
 ***
 
