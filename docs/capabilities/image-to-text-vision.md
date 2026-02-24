@@ -48,6 +48,7 @@ print(response.json())
 
 * [alibaba/qwen3-vl-32b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-instruct.md)
 * [alibaba/qwen3-vl-32b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.md)
+* [alibaba/qwen3.5-plus-20260218](../api-references/text-models-llm/alibaba-cloud/qwen3.5-plus.md)
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
 * [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
 * [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
