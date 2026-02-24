@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/keys": {
+    "/keys/{prefix}": {
       "delete": {
         "operationId": "KeysController_postKeys_v1",
         "parameters": [
