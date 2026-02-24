@@ -50,6 +50,6 @@ Retrieve parameters of the AIMLAPI key used in the request.
 
 ### Delete an API key
 
-{% openapi-operation spec="keys-delete" path="/keys" method="delete" %}
+{% openapi-operation spec="keys-delete" path="/keys/{prefix}" method="delete" %}
 [OpenAPI keys-delete](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-delete.json)
 {% endopenapi-operation %}
