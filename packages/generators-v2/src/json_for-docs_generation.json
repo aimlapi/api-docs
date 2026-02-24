@@ -1,18 +1,10 @@
 [
   {
-    "name": "minimax/m2-5-20260218",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-20260218",
-    "alias": "m2-5-20260218",
+    "name": "alibaba/qwen3.5-plus-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.5-plus-20260218",
+    "alias": "qwen3.5-plus-20260218",
     "category": "text-models-llm",
-    "vendor": "MiniMax",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "minimax/m2-5-highspeed-20260218",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-highspeed-20260218",
-    "alias": "m2-5-highspeed-20260218",
-    "category": "text-models-llm",
-    "vendor": "MiniMax",
+    "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
   }
 ]
