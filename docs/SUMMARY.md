@@ -324,6 +324,7 @@
   * [Krea](api-references/video-models/krea/README.md)
     * [krea-wan-14b/text-to-video](api-references/video-models/krea/krea-wan-14b-text-to-video.md)
     * [krea-wan-14b/video-to-video](api-references/video-models/krea/krea-wan-14b-video-to-video.md)
+  * [LongCat](api-references/video-models/longcat.md)
   * [LTXV](api-references/video-models/ltxv/README.md)
     * [ltxv-2](api-references/video-models/ltxv/ltxv-2.md)
     * [ltxv-2-fast](api-references/video-models/ltxv/ltxv-2-fast.md)
