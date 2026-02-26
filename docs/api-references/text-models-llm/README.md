@@ -46,7 +46,7 @@ An evolution of chat completion includes **Assistants** (preconfigured conversat
 
 All text and chat models use the same endpoint:
 
-<img src="../../.gitbook/assets/POST.png" alt="" data-size="line"> `https://api.aimlapi.com/v1/chat/completions`
+<img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> `https://api.aimlapi.com/v1/chat/completions`
 
 The parameters may vary (especially for models from different developers), so it’s best to check the API schema on each model’s page for details. Example: [**o4-mini**](openai/o4-mini.md#api-schema).
 

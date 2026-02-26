@@ -1,11 +1,11 @@
 # Assistant API
 
-**Assistants** are AI-driven entities with assigned roles and instructions, allowing them to process messages, use tools, and maintain context within threads for structured and interactive responses. \
+**Assistants** are AI-driven entities with assigned roles and instructions, allowing them to process messages, use tools, and maintain context within threads for structured and interactive responses.\
 One Assistant can be used across multiple Threads and users.
 
 This page provides API schemas for the following methods:
 
-<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="assistant-api.md#create-an-assistant">Create an Assistant</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-a-list-of-assistants-along-with-their-parameters">Retrieve a list of Assistants along with their parameters</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-information-about-a-specific-assistant-by-its-id">Retrieve information about a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#modify-a-specific-assistant-by-its-id">Modify a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#delete-a-specific-assistant-by-its-id">Delete a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="assistant-api.md#create-an-assistant">Create an Assistant</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-a-list-of-assistants-along-with-their-parameters">Retrieve a list of Assistants along with their parameters</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants</code></td></tr><tr><td><a href="assistant-api.md#retrieve-information-about-a-specific-assistant-by-its-id">Retrieve information about a specific Assistant by its ID</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#modify-a-specific-assistant-by-its-id">Modify a specific Assistant by its ID</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr><tr><td><a href="assistant-api.md#delete-a-specific-assistant-by-its-id">Delete a specific Assistant by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/assistants/{assistantId}</code></td></tr></tbody></table>
 
 After each API schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
@@ -40,8 +40,6 @@ assistant = client.beta.assistants.create(
 ```
 {% endcode %}
 
-
-
 ***
 
 ### Retrieve a list of Assistants along with their parameters
@@ -65,8 +63,6 @@ print(my_assistants.data)
 ```
 {% endcode %}
 
-
-
 ***
 
 ### Retrieve information about a specific Assistant by its ID
@@ -87,8 +83,6 @@ print(my_assistant)
 
 ```
 {% endcode %}
-
-
 
 ***
 
@@ -116,8 +110,6 @@ my_updated_assistant = client.beta.assistants.update(
 print(my_updated_assistant)
 ```
 {% endcode %}
-
-
 
 ***
 

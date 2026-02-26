@@ -8,7 +8,7 @@ description: This page provides api schemas and descriptions for Threads API met
 
 This page provides API schemas for the following methods:
 
-<table><thead><tr><th width="302.0833740234375"></th><th></th></tr></thead><tbody><tr><td><a href="threads.md#create-a-thread">Create a Thread</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads</code></td></tr><tr><td><a href="threads.md#retrieve-information-about-a-specific-thread-by-its-id">Retrieve information about a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#modify-a-specific-thread-by-its-id">Modify a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#delete-a-specific-thread-by-its-id">Delete a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr></tbody></table>
+<table><thead><tr><th width="302.0833740234375"></th><th></th></tr></thead><tbody><tr><td><a href="threads.md#create-a-thread">Create a Thread</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads</code></td></tr><tr><td><a href="threads.md#retrieve-information-about-a-specific-thread-by-its-id">Retrieve information about a specific Thread by its ID</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#modify-a-specific-thread-by-its-id">Modify a specific Thread by its ID</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr><tr><td><a href="threads.md#delete-a-specific-thread-by-its-id">Delete a specific Thread by its ID</a></td><td><img src="../../../.gitbook/assets/DELETE.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}</code></td></tr></tbody></table>
 
 After each API schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
@@ -46,8 +46,6 @@ thread = client.beta.threads.create(
 )        
 </code></pre>
 
-
-
 ***
 
 ### Retrieve information about a specific Thread by its ID
@@ -65,8 +63,6 @@ client = OpenAI()
 my_thread = client.beta.threads.retrieve("thread_abc123")
 print(my_thread)
 ```
-
-
 
 ***
 
@@ -91,8 +87,6 @@ my_updated_thread = client.beta.threads.update(
 )
 print(my_updated_thread)
 ```
-
-
 
 ***
 

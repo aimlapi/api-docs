@@ -4,7 +4,7 @@ Runs are processes that execute the assistant’s logic within a thread, allowin
 
 This page provides API schemas for the following methods:
 
-<table><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="runs.md#create-a-run">Create a Run</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs</code></td></tr><tr><td><a href="runs.md#create-a-thread-and-run-it-in-one-request">Create a Thread and run it in one request</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/runs</code></td></tr><tr><td><a href="runs.md#retrieve-a-list-of-runs-belonging-to-a-specific-thread">Retrieve a list of Runs belonging to a specific Thread</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs</code></td></tr><tr><td><a href="runs.md#retrieve-information-about-a-specific-run-by-its-id">Retrieve information about a specific Run by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}</code></td></tr><tr><td><a href="runs.md#modify-a-specific-run-by-its-id">Modify a specific Run by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}</code></td></tr><tr><td><a href="runs.md#submit-tool-outputs-to-a-specific-run">Submit Tool outputs to a specific Run</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/submit_tool_outputs</code></td></tr><tr><td><a href="runs.md#cancel-a-specific-run-by-its-id">Cancel a specific Run by its ID</a></td><td><img src="../../../.gitbook/assets/POST.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/cancel</code></td></tr><tr><td><a href="runs.md#retrieve-a-list-of-runs-belonging-to-a-specific-thread">Retrieve a list of Run Steps belonging to a specific Run</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/steps</code></td></tr><tr><td><a href="runs.md#retrieve-information-about-a-specific-run-step-by-its-id">Retrieve information about a specific Run Step by its ID</a></td><td><img src="../../../.gitbook/assets/GET.png" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/steps/{stepId}</code></td></tr></tbody></table>
+<table><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td><a href="runs.md#create-a-run">Create a Run</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs</code></td></tr><tr><td><a href="runs.md#create-a-thread-and-run-it-in-one-request">Create a Thread and run it in one request</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/runs</code></td></tr><tr><td><a href="runs.md#retrieve-a-list-of-runs-belonging-to-a-specific-thread">Retrieve a list of Runs belonging to a specific Thread</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs</code></td></tr><tr><td><a href="runs.md#retrieve-information-about-a-specific-run-by-its-id">Retrieve information about a specific Run by its ID</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}</code></td></tr><tr><td><a href="runs.md#modify-a-specific-run-by-its-id">Modify a specific Run by its ID</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}</code></td></tr><tr><td><a href="runs.md#submit-tool-outputs-to-a-specific-run">Submit Tool outputs to a specific Run</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/submit_tool_outputs</code></td></tr><tr><td><a href="runs.md#cancel-a-specific-run-by-its-id">Cancel a specific Run by its ID</a></td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/cancel</code></td></tr><tr><td><a href="runs.md#retrieve-a-list-of-runs-belonging-to-a-specific-thread">Retrieve a list of Run Steps belonging to a specific Run</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/steps</code></td></tr><tr><td><a href="runs.md#retrieve-information-about-a-specific-run-step-by-its-id">Retrieve information about a specific Run Step by its ID</a></td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/threads/{threadId}/runs/{runId}/steps/{stepId}</code></td></tr></tbody></table>
 
 After each schema, you'll find a short example demonstrating how to correctly call the described method in code using the OpenAI SDK.
 
@@ -18,7 +18,7 @@ Accordingly, when calling these methods via the REST API, you should use the nam
 ### Create a run
 
 {% openapi-operation spec="ass-runs-create" path="/threads/{threadId}/runs" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-create](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -35,14 +35,12 @@ run = client.beta.threads.runs.create(
 print(run)
 ```
 
-
-
 ***
 
 ### Create a Thread and run it in one request
 
 {% openapi-operation spec="ass-runs-create-n-run" path="/threads/runs" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-create-n-run](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -63,14 +61,12 @@ run = client.beta.threads.create_and_run(
 print(run)
 ```
 
-
-
 ***
 
 ### Retrieve a list of Runs belonging to a specific Thread
 
 {% openapi-operation spec="ass-runs-get-list" path="/threads/{threadId}/runs" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-get-list](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -86,14 +82,12 @@ runs = client.beta.threads.runs.list(
 print(runs)
 ```
 
-
-
 ***
 
 ### Retrieve information about a specific Run by its ID
 
 {% openapi-operation spec="ass-runs-runinfo" path="/threads/{threadId}/runs/{runId}" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-runinfo](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -110,14 +104,12 @@ run = client.beta.threads.runs.retrieve(
 print(run)
 ```
 
-
-
 ***
 
 ### Modify a specific run by its ID
 
 {% openapi-operation spec="ass-runs-runmodify" path="/threads/{threadId}/runs/{runId}" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-runmodify](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -135,14 +127,12 @@ run = client.beta.threads.runs.update(
 print(run)
 ```
 
-
-
 ***
 
 ### Submit Tool outputs to a specific Run
 
 {% openapi-operation spec="ass-runs-submit-tool-outputs" path="/threads/{threadId}/runs/{runId}/submit_tool_outputs" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-submit-tool-outputs](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -165,14 +155,12 @@ run = client.beta.threads.runs.submit_tool_outputs(
 print(run)
 ```
 
-
-
 ***
 
 ### Cancel a specific Run by its ID
 
 {% openapi-operation spec="ass-runs-cancel" path="/threads/{threadId}/runs/{runId}/cancel" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-cancel](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -189,14 +177,12 @@ run = client.beta.threads.runs.cancel(
 print(run)
 ```
 
-
-
 ***
 
 ### Retrieve a list of Run Steps belonging to a specific Run
 
 {% openapi-operation spec="ass-runs-steps-list" path="/threads/{threadId}/runs/{runId}/steps" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-steps-list](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
@@ -213,14 +199,12 @@ run_steps = client.beta.threads.runs.steps.list(
 print(run_steps)
 ```
 
-
-
 ***
 
 ### Retrieve information about a specific Run Step by its ID
 
 {% openapi-operation spec="ass-runs-stepinfo" path="/threads/{threadId}/runs/{runId}/steps/{stepId}" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI ass-runs-stepinfo](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
 
 #### Python + OpenAI SDK Example:
