@@ -1,10 +1,10 @@
 [
   {
-    "name": "alibaba/qwen3.5-plus-20260218",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.5-plus-20260218",
-    "alias": "qwen3.5-plus-20260218",
+    "name": "google/gemini-3-1-pro-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-1-pro-preview",
+    "alias": "gemini-3-1-pro-preview",
     "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
+    "vendor": "Google",
     "codeSamples": "chat-completion"
   }
 ]
