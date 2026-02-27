@@ -1,9 +1,9 @@
 [
   {
-    "name": "anthropic/claude-sonnet-4-6",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=anthropic/claude-sonnet-4-6",
+    "name": "anthropic/claude-sonnet-4.6",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=anthropic/claude-sonnet-4.6",
     "alias": "claude-sonnet-4-6",
-    "models": ["anthropic/claude-sonnet-4-6", "anthropic/claude-sonnet-4-6-20260218"],
+    "models": ["anthropic/claude-sonnet-4.6", "anthropic/claude-sonnet-4-6-20260218"],
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "codeSamples": "chat-completion"
