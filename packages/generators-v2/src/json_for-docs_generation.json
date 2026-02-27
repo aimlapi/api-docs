@@ -1,11 +1,11 @@
 [
   {
-    "name": "google/gemini-3-1-flash-image-preview",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=google/gemini-3-1-flash-image-preview",
-    "alias": "gemini-3-1-flash-image-preview",
-    "models": ["google/nano-banana-2", "google/gemini-3-1-flash-image-preview"],
-    "category": "image-models",
-    "vendor": "Google",
-    "codeSamples": "image-models:prompt"
+    "name": "anthropic/claude-sonnet-4-6",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=anthropic/claude-sonnet-4-6",
+    "alias": "claude-sonnet-4-6",
+    "models": ["anthropic/claude-sonnet-4-6", "anthropic/claude-sonnet-4-6-20260218"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
   }
 ]
