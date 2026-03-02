@@ -23,6 +23,7 @@ Supported models:
 * [anthropic/claude-sonnet-4.5](../api-references/text-models-llm/anthropic/claude-4-5-sonnet.md)
 * [anthropic/claude-opus-4-5](../api-references/text-models-llm/anthropic/claude-4.5-opus.md)
 * [anthropic/claude-opus-4-6](../api-references/text-models-llm/anthropic/claude-4.6-opus.md)
+* [anthropic/claude-sonnet-4.6](../api-references/text-models-llm/anthropic/claude-4.6-sonnet.md)
 
 ### Google
 

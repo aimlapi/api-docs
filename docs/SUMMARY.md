@@ -47,6 +47,7 @@
     * [Claude 4.5 Haiku](api-references/text-models-llm/anthropic/claude-4.5-haiku.md)
     * [Claude 4.5 Opus](api-references/text-models-llm/anthropic/claude-4.5-opus.md)
     * [Claude 4.6 Opus](api-references/text-models-llm/anthropic/claude-4.6-opus.md)
+    * [Claude 4.6 Sonnet](api-references/text-models-llm/anthropic/claude-4.6-sonnet.md)
   * [Baidu](api-references/text-models-llm/baidu/README.md)
     * [ernie-4.5-8k-preview](api-references/text-models-llm/baidu/ernie-4.5-8k-preview.md)
     * [ernie-4.5-0.3b](api-references/text-models-llm/baidu/ernie-4.5-0.3b.md)
