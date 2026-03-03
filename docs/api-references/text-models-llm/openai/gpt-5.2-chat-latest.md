@@ -19,36 +19,34 @@ This documentation is valid for the following list of our models:
 The most capable model series for professional knowledge work as of December 2025.\
 Designed as a low-latency, highly interactive model, it offers users a natural, engaging, and adaptive conversational experience.
 
-## How to Make a Call
+{% hint style="success" %}
+[Create AI/ML API Key](https://aimlapi.com/app/keys)
+{% endhint %}
 
 <details>
 
-<summary>Step-by-Step Instructions</summary>
+<summary>How to make the first API call</summary>
 
-:digit\_one: **Setup You Can’t Skip**
+**1️⃣ Required setup (don’t skip this)**\
+▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
+▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
-:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
+**2️ Copy the code example**\
+At the bottom of this page, pick the snippet for your preferred programming language (Python / Node.js) and copy it into your project.
 
-:digit\_two: **Copy the code example**
+**3️ Update the snippet for your use case**\
+▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
+▪ **Select a model:** set the `model` field to the model you want to call.\
+▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
 
-At the bottom of this page, you'll find [a code example](/broken/pages/e12f0d25d0f40c132eac99c343c2399584aa8f77#code-example) that shows how to structure the request. Choose the code snippet in your preferred programming language and copy it into your development environment.
+**4️ (Optional) Tune the request**\
+Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
 
-:digit\_three: **Modify the code example**
-
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key from your account.\
-:black\_small\_square: Insert your question or request into the `content` field—this is what the model will respond to.
-
-:digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup>**&#x20;Adjust other optional parameters if needed**
-
-Only `model` and `messages` are required parameters for this model (and we’ve already filled them in for you in the example), but you can include optional parameters if needed to adjust the model’s behavior. Below, you can find the corresponding [API schema](/broken/pages/e12f0d25d0f40c132eac99c343c2399584aa8f77#api-schema), which lists all available parameters along with notes on how to use them.
-
-:digit\_five: **Run your modified code**
-
-Run your modified code in your development environment. Response time depends on various factors, but for simple prompts it rarely exceeds a few seconds.
+**5️ Run your code**\
+Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/98f0b7f12aaceb4da01ded5128089d9a7d141d1b).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
 {% endhint %}
 
 </details>
@@ -56,7 +54,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gpt-5-2-chat-latest" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-5-2-chat-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-chat-latest.json)
+[OpenAPI gpt-5-2-chat-latest](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-chat-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example
