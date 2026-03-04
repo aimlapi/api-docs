@@ -6,7 +6,7 @@
 * [Quickstart](quickstart/u9q0-g/README.md)
   * [Requesting more advanced models](quickstart/u9q0-g/u9q0.md)
 * [🦞 OpenClaw AI/ML](quickstart/openclaw.md)
-* [Supported SDKs](quickstart/u9q.md)
+* [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
 

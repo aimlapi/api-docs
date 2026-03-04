@@ -21,7 +21,7 @@ You can find your API key on the [account page](https://aimlapi.com/app/keys).
 
 ## Base URL
 
-The Base URL is the first part of the URL (including the protocol, domain, and pathname) that determines the server responsible for handling your request. It’s crucial to configure the correct Base URL in your application, if you are using [OpenAI SDK](../quickstart/u9q.md#openai). By default, this SDK is set to point to its server, which is not compatible with our API keys and does not support many of the models we offer.
+The Base URL is the first part of the URL (including the protocol, domain, and pathname) that determines the server responsible for handling your request. It’s crucial to configure the correct Base URL in your application, if you are using [OpenAI SDK](../quickstart/supported-sdks.md#openai). By default, this SDK is set to point to its server, which is not compatible with our API keys and does not support many of the models we offer.
 
 Our base URL also supports versioning, so you can use the following as well:
 
