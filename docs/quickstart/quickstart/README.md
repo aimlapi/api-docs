@@ -762,7 +762,7 @@ Output formatting: from the model’s full response, only the generated text is 
 
 ## Future Steps
 
-* [Move to production-ready models: see the guide for connecting GPT-4o](u9q0.md)
+* [Move to production-ready models: see the guide for connecting GPT-4o](requesting-more-advanced-models.md)
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Know more about supported SDKs](../supported-sdks.md)
 * [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
