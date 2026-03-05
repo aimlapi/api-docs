@@ -33,6 +33,26 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 Let's generate an image of the specified size using a simple prompt.
 
 {% tabs %}
+{% tab title="Python (AIMLAPI SDK)" %}
+{% code overflow="wrap" %}
+```python
+# pip install aimlapi-sdk-python
+from aimlapi import AIMLAPI
+
+client = AIMLAPI(
+    api_key="<YOUR_AIMLAPI_KEY>"
+)
+
+response = client.images.generate(
+    model="alibaba/qwen-image",
+    prompt="A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+)
+
+print(response.model_dump_json(indent=2))
+```
+{% endcode %}
+{% endtab %}
+
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
@@ -96,22 +116,24 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "images": [
+  "created": 1772589140939,
+  "background": null,
+  "data": [
     {
-      "url": "https://cdn.aimlapi.com/eagle/files/kangaroo/0WBwo2ruHEK9vpmtxu04G.jpeg",
-      "width": 1024,
-      "height": 768,
-      "content_type": "image/jpeg"
+      "b64_json": null,
+      "revised_prompt": null,
+      "url": "https://cdn.aimlapi.com/alpaca/7d/42/20260304/3966e7b0/a2702e5c-587b-4816-b0e9-2799a6cbc3871478259465.png?Expires=1773194933&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=iNxjg4p5f9ozi0U7kYeedVK1Wwg%3D"
     }
   ],
-  "timings": {
-    "inference": 5.732342581963167
-  },
-  "seed": 4128479875,
-  "has_nsfw_concepts": [
-    false
-  ],
-  "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+  "output_format": null,
+  "quality": null,
+  "size": null,
+  "usage": null,
+  "meta": {
+    "usage": {
+      "credits_used": 91000
+    }
+  }
 }
 ```
 {% endcode %}

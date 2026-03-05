@@ -346,7 +346,7 @@ main();
 
 ## AI/ML API Python library
 
-We have started developing our own SDK to simplify the use of our service. Currently, it supports only chat completion and embedding models.
+We have started developing our own SDK to simplify the use of our service.
 
 {% hint style="success" %}
 If you’d like to contribute to expanding its functionality, feel free to reach out to us on [**Discord**](https://discord.com/invite/hvaUsJpVJf)!
@@ -367,11 +367,11 @@ AIML_API_KEY = "<YOUR_AIMLAPI_KEY>"
 AIML_API_URL = "https://api.aimlapi.com/v1"
 ```
 
-Install `aiml_api` package:
+Install the package:
 
 ```shell
 # install from PyPI
-pip install aiml_api
+pip install aimlapi-sdk-python
 ```
 
 ### Request Example
