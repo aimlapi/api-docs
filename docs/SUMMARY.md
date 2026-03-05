@@ -489,6 +489,7 @@
 
 ## FAQ
 
+* [How can I track my funds?](faq/how-can-i-track-my-funds.md)
 * [How can I work with my API keys?](faq/how-can-i-work-with-my-api-keys.md)
 * [Can I use API in Python?](faq/can-i-use-api-in-python.md)
 * [Can I use API in NodeJS?](faq/can-i-use-api-in-nodejs.md)

@@ -73,7 +73,7 @@ This allows you to:
 
 ## Management Keys
 
-This type of key can only be created in the dashboard and is used to call the API for managing regular API keys.
+This type of key can only be created in the dashboard and is used to call [the API for managing regular API keys](../api-references/service-endpoints/api-key-management.md).
 
 #### Creating a Management key
 
