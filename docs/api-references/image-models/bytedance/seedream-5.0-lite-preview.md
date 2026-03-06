@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A multimodal image generation model that integrates deep reasoning and online search, with major upgrades in comprehension, reasoning, and visual generation.
+A multimodal image generation model, featuring major improvements in comprehension, reasoning, and visual generation.
 
 ## Setup your API Key
 
