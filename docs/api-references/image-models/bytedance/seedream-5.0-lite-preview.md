@@ -1,22 +1,22 @@
-# Seedream 4.5
+# Seedream 5.0 Lite Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `bytedance/seedream-4-5`
+* `bytedance/seedream-5-0-lite-preview`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/bytedance/seedream-4-5" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/bytedance/seedream-5-0-lite-preview" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-The model combines both text-to-image and image-to-image capabilities. Compared to [Seedream 4.0](seedream-v4-edit-image-to-image.md), this model significantly improves editing consistency (preserving subject details, lighting, and color tone), the quality of portraits and small text.
+A multimodal image generation model that integrates deep reasoning and online search, with major upgrades in comprehension, reasoning, and visual generation.
 
 ## Setup your API Key
 
@@ -24,13 +24,13 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="seedream-4-5" path="/v1/images/generations" method="post" %}
-[OpenAPI seedream-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/image-models/ByteDance/seedream-4-5.json)
+{% openapi-operation spec="seedream-5-0-lite-preview" path="/v1/images/generations" method="post" %}
+[OpenAPI seedream-5-0-lite-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/seedream-5-0-lite-preview.json)
 {% endopenapi-operation %}
 
 ## Quick Example
 
-Let's generate a new image using the one from [the flux/dev Quick Example](../flux/flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
+Let's generate an image using two input images and a prompt that defines how they should be edited.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -48,7 +48,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "bytedance/seedream-4-5",
+            "model": "bytedance/seedream-5-0-lite-preview",
             "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
             "image_urls": [
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
@@ -78,7 +78,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'bytedance/seedream-4-5',
+      model: 'bytedance/seedream-5-0-lite-preview',
       prompt: 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.',
       image_urls: [
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
@@ -106,13 +106,13 @@ main();
 {
   "data": [
     {
-      "url": "https://cdn.aimlapi.com/bison/seedream-4-5/02176522545211712014becacfaf8a37949eaec3c8139753caaae_0.jpeg?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20251208%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20251208T202437Z&X-Tos-Expires=86400&X-Tos-Signature=9be05c928d39a74abc5c06bff5759a28449256d72f1d062933479f279bc672cb&X-Tos-SignedHeaders=host",
+      "url": "https://cdn.aimlapi.com/generations/bison/1772756381665-f07becf7-01b5-4c59-85d1-f2ca70ec2eac.jpeg",
       "size": "2048x2048"
     }
   ],
   "meta": {
     "usage": {
-      "credits_used": 84000
+      "credits_used": 91000
     }
   }
 }
@@ -121,4 +121,4 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t rex (1) (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/bytedance-seedream-4-5_output.jpeg" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue mug (1) (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/t rex.png" alt="Image #1" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/bytedance-seedream-5-0-lite-preview_output.jpeg" alt="&#x22;Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.&#x22;" data-size="original"></td></tr><tr><td valign="top"><img src="../../../.gitbook/assets/blue mug.jpg" alt="Image #2" data-size="original"></td><td valign="top"></td></tr></tbody></table>

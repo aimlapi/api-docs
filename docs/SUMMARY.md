@@ -193,6 +193,7 @@
     * [Seedream 4.0 Edit (Image-to-image)](api-references/image-models/bytedance/seedream-v4-edit-image-to-image.md)
     * [USO (Image-to-Image)](api-references/image-models/bytedance/uso.md)
     * [Seedream 4.5](api-references/image-models/bytedance/seedream-4-5.md)
+    * [Seedream 5.0 Lite Preview](api-references/image-models/bytedance/seedream-5.0-lite-preview.md)
   * [Flux](api-references/image-models/flux/README.md)
     * [flux-pro](api-references/image-models/flux/flux-pro.md)
     * [flux-pro/v1.1](api-references/image-models/flux/flux-pro-v1.1.md)
