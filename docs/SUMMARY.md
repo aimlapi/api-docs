@@ -250,6 +250,8 @@
     * [Sharpen Generative](api-references/image-models/topaz-labs/sharpen-generative.md)
   * [xAI](api-references/image-models/xai/README.md)
     * [Grok 2 Image](api-references/image-models/xai/grok-2-image.md)
+    * [Grok Imagine Image](api-references/image-models/xai/grok-imagine-image.md)
+    * [Grok Imagine Image Pro](api-references/image-models/xai/grok-imagine-image-pro.md)
 * [Video Models](api-references/video-models/README.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
     * [Wan 2.1 Plus (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.1-plus-text-to-video.md)
