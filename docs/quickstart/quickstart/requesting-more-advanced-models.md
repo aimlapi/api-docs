@@ -1,6 +1,6 @@
 # Requesting more advanced models
 
-This guide uses a more advanced model, GPT-4o. If you need help with API keys or environment configuration, go back to the previous step and follow [the detailed quickstart guide](./) for the free Gemma 3 model.
+This guide uses a more advanced model, GPT-4o. If you need help with API keys or environment configuration, go back to the previous step and follow [the detailed quickstart guide](./) for the Gemma 3 model.
 
 ***
 
@@ -141,6 +141,6 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 ## Future Steps
 
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
-* [Know more about supported SDKs](/broken/pages/7AtalEv20tLYnxLuZl2D)
+* [Know more about supported SDKs](../supported-sdks.md)
 * [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

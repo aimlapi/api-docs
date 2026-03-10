@@ -1,8 +1,7 @@
 ---
 description: >-
   Access leading AI models (GPT-4o, Gemini, and others) through a single unified
-  API. Initial setup takes just a few minutes. New accounts can make up to 10
-  free requests per hour.
+  API. Initial setup takes just a few minutes.
 icon: hand-wave
 ---
 
@@ -24,8 +23,7 @@ The following steps must be completed regardless of which of our models you plan
 * [choosing and preparing your development environment](./#choosing-and-preparing-the-development-environment),
 * [making an API call](./#making-an-api-call).
 
-Let's walk through an example of connecting to [the free-tier Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via REST API. \
-After completing the steps, you will be able to generate text with this model at no cost.
+Let's walk through an example of connecting to [the Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via REST API.&#x20;
 
 ## G**enerating an AIML API Key**
 
