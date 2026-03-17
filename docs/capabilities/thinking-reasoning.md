@@ -74,6 +74,8 @@ Supported models:
 * [openai/gpt-5-nano-2025-08-07](../api-references/text-models-llm/openai/gpt-5-nano.md)
 * [openai/gpt-5-1](../api-references/text-models-llm/openai/gpt-5-1.md)
 * [openai/gpt-5-2](../api-references/text-models-llm/openai/gpt-5.2.md)
+* [openai/gpt-5-4](../api-references/text-models-llm/openai/gpt-5-4.md)
+* [openai/gpt-5-4-pro](../api-references/text-models-llm/openai/gpt-5-4-pro.md)
 
 ***
 

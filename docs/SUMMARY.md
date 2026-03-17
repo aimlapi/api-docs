@@ -157,6 +157,8 @@
     * [gpt-5.2-pro](api-references/text-models-llm/openai/gpt-5.2-pro.md)
     * [gpt-5.2-codex](api-references/text-models-llm/openai/gpt-5.2-codex.md)
     * [gpt-5.3-codex](api-references/text-models-llm/openai/gpt-5.3-codex.md)
+    * [gpt-5-4](api-references/text-models-llm/openai/gpt-5-4.md)
+    * [gpt-5-4-pro](api-references/text-models-llm/openai/gpt-5-4-pro.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [sonar-pro](api-references/text-models-llm/perplexity/sonar-pro.md)
