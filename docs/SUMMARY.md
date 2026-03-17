@@ -3,8 +3,8 @@
 ## Quickstart
 
 * [🧭 Documentation Map](README.md)
-* [Quickstart](quickstart/quickstart/README.md)
-  * [Requesting more advanced models](quickstart/quickstart/requesting-more-advanced-models.md)
+* [Quickstart](quickstart/simple-model/README.md)
+  * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models.md)
 * [🦞 OpenClaw AI/ML](quickstart/openclaw.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
