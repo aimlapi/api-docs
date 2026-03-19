@@ -4,7 +4,8 @@
 
 * [🧭 Documentation Map](README.md)
 * [Quickstart](quickstart/simple-model/README.md)
-  * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models.md)
+  * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
+    * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
 * [🦞 OpenClaw AI/ML](quickstart/openclaw.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
