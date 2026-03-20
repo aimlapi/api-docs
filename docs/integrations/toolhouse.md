@@ -56,7 +56,7 @@ client = OpenAI(
     base_url="https://api.aimlapi.com/v1",
 )
 
-MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
+MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 
 messages = [
     {
@@ -127,7 +127,7 @@ import 'dotenv/config';
 import { Toolhouse } from '@toolhouseai/sdk';
 import OpenAI from 'openai';
 
-const MODEL = 'mistralai/Mistral-7B-Instruct-v0.2';
+const MODEL = 'mistralai/Mixtral-8x7B-Instruct-v0.1';
 
 async function main() {
   const toolhouse = new Toolhouse({
@@ -195,11 +195,11 @@ Toolhouse provides a browser-based GUI at [app.toolhouse.ai](https://app.toolhou
 
 All chat-compatible models served by AIMLAPI are supported, including:
 
-* **Mistralai** – `Mistral-7B-Instruct`, `Mixtral-8x7B`
+* **MistralAI** – `Mixtral-8x7B`
 * **Meta** – `Meta-LLaMA-3.1`, `LLaMA-3.3`
 * **Anthropic** – `Claude-3.5-Haiku`
 * **NVIDIA** – `Nemotron-70B`
-* **Google, xAI, Alibaba, Cohere, DeepSeek** – all supported through the unified `https://api.aimlapi.com/v1` endpoint.
+* **Google, xAI, Alibaba, Cohere, DeepSeek**.
 
 📘 View [our full text (chat) model catalog](../api-references/text-models-llm/#complete-text-model-list).
 

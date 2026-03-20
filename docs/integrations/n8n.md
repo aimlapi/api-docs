@@ -55,45 +55,58 @@ You will go from account creation to receiving your first AI response in just a 
 
 **Step 2: Set up your n8n account**
 
-*   Go to [https://n8n.io/](https://n8n.io/) and click **Sign Up**.
+*   Go to [https://n8n.io/](https://n8n.io/) and click **Sign Up**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-1.png" alt=""><figcaption></figcaption></figure></div>
-*   Fill out the registration form.
+
+
+*   Fill out the registration form.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-2.png" alt="" width="375"><figcaption></figcaption></figure></div>
-*   Wait while your workspace is created.
+
+
+*   Wait while your workspace is created.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-3 (1).png" alt="" width="512"><figcaption></figcaption></figure></div>
-*   You will be redirected to your personal n8n workspace.
+
+
+*   You will be redirected to your personal n8n workspace.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-4.png" alt=""><figcaption></figcaption></figure></div>
-*   Click **Start from scratch** to open the editor.
+
+
+*   Click **Start from scratch** to open the editor.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-5.png" alt=""><figcaption></figcaption></figure></div>
 
     \
-    <img src="../.gitbook/assets/step-6.png" alt="" data-size="original">\\
+    <img src="../.gitbook/assets/step-6.png" alt="" data-size="original"><br>
 * Click **Add first step** to begin building your workflow.\
-  <img src="../.gitbook/assets/step-7.png" alt="" data-size="original">\\
+  \
+  <img src="../.gitbook/assets/step-7.png" alt="" data-size="original"><br>
 *   Select the node **When chat message completed** as a trigger.\
-    ![](../.gitbook/assets/step-8.png)\\
+    \
+    ![](../.gitbook/assets/step-8.png)<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-9.png" alt=""><figcaption></figcaption></figure></div>
+
+
 
 ***
 
 **Step 3: Add and install the AI/ML API Node**
 
 *   Click the **+** button on the right side of the trigger node.\
-    Search for **AI/ML API**.
+    Search for **AI/ML API**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-10.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
     \
-    ![](../.gitbook/assets/step-11.png)\\
+    ![](../.gitbook/assets/step-11.png)<br>
 * Click on **AI/ML API**, then click **Install node** → **Add to workflow**.\
-  ![](../.gitbook/assets/step-12.png)\\
-*   The node will appear in your workspace.
+  \
+  ![](../.gitbook/assets/step-12.png)<br>
+*   The node will appear in your workspace.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-13 (1).png" alt=""><figcaption></figcaption></figure></div>
 
@@ -101,15 +114,19 @@ You will go from account creation to receiving your first AI response in just a 
 
 **Step 4: Connect your API Key**
 
-*   Click **Create new credentials** in the AI/ML API node.
+*   Click **Create new credentials** in the AI/ML API node.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-14.png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-15.png" alt=""><figcaption></figcaption></figure></div>
-*   Paste your **API key**.
+
+
+*   Paste your **API key**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-16.png" alt=""><figcaption></figcaption></figure></div>
-*   Click **Save**.
+
+
+*   Click **Save**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-17.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -117,15 +134,19 @@ You will go from account creation to receiving your first AI response in just a 
 
 **Step 5: Configure the model and the input**
 
-*   Select the model (e.g. `GPT 4o`) in the **Model Name or ID** field.
+*   Select the model (e.g. `GPT 4o`) in the **Model Name or ID** field.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-18.png" alt="" width="307"><figcaption></figcaption></figure></div>
-*   Click **Execute previous node** to simulate user input and activate the chat input panel.
+
+
+*   Click **Execute previous node** to simulate user input and activate the chat input panel.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-19 (1).png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-20.png" alt=""><figcaption></figcaption></figure></div>
-*   Type a test message in the input field (e.g. “Tell me a fun fact”) and click **Send**.
+
+
+*   Type a test message in the input field (e.g. “Tell me a fun fact”) and click **Send**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-21.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -134,24 +155,31 @@ You will go from account creation to receiving your first AI response in just a 
 **Step 6: Pass the input to AI/ML API**
 
 *   Go back to the **AI/ML API node**, select the **Prompt** field.\
-    Click the **Expression** button.
+    Click the **Expression** button.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-22.png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-23.png" alt=""><figcaption></figcaption></figure></div>
+
+
 *   In the expression editor, expand **chatInput** on the left.\
-    Drag and drop it into the **Prompt** field.
+    Drag and drop it into the **Prompt** field.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-24.png" alt=""><figcaption></figcaption></figure></div>
+
+
 
     <div align="left"><figure><img src="../.gitbook/assets/step-25-full.png" alt=""><figcaption></figcaption></figure></div>
 
 #### **Step 7: Run the flow**
 
-*   Exit the node editor and click **Execute Node** (or the full workflow ▶️ button).
+*   Exit the node editor and click **Execute Node** (or the full workflow ▶️ button).<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-26 (1).png" alt=""><figcaption></figcaption></figure></div>
+
+
 * You will see the AI/ML API response in the **Output** tab.\
+  \
   ![](../.gitbook/assets/step-27.png)
 
 ***
@@ -224,11 +252,11 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 #### [GPT 4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 
-<table><thead><tr><th width="305">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>openai/gpt-4o</code></td></tr><tr><td>User Message</td><td><code>"Give me ideas for YouTube channels"</code></td></tr><tr><td>Temperature</td><td><code>0.7</code></td></tr></tbody></table>
+<table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>openai/gpt-4o</code></td></tr><tr><td>User Message</td><td><code>"Give me ideas for YouTube channels"</code></td></tr><tr><td>Temperature</td><td><code>0.7</code></td></tr></tbody></table>
 
 #### [Gemini 2.0 Flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 
-<table><thead><tr><th width="305">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>google/gemini-2.0-flash</code></td></tr><tr><td>User Message</td><td><code>"Write a summary of the latest Apple event"</code></td></tr></tbody></table>
+<table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>google/gemini-2.0-flash</code></td></tr><tr><td>User Message</td><td><code>"Write a summary of the latest Apple event"</code></td></tr></tbody></table>
 
 ***
 

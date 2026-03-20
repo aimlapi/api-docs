@@ -7,8 +7,8 @@
 ### 1. Prerequisites
 
 * **AI/ML API account** – sign up and create an API key at:
-  * Dashboard: [https://aimlapi.com/app/?utm\_source=manus\&utm\_medium=github\&utm\_campaign=integration](https://aimlapi.com/app/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
-  * API Keys: [https://aimlapi.com/app/keys/?utm\_source=manus\&utm\_medium=github\&utm\_campaign=integration](https://aimlapi.com/app/keys/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
+  * [Dashboard](https://aimlapi.com/app/)
+  * [API Keys](https://aimlapi.com/app/keys/)
 * **Manus account** – with access to **Settings → Integrations → Add custom API**.
 
 <div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/step0_prereq.png" alt=""><figcaption></figcaption></figure></div>
@@ -176,9 +176,9 @@ Once the custom API is added, you can select **AI/ML API** as a backend in Manus
 
 ## Helpful Links
 
-* Dashboard: [https://aimlapi.com/app/](https://aimlapi.com/app/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
-* API Keys: [https://aimlapi.com/app/keys/](https://aimlapi.com/app/keys/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
-* Models browser: [https://aimlapi.com/models/](https://aimlapi.com/models/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
-* Docs: [https://docs.aimlapi.com/](https://docs.aimlapi.com/?utm_source=manus\&utm_medium=github\&utm_campaign=integration)
+* [Dashboard](https://aimlapi.com/app/)
+* [API Keys](https://aimlapi.com/app/keys/)
+* [Model browser](https://aimlapi.com/models/)
+* [Docs](https://docs.aimlapi.com/)
 
 Enjoy building with Manus + AI/ML API 🚀

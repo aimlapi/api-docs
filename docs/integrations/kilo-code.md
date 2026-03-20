@@ -139,9 +139,9 @@ If the request succeeds, you’re ready to use the same model inside Kilo Code.
 
 ## 📚 Helpful Links
 
-* **AI/ML API Keys**: [https://aimlapi.com/app/keys](https://aimlapi.com/app/keys)
-* **AI/ML API Dashboard**: [https://aimlapi.com/app](https://aimlapi.com/app)
-* **Kilo Code Docs**: [https://kilocode.ai/docs](https://kilocode.ai/docs)
+* [AI/ML API Keys](https://aimlapi.com/app/keys)
+* [AI/ML API Dashboard](https://aimlapi.com/app)
+* [Kilo Code Docs](https://kilocode.ai/docs)
 
 ***
 

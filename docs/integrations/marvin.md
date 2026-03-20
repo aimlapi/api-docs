@@ -130,10 +130,10 @@ More examples are available in the same directory:
 
 ## Helpful Links
 
-* Dashboard: [https://aimlapi.com/app](https://aimlapi.com/app)
-* API Keys: [https://aimlapi.com/app/keys](https://aimlapi.com/app/keys)
-* Models: [https://aimlapi.com/models](https://aimlapi.com/models)
-* Docs: [https://docs.aimlapi.com](https://docs.aimlapi.com)
-* Marvin repository: [https://github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)
+* [Dashboard](https://aimlapi.com/app)
+* [API Keys](https://aimlapi.com/app/keys)
+* [Model browser](https://aimlapi.com/models)
+* [Docs](https://docs.aimlapi.com/)
+* [Marvin repository](https://github.com/PrefectHQ/marvin)
 
 Enjoy coding with **Marvin + AI/ML API** 🚀

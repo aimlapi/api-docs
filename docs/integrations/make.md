@@ -11,46 +11,39 @@ You work with Make through the browser; there’s no need to install any compone
 1. First, you need a [Make account](https://www.make.com/en/register).
 2. Next, click on **Scenarios** in the left menu.\
    \
-   ![](<../.gitbook/assets/Untitled (1).png>)
-
-
-
-3.  Choose **AI/ML API** option:\
-    \
-
+   ![](<../.gitbook/assets/Untitled (1).png>)<br>
+3.  Choose **AI/ML API** option:<br>
 
     <figure><img src="../.gitbook/assets/Untitled (2).png" alt=""><figcaption></figcaption></figure>
 
 
-
-4.  Choose **Get a Model Response**:\
-
+4.  Choose **Get a Model Response**:<br>
 
     <figure><img src="../.gitbook/assets/Untitled (5).png" alt=""><figcaption></figcaption></figure>
-5.  Click on **Create a Connection**, provide a name, and paste your [AIMLAPI key](https://aimlapi.com/app/keys):\
 
+
+5.  Click on **Create a Connection**, provide a name, and paste your [AIMLAPI key](https://aimlapi.com/app/keys):<br>
 
     <figure><img src="../.gitbook/assets/Untitled (6).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../.gitbook/assets/Untitled (7).png" alt=""><figcaption></figcaption></figure>
 
 
-
-6.  Once that’s done, you’ll be able to configure the model and enter your prompt in the provided field:\
-
+6.  Once that’s done, you’ll be able to configure the model and enter your prompt in the provided field:<br>
 
     <figure><img src="../.gitbook/assets/Untitled (8).png" alt=""><figcaption></figcaption></figure>
-7.  Then just click **Run once**:\
 
+
+7.  Then just click **Run once**:<br>
 
     <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
     \
-    When the model returns a response, you’ll see it to the right of your node:\
-
+    When the model returns a response, you’ll see it to the right of your node:<br>
 
     <figure><img src="../.gitbook/assets/Untitled (9).png" alt=""><figcaption></figcaption></figure>
 
+\
 You can find more details in the [official documentation](https://help.make.com/create-your-first-scenario).
 
 ## Our Supported Models

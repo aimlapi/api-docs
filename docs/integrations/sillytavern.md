@@ -98,7 +98,7 @@ For Docker, Termux, GitHub Desktop, and other installation methods, see the full
 
 ### Step 3. Enter API Key
 
-1. Copy your API key from [https://aimlapi.com/app/keys](https://aimlapi.com/app/keys?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
+1. Copy the API key from [your account page](https://aimlapi.com/app/keys).
 2. Paste into the **AI/ML API Key** field.
 3. Click 🔑 icon to save — it should show a timestamp.
 
@@ -147,18 +147,12 @@ Tip: Try Claude 3.5, GPT-4o, Gemini 1.5 or explore more in [Model Playground](ht
 
 ## ✅ Config checklist
 
-| Field   | Value                       |
-| ------- | --------------------------- |
-| API     | Chat Completion             |
-| Source  | AI/ML API                   |
-| API Key | `********` (saved)          |
-| Model   | `gpt-4o-mini-2024-07-18`    |
-| Status  | ✅ API connection successful |
+<table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>API</td><td>Chat Completion</td></tr><tr><td>Source</td><td>AI/ML API</td></tr><tr><td>API Key</td><td><code>********</code> (saved)</td></tr><tr><td>Model</td><td><code>gpt-4o-mini-2024-07-18</code></td></tr><tr><td>Status</td><td>✅ API connection successful</td></tr></tbody></table>
 
 ***
 
 ## 🔗 Internal Links
 
-* [AI/ML API Model Catalog](https://aimlapi.com/models?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
-* [Your API Keys Page](https://aimlapi.com/app/keys?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
+* [Model Browser](https://aimlapi.com/models?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
+* [Your API Keys](https://aimlapi.com/app/keys?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
 * [Community & Feedback](https://aimlapi.com/community?utm_source=sillytavern\&utm_medium=github\&utm_campaign=integration)
