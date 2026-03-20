@@ -143,8 +143,7 @@ response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
-        "Content-Type":"application/json"
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>"
     },
     json={
         "model":"google/gemma-3-4b-it",

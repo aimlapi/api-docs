@@ -191,6 +191,30 @@ print(response.text)
 
 {% tab title="Python + OpenAI SDK" %}
 ```python
+from openai import OpenAI
+
+# Initialize the client
+client = OpenAI(
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
+    api_key="YOUR_AIMLAPI_KEY",
+    base_url="https://api.aimlapi.com/v1"
+)
+
+# Create a streaming chat completion
+stream = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {
+            "role": "user",
+            "content": "Hi! What do you think about mankind?"
+        }
+    ],
+    stream=True
+)
+
+# Print raw chunks (similar to response.text in requests)
+for chunk in stream:
+    print(chunk)
 ```
 {% endtab %}
 {% endtabs %}
@@ -484,6 +508,7 @@ with requests.post(url, headers=headers, json=payload, stream=True) as r:
 {% endtab %}
 
 {% tab title="Python + OpenAI SDK" %}
+{% code expandable="true" %}
 ```python
 from openai import OpenAI
 
@@ -514,6 +539,7 @@ for chunk in stream:
     if content:
         print(content, end="")
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -521,7 +547,7 @@ for chunk in stream:
 
 <summary>Example processed clean streaming response</summary>
 
-{% code overflow="wrap" expandable="true" %}
+{% code overflow="wrap" %}
 ```json
 Quantum computing is a type of computing that uses principles of quantum mechanics to process information. Unlike classical computers, which use bits to represent data as 0s or 1s, quantum computers use quantum bits or qubits. 
 
@@ -558,7 +584,7 @@ GPT‑4o can call functions/tools you define in the API request to extend behavi
 
 {% tabs %}
 {% tab title="Python" %}
-{% code expandable="true" %}
+{% code overflow="wrap" %}
 ```python
 import requests
 import json
@@ -648,7 +674,7 @@ print(final_data["choices"][0]["message"]["content"])
 {% endtab %}
 
 {% tab title="Python + OpenAI SDK" %}
-{% code expandable="true" %}
+{% code overflow="wrap" %}
 ```python
 from openai import OpenAI
 import json
@@ -976,6 +1002,7 @@ from openai import OpenAI
 
 # Insert your API key
 client = OpenAI(
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
     api_key="YOUR_AIMLAPI_KEY",
     base_url="https://api.aimlapi.com/v1"
 )
