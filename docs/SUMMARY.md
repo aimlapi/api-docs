@@ -531,7 +531,7 @@
 
 ***
 
-* [📞 Contact Sales](mailto:kristinao@aimlapi.com)
+* [📞 Contact Sales](https://calendly.com/valeriyb-aimlapi/30min)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 * [404 Model is deprecated](404-model-is-deprecated.md)
 
