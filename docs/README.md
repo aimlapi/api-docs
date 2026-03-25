@@ -191,11 +191,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 {% endtabs %}
 
-## Browse Solutions
-
-* [AI Search Engine](/broken/pages/JOe3VdqaRXsKNsRJZKW1) – if you need to create a project where information must be found on the internet and then presented to you in a structured format, use this solution.
-* [OpenAI Assistants](solutions/openai/assistants/) – if you need to create tailored AI Assistants capable of handling customer support, data analysis, content generation, and more.
-
 ***
 
 ## Going Deeper
