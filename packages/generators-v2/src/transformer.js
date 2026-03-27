@@ -49,6 +49,8 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.responsesSample(options);
   } else if (options.codeSamples.includes('video')) {
     codeSample = codeSamples.videoSample(options, schema);
+  } else if (options.codeSamples.includes('tts')) {
+    codeSample = codeSamples.ttsSample(options, schema);
   } else if (options.codeSamples === 'custom' && options.customParams) {
     codeSample = codeSamples.customSample(options);
   }

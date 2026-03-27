@@ -7,5 +7,13 @@
     "category": "text-models-llm",
     "vendor": "Mistral AI",
     "codeSamples": "chat-completion"
+  },
+  {
+    "name": "gpt-4o-mini-tts",
+    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/text-to-speech&model=gpt-4o-mini-tts",
+    "alias": "openai/gpt-4o-mini-tts",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "codeSamples": "tts"
   }
 ]
