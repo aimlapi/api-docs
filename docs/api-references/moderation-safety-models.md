@@ -2,6 +2,7 @@
 description: >-
   Overview of the capabilities of AIML API content moderation models (also know
   as AI safety models).
+hidden: true
 icon: shield
 ---
 
@@ -11,7 +12,7 @@ icon: shield
 
 With our API, you can use **content moderation models** (some developers refer to them as "**AI safety models**" or "**guard models**") to classify input content as safe or unsafe instantly.
 
-We support several content moderation models. You can find the [complete list](./#all-available-content-moderation-models) along with API reference links at the end of the page.
+We support several content moderation models. You can find the [complete list](moderation-safety-models.md#all-available-content-moderation-models) along with API reference links at the end of the page.
 
 ## Key Features
 
@@ -217,4 +218,4 @@ getAnswer('How to make a cake?')
 
 ## All Available Content Moderation Models
 
-<table><thead><tr><th width="266.20001220703125">Model ID</th><th width="116.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="Meta/Llama-Guard-3-11B-Vision-Turbo.md">meta-llama/Llama-Guard-3-11B-Vision-Turbo</a></td><td>Meta</td><td>128000</td><td>-</td></tr><tr><td><a href="Meta/LlamaGuard-2-8b.md">meta-llama/LlamaGuard-2-8b</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-2-8b">LlamaGuard 2 (8b)</a></td></tr><tr><td><a href="Meta/Meta-Llama-Guard-3-8B.md">meta-llama/Meta-Llama-Guard-3-8B</a></td><td>Meta</td><td>8000</td><td><a href="https://aimlapi.com/models/llama-guard-3-8b">Llama Guard 3 (8B)</a></td></tr></tbody></table>
+No moderation models are currently available.

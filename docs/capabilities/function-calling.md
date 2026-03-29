@@ -93,8 +93,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 ## Models That Support Function Calling
 
 * [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
-* [claude-3-5-haiku-20241022](../api-references/text-models-llm/anthropic/claude-3.5-haiku.md)
-* [claude-3-7-sonnet-20250219](../api-references/text-models-llm/anthropic/claude-3.7-sonnet.md)
 * [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
@@ -106,12 +104,10 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 ***
 
 * [Qwen/Qwen2.5-7B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
-* [Qwen/Qwen2.5-72B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-72B-Instruct-Turbo.md)
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
-* [Qwen/Qwen3-235B-A22B-fp8-tput](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b.md)
 * [alibaba/qwen3-32b](../api-references/text-models-llm/alibaba-cloud/qwen3-32b.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
 * [alibaba/qwen3-235b-a22b-thinking-2507](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b-thinking-2507.md)
@@ -140,11 +136,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
-* [meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-70B-Instruct-Turbo.md)
-* [meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo](../api-references/text-models-llm/Meta/Meta-Llama-3.1-405B-Instruct-Turbo.md)
-* [meta-llama/Llama-3.2-3B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.2-3B-Instruct-Turbo.md)
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [meta-llama/LlamaGuard-2-8b](../api-references/moderation-safety-models/Meta/Meta-Llama-Guard-3-8B.md)
 * [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 
 ***
@@ -199,7 +191,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [minimax/m2-5-20260218](../api-references/text-models-llm/minimax/m2-5.md)
 * [minimax/m2-5-highspeed-20260218](../api-references/text-models-llm/minimax/m2-5-highspeed.md)
-* [mistralai/mistral-tiny](../api-references/text-models-llm/Mistral-AI/mistral-tiny.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)

@@ -197,7 +197,7 @@ A specific URL where an API can be accessed to perform an operation (e.g., gener
 
 A fine-tuned model is a base AI model that has been further trained on additional, specific data to specialize it for certain tasks or behaviors.
 
-For example, an "[_11B Llama 3.2_](../api-references/moderation-safety-models/Meta/Llama-Guard-3-11B-Vision-Turbo.md) _model fine-tuned for content safety_" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
+For example, an "[_11B Llama 3.2_](/broken/pages/RLZC5nLMVn39u15vUS6x) _model fine-tuned for content safety_" means that the original Llama 3.2 model (with 11 billion parameters) has received extra training using datasets focused on safe and appropriate content generation.
 
 ***
 

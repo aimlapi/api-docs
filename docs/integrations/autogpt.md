@@ -73,7 +73,7 @@ In the search bar:
 
 Click to configure the block, and in the model selection field choose any of the following **AIMLAPI models**:
 
-<table data-header-hidden><thead><tr><th width="362.20001220703125"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Model</strong></td><td><strong>Generation Speed</strong></td><td><strong>Reasoning Depth and Quality</strong></td><td><strong>Optimization for Tasks</strong></td></tr><tr><td>Qwen/Qwen2.5-72B-Instruct-Turbo</td><td>Medium</td><td>High</td><td>Text-based tasks</td></tr><tr><td>nvidia/llama-3.1-nemotron-70b-instruct</td><td>Medium</td><td>High</td><td>Analytics and reasoning</td></tr><tr><td>meta-llama/Llama-3.3-70B-Instruct-Turbo</td><td>Low</td><td>Very high</td><td>Complex tasks</td></tr><tr><td>meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo</td><td>Low</td><td>Very high</td><td>Deep reasoning</td></tr><tr><td>meta-llama/Llama-3.2-3B-Instruct-Turbo</td><td>High</td><td>Medium</td><td>Quick responses</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="362.20001220703125"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Model</strong></td><td><strong>Generation Speed</strong></td><td><strong>Reasoning Depth and Quality</strong></td><td><strong>Optimization for Tasks</strong></td></tr><tr><td>nvidia/llama-3.1-nemotron-70b-instruct</td><td>Medium</td><td>High</td><td>Analytics and reasoning</td></tr><tr><td>meta-llama/Llama-3.3-70B-Instruct-Turbo</td><td>Low</td><td>Very high</td><td>Complex tasks</td></tr></tbody></table>
 
 > 🧹 These models are optimized for high-speed generation with reasoning capabilities.
 

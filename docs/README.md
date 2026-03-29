@@ -63,10 +63,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 [speech-models](api-references/speech-models/)
 {% endcontent-ref %}
 
-{% content-ref url="api-references/moderation-safety-models/" %}
-[moderation-safety-models](api-references/moderation-safety-models/)
-{% endcontent-ref %}
-
 {% content-ref url="api-references/3d-generating-models/" %}
 [3d-generating-models](api-references/3d-generating-models/)
 {% endcontent-ref %}

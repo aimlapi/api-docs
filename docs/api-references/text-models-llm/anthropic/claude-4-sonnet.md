@@ -22,7 +22,7 @@ As of February 13, 2026, the streaming response format for Anthropic models has 
 
 ## Model Overview
 
-A major improvement over [Claude ](claude-3.7-sonnet.md)[3.7 Sonnet](claude-3.7-sonnet.md), offering better coding abilities, stronger reasoning, and more accurate responses to your instructions.
+A major improvement over [Claude ](/broken/pages/JHUPGH5cr4NakmmFGpXS)[3.7 Sonnet](/broken/pages/JHUPGH5cr4NakmmFGpXS), offering better coding abilities, stronger reasoning, and more accurate responses to your instructions.
 
 ## How to Make a Call
 

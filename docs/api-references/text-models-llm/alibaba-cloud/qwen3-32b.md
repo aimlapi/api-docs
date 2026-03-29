@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A world-class model with comparable quality to DeepSeek R1 while outperforming [GPT-4.1](../openai/gpt-4.1.md) and [Claude Sonnet 3.7](../anthropic/claude-3.7-sonnet.md). Optimized for both complex reasoning and efficient dialogue.
+A world-class model with comparable quality to DeepSeek R1 while outperforming [GPT-4.1](../openai/gpt-4.1.md) and [Claude Sonnet 3.7](/broken/pages/JHUPGH5cr4NakmmFGpXS). Optimized for both complex reasoning and efficient dialogue.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
