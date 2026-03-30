@@ -454,16 +454,12 @@
     * [voyage-large-2-instruct](api-references/embedding-models/Anthropic/voyage-large-2-instruct.md)
     * [voyage-law-2](api-references/embedding-models/Anthropic/voyage-law-2.md)
     * [voyage-multilingual-2](api-references/embedding-models/Anthropic/voyage-multilingual-2.md)
-  * [BAAI](api-references/embedding-models/BAAI/README.md)
-    * [bge-base-en](api-references/embedding-models/BAAI/bge-base-en.md)
   * [Google](api-references/embedding-models/Google/README.md)
     * [text-multilingual-embedding-002](api-references/embedding-models/Google/text-multilingual-embedding-002.md)
   * [OpenAI](api-references/embedding-models/OpenAI/README.md)
     * [text-embedding-3-small](api-references/embedding-models/OpenAI/text-embedding-3-small.md)
     * [text-embedding-3-large](api-references/embedding-models/OpenAI/text-embedding-3-large.md)
     * [text-embedding-ada-002](api-references/embedding-models/OpenAI/text-embedding-ada-002.md)
-  * [Together AI](api-references/embedding-models/Together-AI/README.md)
-    * [m2-bert-80M-retrieval](api-references/embedding-models/Together-AI/m2-bert-80M-retrieval.md)
 
 ## Solutions
 

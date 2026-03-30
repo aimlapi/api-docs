@@ -85,8 +85,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Assembly AI:** [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
 
-**BAAI**: [Embedding](api-references/embedding-models/BAAI/)
-
 **Baidu**:    [Text/Chat](api-references/text-models-llm/baidu/)
 
 **ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/)  [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
@@ -146,8 +144,6 @@ If you've already made your choice and know the model ID, use the [Search panel]
 **Sber AI**: [Video](api-references/video-models/sber-ai/)
 
 **Tencent**: [Image](api-references/image-models/tencent/)  [Video](api-references/video-models/tencent/)  [3D](api-references/3d-generating-models/tencent/)
-
-**Together AI**: [Embedding](api-references/embedding-models/Together-AI/)
 
 **VEED**: [Video](api-references/video-models/veed/)
 

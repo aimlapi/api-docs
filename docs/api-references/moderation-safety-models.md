@@ -3,6 +3,7 @@ description: >-
   Overview of the capabilities of AIML API content moderation models (also know
   as AI safety models).
 hidden: true
+noIndex: true
 icon: shield
 ---
 
