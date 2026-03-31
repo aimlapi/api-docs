@@ -1,19 +1,10 @@
 [
   {
-    "name": "mistralai/Mistral-7B-Instruct-v0.3",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/Mistral-7B-Instruct-v0.3",
-    "alias": "Mistral-7B-Instruct",
-    "models": ["mistralai/Mistral-7B-Instruct-v0.3"],
-    "category": "text-models-llm",
-    "vendor": "Mistral AI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "gpt-4o-mini-tts",
-    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/text-to-speech&model=gpt-4o-mini-tts",
-    "alias": "openai/gpt-4o-mini-tts",
+    "name": "aai/slam-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=slam-1",
+    "alias": "slam-1",
     "category": "speech-models",
-    "vendor": "OpenAI",
-    "codeSamples": "tts"
+    "vendor": "AssemblyAI",
+    "codeSamples": "stt"
   }
 ]

@@ -7,3 +7,4 @@ export * from './custom.sample.js';
 export * from './responses.sample.js';
 export * from './video.sample.js';
 export * from './tts.sample.js';
+export * from './stt.sample.js';

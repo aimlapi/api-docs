@@ -51,6 +51,8 @@ export function transformSchema(schema, options) {
     codeSample = codeSamples.videoSample(options, schema);
   } else if (options.codeSamples.includes('tts')) {
     codeSample = codeSamples.ttsSample(options, schema);
+  } else if (options.codeSamples.includes('stt')) {
+    codeSample = codeSamples.sttSample(options, schema);
   } else if (options.codeSamples === 'custom' && options.customParams) {
     codeSample = codeSamples.customSample(options);
   }
@@ -67,6 +69,12 @@ export function transformSchema(schema, options) {
   }
   if (updatedSchema.paths?.['/video/generations']) {
     delete updatedSchema.paths['/video/generations'];
+  }
+  if (updatedSchema.paths?.['/tts']) {
+    delete updatedSchema.paths['/tts'];
+  }
+  if (updatedSchema.paths?.['/stt/create']) {
+    delete updatedSchema.paths['/stt/create'];
   }
 
   Object.entries(updatedSchema.paths).map(([path, operation]) => {
