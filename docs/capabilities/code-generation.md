@@ -40,7 +40,6 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [moonshot/kimi-k2-5](../api-references/text-models-llm/moonshot/kimi-k2-5.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
-* [google/gemini-3-pro-preview](../api-references/text-models-llm/google/gemini-3-pro-preview.md)
 * [google/gemini-3-1-pro-preview](../api-references/text-models-llm/google/gemini-3-1-pro-preview.md)
 * [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md)
 * [openai/gpt-5-mini-2025-08-07](../api-references/text-models-llm/openai/gpt-5-mini.md)

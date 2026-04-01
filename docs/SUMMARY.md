@@ -79,7 +79,6 @@
     * [gemini-2.5-flash-lite-preview](api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
     * [gemini-2.5-flash](api-references/text-models-llm/google/gemini-2.5-flash.md)
     * [gemini-2.5-pro](api-references/text-models-llm/google/gemini-2.5-pro.md)
-    * [gemini-3-pro-preview](api-references/text-models-llm/google/gemini-3-pro-preview.md)
     * [gemma-3 (4B and 12B)](api-references/text-models-llm/google/gemma-3.md)
     * [gemma-3 (27B)](api-references/text-models-llm/google/gemma-3-27b.md)
     * [gemma-3n-4b](api-references/text-models-llm/google/gemma-3n-4b.md)

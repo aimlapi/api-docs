@@ -196,8 +196,7 @@ Toolhouse provides a browser-based GUI at [app.toolhouse.ai](https://app.toolhou
 All chat-compatible models served by AIMLAPI are supported, including:
 
 * **MistralAI** – `Mixtral-8x7B`
-* **Meta** – `Meta-LLaMA-3.1`, `LLaMA-3.3`
-* **Anthropic** – `Claude-3.5-Haiku`
+* **Meta** – `LLaMA-3.3`
 * **NVIDIA** – `Nemotron-70B`
 * **Google, xAI, Alibaba, Cohere, DeepSeek**.
 
