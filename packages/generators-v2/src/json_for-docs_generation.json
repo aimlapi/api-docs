@@ -1,19 +1,148 @@
 [
   {
-    "name": "mistralai/Mistral-7B-Instruct-v0.3",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/Mistral-7B-Instruct-v0.3",
-    "alias": "Mistral-7B-Instruct",
-    "models": ["mistralai/Mistral-7B-Instruct-v0.3"],
-    "category": "text-models-llm",
-    "vendor": "Mistral AI",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "gpt-4o-mini-tts",
-    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/text-to-speech&model=gpt-4o-mini-tts",
-    "alias": "openai/gpt-4o-mini-tts",
+    "name": "openai/gpt-4o-mini-tts",
+    "alias": "gpt-4o-mini-tts",
     "category": "speech-models",
     "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/gpt-4o-mini-tts",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "openai/tts-1",
+    "alias": "tts-1",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/tts-1",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "openai/tts-1-hd",
+    "alias": "tts-1-hd",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/tts-1-hd",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "#g1_aura-asteria-en",
+    "alias": "aura",
+    "models": ["#g1_aura-angus-en", "#g1_aura-arcas-en", "#g1_aura-asteria-en", "#g1_aura-athena-en", "#g1_aura-helios-en", "#g1_aura-hera-en", "#g1_aura-luna-en", "#g1_aura-orion-en", "#g1_aura-orpheus-en", "#g1_aura-perseus-en", "#g1_aura-stella-en", "#g1_aura-zeus-en"],
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=aura-asteria-en",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "#g1_aura-2-amalthea-en",
+    "alias": "aura-2",
+	"models": ["#g1_aura-2-amalthea-en", "#g1_aura-2-andromeda-en", "#g1_aura-2-apollo-en", "#g1_aura-2-arcas-en", "#g1_aura-2-aries-en", "#g1_aura-2-asteria-en", "#g1_aura-2-athena-en", "#g1_aura-2-atlas-en", "#g1_aura-2-aurora-en", "#g1_aura-2-callista-en", "#g1_aura-2-cora-en", "#g1_aura-2-cordelia-en", "#g1_aura-2-delia-en", "#g1_aura-2-electra-en", "#g1_aura-2-harmonia-en", "#g1_aura-2-helena-en", "#g1_aura-2-hera-en", "#g1_aura-2-hermes-en", "#g1_aura-2-hyperion-en", "#g1_aura-2-iris-en", "#g1_aura-2-janus-en", "#g1_aura-2-juno-en", "#g1_aura-2-jupiter-en", "#g1_aura-2-luna-en", "#g1_aura-2-mars-en", "#g1_aura-2-minerva-en", "#g1_aura-2-neptune-en", "#g1_aura-2-odysseus-en", "#g1_aura-2-ophelia-en", "#g1_aura-2-orion-en", "#g1_aura-2-orpheus-en", "#g1_aura-2-pandora-en", "#g1_aura-2-phoebe-en", "#g1_aura-2-pluto-en", "#g1_aura-2-saturn-en", "#g1_aura-2-selene-en", "#g1_aura-2-thalia-en", "#g1_aura-2-theia-en", "#g1_aura-2-vesta-en", "#g1_aura-2-zeus-en", "#g1_aura-2-celeste-es", "#g1_aura-2-estrella-es", "#g1_aura-2-nestor-es"],
+    "category": "speech-models",
+    "vendor": "Deepgram",
+    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/text-to-speech&model=aura-2-amalthea-en",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "inworld/tts-1",
+    "alias": "tts-1",
+    "category": "speech-models",
+    "vendor": "Inworld",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "inworld/tts-1-max",
+    "alias": "tts-1-max",
+    "category": "speech-models",
+    "vendor": "Inworld",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-max",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "inworld/tts-1-5-mini",
+    "alias": "tts-1-5-mini",
+    "category": "speech-models",
+    "vendor": "Inworld",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-5-mini",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "inworld/tts-1-5-max",
+    "alias": "tts-1-5-max",
+    "category": "speech-models",
+    "vendor": "Inworld",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-5-max",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "minimax/speech-2.5-turbo-preview",
+    "alias": "speech-2.5-turbo-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.5-turbo-preview",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "minimax/speech-2.5-hd-preview",
+    "alias": "speech-2.5-hd-preview",
+    "category": "speech-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.5-hd-preview",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "minimax/speech-2.6-turbo",
+    "alias": "speech-2.5-turbo",
+    "category": "speech-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.6-turbo",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "minimax/speech-2.6-hd",
+    "alias": "speech-2.5-hd",
+    "category": "speech-models",
+    "vendor": "MiniMax",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.6-hd",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "elevenlabs/v3_alpha",
+    "alias": "v3_alpha",
+    "category": "speech-models",
+    "vendor": "elevenlabs",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=elevenlabs/v3_alpha",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "elevenlabs/eleven_multilingual_v2",
+    "alias": "eleven_multilingual_v2",
+    "category": "speech-models",
+    "vendor": "ElevenLabs",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=elevenlabs/eleven_multilingual_v2",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "elevenlabs/eleven_turbo_v2_5",
+    "alias": "eleven_turbo_v2_5",
+    "category": "speech-models",
+    "vendor": "ElevenLabs",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=elevenlabs/eleven_turbo_v2_5",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "microsoft/vibevoice-1.5b",
+    "alias": "vibevoice-1.5b",
+    "category": "speech-models",
+    "vendor": "Microsoft",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=microsoft/vibevoice-1.5b",
+    "codeSamples": "tts"
+  },
+  {
+    "name": "microsoft/vibevoice-7b",
+    "alias": "vibevoice-7b",
+    "category": "speech-models",
+    "vendor": "Microsoft",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=microsoft/vibevoice-7b",
     "codeSamples": "tts"
   }
 ]
