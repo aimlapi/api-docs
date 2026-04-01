@@ -535,7 +535,7 @@
 * [Browser Use](integrations/browser-use.md)
 * [Cline](integrations/cline.md)
 * [continue.dev](integrations/continue.dev.md)
-* [⭐ Cursor](integrations/cursor.md)
+* [⭐ Cursor-HIDDEN](integrations/cursor.md)
 * [ElizaOS](integrations/elizaos.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Kilo Code](integrations/kilo-code.md)

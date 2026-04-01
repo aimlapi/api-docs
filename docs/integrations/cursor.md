@@ -1,4 +1,9 @@
-# ⭐ Cursor
+---
+hidden: true
+noIndex: true
+---
+
+# ⭐ Cursor-HIDDEN
 
 {% hint style="warning" %}
 Only versions 1.x are currently supported for integration.\
