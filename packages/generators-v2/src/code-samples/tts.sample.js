@@ -9,11 +9,12 @@ export const ttsSample = (options, fullSchema) => {
   const requiredModelParams = schema?.required || [];
   if (requiredModelParams?.includes('text')) {
     Object.assign(params, {
-      text: 'Hello',
+      text: 'Cities of the future promise to radically transform how people live, work, and move. Instead of sprawling layouts, we will see vertical structures that integrate residential, work, and public spaces into single, self-sustaining ecosystems. Architecture will adapt to climate conditions, and buildings will be energy-efficient—generating power through solar panels, wind turbines, and even foot traffic.',
     });
   } else if (requiredModelParams?.includes('script')) {
     Object.assign(params, {
-      script: 'Hello',
+      script:
+        'Cities of the future promise to radically transform how people live, work, and move. Instead of sprawling layouts, we will see vertical structures that integrate residential, work, and public spaces into single, self-sustaining ecosystems. Architecture will adapt to climate conditions, and buildings will be energy-efficient—generating power through solar panels, wind turbines, and even foot traffic.',
     });
   }
   const jsonBody = JSON.stringify(params, null, 2);
