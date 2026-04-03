@@ -28,8 +28,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 #### Requesting the result of the task from the server using the generation\_id
 
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
+{% openapi-operation spec="universal-stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI universal-stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/universal-stt-fetch.json)
 {% endopenapi-operation %}
 
 ## Example Code: Processing a Speech Audio File via URL

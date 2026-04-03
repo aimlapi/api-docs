@@ -40,6 +40,20 @@ Nova-2 models use per-second billing. The cost of audio transcription is based o
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schemas
+
+#### Creating and sending a speech-to-text conversion task to the server
+
+{% openapi-operation spec="nova-2" path="/v1/stt/create" method="post" %}
+[OpenAPI nova-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2.json)
+{% endopenapi-operation %}
+
+#### Requesting the result of the task from the server using the generation\_id
+
+{% openapi-operation spec="universal-stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
+[OpenAPI universal-stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/universal-stt-fetch.json)
+{% endopenapi-operation %}
+
 ## Quick Code Examples
 
 Let's use the `#g1_nova-2-meeting` model to transcribe the following audio fragment:
@@ -225,17 +239,3 @@ Processing complete:
 {% endcode %}
 
 </details>
-
-## API Schema
-
-#### Creating and sending a speech-to-text conversion task to the server
-
-{% openapi-operation spec="nova-2" path="/v1/stt/create" method="post" %}
-[OpenAPI nova-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2.json)
-{% endopenapi-operation %}
-
-#### Requesting the result of the task from the server using the generation\_id
-
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
-{% endopenapi-operation %}
