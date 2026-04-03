@@ -98,6 +98,7 @@
     * [m2-1](api-references/text-models-llm/minimax/m2-1.md)
     * [m2-5](api-references/text-models-llm/minimax/m2-5.md)
     * [m2-5-highspeed](api-references/text-models-llm/minimax/m2-5-highspeed.md)
+    * [m2-7](api-references/text-models-llm/minimax/m2-7.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [mistral-nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
     * [Mixtral-8x7B-Instruct](api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)

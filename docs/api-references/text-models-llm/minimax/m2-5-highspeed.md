@@ -26,8 +26,26 @@ A chat model designed for high-throughput usage, reportedly capable of generatin
 
 <summary>How to make the first API call</summary>
 
+**1️⃣ Required setup (don’t skip this)**\
+▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
+▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
+
+**2️ Copy the code example**\
+At the bottom of this page, pick the snippet for your preferred programming language (Python / Node.js) and copy it into your project.
+
+**3️ Update the snippet for your use case**\
+▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
+▪ **Select a model:** set the `model` field to the model you want to call.\
+▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
+
+**4️ (Optional) Tune the request**\
+Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
+
+**5️ Run your code**\
+Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
+
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
 {% endhint %}
 
 </details>

@@ -190,6 +190,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [minimax/m2-5-20260218](../api-references/text-models-llm/minimax/m2-5.md)
 * [minimax/m2-5-highspeed-20260218](../api-references/text-models-llm/minimax/m2-5-highspeed.md)
+* [minimax/m2-7-20260402](../api-references/text-models-llm/minimax/m2-7.md)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)

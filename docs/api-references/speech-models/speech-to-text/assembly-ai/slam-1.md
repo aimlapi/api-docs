@@ -24,7 +24,7 @@ This model use per-second billing. The cost of audio transcription is based on t
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## API Schema
+## API Schemas
 
 #### Creating and sending a speech-to-text conversion task to the server
 
@@ -34,9 +34,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 #### Requesting the result of the task from the server using the generation\_id
 
-{% openapi-operation spec="stt-fetch" path="/v1/stt/{generation_id}" method="get" %}
-[OpenAPI stt-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-2-pair.json)
-{% endopenapi-operation %}
+
 
 ## Quick Example: Processing a Speech Audio File via URL
 
