@@ -89,7 +89,7 @@ These models have been tested by our team for compatibility with Cline integrati
 * [deepseek/deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
+* [meta-llama/llama-4-maverick](/broken/pages/I6hHI88I2tpJK5yDpqi2)
 * [Qwen/Qwen2.5-7B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)

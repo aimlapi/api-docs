@@ -132,11 +132,11 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
 * [google/gemini-3-1-pro-preview](../api-references/text-models-llm/google/gemini-3-1-pro-preview.md)
+* [google/gemma-4-31b-it](../api-references/text-models-llm/google/gemma-4-31b-it.md)
 
 ***
 
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [meta-llama/llama-4-maverick](../api-references/text-models-llm/meta/llama-4-maverick.md)
 
 ***
 
