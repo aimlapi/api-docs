@@ -1,76 +1,99 @@
 [
   {
-    "name": "openai/gpt-4o-mini-tts",
-    "alias": "gpt-4o-mini-tts",
+    "name": "aai/slam-1",
+    "alias": "slam-1",
     "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/gpt-4o-mini-tts",
-    "codeSamples": "tts"
+    "vendor": "AssemblyAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=slam-1",
+    "codeSamples": "stt"
   },
   {
-    "name": "openai/tts-1",
-    "alias": "tts-1",
+    "name": "aai/universal",
+    "alias": "universal",
     "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/tts-1",
-    "codeSamples": "tts"
+    "vendor": "AssemblyAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=aai/universal",
+    "codeSamples": "stt"
   },
   {
-    "name": "openai/tts-1-hd",
-    "alias": "tts-1-hd",
-    "category": "speech-models",
-    "vendor": "OpenAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=openai/tts-1-hd",
-    "codeSamples": "tts"
-  },
-  {
-    "name": "#g1_aura-asteria-en",
-    "alias": "aura",
-    "models": ["#g1_aura-angus-en", "#g1_aura-arcas-en", "#g1_aura-asteria-en", "#g1_aura-athena-en", "#g1_aura-helios-en", "#g1_aura-hera-en", "#g1_aura-luna-en", "#g1_aura-orion-en", "#g1_aura-orpheus-en", "#g1_aura-perseus-en", "#g1_aura-stella-en", "#g1_aura-zeus-en"],
+    "name": "#g1_nova-2-general",
+    "alias": "nova-2",
+	"models": ["#g1_nova-2-conversationalai","#g1_nova-2-drivethru","#g1_nova-2-finance","#g1_nova-2-general","#g1_nova-2-medical","#g1_nova-2-meeting","#g1_nova-2-phonecall","#g1_nova-2-video","#g1_nova-2-voicemail"],
     "category": "speech-models",
     "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=aura-asteria-en",
-    "codeSamples": "tts"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=nova-2-general",
+    "codeSamples": "stt"
   },
   {
-    "name": "#g1_aura-2-amalthea-en",
-    "alias": "aura-2",
-	"models": ["#g1_aura-2-amalthea-en", "#g1_aura-2-andromeda-en", "#g1_aura-2-apollo-en", "#g1_aura-2-arcas-en", "#g1_aura-2-aries-en", "#g1_aura-2-asteria-en", "#g1_aura-2-athena-en", "#g1_aura-2-atlas-en", "#g1_aura-2-aurora-en", "#g1_aura-2-callista-en", "#g1_aura-2-cora-en", "#g1_aura-2-cordelia-en", "#g1_aura-2-delia-en", "#g1_aura-2-electra-en", "#g1_aura-2-harmonia-en", "#g1_aura-2-helena-en", "#g1_aura-2-hera-en", "#g1_aura-2-hermes-en", "#g1_aura-2-hyperion-en", "#g1_aura-2-iris-en", "#g1_aura-2-janus-en", "#g1_aura-2-juno-en", "#g1_aura-2-jupiter-en", "#g1_aura-2-luna-en", "#g1_aura-2-mars-en", "#g1_aura-2-minerva-en", "#g1_aura-2-neptune-en", "#g1_aura-2-odysseus-en", "#g1_aura-2-ophelia-en", "#g1_aura-2-orion-en", "#g1_aura-2-orpheus-en", "#g1_aura-2-pandora-en", "#g1_aura-2-phoebe-en", "#g1_aura-2-pluto-en", "#g1_aura-2-saturn-en", "#g1_aura-2-selene-en", "#g1_aura-2-thalia-en", "#g1_aura-2-theia-en", "#g1_aura-2-vesta-en", "#g1_aura-2-zeus-en", "#g1_aura-2-celeste-es", "#g1_aura-2-estrella-es", "#g1_aura-2-nestor-es"],
+    "name": "#g1_nova-2-automotive",
+    "alias": "nova-2",
     "category": "speech-models",
     "vendor": "Deepgram",
-    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/text-to-speech&model=aura-2-amalthea-en",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=nova-2-automotive",
+    "codeSamples": "stt"
+  },
+  {
+    "name": "hume/octave-2",
+    "alias": "octave-2",
+    "category": "speech-models",
+    "vendor": "Hume AI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=hume/octave-2",
     "codeSamples": "tts"
   },
   {
-    "name": "inworld/tts-1",
-    "alias": "tts-1",
+    "name": "#g1_whisper-large",
+    "alias": "whisper-large",
     "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1",
-    "codeSamples": "tts"
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=whisper-large",
+    "codeSamples": "stt"
   },
   {
-    "name": "inworld/tts-1-max",
-    "alias": "tts-1-max",
+    "name": "#g1_whisper-medium",
+    "alias": "whisper-medium",
     "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-max",
-    "codeSamples": "tts"
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=whisper-medium",
+    "codeSamples": "stt"
   },
   {
-    "name": "inworld/tts-1-5-mini",
-    "alias": "tts-1-5-mini",
+    "name": "#g1_whisper-small",
+    "alias": "whisper-small",
     "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-5-mini",
-    "codeSamples": "tts"
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=whisper-small",
+    "codeSamples": "stt"
   },
   {
-    "name": "inworld/tts-1-5-max",
-    "alias": "tts-1-5-max",
+    "name": "#g1_whisper-tiny",
+    "alias": "whisper-tiny",
     "category": "speech-models",
-    "vendor": "Inworld",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=inworld/tts-1-5-max",
-    "codeSamples": "tts"
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=whisper-tiny",
+    "codeSamples": "stt"
+  },
+  {
+    "name": "#g1_whisper-base",
+    "alias": "whisper-base",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=whisper-base",
+    "codeSamples": "stt"
+  },
+  {
+    "name": "openai/gpt-4o-transcribe",
+    "alias": "gpt-4o-transcribe",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/speech-to-text/submit&model=openai/gpt-4o-transcribe",
+    "codeSamples": "stt"
+  },
+  {
+    "name": "openai/gpt-4o-mini-transcribe",
+    "alias": "gpt-4o-mini-transcribe",
+    "category": "speech-models",
+    "vendor": "OpenAI",
+    "url": "https://ai.aimlapi.com/docs-json?&endpoint=internal/speech-to-text/submit&model=openai/gpt-4o-mini-transcribe",
+    "codeSamples": "stt"
   }
 ]
