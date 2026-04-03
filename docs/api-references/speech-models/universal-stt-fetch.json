@@ -848,30 +848,19 @@
         }
       }
     },
-    "/v1/stt/:generation_id": {
+    "/v1/stt/{generation_id}": {
       "get": {
-        "operationId": "_v1_stt_:generation_id",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "model": {
-                    "type": "string",
-                    "enum": ["slam-1"]
-                  },
-                  "id": {
-                    "type": "string"
-                  }
-                },
-                "required": ["model", "id"],
-                "title": "slam-1"
-              }
+        "operationId": "v1_stt_:generation_id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "generation_id",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "content": {
