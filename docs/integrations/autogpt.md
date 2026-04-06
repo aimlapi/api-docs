@@ -67,11 +67,21 @@ In the search bar:
 
 ***
 
-### 🤖 Step 5. Select One of These AIMLAPI Models
+### 🤖 Step 5. Select One of the Currently Supported AIMLAPI Models
 
 <div align="left"><figure><img src="../.gitbook/assets/Step 5 AIMLAPI Models.png" alt=""><figcaption></figcaption></figure></div>
 
-Click to configure the block, and in the model selection field choose any of the following **AIMLAPI models**:
+{% hint style="warning" %}
+The screenshot may show more model options.
+
+At the moment, AutoGPT supports only the two models listed below.
+
+Some models shown in the screenshot are outdated and are no longer supported.
+
+We plan to refresh the available model list soon.
+{% endhint %}
+
+Click to configure the block, and in the model selection field choose one of these currently supported **AIMLAPI models**:
 
 <table data-header-hidden><thead><tr><th width="362.20001220703125"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Model</strong></td><td><strong>Generation Speed</strong></td><td><strong>Reasoning Depth and Quality</strong></td><td><strong>Optimization for Tasks</strong></td></tr><tr><td>nvidia/llama-3.1-nemotron-70b-instruct</td><td>Medium</td><td>High</td><td>Analytics and reasoning</td></tr><tr><td>meta-llama/Llama-3.3-70B-Instruct-Turbo</td><td>Low</td><td>Very high</td><td>Complex tasks</td></tr></tbody></table>
 
