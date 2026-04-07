@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `alibaba/wan2-7-image-pro`
+* `alibaba/wan-2-7-image-pro`
 {% endhint %}
 {% endcolumn %}
 
