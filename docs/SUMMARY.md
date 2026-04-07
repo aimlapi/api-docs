@@ -179,6 +179,8 @@
     * [wan2.2-t2i-flash](api-references/image-models/alibaba-cloud/wan2.2-t2i-flash.md)
     * [wan2.5-t2i-preview](api-references/image-models/alibaba-cloud/wan2.5-t2i-preview.md)
     * [wan2.6-image](api-references/image-models/alibaba-cloud/wan-2-6-image.md)
+    * [wan2.7-image](api-references/image-models/alibaba-cloud/wan2.7-image.md)
+    * [wan2.7-image-pro](api-references/image-models/alibaba-cloud/wan2.7-image-pro.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
     * [Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
     * [Seedream 4.0 (Text-to-Image)](api-references/image-models/bytedance/seedream-v4-text-to-image.md)

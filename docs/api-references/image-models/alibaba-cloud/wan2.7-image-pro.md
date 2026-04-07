@@ -1,22 +1,23 @@
-# wan2.6-image
+# wan2.7-image-pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `alibaba/wan-2-6-image`
+* `alibaba/wan2-7-image-pro`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/alibaba/wan-2-6-image" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/wan2-7-image-pro" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Text-to-Image and Image-to-Image generator in a single model, providing artists and creators with complete creative freedom.
+A text-to-image and image-to-image generator in a single model, with multi-reference support.\
+A more advanced and higher-cost model compared to [wan2.7-image](wan2.7-image.md).
 
 ## Setup your API Key
 
@@ -24,8 +25,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="wan-2-6-image" path="/v1/images/generations" method="post" %}
-[OpenAPI wan-2-6-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/wan-2-6-image.json)
+{% openapi-operation spec="wan2-7-image-pro" path="/v1/images/generations" method="post" %}
+[OpenAPI wan2-7-image-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/wan2-7-image-pro.json)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -48,7 +49,7 @@ def main():
             "Content-Type": "application/json",
         },
         json={
-            "model": "alibaba/wan-2-6-image",
+            "model": "alibaba/wan-2-7-image-pro",
             "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
             "image_urls": [
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
@@ -78,7 +79,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'alibaba/wan-2-6-image',
+      model: 'alibaba/wan-2-7-image-pro',
       prompt: 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.',
       image_urls: [
           "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
@@ -104,16 +105,16 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "created": 1775594707122,
+  "created": 1775596314468,
   "data": [
     {
-      "url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/1d/c4/20260408/caab8232/66605049-iJExz551_1eb2d1ed260b.png?Expires=1775681104&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=rVg0U%2BZaWY6wIcaU1W5WMtPIBJ4%3D"
+      "url": "https://cdn.aimlapi.com/anaconda/1d/97/20260408/24cd1d9a/e779cb21-6ff7-400a-bfee-bfcc90ba8d2d_0.png?Expires=1775682713&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=reWLCH4ho8P2PcCJ0X5M3iK%2FriI%3D"
     }
   ],
   "meta": {
     "usage": {
-      "credits_used": 78000,
-      "usd_spent": 0.039
+      "credits_used": 195000,
+      "usd_spent": 0.0975
     }
   }
 }
@@ -122,4 +123,5 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t rex (3).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/alibaba-wan-2-6-image_output.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue mug (2) (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t rex (3).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/wan-2-7-image-pro_output.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue mug (2) (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+
