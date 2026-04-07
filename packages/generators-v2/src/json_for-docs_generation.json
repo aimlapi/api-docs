@@ -1,10 +1,10 @@
 [
   {
-    "name": "google/veo-3-1-lite-generate-preview",
-    "url": "https://ai-staging.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3-1-lite-generate-preview",
-    "alias": "veo-3-1-lite-generate-preview",
+    "name": "bytedance/seedance-1-5-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-1-5-pro",
+    "alias": "seedance-1-5-pro",
     "category": "video-models",
-    "vendor": "Google",
+    "vendor": "ByteDance",
     "codeSamples": "video:video"
   }
 ]
