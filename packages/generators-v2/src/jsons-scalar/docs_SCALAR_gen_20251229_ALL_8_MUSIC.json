@@ -1,0 +1,85 @@
+[
+  {
+    "name": "minimax-music",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax-music",
+    "alias": "minimax-music",
+    "category": "music-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "music-01",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=music-01",
+    "alias": "music-01",
+    "category": "music-models",
+    "vendor": "MiniMax"
+  },
+  {
+    "name": "minimax/music-1.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-1.5",
+    "alias": "music-1.5",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-1.5",
+        "prompt": "Lo-fi pop hip-hop ambient music",
+        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+    }
+  },
+  {
+    "name": "minimax/music-2.0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-2.0",
+    "alias": "music-2.0",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-2.0",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+    }
+  },
+  {
+    "name": "google/lyria2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=google/lyria2",
+    "alias": "Lyria 2",
+    "category": "music-models",
+    "vendor": "Google",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "google/lyria2",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s"
+    }
+  },
+  {
+    "name": "elevenlabs/eleven_music",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
+    "alias": "eleven_music",
+    "category": "music-models",
+    "vendor": "elevenlabs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "elevenlabs/eleven_music",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "music_length_ms": 20000
+    }
+  },
+  {
+    "name": "stable-audio",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=stable-audio",
+    "alias": "stable-audio",
+    "category": "music-models",
+    "vendor": "Stability AI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "stable-audio",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "seconds_total": 20
+    }
+  }
+]

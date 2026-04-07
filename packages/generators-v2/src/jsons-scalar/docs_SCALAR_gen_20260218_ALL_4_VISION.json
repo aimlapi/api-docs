@@ -1,0 +1,9 @@
+[
+  {
+    "name": "zhipu/glm-ocr",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/optical-character-recognition&model=zhipu/glm-ocr",
+    "alias": "glm-ocr",
+    "category": "vision-models",
+    "vendor": "Zhipu"
+  }
+]

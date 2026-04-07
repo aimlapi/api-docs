@@ -41,22 +41,6 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=Qwen/Qwen2.5-Coder-32B-Instruct",
-    "alias": "Qwen2.5-Coder-32B-Instruct",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "Qwen/QwQ-32B",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=Qwen/QwQ-32B",
-    "alias": "qwen-QwQ-32B",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
-  },
-  {
     "name": "Qwen/Qwen3-235B-A22B-fp8-tput",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=Qwen/Qwen3-235B-A22B-fp8-tput",
     "alias": "Qwen3-235B-A22B",
@@ -122,8 +106,32 @@
   },
   {
     "name": "alibaba-cloud/qwen3-omni-30b-a3b-captioner",
-    "url": "https://ai.aimlapi.com/docshttps://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-omni-30b-a3b-captioner",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-omni-30b-a3b-captioner",
     "alias": "qwen3-omni-30b-a3b-captioner",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "alibaba/qwen3-vl-32b-instruct",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-vl-32b-instruct",
+    "alias": "qwen3-vl-32b-instruct",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "alibaba/qwen3-vl-32b-thinking",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3-vl-32b-thinking",
+    "alias": "qwen3-vl-32b-thinking",
+    "category": "text-models-llm",
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "alibaba/qwen3.5-plus-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.5-plus-20260218",
+    "alias": "qwen3.5-plus-20260218",
     "category": "text-models-llm",
     "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
@@ -141,15 +149,6 @@
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-haiku-20240307",
     "alias": "claude-3-haiku",
     "models": ["claude-3-haiku", "anthropic/claude-3-haiku-20240307", "claude-3-haiku-latest"],
-    "category": "text-models-llm",
-    "vendor": "Anthropic",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "anthropic/claude-3-opus",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-3-opus-20240229",
-    "alias": "claude-3-opus",
-    "models": ["anthropic/claude-3-opus", "anthropic/claude-3-opus-20240229", "claude-3-opus-20240229", "claude-3-opus-latest"],
     "category": "text-models-llm",
     "vendor": "Anthropic",
     "codeSamples": "chat-completion"
@@ -218,6 +217,153 @@
     "codeSamples": "chat-completion"
   },
   {
+    "name": "anthropic/claude-opus-4.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-5-20251101",
+    "alias": "claude-opus-4-5",
+    "models": ["anthropic/claude-opus-4-5", "claude-opus-4-5", "claude-opus-4-5-20251101"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "anthropic/claude-opus-4-6",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-6",
+    "alias": "claude-opus-4-6",
+    "models": ["anthropic/claude-opus-4-6", "claude-opus-4-6"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "anthropic/claude-sonnet-4.6",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=anthropic/claude-sonnet-4.6",
+    "alias": "claude-sonnet-4-6",
+    "models": ["anthropic/claude-sonnet-4.6", "anthropic/claude-sonnet-4-6-20260218"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-21b-a3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b",
+    "alias": "ernie-4.5-21b-a3b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-21b-a3b-thinking",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-21b-a3b-thinking",
+    "alias": "ernie-4.5-21b-a3b-thinking",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-vl-28b-a3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-28b-a3b",
+    "alias": "ernie-4.5-vl-28b-a3b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-vl-424b-a47b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-vl-424b-a47b",
+    "alias": "ernie-4.5-vl-424b-a47b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-300b-a47b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-300b-a47b",
+    "alias": "ernie-4.5-300b-a47b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-300b-a47b-paddle",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-300b-a47b-paddle",
+    "alias": "ernie-4.5-300b-a47b-paddle",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4.5-0.3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4.5-0.3b",
+    "alias": "ernie-4.5-0.3b",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4-5-8k-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-8k-preview",
+    "alias": "ernie-4.5-8k-preview",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4-5-turbo-128k",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-turbo-128k",
+    "alias": "ernie-4.5-turbo-128k",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-4-5-turbo-vl-32k",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-4-5-turbo-vl-32k",
+    "alias": "ernie-4.5-turbo-vl-32k",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-5-0-thinking-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5-0-thinking-latest",
+    "alias": "ernie-5.0-thinking-latest",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-5-0-thinking-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-5-0-thinking-preview",
+    "alias": "ernie-5.0-thinking-preview",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-x1-1-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-x1-1-preview",
+    "alias": "ernie-x1.1-preview",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "baidu/ernie-x1-turbo-32k",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=baidu/ernie-x1-turbo-32k",
+    "alias": "ernie-x1-turbo-32k",
+    "category": "text-models-llm",
+    "vendor": "baidu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "bytedance/seed-1-8",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/seed-1-8",
+    "alias": "seed-1-8",
+    "category": "text-models-llm",
+    "vendor": "ByteDance",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "cohere/command-a",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=cohere/command-a",
     "alias": "command-a",
@@ -239,14 +385,6 @@
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek-reasoner",
     "alias": "deepseek-r1",
     "models": ["deepseek/deepseek-r1", "deepseek-reasoner"],
-    "category": "text-models-llm",
-    "vendor": "DeepSeek",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "deepseek/deepseek-prover-v2",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-prover-v2",
-    "alias": "deepseek-prover-v2",
     "category": "text-models-llm",
     "vendor": "DeepSeek",
     "codeSamples": "chat-completion"
@@ -300,6 +438,14 @@
     "codeSamples": "chat-completion"
   },
   {
+    "name": "deepseek/deepseek-v3.2-speciale",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-v3.2-speciale",
+    "alias": "deepseek-v3.2-speciale",
+    "category": "text-models-llm",
+    "vendor": "DeepSeek",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "google/gemini-2.0-flash-exp",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-2.0-flash-exp",
     "alias": "gemini-2.0-flash-exp",
@@ -342,10 +488,26 @@
     "codeSamples": "chat-completion"
   },
   {
+    "name": "google/gemini-3-pro-preview",
+    "url": "https://ai.aimlapi.com/docs-json?model=google/gemini-3-pro-preview&endpoint=openai/chat-completions",
+    "alias": "gemini-3-pro-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "google/gemma-3-4b-it",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-4b-it",
     "alias": "gemma-3",
-    "models": ["google/gemma-3-4b-it", "google/gemma-3-12b-it", "google/gemma-3-27b-it"],
+    "models": ["google/gemma-3-4b-it", "google/gemma-3-12b-it"],
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemma-3-27b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-3-27b-it",
+    "alias": "gemma-3-27b-it",
     "category": "text-models-llm",
     "vendor": "Google",
     "codeSamples": "chat-completion"
@@ -356,6 +518,38 @@
     "alias": "gemma-3n-e4b-it",
     "category": "text-models-llm",
     "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-3-flash-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-flash-preview",
+    "alias": "gemini-3-flash-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemini-3-1-pro-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-1-pro-preview",
+    "alias": "gemini-3-1-pro-preview",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "google/gemma-4-31b-it",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-4-31b-it",
+    "alias": "gemma-4-31b-it",
+    "category": "text-models-llm",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "gryphe/mythomax-l2-13b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=gryphe/mythomax-l2-13b",
+    "alias": "mythomax-l2-13b",
+    "category": "text-models-llm",
+    "vendor": "Gryphe",
     "codeSamples": "chat-completion"
   },
   {
@@ -370,14 +564,6 @@
     "name": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=meta-llama/Meta-Llama-3-8B-Instruct-Lite",
     "alias": "Meta-Llama-3-8B-Instruct-Lite",
-    "category": "text-models-llm",
-    "vendor": "Meta",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-    "alias": "Meta-Llama-3.1-8B-Instruct-Turbo",
     "category": "text-models-llm",
     "vendor": "Meta",
     "codeSamples": "chat-completion"
@@ -431,14 +617,6 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "meta-llama/llama-4-maverick",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=meta-llama/llama-4-maverick",
-    "alias": "Llama-4-maverick",
-    "category": "text-models-llm",
-    "vendor": "Meta",
-    "codeSamples": "chat-completion"
-  },
-  {
     "name": "MiniMax-Text-01",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=MiniMax-Text-01",
     "alias": "text-01",
@@ -463,11 +641,35 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "mistralai/codestral-2501",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/codestral-2501",
-    "alias": "codestral-2501",
+    "name": "minimax/m2-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-1",
+    "alias": "m2-1",
     "category": "text-models-llm",
-    "vendor": "Mistral AI",
+    "vendor": "MiniMax",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "minimax/m2-5-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-20260218",
+    "alias": "m2-5-20260218",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "minimax/m2-5-highspeed-20260218",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-5-highspeed-20260218",
+    "alias": "m2-5-highspeed-20260218",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "minimax/m2-7-20260402",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-7-20260402",
+    "alias": "m2-7-20260402",
+    "category": "text-models-llm",
+    "vendor": "MiniMax",
     "codeSamples": "chat-completion"
   },
   {
@@ -487,10 +689,10 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "mistralai/Mistral-7B-Instruct-v0.1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/Mistral-7B-Instruct-v0.1",
+    "name": "mistralai/Mistral-7B-Instruct-v0.3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=mistralai/Mistral-7B-Instruct-v0.3",
     "alias": "Mistral-7B-Instruct",
-    "models": ["mistralai/Mistral-7B-Instruct-v0.1", "mistralai/Mistral-7B-Instruct-v0.2", "mistralai/Mistral-7B-Instruct-v0.3"],
+    "models": ["mistralai/Mistral-7B-Instruct-v0.3"],
     "category": "text-models-llm",
     "vendor": "Mistral AI",
     "codeSamples": "chat-completion"
@@ -521,11 +723,20 @@
     "codeSamples": "chat-completion"
   },
   {
+    "name": "moonshot/kimi-k2-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=moonshot/kimi-k2-5",
+    "alias": "kimi-k2-5",
+    "category": "text-models-llm",
+    "vendor": "Moonshot",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "nousresearch/hermes-4-405b",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nousresearch/hermes-4-405b",
     "alias": "hermes-4-405b",
     "category": "text-models-llm",
-    "vendor": "NousResearch"
+    "vendor": "NousResearch",
+    "codeSamples": "chat-completion"
   },
   {
     "name": "nvidia/llama-3.1-nemotron-70b-instruct",
@@ -590,7 +801,7 @@
     "name": "gpt-4o",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-4o",
     "alias": "gpt-4o",
-    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13", "chatgpt-4o-latest"],
+    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13"],
     "category": "text-models-llm",
     "vendor": "OpenAI",
     "codeSamples": "chat-completion"
@@ -610,7 +821,7 @@
     "alias": "gpt-4o-audio-preview",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
+    "codeSamples": "chat-completion-audio"
   },
   {
     "name": "gpt-4o-mini-audio-preview",
@@ -618,7 +829,7 @@
     "alias": "gpt-4o-mini-audio-preview",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "chat-completion"
+    "codeSamples": "chat-completion-audio"
   },
   {
     "name": "gpt-4o-search-preview",
@@ -766,19 +977,6 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "openai/gpt-5-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1",
-    "alias": "gpt-5-1-RESPONSES",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/responses",
-    "customParams": {
-        "model":"openai/gpt-5-1",
-		"input": "Hello"
-    }
-  },
-  {
     "name": "openai/gpt-5-1-chat-latest",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-1-chat-latest",
     "alias": "gpt-5-1-chat-latest",
@@ -787,43 +985,20 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "openai/gpt-5-1-chat-latest",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-chat-latest",
-    "alias": "gpt-5-1-chat-latest-RESPONSES",
+    "name": "openai/gpt-5-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-2",
+    "alias": "gpt-5-2",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/responses",
-    "customParams": {
-        "model":"openai/gpt-5-1-chat-latest",
-		"input": "Hello"
-    }
+    "codeSamples": "chat-completion"
   },
   {
-    "name": "openai/gpt-5-1-codex",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex",
-    "alias": "gpt-5-1-codex",
+    "name": "openai/gpt-5-2-chat-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-2-chat-latest",
+    "alias": "gpt-5-2-chat-latest",
     "category": "text-models-llm",
     "vendor": "OpenAI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/responses",
-    "customParams": {
-        "model":"openai/gpt-5-1",
-		"input": "Hello"
-    }
-  },
-  {
-    "name": "openai/gpt-5-1-codex-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses&model=openai/gpt-5-1-codex-mini",
-    "alias": "gpt-5-1-codex-mini",
-    "category": "text-models-llm",
-    "vendor": "OpenAI",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v1/responses",
-    "customParams": {
-        "model":"openai/gpt-5-1",
-		"input": "Hello"
-    }
+    "codeSamples": "chat-completion"
   },
   {
     "name": "perplexity/sonar",
@@ -890,6 +1065,30 @@
     "codeSamples": "chat-completion"
   },
   {
+    "name": "x-ai/grok-4-1-fast-non-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-1-fast-non-reasoning",
+    "alias": "grok-4-1-fast-non-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "x-ai/grok-4-1-fast-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-1-fast-reasoning",
+    "alias": "grok-4-1-fast-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "xiaomi/mimo-v2-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=xiaomi/mimo-v2-flash",
+    "alias": "mimo-v2-flash",
+    "category": "text-models-llm",
+    "vendor": "xiaomi",
+    "codeSamples": "chat-completion"
+  },
+  {
     "name": "zhipu/glm-4.5",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.5",
     "alias": "glm-4.5",
@@ -914,11 +1113,264 @@
     "codeSamples": "chat-completion"
   },
   {
-    "name": "bagoodex/bagoodex-search-v1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bagoodex/bagoodex-search-v1",
-    "alias": "bagoodex-search-v1",
+    "name": "zhipu/glm-4.7",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-4.7",
+    "alias": "glm-4.7",
     "category": "text-models-llm",
-    "vendor": "Bagoodex",
+    "vendor": "Zhipu",
     "codeSamples": "chat-completion"
+  },
+  {
+    "name": "zhipu/glm-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-5",
+    "alias": "glm-5",
+    "category": "text-models-llm",
+    "vendor": "Zhipu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "zhipu/glm-5-code",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-5-code",
+    "alias": "glm-5-code",
+    "category": "text-models-llm",
+    "vendor": "Zhipu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "zhipu/glm-5-code",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-ocr",
+    "alias": "glm-5-code",
+    "category": "text-models-llm",
+    "vendor": "Zhipu",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "o1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=o1",
+    "alias": "o1-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/o3-2025-04-16",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o3-2025-04-16",
+    "alias": "o3-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "o3-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=o3-mini",
+    "alias": "o3-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/o3-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o3-pro",
+    "alias": "o3-pro-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/o4-mini-2025-04-16",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/o4-mini-2025-04-16",
+    "alias": "o4-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-3.5-turbo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-3.5-turbo",
+    "alias": "gpt-3.5-turbo-RESPONSES",
+    "models": ["gpt-3.5-turbo", "gpt-3.5-turbo-0125", "gpt-3.5-turbo-1106"],
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-4-0125-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4-0125-preview",
+    "alias": "gpt-4-preview-RESPONSES",
+    "models": ["gpt-4-0125-preview", "gpt-4-1106-preview"],
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-4",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4",
+    "alias": "gpt-4-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-4-turbo",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4-turbo",
+    "alias": "gpt-4-turbo-RESPONSES",
+    "models": ["gpt-4-turbo", "gpt-4-turbo-2024-04-09"],
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-4o",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4o",
+    "alias": "gpt-4o-RESPONSES",
+    "models": ["gpt-4o", "gpt-4o-2024-08-06", "gpt-4o-2024-05-13"],
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "gpt-4o-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=gpt-4o-mini",
+    "alias": "gpt-4o-mini-RESPONSES",
+    "models": ["gpt-4o-mini", "gpt-4o-mini-2024-07-18"],
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-4.1-2025-04-14",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-2025-04-14",
+    "alias": "gpt-4.1-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-4.1-mini-2025-04-14",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-mini-2025-04-14",
+    "alias": "gpt-4.1-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-4.1-nano-2025-04-14",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-4.1-nano-2025-04-14",
+    "alias": "gpt-4.1-nano-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-2025-08-07",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-2025-08-07",
+    "alias": "gpt-5-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-mini-2025-08-07",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-mini-2025-08-07",
+    "alias": "gpt-5-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-nano-2025-08-07",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-nano-2025-08-07",
+    "alias": "gpt-5-nano-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-chat-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-chat-latest",
+    "alias": "gpt-5-chat-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-pro",
+    "alias": "gpt-5-pro-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1",
+    "alias": "gpt-5-1-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-1-chat-latest",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-chat-latest",
+    "alias": "gpt-5-1-chat-latest-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-1-codex",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-codex",
+    "alias": "gpt-5-1-codex-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-1-codex-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-1-codex-mini",
+    "alias": "gpt-5-1-codex-mini-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-2-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit/submit&model=openai/gpt-5-2-pro",
+    "alias": "gpt-5-2-pro",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-2-codex",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-2-codex",
+    "alias": "gpt-5-2-codex-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-3-codex",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-3-codex",
+    "alias": "gpt-5-3-codex-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-4",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-4",
+    "alias": "gpt-5-4-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-4-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-4-pro",
+    "alias": "gpt-5-4-pro-RESPONSES",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
   }
 ]
