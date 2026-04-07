@@ -33,12 +33,12 @@
                   "image_url": {
                     "type": "string",
                     "format": "uri",
-                    "description": "URL of the input image to animate. Should be 720p or higher resolution."
+                    "description": "A direct link to an online image or a Base64-encoded local image to be used as the first frame of the video. Should be 720p or higher resolution."
                   },
                   "last_image_url": {
                     "type": "string",
                     "format": "uri",
-                    "description": "A direct link to an online image or a Base64-encoded local image to be used as the last frame of the video."
+                    "description": "A direct link to an online image or a Base64-encoded local image to be used as the last frame of the video. Should be 720p or higher resolution."
                   },
                   "aspect_ratio": {
                     "type": "string",
