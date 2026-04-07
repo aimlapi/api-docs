@@ -1,10 +1,10 @@
 [
   {
-    "name": "google/gemma-4-31b-it",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemma-4-31b-it",
-    "alias": "gemma-4-31b-it",
-    "category": "text-models-llm",
+    "name": "google/veo-3-1-lite-generate-preview",
+    "url": "https://ai-staging.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3-1-lite-generate-preview",
+    "alias": "veo-3-1-lite-generate-preview",
+    "category": "video-models",
     "vendor": "Google",
-    "codeSamples": "chat-completion"
+    "codeSamples": "video:video"
   }
 ]
