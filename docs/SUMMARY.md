@@ -273,6 +273,8 @@
     * [OmniHuman](api-references/video-models/bytedance/omnihuman.md)
     * [OmniHuman 1.5](api-references/video-models/bytedance/omnihuman-1.5.md)
     * [Seedance 1.5 Pro](api-references/video-models/bytedance/seedance-1.5-pro.md)
+    * [Seedance 2.0](api-references/video-models/bytedance/seedance-2.0.md)
+    * [Seedance 2.0 Fast](api-references/video-models/bytedance/seedance-2.0-fast.md)
   * [Google](api-references/video-models/google/README.md)
     * [Veo 2 (Text-to-Video)](api-references/video-models/google/veo2-text-to-video.md)
     * [Veo 2 (Image-to-Video)](api-references/video-models/google/veo2-image-to-video.md)
