@@ -1,10 +1,18 @@
 [
   {
-    "name": "zhipu/glm-5-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-5-1",
-    "alias": "glm-5-1",
-    "category": "text-models-llm",
-    "vendor": "Zhipu",
-    "codeSamples": "chat-completion"
+    "name": "bytedance/seedance-2-0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-2-0",
+    "alias": "seedance-2-0",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "bytedance/seedance-2-0-fast",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=bytedance/seedance-2-0-fast",
+    "alias": "seedance-2-0-fast",
+    "category": "video-models",
+    "vendor": "ByteDance",
+    "codeSamples": "video:video"
   }
 ]
