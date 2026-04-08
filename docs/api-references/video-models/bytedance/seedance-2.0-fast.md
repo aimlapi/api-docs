@@ -288,7 +288,7 @@ Processing complete:
 
 </details>
 
-**Processing time**: \~ 2 min 19 sec.
+**Processing time**: \~ 1 min 33 sec.
 
 **Generated video** (1280x720, with sound):
 
