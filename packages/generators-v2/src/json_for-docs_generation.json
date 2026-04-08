@@ -1,18 +1,10 @@
 [
   {
-    "name": "alibaba/wan2.7-image",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan-2-7-image",
-    "alias": "wan2-7-image",
-    "category": "image-models",
-    "vendor": "Alibaba-Cloud",
-    "codeSamples": "image-models:image_url(s)"
-  },
-  {
-    "name": "alibaba/wan2.7-image-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/wan-2-7-image-pro",
-    "alias": "wan2-7-image-pro",
-    "category": "image-models",
-    "vendor": "Alibaba-Cloud",
-    "codeSamples": "image-models:image_url(s)"
+    "name": "zhipu/glm-5-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=zhipu/glm-5-1",
+    "alias": "glm-5-1",
+    "category": "text-models-llm",
+    "vendor": "Zhipu",
+    "codeSamples": "chat-completion"
   }
 ]
