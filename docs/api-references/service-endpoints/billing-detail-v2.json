@@ -74,13 +74,7 @@
                             "type": "string",
                             "description": "Auto top-up currency (always USD).",
                             "example": "USD"
-                          },
-                        "required": [
-                          "is_enabled",
-                          "threshold",
-                          "amount",
-                          "currency"
-                        ]
+                          }
                       },
                   "required": [
                     "user_id",
