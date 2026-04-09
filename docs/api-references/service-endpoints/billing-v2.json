@@ -1,0 +1,82 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/billing": {
+      "get": {
+        "operationId": "_v2_billing",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "–",
+                "title": "–"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "current_balance": {
+                      "type": "number",
+                      "description": "current user balance in USD.",
+                      "example": 123.45
+                    },
+                    "currency": {
+                      "type": "string",
+                      "description": "balance currency (always USD)",
+                      "example": "USD"
+                    }
+                  },
+                  "required": [
+                    "current_balance",
+                    "currency"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v2/billing' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v2/billing\", {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v2/billing\",\n        headers={\n            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        }\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

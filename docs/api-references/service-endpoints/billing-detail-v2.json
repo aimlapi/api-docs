@@ -1,0 +1,127 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/billing/detail": {
+      "get": {
+        "operationId": "_v2_billing_detail",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "–",
+                "title": "–"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user_id": {
+                      "type": "number",
+                      "description": "User ID.",
+                      "example": 111
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "User email.",
+                      "example": "user@example.com"
+                    },  
+                      "current_balance": {
+                        "type": "number",
+                        "description": "Current balance in USD.",
+                        "example": 100.5
+                      },
+                      "currency": {
+                        "type": "string",
+                        "description": "Currency (always USD).",
+                        "example": "USD"
+                      },
+                      "autotopup_settings": {
+                        "type": "object",
+                        "description": "Auto top-up settings.",
+                        "properties": {
+                          "is_enabled": {
+                            "type": "boolean",
+                            "description": "Whether auto top-up is enabled.",
+                            "example": true
+                          },
+                          "threshold": {
+                            "type": "number",
+                            "description": "Balance threshold that triggers auto top-up (USD).",
+                            "example": 50
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "Auto top-up amount (USD).",
+                            "example": 100
+                          },
+                          "currency": {
+                            "type": "string",
+                            "description": "Auto top-up currency (always USD).",
+                            "example": "USD"
+                          },
+                        "required": [
+                          "is_enabled",
+                          "threshold",
+                          "amount",
+                          "currency"
+                        ]
+                      },
+                  "required": [
+                    "user_id",
+                    "email",
+                    "current_balance",
+                    "currency",
+                    "autotopup_settings"
+                  ]
+                }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v1/billing/balance' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/billing/balance\", {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v1/billing/balance\",\n        headers={\n            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        }\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
