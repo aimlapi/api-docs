@@ -8,3 +8,11 @@ To make a request, you only need your AIMLAPI key obtained from your [account da
 {% openapi-operation spec="billing-test-1" path="/v1/billing/balance" method="get" %}
 [OpenAPI billing-test-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/billing-balance-v1.json)
 {% endopenapi-operation %}
+
+{% openapi-operation spec="billing-v2" path="/v2/billing" method="get" %}
+[OpenAPI billing-test-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/billing-v2.json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="billing-detail-v2" path="/v2/billing/detail" method="get" %}
+[OpenAPI billing-test-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/billing-detail-v2.json)
+{% endopenapi-operation %}
