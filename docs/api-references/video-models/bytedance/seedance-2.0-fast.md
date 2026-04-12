@@ -540,3 +540,4 @@ Seedance 2.0 Fast delivered strong results, completing generation in about 1.5 m
 
 **Generated video** (1280x720, with sound):
 
+{% embed url="https://drive.google.com/file/d/1554_MsXRzNDQGTfWiXaOSzYvThc4Z7PR/view?usp=sharing" %}
