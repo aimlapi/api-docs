@@ -129,11 +129,10 @@ def main():
                 break
         
             status = response_data.get("status")
-            print("Status:", status)
-
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
                 print("Processing complete:\n", response_data)
                 return response_data
@@ -222,7 +221,7 @@ function getVideo(genId, callback) {
   req.end();
 }
 
-// Initiates video generation and checks the status every 10 seconds until completion or timeout
+// Initiates video generation and checks the status every 15 seconds until completion or timeout
 function main() {
   generateVideo((genResponse) => {
     if (!genResponse || !genResponse.id) {
@@ -249,11 +248,10 @@ function main() {
         }
 
         const status = responseData.status;
-        console.log("Status:", status);
-
-        if (["waiting", "active", "queued", "generating"].includes(status)) {
-          console.log("Still waiting... Checking again in 10 seconds.");
-          setTimeout(checkStatus, 10000);
+        
+        if (["queued", "generating"].includes(status)) {
+                console.log(`Status: ${status}. Checking again in 15 seconds.`);
+          setTimeout(checkStatus, 15000);
         } else {
           console.log("Processing complete:\n", responseData);
         }

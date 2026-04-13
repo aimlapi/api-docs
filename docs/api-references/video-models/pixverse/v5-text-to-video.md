@@ -124,7 +124,7 @@ def main():
     gen_id = gen_response.get("id")
     print("Generation ID:  ", gen_id)
 
-    # Try to retrieve the video from the server every 10 sec
+    # Try to retrieve the video from the server every 15 sec
     if gen_id:
         start_time = time.time()
 
@@ -137,11 +137,10 @@ def main():
                 break
         
             status = response_data.get("status")
-            print("Status:", status)
-
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
                 print("Processing complete:\n", response_data)
                 return response_data
@@ -251,7 +250,7 @@ function main() {
         console.log("Generation ID:", genId);
 
         const timeout = 1000 * 1000; // 1000 sec
-        const interval = 10 * 1000; // 10 sec
+        const interval = 15 * 1000; // 15 sec
         const startTime = Date.now();
 
         const checkStatus = () => {
@@ -267,10 +266,9 @@ function main() {
                 }
 
                 const status = responseData.status;
-                console.log("Status:", status);
-
-                if (["waiting", "active", "queued", "generating"].includes(status)) {
-                    console.log("Still waiting... Checking again in 10 seconds.");
+                
+                if (["queued", "generating"].includes(status)) {
+                    console.log(`Status: ${status}. Checking again in 15 seconds.`);
                     setTimeout(checkStatus, interval);
                 } else {
                     console.log("Processing complete:\n", responseData);

@@ -125,11 +125,10 @@ def main():
                 break
         
             status = response_data.get("status")
-            print("Status:", status)
-
-            if status == "waiting" or status == "active" or  status == "queued" or status == "generating":
-                print("Still waiting... Checking again in 10 seconds.")
-                time.sleep(10)
+            
+            if status in ["queued", "generating"]:
+                print(f"Status: {status}. Checking again in 15 seconds.")
+                time.sleep(15)
             else:
                 print("Processing complete:\n", response_data)
                 return response_data
