@@ -1,20 +1,20 @@
-# music-2.0
+# music-2.6
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/music-2.0`
+* `minimax/music-2.6`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/minimax/music-2-0" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/music-2-6" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-A fast and cost-efficient music generator optimized for high-quality music production. The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
+A powerful music generation model optimized for high-quality song production, capable of creating fully arranged tracks from lyrics and style instructions with precise control over tempo, key, structure, vocal performance, and emotional progression.
 
 ## Setup your API Key
 
@@ -22,12 +22,12 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schemas
 
-### Generate music sample <a href="#generate-music-sample" id="generate-music-sample"></a>
+### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
 
 This endpoint generates a music piece based on the prompt (which includes style instructions) and the provided lyrics. It returns a generation task ID, its status, and related metadata.
 
-{% openapi-operation spec="music-2-0" path="/v2/generate/audio" method="post" %}
-[OpenAPI music-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-2.0.json)
+{% openapi-operation spec="music-2-6" path="/v2/generate/audio" method="post" %}
+[OpenAPI music-2-6](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-2.6.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
@@ -57,7 +57,7 @@ aimlapi_key = '<YOUR_AIMLAPI_KEY>'
 def generate_audio():
     url = "https://api.aimlapi.com/v2/generate/audio"
     payload = {
-        "model": "minimax/music-2.0",
+        "model": "minimax/music-2.6",
         "prompt": "A calm and soothing instrumental music with gentle piano and soft strings.",
         "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way" 
     }
@@ -133,7 +133,7 @@ const API_KEY = '<YOUR_AIMLAPI_KEY>';
 async function generateAudio() {
   const url = 'https://api.aimlapi.com/v2/generate/audio';
   const payload = {
-        model: 'minimax/music-2.0',
+        model: 'minimax/music-2.6',
         prompt: 'A calm and soothing instrumental music with gentle piano and soft strings.',
         lyrics: '[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way'
   };
@@ -226,16 +226,17 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'queued'}
-{'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'queued'}
-Generation ID:   e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0
+Generation: {'id': 'NDxdQ2xZY1L6PYQNkJgbA', 'status': 'queued', 'meta': {'usage': {'credits_used': 390000, 'usd_spent': 0.195}}}
+{'id': 'NDxdQ2xZY1L6PYQNkJgbA', 'status': 'queued', 'meta': {'usage': {'credits_used': 390000, 'usd_spent': 0.195}}}
+Generation ID:   NDxdQ2xZY1L6PYQNkJgbA
+Status: queued. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:minimax/music-2.0', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260108200145-PyWuVGVLaIkSAOEp.mp3?Expires=1767960111&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=pTfbqVDKtdUdX1dr0iqEjSI4xnY%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
+ {'id': 'NDxdQ2xZY1L6PYQNkJgbA', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260416000759-FRVqSDONLPpncief.mp3?Expires=1776355687&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=QLCM2D4LO3k%2BADUW0kt%2BrIXNK4Q%3D'}}
 ```
 {% endcode %}
 
@@ -243,4 +244,4 @@ Processing complete:
 
 Listen to the track we generated:
 
-{% embed url="https://drive.google.com/file/d/1nYJ3OCdcQ8_pR4vD_0yCZhnHDuS7LFdp/view" %}
+{% embed url="https://drive.google.com/file/d/1_hUoaOVGNtB-MnsmBdHn7ySvO3_uK1Wr/view?usp=sharing" %}

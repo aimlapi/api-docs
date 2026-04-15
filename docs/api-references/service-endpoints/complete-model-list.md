@@ -3,7 +3,7 @@
 ## Get Model List via API
 
 You can query the complete list of available models through this API.\
-No API key is required for this request. You can also simply open [this list](https://api.aimlapi.com/models) in any web browser.<br>
+No API key is required for this request. You can also simply open [this list](https://api.aimlapi.com/models) in any web browser.
 
 {% openapi-operation spec="models" path="/models" method="get" %}
 [OpenAPI models](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/models.json)
