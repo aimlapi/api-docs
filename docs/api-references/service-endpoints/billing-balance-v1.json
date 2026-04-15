@@ -82,7 +82,7 @@
             }
           }
         },
-        "x-hideTryItPanel": false,
+        "x-hideTryItPanel": true,
         "x-codeSamples": [
           {
             "lang": "cURL",
