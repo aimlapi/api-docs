@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/keys/{prefix}": {
+    "/v1/keys/{prefix}": {
       "put": {
         "operationId": "KeysController_replaceKey_v1",
         "parameters": [

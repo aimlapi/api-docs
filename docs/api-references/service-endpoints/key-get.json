@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/key": {
+    "/v1/key": {
       "get": {
         "operationId": "KeysController_getLatestKey_v1",
         "responses": {

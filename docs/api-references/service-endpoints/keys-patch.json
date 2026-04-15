@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/keys/{prefix}": {
+    "/v1/keys/{prefix}": {
       "patch": {
         "operationId": "KeysController_patchKey_v1",
         "parameters": [
