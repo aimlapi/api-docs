@@ -78,5 +78,15 @@
         ]
       }
     }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_MANAGEMENT_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
   }
 }
