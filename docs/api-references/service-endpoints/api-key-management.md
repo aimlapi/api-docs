@@ -10,7 +10,7 @@ Before you start you should create [a managment key](../../faq/how-can-i-work-wi
 
 Copy the created key and store it in a secure location. If the key is lost, create a new one.&#x20;
 
-{% openapi-operation spec="keys-post" path="/keys" method="post" %}
+{% openapi-operation spec="keys-post" path="/v1/keys" method="post" %}
 [OpenAPI keys-post](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-post.json)
 {% endopenapi-operation %}
 
@@ -20,7 +20,7 @@ Copy the created key and store it in a secure location. If the key is lost, crea
 
 Returns all API keys for your account, including each key’s settings and metadata.
 
-{% openapi-operation spec="keys-get" path="/keys" method="get" %}
+{% openapi-operation spec="keys-get" path="/v1/keys" method="get" %}
 [OpenAPI keys-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-get.json)
 {% endopenapi-operation %}
 
@@ -30,15 +30,15 @@ Returns all API keys for your account, including each key’s settings and metad
 
 Retrieve parameters of the AIMLAPI key used in the request.
 
-{% openapi-operation spec="key-get" path="/key" method="get" %}
-[OpenAPI key-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/key-get.json)
+{% openapi-operation spec="keys-get" path="/v1/keys" method="get" %}
+[OpenAPI keys-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-get.json)
 {% endopenapi-operation %}
 
 ***
 
 ### Update an API key
 
-{% openapi-operation spec="keys-patch" path="/keys/{prefix}" method="patch" %}
+{% openapi-operation spec="keys-patch" path="/v1/keys/{prefix}" method="patch" %}
 [OpenAPI keys-patch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-patch.json)
 {% endopenapi-operation %}
 
@@ -46,6 +46,6 @@ Retrieve parameters of the AIMLAPI key used in the request.
 
 ### Delete an API key
 
-{% openapi-operation spec="keys-delete" path="/keys/{prefix}" method="delete" %}
+{% openapi-operation spec="keys-delete" path="/v1/keys/{prefix}" method="delete" %}
 [OpenAPI keys-delete](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-delete.json)
 {% endopenapi-operation %}
