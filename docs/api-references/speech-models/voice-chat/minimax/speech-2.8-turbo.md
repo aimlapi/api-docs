@@ -1,20 +1,20 @@
-# Speech 2.6 HD
+# Speech 2.8 Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/speech-2.6-hd`
+* `minimax/speech-2.8-turbo`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/minimax/speech-2-6-hd" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/speech-2-8-turbo" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
-The model generates speech from text prompts and multiple voices, optimized for high-fidelity, natural-sounding output.
+The model generates speech from text prompts and multiple voices, optimized for fast, low-latency synthesis.
 
 ## Setup your API Key
 
@@ -22,8 +22,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi-operation spec="speech-2-6-hd" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-6-hd](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-hd.json)
+{% openapi-operation spec="speech-2-8-turbo" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-8-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.8-turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -32,8 +32,8 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
-import os
 import requests
+import json  # for getting a structured output with indentation
 
 def main():
     url = "https://api.aimlapi.com/v1/tts"
@@ -42,7 +42,7 @@ def main():
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     }
     payload = {
-        "model": "minimax/speech-2.6-hd",
+        "model": "minimax/speech-2.6-turbo",
         "text": "Hi! What are you doing today?",
         "voice_setting": {
           "voice_id": "Wise_Woman"
@@ -50,14 +50,8 @@ def main():
     }
 
     response = requests.post(url, headers=headers, json=payload, stream=True)
-    dist = os.path.abspath("your_file_name.wav")
-
-    with open(dist, "wb") as write_stream:
-        for chunk in response.iter_content(chunk_size=8192):
-            if chunk:
-                write_stream.write(chunk)
-
-    print("Audio saved to:", dist)
+    data = response.json()
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 main()
 ```
@@ -67,13 +61,11 @@ main()
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
-import fs from "fs";
-import path from "path";
-
 async function main() {
   const url = "https://api.aimlapi.com/v1/tts";
+
   const payload = {
-    model: "minimax/speech-2.6-hd",
+    model: "minimax/speech-2.6-turbo",
     text: "Hi! What are you doing today?",
     voice_setting: {
       voice_id: "Wise_Woman"
@@ -83,25 +75,17 @@ async function main() {
   const response = await fetch(url, {
     method: "POST",
     headers: {
-      // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-      "Authorization": `Bearer <YOUR_AIMLAPI_KEY>`,
+      "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
       "Content-Type": "application/json"
     },
     body: JSON.stringify(payload)
   });
 
-  // Read response as ArrayBuffer and convert to Buffer
-  const arrayBuffer = await response.arrayBuffer();
-  const buffer = Buffer.from(arrayBuffer);
-
-  // Save audio to file in the current working directory
-  const dist = path.join(process.cwd(), "your_file_name.wav");
-  fs.writeFileSync(dist, buffer);
-
-  console.log("Audio saved to:", dist);
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
-main();
+main().catch(console.error);
 ```
 {% endcode %}
 {% endtab %}
@@ -113,12 +97,22 @@ main();
 
 {% code overflow="wrap" %}
 ```
-Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
+{
+  "audio": {
+    "url": "https://cdn.aimlapi.com/moose/audio%2Ftts-20260417164254-aCnjyyakIzQJdXcd.mp3?Expires=1776501775&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=e2Q40UIW6iy6Ye%2BSmxkVQ1Y3Q8w%3D"
+  },
+  "meta": {
+    "usage": {
+      "credits_used": 4524,
+      "usd_spent": 0.002262
+    }
+  }
+}
 ```
 {% endcode %}
 
 </details>
 
-**Generation time**: \~ 5.8 s.
+Listen to the audio sample we generated (\~ 2.2 s):
 
-{% embed url="https://drive.google.com/file/d/1aUSd2YtX2Way0Lh_fZSeiWmFWkODaJHI/view" %}
+{% embed url="https://drive.google.com/file/d/1MCCM7XmkBTXyLLsX5X9bYPYybdR-jxoF/view?usp=sharing" %}

@@ -434,6 +434,8 @@
       * [Speech 2.5 HD Preview](api-references/speech-models/voice-chat/minimax/speech-2.5-hd-preview.md)
       * [Speech 2.6 Turbo](api-references/speech-models/voice-chat/minimax/speech-2.6-turbo.md)
       * [Speech 2.6 HD](api-references/speech-models/voice-chat/minimax/speech-2.6-hd.md)
+      * [Speech 2.8 Turbo](api-references/speech-models/voice-chat/minimax/speech-2.8-turbo.md)
+      * [Speech 2.8 HD](api-references/speech-models/voice-chat/minimax/speech-2.8-hd.md)
       * [Copy of Speech 2.6 HD](api-references/speech-models/voice-chat/minimax/speech-2.6-hd-1.md)
 * [Content Moderation Models](api-references/moderation-safety-models.md)
 * [3D-Generating Models](api-references/3d-generating-models/README.md)

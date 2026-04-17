@@ -20,6 +20,12 @@ The model generates speech from text prompts and multiple voices, optimized for 
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
+## API Schema
+
+{% openapi-operation spec="speech-2-6-turbo" path="/v1/tts" method="post" %}
+[OpenAPI speech-2-6-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-turbo.json)
+{% endopenapi-operation %}
+
 ## Quick Code Example
 
 Here is an example of generating an audio response to the user input provided in the `text` parameter.
@@ -118,9 +124,3 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\TTSes\your_file_name.wav
 **Generation time**: \~ 4.5 s.
 
 {% embed url="https://drive.google.com/file/d/1r16yYPqHP5C1Y4Nsa3ks26XDsNvFkF9H/view" %}
-
-## API Schema
-
-{% openapi-operation spec="speech-2-6-turbo" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-6-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-turbo.json)
-{% endopenapi-operation %}

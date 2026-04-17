@@ -50,6 +50,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="v3-alpha" path="/v1/tts" method="post" %}
+[OpenAPI v3-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/v3_alpha.json)
+{% endopenapi-operation %}
+
 ## Quick Code Example
 
 Here is an example of generating an audio response to the user input provided in the `text` parameter.
@@ -146,9 +152,3 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\AUDIOs\audio.wav
 Listen to the audio response:
 
 {% embed url="https://drive.google.com/file/d/1fAR1OVU26huTfgbhNq6KF205y3hCVgCR/view?usp=sharing" %}
-
-## API Schemas
-
-{% openapi-operation spec="v3-alpha" path="/v1/tts" method="post" %}
-[OpenAPI v3-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/v3_alpha.json)
-{% endopenapi-operation %}
