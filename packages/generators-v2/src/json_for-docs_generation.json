@@ -1,26 +1,18 @@
 [
   {
-    "name": "minimax/m2-her",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-her",
-    "alias": "m2-her",
-    "category": "text-models-llm",
+    "name": "minimax/speech-2.8-turbo",
+    "alias": "speech-2.8-turbo",
+    "category": "speech-models",
     "vendor": "MiniMax",
-    "codeSamples": "chat-completion"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.8-turbo",
+    "codeSamples": "tts"
   },
   {
-    "name": "minimax/m2-1-highspeed",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-1-highspeed",
-    "alias": "m2-1-highspeed",
-    "category": "text-models-llm",
+    "name": "minimax/speech-2.8-hd",
+    "alias": "speech-2.8-hd",
+    "category": "speech-models",
     "vendor": "MiniMax",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "minimax/m2-7-highspeed",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/m2-7-highspeed",
-    "alias": "m2-7-highspeed",
-    "category": "text-models-llm",
-    "vendor": "MiniMax",
-    "codeSamples": "chat-completion"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.8-hd",
+    "codeSamples": "tts"
   }
 ]
