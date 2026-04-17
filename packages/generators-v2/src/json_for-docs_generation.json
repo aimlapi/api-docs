@@ -1,18 +1,11 @@
 [
   {
-    "name": "minimax/speech-2.8-turbo",
-    "alias": "speech-2.8-turbo",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.8-turbo",
-    "codeSamples": "tts"
-  },
-  {
-    "name": "minimax/speech-2.8-hd",
-    "alias": "speech-2.8-hd",
-    "category": "speech-models",
-    "vendor": "MiniMax",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/text-to-speech&model=minimax/speech-2.8-hd",
-    "codeSamples": "tts"
+    "name": "anthropic/claude-opus-4-7",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-7",
+    "alias": "claude-opus-4-7",
+    "models": ["anthropic/claude-opus-4-7", "claude-opus-4-7"],
+    "category": "text-models-llm",
+    "vendor": "Anthropic",
+    "codeSamples": "chat-completion"
   }
 ]
