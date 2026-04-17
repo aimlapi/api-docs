@@ -31,6 +31,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [anthropic/claude-opus-4-5](../api-references/text-models-llm/anthropic/claude-4.5-opus.md)
 * [anthropic/claude-opus-4-6](../api-references/text-models-llm/anthropic/claude-4.6-opus.md)
 * [anthropic/claude-sonnet-4.6](../api-references/text-models-llm/anthropic/claude-4.6-sonnet.md)
+* [anthropic/claude-opus-4-7](../api-references/text-models-llm/anthropic/claude-4.7-opus.md)
 * [minimax/m2](../api-references/text-models-llm/minimax/m2.md)
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
 * [minimax/m2-1-highspeed](../api-references/text-models-llm/minimax/m2.1-highspeed.md)
