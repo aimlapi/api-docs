@@ -1,11 +1,26 @@
 [
   {
-    "name": "anthropic/claude-opus-4-7",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-7",
-    "alias": "claude-opus-4-7",
-    "models": ["anthropic/claude-opus-4-7", "claude-opus-4-7"],
+    "name": "google/gemini-3-1-flash-lite-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-1-flash-lite-preview",
+    "alias": "gemini-3-1-flash-lite-preview",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "Google",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "xai/grok-4-20-0309-non-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=grok-4-20-0309-non-reasoning",
+    "alias": "grok-4-20-0309-non-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "xai/grok-4-20-0309-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=grok-4-20-0309-reasoning",
+    "alias": "grok-4-20-0309-reasoning",
+    "category": "text-models-llm",
+    "vendor": "xAI",
     "codeSamples": "chat-completion"
   }
 ]
