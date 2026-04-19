@@ -1,15 +1,15 @@
 [
   {
-    "name": "xai/grok-4-20-0309-non-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=grok-4-20-0309-non-reasoning",
+    "name": "x-ai/grok-4-20-0309-non-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-20-0309-non-reasoning",
     "alias": "grok-4-20-0309-non-reasoning",
     "category": "text-models-llm",
     "vendor": "xAI",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "xai/grok-4-20-0309-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=grok-4-20-0309-reasoning",
+    "name": "x-ai/grok-4-20-0309-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-20-0309-reasoning",
     "alias": "grok-4-20-0309-reasoning",
     "category": "text-models-llm",
     "vendor": "xAI",
