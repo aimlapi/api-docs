@@ -121,6 +121,7 @@ Supported models:
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [x-ai/grok-4-fast-reasoning](../api-references/text-models-llm/xai/grok-4-fast-reasoning.md)
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
+* [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
 
 ***
 

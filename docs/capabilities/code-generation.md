@@ -57,6 +57,8 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [openai/gpt-5-4](../api-references/text-models-llm/openai/gpt-5-4.md)
 * [openai/gpt-5-4-pro](../api-references/text-models-llm/openai/gpt-5-4-pro.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
+* [x-ai/grok-4-20-0309-non-reasoning](../api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
+* [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
 * [zhipu/glm-4.6](../api-references/text-models-llm/zhipu/glm-4.6.md)
