@@ -28,13 +28,11 @@
                   },
                   "prompt": {
                     "type": "string",
-                    "minLength": 10,
                     "maxLength": 2000,
                     "description": "A description of the music, specifying style, mood, and scenario. Length: 10–2000 characters."
                   },
                   "lyrics": {
                     "type": "string",
-                    "minLength": 10,
                     "maxLength": 3000,
                     "description": "Lyrics of the song. Use (\n) to separate lines. You may add structure tags like [Intro], [Verse], [Chorus], [Bridge], [Outro] to enhance the arrangement. Length: 10–3000 characters.",
                     "example": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes"
@@ -42,7 +40,7 @@
                   "audio_setting": {
                     "type": "object",
                     "properties": {
-                      "sample_rate": {
+                      "audio_sample_rate": {
                         "type": "integer",
                         "description": "The sampling rate of the generated music.",
                         "enum": [
@@ -50,7 +48,8 @@
                           24000,
                           32000,
                           44100
-                        ]
+                        ],
+                        "default": "44100"
                       },
                       "bitrate": {
                         "type": "integer",
@@ -60,7 +59,8 @@
                           64000,
                           128000,
                           256000
-                        ]
+                        ],
+                        "default": "256000"
                       },
                       "format": {
                         "type": "string",
@@ -69,18 +69,24 @@
                           "wav",
                           "pcm"
                         ],
+                        "default": "mp3",
                         "description": "The format of the generated music."
                       }
-                    },
-                    "required": [
-                      "format"
-                    ]
+                    }
+                  },
+                  "lyrics_optimizer": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Whether to automatically generate lyrics based on the prompt description. When set to true and lyrics is empty, the system will automatically generate lyrics from the prompt."
+                  },
+                  "is_instrumental": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Whether to generate instrumental music (no vocals). When set to true, the lyrics field is not required."
                   }
                 },
                 "required": [
-                  "model",
-                  "prompt",
-                  "lyrics"
+                  "model"
                 ],
                 "title": "minimax/music-2.6"
               }

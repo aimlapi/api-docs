@@ -42,7 +42,7 @@
                   "audio_setting": {
                     "type": "object",
                     "properties": {
-                      "sample_rate": {
+                      "audio_sample_rate": {
                         "type": "integer",
                         "description": "The sampling rate of the generated music.",
                         "enum": [
@@ -50,7 +50,8 @@
                           24000,
                           32000,
                           44100
-                        ]
+                        ],
+                        "default": "44100"
                       },
                       "bitrate": {
                         "type": "integer",
@@ -60,7 +61,8 @@
                           64000,
                           128000,
                           256000
-                        ]
+                        ],
+                        "default": "256000"
                       },
                       "format": {
                         "type": "string",
@@ -69,12 +71,10 @@
                           "wav",
                           "pcm"
                         ],
+                        "default": "mp3",
                         "description": "The format of the generated music."
                       }
-                    },
-                    "required": [
-                      "format"
-                    ]
+                    }
                   }
                 },
                 "required": [
@@ -154,10 +154,16 @@
                               "type": "number",
                               "description": "The number of tokens consumed during generation.",
                               "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
                             }
                           },
                           "required": [
-                            "credits_used"
+                            "credits_used",
+                            "usd_spent"
                           ]
                         }
                       },

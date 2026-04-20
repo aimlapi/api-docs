@@ -1,18 +1,58 @@
 [
   {
-    "name": "x-ai/grok-4-20-0309-non-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-20-0309-non-reasoning",
-    "alias": "grok-4-20-0309-non-reasoning",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
+    "name": "minimax/music-1.5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-1.5",
+    "alias": "music-1.5",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-1.5",
+        "prompt": "Lo-fi pop hip-hop ambient music",
+        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+    }
   },
   {
-    "name": "x-ai/grok-4-20-0309-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-4-20-0309-reasoning",
-    "alias": "grok-4-20-0309-reasoning",
-    "category": "text-models-llm",
-    "vendor": "xAI",
-    "codeSamples": "chat-completion"
+    "name": "minimax/music-2.0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-2.0",
+    "alias": "music-2.0",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-2.0",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+    }
+  },
+  {
+    "name": "minimax/music-2.6",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-2.6",
+    "alias": "music-2.6",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-2.0",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way..."
+    }
+  },
+  {
+    "name": "elevenlabs/eleven_music",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=elevenlabs/eleven_music",
+    "alias": "eleven_music",
+    "category": "music-models",
+    "vendor": "elevenlabs",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "elevenlabs/eleven_music",
+        "prompt": "Lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
+        "music_length_ms": 20000
+    }
   }
 ]
