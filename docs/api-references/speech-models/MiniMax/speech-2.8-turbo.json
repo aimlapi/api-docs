@@ -126,7 +126,8 @@
                           24000,
                           32000,
                           44100
-                        ]
+                        ],
+                        "default": "32000"
                       },
                       "bitrate": {
                         "type": "integer",
@@ -136,7 +137,8 @@
                           64000,
                           128000,
                           256000
-                        ]
+                        ],
+                        "default": "128000"
                       },
                       "format": {
                         "type": "string",
@@ -154,7 +156,8 @@
                         "enum": [
                           1,
                           2
-                        ]
+                        ],
+                        "default": "1"
                       }
                     },
                     "description": "Audio output configuration"
