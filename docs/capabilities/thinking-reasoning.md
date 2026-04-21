@@ -109,6 +109,7 @@ Supported models:
 ***
 
 * [moonshot/kimi-k2-5](../api-references/text-models-llm/moonshot/kimi-k2-5.md)
+* [moonshot/kimi-k2-6](../api-references/text-models-llm/moonshot/kimi-k2-6.md)
 
 ***
 

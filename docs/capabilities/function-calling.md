@@ -201,6 +201,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [moonshot/kimi-k2-turbo-preview](../api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)
 * [moonshot/kimi-k2-5](../api-references/text-models-llm/moonshot/kimi-k2-5.md)
+* [moonshot/kimi-k2-6](../api-references/text-models-llm/moonshot/kimi-k2-6.md)
 * [nvidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
 * [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/nemotron-nano-12b-v2-vl.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)

@@ -111,6 +111,7 @@
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [kimi-k2-turbo-preview](api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)
     * [kimi-k2-5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
+    * [kimi-k2-6](api-references/text-models-llm/moonshot/kimi-k2-6.md)
   * [NousResearch](api-references/text-models-llm/nousresearch/README.md)
     * [hermes-4-405b](api-references/text-models-llm/nousresearch/hermes-4-405b.md)
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
