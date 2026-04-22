@@ -390,6 +390,7 @@
     * [music-1.5](api-references/music-models/minimax/music-1.5.md)
     * [music-2.0](api-references/music-models/minimax/music-2.0.md)
     * [music-2.6](api-references/music-models/minimax/music-2-6.md)
+    * [music-cover](api-references/music-models/minimax/music-cover.md)
   * [Stability AI](api-references/music-models/Stability-AI/README.md)
     * [stable-audio](api-references/music-models/Stability-AI/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
