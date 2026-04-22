@@ -92,7 +92,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ## Models That Support Function Calling
 
-* [claude-3-haiku-20240307](../api-references/text-models-llm/Anthropic/claude-3-haiku.md)
 * [claude-opus-4-20250514](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [claude-sonnet-4-20250514](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
