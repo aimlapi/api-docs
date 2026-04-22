@@ -5049,6 +5049,33 @@
                         "total_tokens"
                       ],
                       "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
                     }
                   },
                   "required": [
@@ -8877,6 +8904,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
@@ -12665,6 +12719,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
@@ -16259,6 +16340,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
@@ -19853,6 +19961,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
@@ -26629,6 +26764,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
@@ -30873,6 +31035,33 @@
                                 "total_tokens"
                               ],
                               "description": "Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+                            },
+                            "meta": {
+                              "type": "object",
+                              "nullable": true,
+                              "properties": {
+                                "usage": {
+                                  "type": "object",
+                                  "nullable": true,
+                                  "properties": {
+                                    "credits_used": {
+                                      "type": "number",
+                                      "description": "The number of tokens consumed during generation.",
+                                      "example": 120000
+                                    },
+                                    "usd_spent": {
+                                      "type": "number",
+                                      "description": "The total amount of money spent by the user in USD.",
+                                      "example": 0.06
+                                    }
+                                  },
+                                  "required": [
+                                    "credits_used",
+                                    "usd_spent"
+                                  ]
+                                }
+                              },
+                              "description": "Additional details about the generation."
                             }
                           },
                           "required": [
