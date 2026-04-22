@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-image-1"
+                      "openai/gpt-image-2"
                     ]
                   },
                   "prompt": {
@@ -281,7 +281,7 @@
                   "prompt",
                   "image"
                 ],
-                "title": "openai/gpt-image-1"
+                "title": "openai/gpt-image-2"
               }
             }
           }
@@ -378,7 +378,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-image-1"
+                      "openai/gpt-image-2"
                     ]
                   },
                   "prompt": {
@@ -636,7 +636,7 @@
                   "prompt",
                   "image"
                 ],
-                "title": "openai/gpt-image-1"
+                "title": "openai/gpt-image-2"
               }
             }
           }

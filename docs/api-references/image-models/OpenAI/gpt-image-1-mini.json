@@ -31,6 +31,36 @@
                     "maxLength": 32000,
                     "description": "The text prompt describing the content, style, or composition of the image to be generated."
                   },
+                  "size": {
+                    "type": "string",
+                    "enum": [
+                      "1024x1024",
+                      "1024x1536",
+                      "1536x1024"
+                    ],
+                    "default": "1024x1024",
+                    "description": "The size of the generated image."
+                  },
+                  "quality": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "high",
+                      "medium"
+                    ],
+                    "default": "medium",
+                    "description": "The quality of the image that will be generated."
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "png",
+                      "jpeg",
+                      "webp"
+                    ],
+                    "default": "png",
+                    "description": "The format of the generated image."
+                  },
                   "background": {
                     "type": "string",
                     "enum": [
@@ -63,37 +93,7 @@
                     "minimum": 0,
                     "maximum": 100,
                     "default": 100,
-                    "description": "The compression level (0-100%) for the generated images."
-                  },
-                  "output_format": {
-                    "type": "string",
-                    "enum": [
-                      "png",
-                      "jpeg",
-                      "webp"
-                    ],
-                    "default": "png",
-                    "description": "The format of the generated image."
-                  },
-                  "quality": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "high",
-                      "medium"
-                    ],
-                    "default": "medium",
-                    "description": "The quality of the image that will be generated."
-                  },
-                  "size": {
-                    "type": "string",
-                    "enum": [
-                      "1024x1024",
-                      "1024x1536",
-                      "1536x1024"
-                    ],
-                    "default": "1024x1024",
-                    "description": "The size of the generated image."
+                    "description": "Compression level (0-100%), applies to JPEG and WebP only."
                   },
                   "response_format": {
                     "type": "string",
@@ -155,10 +155,16 @@
                               "type": "number",
                               "description": "The number of tokens consumed during generation.",
                               "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
                             }
                           },
                           "required": [
-                            "credits_used"
+                            "credits_used",
+                            "usd_spent"
                           ]
                         }
                       },

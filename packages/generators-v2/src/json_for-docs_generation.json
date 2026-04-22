@@ -1,17 +1,70 @@
 [
   {
-    "name": "minimax/music-cover",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-cover",
-    "alias": "music-cover",
-    "category": "music-models",
-    "vendor": "MiniMax",
+    "name": "openai/gpt-image-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1",
+    "alias": "gpt-image-1-GENERATE",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-1",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-editing&model=openai/gpt-image-1",
+    "alias": "gpt-image-1-EDIT",
+    "category": "image-models",
+    "vendor": "OpenAI",
     "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/edits",
     "customParams":{
-        "model": "minimax/music-cover",
-        "prompt": "Use the reference audio as the intro as it is. Then gradually begin the vocal section, expanding the arrangement with gentle piano and soft strings.",
-        "lyrics": "[Intro][Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way", 
-        "reference_audio_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/female-vocalization.mp3"
+        "model": "openai/gpt-image-2",
+        "prompt": "Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
     }
+  },
+  {
+    "name": "openai/gpt-image-1-mini",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-1-mini",
+    "alias": "gpt-image-1-mini",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=openai/gpt-image-2",
+    "alias": "gpt-image-2-GENERATE",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "openai/gpt-image-2",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-editing&model=openai/gpt-image-2",
+    "alias": "gpt-image-2-EDIT",
+    "category": "image-models",
+    "vendor": "OpenAI",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/images/edits",
+    "customParams":{
+        "model": "openai/gpt-image-2",
+        "prompt": "Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon.",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png"
+    }
+  },
+  {
+    "name": "alibaba/qwen-image-2-0",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image-2-0",
+    "alias": "qwen-image-2-0",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:prompt"
+  },
+  {
+    "name": "alibaba/qwen-image-2-0-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/image-generations&model=alibaba/qwen-image-2-0-pro",
+    "alias": "qwen-image-2-0-pro",
+    "category": "image-models",
+    "vendor": "Alibaba-Cloud",
+    "codeSamples": "image-models:prompt"
   }
 ]
