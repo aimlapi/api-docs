@@ -636,39 +636,6 @@
                     "maximum": 2,
                     "description": "Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics."
                   },
-                  "reasoning_effort": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high"
-                    ],
-                    "description": "Constrains effort on reasoning for reasoning models. Currently supported values are low, medium, and high. Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response."
-                  },
-                  "reasoning": {
-                    "type": "object",
-                    "properties": {
-                      "effort": {
-                        "type": "string",
-                        "enum": [
-                          "low",
-                          "medium",
-                          "high"
-                        ],
-                        "description": "Reasoning effort setting"
-                      },
-                      "max_tokens": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "description": "Max tokens of reasoning content. Cannot be used simultaneously with effort."
-                      },
-                      "exclude": {
-                        "type": "boolean",
-                        "description": "Whether to exclude reasoning from the response"
-                      }
-                    },
-                    "description": "Configuration for model reasoning/thinking tokens"
-                  },
                   "response_format": {
                     "oneOf": [
                       {
@@ -1219,6 +1186,33 @@
                         "total_tokens"
                       ],
                       "description": "Usage statistics for the completion request."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
                     }
                   },
                   "required": [
@@ -2227,39 +2221,6 @@
                     "maximum": 2,
                     "description": "Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics."
                   },
-                  "reasoning_effort": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high"
-                    ],
-                    "description": "Constrains effort on reasoning for reasoning models. Currently supported values are low, medium, and high. Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response."
-                  },
-                  "reasoning": {
-                    "type": "object",
-                    "properties": {
-                      "effort": {
-                        "type": "string",
-                        "enum": [
-                          "low",
-                          "medium",
-                          "high"
-                        ],
-                        "description": "Reasoning effort setting"
-                      },
-                      "max_tokens": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "description": "Max tokens of reasoning content. Cannot be used simultaneously with effort."
-                      },
-                      "exclude": {
-                        "type": "boolean",
-                        "description": "Whether to exclude reasoning from the response"
-                      }
-                    },
-                    "description": "Configuration for model reasoning/thinking tokens"
-                  },
                   "response_format": {
                     "oneOf": [
                       {
@@ -2810,6 +2771,33 @@
                         "total_tokens"
                       ],
                       "description": "Usage statistics for the completion request."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
                     }
                   },
                   "required": [
