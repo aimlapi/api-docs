@@ -85,6 +85,7 @@ Supported models:
 * [alibaba/qwen3-next-80b-a3b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-thinking.md)
 * [alibaba/qwen3-vl-32b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.md)
 * [alibaba/qwen3.5-plus-20260218](../api-references/text-models-llm/alibaba-cloud/qwen3.5-plus.md)
+* [alibaba/qwen3.6-27b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-27b.md)
 
 ***
 

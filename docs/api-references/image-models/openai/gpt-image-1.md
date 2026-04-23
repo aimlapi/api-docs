@@ -42,7 +42,7 @@ It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
 {% openapi-operation spec="gpt-image-1-edit" path="/v1/images/edits" method="post" %}
-[OpenAPI gpt-image-1-edit](https://api.aimlapi.com/docs-public-json)
+[OpenAPI gpt-image-1-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-EDIT.json)
 {% endopenapi-operation %}
 
 ## Quick Examples
@@ -144,7 +144,7 @@ main();
 
 We obtained the following 1536x1024 image by running this code example (\~ 26 s):
 
-<figure><img src="../../../.gitbook/assets/t-rex (2).png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
 
 <details>
 
@@ -164,8 +164,8 @@ Let's generate an image using two input images and a prompt that defines how the
 
 <summary>Our input images</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/t-rex (2).png" alt=""><figcaption><p>t-rex.png</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/crown.png" alt=""><figcaption><p>crown.png</p></figcaption></figure></div> |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 </details>
 
@@ -260,8 +260,8 @@ In this example, we’ll provide the model with our previously generated image o
 
 <summary>Image &#x26; Mask</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/t-rex (2).png" alt=""><figcaption><p>Image</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/t-rex-alpha_mask (1).png" alt=""><figcaption><p>Mask</p></figcaption></figure></div> |
-| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="Image" data-size="original"> | <img src="../../../.gitbook/assets/t-rex-alpha_mask.png" alt="Mask" data-size="original"> |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 </details>
 

@@ -63,9 +63,8 @@ def generate_audio():
     url = "https://api.aimlapi.com/v2/generate/audio"
     payload = {
         "model": "minimax/music-cover",
-        "prompt": "Jazz arrangement, original vocal",
-        "lyrics": "[Inst][Solo]", 
-        "reference_audio_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/female-vocalization.mp3"
+        "prompt": "Oboe and clarinet intro and accompaniment, jazz",
+        "reference_audio_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/why-is-this-wind.mp3"
     }
     headers = {"Authorization": f"Bearer {aimlapi_key}", "Content-Type": "application/json"}
 
@@ -141,7 +140,6 @@ async function generateAudio() {
   const payload = {
         model: 'minimax/music-cover',
         prompt: 'Jazz arrangement, original vocal',
-        lyrics: '[Inst][Solo]', 
         reference_audio_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/female-vocalization.mp3'
   };
 
@@ -233,19 +231,20 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'XqtIOOdpnO2arEbv_wykx', 'status': 'queued', 'meta': {'usage': {'credits_used': 390000, 'usd_spent': 0.195}}}
-{'id': 'XqtIOOdpnO2arEbv_wykx', 'status': 'queued', 'meta': {'usage': {'credits_used': 390000, 'usd_spent': 0.195}}}
-Generation ID:   XqtIOOdpnO2arEbv_wykx
+Generation: {'id': 'BV5y0it0TMlupfLEeHc6J', 'status': 'queued'}
+{'id': 'BV5y0it0TMlupfLEeHc6J', 'status': 'queued'}
+Generation ID:   BV5y0it0TMlupfLEeHc6J
 Status: queued. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'XqtIOOdpnO2arEbv_wykx', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260422153223-vZOHCLKIZCcXmMXd.mp3?Expires=1776929549&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=OHVvtd84myz4GDzsGganjB4Tg0E%3D'}}
+ {'id': 'BV5y0it0TMlupfLEeHc6J', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260423163856-VUzVkZnrUQAWAiVT.mp3?Expires=1777019942&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=V101IbN67pvDEiOlaoV9n%2FBHOGQ%3D'}}
 ```
 {% endcode %}
 
 </details>
 
-Listen to the track we generated:
-
-{% embed url="https://drive.google.com/file/d/1uD3OH8U7ILJ--lX_O9pxo5-LtU76WtGf/view?usp=sharing" %}
+Listen to [the track](https://drive.google.com/file/d/1QIAdSWRgD4F7crcTWfnj41EEXmMyo-cC/view?usp=sharing) we generated.
