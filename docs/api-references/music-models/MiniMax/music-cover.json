@@ -32,17 +32,15 @@
                     "maxLength": 2000,
                     "description": "A description of the music, specifying style, mood, and scenario. Length: 10–2000 characters."
                   },
-                  "lyrics": {
-                    "type": "string",
-                    "minLength": 10,
-                    "maxLength": 3000,
-                    "description": "Lyrics of the song. Use (\n) to separate lines. You may add structure tags like [Intro], [Verse], [Chorus], [Bridge], [Outro] to enhance the arrangement. Length: 10–3000 characters.",
-                    "example": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes"
-                  },
                   "reference_audio_url": {
                     "type": "string",
                     "format": "uri",
                     "description": "A URL or a Base64-encoded of the reference audio. Reference audio constraints:\n- Duration: 6 seconds to 6 minutes\n- Size: max 50 MB\n- Format: common audio formats (mp3, wav, flac, etc.)\n"
+                  },
+                  "lyrics": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 3000
                   },
                   "audio_setting": {
                     "type": "object",
@@ -85,7 +83,6 @@
                 "required": [
                   "model",
                   "prompt",
-                  "lyrics",
                   "reference_audio_url"
                 ],
                 "title": "minimax/music-cover"
