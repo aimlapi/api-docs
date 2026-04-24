@@ -16,9 +16,28 @@ This documentation is valid for the following list of our models:
 
 A powerful music generation model optimized for high-quality song production, capable of creating fully arranged tracks from lyrics and style instructions with precise control over tempo, key, structure, vocal performance, and emotional progression.
 
-## Setup your API Key
+## How to Make a Call
 
-If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+{% hint style="success" %}
+[Create AI/ML API Key](https://aimlapi.com/app/keys)
+{% endhint %}
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
+Generating an audio using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+Below, you can find two corresponding API schemas and examples for both endpoint calls.
+
+***
+
+If you want to learn how to call AI models via API from the very basics, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+</details>
 
 ## API Schemas
 

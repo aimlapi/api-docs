@@ -16,9 +16,28 @@ This documentation is valid for the following list of our models:
 
 The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
 
-## Setup your API Key
+## How to Make a Call
 
-If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+{% hint style="success" %}
+[Create AI/ML API Key](https://aimlapi.com/app/keys)
+{% endhint %}
+
+<details>
+
+<summary>Step-by-Step Instructions</summary>
+
+Generating an audio using this model involves sequentially calling two endpoints:
+
+* The first one is for creating and sending a video generation task to the server (returns a generation ID).
+* The second one is for requesting the generated video from the server using the generation ID received from the first endpoint.
+
+Below, you can find two corresponding API schemas and examples for both endpoint calls.
+
+***
+
+If you want to learn how to call AI models via API from the very basics, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
+
+</details>
 
 ## API Schemas
 
