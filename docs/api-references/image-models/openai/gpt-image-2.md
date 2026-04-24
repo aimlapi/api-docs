@@ -31,7 +31,8 @@ As of late April 2026, this is the most advanced and capable image generation mo
 
 :digit\_one: **Setup You Can’t Skip**
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).\
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit\_two: **Copy the code example**
 
@@ -39,7 +40,8 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit\_three: **Modify the code example**
 
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key. :black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.\
+:black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
 
@@ -136,14 +138,28 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "data": [
+    {
+      "b64_json": null,
+      "url": "https://cdn.aimlapi.com/generations/openai-image-generation/1776996650097-ec0cd2e8-d120-43fd-80a1-e0ad65773e6e.png"
+    }
+  ],
+  "meta": {
+    "usage": {
+      "credits_used": 107341,
+      "usd_spent": 0.0536705
+    }
+  }
+}
 ```
 {% endcode %}
 
 </details>
 
-We obtained the following 1536×1024 image by running this code example (\~26 s):
+We obtained the following 1536×1024 image by running this code example (\~45 s):
 
-<figure><img src="../../../.gitbook/assets/1765998570696-6a7fa56d-b5ba-4f29-ba20-501aa08a4273.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/openai-gpt-image-2_output.png" alt=""><figcaption></figcaption></figure>
 
 ### Edit image: Combine images
 
@@ -163,6 +179,7 @@ Let's generate an image using two input images and a prompt that defines how the
 {% code overflow="wrap" %}
 ```python
 from openai import OpenAI
+import json  # for getting a structured output with indentation
 
 def main():
     client = OpenAI(
@@ -171,7 +188,7 @@ def main():
     )
 
     result = client.images.edit(
-        model="openai/gpt-image-1",
+        model="openai/gpt-image-2",
         image=[
             open("t-rex.png", "rb"),
             open("crown.png", "rb"),
@@ -180,6 +197,7 @@ def main():
     )
 
     print("Generation:", result)
+    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
@@ -211,7 +229,7 @@ const main = async () => {
   );
 
   const result = await client.images.edit({
-    model: 'openai/gpt-image-1',
+    model: 'openai/gpt-image-2',
     image: images,
     prompt: "Put the crown on the T-rex's head",
   });
@@ -231,7 +249,6 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: ImagesResponse(created=1750278299, data=[Image(b64_json=None, revised_prompt=None, url='https://cdn.aimlapi.com/generations/hedgehog/1750278300281-023df523-e986-431c-bb61-5b9e43301cef.png')], usage=Usage(input_tokens=574, input_tokens_details=UsageInputTokensDetails(image_tokens=517, text_tokens=57), output_tokens=1056, total_tokens=1630), background='opaque', output_format='png', quality='medium', size='1024x1024')
 ```
 {% endcode %}
 
@@ -239,4 +256,4 @@ Generation: ImagesResponse(created=1750278299, data=[Image(b64_json=None, revise
 
 We obtained the following 1024x1024 image by running this code example (\~ 34 s):
 
-<figure><img src="../../../.gitbook/assets/1750278300281-023df523-e986-431c-bb61-5b9e43301cef.png" alt=""><figcaption><p>A true king of the monsters. On vacation.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1750278300281-023df523-e986-431c-bb61-5b9e43301cef.png" alt=""><figcaption></figcaption></figure>

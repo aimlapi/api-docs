@@ -26,7 +26,8 @@ A powerful image generation and editing model that supports text-to-image, image
 
 :digit\_one: **Setup You Can’t Skip**
 
-:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). :black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
+:black\_small\_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet). \
+:black\_small\_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit\_two: **Copy the code example**
 
@@ -34,7 +35,8 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit\_three: **Modify the code example**
 
-:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key. :black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
+:black\_small\_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key. \
+:black\_small\_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit\_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**<mark style="background-color:yellow;"><sub></sup> **Adjust other optional parameters if needed**
 
@@ -139,4 +141,3 @@ main();
 We obtained the following 1536×1024 image by running this code example (\~26 s):
 
 <figure><img src="../../../.gitbook/assets/1765998570696-6a7fa56d-b5ba-4f29-ba20-501aa08a4273.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
-

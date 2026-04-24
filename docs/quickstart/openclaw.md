@@ -76,9 +76,9 @@ pnpm openclaw onboard --install-daemon
 
 <div align="left" data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (5).png" alt=""><figcaption><p>Confirm installation</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/1.2.png" alt=""><figcaption><p>Confirm installation</p></figcaption></figure></div>
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17.png" alt=""><figcaption><p>Select "Quickstart"</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/1.3.png" alt=""><figcaption><p>Select "Quickstart"</p></figcaption></figure></div>
 
 <div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (2).png" alt=""><figcaption><p>Select provider: AI/ML API</p></figcaption></figure></div>
 
@@ -158,11 +158,11 @@ python3 ./skills/aiml-llm-reasoning/scripts/run_chat.py \
 ```
 
 {% hint style="info" %}
-Paths above assume you run `clawhub install ...` from your OpenClaw workspace root (so skills land in `./skills`).  If you install somewhere else, adjust the paths to match your `--workdir`.
+Paths above assume you run `clawhub install ...` from your OpenClaw workspace root (so skills land in `./skills`). If you install somewhere else, adjust the paths to match your `--workdir`.
 {% endhint %}
 
 {% hint style="info" %}
-If you installed OpenClaw via `openclaw-aimlapi@latest`, you may already have AIML-related skills installed.  Use ClawHub when you specifically want the skills from the official skills repository.
+If you installed OpenClaw via `openclaw-aimlapi@latest`, you may already have AIML-related skills installed. Use ClawHub when you specifically want the skills from the official skills repository.
 {% endhint %}
 
 ***
@@ -173,19 +173,19 @@ Use the Web UI from onboarding. The default URL is usually [http://127.0.0.1:590
 
 {% stepper %}
 {% step %}
-### Select provider
+#### Select provider
 
 Pick AI/ML API in the providers list.
 {% endstep %}
 
 {% step %}
-### Add your API key
+#### Add your API key
 
 Use **API Key** auth. Paste the key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys/).
 {% endstep %}
 
 {% step %}
-### Choose a model
+#### Choose a model
 
 Use a model ID that starts with `aimlapi/`. Example:
 
@@ -193,7 +193,7 @@ Use a model ID that starts with `aimlapi/`. Example:
 {% endstep %}
 
 {% step %}
-### Choose a channel
+#### Choose a channel
 
 Telegram is a good first connector. Then add more channels as needed.
 {% endstep %}

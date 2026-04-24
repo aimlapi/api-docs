@@ -1,7 +1,3 @@
----
-icon: headphones-simple
----
-
 # Read Text Aloud and Describe Images: Support People with Visual Impairments
 
 ## Idea and Step-by-Step Plan
@@ -11,7 +7,7 @@ icon: headphones-simple
 2. **Send the text to a TTS model to create an audio version**\
    The extracted text is sent to a TTS (Text-to-Speech) model via a second API call. The model streams the generated audio, and the script saves the audio file locally.
 
-As a result, you will receive an audio version of the original PDF text, saved as a `.wav` file.&#x20;
+As a result, you will receive an audio version of the original PDF text, saved as a `.wav` file.
 
 ***
 
@@ -27,11 +23,11 @@ As a text example, we'll use the following one, which you might already recogniz
 
 ***
 
-#### _What Are Raccoons?_
+_**What Are Raccoons?**_
 
 _Raccoons are small, furry animals with fluffy striped tails and black “masks” around their eyes. They live in forests, near rivers and lakes—and sometimes even close to people in towns and cities. Raccoons are very clever, curious, and quick with their paws._
 
-<figure><img src="../.gitbook/assets/racoons_0 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
 
 _One of the raccoon's most famous habits is "washing" its food. But raccoons aren’t really cleaning their meals. They just love to roll and rub things between their paws, especially near water. Scientists believe this helps them understand what they’re holding._
 
@@ -143,13 +139,13 @@ Raccoons are very social. Young raccoons love to play—tumbling in the grass, h
 
 We decided to implement two Text-to-Speech processing options to let our models compete!
 
-We compared a specialized TTS model ([Aura](../api-references/speech-voice-models/tts/Deepgram/aura.md) by Deepgram) with a chat model that has audio capabilities ([GPT-4o Audio Preview](../api-references/text-models-llm/openai/gpt-4o-audio-preview.md) by OpenAI).&#x20;
+We compared a specialized TTS model ([Aura](../api-references/speech-voice-models/tts/Deepgram/aura.md) by Deepgram) with a chat model that has audio capabilities ([GPT-4o Audio Preview](../api-references/text-models-llm/openai/gpt-4o-audio-preview.md) by OpenAI).
 
 For the chat model, we had to tweak the settings — like increasing [`max_completion_tokens`](#user-content-fn-1)[^1] — and come up with a smart prompt that left no room for the model to creatively rephrase the original text: _"You are just a speaker. You read text aloud without any distortions or additions. Read from the very beginning, including all the headers"_.
 
 The TTS model was much easier to use: just pick a voice and send the text.
 
-Below, you'll find the complete Python code for each option (including the text generation part). Under each example, you can listen to the audio output  (saved under the name `original_pdf_filename.wav`).
+Below, you'll find the complete Python code for each option (including the text generation part). Under each example, you can listen to the audio output (saved under the name `original_pdf_filename.wav`).
 
 <details>
 
@@ -173,18 +169,20 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\What Are Raccoons.pdf.wav
 
 <summary>Code</summary>
 
-<pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+{% code overflow="wrap" %}
+```python
+from openai import OpenAI
 import base64
 import os
 
-aimlapi_key = "&#x3C;YOUR_AIMLAPI_KEY>"
+aimlapi_key = "<YOUR_AIMLAPI_KEY>"
 
 client = OpenAI(
     base_url = "https://api.aimlapi.com",
     api_key = aimlapi_key, 
 )
-<strong>
-</strong># Put your filename here. The file must be in the same folder as your Python script.
+
+# Put your filename here. The file must be in the same folder as your Python script.
 your_file_name = "What Are Raccoons.pdf"
 
 with open(your_file_name, "rb") as f:
@@ -252,7 +250,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-</code></pre>
+```
+{% endcode %}
 
 </details>
 

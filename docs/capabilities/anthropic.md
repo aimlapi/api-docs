@@ -37,7 +37,7 @@ headers = {
     "Content-Type": "application/json"
 }
 payload = {
-  "model": "claude-3-5-sonnet-20240620",
+  "model": "anthropic/claude-sonnet-4.5",
   "max_tokens": 1024,
   "tools": [
     {
@@ -59,8 +59,7 @@ payload = {
       "role": "user",
       "content": "What is the weather like in San Francisco?"
     }
-  ],
-  "stream": false
+  ]
 }
 response = requests.post(url, json=payload, headers=headers)
 print(response.json())
@@ -69,28 +68,35 @@ print(response.json())
 
 ### **Example #2: Simple Text Response**
 
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import requests
+import json   # for getting a structured output with indentation
 
 url = "https://api.aimlapi.com/messages"
 headers = {
-    "Authorization": "Bearer YOUR_AIMLAPI_KEY",
+    "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
     "Content-Type": "application/json"
 }
 payload = {
-  "model": "claude-3-5-sonnet-20240620",
+  "model": "anthropic/claude-sonnet-4.5",
   "max_tokens": 1024,
   "messages": [
     {
       "role": "user",
       "content": "How are you?"
     }
-  ],
-  "stream": false
+  ]
 }
 response = requests.post(url, json=payload, headers=headers)
-print(response.json())
+data = response.json()
+print(json.dumps(data, indent=2, ensure_ascii=False))
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="success" %}
 **Pro tip:** you can assign a system role to the Claude models by using "system" parameter outside of messages array.
@@ -99,7 +105,7 @@ print(response.json())
 {% code overflow="wrap" %}
 ```json
 {
-    model="claude-3-5-sonnet-20240620",
+    model="anthropic/claude-sonnet-4.5",
     max_tokens=2048,
 
     # role prompt:
@@ -124,7 +130,7 @@ headers = {
     "Content-Type": "application/json"
 }
 payload = {
-  "model": "claude-3-5-sonnet-20240620",
+  "model": "anthropic/claude-sonnet-4.5",
   "max_tokens": 1024,
   "tools": [
     {
@@ -182,7 +188,7 @@ image_media_type = "image/jpeg"
 image_data = base64.standard_b64encode(httpx.get(image_url).content).decode("utf-8")
 
 response = client.chat.completions.create(
-    model="claude-3-5-sonnet-latest",
+    model="anthropic/claude-sonnet-4.5",
     messages=[
     {
         "role": "user",
@@ -206,8 +212,6 @@ response = client.chat.completions.create(
 print(response)
 ```
 {% endcode %}
-
-
 
 ***
 

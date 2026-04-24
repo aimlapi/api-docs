@@ -44,7 +44,7 @@ In the context of working with AI models, this means that if a model expects a p
 
 We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
 
-<figure><img src="../.gitbook/assets/racoons_0 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
 
 <pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 from pathlib import Path

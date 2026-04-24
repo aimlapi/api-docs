@@ -118,17 +118,17 @@ console.log(JSON.stringify(data, null, 2));
 
 </details>
 
-| Reference Image                                                                                                    | Generated Image                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/5HOXEk0JInhVwkMbBTEAB_4c7b647485034d03ad06cf7c58331371.jpg" alt=""><figcaption></figcaption></figure></div> |
+| Reference Image                                                            | Generated Image                                                                                                             |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t rex.png" alt="" data-size="original"> | <img src="../../../.gitbook/assets/5HOXEk0JInhVwkMbBTEAB_4c7b647485034d03ad06cf7c58331371.jpg" alt="" data-size="original"> |
 
 <details>
 
 <summary>More generated images</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/c31GyYsC9y5m4EBmRipNj_b0f30b1e73524d9abc3a1958ee1a12b6.png" alt=""><figcaption><p><code>"Add a crown to the T-rex's head."</code></p></figcaption></figure></div>                                                                                                                                                                   | <div><figure><img src="../../../.gitbook/assets/hk-uLsRnCuJkuAh8QgOE-_19773fb3d51a40809420d6bc353cc27a (1).png" alt=""><figcaption><p><code>"Add a couple of silver wings"</code></p></figcaption></figure></div>                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../.gitbook/assets/IeAYtsCAAW0Ha5-NIASHP_a6f137e462da40bfba0044beddb9f4e9.jpg" alt=""><figcaption><p><code>"Remove the dinosaur. Place a book and a bouquet of wildflowers in blue and pink tones on the lounge chair. Let a light foamy surf gently wash the bottom of the chair. Don't change anything else."</code></p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/RfnycKDno-HgrDwQI5SAe_a6b1d4e2af8b42f9a0b5df2daae563a1.jpg" alt=""><figcaption><p><code>"Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon."</code></p></figcaption></figure></div> |
+| <img src="../../../.gitbook/assets/c31GyYsC9y5m4EBmRipNj_b0f30b1e73524d9abc3a1958ee1a12b6.png" alt="&#x22;Add a crown to the T-rex&#x27;s head.&#x22;" data-size="original">                                                                                                                                                                   | <img src="../../../.gitbook/assets/hk-uLsRnCuJkuAh8QgOE-_19773fb3d51a40809420d6bc353cc27a.png" alt="&#x22;Add a couple of silver wings&#x22;" data-size="original">                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/IeAYtsCAAW0Ha5-NIASHP_a6f137e462da40bfba0044beddb9f4e9.jpg" alt="&#x22;Remove the dinosaur. Place a book and a bouquet of wildflowers in blue and pink tones on the lounge chair. Let a light foamy surf gently wash the bottom of the chair. Don&#x27;t change anything else.&#x22;" data-size="original"> | <img src="../../../.gitbook/assets/RfnycKDno-HgrDwQI5SAe_a6b1d4e2af8b42f9a0b5df2daae563a1.jpg" alt="&#x22;Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon.&#x22;" data-size="original"> |
 
 </details>
 
@@ -140,8 +140,8 @@ This time, we’ll pass two images to the model: our dinosaur and a solid blue m
 
 <summary>Our input images</summary>
 
-| <div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Our chilling T-rex</p></figcaption></figure></div> | <div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Our blue mug</p></figcaption></figure></div> |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="../../../.gitbook/assets/t rex.png" alt="Our chilling T-rex" data-size="original"> | <img src="../../../.gitbook/assets/blue mug.jpg" alt="Our blue mug" data-size="original"> |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 </details>
 

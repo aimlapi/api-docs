@@ -24,7 +24,7 @@ In this use case, we create an animated banner by combining image generation, vi
 We chose a very fast image model [**flux/schnell**](../api-references/image-models/flux/flux-schnell.md), provided a prompt for an abstract image ("_slightly dim banner with abstract lines, base colors are coral, yellow, and magenta_"), and specified dimensions as close as possible to the sizes we needed for the website.
 
 {% hint style="warning" %}
-Unfortunately, it's not always possible to simply set the exact dimensions we need due to model limitations. For example, most image models require that both height and width values be multiples of 32. \
+Unfortunately, it's not always possible to simply set the exact dimensions we need due to model limitations. For example, most image models require that both height and width values be multiples of 32.\
 Video models may have minimum and maximum input size restrictions, and sometimes specific requirements for the aspect ratio as well.
 {% endhint %}
 
@@ -86,7 +86,7 @@ Image preview:
 
 Not all video models are capable of creating looped videos (where the last frame matches the first one). We chose model [kling-video/v1.6/pro/image-to-video](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md). It accepts the first and last frames separately, using the parameters `image_url` and `tail_image_url` respectively.
 
-For the video generation prompt, we used _"slow fluid-like motion of patterns of the image."_ \
+For the video generation prompt, we used _"slow fluid-like motion of patterns of the image."_\
 Feel free to experiment with effects, as long as they match the video looping!
 
 {% hint style="warning" %}
@@ -257,7 +257,7 @@ Select the **Crop video** tab and enter the URL of your video.
 
 Using the preset aspect ratios or manual settings, adjust the area of your video that you want to turn into a GIF banner. Then click **Set**, and after that — **Crop video**.
 
-<figure><img src="../.gitbook/assets/adjusting (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/adjusting.png" alt=""><figcaption></figcaption></figure>
 
 After a few seconds of processing, a window with the cropped video fragment will appear below. Right-click on it and select **Save**.
 
@@ -277,12 +277,12 @@ Click **Choose Files** and upload your cropped video. After that, the output GIF
 
 <figure><img src="../.gitbook/assets/width.png" alt=""><figcaption></figcaption></figure>
 
-Scroll down in the settings to find the GIF compression parameter. We set it to minimum for better image quality, but for larger videos, feel free to experiment with different values. \
+Scroll down in the settings to find the GIF compression parameter. We set it to minimum for better image quality, but for larger videos, feel free to experiment with different values.\
 Then click **Convert to GIF**.
 
 <figure><img src="../.gitbook/assets/compression.png" alt="" width="306"><figcaption></figcaption></figure>
 
-All that's left is to upload the finished GIF file. In the next section, you can see it in action.&#x20;
+All that's left is to upload the finished GIF file. In the next section, you can see it in action.
 
 </details>
 
@@ -298,5 +298,5 @@ All that's left is to upload the finished GIF file. In the next section, you can
 
 </details>
 
-You can use such banners in the website header or overlay your promotional text on a transparent background in a website builder to make it look like a single element. \
+You can use such banners in the website header or overlay your promotional text on a transparent background in a website builder to make it look like a single element.\
 Best of luck with your implementation!

@@ -283,19 +283,19 @@ main();
 ```json5
 Generation ID:   QC1_XDQc6Hx-p3RUcSF5g
 Status: queued. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
-Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
+Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: completed
 Processing complete:/n {'id': 'QC1_XDQc6Hx-p3RUcSF5g', 'status': 'completed', 'video': {'url': 'https://cdn.aimlapi.com/kangaroo/bs2/upload-ylab-stunt-sgp/muse/784256485483880450/VIDEO/20260120/b7d828b04fd5625e8a8ae7360670e018-4ca2d980-1059-4eef-8d82-cc5d3def46d4.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAE-a6iRQ48yHd6Bcb50UbOW-oeHGqbPkx-HoTw1iG58yL7vOo_gG3WdPFMNfRwFw2I_41kVhxPKYKQEK_-V1Uj8wTVcMpQavNs7pDSjkJBf9rQCHydicujHHlvwootTjCzj7xx1b0SNvQQ_PfZ9Bie-UrNpBh_z9wrOqlH_MqjEDRwPncQhx9XnWtmsw9zc0VI-eVA917AmUxwU0RoVwu_KNfyjuTVqE2f6KvMkH-0GJxoSNzwANz7xQHQ1n3QnpfpV26ryIiCyKnPpFgfHyhGr_h2uPvnI8Bm1wPo5GKpbkShd7np9wigFMAE&x-kcdn-pid=112781&ksSecret=c2fe392eda314f14a7c53c6535802902&ksTime=6997009f'}}

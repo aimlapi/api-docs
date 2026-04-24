@@ -38,7 +38,7 @@ Below, you can find both corresponding API schemas.
 ## API Schemas
 
 {% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
 However, you can still call this model using the legacy URL that includes the vendor name.
 {% endhint %}
 
@@ -231,4 +231,4 @@ Processing complete:\n {'id': '10c09c56-2e00-4a64-89ec-358ff71f8144:kling-video/
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи.gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>

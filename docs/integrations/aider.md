@@ -124,9 +124,9 @@ Aider will:
 3. Apply AI-suggested edits.
 4. Commit changes automatically.
 
-<div data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-23 125950 (1).png" alt="Aider researching your repo"><figcaption><p>Aider researching your repo</p></figcaption></figure></div>
+<div data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-23 125950.png" alt="Aider researching your repo"><figcaption><p>Aider researching your repo</p></figcaption></figure></div>
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-23 130108 (1).png" alt="Aider working on code changes"><figcaption><p><em>Aider working on code changes</em></p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/Снимок экрана 2025-10-23 130108.png" alt="Aider working on code changes"><figcaption><p><em>Aider working on code changes</em></p></figcaption></figure></div>
 
 ***
 

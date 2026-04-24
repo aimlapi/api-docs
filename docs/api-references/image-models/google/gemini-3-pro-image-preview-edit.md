@@ -131,8 +131,8 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th width="389.7999267578125" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/t-rex (1) (1).png" alt=""><figcaption><p>Image #1</p></figcaption></figure></div></td><td valign="top"><div><figure><img src="../../../.gitbook/assets/gemini-3-pro-image-preview-edit.png" alt=""><figcaption><p><kbd><code>"Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect."</code></kbd></p></figcaption></figure></div></td></tr><tr><td valign="top"><div><figure><img src="../../../.gitbook/assets/blue-mug (1).jpg" alt=""><figcaption><p>Image #2</p></figcaption></figure></div></td><td valign="top"></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="389.7999267578125" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/t rex.png" alt="Image #1" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/gemini-3-pro-image-preview-edit.png" alt="&#x22;Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.&#x22;" data-size="original"></td></tr><tr><td valign="top"><img src="../../../.gitbook/assets/blue mug.jpg" alt="Image #2" data-size="original"></td><td valign="top"></td></tr></tbody></table>
 
 Here’s an example of the output using alternative `resolution` and `aspect_ratio` parameters:
 
-<figure><img src="../../../.gitbook/assets/nano-banana-pro-edit_output2.png" alt=""><figcaption><p><code>"aspect_ratio": "16:9"</code>,  <code>"resolution": "2K"</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/nano-banana-pro-edit_output2.png" alt=""><figcaption><p><code>"aspect_ratio": "16:9"</code>, <code>"resolution": "2K"</code></p></figcaption></figure>
