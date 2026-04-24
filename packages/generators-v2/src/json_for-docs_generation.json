@@ -1,10 +1,16 @@
 [
   {
-    "name": "alibaba/qwen3.6-27b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.6-27b",
-    "alias": "qwen3.6-27b",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
+    "name": "minimax/music-cover",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/audio-generations/submit&model=minimax/music-cover",
+    "alias": "music-cover",
+    "category": "music-models",
+    "vendor": "MiniMax",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v2/generate/audio",
+    "customParams":{
+        "model": "minimax/music-cover",
+        "prompt": "Gentle guitar arpeggios, soft strings.",
+        "reference_audio_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/why-is-this-wind.mp3"
+    }
   }
 ]
