@@ -526,7 +526,7 @@
 * [Code Generation](capabilities/code-generation.md)
 * [Function Calling](capabilities/function-calling.md)
 * [Thinking / Reasoning](capabilities/thinking-reasoning.md)
-* [Vision in Text Models](capabilities/vision-in-text-models.md)
+* [Vision in Text Models](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
 * [Batch Processing](capabilities/batch-processing.md)
 * [Features of Anthropic Models](capabilities/anthropic.md)

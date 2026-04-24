@@ -96,7 +96,7 @@ response = requests.post(
     url = "https://api.aimlapi.com/v1/chat/completions",
     headers = {
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:  
-        "Authorization": "Bearer d09bc3015a66486e9bd4e6d1942934e1",
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json"
     },
 
