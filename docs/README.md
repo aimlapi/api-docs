@@ -15,7 +15,7 @@ Open the API reference and copy a working example to integrate it into your code
 
 ***
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/simple-model/"><strong>Setup guide</strong></a> <br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a>  </p><p></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/simple-model/"><strong>Setup guide</strong></a><br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
 client = OpenAI(
 base_url="https://api.aimlapi.com/v1",
 api_key="&#x3C;YOUR_AIMLAPI_KEY>",
@@ -85,9 +85,9 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Assembly AI:** [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
 
-**Baidu**:    [Text/Chat](api-references/text-models-llm/baidu/)
+**Baidu**: [Text/Chat](api-references/text-models-llm/baidu/)
 
-**ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/)  [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
+**ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/) [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
 
 **Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)
 
@@ -107,7 +107,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
 
-<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/)  [Video](api-references/video-models/Kling-AI/)
+<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/) [Video](api-references/video-models/Kling-AI/)
 
 **Krea**: [Video](api-references/video-models/krea/)
 
@@ -143,7 +143,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Sber AI**: [Video](api-references/video-models/sber-ai/)
 
-**Tencent**: [Image](api-references/image-models/tencent/)  [Video](api-references/video-models/tencent/)  [3D](api-references/3d-generating-models/tencent/)
+**Tencent**: [Image](api-references/image-models/tencent/) [Video](api-references/video-models/tencent/) [3D](api-references/3d-generating-models/tencent/)
 
 **VEED**: [Video](api-references/video-models/veed/)
 
@@ -173,8 +173,8 @@ If you've already made your choice and know the model ID, use the [Search panel]
 [function-calling.md](capabilities/function-calling.md)
 {% endcontent-ref %}
 
-{% content-ref url="capabilities/image-to-text-vision.md" %}
-[image-to-text-vision.md](capabilities/image-to-text-vision.md)
+{% content-ref url="capabilities/vision-in-text-models.md" %}
+[vision-in-text-models.md](capabilities/vision-in-text-models.md)
 {% endcontent-ref %}
 
 {% content-ref url="capabilities/web-search.md" %}
@@ -187,7 +187,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 ## Going Deeper
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="/broken/pages/Zz7piDzGOANDC63nM8xE">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="/broken/pages/YApTOWrutNaVS6Kmkbi4">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="/broken/pages/woZ3J6qGHZ4rL9NFv2cL">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/vision-in-text-models.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="/broken/pages/Zz7piDzGOANDC63nM8xE">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="/broken/pages/YApTOWrutNaVS6Kmkbi4">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="/broken/pages/woZ3J6qGHZ4rL9NFv2cL">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/anthropic.md">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
 
 ## Have a Minute? Help Make the Docs Better!
 
