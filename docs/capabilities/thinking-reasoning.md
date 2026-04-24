@@ -98,6 +98,8 @@ Supported models:
 ***
 
 * [deepseek/deepseek-v3.2-speciale](../api-references/text-models-llm/deepseek/deepseek-v3.2-speciale.md)
+* [deepseek/deepseek-v4-pro](../api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
+* [deepseek/deepseek-v4-flash](../api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
 
 ***
 

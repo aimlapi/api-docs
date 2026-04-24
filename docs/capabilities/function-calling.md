@@ -189,6 +189,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [deepseek/deepseek-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-thinking.md)
 * [deepseek/deepseek-non-thinking-v3.2-exp](../api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking.md)
+* [deepseek/deepseek-v4-pro](../api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
+* [deepseek/deepseek-v4-flash](../api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [minimax/m1](../api-references/text-models-llm/minimax/m1.md)
 * [minimax/m2-her](../api-references/text-models-llm/minimax/m2-her.md)
