@@ -1,18 +1,26 @@
 [
   {
-    "name": "deepseek/deepseek-v4-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-v4-pro",
-    "alias": "deepseek-v4-pro",
+    "name": "openai/gpt-5-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-5",
+    "alias": "gpt-5-5-RESPONSES",
     "category": "text-models-llm",
-    "vendor": "DeepSeek",
-    "codeSamples": "chat-completion"
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
   },
   {
-    "name": "deepseek/deepseek-v4-flash",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=deepseek/deepseek-v4-flash",
-    "alias": "deepseek-v4-flash",
+    "name": "openai/gpt-5-5-pro",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/responses/submit&model=openai/gpt-5-5-pro",
+    "alias": "gpt-5-5-pro-RESPONSES",
     "category": "text-models-llm",
-    "vendor": "DeepSeek",
+    "vendor": "OpenAI",
+    "codeSamples": "responses"
+  },
+  {
+    "name": "openai/gpt-5-5",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=openai/gpt-5-5",
+    "alias": "gpt-5-5",
+    "category": "text-models-llm",
+    "vendor": "OpenAI",
     "codeSamples": "chat-completion"
   }
 ]
