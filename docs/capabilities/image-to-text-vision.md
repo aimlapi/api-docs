@@ -74,6 +74,8 @@ The sections below explain how to work with image and video inputs, along with r
 * [openai/gpt-5-2-codex](../api-references/text-models-llm/openai/gpt-5.2-codex.md)
 * [openai/gpt-5-4](../api-references/text-models-llm/openai/gpt-5-4.md)
 * [openai/gpt-5-4-pro](../api-references/text-models-llm/openai/gpt-5-4-pro.md)
+* [openai/gpt-5-5](../api-references/text-models-llm/openai/gpt-5-5.md)
+* [openai/gpt-5-5-pro](../api-references/text-models-llm/openai/gpt-5-5-pro.md)
 * [perplexity/sonar](../api-references/text-models-llm/perplexity/sonar.md)
 * [perplexity/sonar-pro](../api-references/text-models-llm/perplexity/sonar-pro.md)
 * [x-ai/grok-4-fast-non-reasoning](../api-references/text-models-llm/xai/grok-4-fast-non-reasoning.md)

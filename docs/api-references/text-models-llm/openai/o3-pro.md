@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% hint style="warning" %}
-Note: This model can ONLY be called via the `/responses` endpoint!
+Note: This model can ONLY be called via the `/responses` endpoint.
 {% endhint %}
 
 <details>
