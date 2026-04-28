@@ -1,26 +1,10 @@
 [
   {
-    "name": "xiaomi/mimo-v2.5",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=xiaomi/mimo-v2.5",
-    "alias": "mimo-v2.5",
-    "category": "text-models-llm",
-    "vendor": "xiaomi",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "xiaomi/mimo-v2.5-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=xiaomi/mimo-v2.5-pro",
-    "alias": "mimo-v2.5-pro",
-    "category": "text-models-llm",
-    "vendor": "xiaomi",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "alibaba/qwen3.6-35b-a3b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.6-35b-a3b",
-    "alias": "qwen3.6-35b-a3b",
-    "category": "text-models-llm",
+    "name": "alibaba/happyhorse-1-0",
+    "alias": "happyhorse-1-0",
+    "category": "video-models",
     "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/happyhorse-1-0",
+    "codeSamples": "video:video"
   }
 ]
