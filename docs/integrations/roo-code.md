@@ -77,19 +77,17 @@ These models have been tested by our team for compatibility with Roo Code integr
 * [deepseek/deepseek-chat](../api-references/text-models-llm/DeepSeek/deepseek-chat.md)
 * [deepseek/deepseek-r1](../api-references/text-models-llm/DeepSeek/deepseek-r1.md)
 * [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [meta-llama/llama-4-maverick](/broken/pages/I6hHI88I2tpJK5yDpqi2)
 * [Qwen/Qwen2.5-7B-Instruct-Turbo](../api-references/text-models-llm/Alibaba-Cloud/Qwen2.5-7B-Instruct-Turbo.md)
 * [qwen-max](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-max-2025-01-25](../api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
-* [mistralai/Mixtral-8x7B-Instruct-v0.1](../api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)
-* [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
+* [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
+* [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
+* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
-* [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
-* [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 
 </details>
 

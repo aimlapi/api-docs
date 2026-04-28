@@ -111,7 +111,6 @@
     * [M2.7-highspeed](api-references/text-models-llm/minimax/m2.7-highspeed.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [mistral-nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
-    * [Mixtral-8x7B-Instruct](api-references/text-models-llm/Mistral-AI/Mixtral-8x7B-Instruct-v0.1.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [kimi-k2-turbo-preview](api-references/text-models-llm/moonshot/kimi-k2-turbo-preview.md)

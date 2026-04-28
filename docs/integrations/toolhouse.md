@@ -56,7 +56,7 @@ client = OpenAI(
     base_url="https://api.aimlapi.com/v1",
 )
 
-MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+MODEL = "alibaba/qwen3.5-plus-20260218"
 
 messages = [
     {
@@ -127,7 +127,7 @@ import 'dotenv/config';
 import { Toolhouse } from '@toolhouseai/sdk';
 import OpenAI from 'openai';
 
-const MODEL = 'mistralai/Mixtral-8x7B-Instruct-v0.1';
+const MODEL = 'alibaba/qwen3.5-plus-20260218';
 
 async function main() {
   const toolhouse = new Toolhouse({
@@ -195,7 +195,6 @@ Toolhouse provides a browser-based GUI at [app.toolhouse.ai](https://app.toolhou
 
 All chat-compatible models served by AIMLAPI are supported, including:
 
-* **MistralAI** – `Mixtral-8x7B`
 * **Meta** – `LLaMA-3.3`
 * **NVIDIA** – `Nemotron-70B`
 * **Google, xAI, Alibaba, Cohere, DeepSeek**.
