@@ -119,6 +119,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [alibaba/qwen3.5-omni-plus](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-plus.md)
 * [alibaba/qwen3.5-omni-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
 * [alibaba/qwen3.6-27b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-27b.md)
+* [alibaba/qwen3.6-35b-a3b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-35b-a3b.md)
 
 ***
 
@@ -220,6 +221,8 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
 * [x-ai/grok-4-20-0309-non-reasoning](../api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
 * [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
+* [xiaomi/mimo-v2.5](../api-references/text-models-llm/xiaomi/mimo-v2.5.md)
+* [xiaomi/mimo-v2.5-pro](../api-references/text-models-llm/xiaomi/mimo-v2.5-pro.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)
 * [zhipu/glm-4.5](../api-references/text-models-llm/zhipu/glm-4.5.md)
 * [zhipu/glm-4.7](../api-references/text-models-llm/zhipu/glm-4.7.md)
