@@ -281,6 +281,7 @@
     * [Wan 2.6 (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-image-to-video.md)
     * [Wan 2.6 (Reference-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-reference-to-video.md)
     * [Wan 2.6 Flash (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-flash-image-to-video.md)
+    * [Happy Horse 1.0](api-references/video-models/alibaba-cloud/happy-horse-1.0.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 Lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
     * [Seedance 1.0 Lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
