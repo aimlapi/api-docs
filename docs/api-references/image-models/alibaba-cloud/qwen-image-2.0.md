@@ -16,7 +16,8 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-
+A text-to-image model designed for accurate text rendering and general image generation. \
+It provides good quality outputs with strong prompt adherence.
 
 ## Setup your API Key
 
@@ -54,7 +55,7 @@ def main():
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
             ],
-            "image_size": "landscape_16_9"
+            "image_size": "landscape_4_3"
         }
     )
 
@@ -84,7 +85,7 @@ const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
       'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
       'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
     ],
-    image_size: 'landscape_16_9'     
+    image_size: 'landscape_4_3'     
   }),
 });
 
@@ -97,10 +98,27 @@ console.log(JSON.stringify(data, null, 2));
 
 <details>
 
-<summary>More generated images</summary>
+<summary>Response</summary>
 
-|   |   |
-| - | - |
-|   |   |
+{% code overflow="wrap" %}
+```json5
+{
+  "created": 1777511878231,
+  "data": [
+    {
+      "url": "https://cdn.aimlapi.com/generations/alligator/1777511876852-c1d0e5a6-6935-48ea-9326-53877e1fc6e4.png"
+    }
+  ],
+  "meta": {
+    "usage": {
+      "credits_used": 91000,
+      "usd_spent": 0.0455
+    }
+  }
+}
+```
+{% endcode %}
 
 </details>
+
+<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/t rex.png" alt="Image #1" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/qwen-image-2.0_output.png" alt="&#x22;Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.&#x22;" data-size="original"></td></tr><tr><td valign="top"><img src="../../../.gitbook/assets/blue mug.jpg" alt="Image #2" data-size="original"></td><td valign="top"></td></tr></tbody></table>

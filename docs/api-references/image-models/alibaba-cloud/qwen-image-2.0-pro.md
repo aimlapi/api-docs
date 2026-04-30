@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-
+An advanced text-to-image and image editing model. It supports high-quality generation and precise editing operations including text rendering and style transformations.
 
 ## Setup your API Key
 
@@ -54,7 +54,7 @@ def main():
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
                 "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
             ],
-            "image_size": "landscape_16_9"
+            "image_size": "landscape_4_3"
         }
     )
 
@@ -84,7 +84,7 @@ const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
       'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
       'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg'
     ],
-    image_size: 'landscape_16_9'         
+    image_size: 'landscape_4_3'         
   }),
 });
 
@@ -102,10 +102,10 @@ console.log(JSON.stringify(data, null, 2));
 {% code overflow="wrap" %}
 ```json5
 {
-  "created": 1777471426178,
+  "created": 1777512067915,
   "data": [
     {
-      "url": "https://cdn.aimlapi.com/generations/alligator/1777471425510-b4479132-da44-467e-b07e-4d3afdf28a6b.png"
+      "url": "https://cdn.aimlapi.com/generations/alligator/1777512066857-61afe36f-4c6e-418b-b621-fba9dd33ca2a.png"
     }
   ],
   "meta": {
@@ -120,14 +120,4 @@ console.log(JSON.stringify(data, null, 2));
 
 </details>
 
-<table data-full-width="false"><thead><tr><th>Reference Image</th><th>Generated Image</th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table>
-
-<details>
-
-<summary>More generated images</summary>
-
-|   |   |
-| - | - |
-|   |   |
-
-</details>
+<table data-full-width="true"><thead><tr><th width="442.0667724609375" valign="top">Reference Images</th><th valign="top">Generated Image</th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/t rex.png" alt="Image #1" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/qwen-image-2.0-pro_output (1).png" alt="&#x22;Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.&#x22;" data-size="original"></td></tr><tr><td valign="top"><img src="../../../.gitbook/assets/blue mug.jpg" alt="Image #2" data-size="original"></td><td valign="top"></td></tr></tbody></table>
