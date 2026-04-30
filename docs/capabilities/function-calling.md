@@ -131,6 +131,13 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
+* [bytedance/dola-seed-2-0-mini](../api-references/text-models-llm/bytedance/dola-seed-2.0-mini.md)
+* [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
+* [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
+* [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
+
+***
+
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)

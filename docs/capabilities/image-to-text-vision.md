@@ -30,6 +30,10 @@ The sections below explain how to work with image and video inputs, along with r
 * [baidu/ernie-4.5-vl-28b-a3b](../api-references/text-models-llm/baidu/ernie-4.5-vl-28b-a3b.md)
 * [baidu/ernie-4.5-vl-424b-a47b](../api-references/text-models-llm/baidu/ernie-4.5-vl-424b-a47b.md)
 * [baidu/ernie-4-5-turbo-vl-32k](../api-references/text-models-llm/baidu/ernie-4.5-turbo-vl-32k.md)
+* [bytedance/dola-seed-2-0-mini](../api-references/text-models-llm/bytedance/dola-seed-2.0-mini.md)
+* [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
+* [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
+* [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
 * [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
@@ -191,6 +195,10 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 
 * [alibaba/qwen3.5-omni-plus](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-plus.md)
 * [alibaba/qwen3.5-omni-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
+* [bytedance/dola-seed-2-0-mini](../api-references/text-models-llm/bytedance/dola-seed-2.0-mini.md)
+* [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
+* [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
+* [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
 
 </details>
 

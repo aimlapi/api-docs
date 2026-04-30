@@ -100,6 +100,13 @@ Supported models:
 
 ***
 
+* [bytedance/dola-seed-2-0-mini](../api-references/text-models-llm/bytedance/dola-seed-2.0-mini.md)
+* [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
+* [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
+* [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
+
+***
+
 * [deepseek/deepseek-v3.2-speciale](../api-references/text-models-llm/deepseek/deepseek-v3.2-speciale.md)
 * [deepseek/deepseek-v4-pro](../api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
 * [deepseek/deepseek-v4-flash](../api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
