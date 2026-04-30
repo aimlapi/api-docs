@@ -35,70 +35,18 @@
                     "anyOf": [
                       {
                         "type": "object",
-                        "properties": {
-                          "buffer": {
-                            "anyOf": [
-                              {
-                                "nullable": true
-                              },
-                              {
-                                "type": "object",
-                                "properties": {
-                                  "type": {
-                                    "type": "string",
-                                    "enum": [
-                                      "Buffer"
-                                    ]
-                                  }                                  
-                                },
-                                "required": [
-                                ]
-                              },
-                              {
-                                "nullable": true
-                              }
-                            ]
-                          }
-                        },
-                        "required": [
-                        ]
+                        "description": "A local image file (png, webp, jpg)."
                       },
                       {
                         "type": "array",
                         "items": {
                           "type": "object",
-                          "properties": {
-                            "buffer": {
-                              "anyOf": [
-                                {
-                                  "nullable": true
-                                },
-                                {
-                                  "type": "object",
-                                  "properties": {
-                                    "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "Buffer"
-                                      ]
-                                    }
-                                  },
-                                  "required": [
-                                  ]
-                                },
-                                {
-                                  "nullable": true
-                                }
-                              ]
-                            }
-                          },
-                          "required": [
-                          ]
+                          "description": "A local image file (png, webp, jpg)."
                         },
                         "maxItems": 16
                       }
                     ],
-                    "description": "The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images."
+                    "description": "One or multiple images to edit. Each must be a local file (png, webp, or jpg), up to 50MB. Maximum 16 images."
                   },
                   "size": {
                     "type": "string",
@@ -131,63 +79,9 @@
                     "description": "The format of the generated image."
                   },
                   "mask": {
-                    "type": "object",
-                    "properties": {
-                      "buffer": {
-                        "anyOf": [
-                          {
-                            "nullable": true
-                          },
-                          {
-                            "type": "object",
-                            "properties": {
-                              "type": {
-                                "type": "string",
-                                "enum": [
-                                  "Buffer"
-                                ]
-                              },
-                              "data": {
-                                "type": "array",
-                                "items": {
-                                  "type": "number"
-                                }
-                              }
-                            },
-                            "required": [
-                              "type",
-                              "data"
-                            ]
-                          },
-                          {
-                            "nullable": true
-                          }
-                        ]
-                      },
-                      "mimetype": {
-                        "type": "string"
-                      },
-                      "size": {
-                        "type": "integer"
-                      },
-                      "originalname": {
-                        "type": "string"
-                      },
-                      "encoding": {
-                        "type": "string"
-                      },
-                      "fieldname": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "mimetype",
-                      "originalname",
-                      "encoding",
-                      "fieldname"
-                    ],
-                    "description": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image."
-                  },
+                  "type": "object",
+                  "description": "A local PNG file used as a mask. Transparent areas define where the image will be edited. Must be under 4MB and match the image dimensions."
+                },
                   "background": {
                     "type": "string",
                     "enum": [
