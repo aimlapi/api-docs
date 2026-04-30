@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-image-1"
+                      "openai/gpt-image-2"
                     ]
                   },
                   "prompt": {
@@ -34,14 +34,12 @@
                   "image": {
                     "anyOf": [
                       {
-                        "type": "object",
-                        "description": "A local image file (png, webp, jpg)."
+                        "type": "object"
                       },
                       {
                         "type": "array",
                         "items": {
-                          "type": "object",
-                          "description": "A local image file (png, webp, jpg)."
+                          "type": "object"
                         },
                         "maxItems": 16
                       }
@@ -79,9 +77,9 @@
                     "description": "The format of the generated image."
                   },
                   "mask": {
-                  "type": "object",
-                  "description": "A local PNG file used as a mask. Transparent areas define where the image will be edited. Must be under 4MB and match the image dimensions."
-                },
+                    "type": "object",
+                    "description": "A local PNG file used as a mask. Transparent areas define where the image will be edited. Must be under 4MB and match the image dimensions."
+                  },
                   "background": {
                     "type": "string",
                     "enum": [
@@ -121,7 +119,7 @@
                   "prompt",
                   "image"
                 ],
-                "title": "openai/gpt-image-1"
+                "title": "openai/gpt-image-2"
               }
             }
           }
@@ -218,7 +216,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "openai/gpt-image-1"
+                      "openai/gpt-image-2"
                     ]
                   },
                   "prompt": {
@@ -476,7 +474,7 @@
                   "prompt",
                   "image"
                 ],
-                "title": "openai/gpt-image-1"
+                "title": "openai/gpt-image-2"
               }
             }
           }
