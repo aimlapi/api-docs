@@ -118,6 +118,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [alibaba/qwen3.5-plus-20260218](../api-references/text-models-llm/alibaba-cloud/qwen3.5-plus.md)
 * [alibaba/qwen3.5-omni-plus](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-plus.md)
 * [alibaba/qwen3.5-omni-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
+* [alibaba/qwen3.5-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-flash.md)
 * [alibaba/qwen3.6-27b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-27b.md)
 * [alibaba/qwen3.6-35b-a3b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-35b-a3b.md)
 
