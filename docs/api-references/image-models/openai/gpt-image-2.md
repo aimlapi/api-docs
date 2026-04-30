@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # gpt-image-2
 
 {% columns %}
@@ -15,7 +10,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=openai/gpt-image-2" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/?model=gpt-image-2" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -73,7 +68,7 @@ It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
 {% openapi-operation spec="gpt-image-2-EDIT" path="/v1/images/edits" method="post" %}
-[OpenAPI gpt-image-2-EDIT](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-2-EDIT.json)
+[OpenAPI gpt-image-2-EDIT](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-2-EDIT_local_changes.json)
 {% endopenapi-operation %}
 
 ## Code Examples
@@ -196,8 +191,7 @@ def main():
         prompt="Put the crown on the T-rex's head"
     )
 
-    print("Generation:", result)
-    print(json.dumps(data, indent=2, ensure_ascii=False))
+    print(result.model_dump_json(indent=2))
 
 if __name__ == "__main__":
     main()
@@ -249,11 +243,32 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
+{
+  "created": null,
+  "background": null,
+  "data": [
+    {
+      "b64_json": null,
+      "revised_prompt": null,
+      "url": "https://cdn.aimlapi.com/generations/openai-image-generation/1777474782362-09779e02-a856-4daf-862e-74b7e153bfd7.png"
+    }
+  ],
+  "output_format": null,
+  "quality": null,
+  "size": null,
+  "usage": null,
+  "meta": {
+    "usage": {
+      "credits_used": 190450,
+      "usd_spent": 0.095225
+    }
+  }
+}
 ```
 {% endcode %}
 
 </details>
 
-We obtained the following 1024x1024 image by running this code example (\~ 34 s):
+We obtained the following 1024x1024 image by running this code example (\~ 1 min 18 s):
 
-<figure><img src="../../../.gitbook/assets/1750278300281-023df523-e986-431c-bb61-5b9e43301cef.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/gpt-image-2_EDIT_output.png" alt=""><figcaption></figcaption></figure>
