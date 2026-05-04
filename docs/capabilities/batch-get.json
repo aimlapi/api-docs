@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/batches": {
+      "get": {
+        "operationId": "_v1_batches",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "The ID of the batch to retrieve its status and results."
+                  }
+                },
+                "required": [
+                  "id"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier of the batch.",
+                      "example": "msgbatch_01McVJYhQd3Wiuqrac6y9PrX"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Object type.",
+                      "example": "message_batch"
+                    },
+                    "processing_status": {
+                      "type": "string",
+                      "description": "Current processing status of the batch.",
+                      "example": "in_progress"
+                    },
+                    "request_counts": {
+                      "type": "object",
+                      "description": "Number of requests in each state.",
+                      "properties": {
+                        "processing": {
+                          "type": "integer",
+                          "description": "Number of requests currently being processed.",
+                          "example": 3
+                        },
+                        "succeeded": {
+                          "type": "integer",
+                          "description": "Number of successfully completed requests.",
+                          "example": 0
+                        },
+                        "errored": {
+                          "type": "integer",
+                          "description": "Number of requests that failed with an error.",
+                          "example": 0
+                        },
+                        "canceled": {
+                          "type": "integer",
+                          "description": "Number of canceled requests.",
+                          "example": 0
+                        },
+                        "expired": {
+                          "type": "integer",
+                          "description": "Number of expired requests.",
+                          "example": 0
+                        }
+                      },
+                      "required": [
+                        "processing",
+                        "succeeded",
+                        "errored",
+                        "canceled",
+                        "expired"
+                      ]
+                    },
+                    "ended_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "nullable": true,
+                      "description": "Timestamp when the batch finished processing, if completed."
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the batch was created.",
+                      "example": "2025-10-24T13:49:11.902215+00:00"
+                    },
+                    "expires_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the batch will expire if not completed.",
+                      "example": "2025-10-25T13:49:11.902215+00:00"
+                    },
+                    "cancel_initiated_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "nullable": true,
+                      "description": "Timestamp when cancellation was initiated, if applicable."
+                    },
+                    "results_url": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "URL to download batch results once processing is complete."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "processing_status",
+                    "request_counts",
+                    "created_at",
+                    "expires_at"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

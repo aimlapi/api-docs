@@ -1,0 +1,303 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/batches": {
+      "post": {
+        "operationId": "_v1_batches",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "requests": {
+                    "type": "array",
+                    "description": "List of requests to process in the batch.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "custom_id": {
+                          "type": "string",
+                          "description": "A unique identifier for this request within the batch."
+                        },
+                        "params": {
+                          "type": "object",
+                          "description": "Parameters passed to the model for this request.",
+                          "properties": {
+                            "model": {
+                              "type": "string",
+                              "description": "Model to use for this request."
+                            },
+                            "max_tokens": {
+                              "type": "number",
+                              "minimum": 1,
+                              "default": 1024,
+                              "description": "Maximum number of tokens to generate."
+                            },
+                            "messages": {
+                              "type": "array",
+                              "description": "Conversation messages for the model.",
+                              "items": {
+                                "nullable": true
+                              }
+                            },
+                            "metadata": {
+                              "type": "object",
+                              "description": "Optional metadata for this request.",
+                              "additionalProperties": {
+                                "type": "string"
+                              }
+                            },
+                            "stop_sequences": {
+                              "type": "array",
+                              "description": "Sequences where the model will stop generating further tokens.",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "system": {
+                              "type": "string",
+                              "description": "System prompt that guides the model’s behavior."
+                            },
+                            "temperature": {
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 1,
+                              "default": 1,
+                              "description": "Controls randomness of the output."
+                            },
+                            "tool_choice": {
+                              "nullable": true,
+                              "description": "Controls how the model selects or uses tools."
+                            },
+                            "tools": {
+                              "type": "array",
+                              "description": "Tools available to the model for function calling.",
+                              "items": {
+                                "nullable": true
+                              }
+                            },
+                            "top_k": {
+                              "type": "number",
+                              "description": "Limits sampling to the top K most likely tokens."
+                            },
+                            "top_p": {
+                              "type": "number",
+                              "description": "Controls nucleus sampling probability threshold."
+                            },
+                            "thinking": {
+                              "description": "Controls internal reasoning behavior.",
+                              "oneOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "enabled"
+                                      ]
+                                    },
+                                    "budget_tokens": {
+                                      "type": "integer",
+                                      "minimum": 1024,
+                                      "description": "Determines how many tokens Claude can use for its internal reasoning process. Larger budgets can enable more thorough analysis for complex problems, improving response quality. Must be ≥1024 and less than max_tokens."
+                                    },
+                                    "display": {
+                                      "type": "string",
+                                      "enum": [
+                                        "summarized",
+                                        "omitted"
+                                      ],
+                                      "default": "summarized"
+                                    }
+                                  },
+                                  "required": [
+                                    "type",
+                                    "budget_tokens"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disabled"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "type"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "adaptive"
+                                      ]
+                                    },
+                                    "display": {
+                                      "type": "string",
+                                      "enum": [
+                                        "summarized",
+                                        "omitted"
+                                      ],
+                                      "default": "summarized"
+                                    }
+                                  },
+                                  "required": [
+                                    "type"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "model",
+                            "messages"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "custom_id",
+                        "params"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 100000
+                  }
+                },
+                "required": [
+                  "model",
+                  "requests"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier of the batch.",
+                      "example": "kgTRCVoAz4GwrHWIOFZjg"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Object type.",
+                      "example": "message_batch"
+                    },
+                    "processing_status": {
+                      "type": "string",
+                      "description": "Current processing status of the batch.",
+                      "example": "in_progress"
+                    },
+                    "request_counts": {
+                      "type": "object",
+                      "description": "Number of requests in each state.",
+                      "properties": {
+                        "processing": {
+                          "type": "integer",
+                          "description": "Number of requests currently being processed.",
+                          "example": 3
+                        },
+                        "succeeded": {
+                          "type": "integer",
+                          "description": "Number of successfully completed requests.",
+                          "example": 0
+                        },
+                        "errored": {
+                          "type": "integer",
+                          "description": "Number of requests that failed with an error.",
+                          "example": 0
+                        },
+                        "canceled": {
+                          "type": "integer",
+                          "description": "Number of canceled requests.",
+                          "example": 0
+                        },
+                        "expired": {
+                          "type": "integer",
+                          "description": "Number of expired requests.",
+                          "example": 0
+                        }
+                      },
+                      "required": [
+                        "processing",
+                        "succeeded",
+                        "errored",
+                        "canceled",
+                        "expired"
+                      ]
+                    },
+                    "ended_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "nullable": true,
+                      "description": "Timestamp when the batch finished processing, if completed."
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the batch was created.",
+                      "example": "2026-05-04T17:27:37.468424+00:00"
+                    },
+                    "expires_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the batch will expire if not completed.",
+                      "example": "2026-05-05T17:27:37.468424+00:00"
+                    },
+                    "archived_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "nullable": true,
+                      "description": "Timestamp when the batch was archived, if applicable."
+                    },
+                    "cancel_initiated_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "nullable": true,
+                      "description": "Timestamp when cancellation was initiated, if applicable."
+                    },
+                    "results_url": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "URL to download batch results once processing is complete."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "processing_status",
+                    "request_counts",
+                    "created_at",
+                    "expires_at"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
