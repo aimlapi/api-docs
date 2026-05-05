@@ -59,7 +59,7 @@ If the video generation task status is `completed`, the response will include th
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses. Generation may take around 3 minutes for a 6-second video.
+We have a classic [reproduction](https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses. Generation may take around 3 minutes for a 6-second video.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -82,7 +82,7 @@ def generate_video():
     data = {
         "model": "video-01-live2d",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "first_frame_image": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",      
+        "first_frame_image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",      
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -166,7 +166,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "video-01-live2d",
     prompt: "Mona Lisa puts on glasses with her hands.",
-    first_frame_image: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    first_frame_image: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
   });
 
   const url = new URL(`${baseUrl}/generate/video/minimax/generation`);

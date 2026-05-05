@@ -85,7 +85,7 @@ def generate_video():
     data = {
         "model": "alibaba/wan2.5-i2v-preview",
         "prompt": '''Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.''',
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",    
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",    
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -166,7 +166,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "alibaba/wan2.5-i2v-preview",
     prompt: `Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.`,
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
   });
 
   const url = new URL(`${baseUrl}/generate/video/alibaba/generation`);

@@ -88,8 +88,8 @@ def generate_video():
     data = {
         "model": "pixverse/v5/transition",
         "prompt": "Mona Lisa sits holding glasses in her hands, then puts them on, but changes her mind, takes them off, and hides them in a handbag on her lap. Then she smiles.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-        "tail_image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+        "tail_image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": 8    
     }
  
@@ -171,8 +171,8 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "pixverse/v5/transition",
     prompt: "Mona Lisa sits holding glasses in her hands, then puts them on, but changes her mind, takes them off, and hides them in a handbag on her lap. Then she smiles.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
-    tail_image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
+    tail_image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     duration: 8,   
   });
 

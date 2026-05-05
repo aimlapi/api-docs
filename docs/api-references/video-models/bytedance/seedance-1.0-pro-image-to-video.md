@@ -89,7 +89,7 @@ def generate_video():
     data = {
         "model": "bytedance/seedance-1-0-pro-i2v",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": "5"      
     }
  
@@ -172,7 +172,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "bytedance/seedance-1-0-pro-i2v",
     prompt: "Mona Lisa puts on glasses with her hands.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     duration: "5",
   });
 

@@ -162,7 +162,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "alibaba/wan2.2-vace-fun-a14b-pose",
     prompt: "A lone woman strides through the neon-drenched streets of Tokyo at night.  Her crimson dress, a vibrant splash of color against the deep blues and blacks of the cityscape, flows slightly with each step. A tailored black jacket, crisp and elegant, contrasts sharply with the dress's rich texture. Medium shot:  The city hums around her, blurred lights creating streaks of color in the background. Close-up:  The fabric of her dress catches the streetlight's glow, revealing a subtle silk sheen and the intricate stitching at the hem. Her black jacket’s subtle texture is visible – a fine wool perhaps, with a matte finish. The overall mood is one of quiet confidence and mystery, a vibrant woman navigating a bustling, nocturnal landscape. High resolution 4k.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
   });
 
   const url = new URL(`${baseUrl}/video/generations`);

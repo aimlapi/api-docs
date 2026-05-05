@@ -446,7 +446,7 @@ Content-Type: application/json
         video_url:
           'https://storage.googleapis.com/falserverless/example_inputs/wan_animate_input_video.mp4',
         image_url:
-          'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+          'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
       });
     } else if (
       requiredModelParams.includes('video_url') &&
@@ -464,7 +464,7 @@ Content-Type: application/json
     ) {
       Object.assign(customParams, {
         image_url:
-          'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+          'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
         audio_url:
           'https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3',
       });
@@ -523,7 +523,7 @@ Content-Type: application/json
         prompt:
           'Mona Lisa nervously puts on glasses with her hands and asks her off-screen friend to the left: ‘Do they suit me?’ She then tilts her head slightly to one side and then the other, so the unseen friend can better judge.',
         image_url:
-          'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+          'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
       });
     } else if (
       (requiredModelParams.length === 1 &&

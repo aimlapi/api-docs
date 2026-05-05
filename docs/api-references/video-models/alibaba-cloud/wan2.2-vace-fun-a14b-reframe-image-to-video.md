@@ -80,7 +80,7 @@ def generate_video():
     data = {
         "model": "alibaba/wan2.2-vace-fun-a14b-reframe",
         "video_url": "https://storage.googleapis.com/falserverless/example_inputs/wan_animate_input_video.mp4",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg", 
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg", 
         "resolution": "720p",
     }
  
@@ -162,7 +162,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "alibaba/wan2.2-vace-fun-a14b-reframe",
     video_url: "https://storage.googleapis.com/falserverless/example_inputs/wan_animate_input_video.mp4",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg", 
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg", 
     resolution: "720p",
   });
 

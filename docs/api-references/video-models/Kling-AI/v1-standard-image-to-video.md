@@ -59,7 +59,7 @@ If the video generation task status is `completed`, the response will include th
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses. The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
+We have a classic [reproduction](https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses. The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -82,7 +82,7 @@ def generate_video():
     data = {
         "model": "kling-video/v1/standard/image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": "5",       
     }
 
@@ -162,7 +162,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "kling-video/v1/standard/image-to-video",
     prompt: "Mona Lisa puts on glasses with her hands.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     duration: "5",
   });
 

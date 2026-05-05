@@ -87,7 +87,7 @@ def generate_video():
     data = {
         "model": "minimax/hailuo-02",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "first_frame_image": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg"      
+        "first_frame_image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg"      
     }
  
     response = requests.post(url, json=data, headers=headers)

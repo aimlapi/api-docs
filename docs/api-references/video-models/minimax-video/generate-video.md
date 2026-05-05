@@ -31,7 +31,7 @@ const main = async () => {
     body: JSON.stringify({
       model: 'video-01',
       prompt: 'Mona Lisa puts on glasses with her hands.',
-      first_frame_image: 'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+      first_frame_image: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
     }),
   }).then((res) => res.json());
 
@@ -52,7 +52,7 @@ def main():
     payload = {
         "model": "video-01",
         "prompt": "Mona Lisa puts on glasses with her hands.",
-        "first_frame_image": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "first_frame_image": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     }
     headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
 

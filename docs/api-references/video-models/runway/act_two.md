@@ -98,7 +98,7 @@ def generate_video():
         "character":
             {
                 "type":"image",
-                "url":"https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg"
+                "url":"https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg"
             },
         "reference":
             {

@@ -37,7 +37,7 @@ export const videoSample = (options, fullSchema) => {
       video_url:
         'https://storage.googleapis.com/falserverless/example_inputs/wan_animate_input_video.mp4',
       image_url:
-        'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+        'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
     });
   } else if (
     requiredModelParams?.includes('video_url') &&
@@ -103,7 +103,7 @@ export const videoSample = (options, fullSchema) => {
   ) {
     Object.assign(params, {
       image_url:
-        'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+        'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
       audio_url:
         'https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3',
     });
@@ -168,7 +168,7 @@ export const videoSample = (options, fullSchema) => {
         ? "A woman looks into the camera, breathes in, then exclaims energetically, ’Hello world!’"
         : 'Mona Lisa puts on glasses with her hands.',
       image_url:
-        'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+        'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
     });
   } else if (
     lengthRequiredParams === 2 &&

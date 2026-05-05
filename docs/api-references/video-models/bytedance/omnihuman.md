@@ -78,7 +78,7 @@ def generate_video():
 
     data = {
         "model": "bytedance/omnihuman",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "audio_url": "https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3",
     }
  
@@ -158,7 +158,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 function generateVideo(callback) {
   const data = JSON.stringify({
     model: "bytedance/omnihuman",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     audio_url: "https://storage.googleapis.com/falserverless/example_inputs/omnihuman_audio.mp3",
   });
 

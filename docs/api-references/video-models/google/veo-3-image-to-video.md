@@ -61,7 +61,7 @@ If the video generation task status is `completed`, the response will include th
 
 ## Full Example: Generating and Retrieving the Video From the Server
 
-We have a classic [reproduction](https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
+We have a classic [reproduction](https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg) of the famous da Vinci painting. Let's ask the model to generate a video where the Mona Lisa puts on glasses.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -85,7 +85,7 @@ def generate_video():
     data = {
         "model": "google/veo-3.0-i2v",
         "prompt": "First, The woman silently puts on glasses with her hands. Then she sighs. After that she says once slowly: 'Well...'.",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",      
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",      
     }
  
     response = requests.post(url, json=data, headers=headers)
@@ -169,7 +169,7 @@ function generateVideo(callback) {
   const data = JSON.stringify({
     model: "google/veo-3.0-i2v",
     prompt: "First, The woman silently puts on glasses with her hands. Then she sighs. After that she says once slowly: 'Well...'.",
-    image_url: "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+    image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     duration: "5",
   });
 

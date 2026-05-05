@@ -36,7 +36,7 @@ const main = async () => {
       model: 'kling-video/v1/standard/image-to-video',
       prompt: 'Mona Lisa puts on glasses with her hands.',
       ratio: '16:9',
-      image_url: 'https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg',
+      image_url: 'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg',
       duration: '5',
     }),
   }).then((res) => res.json());
@@ -56,7 +56,7 @@ def main():
         "model": "kling-video/v1/standard/image-to-video",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "ratio": "16:9",
-        "image_url": "https://s2-111386.kwimgs.com/bs2/mmu-aiplatform-temp/kling/20240620/1.jpeg",
+        "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": "5",
     }
     headers = {"Authorization": "Bearer my_key", "Content-Type": "application/json"}
