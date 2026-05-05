@@ -4,15 +4,19 @@ Batch processing (batching) allows you to send multiple message requests in a si
 
 To use batch processing, several endpoints are available:
 
-<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td>Create a batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches</code></td></tr><tr><td>Get status or results of a batch</td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/batches?batch_id={batch_id}</code></td></tr><tr><td>Cancel a batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches/cancel/{batch_id}</code></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td>Create a message batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches</code></td></tr><tr><td>Get status or results of a batch</td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/batches?batch_id={batch_id}</code></td></tr><tr><td>Cancel a batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches/cancel/{batch_id}</code></td></tr></tbody></table>
 
 {% hint style="success" %}
-You can find the list of supported models in the first API schema below — see the allowed values under `requests` > `params` > `model`.
+This API supports all [Claude chat models](../api-references/text-models-llm/Anthropic/) available on our platform.
 {% endhint %}
 
 ***
 
-## Create a message batch
+## Create a batch
+
+{% openapi-operation spec="batch-create" path="/v1/batches" method="post" %}
+[OpenAPI batch-create](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/capabilities/batch-create.json)
+{% endopenapi-operation %}
 
 <details>
 
@@ -98,7 +102,11 @@ Batch created: {
 
 </details>
 
-## Get status or results of a specific message batch
+## Get status or results of a batch
+
+{% openapi-operation spec="batch-get" path="/v1/batches/{batch_id}" method="get" %}
+[OpenAPI batch-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/capabilities/batch-get.json)
+{% endopenapi-operation %}
 
 <details>
 
@@ -266,7 +274,11 @@ Raw response:
 
 </details>
 
-## Cancel a specific message batch
+## Cancel a batch
+
+{% openapi-operation spec="batch-cancel2" path="/v1/batches/cancel/{batch_id}" method="post" %}
+[OpenAPI batch-cancel2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/capabilities/batch-cancel.json)
+{% endopenapi-operation %}
 
 <details>
 
