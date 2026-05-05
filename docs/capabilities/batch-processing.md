@@ -104,7 +104,7 @@ Batch created: {
 
 ## Get status or results of a batch
 
-{% openapi-operation spec="batch-get" path="/v1/batches/{batch_id}" method="get" %}
+{% openapi-operation spec="batch-get" path="/v1/batches" method="get" %}
 [OpenAPI batch-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/capabilities/batch-get.json)
 {% endopenapi-operation %}
 
