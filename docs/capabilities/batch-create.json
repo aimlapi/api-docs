@@ -12,6 +12,7 @@
   "paths": {
     "/v1/batches": {
       "post": {
+        "x-codeSamples":[],
         "operationId": "_v1_batches",
         "requestBody": {
           "required": true,
@@ -28,7 +29,8 @@
                       "properties": {
                         "custom_id": {
                           "type": "string",
-                          "description": "A unique identifier for this request within the batch."
+                          "description": "A unique identifier for this request within the batch.",
+                          "example": "test_call_1"
                         },
                         "params": {
                           "type": "object",
@@ -36,13 +38,7 @@
                           "properties": {
                             "model": {
                               "type": "string",
-                              "description": "Model to use for this request."
-                            },
-                            "max_tokens": {
-                              "type": "number",
-                              "minimum": 1,
-                              "default": 1024,
-                              "description": "Maximum number of tokens to generate."
+                              "description": "Anthropic model to use for this request."
                             },
                             "messages": {
                               "type": "array",
@@ -51,12 +47,22 @@
                                 "nullable": true
                               }
                             },
+                            "system": {
+                              "type": "string",
+                              "description": "System prompt that guides the model’s behavior."
+                            },
                             "metadata": {
                               "type": "object",
                               "description": "Optional metadata for this request.",
                               "additionalProperties": {
                                 "type": "string"
                               }
+                            },
+                            "max_tokens": {
+                              "type": "number",
+                              "minimum": 1,
+                              "default": 1024,
+                              "description": "Maximum number of tokens to generate."
                             },
                             "stop_sequences": {
                               "type": "array",
@@ -65,16 +71,20 @@
                                 "type": "string"
                               }
                             },
-                            "system": {
-                              "type": "string",
-                              "description": "System prompt that guides the model’s behavior."
-                            },
                             "temperature": {
                               "type": "number",
                               "minimum": 0,
                               "maximum": 1,
                               "default": 1,
                               "description": "Controls randomness of the output."
+                            },
+                            "top_k": {
+                              "type": "number",
+                              "description": "Limits sampling to the top K most likely tokens."
+                            },
+                            "top_p": {
+                              "type": "number",
+                              "description": "Controls nucleus sampling probability threshold."
                             },
                             "tool_choice": {
                               "nullable": true,
@@ -86,14 +96,6 @@
                               "items": {
                                 "nullable": true
                               }
-                            },
-                            "top_k": {
-                              "type": "number",
-                              "description": "Limits sampling to the top K most likely tokens."
-                            },
-                            "top_p": {
-                              "type": "number",
-                              "description": "Controls nucleus sampling probability threshold."
                             },
                             "thinking": {
                               "description": "Controls internal reasoning behavior.",

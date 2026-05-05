@@ -12,6 +12,7 @@
   "paths": {
     "/v1/batches": {
       "get": {
+        "x-codeSamples":[],
         "operationId": "_v1_batches",
         "requestBody": {
           "required": true,
