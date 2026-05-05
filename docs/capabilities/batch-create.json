@@ -44,7 +44,18 @@
                               "type": "array",
                               "description": "Conversation messages for the model.",
                               "items": {
-                                "nullable": true
+                                "type": "object",
+                                "properties": {
+                                  "role": {
+                                    "type": "string",
+                                    "enum": [
+                                      "user"
+                                    ]
+                                  },
+                                  "content": {
+                                    "type": "string"
+                                  }
+                                }
                               }
                             },
                             "system": {
