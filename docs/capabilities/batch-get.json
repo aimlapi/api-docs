@@ -1,4 +1,14 @@
 {
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
   "paths": {
     "/v1/batches": {
       "get": {
@@ -12,7 +22,8 @@
             "schema": {
               "type": "string"
             },
-            "description": "The ID of the batch to retrieve its status and results."
+            "description": "The ID of the batch to retrieve its status and results.",
+            "example": "<REPLACE_WITH_YOUR_BATCH_ID>"
           }
         ],
         "responses": {
