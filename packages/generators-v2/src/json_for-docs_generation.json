@@ -9,7 +9,7 @@
     "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
     "customParams":{
         "model": "alibaba/wan-2-7-r2v",
-        "prompt": "Add a small fairy as a rider on the raccoon’s back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.",
+        "prompt": "Add a small fairy as a rider on the raccoon's back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.",
         "video_urls":[
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
         ],
