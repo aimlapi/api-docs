@@ -1,34 +1,26 @@
 [
   {
-    "name": "bytedance/dola-seed-2-0-lite",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/dola-seed-2-0-lite",
-    "alias": "dola-seed-2-0-lite",
-    "category": "text-models-llm",
-    "vendor": "ByteDance",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/wan-2-7-t2v",
+    "alias": "wan2.7-t2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-7-t2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "bytedance/dola-seed-2-0-mini",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/dola-seed-2-0-mini",
-    "alias": "dola-seed-2-0-mini",
-    "category": "text-models-llm",
-    "vendor": "ByteDance",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/wan-2-7-i2v",
+    "alias": "wan2.7-i2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-7-i2v",
+    "codeSamples": "video:video"
   },
   {
-    "name": "bytedance/dola-seed-2-0-pro",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/dola-seed-2-0-pro",
-    "alias": "dola-seed-2-0-pro",
-    "category": "text-models-llm",
-    "vendor": "ByteDance",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "bytedance/dola-seed-2-0-code",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=bytedance/dola-seed-2-0-code",
-    "alias": "dola-seed-2-0-code",
-    "category": "text-models-llm",
-    "vendor": "ByteDance",
-    "codeSamples": "chat-completion"
+    "name": "alibaba/wan-2-7-r2v",
+    "alias": "wan2.7-r2v",
+    "category": "video-models",
+    "vendor": "Alibaba Cloud",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-7-r2v",
+    "codeSamples": "video:video"
   }
 ]
