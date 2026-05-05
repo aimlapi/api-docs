@@ -10,29 +10,21 @@
     }
   ],
   "paths": {
-    "/v1/batches": {
+    "/v1/batches/{batch_id}": {
       "get": {
-        "x-codeSamples":[],
+        "x-codeSamples": [],
         "operationId": "_v1_batches",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string",
-                    "description": "The ID of the batch to retrieve its status and results."
-                  }
-                },
-                "required": [
-                  "id"
-                ]
-              }
-            }
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The ID of the batch to retrieve its status and results."
           }
-        },
+        ],
         "responses": {
           "200": {
             "content": {
