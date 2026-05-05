@@ -1,23 +1,13 @@
 {
-  "openapi": "3.0.0",
-  "info": {
-    "title": "AIML API",
-    "version": "1.0.0"
-  },
-  "servers": [
-    {
-      "url": "https://api.aimlapi.com"
-    }
-  ],
   "paths": {
-    "/v1/batches/{batch_id}": {
+    "/v1/batches": {
       "get": {
         "x-codeSamples": [],
         "operationId": "_v1_batches",
         "parameters": [
           {
             "name": "batch_id",
-            "in": "path",
+            "in": "query",
             "required": true,
             "schema": {
               "type": "string"
