@@ -291,7 +291,7 @@
     * [Happy Horse 1.0](api-references/video-models/alibaba-cloud/happy-horse-1.0.md)
     * [Wan 2.7 (Text-to-Video)](api-references/video-models/alibaba-cloud/wan-2.7-text-to-video.md)
     * [Wan 2.7 (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.7-image-to-video.md)
-    * [Wan 2.7 (Reference-to-Video)](api-references/video-models/alibaba-cloud/wan-2.6-reference-to-video-1.md)
+    * [Wan 2.7 (Reference-to-Video)](api-references/video-models/alibaba-cloud/wan-2.7-reference-to-video.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 Lite (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-text-to-video.md)
     * [Seedance 1.0 Lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
