@@ -53,6 +53,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [minimax/m2-7-highspeed](../api-references/text-models-llm/minimax/m2.7-highspeed.md)
 * [moonshot/kimi-k2-5](../api-references/text-models-llm/moonshot/kimi-k2-5.md)
 * [moonshot/kimi-k2-6](../api-references/text-models-llm/moonshot/kimi-k2-6.md)
+* [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning](../api-references/text-models-llm/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning.md)
 * [chatgpt-4o-latest](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
 * [gpt-4-turbo-2024-04-09](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
