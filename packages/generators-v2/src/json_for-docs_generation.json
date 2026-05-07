@@ -1,19 +1,26 @@
 [
   {
-    "name": "alibaba/wan-2-7-r2v",
-    "alias": "wan2.7-r2v",
-    "category": "video-models",
-    "vendor": "Alibaba Cloud",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=alibaba/wan-2-7-r2v",
-    "codeSamples": "custom",
-    "customUrlApi": "https://api.aimlapi.com/v2/video/generations",
-    "customParams":{
-        "model": "alibaba/wan-2-7-r2v",
-        "prompt": "Add a small fairy as a rider on the raccoon's back. She must have a black-and-golden face and a cloak in the colors of a dark emerald tropical butterfly with bright blue shimmering spots.",
-        "video_urls":[
-            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/racoon-in-the-forest.mp4"
-        ],
-        "duration": "5"
-    }
+    "name": "nvidia/nemotron-3-nano-30b-a3b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-nano-30b-a3b",
+    "alias": "nemotron-3-nano-30b-a3b",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "nvidia/nemotron-3-super-120b-a12b",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-super-120b-a12b",
+    "alias": "nemotron-3-super-120b-a12b",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "alias": "nemotron-3-nano-omni-30b-a3b-reasoning",
+    "category": "text-models-llm",
+    "vendor": "NVIDIA",
+    "codeSamples": "chat-completion"
   }
 ]
