@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Claude Code
 
 This guide explains how to configure **Claude Code** to work with Claude models available through AIML API.
@@ -119,6 +114,12 @@ Notes
 ## Using CLAUDE.md files
 
 `CLAUDE.md` is a markdown file placed in your project root that Claude Code automatically reads at the beginning of each session. It can be used to define coding conventions, architectural guidelines, preferred libraries, workflows, and review requirements.
+
+## Usage & Cost Monitoring
+
+If you need to monitor usage and costs separately, you can create a dedicated API key for Claude Code usage in your Account. After that, you can view token usage details and corresponding USD costs in the dashboard under the Usage section.
+
+For details, see the [API keys](https://help.aimlapi.com/article/40-starter-guide#API-Key-Management-p9p8e) and [Usage](https://help.aimlapi.com/article/40-starter-guide#Available-Filters-LJ8By) sections in the Starter Guide.
 
 ***
 
