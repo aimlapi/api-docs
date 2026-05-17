@@ -1,26 +1,10 @@
 [
   {
-    "name": "nvidia/nemotron-3-nano-30b-a3b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-nano-30b-a3b",
-    "alias": "nemotron-3-nano-30b-a3b",
+    "name": "google/gemini-3-1-flash-lite",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-1-flash-lite",
+    "alias": "gemini-3-1-flash-lite",
     "category": "text-models-llm",
-    "vendor": "NVIDIA",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "nvidia/nemotron-3-super-120b-a12b",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-super-120b-a12b",
-    "alias": "nemotron-3-super-120b-a12b",
-    "category": "text-models-llm",
-    "vendor": "NVIDIA",
-    "codeSamples": "chat-completion"
-  },
-  {
-    "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-    "alias": "nemotron-3-nano-omni-30b-a3b-reasoning",
-    "category": "text-models-llm",
-    "vendor": "NVIDIA",
+    "vendor": "Google",
     "codeSamples": "chat-completion"
   }
 ]
