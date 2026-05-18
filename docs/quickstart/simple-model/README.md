@@ -8,7 +8,7 @@ icon: hand-wave
 # Quickstart
 
 {% hint style="success" %}
-If you are a manager and simply want to test a model to evaluate its performance, for instance in content generation, the quickest approach is **to use** [**our Playground**](https://aimlapi.com/app/). \
+If you are a manager and simply want to test a model to evaluate its performance, for instance in content generation, the quickest approach is **to use** [**our Playground**](https://aimlapi.com/app/).\
 It offers an intuitive, user-friendly interface—no coding required.
 
 Programmatic API calls are best suited for developers who want to integrate a model into their own apps.
@@ -16,14 +16,14 @@ Programmatic API calls are best suited for developers who want to integrate a mo
 
 ***
 
-Here, you'll learn how to start using our API in your code. \
+Here, you'll learn how to start using our API in your code.\
 The following steps must be completed regardless of which of our models you plan to call:
 
 * [generating an AIML API Key](./#generating-an-aiml-api-key),
 * [choosing and preparing your development environment](./#choosing-and-preparing-the-development-environment),
 * [making an API call](./#making-an-api-call).
 
-Let's walk through an example of connecting to [the Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via REST API.&#x20;
+Let's walk through an example of connecting to [the Gemma 3](../../api-references/text-models-llm/google/gemma-3.md) model via REST API.
 
 ## G**enerating an AIML API Key**
 
@@ -34,7 +34,7 @@ Let's walk through an example of connecting to [the Gemma 3](../../api-reference
 You can find your AIML API key on the [account page](https://aimlapi.com/app/keys).
 
 An AIML API key is a credential that grants you access to our API from your code.\
-It is a sensitive string that is shown **only at creation time** and should be kept confidential. \
+It is a sensitive string that is shown **only at creation time** and should be kept confidential.\
 Do not share this key with anyone, as it could be misused without your knowledge.\
 If you lose it, generate a new key from your dashboard.
 
@@ -42,13 +42,13 @@ If you lose it, generate a new key from your dashboard.
 
 </details>
 
-To use the AIML API, you need to create an account and generate an AIML API key. \
+To use the AIML API, you need to create an account and generate an AIML API key.\
 Follow these steps:
 
 1. [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account.
 2. [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
 
 ***
 
@@ -56,7 +56,7 @@ Follow these steps:
 
 Each language has recommended environments for running code samples.
 
-<table data-header-hidden><thead><tr><th width="196.9332275390625" valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"><strong>cURL</strong></td><td><ul><li><a href="https://reqbin.com/curl">REQBIN</a> is a web-based REST client that lets you quickly run cURL requests directly in your browser, without installing any tools.</li><li><a href="https://git-scm.com/install/windows">Git Bash</a> (Windows) or the built-in Terminal (macOS/Linux) allow you to run cURL examples and other command-line tools locally.  </li></ul></td></tr><tr><td valign="top"><strong>Python</strong></td><td><ul><li><a href="https://jupyter.org/try-jupyter/lab/index.html">Jupyter Notebook</a> is a popular online environment for running Python code and is the fastest option if you do not want to install anything locally.</li><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code) is a lightweight and widely used code editor that supports both Python and Node.js. It is suitable for running and debugging local examples and for working on real projects.</li></ul></td></tr><tr><td valign="top"><strong>JavaScript</strong></td><td><ul><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code)</li></ul></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="196.9332275390625" valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"><strong>cURL</strong></td><td><ul><li><a href="https://reqbin.com/curl">REQBIN</a> is a web-based REST client that lets you quickly run cURL requests directly in your browser, without installing any tools.</li><li><a href="https://git-scm.com/install/windows">Git Bash</a> (Windows) or the built-in Terminal (macOS/Linux) allow you to run cURL examples and other command-line tools locally.</li></ul></td></tr><tr><td valign="top"><strong>Python</strong></td><td><ul><li><a href="https://jupyter.org/try-jupyter/lab/index.html">Jupyter Notebook</a> is a popular online environment for running Python code and is the fastest option if you do not want to install anything locally.</li><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code) is a lightweight and widely used code editor that supports both Python and Node.js. It is suitable for running and debugging local examples and for working on real projects.</li></ul></td></tr><tr><td valign="top"><strong>JavaScript</strong></td><td><ul><li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> (VS Code)</li></ul></td></tr></tbody></table>
 
 {% hint style="info" %}
 In the examples below for cURL, JavaScript and Python, we use the [**REST API**](../supported-sdks.md#rest-api). This approach works with all of our APIs, but it is not the only way to integrate. You can use [**other supported SDKs**](../supported-sdks.md).
@@ -66,8 +66,8 @@ In the examples below for cURL, JavaScript and Python, we use the [**REST API**]
 
 Based on your environment, you will call our API differently. Below are three common ways to call our API using two popular languages: **cURL** (a command-line format for making HTTP requests rather than a programming language), **Python**, and **JavaScript** (NodeJS).
 
-If you want to get started really quickly, choose one of the four expandable sections below. \
-Each one contains instructions for calling our model using different tools and environments. \
+If you want to get started really quickly, choose one of the four expandable sections below.\
+Each one contains instructions for calling our model using different tools and environments.\
 The first two options are especially simple and suitable even for beginners.
 
 For completeness, the same example is explained in detail in the [Code Step-by-Step](./#code-step-by-step-explanation) section.
@@ -170,7 +170,7 @@ print("AI:", answer)
 
 <details>
 
-<summary><span data-gb-custom-inline data-tag="emoji" data-code="2b50">⭐</span>  How to run a <mark style="color:$primary;"><strong>cURL</strong></mark> example in a web-based REST client (REQBIN)</summary>
+<summary><span data-gb-custom-inline data-tag="emoji" data-code="2b50">⭐</span> How to run a <mark style="color:$primary;"><strong>cURL</strong></mark> example in a web-based REST client (REQBIN)</summary>
 
 <mark style="color:$info;">Calling the API via cURL through a web service like this is the simplest and fastest method, requiring no additional libraries. However, there is a downside: cURL is not a programming language, which means it has very limited capabilities for adding logic—only API calls, no loops or conditions. You can’t even extract just the specific field with the model’s text response—cURL returns the model’s full output, as you’ll see below.</mark>
 
@@ -189,7 +189,7 @@ print("AI:", answer)
 5\. After the model processes your request, the model’s full output will be shown directly below the input field.
 
 {% hint style="info" %}
-Pro tip: try experimenting with the three different ways of displaying the model’s output. \
+Pro tip: try experimenting with the three different ways of displaying the model’s output.\
 Some are more readable than others.
 {% endhint %}
 
@@ -199,7 +199,7 @@ Some are more readable than others.
 
 <details>
 
-<summary><span data-gb-custom-inline data-tag="emoji" data-code="2b50">⭐</span>  How to run a <mark style="color:$primary;"><strong>Python</strong></mark> example in an online Jupyter Notebook</summary>
+<summary><span data-gb-custom-inline data-tag="emoji" data-code="2b50">⭐</span> How to run a <mark style="color:$primary;"><strong>Python</strong></mark> example in an online Jupyter Notebook</summary>
 
 <mark style="color:$info;">The second fastest option, and a much more convenient choice, while offering more flexibility for customizing how the output is displayed in code.</mark>
 
@@ -411,8 +411,6 @@ The city is famous for its iconic Golden Gate Bridge, an engineering marvel and 
 
 </details>
 
-
-
 ***
 
 ## Code Step-by-Step
@@ -512,8 +510,6 @@ With the parameters shown above, we are effectively asking the API to use the `g
 
 In the cURL example, you receive the **entire JSON response**.\
 No fields are extracted — cURL simply prints the raw output.
-
-
 
 </details>
 
@@ -750,8 +746,6 @@ print("AI:", answer)
 ```
 
 Output formatting: from the model’s full response, only the generated text is extracted, and it is presented together with the original prompt in a dialogue-style format.
-
-
 
 </details>
 

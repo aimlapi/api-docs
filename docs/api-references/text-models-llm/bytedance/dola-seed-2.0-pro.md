@@ -53,7 +53,9 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
+{% openapi-operation spec="dola-seed-2-0-pro" path="/v1/chat/completions" method="post" %}
 [OpenAPI dola-seed-2-0-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ByteDance/dola-seed-2-0-pro.json)
+{% endopenapi-operation %}
 
 ## Code Example
 

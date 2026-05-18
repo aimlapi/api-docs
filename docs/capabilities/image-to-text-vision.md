@@ -42,6 +42,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [google/gemma-3-27b-it](../api-references/text-models-llm/google/gemma-3.md)
 * [google/gemini-3-1-pro-preview](../api-references/text-models-llm/google/gemini-3-1-pro-preview.md)
 * [google/gemini-3-1-flash-lite-preview](../api-references/text-models-llm/google/gemini-3-1-flash-lite-preview.md)
+* [google/gemini-3-1-flash-lite](../api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
 * [google/gemma-4-31b-it](../api-references/text-models-llm/google/gemma-4-31b-it.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [minimax/m2-her](../api-references/text-models-llm/minimax/m2-her.md)
