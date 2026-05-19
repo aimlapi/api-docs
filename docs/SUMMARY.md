@@ -550,7 +550,6 @@
 * [Vision in Text Models](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
 * [Batch Processing](capabilities/batch-processing.md)
-* [Features of Anthropic Models](capabilities/anthropic.md)
 * [Model comparison](capabilities/models-comparsion.md)
 
 ***

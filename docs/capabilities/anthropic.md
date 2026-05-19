@@ -1,2 +1,0 @@
-# Features of Anthropic Models
-
