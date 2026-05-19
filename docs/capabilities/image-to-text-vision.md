@@ -202,6 +202,7 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 * [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
 * [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
 * [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
+* [google/gemini-3-1-flash-lite](../api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
 
 </details>
 
