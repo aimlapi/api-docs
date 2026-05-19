@@ -6,7 +6,6 @@
 * [Quickstart](quickstart/simple-model/README.md)
   * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
-* [🦞 OpenClaw AI/ML](quickstart/openclaw.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
@@ -589,6 +588,7 @@
 * [Manus](integrations/manus.md)
 * [Marvin](integrations/marvin.md)
 * [⭐ n8n](integrations/n8n.md)
+* [🦞 OpenClaw AI/ML](integrations/openclaw.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)

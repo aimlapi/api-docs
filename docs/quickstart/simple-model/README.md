@@ -31,24 +31,34 @@ Let's walk through an example of connecting to [the Gemma 3](../../api-reference
 
 <summary><mark style="color:blue;">What is an API Key?</mark></summary>
 
-You can find your AIML API key on the [account page](https://aimlapi.com/app/keys).
+You can find your AIML API keys on the [account page](https://aimlapi.com/app/keys).
 
 An AIML API key is a credential that grants you access to our API from your code.\
 It is a sensitive string that is shown **only at creation time** and should be kept confidential.\
 Do not share this key with anyone, as it could be misused without your knowledge.\
 If you lose it, generate a new key from your dashboard.
 
-⚠️ <mark style="color:orange;">Note that API keys from third-party organizations cannot be used with our API: you need an AIML API Key.</mark>
+⚠️ <mark style="color:orange;">Note that API keys from third-party organizations cannot be used with our API:</mark> \ <mark style="color:orange;">you need AIML API keys.</mark>
+
+***
+
+To start using our models in the Playground or through the API, you need to create at least one API key.
+
+You may also create separate API keys for individual employees, AI agents, teams, or specific workflows and tasks. This approach can simplify usage tracking, access management, and cost monitoring across different environments or use cases.
+
+All API keys created within your account share the same account balance.
 
 </details>
 
-To use the AIML API, you need to create an account and generate an AIML API key.\
-Follow these steps:
+To use the AIML API, you need an account and at least one AIML API key.\
+If you have not created them yet, follow these steps:
 
 1. [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account.
 2. [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
+<figure><img src="../../.gitbook/assets/keys-create-first.png" alt=""><figcaption></figcaption></figure>
 
+Detailed instructions for managing your API keys in the dashboard can be found in the corresponding [Help Center article](https://help.aimlapi.com/article/19-how-to-create-an-api-key).
 
 ***
 

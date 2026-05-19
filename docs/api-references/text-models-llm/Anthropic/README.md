@@ -8,7 +8,7 @@ Its product lineup spans lightweight **Haiku** models for fast inference, **Sonn
 
 ***
 
-The chat models from this provider have some unique characteristics. Models from Anthropic can be accessed not only via the standard `/v1/chat/completions` endpoint but also through dedicated endpoints — `/messages` and `/v1/batches` and `/v1/batches/cancel/{batch_id}`.\
+The chat models from this provider have some unique characteristics. Models from Anthropic can be accessed not only via the standard `/v1/chat/completions` endpoint but also through dedicated endpoints — `/messages` and `/v1/batches`.\
 The sections below describe their API schemas, usage specifics, and example requests.
 
 Supported capabilities:
