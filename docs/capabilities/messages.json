@@ -12,7 +12,20 @@
   "paths": {
     "/v1/messages": {
       "post": {
-        "x-codeSamples": [],
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/messages' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n    \"model\": \"claude-sonnet-4-20250514\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"Hello\"\n      }\n    ]\n  }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/messages', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      model: 'claude-sonnet-4-20250514',\n      messages:[\n          {\n              role:'user',\n              content: 'Hello'\n          }\n      ],\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/messages\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n        \"model\":\"claude-sonnet-4-20250514\",\n        \"messages\":[\n            {\n                \"role\":\"user\",\n                \"content\":\"Hello\"\n            }\n        ],\n    }\n)\n\ndata = response.json()\nprint(data)"
+          }
+        ],
         "x-hideTryItPanel": true,
         "operationId": "_v1_messages",
         "requestBody": {
@@ -3890,8 +3903,7 @@
                     "required": [
                       "model",
                       "messages"
-                    ],
-                    "title": "claude-opus-4-1-20250805, anthropic/claude-opus-4-1-20250805, claude-opus-4-20250514, anthropic/claude-opus-4-20250514, claude-sonnet-4-20250514, anthropic/claude-sonnet-4-20250514, claude-sonnet-4-5-20250929, anthropic/claude-sonnet-4-5-20250929, claude-haiku-4-5-20251001, anthropic/claude-haiku-4-5-20251001, claude-opus-4-5-20251101, anthropic/claude-opus-4-5-20251101, claude-opus-4-6, anthropic/claude-opus-4-6, claude-sonnet-4-6, anthropic/claude-sonnet-4-6, claude-sonnet-4-latest, anthropic/claude-sonnet-4, claude-opus-4-latest, anthropic/claude-opus-4, claude-opus-4-1-latest, claude-opus-4-1, anthropic/claude-opus-4.1, anthropic/claude-opus-4.1-20250805, anthropic/claude-sonnet-4.5, claude-sonnet-4-5, anthropic/claude-haiku-4.5, claude-haiku-4-5, anthropic/claude-opus-4-5, claude-opus-4-5, anthropic/claude-opus-4.5, anthropic/claude-sonnet-4.6, anthropic/claude-sonnet-4-6-20260218"
+                    ]
                   },
                   {
                     "type": "object",
@@ -7715,8 +7727,7 @@
                     "required": [
                       "model",
                       "messages"
-                    ],
-                    "title": "claude-opus-4-7, anthropic/claude-opus-4-7, anthropic/claude-opus-4.7"
+                    ]
                   }
                 ]
               }
