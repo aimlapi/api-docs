@@ -12,6 +12,8 @@
   "paths": {
     "/v1/messages": {
       "post": {
+        "x-codeSamples": [],
+        "x-hideTryItPanel": true,
         "operationId": "_v1_messages",
         "requestBody": {
           "required": true,
