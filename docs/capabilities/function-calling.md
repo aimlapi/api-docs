@@ -166,8 +166,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [chatgpt-4o-latest](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
 * [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md)
-* [gpt-4o-audio-preview](/broken/pages/sm6uVrlNwwgMyBoKqoU3)
-* [gpt-4o-mini-audio-preview](/broken/pages/yzJB0N4etoRAvMPpUxRz)
 * [o1](../api-references/text-models-llm/OpenAI/o1.md)
 * [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
 * [openai/o3-2025-04-16](../api-references/text-models-llm/openai/o3.md)
