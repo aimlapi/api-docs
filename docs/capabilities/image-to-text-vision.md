@@ -44,6 +44,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [google/gemini-3-1-flash-lite-preview](../api-references/text-models-llm/google/gemini-3-1-flash-lite-preview.md)
 * [google/gemini-3-1-flash-lite](../api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
 * [google/gemma-4-31b-it](../api-references/text-models-llm/google/gemma-4-31b-it.md)
+* [google/gemini-3-5-flash](../api-references/text-models-llm/google/gemini-3-5-flash.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [minimax/m2-her](../api-references/text-models-llm/minimax/m2-her.md)
 * [minimax/m2-1](../api-references/text-models-llm/minimax/m2-1.md)
@@ -203,6 +204,7 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 * [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
 * [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
 * [google/gemini-3-1-flash-lite](../api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
+* [google/gemini-3-5-flash](../api-references/text-models-llm/google/gemini-3-5-flash.md)
 
 </details>
 

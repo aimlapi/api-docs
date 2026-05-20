@@ -14,7 +14,7 @@ Maximum file size: `50` MB.\
 Maximum number of pages: `1000`.
 
 {% hint style="warning" %}
-Note that this OCR does not preserve character formatting: bold, underline, italics, monospace text, etc. \
+Note that this OCR does not preserve character formatting: bold, underline, italics, monospace text, etc.\
 However, it preserves footnotes (superscript text).
 {% endhint %}
 
@@ -29,13 +29,9 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 <summary>Step-by-Step Instructions</summary>
 
 * Copy the code from one of the [examples](mistral-ocr-latest.md#example-1-process-a-pdf-file) below, depending on whether you want to process an image or a PDF.
-
-- Replace `<YOUR_AIMLAPI_KEY>` with your AIML API key from [your personal account](https://aimlapi.com/app/keys).
-
+* Replace `<YOUR_AIMLAPI_KEY>` with your AIML API key from [your personal account](https://aimlapi.com/app/keys).
 * Replace the URL of the document or image with the one you need.
-
-- If you need to use different parameters, refer to the API schema below for valid values and operational logic.
-
+* If you need to use different parameters, refer to the API schema below for valid values and operational logic.
 * Save the modified code as a Python file and run it in an IDE[^1] or via the console.
 
 </details>
@@ -45,8 +41,6 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 {% openapi-operation spec="mistral-ocr-last" path="/v1/ocr" method="post" %}
 [OpenAPI mistral-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Mistral-AI/mistral-ocr-latest.json)
 {% endopenapi-operation %}
-
-
 
 ## Example #1: Text Recognition From an Image
 
@@ -68,7 +62,7 @@ def main():
         json={
             "document": {
                 "type": "image_url",
-                "image_url": "https://i.redd.it/hx0v4fj979k51.jpg"
+                "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/handwriting.jpg"
             },
             "model": "mistral/mistral-ocr-latest",
         },
@@ -273,8 +267,6 @@ if __name__ == "__main__":
 <details>
 
 <summary>Response after parsing</summary>
-
-
 
 **Contents of the `output.md` file:**
 

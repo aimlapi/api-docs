@@ -97,6 +97,7 @@
     * [gemini-3-1-flash-lite-preview](api-references/text-models-llm/google/gemini-3-1-flash-lite-preview.md)
     * [gemini-3-1-flash-lite](api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
     * [gemma-4-31b-it](api-references/text-models-llm/google/gemma-4-31b-it.md)
+    * [gemini-3-5-flash](api-references/text-models-llm/google/gemini-3-5-flash.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
