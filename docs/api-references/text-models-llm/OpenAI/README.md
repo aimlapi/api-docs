@@ -6,6 +6,18 @@ OpenAI is an AI research and product company focused on developing general-purpo
 
 The chat models from this provider support multiple API paradigms and multimodal workflows. OpenAI models can be accessed through both the standard `/v1/chat/completions` endpoint and the newer `/v1/responses` endpoint, which provides unified handling for text, images, audio, tool usage, and structured outputs. Some models additionally support integrated web search and retrieval capabilities, allowing them to access external information sources directly during generation.
 
+<details>
+
+<summary>Chat Completions vs. Responses API</summary>
+
+**Chat Completions**\
+The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
+
+**Responses**\
+The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
+
+</details>
+
 #### Supported capabilities
 
 Supported capabilities vary depending on the specific model, with different models offering different combinations of the features listed below.

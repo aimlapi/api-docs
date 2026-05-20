@@ -110,7 +110,6 @@ Supported models:
 
 ***
 
-* [deepseek/deepseek-v3.2-speciale](../api-references/text-models-llm/deepseek/deepseek-v3.2-speciale.md)
 * [deepseek/deepseek-v4-pro](../api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
 * [deepseek/deepseek-v4-flash](../api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
 
@@ -132,7 +131,6 @@ Supported models:
 ***
 
 * [nvidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
-* [nvidia/nemotron-nano-12b-v2-vl](../api-references/text-models-llm/nvidia/nemotron-nano-12b-v2-vl.md)
 * [nvidia/nemotron-3-nano-30b-a3b](../api-references/text-models-llm/nvidia/nemotron-3-nano-30b-a3b.md)
 * [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning](../api-references/text-models-llm/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning.md)
 * [nvidia/nemotron-3-super-120b-a12b](../api-references/text-models-llm/nvidia/nemotron-3-super-120b-a12b.md)

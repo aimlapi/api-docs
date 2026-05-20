@@ -17,7 +17,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-The model enhances the already impressive capabilities of [gpt-4](gpt-4.md) by significantly reducing response times, making it ideal for applications requiring instant feedback. Replacement for all previous [gpt-4-preview](gpt-4-preview.md) models.
+The model enhances the already impressive capabilities of [gpt-4](gpt-4.md) by significantly reducing response times, making it ideal for applications requiring instant feedback. Replacement for all previous [gpt-4-preview](/broken/pages/VXApkVgaetMvJSs0mu3E) models.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

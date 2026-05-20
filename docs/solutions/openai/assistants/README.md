@@ -99,7 +99,7 @@ Unlike the streaming version, this version **waits for the full response** befor
 
 ***
 
-#### **1. Initialization Phase**
+**1. Initialization Phase**
 
 **Objects Created:**
 
@@ -117,7 +117,7 @@ Unlike the streaming version, this version **waits for the full response** befor
 
 ***
 
-#### **2. Chat Loop Execution**
+**2. Chat Loop Execution**
 
 The script enters a **while loop**, allowing continuous conversation:
 
@@ -160,13 +160,13 @@ The script enters a **while loop**, allowing continuous conversation:
 
 ***
 
-#### **Summary of Identifiers Passed Between Functions**
+**Summary of Identifiers Passed Between Functions**
 
 <table><thead><tr><th width="274" valign="top">Identifier</th><th valign="top">Purpose</th><th valign="top">Where It's Used</th></tr></thead><tbody><tr><td valign="top"><code>assistant_id</code></td><td valign="top">Identifies the Assistant instance</td><td valign="top">Created during initialization, used in <code>send_message()</code></td></tr><tr><td valign="top"><code>thread_id</code></td><td valign="top">Links all Messages in the conversation</td><td valign="top">Created during initialization, used in <code>send_message()</code> and fetching responses</td></tr><tr><td valign="top"><code>user_message</code></td><td valign="top">Stores user input</td><td valign="top">Passed from the chat loop to <code>send_message()</code></td></tr><tr><td valign="top"><code>run.status</code></td><td valign="top">Tracks response completion</td><td valign="top">Checked after <code>create_and_poll()</code></td></tr><tr><td valign="top"><code>message.content[0].text.value</code></td><td valign="top">Holds the Assistant's response</td><td valign="top">Extracted from <code>messages.list()</code></td></tr></tbody></table>
 
 ***
 
-#### **Final Execution Flow Summary**
+**Final Execution Flow Summary**
 
 1. Initialize API client, Assistant, and Thread (IDs stored).
 2. Enter chat loop → user types a Message.

@@ -67,8 +67,6 @@ These models have been tested by our team for compatibility with Roo Code integr
 * [gpt-4o-2024-08-06](../api-references/text-models-llm/OpenAI/gpt-4o.md)
 * [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
 * [gpt-4-turbo-2024-04-09](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
-* [gpt-4-0125-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
-* [gpt-4-1106-preview](../api-references/text-models-llm/OpenAI/gpt-4-preview.md)
 * [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
 * [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
 * [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)

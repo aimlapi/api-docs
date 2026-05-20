@@ -108,10 +108,6 @@ For Docker, Termux, GitHub Desktop, and other installation methods, see the full
 
 Click the dropdown next to **AI/ML Model** and pick any model such as:
 
-* `gpt-4o-mini-2024-07-18`
-* `claude-3-5-sonnet`
-* `gemini-1.5-flash`
-
 <div align="left"><figure><img src="../.gitbook/assets/sillytavern-step4.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Step 5. Test Connection

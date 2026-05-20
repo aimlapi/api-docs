@@ -10,7 +10,7 @@ description: >-
 
 [LiteLLM](https://www.litellm.ai/) is an open-source Python library that provides a unified API for interacting with multiple large language model providers. It allows developers to switch between different models with minimal code changes, optimizing cost and performance. LiteLLM simplifies integration by offering a single interface for various LLM endpoints, enabling seamless experimentation and deployment across different AI providers.
 
-If you use this library, you can also call models from AI/ML API through it. Below are the most common use cases:&#x20;
+If you use this library, you can also call models from AI/ML API through it. Below are the most common use cases:
 
 * [Chat completion](litellm.md#chat-completion)
 * [Streaming](litellm.md#streaming)
@@ -29,17 +29,19 @@ pip install litellm
 
 ## Making API Calls <a href="#usage" id="usage"></a>
 
-You can choose from LLama, Qwen, Flux, and 200+ other models on the [AI/ML API official website](https://aimlapi.com/models).&#x20;
+You can choose from LLama, Qwen, Flux, and 500+ other models on the [AI/ML API official website](https://aimlapi.com/models).
 
 ### Chat completion
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import litellm
 
 response = litellm.completion(
     # The model name must include prefix "openai/" + the model id from AI/ML API:
-    model="openai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo", 
+    model="openai/meta-llama/Llama-3.3-70B-Instruct-Turbo", 
     # your AI/ML API api-key: 
     api_key="<YOUR_AIMLAPI_KEY>", 
     api_base="https://api.aimlapi.com/v2",
@@ -52,9 +54,13 @@ response = litellm.completion(
 )
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Streaming <a href="#streaming" id="streaming"></a>
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import litellm
@@ -77,9 +83,13 @@ for chunk in response:
     print(chunk)
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Async Completion <a href="#async-completion" id="async-completion"></a>
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import asyncio
@@ -90,7 +100,7 @@ import litellm
 async def main():
     response = await litellm.acompletion(
         # The model name must include prefix "openai/" + the model id from AI/ML API:
-        model="openai/anthropic/claude-3-5-haiku",  
+        model="openai/anthropic/claude-4-6-sonnet",  
         # your AI/ML API api-key 
         api_key="<YOUR_AIMLAPI_KEY>", 
         api_base="https://api.aimlapi.com/v2",
@@ -108,9 +118,13 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Async Streaming <a href="#async-streaming" id="async-streaming"></a>
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import asyncio
@@ -124,7 +138,7 @@ async def main():
         print("test acompletion + streaming")
         response = await litellm.acompletion(
             # The model name must include prefix "openai/" + model id from AI/ML API:
-            model="openai/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+            model="openai/nvidia/nemotron-nano-9b-v2",
             # your AI/ML API api-key 
             api_key="<YOUR_AIMLAPI_KEY>",
             api_base="https://api.aimlapi.com/v2",
@@ -143,9 +157,13 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Async Embedding <a href="#async-embedding" id="async-embedding"></a>
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import asyncio
@@ -169,9 +187,13 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Async Image Generation <a href="#async-image-generation" id="async-image-generation"></a>
 
+{% tabs %}
+{% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import asyncio
@@ -195,3 +217,5 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
