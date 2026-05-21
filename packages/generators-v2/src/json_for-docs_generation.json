@@ -1,10 +1,10 @@
 [
   {
-    "name": "google/gemini-3-5-flash",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=google/gemini-3-5-flash",
-    "alias": "gemini-3-5-flash",
+    "name": "alibaba/qwen3.7-max",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.7-max",
+    "alias": "qwen3.7-max",
     "category": "text-models-llm",
-    "vendor": "Google",
+    "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
   }
 ]
