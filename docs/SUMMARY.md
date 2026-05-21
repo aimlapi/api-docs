@@ -37,6 +37,7 @@
     * [qwen3.5-omni-flash](api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
     * [qwen3.5-flash](api-references/text-models-llm/alibaba-cloud/qwen3.5-flash.md)
     * [qwen3.6-35b-a3b](api-references/text-models-llm/alibaba-cloud/qwen3.6-35b-a3b.md)
+    * [qwen3.7-max](api-references/text-models-llm/alibaba-cloud/qwen3.7-max.md)
   * [Anthracite](api-references/text-models-llm/Anthracite/README.md)
     * [magnum-v4](api-references/text-models-llm/Anthracite/magnum-v4.md)
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)

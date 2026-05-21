@@ -27,6 +27,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [alibaba/qwen3.5-omni-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
 * [alibaba/qwen3.6-27b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-27b.md)
 * [alibaba/qwen3.6-35b-a3b](../api-references/text-models-llm/alibaba-cloud/qwen3.6-35b-a3b.md)
+* [alibaba/qwen3.7-max](../api-references/text-models-llm/alibaba-cloud/qwen3.7-max.md)
 * [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
