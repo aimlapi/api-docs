@@ -1,85 +1,200 @@
 ---
-hidden: true
+description: Learn how to get started with the AI/ML API
 ---
 
-# llms.txt
+# 🧭 Documentation Map
 
-## AIMLAPI — Unified AI/ML API. Documentation portal
+This page helps you quickly find the right AI model for your task.\
+Open the API reference and copy a working example to integrate it into your code in minutes.
 
-> One API to access 500+ AI models for chat, image, video, audio, code, embeddings and vision. Single integration for OpenAI, Anthropic, Google, Meta, ByteDance, DeepSeek, Kling AI, Alibaba Cloud, MiniMax, ElevenLabs and more.
+***
 
-### Authentication
+**Trending Models**
 
-* API Key via Authorization header: `Authorization: Bearer YOUR_AIMLAPI_KEY`
-* [Manage API keys in dashboard](https://aimlapi.com/app/keys)
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Pro-Grade Image Model</td><td><a href=".gitbook/assets/Nano-Banana-2-new.jpg">Nano-Banana-2-new.jpg</a></td><td><a href="api-references/image-models/google/gemini-3.1-flash-image.md">gemini-3.1-flash-image.md</a></td></tr><tr><td align="center">Top Video Generator</td><td><a href=".gitbook/assets/photo_2025-11-10_18-53-24.jpg">photo_2025-11-10_18-53-24.jpg</a></td><td><a href="api-references/video-models/openai/sora-2-t2v.md">sora-2-t2v.md</a></td></tr><tr><td align="center">Smarter Reasoning &#x26; Coding</td><td><a href=".gitbook/assets/gemini3.1pro.png">gemini3.1pro.png</a></td><td><a href="api-references/text-models-llm/google/gemini-3-1-pro-preview.md">gemini-3-1-pro-preview.md</a></td></tr></tbody></table>
 
-### Key Links
+***
 
-* [Documentation](https://docs.aimlapi.com)
-* [Playground](https://aimlapi.com/app)
-* [Models List](https://api.aimlapi.com/v1/models)
-* [Full OpenAPI Spec](https://api.aimlapi.com/docs-public-yaml)
-* [Pricing](https://aimlapi.com/ai-ml-api-pricing)
-* \[How to use account, playground, API keys, dashboards, manage billing, and more] (https://help.aimlapi.com/)
+<table data-header-hidden data-full-width="false"><thead><tr><th width="281.09991455078125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Start with this code block</strong><br><br>🚀 <a href="quickstart/simple-model/"><strong>Setup guide</strong></a><br><br>🧩 <a href="quickstart/supported-sdks.md"><strong>SDKs</strong></a></p><p>▶️ <a href="https://aimlapi.com/app/"><strong>Run in Playground</strong></a></p></td><td valign="top"><pre class="language-python" data-overflow="wrap"><code class="lang-python">from openai import OpenAI
+client = OpenAI(
+base_url="https://api.aimlapi.com/v1",
+api_key="&#x3C;YOUR_AIMLAPI_KEY>",
+)
+response = client.chat.completions.create(
+model="gpt-4o",
+messages=[{"role": "user", "content": "Write a one-sentence story about numbers."}]
+)
+print(response.choices[0].message.content)
+</code></pre></td></tr><tr><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-### Compatibility
+***
 
-* OpenAI-compatible API
-* Anthropic-compatible API
-* Supports streaming responses
-* Supports multimodal inputs
-* Supports tool calling / function calling
-* Supports JSON mode for compatible models
-* Supports batching for Anthropic models
+## Browse Models
 
-### Production Usage
+Popular | [View all 400+ models >](api-references/model-database.md)
 
-* Use exponential backoff for retries
-* Monitor usage via Billing and Logs dashboards
-* Model availability may vary by provider
-* Some models support asynchronous generation workflows
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="api-references/text-models-llm/OpenAI/">ChatGPT</a></td><td></td><td></td><td><a href="api-references/text-models-llm/OpenAI/">OpenAI</a></td></tr><tr><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td><td></td><td></td><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td></tr><tr><td><a href="api-references/image-models/flux/">Flux</a></td><td></td><td></td><td><a href="api-references/image-models/flux/">flux</a></td></tr></tbody></table>
 
-### Async Workflows
+Select the model by its **Task**, by its **Developer** or by the supported **Capabilities**:
 
-* `POST /v2/generate/video`
-* `POST /v2/generate/audio`
-* Poll generation status using returned generation IDs
+{% hint style="info" %}
+If you've already made your choice and know the model ID, use the [Search panel](https://docs.aimlapi.com/?q=) on your right.
+{% endhint %}
 
-### SDKs
+{% tabs %}
+{% tab title="Models by TASK" %}
+{% content-ref url="api-references/text-models-llm/" %}
+[text-models-llm](api-references/text-models-llm/)
+{% endcontent-ref %}
 
-* [Python SDK](https://docs.aimlapi.com/sdks/python)
-* [JavaScript SDK](https://docs.aimlapi.com/sdks/javascript)
+{% content-ref url="api-references/image-models/" %}
+[image-models](api-references/image-models/)
+{% endcontent-ref %}
 
-Base URL: https://api.aimlapi.com
+{% content-ref url="api-references/video-models/" %}
+[video-models](api-references/video-models/)
+{% endcontent-ref %}
 
-### Core Endpoints
+{% content-ref url="api-references/music-models/" %}
+[music-models](api-references/music-models/)
+{% endcontent-ref %}
 
-* `POST /v1/chat/completions` — [Chat completion docs](https://docs.aimlapi.com/api-references/text-models-llm)
-* `POST /v1/images/generations` — [Image generation docs](https://docs.aimlapi.com/api-references/image-models)
-* `POST /v2/generate/video` — [Video generation docs](https://docs.aimlapi.com/api-references/video-models)
-* `POST /v1/stt/create` — [Speech-to-Text API overview](https://docs.aimlapi.com/api-references/speech-models/speech-to-text)
-* `POST /v1/tts` — [Text-to-Speech API overview](https://docs.aimlapi.com/api-references/speech-models/text-to-speech)
-* `POST /v2/generate/audio` [Music API overview](https://docs.aimlapi.com/api-references/music-models)
-* `POST /v1/embeddings` — [Embeddings docs](https://docs.aimlapi.com/api-references/embeddings)
-* `GET /v1/models` — List all available models (see Models List in Key Links)
-* `GET /v2/billing` — \[Get user balance info] (https://docs.aimlapi.com/api-references/service-endpoints/account-balance)
+{% content-ref url="api-references/speech-models/" %}
+[speech-models](api-references/speech-models/)
+{% endcontent-ref %}
 
-### Example Request
+{% content-ref url="api-references/3d-generating-models/" %}
+[3d-generating-models](api-references/3d-generating-models/)
+{% endcontent-ref %}
 
-* [View complete code examples in Quickstart](https://docs.aimlapi.com/quickstart)
-* cURL example: `curl -X POST https://api.aimlapi.com/v1/chat/completions -H "Authorization: Bearer YOUR_AIMLAPI_KEY" -H "Content-Type: application/json" -d '{"model":"gpt-4o-mini","messages":[{"role":"user","content":"Hello"}]}'`
-* [Python SDK examples](https://docs.aimlapi.com/sdks/python)
+{% content-ref url="api-references/vision-models/" %}
+[vision-models](api-references/vision-models/)
+{% endcontent-ref %}
 
-### Capabilities
+{% content-ref url="api-references/embedding-models/" %}
+[embedding-models](api-references/embedding-models/)
+{% endcontent-ref %}
+{% endtab %}
 
-chat • image-generation • video-generation • music-generation • speech-to-text • text-to-speech • embeddings • vision • code-generation • reasoning • function-calling • streaming • web-search • batching
+{% tab title="Models by DEVELOPER" %}
+**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/) [Image](api-references/video-models/alibaba-cloud/) [Video](api-references/image-models/alibaba-cloud/) [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/) [Embedding](api-references/embedding-models/alibaba-cloud/)
 
-* [Explore all models](https://aimlapi.com/models)
+**Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)
 
-### Extended Resources
+<mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/Anthropic/) [Embedding](api-references/embedding-models/Anthropic/)
 
-* [Getting Started Guide](https://docs.aimlapi.com/introduction)
-* [API Reference Index](https://docs.aimlapi.com/#browse-models)
-* [MCP Endpoint](https://docs.aimlapi.com/~gitbook/mcp)
-* [Blog](https://aimlapi.com/blog)
-* [Academy](https://aimlapi.com/academy)
+**Assembly AI:** [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
+
+**Baidu**: [Text/Chat](api-references/text-models-llm/baidu/)
+
+**ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/) [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
+
+**Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)
+
+<mark style="background-color:green;">**DeepSeek**</mark>: [Text/Chat](api-references/text-models-llm/DeepSeek/)
+
+**Deepgram**: [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/) [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)
+
+<mark style="background-color:green;">**ElevenLabs**</mark>**:** [Text-to-Speech](api-references/speech-models/text-to-speech/elevenlabs/) [Voice Chat](api-references/speech-models/voice-chat/elevenlabs/) [Music](api-references/music-models/elevenlabs/)
+
+<mark style="background-color:green;">**Flux**</mark>: [Image](api-references/image-models/flux/)
+
+**Google**: [Text/Chat](api-references/text-models-llm/Google/) [Image](api-references/image-models/google/) [Video](api-references/video-models/google/) [Music](api-references/vision-models/ocr-optical-character-recognition/google/) [Vision(OCR)](api-references/music-models/google/) [Embedding](api-references/embedding-models/Google/)
+
+**Gryphe**: [Text/Chat](api-references/text-models-llm/gryphe/)
+
+**Hume AI**: [Text-to-Speech](api-references/speech-models/text-to-speech/hume-ai/)
+
+**Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
+
+<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/) [Video](api-references/video-models/Kling-AI/)
+
+**Krea**: [Video](api-references/video-models/krea/)
+
+**LTXV**: [Video](api-references/video-models/ltxv/)
+
+**Meta**: [Text/Chat](api-references/text-models-llm/Meta/)
+
+**Microsoft**: [Text-to-Speech](api-references/speech-models/text-to-speech/microsoft/)
+
+<mark style="background-color:green;">**MiniMax**</mark>: [Text/Chat](api-references/text-models-llm/MiniMax/) [Video](api-references/video-models/MiniMax/) [Music](api-references/music-models/MiniMax/) [Voice-Chat](api-references/speech-models/voice-chat/)
+
+**Mistral AI**: [Text/Chat](api-references/text-models-llm/Mistral-AI/) [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
+
+**Moonshot**: [Text/Chat](api-references/text-models-llm/moonshot/)
+
+**NousResearch**: [Text/Chat](api-references/text-models-llm/nousresearch/)
+
+**NVIDIA**: [Text/Chat](api-references/text-models-llm/NVIDIA/)
+
+<mark style="background-color:green;">**OpenAI**</mark>: [Text/Chat](api-references/text-models-llm/OpenAI/) [Image](api-references/image-models/OpenAI/) [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/) [Embedding](api-references/embedding-models/OpenAI/)
+
+**Perplexity**: [Text/Chat](api-references/text-models-llm/perplexity/)
+
+**PixVerse:** [Video](api-references/video-models/pixverse/)
+
+**RecraftAI**: [Image](api-references/image-models/RecraftAI/)
+
+**Reve**: [Image](api-references/image-models/reve/)
+
+**Runway**: [Video](api-references/video-models/runway/)
+
+<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)
+
+**Sber AI**: [Video](api-references/video-models/sber-ai/)
+
+**Tencent**: [Image](api-references/image-models/tencent/) [Video](api-references/video-models/tencent/) [3D](api-references/3d-generating-models/tencent/)
+
+**VEED**: [Video](api-references/video-models/veed/)
+
+**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)
+
+**Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
+{% endtab %}
+
+{% tab title="Text Models by CAPABILITY" %}
+{% content-ref url="capabilities/completion-or-chat-models.md" %}
+[completion-or-chat-models.md](capabilities/completion-or-chat-models.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/streaming-mode.md" %}
+[streaming-mode.md](capabilities/streaming-mode.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/code-generation.md" %}
+[code-generation.md](capabilities/code-generation.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/thinking-reasoning.md" %}
+[thinking-reasoning.md](capabilities/thinking-reasoning.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/function-calling.md" %}
+[function-calling.md](capabilities/function-calling.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/image-to-text-vision.md" %}
+[image-to-text-vision.md](capabilities/image-to-text-vision.md)
+{% endcontent-ref %}
+
+{% content-ref url="capabilities/web-search.md" %}
+[web-search.md](capabilities/web-search.md)
+{% endcontent-ref %}
+{% endtab %}
+{% endtabs %}
+
+***
+
+## Going Deeper
+
+<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="/broken/pages/Zz7piDzGOANDC63nM8xE">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="/broken/pages/YApTOWrutNaVS6Kmkbi4">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="/broken/pages/woZ3J6qGHZ4rL9NFv2cL">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="/broken/pages/69rxr44WSLgM464AlksB">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
+
+## Have a Minute? Help Make the Docs Better!
+
+We’re currently working on improving our documentation portal, and your feedback would be **incredibly** helpful! Take [**a quick 5-question survey**](https://tally.so/r/w4G9Er) (no personal info required!)
+
+You can also rate each individual page using the built-in form on the right side of the screen:
+
+<figure><img src=".gitbook/assets/rateform-5.webp" alt=""><figcaption></figcaption></figure>
+
+Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
