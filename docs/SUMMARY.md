@@ -8,10 +8,6 @@
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
-***
-
-* [llms.txt](<README (1).md>)
-
 ## API REFERENCES
 
 * [🟡 Service Endpoints](api-references/service-endpoints/README.md)
@@ -502,17 +498,6 @@
     * [text-embedding-3-large](api-references/embedding-models/OpenAI/text-embedding-3-large.md)
     * [text-embedding-ada-002](api-references/embedding-models/OpenAI/text-embedding-ada-002.md)
 
-## Solutions
-
-* [OpenAI](solutions/openai/README.md)
-  * [Assistants](solutions/openai/assistants/README.md)
-    * [Assistant API](solutions/openai/assistants/assistant-api.md)
-    * [Thread API](solutions/openai/assistants/threads.md)
-    * [Message API](solutions/openai/assistants/messages.md)
-    * [Run and Run Step API](solutions/openai/assistants/runs.md)
-    * [Events](solutions/openai/assistants/events.md)
-    * [Examples of Using Assistants](solutions/openai/assistants/using-assistants-and-threads.md)
-
 ## FAQ
 
 * [How can I track my funds?](faq/how-can-i-track-my-funds.md)
@@ -554,7 +539,17 @@
 
 * [📞 Contact Sales](https://calendly.com/valeriyb-aimlapi/30min)
 * [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
-* [404 Model is deprecated](404-model-is-deprecated.md)
+
+## Solutions
+
+* [OpenAI](solutions/openai/README.md)
+  * [Assistants](solutions/openai/assistants/README.md)
+    * [Assistant API](solutions/openai/assistants/assistant-api.md)
+    * [Thread API](solutions/openai/assistants/threads.md)
+    * [Message API](solutions/openai/assistants/messages.md)
+    * [Run and Run Step API](solutions/openai/assistants/runs.md)
+    * [Events](solutions/openai/assistants/events.md)
+    * [Examples of Using Assistants](solutions/openai/assistants/using-assistants-and-threads.md)
 
 ## Errors and Messages
 
@@ -592,3 +587,8 @@
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
 * [Toolhouse](integrations/toolhouse.md)
+
+***
+
+* [404 Model is deprecated](404-model-is-deprecated.md)
+* [llms.txt](<README (1).md>)

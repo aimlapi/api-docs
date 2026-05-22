@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # llms.txt
 
 ## AIMLAPI — Unified AI/ML API. Documentation portal
@@ -20,7 +16,7 @@ hidden: true
 * [Models List](https://api.aimlapi.com/v1/models)
 * [Full OpenAPI Spec](https://api.aimlapi.com/docs-public-yaml)
 * [Pricing](https://aimlapi.com/ai-ml-api-pricing)
-* \[How to use account, playground, API keys, dashboards, manage billing, and more] (https://help.aimlapi.com/)
+* [How to use account, playground, API keys, dashboards, manage billing, and more](https://help.aimlapi.com/)
 
 ### Compatibility
 
@@ -47,8 +43,8 @@ hidden: true
 
 ### SDKs
 
-* [Python SDK](https://docs.aimlapi.com/sdks/python)
-* [JavaScript SDK](https://docs.aimlapi.com/sdks/javascript)
+*
+* [OpenAI SDK](quickstart/supported-sdks.md#openai)
 
 Base URL: https://api.aimlapi.com
 
