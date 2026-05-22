@@ -1,8 +1,10 @@
 # Table of contents
 
+* [llms.txt](README.md)
+
 ## Quickstart
 
-* [🧭 Documentation Map](README.md)
+* [🧭 Documentation Map](<README (1).md>)
 * [Quickstart](quickstart/simple-model/README.md)
   * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)

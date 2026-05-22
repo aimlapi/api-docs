@@ -525,7 +525,7 @@ document
 3. Tab Query:
    * _chrome.tabs.query_ is used to find the currently active tab in the browser window. This ensures that the summarization script runs only on the visible tab.
 4. Executing the Summarization Script:
-   * _chrome.scripting.executeScript_ injects and runs the _summarizeText_ function  (we will add it later) in the context of the active tab.
+   * _chrome.scripting.executeScript_ injects and runs the _summarizeText_ function (we will add it later) in the context of the active tab.
 
 ### Adding Communication Between Content Scripts and the Popup
 
@@ -589,7 +589,7 @@ const summarizeText = async () => {
 
 ## **Results**
 
-**The extension is complete!**&#x20;
+**The extension is complete!**
 
 The final steps are: to integrate the API key, choose the desired model, and add the extension to Chrome for use.
 
@@ -599,4 +599,4 @@ Feel free to use the following links:
 
 [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure that key is enabled on UI.
 
-[**Browse our Models**](../#models-by-task)
+[**Browse our Models**](<../README (1).md#models-by-task>)
