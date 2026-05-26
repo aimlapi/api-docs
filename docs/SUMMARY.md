@@ -318,6 +318,7 @@
     * [Veo 3.1 Extend Video](api-references/video-models/google/veo-3.1-extend-video.md)
     * [Veo 3.1 Fast Extend Video](api-references/video-models/google/veo-3.1-fast-extend-video.md)
     * [Veo 3.1 Lite Generate Preview](api-references/video-models/google/veo-3.1-lite-generate-preview.md)
+    * [Veo 3.1 Lite Generate](api-references/video-models/google/veo-3.1-lite-generate.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [v1-standard/text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
     * [v1-standard/image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
