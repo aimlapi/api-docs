@@ -1,10 +1,10 @@
 [
   {
-    "name": "alibaba/qwen3.7-max",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.7-max",
-    "alias": "qwen3.7-max",
-    "category": "text-models-llm",
-    "vendor": "Alibaba Cloud",
-    "codeSamples": "chat-completion"
+    "name": "veo-3.1-lite-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo-3.1-lite-generate-001",
+    "alias": "veo-3.1-lite-generate-001",
+    "category": "video-models",
+    "vendor": "Google",
+    "codeSamples": "video:video"
   }
 ]
