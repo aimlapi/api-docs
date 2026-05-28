@@ -17,7 +17,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-As of mid-May 2026, the most capable generally available model, optimized for autonomous long-horizon agentic workflows, knowledge-intensive tasks, vision, and memory, with strong overall performance across domains. It supports up to a 1M-token context window, 128k output tokens, adaptive reasoning, and full compatibility with the Claude Opus 4.8 toolset and platform features.
+As of 28 May 2026, the most capable generally available model, optimized for autonomous long-horizon agentic workflows, knowledge-intensive tasks, vision, and memory, with strong overall performance across domains. It supports up to a 1M-token context window, 128k output tokens, adaptive reasoning, and full compatibility with the Claude Opus 4.8 toolset and platform features.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
