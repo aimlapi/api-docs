@@ -1,11 +1,10 @@
 [
   {
-    "name": "anthropic/claude-opus-4-8",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=claude-opus-4-8",
-    "alias": "claude-opus-4-8",
-    "models": ["anthropic/claude-opus-4-8", "claude-opus-4-8"],
+    "name": "minimax/minimax-m3",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/minimax-m3",
+    "alias": "m3",
     "category": "text-models-llm",
-    "vendor": "Anthropic",
+    "vendor": "MiniMax",
     "codeSamples": "chat-completion"
   }
 ]
