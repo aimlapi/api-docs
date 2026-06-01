@@ -115,6 +115,7 @@
     * [M2.5-highspeed](api-references/text-models-llm/minimax/m2-5-highspeed.md)
     * [M2.7](api-references/text-models-llm/minimax/m2-7.md)
     * [M2.7-highspeed](api-references/text-models-llm/minimax/m2.7-highspeed.md)
+    * [M3](api-references/text-models-llm/minimax/m3.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [mistral-nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
