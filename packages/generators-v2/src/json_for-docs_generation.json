@@ -1,10 +1,18 @@
 [
   {
-    "name": "minimax/minimax-m3",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=minimax/minimax-m3",
-    "alias": "m3",
+    "name": "alibaba/qwen3.7-plus",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.7-plus",
+    "alias": "qwen3.7-plus",
     "category": "text-models-llm",
-    "vendor": "MiniMax",
+    "vendor": "Alibaba Cloud",
+    "codeSamples": "chat-completion"
+  },
+  {
+    "name": "stepfun/step-3.7-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=stepfun/step-3.7-flash",
+    "alias": "step-3.7-flash",
+    "category": "text-models-llm",
+    "vendor": "StepFun",
     "codeSamples": "chat-completion"
   }
 ]
