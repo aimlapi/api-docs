@@ -139,9 +139,11 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Runway**: [Video](api-references/video-models/runway/)
 
+**Sber AI**: [Video](api-references/video-models/sber-ai/)
+
 <mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)
 
-**Sber AI**: [Video](api-references/video-models/sber-ai/)
+**StepFun**: [Text/Chat](api-references/text-models-llm/stepfun/)
 
 **Tencent**: [Image](api-references/image-models/tencent/) [Video](api-references/video-models/tencent/) [3D](api-references/3d-generating-models/tencent/)
 

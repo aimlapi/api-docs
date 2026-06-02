@@ -138,6 +138,10 @@ Supported models:
 
 ***
 
+* [stepfun/step-3.7-flash](../api-references/text-models-llm/stepfun/step3.7-flash.md)
+
+***
+
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)

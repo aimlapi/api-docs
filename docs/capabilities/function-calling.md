@@ -218,6 +218,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [nvidia/nemotron-3-nano-30b-a3b](../api-references/text-models-llm/nvidia/nemotron-3-nano-30b-a3b.md)
 * [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning](../api-references/text-models-llm/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning.md)
 * [nvidia/nemotron-3-super-120b-a12b](../api-references/text-models-llm/nvidia/nemotron-3-super-120b-a12b.md)
+* [stepfun/step-3.7-flash](../api-references/text-models-llm/stepfun/step3.7-flash.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
 * [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)

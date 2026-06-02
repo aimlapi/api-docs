@@ -87,6 +87,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [openai/gpt-5-5-pro](../api-references/text-models-llm/openai/gpt-5-5-pro.md)
 * [perplexity/sonar](../api-references/text-models-llm/perplexity/sonar.md)
 * [perplexity/sonar-pro](../api-references/text-models-llm/perplexity/sonar-pro.md)
+* [stepfun/step-3.7-flash](../api-references/text-models-llm/stepfun/step3.7-flash.md)
 * [x-ai/grok-4-fast-non-reasoning](../api-references/text-models-llm/xai/grok-4-fast-non-reasoning.md)
 * [x-ai/grok-4-fast-reasoning](../api-references/text-models-llm/xai/grok-4-fast-reasoning.md)
 * [x-ai/grok-4-1-fast-non-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-non-reasoning.md)
@@ -205,6 +206,7 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 * [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
 * [google/gemini-3-1-flash-lite](../api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
 * [google/gemini-3-5-flash](../api-references/text-models-llm/google/gemini-3-5-flash.md)
+* [stepfun/step-3.7-flash](../api-references/text-models-llm/stepfun/step3.7-flash.md)
 
 </details>
 
