@@ -1,18 +1,18 @@
 [
   {
-    "name": "alibaba/qwen3.7-plus",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.7-plus",
-    "alias": "qwen3.7-plus",
+    "name": "alibaba/qwen3.5-omni-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.5-omni-flash",
+    "alias": "qwen3.5-omni-flash",
     "category": "text-models-llm",
     "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
   },
   {
-    "name": "stepfun/step-3.7-flash",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=stepfun/step-3.7-flash",
-    "alias": "step-3.7-flash",
+    "name": "alibaba/qwen3.5-flash",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=alibaba/qwen3.5-flash",
+    "alias": "qwen3.5-flash",
     "category": "text-models-llm",
-    "vendor": "StepFun",
+    "vendor": "Alibaba Cloud",
     "codeSamples": "chat-completion"
   }
 ]
