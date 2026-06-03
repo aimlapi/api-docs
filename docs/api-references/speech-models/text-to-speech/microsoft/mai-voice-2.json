@@ -1,0 +1,195 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/tts": {
+      "post": {
+        "operationId": "_v1_tts",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "microsoft/mai-voice-2"
+                    ]
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4096,
+                    "description": "The text content to be converted to speech.",
+                    "example": "Hello! This is a demo of Microsoft MAI-Voice-2 text to speech."
+                  },
+                  "voice": {
+                    "type": "string",
+                    "enum": [
+                      "en-US-AvaNeural",
+                      "en-US-AndrewNeural",
+                      "en-US-EmmaNeural",
+                      "en-US-BrianNeural",
+                      "en-US-JennyNeural",
+                      "en-US-GuyNeural",
+                      "en-US-AriaNeural",
+                      "en-US-DavisNeural",
+                      "en-US-JaneNeural",
+                      "en-US-NancyNeural",
+                      "en-US-TonyNeural",
+                      "en-US-SaraNeural",
+                      "en-US-Ava:DragonHDLatestNeural",
+                      "en-US-Andrew:DragonHDLatestNeural",
+                      "en-US-Emma:DragonHDLatestNeural",
+                      "en-US-Brian:DragonHDLatestNeural",
+                      "en-GB-SoniaNeural",
+                      "en-GB-RyanNeural",
+                      "fr-FR-DeniseNeural",
+                      "de-DE-KatjaNeural",
+                      "es-ES-ElviraNeural"
+                    ],
+                    "default": "en-US-AvaNeural",
+                    "description": "Name of the voice to be used.",
+                    "example": "en-US-AvaNeural"
+                  },
+                  "response_format": {
+                    "type": "string",
+                    "enum": [
+                      "mp3",
+                      "wav",
+                      "pcm"
+                    ],
+                    "default": "mp3",
+                    "description": "Format of the output content for non-streaming requests. Controls how the generated audio data is encoded in the response.",
+                    "example": "mp3"
+                  },
+                  "max_tokens": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "The maximum number of tokens that can be generated in the chat completion. This value can be used to control costs for text generated via API.",
+                    "example": 4096
+                  },
+                  "temperature": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2,
+                    "default": 1,
+                    "description": "What sampling temperature to use. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
+                    "example": 1
+                  },
+                  "top_p": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "default": 1,
+                    "description": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.",
+                    "example": 1
+                  },
+                  "max_completion_tokens": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and reasoning tokens.",
+                    "example": 4096
+                  },
+                  "stream": {
+                    "type": "boolean",
+                    "enum": [false],
+                    "default": false
+                  }
+                },
+                "required": [
+                  "model",
+                  "text"
+                ],
+                "title": "microsoft/mai-voice-2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "audio": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "The URL of the generated audio file."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "audio"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/tts' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"microsoft/mai-voice-2\",\n      \"text\": \"Hello! This is a demo of Microsoft MAI-Voice-2 text to speech.\",\n      \"voice\": \"en-US-AvaNeural\"\n    }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/tts', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"microsoft/mai-voice-2\",\n      \"text\": \"Hello! This is a demo of Microsoft MAI-Voice-2 text to speech.\",\n      \"voice\": \"en-US-AvaNeural\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/tts\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"microsoft/mai-voice-2\",\n      \"text\": \"Hello! This is a demo of Microsoft MAI-Voice-2 text to speech.\",\n      \"voice\": \"en-US-AvaNeural\"\n    }\n)\n\ndata = response.json()\nprint(json.dumps(data, indent=2, ensure_ascii=False))"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
