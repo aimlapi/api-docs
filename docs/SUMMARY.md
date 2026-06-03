@@ -274,7 +274,7 @@
   * [xAI](api-references/image-models/xai/README.md)
     * [Grok Imagine Image](api-references/image-models/xai/grok-imagine-image.md)
     * [Grok Imagine Image Pro](api-references/image-models/xai/grok-imagine-image-pro.md)
-  * [Microsoft](api-references/image-models/microsoft.md)
+  * [Microsoft](api-references/image-models/microsoft/README.md)
     * [MAI-Image 2.5](api-references/image-models/microsoft/mai-image-2.5.md)
 * [Video Models](api-references/video-models/README.md)
   * [Alibaba Cloud](api-references/video-models/alibaba-cloud/README.md)
