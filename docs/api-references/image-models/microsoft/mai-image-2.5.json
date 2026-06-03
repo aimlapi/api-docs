@@ -28,25 +28,51 @@
                   },
                   "prompt": {
                     "type": "string",
-                    "description": "A text description of the desired image."
+                    "minLength": 1,
+                    "maxLength": 4000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated.",
+                    "example": "A photorealistic red sports car on a winding coastal road at sunset, cinematic lighting."
                   },
-                  "n": {
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "1:1",
+                      "4:3",
+                      "3:4",
+                      "16:9",
+                      "9:16",
+                      "3:2",
+                      "2:3"
+                    ],
+                    "default": "1:1",
+                    "description": "The aspect ratio of the generated image.",
+                    "example": "16:9"
+                  },
+                  "max_tokens": {
                     "type": "integer",
+                    "minimum": 1,
+                    "description": "The maximum number of tokens that can be generated. This value can be used to control costs for text generated via API.",
+                    "example": 4096
+                  },
+                  "temperature": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2,
                     "default": 1,
-                    "description": "The number of images to generate."
+                    "description": "What sampling temperature to use. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.",
+                    "example": 1
                   },
-                  "size": {
-                    "type": "string",
-                    "description": "The size of the generated images. Supported sizes vary by model."
-                  },
-                  "response_format": {
-                    "type": "string",
-                    "enum": ["url", "b64_json"],
-                    "default": "url",
-                    "description": "The format in which the generated images are returned."
+                  "max_completion_tokens": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and reasoning tokens.",
+                    "example": 4096
                   }
                 },
-                "required": ["model", "prompt"],
+                "required": [
+                  "model",
+                  "prompt"
+                ],
                 "title": "microsoft/mai-image-2.5"
               }
             }
@@ -61,20 +87,52 @@
                   "properties": {
                     "data": {
                       "type": "array",
+                      "nullable": true,
                       "items": {
                         "type": "object",
                         "properties": {
                           "url": {
                             "type": "string",
-                            "format": "uri",
-                            "description": "The URL of the generated image."
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
                           },
                           "b64_json": {
                             "type": "string",
-                            "description": "The base64-encoded JSON of the generated image."
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
                           }
                         }
-                      }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
                     }
                   }
                 }
@@ -86,15 +144,15 @@
         "x-codeSamples": [
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A futuristic city at night with neon lights reflecting on wet streets\"\n    }'"
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A photorealistic red sports car on a winding coastal road at sunset, cinematic lighting.\"\n    }'"
           },
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A futuristic city at night with neon lights reflecting on wet streets\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A photorealistic red sports car on a winding coastal road at sunset, cinematic lighting.\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\nimport json\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A futuristic city at night with neon lights reflecting on wet streets\"\n    }\n)\n\ndata = response.json()\nprint(json.dumps(data, indent=2, ensure_ascii=False))"
+            "source": "import requests\nimport json\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"microsoft/mai-image-2.5\",\n      \"prompt\": \"A photorealistic red sports car on a winding coastal road at sunset, cinematic lighting.\"\n    }\n)\n\ndata = response.json()\nprint(json.dumps(data, indent=2, ensure_ascii=False))"
           }
         ]
       }
