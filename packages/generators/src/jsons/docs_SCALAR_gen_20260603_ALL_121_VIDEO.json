@@ -387,8 +387,16 @@
   },
   {
     "name": "google/veo-3-1-lite-generate-preview",
-    "url": "https://ai-staging.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3-1-lite-generate-preview",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=google/veo-3-1-lite-generate-preview",
     "alias": "veo-3-1-lite-generate-preview",
+    "category": "video-models",
+    "vendor": "Google",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "veo-3.1-lite-generate-001",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veo-3.1-lite-generate-001",
+    "alias": "veo-3.1-lite-generate-001",
     "category": "video-models",
     "vendor": "Google",
     "codeSamples": "video:video"
@@ -993,6 +1001,22 @@
     "category": "video-models",
     "vendor": "VEED",
     "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=veed/fabric-1.0",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "x-ai/grok-imagine-video-1.5-preview",
+    "alias": "grok-imagine-video-1.5-preview",
+    "category": "video-models",
+    "vendor": "xAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video-1.5-preview",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "x-ai/grok-imagine-video",
+    "alias": "grok-imagine-video",
+    "category": "video-models",
+    "vendor": "xAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video",
     "codeSamples": "video:video"
   }
 ]
