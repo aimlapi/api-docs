@@ -277,7 +277,7 @@ main();
 
 </details>
 
-**Processing time**: \~ 2 min 50 sec.
+**Processing time**: \~ 1 min 4 sec.
 
 **Generated video** (1280x720, with sound):
 
