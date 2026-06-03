@@ -149,7 +149,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **VEED**: [Video](api-references/video-models/veed/)
 
-**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)
+**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)   [Video](api-references/video-models/xai/)
 
 **Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
