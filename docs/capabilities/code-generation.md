@@ -73,6 +73,7 @@ Let's go over this again: any [text chat model](../api-references/model-database
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [x-ai/grok-4-20-0309-non-reasoning](../api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
 * [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
+* [x-ai/grok-build-0-1](../api-references/text-models-llm/xai/grok-build-0-1.md)
 * [xiaomi/mimo-v2.5](../api-references/text-models-llm/xiaomi/mimo-v2.5.md)
 * [xiaomi/mimo-v2.5-pro](../api-references/text-models-llm/xiaomi/mimo-v2.5-pro.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)

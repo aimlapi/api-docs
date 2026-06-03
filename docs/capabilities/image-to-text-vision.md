@@ -35,7 +35,6 @@ The sections below explain how to work with image and video inputs, along with r
 * [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
 * [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
 * [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
-* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
 * [google/gemma-3-4b-it](../api-references/text-models-llm/google/gemma-3.md)
@@ -94,6 +93,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
 * [x-ai/grok-4-20-0309-non-reasoning](../api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
 * [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
+* [x-ai/grok-build-0-1](../api-references/text-models-llm/xai/grok-build-0-1.md)
 * [xiaomi/mimo-v2.5](../api-references/text-models-llm/xiaomi/mimo-v2.5.md)
 
 </details>

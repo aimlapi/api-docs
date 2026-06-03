@@ -143,7 +143,6 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
-* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
@@ -232,6 +231,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
 * [x-ai/grok-4-20-0309-non-reasoning](../api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
 * [x-ai/grok-4-20-0309-reasoning](../api-references/text-models-llm/xai/grok-4-20-reasoning.md)
+* [x-ai/grok-build-0-1](../api-references/text-models-llm/xai/grok-build-0-1.md)
 * [xiaomi/mimo-v2.5](../api-references/text-models-llm/xiaomi/mimo-v2.5.md)
 * [xiaomi/mimo-v2.5-pro](../api-references/text-models-llm/xiaomi/mimo-v2.5-pro.md)
 * [zhipu/glm-4.5-air](../api-references/text-models-llm/zhipu/glm-4.5-air.md)

@@ -184,6 +184,7 @@
     * [grok-4.1-fast-reasoning](api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)
     * [grok-4.20-non-reasoning](api-references/text-models-llm/xai/grok-4-20-non-reasoning.md)
     * [grok-4.20-reasoning](api-references/text-models-llm/xai/grok-4-20-reasoning.md)
+    * [grok-build-0-1](api-references/text-models-llm/xai/grok-build-0-1.md)
   * [Xiaomi](api-references/text-models-llm/xiaomi/README.md)
     * [mimo-v2-flash](api-references/text-models-llm/xiaomi/mimo-v2-flash.md)
     * [mimo-v2.5](api-references/text-models-llm/xiaomi/mimo-v2.5.md)
