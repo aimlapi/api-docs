@@ -1,22 +1,22 @@
-# MAI-Image 2.5
+# MAI-Voice 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `microsoft/mai-image-2.5`
+* `microsoft/mai-voice-2`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/microsoft/mai-image-2.5" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/microsoft/mai-voice-2" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-MAI-Image 2.5 — image generation model from Microsoft. Produces photorealistic and artistic images from text prompts with support for multiple aspect ratios.
+MAI-Voice-2 — text-to-speech model from Microsoft. Generates natural and expressive speech with support for multiple languages, voices, and audio formats.
 
 ## Setup your API Key
 
@@ -24,13 +24,13 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 
 ## API Schema
 
-{% openapi-operation spec="microsoft-mai-image-2-5" path="/v1/images/generations" method="post" %}
-[OpenAPI microsoft-mai-image-2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/microsoft/mai-image-2.5.json)
+{% openapi-operation spec="microsoft-mai-voice-2" path="/v1/tts" method="post" %}
+[OpenAPI microsoft-mai-voice-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/text-to-speech/microsoft/mai-voice-2.json)
 {% endopenapi-operation %}
 
 ## Quick Example
 
-Let's generate an image using a text prompt.
+Let's convert text to speech using MAI-Voice-2.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -41,15 +41,16 @@ import json
 
 def main():
     response = requests.post(
-        "https://api.aimlapi.com/v1/images/generations",
+        "https://api.aimlapi.com/v1/tts",
         headers={
             # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
             "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
             "Content-Type": "application/json",
         },
         json={
-            "model": "microsoft/mai-image-2.5",
-            "prompt": "A futuristic city at night with neon lights reflecting on wet streets",
+            "model": "microsoft/mai-voice-2",
+            "text": "Hello! This is a demo of Microsoft MAI-Voice-2 text to speech.",
+            "voice": "en-US-AvaNeural",
         }
     )
 
@@ -66,7 +67,7 @@ if __name__ == "__main__":
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-    const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+    const response = await fetch('https://api.aimlapi.com/v1/tts', {
       method: 'POST',
       headers: {
         // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
@@ -74,8 +75,9 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'microsoft/mai-image-2.5',
-        prompt: 'A futuristic city at night with neon lights reflecting on wet streets',
+        model: 'microsoft/mai-voice-2',
+        text: 'Hello! This is a demo of Microsoft MAI-Voice-2 text to speech.',
+        voice: 'en-US-AvaNeural',
       }),
     });
 
@@ -96,16 +98,13 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "data": [
-    {
-      "b64_json": null,
-      "url": "https://cdn.aimlapi.com/generations/openai-image-generation/1780519847349-43113302-c43a-4d84-9e32-083f33830b44.png"
-    }
-  ],
+  "audio": {
+    "url": "https://cdn.aimlapi.com/generations/hedgehog/1780519639675-af9220f1-4f1b-407f-8920-814e5d69b46c.mp3"
+  },
   "meta": {
     "usage": {
-      "credits_used": 125367,
-      "usd_spent": 0.0626835
+      "credits_used": 3547,
+      "usd_spent": 0.0017735
     }
   }
 }
