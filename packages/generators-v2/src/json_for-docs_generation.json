@@ -1,10 +1,18 @@
 [
   {
-    "name": "x-ai/grok-build-0-1",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=openai/chat-completions&model=x-ai/grok-build-0-1",
-    "alias": "grok-build-0-1",
-    "category": "text-models-llm",
+    "name": "x-ai/grok-imagine-video-1.5-preview",
+    "alias": "grok-imagine-video-1.5-preview",
+    "category": "video-models",
     "vendor": "xAI",
-    "codeSamples": "chat-completion"
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video-1.5-preview",
+    "codeSamples": "video:video"
+  },
+  {
+    "name": "x-ai/grok-imagine-video",
+    "alias": "grok-imagine-video",
+    "category": "video-models",
+    "vendor": "xAI",
+    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video",
+    "codeSamples": "video:video"
   }
 ]
