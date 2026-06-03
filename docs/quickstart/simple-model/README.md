@@ -766,5 +766,5 @@ Output formatting: from the model’s full response, only the generated text is 
 * [Move to production-ready models: see the guide for connecting GPT-4o](requesting-more-advanced-models/)
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Know more about supported SDKs](../supported-sdks.md)
-* [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
+* [Learn more about special text model capabilities](https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/capabilities)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

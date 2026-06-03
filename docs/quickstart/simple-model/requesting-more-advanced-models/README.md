@@ -906,7 +906,7 @@ print(json.dumps(response.model_dump(), indent=2, ensure_ascii=False))
 
 ## **Web search integration**
 
-With _search‑preview_ models, you can perform live web search queries in combination with the model to get up‑to‑date results and grounded responses.&#x20;
+With _search‑preview_ models, you can perform live web search queries in combination with the model to get up‑to‑date results and grounded responses.
 
 {% hint style="info" %}
 See [the complete list of our search‑capable models](../../../capabilities/web-search.md#models-that-support-web-search).
@@ -1102,5 +1102,5 @@ The specific meaning of "AGI" depends on the context in which it is used.
 
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Know more about supported SDKs](../../supported-sdks.md)
-* [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
+* [Learn more about special text model capabilities](https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/capabilities)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

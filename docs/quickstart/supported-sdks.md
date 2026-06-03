@@ -17,9 +17,9 @@ The **REST API** itself is _not_ an SDK. It is the **server-side interface** tha
 
 ***
 
-An **SDK** (Software Development Kit) is a **client-side library** that wraps around the REST API. It handles details like building HTTP requests, serializing/deserializing JSON, error handling, retries, and sometimes additional conveniences.&#x20;
+An **SDK** (Software Development Kit) is a **client-side library** that wraps around the REST API. It handles details like building HTTP requests, serializing/deserializing JSON, error handling, retries, and sometimes additional conveniences.
 
-You can skip the SDK and call the REST API directly via cURL, fetch, requests, etc. \
+You can skip the SDK and call the REST API directly via cURL, fetch, requests, etc.\
 The SDK just makes your life easier; the REST API is the “core interface” the SDK talks to.
 
 ***
@@ -412,7 +412,7 @@ python3 <your_script_name>.py
 
 * [Check our full list of model IDs](../api-references/model-database.md)
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
-* [Learn more about special text model capabilities](/broken/pages/qQxIeD1HucvN1Duoxrk0)
+* [Learn more about special text model capabilities](https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/capabilities)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)
 
 [^1]: An SDK (Software Development Kit) is a **client-side library** that wraps around the REST API.

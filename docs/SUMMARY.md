@@ -39,7 +39,7 @@
     * [qwen3.6-35b-a3b](api-references/text-models-llm/alibaba-cloud/qwen3.6-35b-a3b.md)
     * [qwen3.6-flash](api-references/text-models-llm/alibaba-cloud/qwen3.6-flash.md)
     * [qwen3.6-plus](api-references/text-models-llm/alibaba-cloud/qwen3.6-plus.md)
-    * [qwen3.6-max-preview](api-references/text-models-llm/alibaba-cloud/qwen3.6-plus-1.md)
+    * [qwen3.6-max-preview](api-references/text-models-llm/alibaba-cloud/qwen3.6-max-preview.md)
     * [qwen3.7-max](api-references/text-models-llm/alibaba-cloud/qwen3.7-max.md)
     * [qwen3.7-plus](api-references/text-models-llm/alibaba-cloud/qwen3.7-plus.md)
   * [Anthracite](api-references/text-models-llm/Anthracite/README.md)
