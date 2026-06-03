@@ -440,6 +440,7 @@
       * [whisper-tiny](api-references/speech-voice-models/stt/OpenAI/whisper-tiny.md)
       * [gpt-4o-transcribe](api-references/speech-models/speech-to-text/openai/gpt-4o-transcribe.md)
       * [gpt-4o-mini-transcribe](api-references/speech-models/speech-to-text/openai/gpt-4o-mini-transcribe.md)
+    * [MAI-Transcribe 1.5](api-references/speech-models/speech-to-text/mai-transcribe-1.5.md)
   * [Text-to-Speech](api-references/speech-models/text-to-speech/README.md)
     * [Alibaba Cloud](api-references/speech-models/text-to-speech/alibaba-cloud/README.md)
       * [qwen3-tts-flash](api-references/speech-models/text-to-speech/alibaba-cloud/qwen3-tts-flash.md)
