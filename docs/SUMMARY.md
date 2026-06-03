@@ -90,7 +90,6 @@
     * [DeepSeek V4 Pro](api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
     * [DeepSeek V4 Flash](api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
   * [Google](api-references/text-models-llm/Google/README.md)
-    * [gemini-2.0-flash](api-references/text-models-llm/google/gemini-2.0-flash.md)
     * [gemini-2.5-flash-lite-preview](api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
     * [gemini-2.5-flash](api-references/text-models-llm/google/gemini-2.5-flash.md)
     * [gemini-2.5-pro](api-references/text-models-llm/google/gemini-2.5-pro.md)

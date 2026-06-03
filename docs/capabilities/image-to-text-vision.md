@@ -35,7 +35,7 @@ The sections below explain how to work with image and video inputs, along with r
 * [bytedance/dola-seed-2-0-lite](../api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
 * [bytedance/dola-seed-2-0-pro](../api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
 * [bytedance/dola-seed-2-0-code](../api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
-* [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
+* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
 * [google/gemma-3-4b-it](../api-references/text-models-llm/google/gemma-3.md)

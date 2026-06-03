@@ -81,7 +81,7 @@ These models have been tested by our team for compatibility with Roo Code integr
 * [qwen-plus](../api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
 * [qwen-turbo](../api-references/text-models-llm/Alibaba-Cloud/qwen-turbo.md)
 * [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/Anthracite/magnum-v4.md)
-* [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
+* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [mistralai/mistral-nemo](../api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
 * [MiniMax-Text-01](../api-references/text-models-llm/MiniMax/text-01.md)
 * [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)

@@ -58,23 +58,15 @@ You will go from account creation to receiving your first AI response in just a 
 *   Go to [https://n8n.io/](https://n8n.io/) and click **Sign Up**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-1.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Fill out the registration form.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-2.png" alt="" width="375"><figcaption></figcaption></figure></div>
-
-
 *   Wait while your workspace is created.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-3 (1).png" alt="" width="512"><figcaption></figcaption></figure></div>
-
-
 *   You will be redirected to your personal n8n workspace.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-4.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Click **Start from scratch** to open the editor.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-5.png" alt=""><figcaption></figcaption></figure></div>
@@ -89,8 +81,6 @@ You will go from account creation to receiving your first AI response in just a 
     ![](../.gitbook/assets/step-8.png)<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-9.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
 ***
 
@@ -119,13 +109,9 @@ You will go from account creation to receiving your first AI response in just a 
     <div align="left"><figure><img src="../.gitbook/assets/step-14.png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-15.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Paste your **API key**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-16.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Click **Save**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-17.png" alt=""><figcaption></figcaption></figure></div>
@@ -137,15 +123,11 @@ You will go from account creation to receiving your first AI response in just a 
 *   Select the model (e.g. `GPT 4o`) in the **Model Name or ID** field.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-18.png" alt="" width="307"><figcaption></figcaption></figure></div>
-
-
 *   Click **Execute previous node** to simulate user input and activate the chat input panel.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-19 (1).png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-20.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   Type a test message in the input field (e.g. “Tell me a fun fact”) and click **Send**.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-21.png" alt=""><figcaption></figcaption></figure></div>
@@ -160,14 +142,10 @@ You will go from account creation to receiving your first AI response in just a 
     <div align="left"><figure><img src="../.gitbook/assets/step-22.png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-23.png" alt=""><figcaption></figcaption></figure></div>
-
-
 *   In the expression editor, expand **chatInput** on the left.\
     Drag and drop it into the **Prompt** field.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-24.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
     <div align="left"><figure><img src="../.gitbook/assets/step-25-full.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -176,8 +154,6 @@ You will go from account creation to receiving your first AI response in just a 
 *   Exit the node editor and click **Execute Node** (or the full workflow ▶️ button).<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/step-26 (1).png" alt=""><figcaption></figcaption></figure></div>
-
-
 * You will see the AI/ML API response in the **Output** tab.\
   \
   ![](../.gitbook/assets/step-27.png)
@@ -254,7 +230,7 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 <table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>openai/gpt-4o</code></td></tr><tr><td>User Message</td><td><code>"Give me ideas for YouTube channels"</code></td></tr><tr><td>Temperature</td><td><code>0.7</code></td></tr></tbody></table>
 
-#### [Gemini 2.0 Flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
+#### [Gemini 2.0 Flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 
 <table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>google/gemini-2.0-flash</code></td></tr><tr><td>User Message</td><td><code>"Write a summary of the latest Apple event"</code></td></tr></tbody></table>
 

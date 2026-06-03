@@ -143,7 +143,7 @@ print(json.dumps(response.choices[0].message.model_dump()['tool_calls'], indent=
 
 ***
 
-* [google/gemini-2.0-flash](../api-references/text-models-llm/google/gemini-2.0-flash.md)
+* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [google/gemini-2.5-flash-lite-preview](../api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
 * [google/gemini-2.5-flash](../api-references/text-models-llm/google/gemini-2.5-flash.md)
 * [google/gemini-2.5-pro](../api-references/text-models-llm/google/gemini-2.5-pro.md)
