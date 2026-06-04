@@ -1,0 +1,163 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "bytedance/dreamina-creative-upscale"
+                    ]
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL or data URL of the input image to upscale. Supported formats: JPEG, PNG. Maximum file size: 4.7 MB. Maximum resolution: 4096×4096 px.",
+                    "example": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png"
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "2k",
+                      "4k"
+                    ],
+                    "default": "2k",
+                    "description": "Target output resolution. Use '2k' for standard upscaling or '4k' for ultra-high-definition output.",
+                    "example": "2k"
+                  },
+                  "scale": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "default": 50,
+                    "description": "Degree of detail generation during upscaling, from 0 (minimal enhancement) to 100 (maximum detail generation). Higher values produce more generated detail but may diverge from the source image.",
+                    "example": 50
+                  },
+                  "response_format": {
+                    "type": "string",
+                    "enum": [
+                      "url",
+                      "b64_json"
+                    ],
+                    "default": "url",
+                    "description": "Format of the returned image. Use 'url' to receive a hosted download link, or 'b64_json' to receive the image as base64-encoded data.",
+                    "example": "url"
+                  }
+                },
+                "required": [
+                  "model",
+                  "image_url"
+                ],
+                "title": "bytedance/dreamina-creative-upscale"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the upscaled image can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded data of the upscaled image. Populated only when response_format is 'b64_json'.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list containing the upscaled image."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of credits consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount spent in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"bytedance/dreamina-creative-upscale\",\n      \"image_url\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png\",\n      \"resolution\": \"2k\",\n      \"scale\": 50,\n      \"response_format\": \"url\"\n    }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"bytedance/dreamina-creative-upscale\",\n      \"image_url\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png\",\n      \"resolution\": \"2k\",\n      \"scale\": 50,\n      \"response_format\": \"url\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"bytedance/dreamina-creative-upscale\",\n      \"image_url\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png\",\n      \"resolution\": \"2k\",\n      \"scale\": 50,\n      \"response_format\": \"url\"\n    }\n)\n\ndata = response.json()\nprint(json.dumps(data, indent=2, ensure_ascii=False))"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
