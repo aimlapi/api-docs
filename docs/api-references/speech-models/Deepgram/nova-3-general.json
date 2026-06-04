@@ -1,0 +1,359 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/stt/create": {
+      "post": {
+        "operationId": "_v1_stt_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "nova-3-general"
+                    ]
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the input audio file. Provide either url or audio — exactly one is required, not both.",
+                    "example": "https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3"
+                  },
+                  "audio": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The audio file to transcribe. Provide either url or audio — exactly one is required, not both."
+                  },
+                  "language": {
+                    "type": "string",
+                    "description": "The BCP-47 language tag that hints at the primary spoken language. Depending on the model and API endpoint you choose, only certain languages are available.",
+                    "example": "en"
+                  },
+                  "punctuate": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Adds punctuation and capitalization to the transcript."
+                  },
+                  "smart_format": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Applies formatting to transcript output. When set to true, additional formatting will be applied to transcripts to improve readability."
+                  },
+                  "diarize": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Recognizes speaker changes. Each word in the transcript will be assigned a speaker number starting at 0."
+                  },
+                  "multichannel": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Enable Multichannel transcription, can be true or false."
+                  },
+                  "paragraphs": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Splits audio into paragraphs to improve transcript readability."
+                  },
+                  "utterances": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Segments speech into meaningful semantic units."
+                  },
+                  "utt_split": {
+                    "type": "number",
+                    "description": "Seconds to wait before detecting a pause between words in submitted audio."
+                  },
+                  "detect_language": {
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "boolean",
+                        "nullable": true
+                      }
+                    ],
+                    "description": "Enables language detection to identify the dominant language spoken in the submitted audio."
+                  },
+                  "detect_entities": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "When Entity Detection is enabled, the Punctuation feature will be enabled by default."
+                  },
+                  "intents": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Recognizes speaker intent throughout a transcript or text."
+                  },
+                  "sentiment": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Recognizes the sentiment throughout a transcript or text."
+                  },
+                  "topics": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Detects topics throughout a transcript or text."
+                  },
+                  "summarize": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ],
+                    "description": "Summarizes content. For Listen API, supports string version option. For Read API, accepts boolean only."
+                  },
+                  "custom_intent": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "A custom intent you want the model to detect within your input audio if present. Submit up to 100."
+                  },
+                  "custom_intent_mode": {
+                    "type": "string",
+                    "enum": [
+                      "strict",
+                      "extended"
+                    ],
+                    "description": "Sets how the model will interpret strings submitted to the custom_intent param. When strict, the model will only return intents submitted using the custom_intent param. When extended, the model will return its own detected intents in addition to those submitted."
+                  },
+                  "custom_topic": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "A custom topic you want the model to detect within your input audio if present. Submit up to 100."
+                  },
+                  "custom_topic_mode": {
+                    "type": "string",
+                    "enum": [
+                      "strict",
+                      "extended"
+                    ],
+                    "description": "Sets how the model will interpret strings submitted to the custom_topic param. When strict, the model will only return topics submitted using the custom_topic param. When extended, the model will return its own detected topics in addition to those submitted."
+                  },
+                  "keyterm": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Keyterm Prompting (Nova-3 General only): boost recognition of specialized terms, brands, and proper nouns. Pass a single term or an array of terms."
+                  },
+                  "filler_words": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Filler Words can help transcribe interruptions in your audio, like \"uh\" and \"um\"."
+                  },
+                  "profanity_filter": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Profanity Filter looks for recognized profanity and converts it to the nearest recognized non-profane word or removes it from the transcript completely."
+                  },
+                  "redact": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Redact sensitive information from the transcript. Common values: pii, pci, numbers."
+                  },
+                  "replace": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Search for terms and replace them in the transcript. Provide \"find:replace\" pairs."
+                  },
+                  "search": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Search for terms or phrases in submitted audio."
+                  },
+                  "dictation": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Identifies and extracts key entities from content in submitted audio."
+                  },
+                  "measurements": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Spoken measurements will be converted to their corresponding abbreviations."
+                  },
+                  "numerals": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Numerals converts numbers from written format to numerical format."
+                  },
+                  "encoding": {
+                    "type": "string",
+                    "enum": [
+                      "linear16",
+                      "flac",
+                      "mulaw",
+                      "amr-nb",
+                      "amr-wb",
+                      "opus",
+                      "speex",
+                      "g729"
+                    ],
+                    "description": "Expected encoding of the submitted audio (used mainly for raw audio)."
+                  },
+                  "tag": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Labels your requests for the purpose of identification during usage reporting."
+                  },
+                  "extra": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ],
+                    "description": "Arbitrary key-value pairs that are attached to the API response for usage in downstream processing."
+                  },
+                  "mip_opt_out": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Opt out of the Deepgram Model Improvement Program for this request."
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "Model version to use (e.g. \"latest\" or a specific version string). Defaults to latest."
+                  }
+                },
+                "required": [
+                  "model"
+                ],
+                "title": "nova-3-general"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "generation_id": {
+                      "type": "string",
+                      "description": "The unique identifier of the created transcription task. Use this ID to retrieve the result via GET /v1/stt/{generation_id}.",
+                      "example": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+                    }
+                  },
+                  "required": [
+                    "generation_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/stt/create' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"nova-3-general\",\n      \"url\": \"https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3\"\n    }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/stt/create', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"nova-3-general\",\n      \"url\": \"https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3\"\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/stt/create\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"nova-3-general\",\n      \"url\": \"https://audio-samples.github.io/samples/mp3/blizzard_primed/sample-0.mp3\"\n    }\n)\n\ndata = response.json()\nprint(json.dumps(data, indent=2, ensure_ascii=False))"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
