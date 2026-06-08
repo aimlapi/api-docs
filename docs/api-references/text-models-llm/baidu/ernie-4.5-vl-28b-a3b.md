@@ -1,6 +1,8 @@
+---
+hidden: true
+---
+
 # ernie-4.5-vl-28b-a3b
-
-
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -18,7 +20,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A post-trained LLM with 28B total parameters and 3B activated parameters per token. \
+A post-trained LLM with 28B total parameters and 3B activated parameters per token.\
 A non-reasoning variant with image and PDF input support.
 
 {% hint style="success" %}
