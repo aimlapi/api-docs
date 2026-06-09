@@ -28,7 +28,7 @@ Returns all API keys for your account, including each key’s settings and metad
 
 ### Get the API key
 
-Retrieve parameters of the AIMLAPI key used in the request.
+Retrieve parameters of the most recently used API key.
 
 {% openapi-operation spec="key-get" path="/v1/key" method="get" %}
 [OpenAPI key-get](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/key-get.json)
