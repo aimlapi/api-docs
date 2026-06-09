@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # DALL·E 3
 
 {% columns %}
