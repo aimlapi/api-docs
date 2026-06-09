@@ -11,7 +11,7 @@ Open the API reference and copy a working example to integrate it into your code
 
 **Trending Models**
 
-<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Pro-Grade Image Model</td><td><a href=".gitbook/assets/nano_banana_2_cover_v3.png">nano_banana_2_cover_v3.png</a></td><td><a href="api-references/image-models/google/gemini-3.1-flash-image.md">gemini-3.1-flash-image.md</a></td></tr><tr><td align="center">Advanced coding &#x26; Reasoning</td><td><a href=".gitbook/assets/opus_4_8_cover.png">opus_4_8_cover.png</a></td><td><a href="api-references/text-models-llm/anthropic/claude-4.8-opus.md">claude-4.8-opus.md</a></td></tr><tr><td align="center">Cinematic Video Generation</td><td><a href=".gitbook/assets/seedance_2_0_cover_v2.png">seedance_2_0_cover_v2.png</a></td><td><a href="api-references/video-models/bytedance/seedance-2.0.md">seedance-2.0.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Pro-Grade Image Model</td><td><a href=".gitbook/assets/nano_banana_2_cover_v3.png">nano_banana_2_cover_v3.png</a></td><td><a href="api-references/image-models/google/gemini-3.1-flash-image.md">gemini-3.1-flash-image.md</a></td></tr><tr><td align="center">Frontier Coding &#x26; Reasoning</td><td><a href=".gitbook/assets/fable-5-cover_v2.png">fable-5-cover_v2.png</a></td><td><a href="api-references/text-models-llm/anthropic/claude-fable-5.md">claude-fable-5.md</a></td></tr><tr><td align="center">Cinematic Video Generation</td><td><a href=".gitbook/assets/seedance_2_0_cover_v2.png">seedance_2_0_cover_v2.png</a></td><td><a href="api-references/video-models/bytedance/seedance-2.0.md">seedance-2.0.md</a></td></tr></tbody></table>
 
 ***
 
@@ -149,7 +149,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **VEED**: [Video](api-references/video-models/veed/)
 
-**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/)   [Video](api-references/video-models/xai/)
+**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/) [Video](api-references/video-models/xai/)
 
 **Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
