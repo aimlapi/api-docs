@@ -3,12 +3,12 @@
 <table data-header-hidden data-full-width="true"><thead><tr><th width="185.762939453125" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="api-key-management.md#create-an-api-key">Create a new API key</a></td><td valign="top"><mark style="color:$warning;"><strong><code>POST</code></strong></mark> <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top"><a href="api-key-management.md#list-api-keys">List API keys</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v1/keys</code></td></tr><tr><td valign="top"><a href="api-key-management.md#get-the-api-key">Get the API key</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v1/key</code></td></tr><tr><td valign="top"><a href="api-key-management.md#update-an-api-key">Update an API key</a></td><td valign="top"><mark style="color:purple;"><strong><code>PATCH</code></strong></mark> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr><tr><td valign="top"><a href="api-key-management.md#delete-an-api-key">Delete an API key</a></td><td valign="top"><mark style="color:$danger;"><strong><code>DELETE</code></strong></mark> <code>https://api.aimlapi.com/v1/keys/{prefix}</code></td></tr></tbody></table>
 
 {% hint style="warning" %}
-Before you start you should create [a managment key](../../faq/how-can-i-work-with-my-api-keys.md#management-keys).
+Before you start you should create [a management key](../../faq/how-can-i-work-with-my-api-keys.md#management-keys).
 {% endhint %}
 
 ### Create a new API key
 
-Copy the created key and store it in a secure location. If the key is lost, create a new one.&#x20;
+Copy the created key and store it in a secure location. If the key is lost, create a new one.
 
 {% openapi-operation spec="keys-post" path="/v1/keys" method="post" %}
 [OpenAPI keys-post](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/keys-post.json)
