@@ -359,7 +359,7 @@
     * [o1/reference-to-video](api-references/video-models/kling-ai/video-o1-reference-to-video.md)
     * [o1/video-to-video/edit](api-references/video-models/kling-ai/video-o1-video-to-video-edit.md)
     * [o1/video-to-video-reference](api-references/video-models/kling-ai/video-o1-video-to-video-reference.md)
-    * [v2.6/motion-control](api-references/video-models/kling-ai/video-v2.6-pro-motion-control.md)
+    * [v2.6/motion-control](api-references/video-models/kling-ai/video-v2.6-motion-control.md)
     * [v3/motion control](api-references/video-models/kling-ai/v3-motion-control.md)
     * [v3-standard/text-to-video](api-references/video-models/kling-ai/v3-standard-text-to-video.md)
     * [v3-standard/image-to-video](api-references/video-models/kling-ai/v3-standard-image-to-video.md)
