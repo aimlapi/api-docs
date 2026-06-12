@@ -26,6 +26,11 @@
                       "klingai/video-v3-pro-image-to-video"
                     ]
                   },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
+                  },
                   "prompt": {
                     "type": "string",
                     "description": "Text prompt for video generation. Either prompt or multi_prompt must be provided, but not both."

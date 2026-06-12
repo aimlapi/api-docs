@@ -26,6 +26,11 @@
                       "baidu/ernie-4.5-21b-a3b-thinking"
                     ]
                   },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
+                  },
                   "messages": {
                     "type": "array",
                     "items": {

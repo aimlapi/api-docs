@@ -26,6 +26,11 @@
                       "kling-video/v1.6/standard/text-to-video"
                     ]
                   },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
+                  },
                   "prompt": {
                     "type": "string",
                     "description": "The text description of the scene, subject, or action to generate in the video."
