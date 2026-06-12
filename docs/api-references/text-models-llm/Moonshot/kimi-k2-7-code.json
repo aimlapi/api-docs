@@ -26,11 +26,6 @@
                       "moonshot/kimi-k2-7-code"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -65,27 +60,6 @@
                                       "text": {
                                         "type": "string",
                                         "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
                                       }
                                     },
                                     "required": [
@@ -137,35 +111,13 @@
                                       "text": {
                                         "type": "string",
                                         "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
                                       }
                                     },
                                     "required": [
                                       "type",
                                       "text"
                                     ]
-                                  },
-                                  "minItems": 1
+                                  }
                                 }
                               ],
                               "description": "The contents of the system message."
@@ -178,7 +130,8 @@
                           "required": [
                             "role",
                             "content"
-                          ]
+                          ],
+                          "additionalProperties": false
                         },
                         {
                           "type": "object",
@@ -191,56 +144,7 @@
                               "description": "The role of the author of the message — in this case, the tool."
                             },
                             "content": {
-                              "anyOf": [
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "text"
-                                        ],
-                                        "description": "The type of the content part."
-                                      },
-                                      "text": {
-                                        "type": "string",
-                                        "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
-                                      }
-                                    },
-                                    "required": [
-                                      "type",
-                                      "text"
-                                    ]
-                                  },
-                                  "minItems": 1
-                                }
-                              ],
+                              "type": "string",
                               "description": "The contents of the tool message."
                             },
                             "tool_call_id": {
@@ -257,7 +161,8 @@
                             "role",
                             "content",
                             "tool_call_id"
-                          ]
+                          ],
+                          "additionalProperties": false
                         },
                         {
                           "type": "object",
@@ -292,27 +197,6 @@
                                           "text": {
                                             "type": "string",
                                             "description": "The text content."
-                                          },
-                                          "cache_control": {
-                                            "type": "object",
-                                            "properties": {
-                                              "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                  "ephemeral"
-                                                ]
-                                              },
-                                              "ttl": {
-                                                "type": "string",
-                                                "enum": [
-                                                  "5m",
-                                                  "1h"
-                                                ]
-                                              }
-                                            },
-                                            "required": [
-                                              "type"
-                                            ]
                                           }
                                         },
                                         "required": [
@@ -343,9 +227,6 @@
                                     ]
                                   },
                                   "description": "An array of content parts with a defined type. Can be one or more of type text, or exactly one of type refusal."
-                                },
-                                {
-                                  "nullable": true
                                 }
                               ],
                               "description": "The contents of the Assistant message. Required unless tool_calls or function_call is specified."
@@ -357,99 +238,42 @@
                             "tool_calls": {
                               "type": "array",
                               "items": {
-                                "oneOf": [
-                                  {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string",
-                                        "description": "The ID of the tool call."
-                                      },
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "function"
-                                        ],
-                                        "description": "The type of the tool. Currently, only function is supported."
-                                      },
-                                      "function": {
-                                        "type": "object",
-                                        "properties": {
-                                          "name": {
-                                            "type": "string",
-                                            "description": "The name of the function to call."
-                                          },
-                                          "arguments": {
-                                            "type": "string",
-                                            "description": "The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function."
-                                          }
-                                        },
-                                        "required": [
-                                          "name",
-                                          "arguments"
-                                        ],
-                                        "description": "The function that the model called."
-                                      },
-                                      "extra_content": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                          "nullable": true
-                                        },
-                                        "description": "Opaque provider metadata for this tool call (e.g. Gemini thought_signature). Echo it back unchanged on the next turn."
-                                      }
-                                    },
-                                    "required": [
-                                      "id",
-                                      "type",
-                                      "function"
-                                    ]
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string",
+                                    "description": "The ID of the tool call."
                                   },
-                                  {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "function"
+                                    ],
+                                    "description": "The type of the tool. Currently, only function is supported."
+                                  },
+                                  "function": {
                                     "type": "object",
                                     "properties": {
-                                      "id": {
+                                      "name": {
                                         "type": "string",
-                                        "description": "The ID of the tool call."
+                                        "description": "The name of the function to call."
                                       },
-                                      "type": {
+                                      "arguments": {
                                         "type": "string",
-                                        "enum": [
-                                          "custom"
-                                        ],
-                                        "description": "The type of the tool. Currently, only function is supported."
-                                      },
-                                      "custom": {
-                                        "type": "object",
-                                        "properties": {
-                                          "name": {
-                                            "type": "string",
-                                            "description": "The name of the custom tool to call."
-                                          },
-                                          "input": {
-                                            "type": "string",
-                                            "description": "The input for the custom tool call generated by the model."
-                                          }
-                                        },
-                                        "required": [
-                                          "name",
-                                          "input"
-                                        ],
-                                        "description": "The custom tool that the model called."
-                                      },
-                                      "extra_content": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                          "nullable": true
-                                        },
-                                        "description": "Opaque provider metadata for this tool call (e.g. Gemini thought_signature). Echo it back unchanged on the next turn."
+                                        "description": "The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function."
                                       }
                                     },
                                     "required": [
-                                      "id",
-                                      "type",
-                                      "custom"
-                                    ]
+                                      "name",
+                                      "arguments"
+                                    ],
+                                    "description": "The function that the model called."
                                   }
+                                },
+                                "required": [
+                                  "id",
+                                  "type",
+                                  "function"
                                 ]
                               },
                               "description": "The tool calls generated by the model, such as function calls."
@@ -492,73 +316,59 @@
                   "tools": {
                     "type": "array",
                     "items": {
-                      "anyOf": [
-                        {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "function",
-                                "builtin_function"
-                              ],
-                              "description": "The type of the tool. Currently, only function is supported."
-                            },
-                            "function": {
-                              "type": "object",
-                              "properties": {
-                                "description": {
-                                  "type": "string",
-                                  "description": "A description of what the function does, used by the model to choose when and how to call the function."
-                                },
-                                "name": {
-                                  "anyOf": [
-                                    {
-                                      "type": "string",
-                                      "enum": [
-                                        "$web_search"
-                                      ]
-                                    },
-                                    {
-                                      "type": "string"
-                                    }
-                                  ],
-                                  "description": "The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64."
-                                },
-                                "parameters": {
-                                  "nullable": true,
-                                  "description": "The parameters the functions accepts, described as a JSON Schema object."
-                                },
-                                "required": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "string"
-                                  }
-                                }
-                              },
-                              "required": [
-                                "name"
-                              ]
-                            }
-                          },
-                          "required": [
-                            "type",
-                            "function"
-                          ]
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "function",
+                            "builtin_function"
+                          ],
+                          "description": "The type of the tool. Currently, only function is supported."
                         },
-                        {
+                        "function": {
                           "type": "object",
                           "properties": {
-                            "type": {
+                            "description": {
                               "type": "string",
-                              "minLength": 1
+                              "description": "A description of what the function does, used by the model to choose when and how to call the function."
+                            },
+                            "name": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "$web_search"
+                                  ]
+                                },
+                                {
+                                  "type": "string"
+                                }
+                              ],
+                              "description": "The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64."
+                            },
+                            "parameters": {
+                              "nullable": true,
+                              "description": "The parameters the functions accepts, described as a JSON Schema object."
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
                             }
                           },
                           "required": [
-                            "type"
-                          ]
+                            "name"
+                          ],
+                          "additionalProperties": false
                         }
-                      ]
+                      },
+                      "required": [
+                        "type",
+                        "function"
+                      ],
+                      "additionalProperties": false
                     },
                     "description": "A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported."
                   },
@@ -601,105 +411,9 @@
                           "function"
                         ],
                         "description": "Specifies a tool the model should use. Use to force the model to call a specific function."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "allowed_tools"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "allowed_tools": {
-                            "type": "object",
-                            "properties": {
-                              "mode": {
-                                "type": "string",
-                                "enum": [
-                                  "auto",
-                                  "required"
-                                ],
-                                "description": "Constrains the tools available to the model to a pre-defined set.\n- auto allows the model to pick from among the allowed tools and generate a message.\n- required requires the model to call one or more of the allowed tools."
-                              },
-                              "tools": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "additionalProperties": {
-                                    "nullable": true
-                                  }
-                                },
-                                "description": "A list of tool definitions that the model should be allowed to call."
-                              }
-                            },
-                            "required": [
-                              "mode",
-                              "tools"
-                            ]
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "allowed_tools"
-                        ],
-                        "description": "Constrains the tools available to the model to a pre-defined set."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "function"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "function": {
-                            "type": "string",
-                            "enum": [
-                              "name"
-                            ],
-                            "description": "The name of the function to call."
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "function"
-                        ],
-                        "description": "Specifies a tool the model should use. Use to force the model to call a specific function."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "custom"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "custom": {
-                            "type": "string",
-                            "enum": [
-                              "name"
-                            ],
-                            "description": "The name of the custom tool to call."
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "custom"
-                        ],
-                        "description": "Specifies a tool the model should use. Use to force the model to call a specific custom tool."
                       }
                     ],
                     "description": "Controls which (if any) tool is called by the model. none means the model will not call any tool and instead generates a message. auto means the model can pick between generating a message or calling one or more tools. required means the model must call one or more tools. Specifying a particular tool via {\"type\": \"function\", \"function\": {\"name\": \"my_function\"}} forces the model to call that tool.\n  none is the default when no tools are present. auto is the default if tools are present."
-                  },
-                  "normalize_tool_schemas": {
-                    "type": "boolean",
-                    "description": "Enable provider compatibility normalization for tool function JSON schemas."
                   },
                   "parallel_tool_calls": {
                     "type": "boolean",
@@ -1254,7 +968,7 @@
                     "model": {
                       "type": "string",
                       "description": "The model used for the chat completion.",
-                      "example": "gpt-4o-2024-08-06"
+                      "example": "moonshot/kimi-k2-7-code"
                     },
                     "usage": {
                       "type": "object",
@@ -1752,11 +1466,6 @@
                       "moonshot/kimi-k2-7-code"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -1791,27 +1500,6 @@
                                       "text": {
                                         "type": "string",
                                         "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
                                       }
                                     },
                                     "required": [
@@ -1863,35 +1551,13 @@
                                       "text": {
                                         "type": "string",
                                         "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
                                       }
                                     },
                                     "required": [
                                       "type",
                                       "text"
                                     ]
-                                  },
-                                  "minItems": 1
+                                  }
                                 }
                               ],
                               "description": "The contents of the system message."
@@ -1904,7 +1570,8 @@
                           "required": [
                             "role",
                             "content"
-                          ]
+                          ],
+                          "additionalProperties": false
                         },
                         {
                           "type": "object",
@@ -1917,56 +1584,7 @@
                               "description": "The role of the author of the message — in this case, the tool."
                             },
                             "content": {
-                              "anyOf": [
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "text"
-                                        ],
-                                        "description": "The type of the content part."
-                                      },
-                                      "text": {
-                                        "type": "string",
-                                        "description": "The text content."
-                                      },
-                                      "cache_control": {
-                                        "type": "object",
-                                        "properties": {
-                                          "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "ephemeral"
-                                            ]
-                                          },
-                                          "ttl": {
-                                            "type": "string",
-                                            "enum": [
-                                              "5m",
-                                              "1h"
-                                            ]
-                                          }
-                                        },
-                                        "required": [
-                                          "type"
-                                        ]
-                                      }
-                                    },
-                                    "required": [
-                                      "type",
-                                      "text"
-                                    ]
-                                  },
-                                  "minItems": 1
-                                }
-                              ],
+                              "type": "string",
                               "description": "The contents of the tool message."
                             },
                             "tool_call_id": {
@@ -1983,7 +1601,8 @@
                             "role",
                             "content",
                             "tool_call_id"
-                          ]
+                          ],
+                          "additionalProperties": false
                         },
                         {
                           "type": "object",
@@ -2018,27 +1637,6 @@
                                           "text": {
                                             "type": "string",
                                             "description": "The text content."
-                                          },
-                                          "cache_control": {
-                                            "type": "object",
-                                            "properties": {
-                                              "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                  "ephemeral"
-                                                ]
-                                              },
-                                              "ttl": {
-                                                "type": "string",
-                                                "enum": [
-                                                  "5m",
-                                                  "1h"
-                                                ]
-                                              }
-                                            },
-                                            "required": [
-                                              "type"
-                                            ]
                                           }
                                         },
                                         "required": [
@@ -2069,9 +1667,6 @@
                                     ]
                                   },
                                   "description": "An array of content parts with a defined type. Can be one or more of type text, or exactly one of type refusal."
-                                },
-                                {
-                                  "nullable": true
                                 }
                               ],
                               "description": "The contents of the Assistant message. Required unless tool_calls or function_call is specified."
@@ -2083,99 +1678,42 @@
                             "tool_calls": {
                               "type": "array",
                               "items": {
-                                "oneOf": [
-                                  {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string",
-                                        "description": "The ID of the tool call."
-                                      },
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "function"
-                                        ],
-                                        "description": "The type of the tool. Currently, only function is supported."
-                                      },
-                                      "function": {
-                                        "type": "object",
-                                        "properties": {
-                                          "name": {
-                                            "type": "string",
-                                            "description": "The name of the function to call."
-                                          },
-                                          "arguments": {
-                                            "type": "string",
-                                            "description": "The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function."
-                                          }
-                                        },
-                                        "required": [
-                                          "name",
-                                          "arguments"
-                                        ],
-                                        "description": "The function that the model called."
-                                      },
-                                      "extra_content": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                          "nullable": true
-                                        },
-                                        "description": "Opaque provider metadata for this tool call (e.g. Gemini thought_signature). Echo it back unchanged on the next turn."
-                                      }
-                                    },
-                                    "required": [
-                                      "id",
-                                      "type",
-                                      "function"
-                                    ]
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string",
+                                    "description": "The ID of the tool call."
                                   },
-                                  {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "function"
+                                    ],
+                                    "description": "The type of the tool. Currently, only function is supported."
+                                  },
+                                  "function": {
                                     "type": "object",
                                     "properties": {
-                                      "id": {
+                                      "name": {
                                         "type": "string",
-                                        "description": "The ID of the tool call."
+                                        "description": "The name of the function to call."
                                       },
-                                      "type": {
+                                      "arguments": {
                                         "type": "string",
-                                        "enum": [
-                                          "custom"
-                                        ],
-                                        "description": "The type of the tool. Currently, only function is supported."
-                                      },
-                                      "custom": {
-                                        "type": "object",
-                                        "properties": {
-                                          "name": {
-                                            "type": "string",
-                                            "description": "The name of the custom tool to call."
-                                          },
-                                          "input": {
-                                            "type": "string",
-                                            "description": "The input for the custom tool call generated by the model."
-                                          }
-                                        },
-                                        "required": [
-                                          "name",
-                                          "input"
-                                        ],
-                                        "description": "The custom tool that the model called."
-                                      },
-                                      "extra_content": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                          "nullable": true
-                                        },
-                                        "description": "Opaque provider metadata for this tool call (e.g. Gemini thought_signature). Echo it back unchanged on the next turn."
+                                        "description": "The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function."
                                       }
                                     },
                                     "required": [
-                                      "id",
-                                      "type",
-                                      "custom"
-                                    ]
+                                      "name",
+                                      "arguments"
+                                    ],
+                                    "description": "The function that the model called."
                                   }
+                                },
+                                "required": [
+                                  "id",
+                                  "type",
+                                  "function"
                                 ]
                               },
                               "description": "The tool calls generated by the model, such as function calls."
@@ -2218,73 +1756,59 @@
                   "tools": {
                     "type": "array",
                     "items": {
-                      "anyOf": [
-                        {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "enum": [
-                                "function",
-                                "builtin_function"
-                              ],
-                              "description": "The type of the tool. Currently, only function is supported."
-                            },
-                            "function": {
-                              "type": "object",
-                              "properties": {
-                                "description": {
-                                  "type": "string",
-                                  "description": "A description of what the function does, used by the model to choose when and how to call the function."
-                                },
-                                "name": {
-                                  "anyOf": [
-                                    {
-                                      "type": "string",
-                                      "enum": [
-                                        "$web_search"
-                                      ]
-                                    },
-                                    {
-                                      "type": "string"
-                                    }
-                                  ],
-                                  "description": "The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64."
-                                },
-                                "parameters": {
-                                  "nullable": true,
-                                  "description": "The parameters the functions accepts, described as a JSON Schema object."
-                                },
-                                "required": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "string"
-                                  }
-                                }
-                              },
-                              "required": [
-                                "name"
-                              ]
-                            }
-                          },
-                          "required": [
-                            "type",
-                            "function"
-                          ]
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "function",
+                            "builtin_function"
+                          ],
+                          "description": "The type of the tool. Currently, only function is supported."
                         },
-                        {
+                        "function": {
                           "type": "object",
                           "properties": {
-                            "type": {
+                            "description": {
                               "type": "string",
-                              "minLength": 1
+                              "description": "A description of what the function does, used by the model to choose when and how to call the function."
+                            },
+                            "name": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "$web_search"
+                                  ]
+                                },
+                                {
+                                  "type": "string"
+                                }
+                              ],
+                              "description": "The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64."
+                            },
+                            "parameters": {
+                              "nullable": true,
+                              "description": "The parameters the functions accepts, described as a JSON Schema object."
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
                             }
                           },
                           "required": [
-                            "type"
-                          ]
+                            "name"
+                          ],
+                          "additionalProperties": false
                         }
-                      ]
+                      },
+                      "required": [
+                        "type",
+                        "function"
+                      ],
+                      "additionalProperties": false
                     },
                     "description": "A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported."
                   },
@@ -2327,105 +1851,9 @@
                           "function"
                         ],
                         "description": "Specifies a tool the model should use. Use to force the model to call a specific function."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "allowed_tools"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "allowed_tools": {
-                            "type": "object",
-                            "properties": {
-                              "mode": {
-                                "type": "string",
-                                "enum": [
-                                  "auto",
-                                  "required"
-                                ],
-                                "description": "Constrains the tools available to the model to a pre-defined set.\n- auto allows the model to pick from among the allowed tools and generate a message.\n- required requires the model to call one or more of the allowed tools."
-                              },
-                              "tools": {
-                                "type": "array",
-                                "items": {
-                                  "type": "object",
-                                  "additionalProperties": {
-                                    "nullable": true
-                                  }
-                                },
-                                "description": "A list of tool definitions that the model should be allowed to call."
-                              }
-                            },
-                            "required": [
-                              "mode",
-                              "tools"
-                            ]
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "allowed_tools"
-                        ],
-                        "description": "Constrains the tools available to the model to a pre-defined set."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "function"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "function": {
-                            "type": "string",
-                            "enum": [
-                              "name"
-                            ],
-                            "description": "The name of the function to call."
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "function"
-                        ],
-                        "description": "Specifies a tool the model should use. Use to force the model to call a specific function."
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "custom"
-                            ],
-                            "description": "The type of the tool. Currently, only function is supported."
-                          },
-                          "custom": {
-                            "type": "string",
-                            "enum": [
-                              "name"
-                            ],
-                            "description": "The name of the custom tool to call."
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "custom"
-                        ],
-                        "description": "Specifies a tool the model should use. Use to force the model to call a specific custom tool."
                       }
                     ],
                     "description": "Controls which (if any) tool is called by the model. none means the model will not call any tool and instead generates a message. auto means the model can pick between generating a message or calling one or more tools. required means the model must call one or more tools. Specifying a particular tool via {\"type\": \"function\", \"function\": {\"name\": \"my_function\"}} forces the model to call that tool.\n  none is the default when no tools are present. auto is the default if tools are present."
-                  },
-                  "normalize_tool_schemas": {
-                    "type": "boolean",
-                    "description": "Enable provider compatibility normalization for tool function JSON schemas."
                   },
                   "parallel_tool_calls": {
                     "type": "boolean",
@@ -2980,7 +2408,7 @@
                     "model": {
                       "type": "string",
                       "description": "The model used for the chat completion.",
-                      "example": "gpt-4o-2024-08-06"
+                      "example": "moonshot/kimi-k2-7-code"
                     },
                     "usage": {
                       "type": "object",
@@ -3460,6 +2888,16 @@
             "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/chat/completions\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n        \"model\":\"moonshot/kimi-k2-7-code\",\n        \"messages\":[\n            {\n                \"role\":\"user\",\n                \"content\":\"Hello\"\n            }\n        ],\n    }\n)\n\ndata = response.json()\nprint(data)"
           }
         ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
       }
     }
   }
