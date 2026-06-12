@@ -3460,8 +3460,7 @@
             "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/chat/completions\",\n    headers={\n        \"Content-Type\":\"application/json\", \n        \"Authorization\":\"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n        \"model\":\"moonshot/kimi-k2-7-code\",\n        \"messages\":[\n            {\n                \"role\":\"user\",\n                \"content\":\"Hello\"\n            }\n        ],\n    }\n)\n\ndata = response.json()\nprint(data)"
           }
         ]
-      },
-      "operationId": "_chat_completions"
+      }
     }
   }
 }
