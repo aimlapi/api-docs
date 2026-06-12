@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # ernie-4.5-turbo-vl-32k
 
 {% columns %}

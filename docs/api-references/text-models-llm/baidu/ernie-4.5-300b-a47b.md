@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # ernie-4.5-300b-a47b
 
 {% columns %}
@@ -16,7 +20,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A post-trained LLM with 300B total parameters and 47B activated parameters per token. \
+A post-trained LLM with 300B total parameters and 47B activated parameters per token.\
 Non-reasoning variant.
 
 {% hint style="success" %}

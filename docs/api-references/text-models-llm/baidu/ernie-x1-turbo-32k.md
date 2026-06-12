@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # ernie-x1-turbo-32k
 
 {% columns %}
@@ -15,8 +19,6 @@ This documentation is valid for the following list of our models:
 {% endcolumns %}
 
 ## Model Overview
-
-
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

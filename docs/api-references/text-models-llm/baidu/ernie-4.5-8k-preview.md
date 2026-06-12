@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # ernie-4.5-8k-preview
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # ernie-5.0-thinking-preview
 
 {% columns %}
