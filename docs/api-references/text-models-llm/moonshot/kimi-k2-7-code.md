@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="kimi-k2-7-code" path="/v1/chat/completions" method="post" %}
-[OpenAPI kimi-k2-7-code](https://raw.githubusercontent.com/aimlapi/api-docs/dd740a8d15f1033c870e5d35bfc59cf4a2d120ee/docs/api-references/text-models-llm/Moonshot/kimi-k2-7-code.json)
+[OpenAPI kimi-k2-7-code](https://raw.githubusercontent.com/aimlapi/api-docs/d63c9a2857b32cca6943bbdb2ed5cfd4d3151202/docs/api-references/text-models-llm/Moonshot/kimi-k2-7-code.json)
 {% endopenapi-operation %}
 
 ## Code Example
