@@ -26,11 +26,6 @@
                       "alibaba/qwen3-coder-480b-a35b-instruct"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -600,6 +595,11 @@
                       }
                     ],
                     "description": "An object specifying the format that the model must output."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

@@ -26,11 +26,6 @@
                       "x-ai/grok-4-1-fast-non-reasoning"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -636,6 +631,11 @@
                     "minimum": 0,
                     "maximum": 20,
                     "description": "An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. logprobs must be set to True if this parameter is used."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

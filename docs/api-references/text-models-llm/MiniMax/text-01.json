@@ -26,11 +26,6 @@
                       "MiniMax-Text-01"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -622,6 +617,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Mask (replace with ***) content in the output that involves private information, including but not limited to email, domain, link, ID number, home address, etc. Defaults to False, i.e. enable masking."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

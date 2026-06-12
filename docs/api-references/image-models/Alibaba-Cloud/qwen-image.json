@@ -26,11 +26,6 @@
                       "alibaba/qwen-image"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `alibaba` runs native Alibaba with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Alibaba -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "maxLength": 4000,
@@ -106,6 +101,11 @@
                   "negative_prompt": {
                     "type": "string",
                     "description": "The description of elements to avoid in the generated image."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `alibaba` runs native Alibaba with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Alibaba -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

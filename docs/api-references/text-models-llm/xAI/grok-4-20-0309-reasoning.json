@@ -26,11 +26,6 @@
                       "x-ai/grok-4-20-0309-reasoning"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -785,6 +780,11 @@
                     "type": "string",
                     "pattern": "^(0?[1-9]|1[0-2])\\/(0?[1-9]|[12]\\d|3[01])\\/\\d{4}$",
                     "description": "Filters search results to only include content last updated before this date. Format should be %m/%d/%Y (e.g. 3/1/2025)"
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

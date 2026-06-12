@@ -26,11 +26,6 @@
                       "google/veo-3.1-t2v"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "description": "The text description of the scene, subject, or action to generate in the video."
@@ -83,6 +78,11 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Whether to enhance the video generation."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

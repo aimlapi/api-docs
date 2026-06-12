@@ -1536,11 +1536,6 @@
                       "google/gemini-3-flash-preview"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "messages": {
                     "type": "array",
                     "items": {
@@ -2162,6 +2157,11 @@
                   "parallel_tool_calls": {
                     "type": "boolean",
                     "description": "Whether to enable parallel function calling during tool use."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

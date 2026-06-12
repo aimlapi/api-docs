@@ -26,11 +26,6 @@
                       "google/veo3-1-extend-video"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "description": "The text description of the scene, subject, or action to generate in the video."
@@ -74,6 +69,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Whether to automatically attempt to fix prompts that fail content policy or other validation checks by rewriting them."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

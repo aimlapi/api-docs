@@ -26,11 +26,6 @@
                       "klingai/v2.1-master-image-to-video"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "image_url": {
                     "type": "string",
                     "format": "uri",
@@ -151,6 +146,11 @@
                       }
                     },
                     "description": "Camera control parameters."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

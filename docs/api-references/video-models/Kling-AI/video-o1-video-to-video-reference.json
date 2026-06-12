@@ -26,11 +26,6 @@
                       "klingai/video-o1-video-to-video-reference"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "maxLength": 2500,
@@ -103,6 +98,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Whether to keep the original audio from the video."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

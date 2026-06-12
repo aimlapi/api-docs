@@ -26,11 +26,6 @@
                       "klingai/video-o1-reference-to-video"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "maxLength": 2500,
@@ -93,6 +88,11 @@
                       10
                     ],
                     "default": "5"
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `kling` (alias `klingai`) runs native Kling with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Kling -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [

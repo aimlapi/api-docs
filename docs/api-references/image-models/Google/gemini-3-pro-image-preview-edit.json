@@ -27,11 +27,6 @@
                       "google/gemini-3-pro-image-preview-edit"
                     ]
                   },
-                  "provider": {
-                    "type": "string",
-                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
-                    "example": "auto"
-                  },
                   "prompt": {
                     "type": "string",
                     "description": "The text prompt describing the content, style, or composition of the image to be generated."
@@ -77,6 +72,11 @@
                     "maximum": 4,
                     "default": 1,
                     "description": "The number of images to generate."
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `google` runs native Google with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the Google -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
                   }
                 },
                 "required": [
