@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # nemotron-nano-9b-v2
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # gpt-4-turbo
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # qwen-max
 
 {% columns %}

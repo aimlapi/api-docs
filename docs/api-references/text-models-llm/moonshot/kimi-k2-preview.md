@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # kimi-k2-preview
 
 {% columns %}
