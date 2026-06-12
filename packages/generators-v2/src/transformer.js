@@ -79,6 +79,14 @@ export function transformSchema(schema, options) {
 
   Object.entries(updatedSchema.paths).map(([path, operation]) => {
     if (operation.post) {
+      Object.entries(operation.post.responses || {}).forEach(
+        ([statusCode, response]) => {
+          if (response && !response.$ref && !response.description) {
+            response.description =
+              statusCode === '200' ? 'Successful response.' : 'Response.';
+          }
+        }
+      );
       if (codeSample) {
         updatedSchema.paths[path].post['x-codeSamples'] = codeSample;
       }
