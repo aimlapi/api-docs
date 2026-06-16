@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `mistral/mistral-ocr-latest`
+* `mistral-ocr-latest`
 {% endhint %}
 
 ## Model Overview
@@ -16,6 +16,16 @@ Maximum number of pages: `1000`.
 {% hint style="warning" %}
 Note that this OCR does not preserve character formatting: bold, underline, italics, monospace text, etc.\
 However, it preserves footnotes (superscript text).
+{% endhint %}
+
+In addition to plain markdown extraction, the model supports structured annotations via JSON Schema:
+
+* `bbox_annotation_format` — annotate each extracted bounding box (figures, charts, images) according to a provided JSON Schema.
+* `document_annotation_format` — extract structured data from the whole document according to a provided JSON Schema.
+* `document_annotation_prompt` — an optional high-level prompt to guide how the document is annotated.
+
+{% hint style="warning" %}
+Using either annotation format switches the request to the annotated-page rate.
 {% endhint %}
 
 ## Setup your API Key
@@ -64,7 +74,7 @@ def main():
                 "type": "image_url",
                 "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/handwriting.jpg"
             },
-            "model": "mistral/mistral-ocr-latest",
+            "model": "mistral-ocr-latest",
         },
     )
 
@@ -116,7 +126,7 @@ def main():
                 "type": "document_url",
                 "document_url": "https://css4.pub/2015/textbook/somatosensory.pdf"
             },
-            "model": "mistral/mistral-ocr-latest",
+            "model": "mistral-ocr-latest",
         },
     )
 
@@ -190,7 +200,7 @@ def ocr_process():
                 "type": "document_url",
                 "document_url": "https://zovi0.github.io/public_misc/test-PDF-2.pdf"
             },
-            "model": "mistral/mistral-ocr-latest",
+            "model": "mistral-ocr-latest",
             "include_image_base64": True,
             "image_limit": 5 
         },
