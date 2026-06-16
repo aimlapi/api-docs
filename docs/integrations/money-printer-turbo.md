@@ -23,10 +23,9 @@ Set the provider to `AIML API` and add your key:
 ```toml
 [app]
 llm_provider = "aimlapi"
-
-[aimlapi]
-api_key = "your_key_here"
-model = "openai/gpt-4o-mini"
+aimlapi_api_key = "your_key_here"
+aimlapi_base_url = "https://api.aimlapi.com/v1"
+aimlapi_model_name = "openai/gpt-4o-mini"
 ```
 {% endstep %}
 
@@ -70,14 +69,12 @@ Set the provider and your credentials:
 ```toml
 [app]
 llm_provider = "aimlapi"
-
-[aimlapi]
-api_key = "your_key_here"
-base_url = "https://api.aimlapi.com/v1"
-model = "openai/gpt-4o-mini"
+aimlapi_api_key = "your_key_here"
+aimlapi_base_url = "https://api.aimlapi.com/v1"
+aimlapi_model_name = "openai/gpt-4o-mini"
 ```
 
-`base_url` is optional — the default is already `https://api.aimlapi.com/v1`.
+`aimlapi_base_url` is optional — the default is already `https://api.aimlapi.com/v1`.
 
 ## Option 2: Configure via WebUI
 
@@ -85,7 +82,7 @@ model = "openai/gpt-4o-mini"
 2. Open the WebUI (default: `http://localhost:8501`).
 3. Go to the provider setup section.
 4. Select **AIML API** from the provider list.
-5. Enter your `AIMLAPI_API_KEY` and pick a model.
+5. Enter your AI/ML API key and pick a model.
 6. Save and generate.
 
 ## Model selection
@@ -96,12 +93,12 @@ Common examples for script and story generation:
 
 * `openai/gpt-4o-mini` — fast and cost-effective, good default
 * `openai/gpt-4o` — stronger output for complex scripts
-* `anthropic/claude-sonnet-4-5` — strong for long-form narrative
+* anthropic/claude-sonnet-4.5 — strong for long-form narrative
 * `google/gemini-2.5-flash` — lower latency, lower cost
 
 ### Good starting models
 
-Start with `openai/gpt-4o-mini` for most video generation tasks. Switch to `openai/gpt-4o` or `anthropic/claude-sonnet-4-5` if you need richer, longer scripts.
+Start with `openai/gpt-4o-mini` for most video generation tasks. Switch to `openai/gpt-4o` or `anthropic/claude-sonnet-4.5` if you need richer, longer scripts.
 
 For the full catalog, use [All Model IDs](/broken/pages/8ed552f6e450f3fe9c63911687e8431a6635b5be).
 
@@ -111,7 +108,7 @@ Make sure these values are set:
 
 * provider: `aimlapi`
 * base URL: `https://api.aimlapi.com/v1`
-* API key: `AIMLAPI_API_KEY` or `api_key` in `config.toml`
+* API key: aimlapi\_api\_key in config.toml, or the AIML API key field in WebUI
 * model ID: exact AI/ML API model ID
 
 ## Troubleshooting
@@ -130,7 +127,7 @@ The preset was added in [PR #1022](https://github.com/harry0703/MoneyPrinterTurb
 
 Check that:
 
-* `api_key` is correctly set in `config.toml` or entered in the WebUI
+* aimlapi\_api\_key is correctly set in config.toml
 * the key is valid at [aimlapi.com/app/keys](https://aimlapi.com/app/keys)
 * `llm_provider` is set to `aimlapi`
 
@@ -152,7 +149,7 @@ Override the base URL in `config.toml`:
 
 ```toml
 [aimlapi]
-base_url = "https://your-proxy.example/v1"
+aimlapi_base_url = "https://your-proxy.example/v1"
 ```
 
 </details>
