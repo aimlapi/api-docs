@@ -599,6 +599,7 @@
 * [ElizaOS](integrations/elizaos.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Hermes](integrations/hermes.md)
+* [Hermes Desktop](integrations/hermes-desktop.md)
 * [Kilo Code](integrations/kilo-code.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
