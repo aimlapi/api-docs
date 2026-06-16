@@ -15,6 +15,10 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
+{% hint style="warning" %}
+**Access to Claude Fable 5 may be interrupted.** Anthropic may restrict availability without notice, and requests can fail intermittently. Data retention applies and zero-data-retention is not supported. For production use, we currently recommend **Claude Opus 4.8**.
+{% endhint %}
+
 ## Model Overview
 
 Claude Fable 5 is Anthropic's most capable widely released model, built for demanding reasoning and long-horizon agentic work. It supports a 1M-token context window, up to 128k output tokens, vision, function calling, streaming, and adaptive thinking.
@@ -27,16 +31,18 @@ Claude Fable 5 is Anthropic's most capable widely released model, built for dema
 
 <summary>How to make the first API call</summary>
 
-**1. Required setup (don't skip this)**\
-* **Create an account:** Sign up on the AI/ML API website if you don't have one yet.\
+**1. Required setup (don't skip this)**\\
+
+* **Create an account:** Sign up on the AI/ML API website if you don't have one yet.\\
 * **Generate an API key:** In your account dashboard, create an API key and make sure it's enabled in the UI.
 
 **2. Copy the code example**\
 At the bottom of this page, pick the snippet for your preferred programming language (Python or JavaScript) and copy it into your project.
 
-**3. Update the snippet for your use case**\
-* **Insert your API key:** Replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
-* **Select a model:** Set the `model` field to the model you want to call.\
+**3. Update the snippet for your use case**\\
+
+* **Insert your API key:** Replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\\
+* **Select a model:** Set the `model` field to the model you want to call.\\
 * **Provide input:** Fill in the `messages` field shown in the example.
 
 **4. (Optional) Tune the request**\
