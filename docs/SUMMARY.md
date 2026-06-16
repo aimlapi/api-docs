@@ -606,6 +606,7 @@
 * [Make](integrations/make.md)
 * [Manus](integrations/manus.md)
 * [Marvin](integrations/marvin.md)
+* [Money Printer Turbo](integrations/money-printer-turbo.md)
 * [⭐ n8n](integrations/n8n.md)
 * [Oh My Pi](integrations/oh-my-pi.md)
 * [🦞 OpenClaw AI/ML](integrations/openclaw.md)
