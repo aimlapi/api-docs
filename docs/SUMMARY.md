@@ -607,6 +607,7 @@
 * [Manus](integrations/manus.md)
 * [Marvin](integrations/marvin.md)
 * [⭐ n8n](integrations/n8n.md)
+* [Oh My Pi](integrations/oh-my-pi.md)
 * [🦞 OpenClaw AI/ML](integrations/openclaw.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
