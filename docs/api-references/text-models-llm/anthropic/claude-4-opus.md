@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Claude 4 Opus
 
 {% columns %}
@@ -174,12 +178,12 @@ main();
 
 ## Code Example #2: Streaming Mode
 
-As of February 13, 2026, the streaming response format for Anthropic models has changed. \
-Specifically, the usage fields were renamed as follows:&#x20;
+As of February 13, 2026, the streaming response format for Anthropic models has changed.\
+Specifically, the usage fields were renamed as follows:
 
 * the `state` structure is no longer used,
-* `input_tokens` → `prompt_tokens`,&#x20;
-* `output_tokens` → `completion_tokens`,&#x20;
+* `input_tokens` → `prompt_tokens`,
+* `output_tokens` → `completion_tokens`,
 * a new `total_tokens` field has been added.
 
 {% tabs %}
