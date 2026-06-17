@@ -1,9 +1,11 @@
-# mistral-ocr-latest
+# Mistral OCR
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `mistral-ocr-latest`
+* `mistral-ocr-2512`
+* `mistral-ocr-3`
 {% endhint %}
 
 ## Model Overview
