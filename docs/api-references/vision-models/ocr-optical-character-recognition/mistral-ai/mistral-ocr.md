@@ -40,7 +40,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 <summary>Step-by-Step Instructions</summary>
 
-* Copy the code from one of the [examples](mistral-ocr-latest.md#example-1-process-a-pdf-file) below, depending on whether you want to process an image or a PDF.
+* Copy the code from one of the [examples](mistral-ocr.md#example-1-process-a-pdf-file) below, depending on whether you want to process an image or a PDF.
 * Replace `<YOUR_AIMLAPI_KEY>` with your AIML API key from [your personal account](https://aimlapi.com/app/keys).
 * Replace the URL of the document or image with the one you need.
 * If you need to use different parameters, refer to the API schema below for valid values and operational logic.
