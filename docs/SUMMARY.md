@@ -369,6 +369,7 @@
     * [v3-pro/image-to-video](api-references/video-models/kling-ai/v3-pro-image-to-video.md)
     * [v3-standard-turbo-image-to-video](api-references/video-models/kling-ai/v3-standard-turbo-image-to-video.md)
     * [v3-standard-turbo-text-to video](api-references/video-models/kling-ai/v3-standard-turbo-text-to-video.md)
+    * [v3-turbo-pro-text-to-video](api-references/video-models/kling-ai/v3-turbo-pro-text-to-video.md)
   * [Krea](api-references/video-models/krea/README.md)
     * [krea-wan-14b/text-to-video](api-references/video-models/krea/krea-wan-14b-text-to-video.md)
     * [krea-wan-14b/video-to-video](api-references/video-models/krea/krea-wan-14b-video-to-video.md)
