@@ -1,379 +1,382 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-        "title": "AIML API",
-        "version": "1.0.0"
-    },
-    "servers": [
-        {
-            "url": "https://api.aimlapi.com"
-        }
-    ],
-    "paths": {
-        "/v1/ocr": {
-            "post": {
-                "operationId": "_v1_ocr",
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "model": {
-                                        "type": "string",
-                                        "enum": [
-                                            "mistral-ocr-latest"
-                                        ]
-                                    },
-                                    "document": {
-                                        "oneOf": [
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "document_url"
-                                                        ],
-                                                        "description": "Type of document."
-                                                    },
-                                                    "document_url": {
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "description": "Document URL."
-                                                    }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "document_url"
-                                                ]
-                                            },
-                                            {
-                                                "type": "object",
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "image_url"
-                                                        ],
-                                                        "description": "Image URL."
-                                                    },
-                                                    "image_url": {
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "description": "Type of document."
-                                                    }
-                                                },
-                                                "required": [
-                                                    "type",
-                                                    "image_url"
-                                                ]
-                                            }
-                                        ],
-                                        "description": "Document to run OCR"
-                                    },
-                                    "pages": {
-                                        "anyOf": [
-                                            {
-                                                "type": "string"
-                                            },
-                                            {
-                                                "type": "array",
-                                                "items": {
-                                                    "type": "integer"
-                                                }
-                                            },
-                                            {
-                                                "nullable": true
-                                            }
-                                        ],
-                                        "description": "Specific pages you wants to process",
-                                        "example": "\"3\" or \"0-2\" or [0, 3, 4]"
-                                    },
-                                    "include_image_base64": {
-                                        "type": "boolean",
-                                        "nullable": true,
-                                        "description": "Include base64 images in response"
-                                    },
-                                    "image_limit": {
-                                        "type": "integer",
-                                        "nullable": true,
-                                        "description": "Max images to extract"
-                                    },
-                                    "image_min_size": {
-                                        "type": "integer",
-                                        "nullable": true,
-                                        "description": "Minimum height and width of image to extract"
-                                    },
-                                    "bbox_annotation_format": {
-                                        "type": "object",
-                                        "nullable": true,
-                                        "properties": {
-                                            "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "json_schema"
-                                                ]
-                                            },
-                                            "json_schema": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "schema": {
-                                                        "type": "object",
-                                                        "additionalProperties": {
-                                                            "nullable": true
-                                                        }
-                                                    },
-                                                    "description": {
-                                                        "type": "string",
-                                                        "nullable": true
-                                                    },
-                                                    "strict": {
-                                                        "type": "boolean",
-                                                        "nullable": true
-                                                    }
-                                                },
-                                                "required": [
-                                                    "name",
-                                                    "schema"
-                                                ]
-                                            }
-                                        },
-                                        "required": [
-                                            "type",
-                                            "json_schema"
-                                        ],
-                                        "description": "JSON schema to structure the annotation of each extracted bounding box (figures, charts, images). Using any annotation format switches the request to the annotated-page rate."
-                                    },
-                                    "document_annotation_format": {
-                                        "type": "object",
-                                        "nullable": true,
-                                        "properties": {
-                                            "type": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "json_schema"
-                                                ]
-                                            },
-                                            "json_schema": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "schema": {
-                                                        "type": "object",
-                                                        "additionalProperties": {
-                                                            "nullable": true
-                                                        }
-                                                    },
-                                                    "description": {
-                                                        "type": "string",
-                                                        "nullable": true
-                                                    },
-                                                    "strict": {
-                                                        "type": "boolean",
-                                                        "nullable": true
-                                                    }
-                                                },
-                                                "required": [
-                                                    "name",
-                                                    "schema"
-                                                ]
-                                            }
-                                        },
-                                        "required": [
-                                            "type",
-                                            "json_schema"
-                                        ],
-                                        "description": "JSON schema to extract structured data from the whole document. Using any annotation format switches the request to the annotated-page rate."
-                                    },
-                                    "document_annotation_prompt": {
-                                        "type": "string",
-                                        "nullable": true,
-                                        "description": "Optional high-level prompt to guide and instruct how the document is annotated."
-                                    }
-                                },
-                                "required": [
-                                    "model",
-                                    "document"
-                                ],
-                                "title": "mistral-ocr-latest"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "pages": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "index": {
-                                                        "type": "integer",
-                                                        "description": "The page index in a PDF document starting from 0"
-                                                    },
-                                                    "markdown": {
-                                                        "type": "string",
-                                                        "description": "The markdown string response of the page"
-                                                    },
-                                                    "images": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "id": {
-                                                                    "type": "string",
-                                                                    "description": "Image ID for extracted image in a page"
-                                                                },
-                                                                "top_left_x": {
-                                                                    "type": "integer",
-                                                                    "nullable": true,
-                                                                    "description": "X coordinate of top-left corner of the extracted image"
-                                                                },
-                                                                "top_left_y": {
-                                                                    "type": "integer",
-                                                                    "nullable": true,
-                                                                    "description": "Y coordinate of top-left corner of the extracted image"
-                                                                },
-                                                                "bottom_right_x": {
-                                                                    "type": "integer",
-                                                                    "nullable": true,
-                                                                    "description": "X coordinate of bottom-right corner of the extracted image"
-                                                                },
-                                                                "bottom_right_y": {
-                                                                    "type": "integer",
-                                                                    "nullable": true,
-                                                                    "description": "Y coordinate of bottom-right corner of the extracted image"
-                                                                },
-                                                                "image_base64": {
-                                                                    "type": "string",
-                                                                    "nullable": true,
-                                                                    "format": "uri",
-                                                                    "description": "Base64 string of the extracted image"
-                                                                }
-                                                            },
-                                                            "required": [
-                                                                "id",
-                                                                "top_left_x",
-                                                                "top_left_y",
-                                                                "bottom_right_x",
-                                                                "bottom_right_y"
-                                                            ]
-                                                        },
-                                                        "description": "List of all extracted images in the page"
-                                                    },
-                                                    "dimensions": {
-                                                        "type": "object",
-                                                        "nullable": true,
-                                                        "properties": {
-                                                            "dpi": {
-                                                                "type": "integer",
-                                                                "description": "Dots per inch of the page-image."
-                                                            },
-                                                            "height": {
-                                                                "type": "integer",
-                                                                "description": "Height of the image in pixels."
-                                                            },
-                                                            "width": {
-                                                                "type": "integer",
-                                                                "description": "Width of the image in pixels."
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "dpi",
-                                                            "height",
-                                                            "width"
-                                                        ],
-                                                        "description": "The dimensions of the PDF page's screenshot image"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "index",
-                                                    "markdown",
-                                                    "images",
-                                                    "dimensions"
-                                                ]
-                                            },
-                                            "description": "List of OCR info for pages"
-                                        },
-                                        "model": {
-                                            "type": "string",
-                                            "description": "The model used to generate the OCR."
-                                        },
-                                        "document_annotation": {
-                                            "type": "string",
-                                            "nullable": true,
-                                            "description": "Structured annotation of the whole document as a JSON string, returned when document_annotation_format is provided."
-                                        },
-                                        "usage_info": {
-                                            "type": "object",
-                                            "properties": {
-                                                "pages_processed": {
-                                                    "type": "integer",
-                                                    "description": "Number of pages processed"
-                                                },
-                                                "doc_size_bytes": {
-                                                    "type": "integer",
-                                                    "nullable": true,
-                                                    "description": "Document size in bytes"
-                                                }
-                                            },
-                                            "required": [
-                                                "pages_processed",
-                                                "doc_size_bytes"
-                                            ],
-                                            "description": "Usage info for the OCR request."
-                                        },
-                                        "meta": {
-                                            "type": "object",
-                                            "nullable": true,
-                                            "properties": {
-                                                "usage": {
-                                                    "type": "object",
-                                                    "nullable": true,
-                                                    "properties": {
-                                                        "credits_used": {
-                                                            "type": "number",
-                                                            "description": "The number of tokens consumed during generation.",
-                                                            "example": 120000
-                                                        },
-                                                        "usd_spent": {
-                                                            "type": "number",
-                                                            "description": "The total amount of money spent by the user in USD.",
-                                                            "example": 0.06
-                                                        }
-                                                    },
-                                                    "required": [
-                                                        "credits_used",
-                                                        "usd_spent"
-                                                    ]
-                                                }
-                                            },
-                                            "description": "Additional details about the generation."
-                                        }
-                                    },
-                                    "required": [
-                                        "pages",
-                                        "model",
-                                        "usage_info"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
     }
+  ],
+  "paths": {
+    "/v1/ocr": {
+      "post": {
+        "operationId": "_v1_ocr",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "mistral-ocr-latest",
+                      "mistral-ocr-2512",
+                      "mistral-ocr-3"
+                    ],
+                    "description": "Model ID to use for OCR processing."
+                  },
+                  "document": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "document_url"
+                            ],
+                            "description": "Type of document."
+                          },
+                          "document_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Document URL."
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "document_url"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "image_url"
+                            ],
+                            "description": "Image URL."
+                          },
+                          "image_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Type of document."
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "image_url"
+                        ]
+                      }
+                    ],
+                    "description": "Document to run OCR"
+                  },
+                  "pages": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      },
+                      {
+                        "nullable": true
+                      }
+                    ],
+                    "description": "Specific pages you wants to process",
+                    "example": "\"3\" or \"0-2\" or [0, 3, 4]"
+                  },
+                  "include_image_base64": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Include base64 images in response"
+                  },
+                  "image_limit": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Max images to extract"
+                  },
+                  "image_min_size": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Minimum height and width of image to extract"
+                  },
+                  "bbox_annotation_format": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "json_schema"
+                        ]
+                      },
+                      "json_schema": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "nullable": true
+                            }
+                          },
+                          "description": {
+                            "type": "string",
+                            "nullable": true
+                          },
+                          "strict": {
+                            "type": "boolean",
+                            "nullable": true
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "schema"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "json_schema"
+                    ],
+                    "description": "JSON schema to structure the annotation of each extracted bounding box (figures, charts, images). Using any annotation format switches the request to the annotated-page rate."
+                  },
+                  "document_annotation_format": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "json_schema"
+                        ]
+                      },
+                      "json_schema": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "nullable": true
+                            }
+                          },
+                          "description": {
+                            "type": "string",
+                            "nullable": true
+                          },
+                          "strict": {
+                            "type": "boolean",
+                            "nullable": true
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "schema"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "json_schema"
+                    ],
+                    "description": "JSON schema to extract structured data from the whole document. Using any annotation format switches the request to the annotated-page rate."
+                  },
+                  "document_annotation_prompt": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Optional high-level prompt to guide and instruct how the document is annotated."
+                  }
+                },
+                "required": [
+                  "model",
+                  "document"
+                ],
+                "title": "Mistral OCR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "pages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "description": "The page index in a PDF document starting from 0"
+                          },
+                          "markdown": {
+                            "type": "string",
+                            "description": "The markdown string response of the page"
+                          },
+                          "images": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "Image ID for extracted image in a page"
+                                },
+                                "top_left_x": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "X coordinate of top-left corner of the extracted image"
+                                },
+                                "top_left_y": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "Y coordinate of top-left corner of the extracted image"
+                                },
+                                "bottom_right_x": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "X coordinate of bottom-right corner of the extracted image"
+                                },
+                                "bottom_right_y": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "Y coordinate of bottom-right corner of the extracted image"
+                                },
+                                "image_base64": {
+                                  "type": "string",
+                                  "nullable": true,
+                                  "format": "uri",
+                                  "description": "Base64 string of the extracted image"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "top_left_x",
+                                "top_left_y",
+                                "bottom_right_x",
+                                "bottom_right_y"
+                              ]
+                            },
+                            "description": "List of all extracted images in the page"
+                          },
+                          "dimensions": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                              "dpi": {
+                                "type": "integer",
+                                "description": "Dots per inch of the page-image."
+                              },
+                              "height": {
+                                "type": "integer",
+                                "description": "Height of the image in pixels."
+                              },
+                              "width": {
+                                "type": "integer",
+                                "description": "Width of the image in pixels."
+                              }
+                            },
+                            "required": [
+                              "dpi",
+                              "height",
+                              "width"
+                            ],
+                            "description": "The dimensions of the PDF page's screenshot image"
+                          }
+                        },
+                        "required": [
+                          "index",
+                          "markdown",
+                          "images",
+                          "dimensions"
+                        ]
+                      },
+                      "description": "List of OCR info for pages"
+                    },
+                    "model": {
+                      "type": "string",
+                      "description": "The model used to generate the OCR."
+                    },
+                    "document_annotation": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Structured annotation of the whole document as a JSON string, returned when document_annotation_format is provided."
+                    },
+                    "usage_info": {
+                      "type": "object",
+                      "properties": {
+                        "pages_processed": {
+                          "type": "integer",
+                          "description": "Number of pages processed"
+                        },
+                        "doc_size_bytes": {
+                          "type": "integer",
+                          "nullable": true,
+                          "description": "Document size in bytes"
+                        }
+                      },
+                      "required": [
+                        "pages_processed",
+                        "doc_size_bytes"
+                      ],
+                      "description": "Usage info for the OCR request."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "pages",
+                    "model",
+                    "usage_info"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
