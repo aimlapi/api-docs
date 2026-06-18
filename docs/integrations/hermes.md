@@ -8,21 +8,24 @@ description: >-
 
 ## About
 
-[Hermes Agent](https://github.com/NousResearch/hermes-agent) is an agent framework for CLI and messaging workflows. It supports OpenAI-compatible providers and can use AI/ML API either through the native provider fork or through manual OpenAI-compatible configuration.
+[Hermes Agent](https://github.com/NousResearch/hermes-agent) is an agent framework for CLI and messaging workflows. It supports OpenAI-compatible providers and can use AI/ML API either through the AI/ML API fork or through manual OpenAI-compatible configuration in the official repository.
 
 This guide covers both setup paths.
 
 ## Quick start
 
-Use the AI/ML API fork if you want the fastest path:
+Use the AI/ML API fork if you want the fastest setup:
 
 1. Clone the fork.
-2. Export `AIMLAPI_API_KEY`.
-3. Run `hermes model`.
-4. Choose `AI/ML API`.
-5. Start chatting with `hermes chat`.
+2. Install Hermes from source.
+3. Export `AIMLAPI_API_KEY`.
+4. Run `hermes model`.
+5. Choose `AI/ML API`.
+6. Start chatting with `hermes chat`.
 
-Use the upstream repository if you want to stay on the official codebase and do not mind manual configuration.
+Use the official Hermes repository if you want to stay on upstream Hermes and do not mind manual OpenAI-compatible configuration.
+
+> On Windows, use WSL2 for the source install commands below. The Hermes setup script is a Unix shell script intended for Linux/macOS-style environments.
 
 ## When to use AI/ML API with Hermes
 
@@ -36,7 +39,8 @@ AI/ML API works well with Hermes when you want:
 
 Before you start, make sure you have:
 
-* a working Hermes installation
+* Python 3.11 or newer
+* Git
 * an AI/ML API key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys)
 * a model ID from [aimlapi.com/models](https://aimlapi.com/models)
 
@@ -46,7 +50,7 @@ Use this base URL:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
+Need a key first? Use API Key Management.
 
 ## Choose a setup path
 
@@ -63,6 +67,7 @@ Benefits:
 * `AI/ML API` appears in `hermes model`
 * the endpoint is preconfigured
 * model discovery is tuned for chat models
+* the API key uses `AIMLAPI_API_KEY`
 
 ### Option 2: Official Hermes repository
 
@@ -76,12 +81,13 @@ This path uses Hermes' generic OpenAI-compatible provider flow.
 
 ## Option 1: Set up the AI/ML API fork
 
-Clone the fork and start provider setup:
+Clone the fork, install Hermes from source, then start provider setup:
 
 ```bash
 git clone https://github.com/aimlapi/hermes-agent-aimlapi.git
 cd hermes-agent-aimlapi
 git checkout feature/add-aimlapi-provider
+./setup-hermes.sh
 export AIMLAPI_API_KEY=your_key_here
 hermes model
 ```
@@ -140,14 +146,15 @@ hermes chat --provider aimlapi --model openai/gpt-5-chat-latest
 
 ## Option 2: Set up official Hermes
 
-Clone the upstream repository:
+Clone the upstream repository and install Hermes from source:
 
 ```bash
 git clone https://github.com/NousResearch/hermes-agent.git
 cd hermes-agent
+./setup-hermes.sh
 ```
 
-Add your credentials to `~/.hermes/.env`:
+Add your AI/ML API credentials to `~/.hermes/.env` using the OpenAI-compatible variables:
 
 ```bash
 OPENAI_API_KEY=your_key_here
@@ -177,15 +184,20 @@ Check that Hermes sees your configuration:
 hermes doctor
 ```
 
-Then start a chat and confirm the selected model answers normally.
+Then start a chat and confirm the selected model answers normally:
+
+```bash
+hermes chat
+```
 
 ### What changes in the upstream flow
 
 Compared with the fork:
 
 * `AI/ML API` does not appear as a native provider
-* Hermes treats the endpoint as a custom backend
+* Hermes treats the endpoint as a custom OpenAI-compatible backend
 * you may need to enter model IDs manually
+* credentials use `OPENAI_API_KEY` and `OPENAI_BASE_URL`
 
 ## Model selection
 
@@ -207,7 +219,7 @@ Start with one of these:
 * `anthropic/claude-sonnet-4.6` for coding and long-form work
 * `google/gemini-2.5-flash` for lower latency and lower cost
 
-For the full catalog, use [All Model IDs](../api-references/model-database.md).
+For the full catalog, use All Model IDs.
 
 ## Switch models later
 
@@ -241,7 +253,7 @@ hermes gateway setup
 hermes gateway start
 ```
 
-### Config checklist
+## Config checklist
 
 Make sure these values line up:
 
@@ -266,7 +278,23 @@ This helps confirm:
 
 ## Troubleshooting
 
-#### Hermes does not ask for the endpoint
+### `hermes` command is not found
+
+Make sure you ran the install script from the repository root:
+
+```bash
+./setup-hermes.sh
+```
+
+Then restart your terminal and try again:
+
+```bash
+hermes doctor
+```
+
+If you are on Windows, run the setup through WSL2.
+
+### Hermes does not ask for the endpoint
 
 This is expected in the AI/ML API fork. The default endpoint is built in:
 
@@ -274,7 +302,7 @@ This is expected in the AI/ML API fork. The default endpoint is built in:
 https://api.aimlapi.com/v1
 ```
 
-#### My model is missing from the picker
+### My model is missing from the picker
 
 Usually one of these is true:
 
@@ -284,7 +312,7 @@ Usually one of these is true:
 
 Set the model manually in `config.yaml` if needed.
 
-#### Hermes selects another provider
+### Hermes selects another provider
 
 Force AI/ML API with one of these:
 
@@ -292,7 +320,7 @@ Force AI/ML API with one of these:
 * set `model.provider: aimlapi`
 * use `hermes chat --provider aimlapi --model ...`
 
-#### I want to use a proxy
+### I want to use a proxy
 
 Set a custom base URL:
 
@@ -300,7 +328,7 @@ Set a custom base URL:
 AIMLAPI_BASE_URL=https://your-proxy.example/v1
 ```
 
-#### I get an auth error
+### I get an auth error
 
 Usually one of these is wrong:
 
@@ -312,7 +340,7 @@ Run `hermes doctor` first. Then reopen `~/.hermes/.env` and verify the key name.
 
 ## Links
 
-* [All Model IDs](../api-references/model-database.md)
+* All Model IDs
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [AI/ML API models endpoint](https://api.aimlapi.com/models)
