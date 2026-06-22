@@ -215,7 +215,6 @@
     * [qwen-image-2.0](api-references/image-models/alibaba-cloud/qwen-image-2.0.md)
     * [qwen-image-2.0-pro](api-references/image-models/alibaba-cloud/qwen-image-2.0-pro.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
-    * [Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
     * [Seedream 4.0 (Text-to-Image)](api-references/image-models/bytedance/seedream-v4-text-to-image.md)
     * [Seedream 4.0 Edit (Image-to-image)](api-references/image-models/bytedance/seedream-v4-edit-image-to-image.md)
     * [USO (Image-to-Image)](api-references/image-models/bytedance/uso.md)
@@ -625,3 +624,7 @@
 
 * [404 Model is deprecated](404-model-is-deprecated.md)
 * [llms.txt](<README (1).md>)
+
+## Archived
+
+* [ByteDance / Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
