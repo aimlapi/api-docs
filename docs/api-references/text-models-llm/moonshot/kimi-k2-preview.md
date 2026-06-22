@@ -60,7 +60,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="moonshot-kimi-k2-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moonshot/kimi-k2-preview.json)
+[OpenAPI moonshot-kimi-k2-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/moonshot/kimi-k2-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example #1: Chat Completion
