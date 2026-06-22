@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "kimi-k2-7-code-highspeed"
+                      "moonshot/kimi-k2-7-code-highspeed"
                     ]
                   },
                   "provider": {
@@ -867,7 +867,7 @@
                   "model",
                   "messages"
                 ],
-                "title": "kimi-k2-7-code-highspeed"
+                "title": "moonshot/kimi-k2-7-code-highspeed"
               }
             }
           }
@@ -1722,15 +1722,15 @@
         "x-codeSamples": [
           {
             "lang": "cURL",
-            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"kimi-k2-7-code-highspeed\", \"messages\": [\"<message>\"]}'"
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/chat/completions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"moonshot/kimi-k2-7-code-highspeed\", \"messages\": [\"<message>\"]}'"
           },
           {
             "lang": "JavaScript",
-            "source": "const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"kimi-k2-7-code-highspeed\",\n  \"messages\": [\n    \"<message>\"\n  ]\n}),\n});\n\nconsole.log(await response.json());"
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"moonshot/kimi-k2-7-code-highspeed\",\n  \"messages\": [\n    \"<message>\"\n  ]\n}),\n});\n\nconsole.log(await response.json());"
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/chat/completions\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'kimi-k2-7-code-highspeed', 'messages': ['<message>']},\n)\n\nprint(response.json())"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/chat/completions\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'moonshot/kimi-k2-7-code-highspeed', 'messages': ['<message>']},\n)\n\nprint(response.json())"
           }
         ]
       }
