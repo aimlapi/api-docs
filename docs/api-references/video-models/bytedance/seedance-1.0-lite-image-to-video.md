@@ -1,4 +1,8 @@
-# Seedance 1.0 lite (Image-to-Video)
+---
+hidden: true
+---
+
+# Seedance 1.0 Lite (Image-to-Video)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -38,7 +42,7 @@ Below, you can find both corresponding API schemas.
 ## API Schemas
 
 {% hint style="success" %}
-Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`. \
+Now, all of our API schemas for video models use our new universal short URL — `https://api.aimlapi.com/v2/video/generations`.\
 However, you can still call this model using the legacy URL that includes the vendor name.
 {% endhint %}
 

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Seedream 3.0
 
 {% columns %}
