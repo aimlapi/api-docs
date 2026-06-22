@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `alibaba/custom:happyhorse-1.1`
+* `alibaba/happyhorse-1.1`
 {% endhint %}
 {% endcolumn %}
 
@@ -73,7 +73,7 @@ def generate_video():
     }
 
     data = {
-        "model": "alibaba/custom:happyhorse-1.1",
+        "model": "alibaba/happyhorse-1.1",
         "prompt": "Mona Lisa puts on glasses with her hands.",
         "image_url": "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
         "duration": 7,
@@ -154,7 +154,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "alibaba/custom:happyhorse-1.1",
+    model: "alibaba/happyhorse-1.1",
     prompt: "Mona Lisa puts on glasses with her hands.",
     image_url: "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mona_lisa_extended.jpg",
     duration: 7,
@@ -303,7 +303,7 @@ def generate_video():
     }
 
     data = {
-        "model": "alibaba/custom:happyhorse-1.1",
+        "model": "alibaba/happyhorse-1.1",
         "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
         "reference_image_urls": [
             "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
@@ -387,7 +387,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "alibaba/custom:happyhorse-1.1",
+    model: "alibaba/happyhorse-1.1",
     prompt: "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
     reference_image_urls: [
       "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
