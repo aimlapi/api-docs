@@ -93,7 +93,7 @@
                   },
                   "resolution": {
                     "type": "string",
-                    "enum": ["480p", "720p", "1080p"],
+                    "enum": ["480p", "720p", "1080p", "4k"],
                     "default": "720p",
                     "description": "An enumeration where the short side of the video frame determines the resolution."
                   },
