@@ -507,7 +507,7 @@
       * [Google OCR](api-references/vision-models/ocr-optical-character-recognition/google/google-ocr.md)
     * [Mistral AI](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/README.md)
       * [Mistral OCR](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr.md)
-      * [Mistral OCR 4 4.0](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-4-0.md)
+      * [Mistral OCR 4](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/mistral-ocr-4-0.md)
     * [Zhipu](api-references/vision-models/ocr-optical-character-recognition/zhipu/README.md)
       * [glm-ocr](api-references/vision-models/ocr-optical-character-recognition/zhipu/glm-ocr.md)
   * [OFR: Optical Feature Recognition](api-references/vision-models/ofr-optical-feature-recognition.md)
