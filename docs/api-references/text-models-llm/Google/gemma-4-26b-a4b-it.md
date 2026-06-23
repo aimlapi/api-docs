@@ -1,4 +1,4 @@
-# Gemma 4 26B A4B It
+# gemma-4-26b-a4b
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -126,7 +126,7 @@ console.log(await response.json());
       "logprobs": null
     }
   ],
-  "model": "gpt-4o-2024-08-06",
+  "model": "gemma-4-26b-a4b-it-maas",
   "usage": {
     "prompt_tokens": 137,
     "completion_tokens": 914,
