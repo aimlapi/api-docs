@@ -131,7 +131,7 @@ main();
   "id": "gen-1775228350-GcNt3er4pgcIFTIrWc0w",
   "object": "chat.completion",
   "created": 1775228350,
-  "model": "google/gemma-4-31b-it-20260402",
+  "model": "google/gemma-4-31b-it",
   "system_fingerprint": null,
   "choices": [
     {
