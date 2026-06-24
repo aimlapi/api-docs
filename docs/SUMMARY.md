@@ -176,6 +176,8 @@
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [sonar-pro](api-references/text-models-llm/perplexity/sonar-pro.md)
+  * [Sakana AI](api-references/text-models-llm/Sakana-AI/README.md)
+    * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [step3.7-flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
