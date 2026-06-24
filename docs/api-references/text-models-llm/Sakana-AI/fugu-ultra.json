@@ -1531,7 +1531,7 @@
                     "model": {
                       "type": "string",
                       "description": "The model used for the chat completion.",
-                      "example": "gpt-4o-2024-08-06"
+                      "example": "sakana/fugu-ultra"
                     },
                     "usage": {
                       "type": "object",
