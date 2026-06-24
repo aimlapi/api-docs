@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # grok-4
 
 {% columns %}
