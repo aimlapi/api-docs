@@ -131,7 +131,7 @@ main();
   "id": "chatcmpl-69e739eef31cfb42680c11fa",
   "object": "chat.completion",
   "created": 1776761328,
-  "model": "kimi-k2.7-code-highspeed",
+  "model": "sakana/fugu-ultra",
   "choices": [
     {
       "index": 0,
