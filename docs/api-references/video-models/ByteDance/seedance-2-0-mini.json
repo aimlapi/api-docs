@@ -1,0 +1,274 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "bytedance/dreamina-seedance-2-0-mini"
+                    ]
+                  },
+                  "provider": {
+                    "type": "string",
+                    "description": "Provider routing override. `bytedance` runs native ByteDance with no fallback; `fal` runs the fal.ai mirror; `auto` (default) uses the ByteDance -> fal.ai fallback chain. Case-insensitive.",
+                    "example": "auto"
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image that will serve as the visual base or the first frame for the video."
+                  },
+                  "last_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A direct link to an online image or a Base64-encoded local image to be used as the last frame of the video."
+                  },
+                  "audio_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL, Base64-encoded string or asset ID of the audio. The duration of the audio file specified in the parameter must not exceed 15.2 seconds. If audio is provided, at least one reference image or video is required."
+                  },
+                  "video_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The public URL of the video. Only video URLs are supported."
+                  },
+                  "image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 9,
+                    "description": "Reference images to guide video generation. Refer to them in the prompt as @Image1, @Image2, etc."
+                  },
+                  "audio_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "description": "Reference audio to guide video generation. Refer to them in the prompt as @Audio1, @Audio2, etc. Supported formats: MP3, WAV. Up to 3 files, combined duration must not exceed 15 seconds. If audio is provided, at least one reference image (image_urls) or video (video_urls) is required."
+                  },
+                  "video_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "description": "Reference videos to guide video generation. Refer to them in the prompt as @Video1, @Video2, etc. Supported formats: MP4, MOV. Each video must be between ~480p (640x640) and ~720p (834x1112) in resolution."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "21:9",
+                      "16:9",
+                      "4:3",
+                      "1:1",
+                      "3:4",
+                      "9:16"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated video."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "480p",
+                      "720p"
+                    ],
+                    "default": "720p",
+                    "description": "An enumeration where the short side of the video frame determines the resolution."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds.",
+                    "enum": [
+                      4,
+                      5,
+                      6,
+                      7,
+                      8,
+                      9,
+                      10,
+                      11,
+                      12,
+                      13,
+                      14,
+                      15
+                    ],
+                    "default": "5"
+                  },
+                  "generate_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to generate audio for the video."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "description": "Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen."
+                  },
+                  "watermark": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Whether the video contains a watermark."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "bytedance/dreamina-seedance-2-0-mini"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"bytedance/dreamina-seedance-2-0-mini\", \"prompt\": \"Describe what you want the model to generate.\", \"image_url\": \"https://example.com/input.jpg\", \"duration\": \"5\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"bytedance/dreamina-seedance-2-0-mini\",\n  \"prompt\": \"Describe what you want the model to generate.\",\n  \"image_url\": \"https://example.com/input.jpg\",\n  \"duration\": \"5\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'bytedance/dreamina-seedance-2-0-mini', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg', 'duration': '5'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
