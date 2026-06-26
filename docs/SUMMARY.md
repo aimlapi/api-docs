@@ -431,7 +431,7 @@
   * [Google](api-references/music-models/google/README.md)
     * [Lyria 2](api-references/music-models/google/lyria-2.md)
   * [MiniMax](api-references/music-models/MiniMax/README.md)
-    * [minimax-music \[legacy\]](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
+    * [Minimax Music](api-references/music-models/MiniMax/minimax-music-\[legacy].md)
     * [music-01](api-references/music-models/MiniMax/music-01.md)
     * [music-1.5](api-references/music-models/minimax/music-1.5.md)
     * [music-2.0](api-references/music-models/minimax/music-2.0.md)
