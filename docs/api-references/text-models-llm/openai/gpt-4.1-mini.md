@@ -1,4 +1,4 @@
-# gpt-4.1-mini
+# GPT-4.1 Mini
 
 {% columns %}
 {% column width="66.66666666666666%" %}

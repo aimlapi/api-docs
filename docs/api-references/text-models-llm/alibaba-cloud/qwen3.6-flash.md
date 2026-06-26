@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# qwen3.6-flash
+# Qwen3.6 Flash
 
 {% columns %}
 {% column width="66.66666666666666%" %}

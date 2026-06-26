@@ -1,4 +1,4 @@
-# nemotron-3-super-120b-a12b
+# Nemotron 3 Super 120B A12B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

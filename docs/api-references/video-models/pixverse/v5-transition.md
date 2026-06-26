@@ -1,4 +1,4 @@
-# v5/transition
+# Pixverse v5 Transition
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# music-1.5
+# MiniMax Music 1.5
 
 {% columns %}
 {% column width="66.66666666666666%" %}

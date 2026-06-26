@@ -1,4 +1,4 @@
-# Nano Banana Pro Edit (Gemini 3 Pro Image Edit)
+# Nano Banana Pro Edit
 
 {% columns %}
 {% column width="66.66666666666666%" %}

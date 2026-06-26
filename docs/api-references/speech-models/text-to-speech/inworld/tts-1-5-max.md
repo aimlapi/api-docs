@@ -1,4 +1,4 @@
-# inworld/tts-1-5-max
+# Inworld TTS 1.5 Max
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# inworld/tts-1
+# Inworld TTS 1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

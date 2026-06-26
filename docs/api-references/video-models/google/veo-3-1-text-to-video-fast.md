@@ -1,4 +1,4 @@
-# Veo 3.1 Fast (Text-to-Video)
+# Veo 3.1 Text to Video Fast
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# voyage-large-2
+# Voyage Large 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

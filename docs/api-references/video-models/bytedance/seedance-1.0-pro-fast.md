@@ -1,4 +1,4 @@
-# Seedance 1.0 pro fast
+# Seedance 1.0 Pro Fast
 
 {% columns %}
 {% column width="66.66666666666666%" %}

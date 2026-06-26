@@ -1,4 +1,4 @@
-# wan2.5-t2i-preview
+# Wan 2.5 Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

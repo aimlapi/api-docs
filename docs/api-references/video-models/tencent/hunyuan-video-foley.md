@@ -1,4 +1,4 @@
-# hunyuan-video-foley
+# Hunyuan Video Foley
 
 {% columns %}
 {% column width="66.66666666666666%" %}

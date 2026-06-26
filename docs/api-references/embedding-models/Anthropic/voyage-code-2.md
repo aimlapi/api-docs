@@ -1,4 +1,4 @@
-# voyage-code-2
+# Voyage code 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# qwen3.6-max-preview
+# Qwen3.6 Max Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

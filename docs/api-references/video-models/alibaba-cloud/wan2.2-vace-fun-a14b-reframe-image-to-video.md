@@ -1,4 +1,4 @@
-# Wan 2.2 VACE Fun Reframe (Image-to-Video)
+# Wan 2.2 Vace Reframe
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# flux/srpo/text-to-image
+# Flux SRPO
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# inworld/tts-1-5-mini
+# Inworld TTS 1.5 Mini
 
 {% columns %}
 {% column width="66.66666666666666%" %}

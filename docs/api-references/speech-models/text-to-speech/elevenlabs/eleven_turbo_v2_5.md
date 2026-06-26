@@ -1,4 +1,4 @@
-# eleven\_turbo\_v2\_5
+# Eleven Turbo v2.5
 
 {% columns %}
 {% column width="66.66666666666666%" %}

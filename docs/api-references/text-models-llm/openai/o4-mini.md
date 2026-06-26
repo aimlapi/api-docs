@@ -1,4 +1,4 @@
-# o4-mini
+# o4 Mini
 
 {% columns %}
 {% column width="66.66666666666666%" %}

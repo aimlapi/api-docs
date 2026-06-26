@@ -1,4 +1,4 @@
-# Imagen 4 Generate
+# Imagen 4.0 Generate
 
 {% columns %}
 {% column width="66.66666666666666%" %}

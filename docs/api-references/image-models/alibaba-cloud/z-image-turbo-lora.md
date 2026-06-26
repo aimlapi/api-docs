@@ -1,4 +1,4 @@
-# z-image-turbo-lora
+# Z-Image Turbo LoRA
 
 {% columns %}
 {% column width="66.66666666666666%" %}

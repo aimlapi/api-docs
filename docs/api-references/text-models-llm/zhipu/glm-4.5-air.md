@@ -1,4 +1,4 @@
-# glm-4.5-air
+# GLM 4.5 Air
 
 {% columns %}
 {% column width="66.66666666666666%" %}

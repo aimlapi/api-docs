@@ -1,4 +1,4 @@
-# v5/image-to-video
+# Pixverse v5 Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

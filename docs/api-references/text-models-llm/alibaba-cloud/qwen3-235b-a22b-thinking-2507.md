@@ -1,4 +1,4 @@
-# qwen3-235b-a22b-thinking-2507
+# Qwen3 Next 80B A3B Thinking
 
 {% columns %}
 {% column width="66.66666666666666%" %}

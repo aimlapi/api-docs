@@ -1,4 +1,4 @@
-# octave-2
+# Octave 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

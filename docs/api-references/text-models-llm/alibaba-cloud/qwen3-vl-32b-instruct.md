@@ -1,4 +1,4 @@
-# qwen3-vl-32b-instruct
+# Qwen3 VL 32B Instruct
 
 {% columns %}
 {% column width="66.66666666666666%" %}

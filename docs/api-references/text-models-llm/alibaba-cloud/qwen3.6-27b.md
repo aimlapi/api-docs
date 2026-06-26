@@ -1,4 +1,4 @@
-# qwen3.6-27b
+# Qwen3.6 27B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

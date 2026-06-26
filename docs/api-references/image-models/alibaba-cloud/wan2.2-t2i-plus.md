@@ -1,4 +1,4 @@
-# wan2.2-t2i-plus
+# Wan 2.2 Plus
 
 {% columns %}
 {% column width="66.66666666666666%" %}

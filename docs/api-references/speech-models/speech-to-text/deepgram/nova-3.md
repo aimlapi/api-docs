@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# Nova 3
+# Nova-3
 
 {% columns %}
 {% column width="66.66666666666666%" %}

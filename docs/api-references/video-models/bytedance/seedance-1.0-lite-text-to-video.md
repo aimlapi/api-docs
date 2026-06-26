@@ -1,4 +1,4 @@
-# Seedance 1.0 lite (Text-to-Video)
+# Seedance 1.0 Lite Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

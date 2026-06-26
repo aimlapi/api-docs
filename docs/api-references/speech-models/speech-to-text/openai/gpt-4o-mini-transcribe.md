@@ -1,4 +1,4 @@
-# gpt-4o-mini-transcribe
+# GPT-4o Mini Transcribe
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:

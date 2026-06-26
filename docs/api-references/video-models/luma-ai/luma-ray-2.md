@@ -1,4 +1,4 @@
-# Luma Ray 2
+# Luma Dream Machine Ray-2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

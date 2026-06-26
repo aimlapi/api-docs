@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# qwen-max
+# Qwen Max
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# reve/remix-edit-image
+# Reve Image Remix
 
 {% columns %}
 {% column width="66.66666666666666%" %}

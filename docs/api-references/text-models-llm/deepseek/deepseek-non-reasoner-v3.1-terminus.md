@@ -1,4 +1,4 @@
-# Deepseek Non-reasoner V3.1 Terminus
+# DeepSeek V3.1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

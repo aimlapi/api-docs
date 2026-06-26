@@ -1,4 +1,4 @@
-# gpt-image-1-mini
+# GPT Image 1 Mini
 
 {% columns %}
 {% column width="66.66666666666666%" %}

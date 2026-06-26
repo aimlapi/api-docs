@@ -1,4 +1,4 @@
-# gemini-2.5-flash
+# Gemini 2.5 Flash
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# gemma-3n-4b
+# Gemma 3n 4B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

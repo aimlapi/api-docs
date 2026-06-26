@@ -1,4 +1,4 @@
-# gpt-4o-mini-search-preview
+# GPT-4o Mini Search Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

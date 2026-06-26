@@ -1,4 +1,4 @@
-# Veo 3.1 Lite Generate
+# Veo 3.1 Lite Generate Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

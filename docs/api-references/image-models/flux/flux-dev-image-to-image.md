@@ -1,4 +1,4 @@
-# flux/dev/image-to-image
+# Flux Dev Image to Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}

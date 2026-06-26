@@ -1,4 +1,4 @@
-# Veo 3.1 Fast (First-Last-Image-to-Video)
+# Veo 3.1 First Last Frame to Video Fast
 
 {% columns %}
 {% column width="66.66666666666666%" %}

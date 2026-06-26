@@ -1,4 +1,4 @@
-# Wan 2.2 Animate Replace (Image-to-Video)
+# Wan 2.2 14B Animate Replace
 
 {% columns %}
 {% column width="66.66666666666666%" %}

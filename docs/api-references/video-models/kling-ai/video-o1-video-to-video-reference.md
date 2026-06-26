@@ -1,4 +1,4 @@
-# o1/video-to-video-reference
+# Kling O1 Video to Video Reference
 
 {% columns %}
 {% column width="66.66666666666666%" %}

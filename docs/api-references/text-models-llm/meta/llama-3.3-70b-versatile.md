@@ -1,4 +1,4 @@
-# Llama-3.3-70B-Versatile
+# Llama 3.3 70B Versatile
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# magnum-v4
+# Magnum v4 72B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

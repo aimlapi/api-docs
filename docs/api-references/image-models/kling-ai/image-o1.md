@@ -1,4 +1,4 @@
-# image-o1
+# Kling Image O1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

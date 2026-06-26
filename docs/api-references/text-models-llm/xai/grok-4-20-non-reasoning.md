@@ -1,4 +1,4 @@
-# grok-4.20-non-reasoning
+# Grok 4.20 Non-Reasoning
 
 {% columns %}
 {% column width="66.66666666666666%" %}

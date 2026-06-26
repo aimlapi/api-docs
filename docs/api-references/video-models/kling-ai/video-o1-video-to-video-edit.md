@@ -1,4 +1,4 @@
-# video-o1-video-to-video-edit
+# Kling Video O1 Video to Video Edit
 
 {% columns %}
 {% column width="66.66666666666666%" %}

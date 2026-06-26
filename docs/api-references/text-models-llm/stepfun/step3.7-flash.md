@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# step3.7-flash
+# Step 3.7 Flash
 
 {% columns %}
 {% column width="66.66666666666666%" %}

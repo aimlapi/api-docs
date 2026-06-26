@@ -1,4 +1,4 @@
-# eleven\_multilingual\_v2
+# Eleven Multilingual v2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

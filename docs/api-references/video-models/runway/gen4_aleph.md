@@ -1,4 +1,4 @@
-# gen4\_aleph
+# Gen 4 Aleph
 
 {% columns %}
 {% column width="66.66666666666666%" %}

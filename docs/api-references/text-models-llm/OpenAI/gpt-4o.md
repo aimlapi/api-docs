@@ -1,4 +1,4 @@
-# gpt-4o
+# GPT-4o
 
 {% hint style="warning" %}
 **Deprecation notice**\

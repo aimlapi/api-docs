@@ -1,4 +1,4 @@
-# qwen3-32b
+# Qwen3 32B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

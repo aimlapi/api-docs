@@ -1,4 +1,4 @@
-# DeepSeek Chat V3.1
+# DeepSeek V3.1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# avatar-standard
+# Kling Avatar Standard
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# mimo-v2.5
+# MiMo V2.5
 
 {% columns %}
 {% column width="66.66666666666666%" %}

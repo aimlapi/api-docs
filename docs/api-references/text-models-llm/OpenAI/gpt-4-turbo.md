@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# gpt-4-turbo
+# GPT-4 Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}

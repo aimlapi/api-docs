@@ -1,4 +1,4 @@
-# v3-turbo-pro-text-to-video
+# Kling 3.0 Turbo Pro Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

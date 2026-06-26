@@ -1,4 +1,4 @@
-# Wan 2.5 Preview (Image-to-Video)
+# Wan 2.5 Preview Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

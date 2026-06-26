@@ -1,4 +1,4 @@
-# video-01-live2d
+# Video 01 Live2D
 
 {% columns %}
 {% column width="66.66666666666666%" %}

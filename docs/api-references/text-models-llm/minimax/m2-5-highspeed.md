@@ -1,4 +1,4 @@
-# m2-5-highspeed
+# MiniMax M2.5 Highspeed
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# DeepSeek R1
+# DeepSeek Reasoner V3.1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

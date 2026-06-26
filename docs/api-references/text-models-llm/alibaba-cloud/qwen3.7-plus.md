@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# qwen3.7-plus
+# Qwen3.7-Plus
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# grok-code-fast-1
+# Grok Code Fast 1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

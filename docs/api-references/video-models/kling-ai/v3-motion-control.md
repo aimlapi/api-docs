@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# v3/motion control
+# Kling 3.0 Motion Control
 
 {% columns %}
 {% column width="66.66666666666666%" %}

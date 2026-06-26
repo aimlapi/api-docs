@@ -1,4 +1,4 @@
-# sora-2-pro-i2v
+# Sora 2 Pro Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

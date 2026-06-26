@@ -1,4 +1,4 @@
-# magic/text-to-video
+# Magic Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

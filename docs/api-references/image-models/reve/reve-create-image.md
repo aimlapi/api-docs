@@ -1,4 +1,4 @@
-# reve/create-image
+# Reve Image Create
 
 {% columns %}
 {% column width="66.66666666666666%" %}

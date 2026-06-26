@@ -1,4 +1,4 @@
-# gpt-oss-120b
+# GPT OSS 120B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

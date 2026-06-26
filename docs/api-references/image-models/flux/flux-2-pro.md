@@ -1,4 +1,4 @@
-# flux-2-pro
+# Flux 2 Pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}

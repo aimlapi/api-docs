@@ -1,4 +1,4 @@
-# gemini-2.5-pro
+# Gemini 2.5 Pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}

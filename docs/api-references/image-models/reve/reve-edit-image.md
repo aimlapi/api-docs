@@ -1,4 +1,4 @@
-# reve/edit-image
+# Reve Image Edit
 
 {% columns %}
 {% column width="66.66666666666666%" %}

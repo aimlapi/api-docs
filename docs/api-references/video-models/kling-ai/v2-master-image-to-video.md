@@ -1,4 +1,4 @@
-# v2-master/image-to-video
+# Kling 2.0 Master Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

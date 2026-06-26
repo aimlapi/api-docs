@@ -1,4 +1,4 @@
-# gemini-3-flash-preview
+# Gemini 3 Flash Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

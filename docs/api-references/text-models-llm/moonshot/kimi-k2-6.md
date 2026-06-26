@@ -1,4 +1,4 @@
-# kimi-k2-6
+# Kimi K2.6
 
 {% columns %}
 {% column width="66.66666666666666%" %}

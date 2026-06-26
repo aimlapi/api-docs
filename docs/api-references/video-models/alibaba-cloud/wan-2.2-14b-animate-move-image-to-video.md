@@ -1,4 +1,4 @@
-# Wan 2.2 Animate Move (Image-to-Video)
+# Wan 2.2 14B Animate Move
 
 {% columns %}
 {% column width="66.66666666666666%" %}

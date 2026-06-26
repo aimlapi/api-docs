@@ -1,4 +1,4 @@
-# v5/text-to-video
+# Pixverse v5 Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

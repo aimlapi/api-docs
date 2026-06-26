@@ -1,4 +1,4 @@
-# gpt-5-pro
+# GPT-5 Pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}

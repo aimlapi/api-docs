@@ -1,4 +1,4 @@
-# Mistral OCR 4 4.0
+# Mistral OCR 4
 
 {% columns %}
 {% column width="66.66666666666666%" %}

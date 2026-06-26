@@ -1,4 +1,4 @@
-# text-embedding-3-small
+# Text Embedding 3 Small
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# qwen3.7-max
+# Qwen3.7 Max
 
 {% columns %}
 {% column width="66.66666666666666%" %}

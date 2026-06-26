@@ -1,4 +1,4 @@
-# qwen3.5-omni-flash
+# Qwen3.5 Omni Flash
 
 {% columns %}
 {% column width="66.66666666666666%" %}

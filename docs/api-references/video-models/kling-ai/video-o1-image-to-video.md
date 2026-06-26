@@ -1,4 +1,4 @@
-# o1/image-to-video
+# Kling Video O1 Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# qwen3-coder-480b-a35b-instruct
+# Qwen3 Coder
 
 {% columns %}
 {% column width="66.66666666666666%" %}

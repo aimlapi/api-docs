@@ -1,4 +1,4 @@
-# hailuo-2.3
+# Hailuo 2.3
 
 {% columns %}
 {% column width="66.66666666666666%" %}

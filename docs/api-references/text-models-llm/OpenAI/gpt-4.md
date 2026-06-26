@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# gpt-4
+# GPT-4
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# kimi-k2-7-code
+# Kimi K2.7 Code
 
 {% columns %}
 {% column width="66.66666666666666%" %}

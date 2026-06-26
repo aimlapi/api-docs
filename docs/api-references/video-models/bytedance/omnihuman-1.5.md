@@ -1,4 +1,4 @@
-# OmniHuman 1.5
+# OmniHuman v1.5
 
 {% columns %}
 {% column width="66.66666666666666%" %}

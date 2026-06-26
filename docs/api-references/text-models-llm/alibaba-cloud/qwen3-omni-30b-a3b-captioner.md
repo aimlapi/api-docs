@@ -1,4 +1,4 @@
-# qwen3-omni-30b-a3b-captioner
+# Qwen3 Omni Captioner
 
 {% columns %}
 {% column width="66.66666666666666%" %}

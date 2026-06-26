@@ -1,4 +1,4 @@
-# eleven\_music
+# Eleven Music v1
 
 {% columns %}
 {% column width="66.66666666666666%" %}

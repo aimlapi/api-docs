@@ -1,4 +1,4 @@
-# USO (Image-to-Image)
+# USO Image to Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}

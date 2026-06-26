@@ -1,4 +1,4 @@
-# flux-pro/v1.1-ultra
+# Flux Pro 1.1 Ultra
 
 {% columns %}
 {% column width="66.66666666666666%" %}

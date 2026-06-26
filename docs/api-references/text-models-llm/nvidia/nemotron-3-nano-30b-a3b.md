@@ -1,4 +1,4 @@
-# nemotron-3-nano-30b-a3b
+# Nemotron 3 Nano 30B A3B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# v3\_alpha
+# Eleven v3 Alpha
 
 {% columns %}
 {% column width="66.66666666666666%" %}

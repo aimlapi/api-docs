@@ -1,4 +1,4 @@
-# grok-3-beta
+# Grok 3 Beta
 
 {% columns %}
 {% column width="66.66666666666666%" %}

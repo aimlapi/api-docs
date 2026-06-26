@@ -1,4 +1,4 @@
-# hailuo-2.3-fast
+# Hailuo 2.3 Fast
 
 {% columns %}
 {% column width="66.66666666666666%" %}

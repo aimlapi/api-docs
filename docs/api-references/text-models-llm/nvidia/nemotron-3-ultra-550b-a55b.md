@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# nemotron-3-ultra-550b-a55b
+# Nemotron 3 Ultra 550B A55B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# Wan 2.2 VACE Fun Outpainting (Image-to-Video)
+# Wan 2.2 Vace Outpainting
 
 {% columns %}
 {% column width="66.66666666666666%" %}

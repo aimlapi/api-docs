@@ -1,4 +1,4 @@
-# qwen3.5-omni-plus
+# Qwen3.5 Omni Plus
 
 {% columns %}
 {% column width="66.66666666666666%" %}

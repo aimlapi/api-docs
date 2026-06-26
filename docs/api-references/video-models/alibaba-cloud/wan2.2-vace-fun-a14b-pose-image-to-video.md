@@ -1,4 +1,4 @@
-# Wan 2.2 VACE Fun Pose (Image-to-Video)
+# Wan 2.2 Vace Pose
 
 {% columns %}
 {% column width="66.66666666666666%" %}

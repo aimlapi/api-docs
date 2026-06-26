@@ -1,4 +1,4 @@
-# Imagen 3
+# Imagen 3.0
 
 {% columns %}
 {% column width="66.66666666666666%" %}

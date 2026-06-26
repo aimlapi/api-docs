@@ -3,7 +3,7 @@ hidden: true
 noIndex: true
 ---
 
-# magic/image-to-3d
+# Magic Image to 3D
 
 {% columns %}
 {% column width="66.66666666666666%" %}

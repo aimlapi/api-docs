@@ -4,7 +4,7 @@ hidden: true
 noIndex: true
 ---
 
-# Wan 2.2 Plus (Image-to-Video)
+# Wan 2.2 Plus Image to Video
 
 {% hint style="info" %}
 This documentation is valid for the following list of our models:

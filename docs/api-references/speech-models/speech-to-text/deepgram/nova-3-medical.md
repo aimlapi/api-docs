@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# Nova 3 Medical
+# Nova-3 Medical
 
 {% columns %}
 {% column width="66.66666666666666%" %}

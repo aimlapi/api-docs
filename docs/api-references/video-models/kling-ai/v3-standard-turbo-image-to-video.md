@@ -1,4 +1,4 @@
-# v3-standard-turbo-image-to-video
+# Kling 3.0 Standard Turbo Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

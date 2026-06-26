@@ -1,4 +1,4 @@
-# M2-her
+# MiniMax M2-her
 
 {% columns %}
 {% column width="66.66666666666666%" %}

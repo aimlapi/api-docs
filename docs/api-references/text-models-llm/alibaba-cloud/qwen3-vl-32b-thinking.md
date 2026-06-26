@@ -1,4 +1,4 @@
-# qwen3-vl-32b-thinking
+# Qwen3 VL 32B Thinking
 
 {% columns %}
 {% column width="66.66666666666666%" %}

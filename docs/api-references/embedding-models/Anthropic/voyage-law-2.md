@@ -1,4 +1,4 @@
-# voyage-law-2
+# Voyage law 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

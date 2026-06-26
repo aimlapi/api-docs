@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# v3-standard-turbo-text-to video
+# Kling 3.0 Standard Turbo Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# minimax-music \[legacy]
+# MiniMax Music
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# Qwen2.5-7B-Instruct-Turbo
+# Qwen2.5 7B Instruct Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}

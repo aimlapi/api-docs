@@ -1,4 +1,4 @@
-# qwen3-tts-flash
+# Qwen3 TTS Flash
 
 {% columns %}
 {% column width="66.66666666666666%" %}

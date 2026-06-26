@@ -1,4 +1,4 @@
-# gpt-5-chat
+# GPT-5 Chat
 
 {% columns %}
 {% column width="66.66666666666666%" %}

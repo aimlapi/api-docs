@@ -1,4 +1,4 @@
-# glm-4.5
+# GLM 4.5
 
 {% columns %}
 {% column width="66.66666666666666%" %}

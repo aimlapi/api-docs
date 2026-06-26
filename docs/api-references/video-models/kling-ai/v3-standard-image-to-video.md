@@ -1,4 +1,4 @@
-# v3-standard/image-to-video
+# Kling 3.0 Standard Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

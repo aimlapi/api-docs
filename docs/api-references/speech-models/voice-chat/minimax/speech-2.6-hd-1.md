@@ -3,7 +3,7 @@ hidden: true
 noIndex: true
 ---
 
-# Copy of Speech 2.6 HD
+# Speech 2.6 HD
 
 {% columns %}
 {% column width="66.66666666666666%" %}

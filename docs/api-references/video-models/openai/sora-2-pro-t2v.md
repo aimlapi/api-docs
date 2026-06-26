@@ -1,4 +1,4 @@
-# sora-2-pro-t2v
+# Sora 2 Pro Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

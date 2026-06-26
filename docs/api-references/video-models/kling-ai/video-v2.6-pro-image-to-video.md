@@ -1,4 +1,4 @@
-# video-v2.6-pro-image-to-video
+# Kling 2.6 Pro Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

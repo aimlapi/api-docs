@@ -1,4 +1,4 @@
-# gpt-image-2
+# GPT Image 2
 
 {% columns %}
 {% column width="66.66666666666666%" %}

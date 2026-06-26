@@ -1,4 +1,4 @@
-# text-multilingual-embedding-002
+# Text Multilingual Embedding 002
 
 {% columns %}
 {% column width="66.66666666666666%" %}

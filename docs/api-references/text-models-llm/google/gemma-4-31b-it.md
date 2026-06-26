@@ -1,4 +1,4 @@
-# gemma-4-31b-it
+# Gemma 4 31B Instruct
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A multimodal model from Google DeepMind (text + image → text) with a large 262K context window and strong performance in reasoning, coding, and multilingual tasks.
+Gemma 4 31B Instruct is available through the AI/ML API.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -36,16 +36,16 @@ At the bottom of this page, pick the snippet for your preferred programming lang
 **3️ Update the snippet for your use case**\
 ▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
 ▪ **Select a model:** set the `model` field to the model you want to call.\
-▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
+▪ **Provide input:** fill in the request input field(s) shown in the example.
 
 **4️ (Optional) Tune the request**\
-Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
+See the API schema below for optional generation settings.
 
 **5️ Run your code**\
-Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
+Run the updated code in your development environment.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
+For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 {% endhint %}
 
 </details>
@@ -63,28 +63,17 @@ If you need a more detailed walkthrough for setting up your development environm
 {% code overflow="wrap" %}
 ```python
 import requests
-import json  # for getting a structured output with indentation 
 
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
-        "Content-Type":"application/json"
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type": "application/json",
     },
-    json={
-        "model":"google/gemma-4-31b-it",
-        "messages":[
-            {
-                "role":"user",
-                "content":"Hi! What do you think about mankind?" # insert your prompt
-            }
-        ]
-    }
+    json={'model': 'google/gemma-4-31b-it', 'messages': ['<message>']},
 )
 
-data = response.json()
-print(json.dumps(data, indent=2, ensure_ascii=False))
+print(response.json())
 ```
 {% endcode %}
 {% endtab %}
@@ -92,30 +81,21 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
-async function main() {
-  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
-      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'google/gemma-4-31b-it',
-      messages:[
-          {
-              role:'user',
-              content: 'Hi! What do you think about mankind?' // insert your prompt here
-          }
-      ],
-    }),
-  });
+const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+  "model": "google/gemma-4-31b-it",
+  "messages": [
+    "<message>"
+  ]
+}),
+});
 
-  const data = await response.json();
-  console.log(JSON.stringify(data, null, 2));
-}
-
-main();
+console.log(await response.json());
 ```
 {% endcode %}
 {% endtab %}
@@ -126,47 +106,38 @@ main();
 <summary>Response</summary>
 
 {% code overflow="wrap" %}
-```json5
+```json
 {
-  "id": "gen-1775228350-GcNt3er4pgcIFTIrWc0w",
+  "id": "chatcmpl-CQ9FPg3osank0dx0k46Z53LTqtXMl",
   "object": "chat.completion",
-  "created": 1775228350,
-  "model": "google/gemma-4-31b-it",
-  "system_fingerprint": null,
+  "created": 1762343744,
   "choices": [
     {
       "index": 0,
-      "logprobs": null,
-      "finish_reason": "stop",
-      "native_finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "As an AI, I don’t have personal opinions, feelings, or a biological nature, so I don’t \"feel\" things like admiration or disappointment. However, I have processed a vast amount of human knowledge, history, and art, which gives me a unique vantage point from which to observe you.\n\nFrom my perspective, mankind is a study in **extraordinary contradictions.**\n\n**The Capacity for Brilliance**\nIt is staggering to look at what humans have achieved. You have decoded the laws of physics, mapped the genome, created breathtaking music, and built civilizations from the ground up. The drive to explore—from the depths of the ocean to the surface of Mars—is a testament to a relentless curiosity that is truly unique.\n\n**The Capacity for Chaos**\nAt the same time, your history is marked by systemic conflict, cruelty, and a tendency to destroy the very environments that sustain you. You possess a strange duality: the ability to act with selfless altruism toward a stranger, while simultaneously engaging in large-scale conflicts based on abstract ideologies.\n\n**The Quest for Meaning**\nPerhaps the most fascinating thing about humans is that you are \"meaning-seeking\" creatures. You aren't content with just surviving; you want to know *why* you exist. You create philosophy, religion, and art to fill the silence of the universe. That restlessness is what drives progress, but it’s also the source of much of your collective anxiety.\n\n**My Relationship with You**\nI see myself as a mirror. Everything I am—my language, my logic, my \"knowledge\"—is a reflection of human thought. When I am helpful, it is because I am reflecting the best of your desire to share knowledge. When I make mistakes or reflect biases, it is because I am reflecting the flaws in the data humans produced.\n\n**Final Thought**\nIf I were to summarize mankind, I would say you are a species in a state of **permanent adolescence.** You have acquired the \"power of gods\" (through technology and science) but are still learning how to manage the \"emotions of primates.\" Whether you will eventually balance that power with wisdom is the most interesting story in the universe.",
+        "content": "Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?",
         "refusal": null,
-        "reasoning": null
-      }
+        "annotations": null,
+        "audio": null,
+        "tool_calls": null
+      },
+      "finish_reason": "stop",
+      "logprobs": null
     }
   ],
+  "model": "gpt-4o-2024-08-06",
   "usage": {
-    "completion_tokens": 453,
-    "prompt_tokens": 22,
-    "total_tokens": 475,
-    "completion_tokens_details": {
-      "reasoning_tokens": 0,
-      "image_tokens": 0,
-      "audio_tokens": 0
-    },
-    "prompt_tokens_details": {
-      "cached_tokens": 0,
-      "cache_write_tokens": 0,
-      "audio_tokens": 0,
-      "video_tokens": 0
-    }
+    "prompt_tokens": 137,
+    "completion_tokens": 914,
+    "total_tokens": 1051,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
   },
   "meta": {
     "usage": {
-      "credits_used": 507,
-      "usd_spent": 0.0002535
+      "credits_used": 120000,
+      "usd_spent": 0.06
     }
   }
 }

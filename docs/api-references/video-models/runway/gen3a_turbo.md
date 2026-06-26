@@ -2,7 +2,7 @@
 description: 'Description of the gen3a_turbo model: Pricing, API Reference, Examples.'
 ---
 
-# gen3a\_turbo
+# Gen 3a Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}

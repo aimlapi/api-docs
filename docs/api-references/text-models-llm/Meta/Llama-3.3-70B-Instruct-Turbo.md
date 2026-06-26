@@ -1,4 +1,4 @@
-# Llama-3.3-70B-Instruct-Turbo
+# Llama 3.3 70B Instruct Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}

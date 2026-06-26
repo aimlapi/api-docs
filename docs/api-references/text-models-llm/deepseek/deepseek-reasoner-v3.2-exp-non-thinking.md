@@ -1,4 +1,4 @@
-# DeepSeek V3.2 Exp Non-thinking
+# DeepSeek V3.2 Exp
 
 {% columns %}
 {% column width="66.66666666666666%" %}

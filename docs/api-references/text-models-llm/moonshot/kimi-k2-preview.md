@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# kimi-k2-preview
+# Kimi K2 Preview
 
 {% columns %}
 {% column width="66.66666666666666%" %}

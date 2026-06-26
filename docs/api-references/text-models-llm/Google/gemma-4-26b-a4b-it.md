@@ -1,4 +1,4 @@
-# gemma-4-26b-a4b
+# Gemma 4 26B A4B IT
 
 {% columns %}
 {% column width="66.66666666666666%" %}

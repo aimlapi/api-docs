@@ -1,4 +1,4 @@
-# video-v2.6-pro-text-to-video
+# Kling 2.6 Pro Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# qwen3-max-instruct
+# Qwen3 Max Instruct
 
 {% columns %}
 {% column width="66.66666666666666%" %}

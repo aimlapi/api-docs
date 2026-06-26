@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# Seedance 1.0 Lite (Image-to-Video)
+# Seedance 1.0 Lite Image to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}

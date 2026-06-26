@@ -1,4 +1,4 @@
-# text-embedding-ada-002
+# Text Embedding Ada 002
 
 {% columns %}
 {% column width="66.66666666666666%" %}

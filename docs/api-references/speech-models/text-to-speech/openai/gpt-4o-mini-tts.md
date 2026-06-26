@@ -1,4 +1,4 @@
-# gpt-4o-mini-tts
+# GPT-4o Mini TTS
 
 {% columns %}
 {% column width="66.66666666666666%" %}

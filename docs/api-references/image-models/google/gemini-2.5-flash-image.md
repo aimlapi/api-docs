@@ -1,4 +1,4 @@
-# Gemini 2.5 Flash Image (Nano Banana)
+# Gemini 2.5 Flash Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}

@@ -1,4 +1,4 @@
-# MythoMax L2 (13B)
+# MythoMax 13B
 
 {% columns %}
 {% column width="66.66666666666666%" %}

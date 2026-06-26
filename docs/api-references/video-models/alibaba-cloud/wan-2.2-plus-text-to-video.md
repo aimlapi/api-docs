@@ -1,4 +1,4 @@
-# Wan 2.2 Plus (Text-to-Video)
+# Wan 2.2 Plus Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
