@@ -1,7 +1,11 @@
+---
+hidden: true
+---
+
 # stt \[legacy]
 
 {% hint style="warning" %}
-This is the old version of our STT API, which has been known to experience failures due to timeouts. To avoid such issues, we recommend using the new endpoints described on other pages in the Speech-to-Text category.&#x20;
+This is the old version of our STT API, which has been known to experience failures due to timeouts. To avoid such issues, we recommend using the new endpoints described on other pages in the Speech-to-Text category.
 
 The migration won’t take much time since the input parameters of the main endpoint remain the same, and each model includes detailed code examples.
 {% endhint %}
@@ -13,4 +17,3 @@ This service uses per-second billing. The cost of audio transcription is based o
 {% openapi-operation spec="stt-legacy" path="/v1/stt" method="post" %}
 [OpenAPI stt-legacy](https://api.aimlapi.com/docs-public-yaml)
 {% endopenapi-operation %}
-
