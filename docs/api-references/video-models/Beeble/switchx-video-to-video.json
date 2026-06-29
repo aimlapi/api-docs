@@ -1,0 +1,211 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "beeble/switchx-video-to-video"
+                    ]
+                  },
+                  "video_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the source video to recomposite. Allowed formats: MP4, MOV (H.264 or HEVC), up to 240 frames. Source must not exceed 2,770,000 total pixels."
+                  },
+                  "alpha_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the alpha mask. Required when alpha_mode is \"custom\" or \"select\"; ignored for \"auto\" and \"fill\". A mask video for video-to-video, a mask image for image-to-image."
+                  },
+                  "reference_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the reference image defining the target look and lighting for the replaced region. Allowed formats: JPEG, PNG, WEBP. At least one of reference_image_url or prompt must be provided."
+                  },
+                  "alpha_mode": {
+                    "type": "string",
+                    "enum": [
+                      "auto",
+                      "fill",
+                      "custom",
+                      "select"
+                    ],
+                    "default": "auto",
+                    "description": "Subject masking strategy: \"auto\" (AI auto-detects the subject), \"fill\" (no masking), \"select\" (propagate a mask from one keyframe), or \"custom\" (frame-by-frame mask supplied via alpha_url). Defaults to \"auto\"."
+                  },
+                  "max_resolution": {
+                    "type": "integer",
+                    "description": "Maximum output resolution (longer side) in pixels: 720 or 1080. Defaults to 1080. 1080 costs more than 720.",
+                    "enum": [
+                      720,
+                      1080
+                    ],
+                    "default": "1080"
+                  },
+                  "alpha_keyframe_index": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Frame index (0-based) whose mask is propagated when alpha_mode is \"select\" on a video. Defaults to the first frame. Ignored for image generation and for the auto, fill, and custom modes."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295,
+                    "description": "Random seed (0–4294967295) for reproducibility. Omit for a random seed. The seed used is always returned in the response."
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2000,
+                    "description": "Text description of the desired output to guide the generation (max 2000 characters). At least one of prompt or reference_image_url must be provided."
+                  }
+                },
+                "required": [
+                  "model",
+                  "video_url"
+                ],
+                "title": "beeble/switchx-video-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "The URL where the file can be downloaded from.",
+                          "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                        }
+                      },
+                      "required": [
+                        "url"
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"beeble/switchx-video-to-video\", \"video_url\": \"https://example.com/input.jpg\", \"prompt\": \"Describe what you want the model to generate.\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"beeble/switchx-video-to-video\",\n  \"video_url\": \"https://example.com/input.jpg\",\n  \"prompt\": \"Describe what you want the model to generate.\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'beeble/switchx-video-to-video', 'video_url': 'https://example.com/input.jpg', 'prompt': 'Describe what you want the model to generate.'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
