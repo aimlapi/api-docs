@@ -218,6 +218,8 @@
     * [Wan2.7 Image Pro](api-references/image-models/alibaba-cloud/wan2.7-image-pro.md)
     * [Qwen Image 2.0](api-references/image-models/alibaba-cloud/qwen-image-2.0.md)
     * [Qwen Image 2.0 Pro](api-references/image-models/alibaba-cloud/qwen-image-2.0-pro.md)
+  * [Beeble](api-references/image-models/Beeble/README.md)
+    * [Switchx Image To Image](api-references/image-models/Beeble/switchx-image-to-image.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
     * [Seedream 3.0](api-references/image-models/bytedance/seedream-3.0.md)
     * [Seedream 4.0 (Text-to-Image)](api-references/image-models/bytedance/seedream-v4-text-to-image.md)
