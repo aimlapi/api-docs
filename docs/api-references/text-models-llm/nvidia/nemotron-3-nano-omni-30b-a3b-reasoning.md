@@ -1,4 +1,8 @@
-# nemotron-3-nano-omni-30b-a3b-reasoning
+---
+hidden: true
+---
+
+# Nemotron 3 Nano Omni 30b a3b Reasoning
 
 {% columns %}
 {% column width="66.66666666666666%" %}
