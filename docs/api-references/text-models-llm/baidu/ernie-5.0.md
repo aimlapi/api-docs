@@ -126,7 +126,7 @@ console.log(await response.json());
       "logprobs": null
     }
   ],
-  "model": "gpt-4o-2024-08-06",
+  "model": "baidu/ernie-5.0",
   "usage": {
     "prompt_tokens": 137,
     "completion_tokens": 914,
