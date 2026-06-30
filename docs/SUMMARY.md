@@ -107,6 +107,8 @@
     * [Gemini 3.5 Flash](api-references/text-models-llm/google/gemini-3-5-flash.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
+  * [Meituan](api-references/text-models-llm/Meituan/README.md)
+    * [Longcat 2.0](api-references/text-models-llm/Meituan/longcat-2.0.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
     * [Llama 3.3 70B Instruct Turbo](api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
     * [Llama 3.3 70B Versatile](api-references/text-models-llm/meta/llama-3.3-70b-versatile.md)
