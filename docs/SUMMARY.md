@@ -56,6 +56,7 @@
     * [Claude 4.7 Opus](api-references/text-models-llm/anthropic/claude-4.7-opus.md)
     * [Claude 4.8 Opus](api-references/text-models-llm/anthropic/claude-4.8-opus.md)
     * [Claude Fable 5](api-references/text-models-llm/anthropic/claude-fable-5.md)
+    * [Claude Sonnet 5](api-references/text-models-llm/Anthropic/claude-sonnet-5.md)
   * [Baidu](api-references/text-models-llm/baidu/README.md)
     * [ernie-4.5-8k-preview](api-references/text-models-llm/baidu/ernie-4.5-8k-preview.md)
     * [ernie-4.5-0.3b](api-references/text-models-llm/baidu/ernie-4.5-0.3b.md)
