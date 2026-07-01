@@ -1,0 +1,196 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "luma/uni-1"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 6000,
+                    "description": "Text description of the image to generate."
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "image",
+                      "image_edit"
+                    ],
+                    "default": "image",
+                    "description": "Generation kind: \"image\" (text-to-image / reference) or \"image_edit\"."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "3:1",
+                      "2:1",
+                      "16:9",
+                      "3:2",
+                      "1:1",
+                      "2:3",
+                      "9:16",
+                      "1:2",
+                      "1:3"
+                    ],
+                    "description": "Output aspect ratio. Omit to let the model choose automatically."
+                  },
+                  "style": {
+                    "type": "string",
+                    "enum": [
+                      "auto",
+                      "manga"
+                    ],
+                    "default": "auto",
+                    "description": "Rendering style. Defaults to \"auto\"."
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "png",
+                      "jpeg"
+                    ],
+                    "description": "Output image format (png or jpeg)."
+                  },
+                  "web_search": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Ground the generation with web search."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A reference image URL for image generation, or source image URL for image editing."
+                  },
+                  "image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "maxItems": 9,
+                    "description": "Up to 9 reference image URLs (or uploaded files)."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "luma/uni-1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"luma/uni-1\", \"prompt\": \"Describe what you want the model to generate.\", \"image_url\": \"https://example.com/input.jpg\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"luma/uni-1\",\n  \"prompt\": \"Describe what you want the model to generate.\",\n  \"image_url\": \"https://example.com/input.jpg\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'luma/uni-1', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
