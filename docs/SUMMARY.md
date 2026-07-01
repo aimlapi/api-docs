@@ -397,6 +397,7 @@
   * [Luma AI](api-references/video-models/luma-ai/README.md)
     * [Luma Ray 2](api-references/video-models/luma-ai/luma-ray-2.md)
     * [Luma Ray Flash 2](api-references/video-models/luma-ai/luma-ray-flash-2.md)
+    * [Luma Ray-3.2](api-references/video-models/luma-ai/ray-3.2.md)
   * [Magic](solutions/magic/README.md)
     * [Magic text-to-video](api-references/video-models/magic/text-to-video.md)
     * [Magic image-to-video](api-references/video-models/magic/image-to-video.md)
