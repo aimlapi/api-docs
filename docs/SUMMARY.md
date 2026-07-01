@@ -266,6 +266,8 @@
     * [Nano Banana 2 Lite](api-references/image-models/Google/gemini-3.1-flash-lite-image.md)
   * [Kling AI](api-references/image-models/kling-ai/README.md)
     * [Image o1](api-references/image-models/kling-ai/image-o1.md)
+  * [Luma AI](api-references/image-models/Luma-AI/README.md)
+    * [Luma Uni-1](api-references/image-models/Luma-AI/uni-1.md)
   * [OpenAI](api-references/image-models/OpenAI/README.md)
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/OpenAI/dall-e-3.md)
