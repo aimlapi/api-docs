@@ -15,10 +15,6 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-{% hint style="warning" %}
-**Access to Claude Fable 5 may be interrupted.** Anthropic may restrict availability without notice, and requests can fail intermittently. Data retention applies and zero-data-retention is not supported. For production use, we currently recommend **Claude Opus 4.8**.
-{% endhint %}
-
 ## Model Overview
 
 Claude Fable 5 is Anthropic's most capable widely released model, built for demanding reasoning and long-horizon agentic work. It supports a 1M-token context window, up to 128k output tokens, vision, function calling, streaming, and adaptive thinking.
