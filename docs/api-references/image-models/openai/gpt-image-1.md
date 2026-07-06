@@ -31,7 +31,7 @@ Note that by default, the `quality` parameter is set to `'medium'`. The output i
 ### Generate image
 
 {% openapi-operation spec="gpt-image-1-gen" path="/v1/images/generations" method="post" %}
-[Broken link](/broken/openapi/gpt-image-1-gen)
+[OpenAPI gpt-image-1-gen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-GENERATE.json)
 {% endopenapi-operation %}
 
 ### Edit image
@@ -42,7 +42,7 @@ It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
 {% openapi-operation spec="gpt-image-1-edit" path="/v1/images/edits" method="post" %}
-[Broken link](/broken/openapi/gpt-image-1-edit)
+[OpenAPI gpt-image-1-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-EDIT_local_changes.json)
 {% endopenapi-operation %}
 
 ## Quick Examples
@@ -144,7 +144,7 @@ main();
 
 We obtained the following 1536x1024 image by running this code example (\~ 26 s):
 
-<figure><img src="../../../.gitbook/assets/t-rex (1).png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
 
 <details>
 
@@ -164,8 +164,8 @@ Let's generate an image using two input images and a prompt that defines how the
 
 <summary>Our input images</summary>
 
-| <img src="../../../.gitbook/assets/t-rex (1).png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 </details>
 
@@ -260,8 +260,8 @@ In this example, we’ll provide the model with our previously generated image o
 
 <summary>Image &#x26; Mask</summary>
 
-| <img src="../../../.gitbook/assets/t-rex (1).png" alt="Image" data-size="original"> | <img src="../../../.gitbook/assets/t-rex-alpha_mask (1).png" alt="Mask" data-size="original"> |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="Image" data-size="original"> | <img src="../../../.gitbook/assets/t-rex-alpha_mask.png" alt="Mask" data-size="original"> |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 </details>
 

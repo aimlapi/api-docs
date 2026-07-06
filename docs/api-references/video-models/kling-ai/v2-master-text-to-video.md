@@ -45,7 +45,7 @@ However, you can still call this model using the legacy URL that includes the ve
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="kling-v2-master-t2v" path="/v2/video/generations" method="post" %}
-[Broken link](/broken/openapi/kling-v2-master-t2v)
+[OpenAPI kling-v2-master-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -54,7 +54,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[Broken link](/broken/openapi/universal-video-endpoint-fetch)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -231,4 +231,4 @@ Processing complete:\n {'id': '10c09c56-2e00-4a64-89ec-358ff71f8144:kling-video/
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/енто и секвойи.gif" alt=""><figcaption><p><code>"prompt": "A cheerful white raccoon running through a sequoia forest"</code></p></figcaption></figure></div>

@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="sharpen-gen" path="/v1/images/generations" method="post" %}
-[Broken link](/broken/openapi/sharpen-gen)
+[OpenAPI sharpen-gen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/topaz-labs/sharpen-gen.json)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -115,5 +115,5 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/blurred-face (1).jpeg" alt="" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/5cff080e-5d24-4fc3-85f5-0e57621ead7d.jpeg" alt="&#x22;mode&#x22;: &#x22;Super Focus V2&#x22;
+<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/blurred-face.jpeg" alt="" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/5cff080e-5d24-4fc3-85f5-0e57621ead7d.jpeg" alt="&#x22;mode&#x22;: &#x22;Super Focus V2&#x22;
 &#x22;strength&#x22;: 0.6" data-size="original"></td><td></td></tr></tbody></table>

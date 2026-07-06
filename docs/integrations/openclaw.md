@@ -72,7 +72,7 @@ pnpm openclaw onboard --install-daemon
 
 <summary>UI walkthrough (screenshots)</summary>
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Install via npm</p></figcaption></figure></div>
 
 <div align="left" data-full-width="false" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-13-17 (4).png" alt=""><figcaption><p>Or build from GitHub with pnpm</p></figcaption></figure></div>
 
@@ -92,7 +92,7 @@ pnpm openclaw onboard --install-daemon
 
 <div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Paste your Telegram bot token</p></figcaption></figure></div>
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Optional: configure extra skills<br>Media skills are configured by default</p></figcaption></figure></div>
 
 <div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image_2026-02-04_12-19-26.png" alt=""><figcaption><p>Finish onboarding and open the Web UI</p></figcaption></figure></div>
 
@@ -207,7 +207,7 @@ Telegram is a good first connector. Then add more channels as needed.
 
 1\. Message your bot. You will receive a pairing code.
 
-<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Get the pairing code</p></figcaption></figure></div>
+<div align="left" data-with-frame="true"><figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Get the pairing code</p></figcaption></figure></div>
 
 2\. Approve the pairing:
 

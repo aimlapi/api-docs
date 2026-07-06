@@ -42,7 +42,7 @@ Below, you can find two corresponding API schemas and an example with both endpo
 You can generate a video using this API. In the basic setup, you only need a prompt.
 
 {% openapi-operation spec="veo-3-1-t2v-fast" path="/v2/video/generations" method="post" %}
-[Broken link](/broken/openapi/veo-3-1-t2v-fast)
+[OpenAPI veo-3-1-t2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-t2v-fast.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -51,7 +51,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[Broken link](/broken/openapi/universal-video-endpoint-fetch)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -278,4 +278,4 @@ Processing complete:
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-6d9d060c012d69 (1).gif" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-6d9d060c012d69.gif" alt=""><figcaption></figcaption></figure></div>

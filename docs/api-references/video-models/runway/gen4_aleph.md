@@ -43,7 +43,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API. In the basic setup, you need only a video URL and a prompt.
 
 {% openapi-operation spec="runway-gen4-aleph" path="/v2/video/generations" method="post" %}
-[Broken link](/broken/openapi/runway-gen4-aleph)
+[OpenAPI runway-gen4-aleph](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/runway/gen4_aleph.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -52,7 +52,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
-[Broken link](/broken/openapi/universal-video-endpoint-fetch)
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server
@@ -225,4 +225,4 @@ Processing complete:\n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 
 
 **Low-res GIF preview**:
 
-<table data-full-width="true"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt="" data-size="original"></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/енто и секвойи.gif" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt="" data-size="original"></td></tr></tbody></table>
