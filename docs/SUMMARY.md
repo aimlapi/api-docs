@@ -266,6 +266,8 @@
     * [O1 Pro](api-references/text-models-llm/openai/o1-pro.md)
     * [O3 Deep Research](api-references/text-models-llm/openai/o3-deep-research.md)
     * [O4 Mini Deep Research](api-references/text-models-llm/openai/o4-mini-deep-research.md)
+  * [Perceptron](api-references/text-models-llm/Perceptron/README.md)
+    * [Mk1](api-references/text-models-llm/Perceptron/perceptron-mk1.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
