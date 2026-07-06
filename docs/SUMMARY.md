@@ -253,6 +253,7 @@
     * [GPT 5.4 Pro](api-references/text-models-llm/openai/gpt-5-4-pro.md)
     * [GPT 5.5](api-references/text-models-llm/openai/gpt-5-5.md)
     * [GPT 5.5 Pro](api-references/text-models-llm/openai/gpt-5-5-pro.md)
+    * [Gpt 4 Turbo Preview](api-references/text-models-llm/openai/gpt-4-turbo-preview.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
