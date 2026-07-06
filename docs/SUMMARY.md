@@ -207,6 +207,7 @@
     * [Nex N2 Pro](api-references/text-models-llm/Nex-AGI/nex-n2-pro.md)
   * [NousResearch](api-references/text-models-llm/nousresearch/README.md)
     * [Hermes 4 405b](api-references/text-models-llm/nousresearch/hermes-4-405b.md)
+    * [Hermes 3 405B Instruct](api-references/text-models-llm/nousresearch/hermes-3-llama-3.1-405b.md)
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
     * [nemotron-nano-9b-v2](api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
     * [Nemotron 3 Nano 30b a3b](api-references/text-models-llm/nvidia/nemotron-3-nano-30b-a3b.md)
