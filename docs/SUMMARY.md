@@ -216,6 +216,7 @@
     * [Nemotron 3 Nano Omni 30b a3b Reasoning](api-references/text-models-llm/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning.md)
     * [Nemotron 3 Super 120b a12b](api-references/text-models-llm/nvidia/nemotron-3-super-120b-a12b.md)
     * [Nemotron 3 Ultra 550b a55b](api-references/text-models-llm/nvidia/nemotron-3-ultra-550b-a55b.md)
+    * [Llama 3.3 Nemotron Super 49B V1.5](api-references/text-models-llm/nvidia/llama-3.3-nemotron-super-49b-v1.5.md)
   * [OpenAI](api-references/text-models-llm/OpenAI/README.md)
     * [GPT 3.5 Turbo](api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
     * [gpt-4](api-references/text-models-llm/OpenAI/gpt-4.md)
