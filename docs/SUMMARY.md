@@ -146,6 +146,8 @@
     * [Mercury 2](api-references/text-models-llm/Inception/mercury-2.md)
   * [inclusionAI](api-references/text-models-llm/inclusionAI/README.md)
     * [Ling 2.6 1T](api-references/text-models-llm/inclusionAI/ling-2.6-1t.md)
+    * [Ling 2.6 Flash](api-references/text-models-llm/inclusionAI/ling-2.6-flash.md)
+    * [Ring 2.6 1T](api-references/text-models-llm/inclusionAI/ring-2.6-1t.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
     * [Longcat 2.0](api-references/text-models-llm/Meituan/longcat-2.0.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
