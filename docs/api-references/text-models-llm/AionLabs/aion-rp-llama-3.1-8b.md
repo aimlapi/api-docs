@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="aion-rp-llama-3-1-8b" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/aion-rp-llama-3-1-8b)
+[OpenAPI aion-rp-llama-3-1-8b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AionLabs/aion-rp-llama-3.1-8b.json)
 {% endopenapi-operation %}
 
 ## Code Example

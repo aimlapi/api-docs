@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="olmo-3-32b-think" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/olmo-3-32b-think)
+[OpenAPI olmo-3-32b-think](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AllenAI/olmo-3-32b-think.json)
 {% endopenapi-operation %}
 
 ## Code Example

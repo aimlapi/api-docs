@@ -1,22 +1,22 @@
-# Aion 2.0
+# Gemini 2.5 Pro Preview 05 06 05.06
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `aion-labs/aion-2.0-mini`
+* `google/gemini-2.5-pro-preview-05-06-05-06`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/aion-2.0" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/gemini-2.5-pro-preview-05-06" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Aion-2.0 is available through the AI/ML API.
+Gemini 2.5 Pro Preview 05-06 is available through the AI/ML API.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -34,8 +34,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="aion-2-0" path="/v1/chat/completions" method="post" %}
-[OpenAPI aion-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AionLabs/aion-2.0.json)
+{% openapi-operation spec="gemini-2-5-pro-preview-05-06" path="/v1/chat/completions" method="post" %}
+[OpenAPI gemini-2-5-pro-preview-05-06](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-pro-preview-05-06.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -55,7 +55,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"aion-labs/aion-2.0",
+        "model":"google/gemini-2.5-pro-preview-05-06",
         "messages":[
             {
                 "role":"user",
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'aion-labs/aion-2.0-mini',
+      model: 'google/gemini-2.5-pro-preview-05-06-05-06',
       messages:[
           {
               role:'user',
@@ -113,7 +113,7 @@ main();
   "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
   "created": 1777366507,
-  "model": "aion-labs/aion-2.0",
+  "model": "google/gemini-2.5-pro-preview-05-06",
   "system_fingerprint": null,
   "choices": [
     {
