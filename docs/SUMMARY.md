@@ -196,6 +196,7 @@
     * [Kimi k2.6](api-references/text-models-llm/moonshot/kimi-k2-6.md)
     * [Kimi k2.7 Code](api-references/text-models-llm/moonshot/kimi-k2-7-code.md)
     * [Kimi k2.7 Code Highspeed](api-references/text-models-llm/moonshot/kimi-k2-7-code-highspeed.md)
+    * [Kimi K2 0711](api-references/text-models-llm/moonshot/kimi-k2.md)
   * [NousResearch](api-references/text-models-llm/nousresearch/README.md)
     * [Hermes 4 405b](api-references/text-models-llm/nousresearch/hermes-4-405b.md)
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
