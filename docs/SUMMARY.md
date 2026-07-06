@@ -110,6 +110,8 @@
     * [Command R 08 2024 08.2024](api-references/text-models-llm/Cohere/command-r-08-2024.md)
     * [Command R+ (08-2024) 08.2024](api-references/text-models-llm/Cohere/command-r-plus-08-2024.md)
     * [Command R7B 12 2024 12.2024](api-references/text-models-llm/Cohere/command-r7b-12-2024.md)
+  * [Deep Cogito](api-references/text-models-llm/Deep-Cogito/README.md)
+    * [Cogito V2.1 671B](api-references/text-models-llm/Deep-Cogito/cogito-v2.1-671b.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
