@@ -77,6 +77,7 @@
     * [Coder Large](api-references/text-models-llm/Arcee-AI/coder-large.md)
     * [Trinity Large Thinking](api-references/text-models-llm/Arcee-AI/trinity-large-thinking.md)
     * [Trinity Mini](api-references/text-models-llm/Arcee-AI/trinity-mini.md)
+    * [Virtuoso Large](api-references/text-models-llm/Arcee-AI/virtuoso-large.md)
   * [Baidu](api-references/text-models-llm/baidu/README.md)
     * [ernie-4.5-8k-preview](api-references/text-models-llm/baidu/ernie-4.5-8k-preview.md)
     * [ernie-4.5-0.3b](api-references/text-models-llm/baidu/ernie-4.5-0.3b.md)
