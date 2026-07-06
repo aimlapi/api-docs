@@ -45,8 +45,8 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 
 This endpoint uploads a reference music piece to the server, analyzes it, and returns identifiers for the voice and/or instrumental patterns to use later.
 
-{% openapi src="../../../.gitbook/assets/music-01-pair (1).json" path="/v2/generate/audio/minimax/upload" method="post" %}
-[music-01-pair (1).json](<../../../.gitbook/assets/music-01-pair (1).json>)
+{% openapi src="../../../.gitbook/assets/music-01-pair.json" path="/v2/generate/audio/minimax/upload" method="post" %}
+[music-01-pair.json](../../../.gitbook/assets/music-01-pair.json)
 {% endopenapi %}
 
 ### Generate music sample <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>

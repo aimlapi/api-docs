@@ -144,7 +144,7 @@ main();
 
 We obtained the following 1536x1024 image by running this code example (\~ 26 s):
 
-<figure><img src="../../../.gitbook/assets/t-rex (1).png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/t-rex.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses. Realistic photo."</code></p></figcaption></figure>
 
 <details>
 
@@ -164,8 +164,8 @@ Let's generate an image using two input images and a prompt that defines how the
 
 <summary>Our input images</summary>
 
-| <img src="../../../.gitbook/assets/t-rex (1).png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 </details>
 
@@ -260,8 +260,8 @@ In this example, we’ll provide the model with our previously generated image o
 
 <summary>Image &#x26; Mask</summary>
 
-| <img src="../../../.gitbook/assets/t-rex (1).png" alt="Image" data-size="original"> | <img src="../../../.gitbook/assets/t-rex-alpha_mask (1).png" alt="Mask" data-size="original"> |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="Image" data-size="original"> | <img src="../../../.gitbook/assets/t-rex-alpha_mask.png" alt="Mask" data-size="original"> |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 </details>
 

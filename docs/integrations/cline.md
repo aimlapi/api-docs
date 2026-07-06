@@ -19,7 +19,7 @@ You can find the Cline repository and community on [GitHub](https://github.com/c
 
 4. After installation, a separate **Cline** tab will appear in the sidebar.
 
-<figure><img src="../.gitbook/assets/file-2M7nFjSF7c (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/file-2M7nFjSF7c.png" alt=""><figcaption></figcaption></figure>
 
 ## **Configuring Cline**
 

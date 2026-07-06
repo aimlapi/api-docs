@@ -278,4 +278,4 @@ Processing complete:
 
 **Low-res GIF preview**:
 
-<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-6d9d060c012d69 (1).gif" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ezgif-6d9d060c012d69.gif" alt=""><figcaption></figcaption></figure></div>

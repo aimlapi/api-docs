@@ -257,7 +257,7 @@ Select the **Crop video** tab and enter the URL of your video.
 
 Using the preset aspect ratios or manual settings, adjust the area of your video that you want to turn into a GIF banner. Then click **Set**, and after that — **Crop video**.
 
-<figure><img src="../.gitbook/assets/adjusting (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/adjusting.png" alt=""><figcaption></figcaption></figure>
 
 After a few seconds of processing, a window with the cropped video fragment will appear below. Right-click on it and select **Save**.
 

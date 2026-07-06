@@ -225,4 +225,4 @@ Processing complete:\n {'id': '6d6c768f-702e-4737-a3c9-0c6c6f4fec0a', 'status': 
 
 **Low-res GIF preview**:
 
-<table data-full-width="true"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/енто и секвойи (1).gif" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt="" data-size="original"></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Reference Video</th><th>Generated (Edited) Video</th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/енто и секвойи.gif" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/runway-aleph-preview.gif" alt="" data-size="original"></td></tr></tbody></table>

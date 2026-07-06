@@ -164,8 +164,8 @@ Let's generate an image using two input images and a prompt that defines how the
 
 <summary>Our input images</summary>
 
-| <img src="../../../.gitbook/assets/t-rex (1).png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex.png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 </details>
 
