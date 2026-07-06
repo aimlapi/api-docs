@@ -57,6 +57,7 @@
     * [Nova Lite 1.0](api-references/text-models-llm/Amazon/nova-lite-v1.md)
     * [Nova Micro 1.0](api-references/text-models-llm/Amazon/nova-micro-v1.md)
     * [Nova Premier 1.0](api-references/text-models-llm/Amazon/nova-premier-v1.md)
+    * [Nova Pro 1.0](api-references/text-models-llm/Amazon/nova-pro-v1.md)
   * [Anthracite](api-references/text-models-llm/Anthracite/README.md)
     * [Magnum v4](api-references/text-models-llm/Anthracite/magnum-v4.md)
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)
