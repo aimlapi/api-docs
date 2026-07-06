@@ -108,6 +108,7 @@
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
     * [Command-a](api-references/text-models-llm/cohere/command-a.md)
     * [Command R 08 2024 08.2024](api-references/text-models-llm/Cohere/command-r-08-2024.md)
+    * [Command R+ (08-2024) 08.2024](api-references/text-models-llm/Cohere/command-r-plus-08-2024.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
     * [DeepSeek V3](api-references/text-models-llm/DeepSeek/deepseek-chat.md)
     * [DeepSeek R1](api-references/text-models-llm/DeepSeek/deepseek-r1.md)
