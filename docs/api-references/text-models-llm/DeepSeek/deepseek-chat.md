@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # DeepSeek V3
 
 {% columns %}
