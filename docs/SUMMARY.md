@@ -151,6 +151,8 @@
   * [Inflection](api-references/text-models-llm/Inflection/README.md)
     * [3 Pi](api-references/text-models-llm/Inflection/inflection-3-pi.md)
     * [3 Productivity](api-references/text-models-llm/Inflection/inflection-3-productivity.md)
+  * [Kwaipilot](api-references/text-models-llm/Kwaipilot/README.md)
+    * [Kat Coder Pro V2](api-references/text-models-llm/Kwaipilot/kat-coder-pro-v2.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
     * [Longcat 2.0](api-references/text-models-llm/Meituan/longcat-2.0.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
