@@ -23,6 +23,7 @@
     * [Aion 1.0](api-references/text-models-llm/AionLabs/aion-1.0.md)
     * [Aion 1.0 Mini](api-references/text-models-llm/AionLabs/aion-1.0-mini.md)
     * [Aion 2.0](api-references/text-models-llm/AionLabs/aion-2.0.md)
+    * [Aion-RP 1.0 (8B)](api-references/text-models-llm/AionLabs/aion-rp-llama-3.1-8b.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
     * [Qwen Max](api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
     * [Qwen Plus](api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
