@@ -6,7 +6,8 @@
 * [Quickstart](quickstart/simple-model/README.md)
   * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
-* [Supported SDKs](quickstart/supported-sdks.md)
+* [Supported SDKs](quickstart/supported-sdks/README.md)
+  * [MCP](quickstart/supported-sdks/mcp.md)
 
 ## API REFERENCES
 
@@ -127,6 +128,7 @@
     * [M3](api-references/text-models-llm/minimax/m3.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [Mistral Nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
+    * [Leanstral 1.5](api-references/text-models-llm/Mistral-AI/labs-leanstral-1-5.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
