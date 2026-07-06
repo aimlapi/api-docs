@@ -185,6 +185,7 @@
     * [Large](api-references/text-models-llm/Mistral-AI/mistral-large.md)
     * [Large 2407](api-references/text-models-llm/Mistral-AI/mistral-large-2407.md)
     * [Large 3 2512](api-references/text-models-llm/Mistral-AI/mistral-large-2512.md)
+    * [Medium 3](api-references/text-models-llm/Mistral-AI/mistral-medium-3.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
