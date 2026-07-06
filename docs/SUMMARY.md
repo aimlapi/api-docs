@@ -286,6 +286,7 @@
   * [Sao10K](api-references/text-models-llm/Sao10K/README.md)
     * [Llama 3 8B Lunaris](api-references/text-models-llm/Sao10K/l3-lunaris-8b.md)
     * [Llama 3.1 70B Hanami x1](api-references/text-models-llm/Sao10K/l3.1-70b-hanami-x1.md)
+    * [Llama 3.1 Euryale 70B v2.2](api-references/text-models-llm/Sao10K/l3.1-euryale-70b.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
   * [tencent](api-references/text-models-llm/tencent/README.md)
