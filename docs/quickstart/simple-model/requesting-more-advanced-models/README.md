@@ -1101,6 +1101,6 @@ The specific meaning of "AGI" depends on the context in which it is used.
 ## Future Steps
 
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
-* [Know more about supported SDKs](../../supported-sdks/)
+* [Know more about supported SDKs](../../supported-sdks.md)
 * [Learn more about special text model capabilities](https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/capabilities)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

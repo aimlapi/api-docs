@@ -6,8 +6,8 @@
 * [Quickstart](quickstart/simple-model/README.md)
   * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
-* [Supported SDKs](quickstart/supported-sdks/README.md)
-  * [MCP](quickstart/supported-sdks/mcp.md)
+* [MCP](quickstart/mcp.md)
+* [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
 

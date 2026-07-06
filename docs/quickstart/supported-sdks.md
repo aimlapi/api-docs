@@ -39,7 +39,7 @@ Comparing requests made with raw REST API and different SDKs, pay attention to t
 {% endhint %}
 
 {% hint style="success" %}
-Also take a look at the [**INTEGRATIONS**](../../integrations/our-integration-list.md) section — it covers many third-party services and libraries (workflow platforms, coding assistants, etc.) that allow you to integrate our models in various ways.
+Also take a look at the [**INTEGRATIONS**](../integrations/our-integration-list.md) section — it covers many third-party services and libraries (workflow platforms, coding assistants, etc.) that allow you to integrate our models in various ways.
 {% endhint %}
 
 ***
@@ -410,7 +410,7 @@ python3 <your_script_name>.py
 
 ## Next Steps
 
-* [Check our full list of model IDs](../../api-references/model-database.md)
+* [Check our full list of model IDs](../api-references/model-database.md)
 * [Browse and compare AI models, including GPT, Claude, and many others, using the Playground](https://aimlapi.com/app/)
 * [Learn more about special text model capabilities](https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/capabilities)
 * [Join the community: get help and share your projects in our Discord](https://discord.com/invite/hvaUsJpVJf)

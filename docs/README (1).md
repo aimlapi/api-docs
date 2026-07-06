@@ -44,7 +44,7 @@
 ### SDKs
 
 *
-* [OpenAI SDK](quickstart/supported-sdks/#openai)
+* [OpenAI SDK](quickstart/supported-sdks.md#openai)
 
 Base URL: https://api.aimlapi.com
 
