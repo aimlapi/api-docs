@@ -280,6 +280,7 @@
     * [Reka Flash 3](api-references/text-models-llm/rekaai/reka-flash-3.md)
   * [Relace](api-references/text-models-llm/Relace/README.md)
     * [Apply 3](api-references/text-models-llm/Relace/relace-apply-3.md)
+    * [Search](api-references/text-models-llm/Relace/relace-search.md)
   * [Sakana AI](api-references/text-models-llm/Sakana-AI/README.md)
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
