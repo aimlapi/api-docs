@@ -1,22 +1,22 @@
-# Gpt 5.1 Chat
+# Nex N2 Pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `openai/gpt-5.1-chat`
+* `nex-agi/nex-n2-pro`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/gpt-5.1-chat" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/nex-n2-pro" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-GPT-5.1 Chat is available through the AI/ML API.
+Nex-N2-Pro is available through the AI/ML API.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -34,8 +34,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="gpt-5-1-chat" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-5-1-chat](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-5.1-chat.json)
+{% openapi-operation spec="nex-n2-pro" path="/v1/chat/completions" method="post" %}
+[Broken link](/broken/openapi/nex-n2-pro)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -55,7 +55,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"openai/gpt-5.1-chat",
+        "model":"nex-agi/nex-n2-pro",
         "messages":[
             {
                 "role":"user",
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'openai/gpt-5.1-chat',
+      model: 'nex-agi/nex-n2-pro',
       messages:[
           {
               role:'user',
@@ -113,7 +113,7 @@ main();
   "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
   "created": 1777366507,
-  "model": "openai/gpt-5.1-chat",
+  "model": "nex-agi/nex-n2-pro",
   "system_fingerprint": null,
   "choices": [
     {
