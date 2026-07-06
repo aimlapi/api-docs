@@ -204,6 +204,7 @@
     * [V3 Large](api-references/text-models-llm/Morph/morph-v3-large.md)
   * [Nex AGI](api-references/text-models-llm/Nex-AGI/README.md)
     * [Nex N2 Mini](api-references/text-models-llm/Nex-AGI/nex-n2-mini.md)
+    * [Nex N2 Pro](api-references/text-models-llm/Nex-AGI/nex-n2-pro.md)
   * [NousResearch](api-references/text-models-llm/nousresearch/README.md)
     * [Hermes 4 405b](api-references/text-models-llm/nousresearch/hermes-4-405b.md)
   * [NVIDIA](api-references/text-models-llm/NVIDIA/README.md)
