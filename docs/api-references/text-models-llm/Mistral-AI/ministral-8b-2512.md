@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="ministral-8b-2512" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/ministral-8b-2512)
+[OpenAPI ministral-8b-2512](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/ministral-8b-2512.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -1,22 +1,22 @@
-# Large
+# Large 3 2512
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `mistralai/mistral-large`
+* `mistralai/mistral-large-2512`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/mistral-large" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/mistral-large-2512" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Large is available through the AI/ML API.
+Large 3 2512 is available through the AI/ML API.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -34,8 +34,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="mistral-large" path="/v1/chat/completions" method="post" %}
-[OpenAPI mistral-large](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-large.json)
+{% openapi-operation spec="mistral-large-2512" path="/v1/chat/completions" method="post" %}
+[OpenAPI mistral-large-2512](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-large-2512.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -55,7 +55,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"mistralai/mistral-large",
+        "model":"mistralai/mistral-large-2512",
         "messages":[
             {
                 "role":"user",
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'mistralai/mistral-large',
+      model: 'mistralai/mistral-large-2512',
       messages:[
           {
               role:'user',
@@ -113,7 +113,7 @@ main();
   "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
   "created": 1777366507,
-  "model": "mistralai/mistral-large",
+  "model": "mistralai/mistral-large-2512",
   "system_fingerprint": null,
   "choices": [
     {
