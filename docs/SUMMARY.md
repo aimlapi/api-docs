@@ -275,6 +275,8 @@
     * [Laguna M.1](api-references/text-models-llm/Poolside/laguna-m.1.md)
     * [Laguna Xs 2.1](api-references/text-models-llm/Poolside/laguna-xs-2.1.md)
     * [Laguna Xs.2](api-references/text-models-llm/Poolside/laguna-xs.2.md)
+  * [rekaai](api-references/text-models-llm/rekaai/README.md)
+    * [Reka Edge](api-references/text-models-llm/rekaai/reka-edge.md)
   * [Sakana AI](api-references/text-models-llm/Sakana-AI/README.md)
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
