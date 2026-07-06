@@ -1,16 +1,16 @@
 # MCP
 
-Connect AIMLAPI to your AI agent (Claude Code, Cursor, Claude Desktop, and other MCP‑compatible clients) with a single URL and your AIMLAPI key. Once connected, your agent can **discover and compare models, run inference (chat / embeddings / image / video / audio), manage long‑running generation jobs, and check your balance** — all in natural language, directly from the client you already use.
+Connect AI/ML API to your AI agent (Claude Code, Cursor, Claude Desktop, and other MCP‑compatible clients) with a single URL and your AI/ML API key. Once connected, your agent can **discover and compare models, run inference (chat / embeddings / image / video / audio), manage long‑running generation jobs, and check your balance** — all in natural language, directly from the client you already use.
 
 {% hint style="info" %}
-**What is MCP?** The [Model Context Protocol](https://modelcontextprotocol.io/) is an open standard that lets AI applications talk to external tools and data through a uniform interface. The AIMLAPI MCP server exposes the AIMLAPI platform as a set of MCP **tools** that any MCP‑compatible agent can call on your behalf.
+**What is MCP?** The [Model Context Protocol](https://modelcontextprotocol.io/) is an open standard that lets AI applications talk to external tools and data through a uniform interface. The AI/ML API MCP server exposes the AI/ML API platform as a set of MCP **tools** that any MCP‑compatible agent can call on your behalf.
 {% endhint %}
 
 ***
 
 ## Why use it
 
-The AIMLAPI MCP server is a thin, stateless layer in front of the public AIMLAPI REST API. Instead of writing HTTP calls, you let your AI agent use AIMLAPI as a native tool:
+The AI/ML API MCP server is a thin, stateless layer in front of the public AI/ML API REST API. Instead of writing HTTP calls, you let your AI agent use AI/ML API as a native tool:
 
 * **One connection, every modality** — text, images, video, audio, embeddings, all through the same server.
 * **Model discovery built in** — search the full catalog, compare cards side by side, and let the agent pick the cheapest or fastest model for a task.
@@ -24,7 +24,7 @@ Your usage is billed to the owner of the API key you connect with, exactly as if
 
 ## Prerequisites
 
-1. **An AIMLAPI account** — sign up at [aimlapi.com](https://aimlapi.com/).
+1. **An AI/ML API account** — sign up at [aimlapi.com](https://aimlapi.com/).
 2. **An API key** — create one in your dashboard at [aimlapi.com/app/keys](https://aimlapi.com/app/keys). The key's balance, limits, and permissions apply to every call made through the MCP server.
 3. **An MCP‑compatible client** — Claude Code, Cursor, Claude Desktop, or any client that supports MCP over Streamable HTTP.
 
@@ -34,7 +34,7 @@ Keep your API key secret. Anyone with the key can spend your balance.
 
 ## Connect your client
 
-The server speaks **MCP over Streamable HTTP**. Point your client at the `/mcp` endpoint and send your AIMLAPI key as a **Bearer token**.
+The server speaks **MCP over Streamable HTTP**. Point your client at the `/mcp` endpoint and send your AI/ML API key as a **Bearer token**.
 
 | Setting            | Value                                    |
 | ------------------ | ---------------------------------------- |
@@ -115,7 +115,7 @@ npx @modelcontextprotocol/inspector
 
 In the Inspector: set **Transport** to _Streamable HTTP_, **URL** to `https://mcp.aimlapi.com/mcp`, add a header `Authorization: Bearer YOUR_AIMLAPI_KEY`, then **Connect → List Tools** and call any tool (start with `ping`).
 
-> **Note on claude.ai (web).** The claude.ai web app is **not supported yet**. Its web connectors require OAuth, while this server authenticates with an AIMLAPI key. Use Claude Code, Cursor, or Claude Desktop instead. (OAuth support is on the roadmap.)
+> **Note on claude.ai (web).** The claude.ai web app is **not supported yet**. Its web connectors require OAuth, while this server authenticates with an AI/ML API key. Use Claude Code, Cursor, or Claude Desktop instead. (OAuth support is on the roadmap.)
 
 ***
 
@@ -156,10 +156,10 @@ The server exposes **15 tools**. Your agent calls them automatically based on yo
 
 ### Inference (billed)
 
-| Tool                | Parameters                                                                                                                                                                                  | What it does                                                                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `llm_chat`          | **`model`**, **`messages`**, plus common OpenAI params (`temperature`, `top_p`, `max_tokens`, `stop`, `response_format`, `tools`, `tool_choice`, `reasoning_effort`, `provider`, `seed`, …) | Runs a chat completion against any AIMLAPI LLM. `messages` is an OpenAI‑style array (`{ role, content }`, oldest first). The complete assistant reply is returned in one result. |
-| `embeddings_create` | **`model`**, **`input`**, `encoding_format`, `dimensions`                                                                                                                                   | Creates embedding vector(s) for a text string or an array of strings.                                                                                                            |
+| Tool                | Parameters                                                                                                                                                                                  | What it does                                                                                                                                                                       |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `llm_chat`          | **`model`**, **`messages`**, plus common OpenAI params (`temperature`, `top_p`, `max_tokens`, `stop`, `response_format`, `tools`, `tool_choice`, `reasoning_effort`, `provider`, `seed`, …) | Runs a chat completion against any AI/ML API LLM. `messages` is an OpenAI‑style array (`{ role, content }`, oldest first). The complete assistant reply is returned in one result. |
+| `embeddings_create` | **`model`**, **`input`**, `encoding_format`, `dimensions`                                                                                                                                   | Creates embedding vector(s) for a text string or an array of strings.                                                                                                              |
 
 The `model` parameter selects which model runs — pass an id or a public alias (e.g. `"gpt-5"`, `"claude-opus-4-8"`, `"text-embedding-3-small"`). Use `models_search` or `models_find_best` first if you're not sure which id to use.
 
@@ -293,7 +293,7 @@ Because the tools plug into your agent, you interact in plain language. A few ex
 * _"What's the fastest image model right now? Generate a 1024×1024 logo concept with it."_
 * _"Generate a 5‑second video of waves on a beach and give me the download link when it's ready."_
 * _"Create embeddings for these ten product descriptions with `text-embedding-3-small`."_
-* _"What's my AIMLAPI balance and how much have I used this month?"_
+* _"What's my AI/ML API balance and how much have I used this month?"_
 
 ***
 
