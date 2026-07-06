@@ -100,6 +100,8 @@
     * [Dola Seed 2.0 Lite](api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
     * [Dola Seed 2.0 Pro](api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
     * [Dola Seed 2.0 Code](api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
+  * [ByteDance Seed](api-references/text-models-llm/ByteDance-Seed/README.md)
+    * [Seed 1.6](api-references/text-models-llm/ByteDance-Seed/seed-1.6.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
     * [Command-a](api-references/text-models-llm/cohere/command-a.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
