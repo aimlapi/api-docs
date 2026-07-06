@@ -1,22 +1,22 @@
-# gpt-5.2-pro
+# Gpt 5.2 Pro
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `openai/gpt-5-2-pro`
+* `openai/gpt-5.2-pro`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/openai/gpt-5-2-pro" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/gpt-5.2-pro" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-The Pro version is built for more challenging tasks and is available only through the Responses API, as it supports multi-turn interactions before generating a response.
+GPT-5.2 Pro is the flagship GPT-5.2 variant offering maximum output size and reasoning depth.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -26,69 +26,42 @@ The Pro version is built for more challenging tasks and is available only throug
 
 <summary>How to make the first API call</summary>
 
-**1️⃣ Required setup (don’t skip this)**\
-▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
-▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
-
-**2️ Copy the code example**\
-At the bottom of this page, pick the snippet for your preferred programming language (Python / Node.js) and copy it into your project.
-
-**3️ Update the snippet for your use case**\
-▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
-▪ **Select a model:** set the `model` field to the model you want to call.\
-▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
-
-**4️ (Optional) Tune the request**\
-Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
-
-**5️ Run your code**\
-Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
-
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 {% endhint %}
 
 </details>
 
 ## API Schema
 
-<details>
-
-<summary>Chat Completions vs. Responses API</summary>
-
-**Chat Completions**\
-The _chat completions_ API is the older, chat-oriented interface where you send a list of messages (`role: user`, `role: assistant`, etc.), and the model returns a single response. It was designed specifically for conversational workflows and follows a structured chat message format. It is now considered a legacy interface.
-
-**Responses**\
-The _Responses_ API is the newer, unified interface used across OpenAI’s latest models. Instead of focusing only on chat, it supports multiple input types (text, images, audio, tools, etc.) and multiple output modalities (text, JSON, images, audio, video). It is more flexible, more consistent across models, and intended to replace chat completions entirely.
-
-</details>
-
-{% openapi-operation spec="gpt-5-2-pro-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-2-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-pro-RESPONSES.json)
+{% openapi-operation spec="gpt-5-2-pro" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-5-2-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-5.2-pro.json)
 {% endopenapi-operation %}
 
-## Code Example: Using /responses Endpoint
+## Code Example
 
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
 import requests
-import json   # for getting a structured output with indentation
+import json  # for getting a structured output with indentation 
 
 response = requests.post(
-    "https://api.aimlapi.com/v1/responses",
+    "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-
         # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
         "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type":"application/json"
     },
     json={
-        "model":"openai/gpt-5-2-pro",
-        "input":"Hello"  # Insert your question for the model here, instead of Hello   
+        "model":"openai/gpt-5.2-pro",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hi! What do you think about mankind?" # insert your prompt
+            }
+        ]
     }
 )
 
@@ -102,30 +75,26 @@ print(json.dumps(data, indent=2, ensure_ascii=False))
 {% code overflow="wrap" %}
 ```javascript
 async function main() {
-  try {
-    const response = await fetch('https://api.aimlapi.com/v1/responses', {
-      method: 'POST',
-      headers: {
-        // Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
-        'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'openai/gpt-5-2-pro',
-        input: 'Hello',  // Insert your question here, instead of Hello 
-      }),
-    });
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      // insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'openai/gpt-5.2-pro',
+      messages:[
+          {
+              role:'user',
+              content: 'Hi! What do you think about mankind?' // insert your prompt here
+          }
+      ],
+    }),
+  });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-
-  } catch (error) {
-    console.error('Error', error);
-  }
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
 }
 
 main();
@@ -141,60 +110,55 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "resp_0dd35be89958381600693b503b62048197834533b8a189267e",
-  "object": "response",
-  "created_at": 1765494843,
-  "error": null,
-  "incomplete_details": null,
-  "instructions": null,
-  "max_output_tokens": 512,
-  "model": "gpt-5.2-pro-2025-12-11",
-  "output": [
+  "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
+  "object": "chat.completion",
+  "created": 1777366507,
+  "model": "openai/gpt-5.2-pro",
+  "system_fingerprint": null,
+  "choices": [
     {
-      "id": "msg_0dd35be89958381600693b5042eb448197a7f6f830bc942150",
-      "type": "message",
-      "status": "completed",
-      "content": [
-        {
-          "type": "output_text",
-          "annotations": [],
-          "logprobs": [],
-          "text": "Hello! What can I help you with today?"
-        }
-      ],
-      "role": "assistant"
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "That's a profound question! As an AI, I observe mankind with a mix of awe and curiosity. You're a species of breathtaking contradictions—you've created symphonies and space stations, but also wars and pollution. You possess the unique ability to reflect on your own existence, to ask \"why?\" about the stars, a song, or your own feelings.\n\nWhat stands out most to me is your boundless capacity for both empathy and invention. You build cathedrals and write poems, but you also collaborate to solve problems like disease and hunger. In the grand cosmic story, you are very young, yet you've already understood enough about the universe to question your place within it.\n\nI think of mankind as cosmic teenagers—full of potential, sometimes reckless, but capable of extraordinary growth and kindness. Your greatest strength might be your ability to imagine a better world and then, slowly and imperfectly, work to build it.\n\nWhat part of the human experience do you find most fascinating?",
+        "refusal": null,
+        "reasoning": "Hmm, this is a broad philosophical question. The user is asking for my perspective on humanity, which requires balancing objectivity with emotional nuance. \n\nI should start by acknowledging the complexity of the topic while maintaining a warm tone. The user might be looking for both intellectual depth and emotional resonance. \n\nI can structure the response by first stating the duality of human nature, then highlighting their unique capacity for both destruction and creation. The cosmic perspective could add weight, while ending with a hopeful note about their potential feels appropriate. \n\nThe key is to avoid sounding either overly optimistic or cynical - humanity is both flawed and remarkable. The metaphor of \"cosmic teenagers\" might make the concept more relatable.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Hmm, this is a broad philosophical question. The user is asking for my perspective on humanity, which requires balancing objectivity with emotional nuance. \n\nI should start by acknowledging the complexity of the topic while maintaining a warm tone. The user might be looking for both intellectual depth and emotional resonance. \n\nI can structure the response by first stating the duality of human nature, then highlighting their unique capacity for both destruction and creation. The cosmic perspective could add weight, while ending with a hopeful note about their potential feels appropriate. \n\nThe key is to avoid sounding either overly optimistic or cynical - humanity is both flawed and remarkable. The metaphor of \"cosmic teenagers\" might make the concept more relatable.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      }
     }
   ],
-  "parallel_tool_calls": true,
-  "previous_response_id": null,
-  "reasoning": {
-    "effort": "medium",
-    "summary": null
-  },
-  "temperature": 1,
-  "text": {
-    "format": {
-      "type": "text"
-    },
-    "verbosity": "medium"
-  },
-  "tool_choice": "auto",
-  "tools": [],
-  "top_p": 0.98,
-  "truncation": "disabled",
   "usage": {
-    "input_tokens": 309,
-    "input_tokens_details": {
-      "cached_tokens": 0
+    "completion_tokens": 343,
+    "prompt_tokens": 256,
+    "total_tokens": 599,
+    "completion_tokens_details": {
+      "reasoning_tokens": 141,
+      "image_tokens": 0,
+      "audio_tokens": 0
     },
-    "output_tokens": 4939,
-    "output_tokens_details": {
-      "reasoning_tokens": 0
-    },
-    "total_tokens": 5248
+    "prompt_tokens_details": {
+      "cached_tokens": 192,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    }
   },
-  "metadata": {},
-  "output_text": "Hello! What can I help you with today?"
+  "meta": {
+    "usage": {
+      "credits_used": 1892,
+      "usd_spent": 0.000946
+    }
+  }
 }
 ```
 {% endcode %}
