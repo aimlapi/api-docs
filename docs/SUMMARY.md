@@ -104,6 +104,7 @@
     * [Seed 1.6](api-references/text-models-llm/ByteDance-Seed/seed-1.6.md)
     * [Seed 1.6 Flash](api-references/text-models-llm/ByteDance-Seed/seed-1.6-flash.md)
     * [Seed 2.0 Lite](api-references/text-models-llm/ByteDance-Seed/seed-2.0-lite.md)
+    * [Seed 2.0 Mini](api-references/text-models-llm/ByteDance-Seed/seed-2.0-mini.md)
   * [Cohere](api-references/text-models-llm/Cohere/README.md)
     * [Command-a](api-references/text-models-llm/cohere/command-a.md)
   * [DeepSeek](api-references/text-models-llm/DeepSeek/README.md)
