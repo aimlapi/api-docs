@@ -52,6 +52,8 @@
     * [Qwen3.7 Plus](api-references/text-models-llm/alibaba-cloud/qwen3.7-plus.md)
   * [AllenAI](api-references/text-models-llm/AllenAI/README.md)
     * [Olmo 3 32B Think](api-references/text-models-llm/AllenAI/olmo-3-32b-think.md)
+  * [Amazon](api-references/text-models-llm/Amazon/README.md)
+    * [Nova 2 Lite](api-references/text-models-llm/Amazon/nova-2-lite-v1.md)
   * [Anthracite](api-references/text-models-llm/Anthracite/README.md)
     * [Magnum v4](api-references/text-models-llm/Anthracite/magnum-v4.md)
   * [Anthropic](api-references/text-models-llm/Anthropic/README.md)
