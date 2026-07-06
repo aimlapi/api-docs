@@ -258,6 +258,7 @@
     * [Gpt 5 Image](api-references/text-models-llm/openai/gpt-5-image.md)
     * [Gpt 5 Image Mini](api-references/text-models-llm/openai/gpt-5-image-mini.md)
     * [Gpt 5.1 Chat](api-references/text-models-llm/openai/gpt-5.1-chat.md)
+    * [Gpt 5.1 Codex Max](api-references/text-models-llm/openai/gpt-5.1-codex-max.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
