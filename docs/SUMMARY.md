@@ -133,6 +133,7 @@
     * [Gemini 3.1 Flash Lite Preview](api-references/text-models-llm/google/gemini-3-1-flash-lite-preview.md)
     * [Gemini 3.1 Flash Lite](api-references/text-models-llm/google/gemini-3-1-flash-lite.md)
     * [Gemini 3.5 Flash](api-references/text-models-llm/google/gemini-3-5-flash.md)
+    * [Nano Banana Pro (Gemini 3 Pro Image)](api-references/text-models-llm/Google/gemini-3-pro-image.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
