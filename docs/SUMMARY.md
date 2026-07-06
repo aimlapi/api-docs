@@ -136,6 +136,7 @@
     * [Nano Banana Pro (Gemini 3 Pro Image)](api-references/text-models-llm/Google/gemini-3-pro-image.md)
     * [Nano Banana 2 (Gemini 3.1 Flash Image)](api-references/text-models-llm/Google/gemini-3.1-flash-image.md)
     * [Gemini 3.1 Pro Preview Custom Tools](api-references/text-models-llm/Google/gemini-3.1-pro-preview-customtools.md)
+    * [Gemma 2 27B](api-references/text-models-llm/Google/gemma-2-27b-it.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
