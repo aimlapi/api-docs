@@ -27,7 +27,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="flux-kontext-max-image-to-image" path="/v1/images/generations" method="post" %}
-[OpenAPI flux-kontext-max-image-to-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-kontext-max-image-to-image.json)
+[Broken link](/broken/openapi/flux-kontext-max-image-to-image)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -126,7 +126,7 @@ console.log(JSON.stringify(data, null, 2));
 
 <summary>More generated images</summary>
 
-| <img src="../../../.gitbook/assets/c31GyYsC9y5m4EBmRipNj_b0f30b1e73524d9abc3a1958ee1a12b6.png" alt="&#x22;Add a crown to the T-rex&#x27;s head.&#x22;" data-size="original">                                                                                                                                                                   | <img src="../../../.gitbook/assets/hk-uLsRnCuJkuAh8QgOE-_19773fb3d51a40809420d6bc353cc27a.png" alt="&#x22;Add a couple of silver wings&#x22;" data-size="original">                                                                                                                             |
+| <img src="../../../.gitbook/assets/c31GyYsC9y5m4EBmRipNj_b0f30b1e73524d9abc3a1958ee1a12b6.png" alt="&#x22;Add a crown to the T-rex&#x27;s head.&#x22;" data-size="original">                                                                                                                                                                   | <img src="../../../.gitbook/assets/hk-uLsRnCuJkuAh8QgOE-_19773fb3d51a40809420d6bc353cc27a (1).png" alt="&#x22;Add a couple of silver wings&#x22;" data-size="original">                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="../../../.gitbook/assets/IeAYtsCAAW0Ha5-NIASHP_a6f137e462da40bfba0044beddb9f4e9.jpg" alt="&#x22;Remove the dinosaur. Place a book and a bouquet of wildflowers in blue and pink tones on the lounge chair. Let a light foamy surf gently wash the bottom of the chair. Don&#x27;t change anything else.&#x22;" data-size="original"> | <img src="../../../.gitbook/assets/RfnycKDno-HgrDwQI5SAe_a6b1d4e2af8b42f9a0b5df2daae563a1.jpg" alt="&#x22;Make the dinosaur sit on a lounge chair with its back to the camera, looking toward the water. The setting sun has almost disappeared below the horizon.&#x22;" data-size="original"> |
 

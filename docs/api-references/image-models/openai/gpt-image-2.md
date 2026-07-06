@@ -57,7 +57,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ### Generate image
 
 {% openapi-operation spec="gpt-image-2-GENERATE" path="/v1/images/generations" method="post" %}
-[OpenAPI gpt-image-2-GENERATE](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-2-GENERATE.json)
+[Broken link](/broken/openapi/gpt-image-2-GENERATE)
 {% endopenapi-operation %}
 
 ### Edit image
@@ -68,7 +68,7 @@ It does not support image input via URLs or base64 encoding.
 {% endhint %}
 
 {% openapi-operation spec="gpt-image-2-EDIT" path="/v1/images/edits" method="post" %}
-[OpenAPI gpt-image-2-EDIT](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-2-EDIT_local_changes.json)
+[Broken link](/broken/openapi/gpt-image-2-EDIT)
 {% endopenapi-operation %}
 
 ## Code Examples
@@ -164,8 +164,8 @@ Let's generate an image using two input images and a prompt that defines how the
 
 <summary>Our input images</summary>
 
-| <img src="../../../.gitbook/assets/t-rex.png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| <img src="../../../.gitbook/assets/t-rex (1).png" alt="t-rex.png" data-size="original"> | <img src="../../../.gitbook/assets/crown.png" alt="crown.png" data-size="original"> |
+| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 
 </details>
 
