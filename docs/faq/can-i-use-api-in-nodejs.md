@@ -19,7 +19,7 @@ Before using an API in NodeJS, you need to ensure that NodeJS is installed on yo
 node --version
 ```
 
-If this command prints a NodeJS version, then you can proceed to the [example article](/broken/pages/ngeSCZKxiGVWqYZTHDjY#example-in-node.js). If not, you need to install NodeJS on your system. The installation steps depend on your operating system, but here are some quick instructions to get you started:
+If this command prints a NodeJS version, then you can proceed to the [example article](https://github.com/aimlapi/api-docs/blob/main/broken/pages/ngeSCZKxiGVWqYZTHDjY/README.md#example-in-node.js). If not, you need to install NodeJS on your system. The installation steps depend on your operating system, but here are some quick instructions to get you started:
 
 ### On Windows / Mac
 

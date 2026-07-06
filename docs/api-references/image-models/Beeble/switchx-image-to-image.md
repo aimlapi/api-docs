@@ -25,12 +25,12 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="switchx-image-to-image" path="/v1/images/generations" method="post" %}
-[OpenAPI switchx-image-to-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Beeble/switchx-image-to-image.json)
+[Broken link](/broken/openapi/switchx-image-to-image)
 {% endopenapi-operation %}
 
 ## Quick Example
 
-Let's generate a new image using the one from the [flux/dev Quick Example](flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
+Let's generate a new image using the one from the [flux/dev Quick Example](https://github.com/aimlapi/api-docs/blob/main/docs/api-references/image-models/Beeble/flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
 
 {% tabs %}
 {% tab title="Python" %}

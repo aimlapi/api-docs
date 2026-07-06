@@ -3,7 +3,7 @@ hidden: true
 noIndex: true
 ---
 
-# Speech 2.6 HD
+# Copy of Speech 2.6 HD
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -132,13 +132,9 @@ To create a custom voice preset that you can later use for text-to-speech (TTS),
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 3.  [On the Voice Cloning page](https://www.minimax.io/audio/voices-cloning), upload an audio file containing a sample of the voice you want to clone:
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
-
-
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
-
-
 4.  Copy the assigned file\_id:<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div>
@@ -230,5 +226,5 @@ main();
 ## API Schema
 
 {% openapi-operation spec="speech-2-6-hd" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-6-hd](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.6-hd.json)
+[Broken link](/broken/openapi/speech-2-6-hd)
 {% endopenapi-operation %}

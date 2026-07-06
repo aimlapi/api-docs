@@ -1,4 +1,4 @@
-# TripoSR
+# Triposr
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="triposr" path="/v1/images/generations" method="post" %}
-[OpenAPI triposr](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/Stability-AI/triposr.json)
+[Broken link](/broken/openapi/triposr)
 {% endopenapi-operation %}
 
 ## Example
@@ -129,11 +129,11 @@ The example returns a textured 3D mesh in GLB file format.
 
 For clarity, we took several screenshots of our mushroom from different angles in an online GLB viewer. As you can see, the model understands the shape, but preserving the pattern on the back side (which was not visible on the reference image) could be improved:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (9) (1).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (7) (1).png" alt="" data-size="original"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th></th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (9) (1).png" alt="" data-size="original"></td><td><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt="" data-size="original"></td></tr></tbody></table>
 
 Compare them with [the reference image](https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/mushroom.jpg):
 
-<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/576px-Fly_Agaric_mushroom_05.jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="279"></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/576px-Fly_Agaric_mushroom_05 (1).jpg" alt="" data-size="original"></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Try to choose reference images where the target object is not obstructed by other objects and does not blend into the background. Depending on the complexity of the object, you may need to experiment with the resolution of the reference image to achieve a satisfactory mesh.

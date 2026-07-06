@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="sharpen" path="/v1/images/generations" method="post" %}
-[OpenAPI sharpen](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/topaz-labs/sharpen.json)
+[Broken link](/broken/openapi/sharpen)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -117,7 +117,7 @@ main();
 
 </details>
 
-<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/blurred-landscape.png" alt="" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/sharpen_strength_0.9.png" alt="&#x22;mode&#x22;: &#x22;Strong&#x22;
+<table data-full-width="true"><thead><tr><th valign="top">Blurred Image</th><th valign="top">Deblurred Image</th><th></th></tr></thead><tbody><tr><td valign="top"><img src="../../../.gitbook/assets/blurred-landscape (1).png" alt="" data-size="original"></td><td valign="top"><img src="../../../.gitbook/assets/sharpen_strength_0.9.png" alt="&#x22;mode&#x22;: &#x22;Strong&#x22;
 &#x22;strength&#x22;: 0.9" data-size="original"></td><td></td></tr></tbody></table>
 
 For clarity, we’ve created a split image showing the results of different parameter settings.

@@ -60,7 +60,7 @@ The parameters may vary (especially for models from different developers), so it
 We will call the [**gpt-4o**](OpenAI/gpt-4o.md) model using the Python programming language and the OpenAI SDK.
 
 {% hint style="info" %}
-If you need a more detailed explanation of how to call a model's API in code, check out our [<mark style="color:blue;">QUICKSTART</mark>](broken-reference/) section.
+If you need a more detailed explanation of how to call a model's API in code, check out our [<mark style="color:blue;">QUICKSTART</mark>](https://github.com/aimlapi/api-docs/blob/main/docs/api-references/text-models-llm/broken-reference/README.md) section.
 {% endhint %}
 
 {% code overflow="wrap" %}

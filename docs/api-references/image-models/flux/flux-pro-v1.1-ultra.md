@@ -1,4 +1,4 @@
-# Flux Pro 1.1 Ultra
+# Flux Pro v1.1 Ultra
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -27,7 +27,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="flux-pro-v1-1-ultra" path="/v1/images/generations" method="post" %}
-[OpenAPI flux-pro-v1-1-ultra](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/flux/flux-pro-v1.1-ultra.json)
+[Broken link](/broken/openapi/flux-pro-v1-1-ultra)
 {% endopenapi-operation %}
 
 ## Quick Example
@@ -118,4 +118,4 @@ main()
 
 We obtained the following 2752x1536 image by running this code example:
 
-<figure><img src="../../../.gitbook/assets/Xw0w4dVpJk88_d8CBZQas_c2d37af49746421fa848a95df405288a.jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Xw0w4dVpJk88_d8CBZQas_c2d37af49746421fa848a95df405288a (1).jpg" alt=""><figcaption><p><code>'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.'</code></p></figcaption></figure>

@@ -1,4 +1,4 @@
-# Voyage Large 2 Instruct
+# Voyage Large 2 instruct
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -24,20 +24,21 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## API Schema
 
-{% openapi src="../../../.gitbook/assets/voyage-large-2-instruct.json" path="/v1/embeddings" method="post" %}
-[voyage-large-2-instruct.json](../../../.gitbook/assets/voyage-large-2-instruct.json)
+{% openapi src="../../../.gitbook/assets/voyage-large-2-instruct (1).json" path="/v1/embeddings" method="post" %}
+[voyage-large-2-instruct (1).json](<../../../.gitbook/assets/voyage-large-2-instruct (1).json>)
 {% endopenapi %}
 
 ## Code Example
 
 {% tabs %}
 {% tab title="Python" %}
-<pre class="language-python"><code class="lang-python">import openai
-<strong>
-</strong># Initialize the API client
+```python
+import openai
+
+# Initialize the API client
 client = openai.OpenAI(
-    # Insert your AIML API Key instead of &#x3C;YOUR_AIMLAPI_KEY>
-    api_key="&#x3C;YOUR_AIMLAPI_KEY>",
+    # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>
+    api_key="<YOUR_AIMLAPI_KEY>",
     base_url="https://api.aimlapi.com/v1",
 )
 
@@ -52,7 +53,7 @@ response = client.embeddings.create(
 
 # Print the embedding
 print(response)
-</code></pre>
+```
 {% endtab %}
 
 {% tab title="JS" %}
