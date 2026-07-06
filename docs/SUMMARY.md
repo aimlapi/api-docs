@@ -19,6 +19,8 @@
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21](api-references/text-models-llm/AI21/README.md)
     * [Jamba Large 1.7](api-references/text-models-llm/AI21/jamba-large-1.7.md)
+  * [AionLabs](api-references/text-models-llm/AionLabs/README.md)
+    * [Aion 1.0](api-references/text-models-llm/AionLabs/aion-1.0.md)
   * [Alibaba Cloud](api-references/text-models-llm/Alibaba-Cloud/README.md)
     * [Qwen Max](api-references/text-models-llm/Alibaba-Cloud/qwen-max.md)
     * [Qwen Plus](api-references/text-models-llm/Alibaba-Cloud/qwen-plus.md)
