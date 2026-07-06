@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="laguna-m-1" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/laguna-m-1)
+[OpenAPI laguna-m-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Poolside/laguna-m.1.json)
 {% endopenapi-operation %}
 
 ## Code Example

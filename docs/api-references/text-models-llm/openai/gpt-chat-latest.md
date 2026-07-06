@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gpt-chat-latest" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/gpt-chat-latest)
+[OpenAPI gpt-chat-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-chat-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example

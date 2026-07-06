@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="laguna-xs-2" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/laguna-xs-2)
+[OpenAPI laguna-xs-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Poolside/laguna-xs.2.json)
 {% endopenapi-operation %}
 
 ## Code Example

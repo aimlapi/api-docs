@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="relace-apply-3" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/relace-apply-3)
+[OpenAPI relace-apply-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Relace/relace-apply-3.json)
 {% endopenapi-operation %}
 
 ## Code Example

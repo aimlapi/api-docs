@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="perceptron-mk1" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/perceptron-mk1)
+[OpenAPI perceptron-mk1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Perceptron/perceptron-mk1.json)
 {% endopenapi-operation %}
 
 ## Code Example

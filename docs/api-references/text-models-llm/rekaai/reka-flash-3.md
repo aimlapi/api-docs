@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="reka-flash-3" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/reka-flash-3)
+[OpenAPI reka-flash-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/rekaai/reka-flash-3.json)
 {% endopenapi-operation %}
 
 ## Code Example

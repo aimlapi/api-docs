@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="reka-edge" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/reka-edge)
+[OpenAPI reka-edge](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/rekaai/reka-edge.json)
 {% endopenapi-operation %}
 
 ## Code Example

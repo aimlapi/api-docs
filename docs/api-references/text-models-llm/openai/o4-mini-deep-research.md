@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="o4-mini-deep-research" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/o4-mini-deep-research)
+[OpenAPI o4-mini-deep-research](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/o4-mini-deep-research.json)
 {% endopenapi-operation %}
 
 ## Code Example

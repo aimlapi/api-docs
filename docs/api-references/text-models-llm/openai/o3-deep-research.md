@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="o3-deep-research" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/o3-deep-research)
+[OpenAPI o3-deep-research](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/o3-deep-research.json)
 {% endopenapi-operation %}
 
 ## Code Example
