@@ -142,6 +142,8 @@
   * [IBM](api-references/text-models-llm/IBM/README.md)
     * [Granite 4.0 Micro](api-references/text-models-llm/IBM/granite-4.0-h-micro.md)
     * [Granite 4.1 8B](api-references/text-models-llm/IBM/granite-4.1-8b.md)
+  * [Inception](api-references/text-models-llm/Inception/README.md)
+    * [Mercury 2](api-references/text-models-llm/Inception/mercury-2.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
     * [Longcat 2.0](api-references/text-models-llm/Meituan/longcat-2.0.md)
   * [Meta](api-references/text-models-llm/Meta/README.md)
