@@ -180,6 +180,7 @@
     * [Codestral 2508](api-references/text-models-llm/Mistral-AI/codestral-2508.md)
     * [Devstral 2 2512](api-references/text-models-llm/Mistral-AI/devstral-2512.md)
     * [Ministral 3 14B 2512](api-references/text-models-llm/Mistral-AI/ministral-14b-2512.md)
+    * [Ministral 3 3B 2512](api-references/text-models-llm/Mistral-AI/ministral-3b-2512.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
