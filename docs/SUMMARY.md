@@ -186,6 +186,8 @@
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
+  * [tencent](api-references/text-models-llm/tencent/README.md)
+    * [Hy3](api-references/text-models-llm/tencent/hy3.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [Grok 3 Beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [Grok 3 Mini Beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
