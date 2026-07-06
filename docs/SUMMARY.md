@@ -186,6 +186,7 @@
     * [Saba](api-references/text-models-llm/Mistral-AI/mistral-saba.md)
     * [Small 3](api-references/text-models-llm/Mistral-AI/mistral-small-24b-instruct-2501.md)
     * [Small 4](api-references/text-models-llm/Mistral-AI/mistral-small-2603.md)
+    * [Small 3.1 24B](api-references/text-models-llm/Mistral-AI/mistral-small-3.1-24b-instruct.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
