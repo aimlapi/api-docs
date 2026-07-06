@@ -265,6 +265,7 @@
     * [Gpt Oss Safeguard 20B](api-references/text-models-llm/openai/gpt-oss-safeguard-20b.md)
     * [O1 Pro](api-references/text-models-llm/openai/o1-pro.md)
     * [O3 Deep Research](api-references/text-models-llm/openai/o3-deep-research.md)
+    * [O4 Mini Deep Research](api-references/text-models-llm/openai/o4-mini-deep-research.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
