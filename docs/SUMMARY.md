@@ -478,6 +478,8 @@
   * [Text-to-Speech](api-references/speech-models/text-to-speech/README.md)
     * [Alibaba Cloud](api-references/speech-models/text-to-speech/alibaba-cloud/README.md)
       * [Qwen3 TTS Flash](api-references/speech-models/text-to-speech/alibaba-cloud/qwen3-tts-flash.md)
+    * [ByteDance](api-references/speech-models/text-to-speech/ByteDance/README.md)
+      * [Seed Audio 1.0](api-references/speech-models/text-to-speech/ByteDance/seed-audio-1.0.md)
     * [Deepgram](api-references/speech-voice-models/tts/Deepgram/README.md)
       * [Aura](api-references/speech-voice-models/tts/Deepgram/aura.md)
       * [Aura 2](api-references/speech-models/text-to-speech/deepgram/aura-2.md)

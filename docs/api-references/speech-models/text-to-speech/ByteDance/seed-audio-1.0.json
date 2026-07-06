@@ -1,0 +1,256 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/tts": {
+      "post": {
+        "operationId": "_v1_tts",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "bytedance/seed-audio-1-0"
+                    ]
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 3000,
+                    "description": "Text to synthesize (the TTS prompt). Use @Audio1, @Audio2, etc. to reference audio clips."
+                  },
+                  "references": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "speaker": {
+                          "type": "string",
+                          "description": "BytePlus TTS2.0 voice ID or cloned voice ID."
+                        },
+                        "audio_data": {
+                          "type": "string",
+                          "description": "Base64-encoded reference audio."
+                        },
+                        "audio_url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "URL of a reference audio file."
+                        },
+                        "image_data": {
+                          "type": "string",
+                          "description": "Base64-encoded reference image."
+                        },
+                        "image_url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "URL of a reference image."
+                        }
+                      }
+                    },
+                    "maxItems": 3,
+                    "description": "Reference resources. Supports up to three audio references or one image reference."
+                  },
+                  "audio_config": {
+                    "type": "object",
+                    "properties": {
+                      "format": {
+                        "type": "string",
+                        "enum": [
+                          "wav",
+                          "mp3",
+                          "pcm",
+                          "ogg_opus"
+                        ],
+                        "default": "wav",
+                        "description": "The format of the generated music."
+                      },
+                      "sample_rate": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "8000",
+                              "16000",
+                              "24000",
+                              "32000",
+                              "44100",
+                              "48000"
+                            ]
+                          },
+                          {
+                            "type": "integer"
+                          }
+                        ],
+                        "description": "The sampling rate of the generated music.",
+                        "enum": [
+                          8000,
+                          16000,
+                          24000,
+                          32000,
+                          44100,
+                          48000
+                        ]
+                      },
+                      "speech_rate": {
+                        "type": "integer",
+                        "minimum": -50,
+                        "maximum": 100,
+                        "default": 0,
+                        "description": "Speech rate. 100 means 2.0x speed, -50 means 0.5x speed."
+                      },
+                      "loudness_rate": {
+                        "type": "integer",
+                        "minimum": -50,
+                        "maximum": 100,
+                        "default": 0,
+                        "description": "Volume. 100 means 2.0x volume, -50 means 0.5x volume."
+                      },
+                      "pitch_rate": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12,
+                        "default": 0,
+                        "description": "Pitch adjustment."
+                      }
+                    }
+                  },
+                  "watermark": {
+                    "type": "object",
+                    "properties": {
+                      "aigc_watermark": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Adds an explicit audio rhythm marker."
+                      },
+                      "aigc_metadata": {
+                        "type": "object",
+                        "properties": {
+                          "enable": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "content_producer": {
+                            "type": "string"
+                          },
+                          "produce_id": {
+                            "type": "string"
+                          },
+                          "content_propagator": {
+                            "type": "string"
+                          },
+                          "propagate_id": {
+                            "type": "string"
+                          }
+                        },
+                        "description": "Implicit watermark metadata."
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "model",
+                  "text"
+                ],
+                "title": "bytedance/seed-audio-1-0"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "audio": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "audio"
+                  ]
+                }
+              },
+              "audio/wav": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary",
+                  "description": "Audio stream"
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/tts' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"bytedance/seed-audio-1-0\", \"text\": \"<text>\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/tts', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"bytedance/seed-audio-1-0\",\n  \"text\": \"<text>\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/tts\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'bytedance/seed-audio-1-0', 'text': '<text>'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
