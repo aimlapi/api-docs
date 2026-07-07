@@ -1,22 +1,22 @@
-# Glm 4.7 Flash
+# Glm 5V Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `z-ai/glm-4.7-flash`
+* `z-ai/glm-5v-turbo`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/glm-4.7-flash" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/glm-5v-turbo" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-GLM 4.7 Flash is available through the AI/ML API.
+GLM 5V Turbo is available through the AI/ML API.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -34,8 +34,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="glm-4-7-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-4-7-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-4.7-flash.json)
+{% openapi-operation spec="glm-5v-turbo" path="/v1/chat/completions" method="post" %}
+[Broken link](/broken/openapi/glm-5v-turbo)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -55,7 +55,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"z-ai/glm-4.7-flash",
+        "model":"z-ai/glm-5v-turbo",
         "messages":[
             {
                 "role":"user",
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'z-ai/glm-4.7-flash',
+      model: 'z-ai/glm-5v-turbo',
       messages:[
           {
               role:'user',
@@ -113,7 +113,7 @@ main();
   "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
   "created": 1777366507,
-  "model": "z-ai/glm-4.7-flash",
+  "model": "z-ai/glm-5v-turbo",
   "system_fingerprint": null,
   "choices": [
     {

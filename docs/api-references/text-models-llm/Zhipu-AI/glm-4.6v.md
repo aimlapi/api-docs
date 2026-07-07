@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="glm-4-6v" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/glm-4-6v)
+[OpenAPI glm-4-6v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-4.6v.json)
 {% endopenapi-operation %}
 
 ## Code Example
