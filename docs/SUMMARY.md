@@ -78,7 +78,6 @@
     * [Claude Haiku Latest](api-references/text-models-llm/Anthropic/claude-haiku-latest.md)
     * [Claude Fable Latest](api-references/text-models-llm/Anthropic/claude-fable-latest.md)
     * [Claude 3 Haiku](api-references/text-models-llm/Anthropic/claude-3-haiku.md)
-    * [Claude Opus 4](api-references/text-models-llm/Anthropic/claude-opus-4.md)
   * [Arcee AI](api-references/text-models-llm/Arcee-AI/README.md)
     * [Coder Large](api-references/text-models-llm/Arcee-AI/coder-large.md)
     * [Trinity Large Thinking](api-references/text-models-llm/Arcee-AI/trinity-large-thinking.md)
