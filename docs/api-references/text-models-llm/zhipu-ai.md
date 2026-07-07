@@ -2,5 +2,5 @@
 hidden: true
 ---
 
-# ByteDance Seed
+# Zhipu AI
 
