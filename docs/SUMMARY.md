@@ -142,6 +142,7 @@
     * [Gemini 3.1 Pro Preview Custom Tools](api-references/text-models-llm/Google/gemini-3.1-pro-preview-customtools.md)
     * [Gemma 2 27B](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [Gemini Flash Latest](api-references/text-models-llm/Google/gemini-flash-latest.md)
+    * [Gemini Pro Latest](api-references/text-models-llm/Google/gemini-pro-latest.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [IBM](api-references/text-models-llm/IBM/README.md)
