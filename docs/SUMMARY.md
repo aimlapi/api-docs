@@ -205,6 +205,7 @@
     * [Kimi K2 0711](api-references/text-models-llm/moonshot/kimi-k2.md)
     * [Kimi K2 0905](api-references/text-models-llm/moonshot/kimi-k2-0905.md)
     * [Kimi K2 Thinking](api-references/text-models-llm/moonshot/kimi-k2-thinking.md)
+    * [Kimi Latest](api-references/text-models-llm/moonshot/kimi-latest.md)
   * [Morph](api-references/text-models-llm/Morph/README.md)
     * [V3 Fast](api-references/text-models-llm/Morph/morph-v3-fast.md)
     * [V3 Large](api-references/text-models-llm/Morph/morph-v3-large.md)
