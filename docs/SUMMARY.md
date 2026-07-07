@@ -273,6 +273,7 @@
     * [Hy3](api-references/text-models-llm/tencent/hy3.md)
   * [TheDrummer](api-references/text-models-llm/TheDrummer/README.md)
     * [Cydonia 24B V4.1](api-references/text-models-llm/TheDrummer/cydonia-24b-v4.1.md)
+    * [Rocinante 12B](api-references/text-models-llm/TheDrummer/rocinante-12b.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [Grok 3 Beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [Grok 3 Mini Beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
