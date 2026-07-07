@@ -276,6 +276,8 @@
     * [Rocinante 12B](api-references/text-models-llm/TheDrummer/rocinante-12b.md)
     * [Skyfall 36B V2](api-references/text-models-llm/TheDrummer/skyfall-36b-v2.md)
     * [Unslopnemo 12B](api-references/text-models-llm/TheDrummer/unslopnemo-12b.md)
+  * [undi95](api-references/text-models-llm/undi95/README.md)
+    * [ReMM SLERP 13B](api-references/text-models-llm/undi95/remm-slerp-l2-13b.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [Grok 3 Beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [Grok 3 Mini Beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
