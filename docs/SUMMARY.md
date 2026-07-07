@@ -280,6 +280,8 @@
     * [ReMM SLERP 13B](api-references/text-models-llm/undi95/remm-slerp-l2-13b.md)
   * [Upstage](api-references/text-models-llm/Upstage/README.md)
     * [Solar Pro 3](api-references/text-models-llm/Upstage/solar-pro-3.md)
+  * [Writer](api-references/text-models-llm/Writer/README.md)
+    * [Palmyra X5](api-references/text-models-llm/Writer/palmyra-x5.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
     * [Grok 3 Beta](api-references/text-models-llm/xai/grok-3-beta.md)
     * [Grok 3 Mini Beta](api-references/text-models-llm/xai/grok-3-mini-beta.md)
