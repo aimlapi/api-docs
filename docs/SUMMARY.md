@@ -267,6 +267,8 @@
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
+  * [switchpoint](api-references/text-models-llm/switchpoint/README.md)
+    * [Switchpoint Router](api-references/text-models-llm/switchpoint/router.md)
   * [tencent](api-references/text-models-llm/tencent/README.md)
     * [Hy3](api-references/text-models-llm/tencent/hy3.md)
   * [xAI](api-references/text-models-llm/xAI/README.md)
