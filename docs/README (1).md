@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # llms.txt
 
 ## AIMLAPI — Unified AI/ML API. Documentation portal
