@@ -347,6 +347,7 @@
     * [Seedream 4.5](api-references/image-models/bytedance/seedream-4-5.md)
     * [Dreamina Creative Upscale](api-references/image-models/bytedance/dreamina-creative-upscale.md)
     * [Seedream 5.0 Lite Preview](api-references/image-models/bytedance/seedream-5.0-lite-preview.md)
+    * [Seedream 5.0 Pro](api-references/image-models/ByteDance/dola-seedream-5-0-pro.md)
   * [Flux](api-references/image-models/flux/README.md)
     * [Flux Pro](api-references/image-models/flux/flux-pro.md)
     * [Flux Pro v1.1](api-references/image-models/flux/flux-pro-v1.1.md)
