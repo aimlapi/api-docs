@@ -305,6 +305,7 @@
     * [Grok 4.20 reasoning](api-references/text-models-llm/xai/grok-4-20-reasoning.md)
     * [Grok Build 0.1](api-references/text-models-llm/xai/grok-build-0-1.md)
     * [Grok 4.3](api-references/text-models-llm/xai/grok-4-3.md)
+    * [Grok 4.5](api-references/text-models-llm/xai/grok-4-5.md)
   * [Xiaomi](api-references/text-models-llm/xiaomi/README.md)
     * [mimo-v2-flash](api-references/text-models-llm/xiaomi/mimo-v2-flash.md)
     * [Mimo v2.5](api-references/text-models-llm/xiaomi/mimo-v2.5.md)
