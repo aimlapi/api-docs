@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Seedream 5.0 Pro
 
 {% columns %}
@@ -16,7 +20,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Seedream 5.0 Pro is ByteDance flagship text-to-image model with high-resolution output up to 2048x2048 (up to ~2.7K at 16:9) and multi-image reference support.
+Seedream 5.0 Pro is ByteDance flagship text-to-image model with high-resolution output up to 2048x2048 (up to \~2.7K at 16:9) and multi-image reference support.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
