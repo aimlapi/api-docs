@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Read Text Aloud and Describe Images: Support People with Visual Impairments
 
 ## Idea and Step-by-Step Plan

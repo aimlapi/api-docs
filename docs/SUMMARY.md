@@ -707,7 +707,6 @@
 ***
 
 * [📞 Contact Sales](https://calendly.com/valeriyb-aimlapi/30min)
-* [🗯️ Send Feedback](https://forms.aimlapi.com/doc)
 
 ## Solutions
 

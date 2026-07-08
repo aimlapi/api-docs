@@ -29,12 +29,6 @@ print(response.choices[0].message.content)
 
 ***
 
-## Browse Models
-
-Popular | [View all 1000+ models >](api-references/model-database.md)
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="api-references/text-models-llm/OpenAI/">ChatGPT</a></td><td></td><td></td><td><a href="api-references/text-models-llm/OpenAI/">OpenAI</a></td></tr><tr><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td><td></td><td></td><td><a href="api-references/text-models-llm/DeepSeek/">DeepSeek</a></td></tr><tr><td><a href="api-references/image-models/flux/">Flux</a></td><td></td><td></td><td><a href="api-references/image-models/flux/">flux</a></td></tr></tbody></table>
-
 Select the model by its **Task**, by its **Developer** or by the supported **Capabilities**:
 
 {% hint style="info" %}
@@ -190,13 +184,3 @@ If you've already made your choice and know the model ID, use the [Search panel]
 ## Going Deeper
 
 <table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/glossary">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/errors-and-messages">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/faq">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="api-references/text-models-llm/Anthropic/">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
-
-## Have a Minute? Help Make the Docs Better!
-
-We’re currently working on improving our documentation portal, and your feedback would be **incredibly** helpful! Take [**a quick 5-question survey**](https://tally.so/r/w4G9Er) (no personal info required!)
-
-You can also rate each individual page using the built-in form on the right side of the screen:
-
-<figure><img src=".gitbook/assets/rateform-5.webp" alt=""><figcaption></figcaption></figure>
-
-Have suggestions for improvement? [**Let us know!**](https://forms.aimlapi.com/doc)
