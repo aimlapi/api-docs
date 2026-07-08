@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # MCP
 
 Connect AI/ML API to your AI agent (Claude Code, Cursor, Claude Desktop, and other MCP‑compatible clients) with a single URL and your AI/ML API key. Once connected, your agent can **discover and compare models, run inference (chat / embeddings / image / video / audio), manage long‑running generation jobs, and check your balance** — all in natural language, directly from the client you already use.
