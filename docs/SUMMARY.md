@@ -275,6 +275,7 @@
     * [Gpt 5.6 Sol](api-references/text-models-llm/openai/gpt-5.6-sol.md)
     * [Gpt 5.6 Sol Pro](api-references/text-models-llm/openai/gpt-5.6-sol-pro.md)
     * [Gpt 5.6 Terra](api-references/text-models-llm/openai/gpt-5.6-terra.md)
+    * [Gpt 5.6 Terra Pro](api-references/text-models-llm/openai/gpt-5.6-terra-pro.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
