@@ -271,7 +271,6 @@
     * [Gpt 5.4 Nano](api-references/text-models-llm/openai/gpt-5.4-nano.md)
     * [Gpt 5.4 Pro](api-references/text-models-llm/openai/gpt-5.4-pro.md)
     * [Gpt 5.6 Luna](api-references/text-models-llm/openai/gpt-5.6-luna.md)
-    * [Gpt 5.6 Luna Pro](api-references/text-models-llm/openai/gpt-5.6-luna-pro.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
