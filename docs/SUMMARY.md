@@ -330,6 +330,8 @@
     * [Glm 5.1](api-references/text-models-llm/zhipu/glm-5.1.md)
     * [Glm 5.2](api-references/text-models-llm/zhipu/glm-5.2.md)
   * [Zhipu AI](api-references/text-models-llm/zhipu-ai.md)
+  * [Zhipu AI](api-references/text-models-llm/Zhipu-AI/README.md)
+    * [Glm 5.2](api-references/text-models-llm/Zhipu-AI/glm-5.2.md)
 * [Image Models](api-references/image-models/README.md)
   * [Alibaba Cloud](api-references/image-models/alibaba-cloud/README.md)
     * [Qwen Image](api-references/image-models/alibaba-cloud/qwen-image.md)
