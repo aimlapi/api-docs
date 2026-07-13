@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Glm 5.2 Fast Preview
 
 {% columns %}
@@ -53,7 +57,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="glm-5-2-fast-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-5-2-fast-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-5.2-fast-preview.json)
+[OpenAPI glm-5-2-fast-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-5-2-fast-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example
