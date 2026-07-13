@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # Trinity Mini
 
 {% columns %}
