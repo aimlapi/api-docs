@@ -161,6 +161,7 @@
     * [3 Productivity](api-references/text-models-llm/Inflection/inflection-3-productivity.md)
   * [Kwaipilot](api-references/text-models-llm/Kwaipilot/README.md)
     * [Kat Coder Pro V2](api-references/text-models-llm/Kwaipilot/kat-coder-pro-v2.md)
+    * [Kat Coder Air V2.5](api-references/text-models-llm/Kwaipilot/kat-coder-air-v2.5.md)
   * [LiquidAI](api-references/text-models-llm/LiquidAI/README.md)
     * [LFM2-24B-A2B](api-references/text-models-llm/LiquidAI/lfm-2-24b-a2b.md)
   * [Mancer](api-references/text-models-llm/Mancer/README.md)
