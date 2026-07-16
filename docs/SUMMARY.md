@@ -172,6 +172,7 @@
   * [Meta](api-references/text-models-llm/Meta/README.md)
     * [Llama 3.3 70B Instruct Turbo](api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.md)
     * [Llama 3.3 70B Versatile](api-references/text-models-llm/meta/llama-3.3-70b-versatile.md)
+    * [Muse Spark 1.1](api-references/text-models-llm/meta/muse-spark-1.1.md)
   * [MiniMax](api-references/text-models-llm/MiniMax/README.md)
     * [Text 01](api-references/text-models-llm/MiniMax/text-01.md)
     * [M1](api-references/text-models-llm/minimax/m1.md)
