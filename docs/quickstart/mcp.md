@@ -5,9 +5,9 @@ icon: plug
 
 # MCP
 
-Connect AIMLAPI to your AI client — **Claude Desktop, Claude (web), Cursor, Claude Code**, and other MCP-capable apps — over the [Model Context Protocol](https://modelcontextprotocol.io/) using **OAuth**.
+Connect AI/ML API to your AI client — **Claude Desktop, Claude (web), Cursor, Claude Code**, and other MCP-capable apps — over the [Model Context Protocol](https://modelcontextprotocol.io/) using **OAuth**.
 
-You sign in with your AIMLAPI account in the browser; there is **no API key to copy or paste**. Once connected, you can discover and compare models, run inference (LLM / image / video / audio / embeddings), manage long-running generation jobs, and check your balance — directly from the client.
+You sign in with your AI/ML API account in the browser; there is **no API key to copy or paste**. Once connected, you can discover and compare models, run inference (LLM / image / video / audio / embeddings), manage long-running generation jobs, and check your balance — directly from the client.
 
 Usage is billed to your AIMLAPI account, exactly like the REST API.
 
@@ -19,7 +19,7 @@ Prefer to paste an API key instead of signing in? That method is also supported 
 
 ## Prerequisites
 
-* An **AIMLAPI account** — create one at [https://aimlapi.com](https://aimlapi.com/).
+* An **AI/ML API account** — create one at [https://aimlapi.com](https://aimlapi.com/).
 * A client that supports **remote MCP servers over Streamable HTTP with OAuth** (all clients below do).
 * A balance on your account if you plan to run billable inference (top up at [https://aimlapi.com/app/billing](https://aimlapi.com/app/billing)).
 
@@ -53,9 +53,9 @@ Your client registers itself and opens your browser.
 {% endstep %}
 
 {% step %}
-## Sign in and approve access
+## Signs you in and connects
 
-You **sign in to AIMLAPI** and **approve access**; the client receives a token and connects.
+You **sign in to AI/ML API** and **approve access**; the client receives a token and connects.
 {% endstep %}
 {% endstepper %}
 
@@ -83,7 +83,7 @@ Set **Name:** `AIMLAPI` · **Remote MCP server URL:** `https://mcp.aimlapi.com/m
 
 Click **Add**. A browser window opens → **sign in to AIMLAPI** → **approve access**.
 
-The connector appears as **connected**, and the AIMLAPI tools become available in your chats.
+The connector appears as **connected**, and the AI/ML API tools become available in your chats.
 {% endstep %}
 {% endstepper %}
 
@@ -107,7 +107,7 @@ Enter the URL `https://mcp.aimlapi.com/mcp` and add it.
 {% step %}
 ## Complete the browser flow
 
-A browser flow opens → **sign in to AIMLAPI** → **approve** → connected.
+A browser flow opens → **sign in to AI/ML API** → **approve** → connected.
 {% endstep %}
 {% endstepper %}
 
@@ -139,7 +139,7 @@ Open **Cursor Settings → Tools & Integrations**, find **aimlapi**, and click *
 {% step %}
 ## Sign in and allow access
 
-A browser opens → **sign in to AIMLAPI** → **Allow**.
+A browser opens → **sign in to AI/ML API** → **Allow**.
 {% endstep %}
 
 {% step %}
@@ -149,7 +149,7 @@ The server turns green when connected.
 {% endstep %}
 {% endstepper %}
 
-## Claude Code (CLI)
+## Claude Code
 
 ```bash
 claude mcp add --transport http aimlapi https://mcp.aimlapi.com/mcp
@@ -191,22 +191,22 @@ Set **Transport = Streamable HTTP**, **URL = `https://mcp.aimlapi.com/mcp`**, th
 
 ## What you can do once connected
 
-* **Discover models** — search and compare the catalog, get a comparable headline price.
+* **Discover models** — search and compare the catalog, and get a comparable headline price for each.
 * **Run inference** — LLM chat, embeddings, image / video / audio generation.
 * **Manage jobs** — submit long-running generations and poll their status/results.
 * **Account** — check your balance and usage.
 
-Every call is billed to your AIMLAPI account, just like the REST API.
+Every call is billed to your AI/ML API account, just like the REST API.
 
 ## Managing the connection
 
-To stop using AIMLAPI from a client, **remove or disconnect** the AIMLAPI connector in that client's settings.
+To stop using AI/ML API from a client, **remove or disconnect** the AI/ML API connector in that client's settings.
 
 ## Troubleshooting
 
 | Symptom                                                           | Fix                                                                                                                                 |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Browser didn't open, or the client is stuck "connecting"          | Remove the connector and add it again; make sure you completed the AIMLAPI sign-in in the browser.                                  |
+| Browser didn't open, or the client is stuck "connecting"          | Remove the connector and add it again; make sure you completed the AI/ML API sign-in in the browser.                                |
 | Connected, but inference fails with an insufficient-balance error | Top up at [https://aimlapi.com/app/billing](https://aimlapi.com/app/billing).                                                       |
 | The client connects but never asks you to sign in                 | You likely added an `Authorization` header — with a header the client uses API-key auth, not OAuth. Remove the header to use OAuth. |
-| "Sign-in failed" / authorization error                            | Confirm you're signing in to the correct AIMLAPI account, then retry from the client.                                               |
+| "Sign-in failed" / authorization error                            | Confirm you're signing in to the correct AI/ML API account, then retry from the client.                                             |
