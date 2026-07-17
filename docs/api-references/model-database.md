@@ -1,5 +1,6 @@
 ---
 description: A full list of available models.
+icon: book
 layout:
   width: wide
   title:
@@ -20,7 +21,7 @@ layout:
     visible: true
 ---
 
-# 📒 All Model IDs
+# All Model IDs
 
 {% hint style="info" %}
 If you need to select models based on specific parameters for your task, visit the [dedicated page on our official website](https://aimlapi.com/models/), which offers convenient filtering options. On the selected model’s page, you can find detailed technical and commercial information.

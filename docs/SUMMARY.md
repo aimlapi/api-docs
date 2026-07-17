@@ -2,7 +2,7 @@
 
 ## Quickstart
 
-* [🧭 Documentation Map](README.md)
+* [Documentation Map](README.md)
 * [Quickstart](quickstart/simple-model/README.md)
   * [Requesting more advanced models](quickstart/simple-model/requesting-more-advanced-models/README.md)
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
@@ -15,7 +15,7 @@
   * [Account Balance](api-references/service-endpoints/account-balance.md)
   * [API Key Management](api-references/service-endpoints/api-key-management.md)
   * [Complete Model List](api-references/service-endpoints/complete-model-list.md)
-* [📒 All Model IDs](api-references/model-database.md)
+* [All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21](api-references/text-models-llm/AI21/README.md)
     * [Jamba Large 1.7](api-references/text-models-llm/AI21/jamba-large-1.7.md)
