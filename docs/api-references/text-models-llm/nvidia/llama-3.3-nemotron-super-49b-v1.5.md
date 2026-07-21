@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Llama 3.3 Nemotron Super 49B V1.5
 
 {% columns %}
