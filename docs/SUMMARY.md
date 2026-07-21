@@ -147,6 +147,7 @@
     * [Gemma 2 27B](api-references/text-models-llm/Google/gemma-2-27b-it.md)
     * [Gemini 3.6 Flash](api-references/text-models-llm/Google/gemini-3-6-flash.md)
     * [Gemini 3.5 Flash Lite](api-references/text-models-llm/Google/gemini-3-5-flash-lite.md)
+    * [Gemini 3.5 Flash Lite](api-references/text-models-llm/Google/gemini-3.5-flash-lite.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [IBM](api-references/text-models-llm/IBM/README.md)
