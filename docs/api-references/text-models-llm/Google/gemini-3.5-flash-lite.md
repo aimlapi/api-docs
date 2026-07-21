@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Gemini 3.5 Flash Lite
 
 {% columns %}
