@@ -117,11 +117,41 @@ Set **Transport = Streamable HTTP**, **URL = `https://mcp.aimlapi.com/mcp`**, th
 * **Manage jobs** — submit long-running generations and poll their status/results.
 * **Account** — check your balance and usage.
 
-Every call is billed to your AIMLAPI account, just like the REST API.
+Every call is billed to your AI/ML API account, just like the REST API.
+
+### Example requests
+
+Once connected, you talk to AI/ML API in plain language from your client. Because AI/ML API is an aggregator of **1000+ models**, you can do things no single-provider MCP can.
+
+**Pick the right model for the job** _(unique to an aggregator)_
+
+* "Find the cheapest model with function calling and 128k context, and show the cost per 1M tokens."
+* "Compare GPT-5.6 Sol and Claude Opus 4.8 on price and context window."
+* "Which AI/ML API model is best for coding agents?"
+* "Run this prompt through the top 3 models and show me the answers side by side."
+
+**Keep an eye on spend (AI FinOps)**
+
+* "What's my AI/ML API balance?"
+* "How much have I spent this month, and on what?"
+* "Suggest a cheaper model for my last task."
+
+**Discover the catalog**
+
+* "List the newest LLMs on AI/ML API."
+* "Show me all image models and their prices."
+
+**Run inference**
+
+* "Explain OAuth in two sentences."
+* "Generate an image of a mountain lake at sunset with Nano Banana 2."
+* "Create embeddings for these three sentences."
+
+Your client picks the right AI/ML API tool automatically and streams the result back into the chat.
 
 ## Managing the connection
 
-To stop using AIMLAPI from a client, **remove or disconnect** the AIMLAPI connector — the exact step differs per client:
+To stop using AI/ML API from a client, **remove or disconnect** the AIMLAPI connector — the exact step differs per client:
 
 | Client         | How to remove                                                                                                           |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------- |
