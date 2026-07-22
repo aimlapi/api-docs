@@ -288,6 +288,7 @@
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
   * [Poolside](api-references/text-models-llm/Poolside/README.md)
+    * [Laguna M.1](api-references/text-models-llm/Poolside/laguna-m.1.md)
     * [Laguna S 2.1](api-references/text-models-llm/Poolside/laguna-s-2.1.md)
   * [Sakana AI](api-references/text-models-llm/Sakana-AI/README.md)
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
