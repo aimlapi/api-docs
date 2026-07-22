@@ -362,6 +362,7 @@
     * [Qwen Image 2.0](api-references/image-models/alibaba-cloud/qwen-image-2.0.md)
     * [Qwen Image 2.0 Pro](api-references/image-models/alibaba-cloud/qwen-image-2.0-pro.md)
     * [Qwen Image 3](api-references/image-models/Alibaba-Cloud/qwen-image-3.md)
+    * [Qwen Image 3 Edit](api-references/image-models/Alibaba-Cloud/qwen-image-3-edit.md)
   * [Beeble](api-references/image-models/Beeble/README.md)
     * [Switchx Image To Image](api-references/image-models/Beeble/switchx-image-to-image.md)
   * [ByteDance](api-references/image-models/bytedance/README.md)
