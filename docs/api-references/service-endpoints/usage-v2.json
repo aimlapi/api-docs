@@ -1,0 +1,138 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/usage": {
+      "get": {
+        "operationId": "_v2_usage",
+        "parameters": [
+          {
+            "name": "period",
+            "in": "query",
+            "required": false,
+            "description": "Relative window: a positive integer followed by `h` or `d`, for example `24h` or `7d`. Provide either `period` or both `start` and `end`, never both.",
+            "schema": {
+              "type": "string",
+              "example": "24h"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": false,
+            "description": "Window start, ISO-8601. A value without a UTC offset is read as UTC. Must be used together with `end`.",
+            "schema": {
+              "type": "string",
+              "example": "2026-07-01T00:00:00Z"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "required": false,
+            "description": "Window end, ISO-8601. Must not be earlier than `start`, and the window must not exceed 92 days.",
+            "schema": {
+              "type": "string",
+              "example": "2026-07-28T00:00:00Z"
+            }
+          },
+          {
+            "name": "key_prefix",
+            "in": "query",
+            "required": false,
+            "description": "Prefix of the key to report on. Omit it to get the spend of the key you are authenticating with. Reporting on a different key requires a management key.",
+            "schema": {
+              "type": "string",
+              "example": "abcd1234"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "api_key_prefix": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The requested key prefix, or null when it was omitted and the answer is your own key's spend.",
+                      "example": "abcd1234"
+                    },
+                    "start": {
+                      "type": "string",
+                      "description": "Window start, resolved to UTC.",
+                      "example": "2026-07-26T22:15:00.000Z"
+                    },
+                    "end": {
+                      "type": "string",
+                      "description": "Window end, resolved to UTC.",
+                      "example": "2026-07-27T22:15:00.000Z"
+                    },
+                    "spend": {
+                      "type": "number",
+                      "description": "Total spend for the key over the window, in USD.",
+                      "example": 13.704199
+                    },
+                    "currency": {
+                      "type": "string",
+                      "description": "Spend currency (always USD).",
+                      "example": "USD"
+                    },
+                    "requests": {
+                      "type": "integer",
+                      "description": "Number of charged requests in the window.",
+                      "example": 9643
+                    }
+                  },
+                  "required": [
+                    "api_key_prefix",
+                    "start",
+                    "end",
+                    "spend",
+                    "currency",
+                    "requests"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v2/usage?period=24h' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v2/usage?period=24h\", {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v2/usage\",\n        headers={\n            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        },\n        params={\"period\": \"24h\"}\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
