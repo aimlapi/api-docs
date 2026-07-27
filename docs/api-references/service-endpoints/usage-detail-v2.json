@@ -57,6 +57,7 @@
         ],
         "responses": {
           "200": {
+            "description": "Total spend for the key over the requested window, with a per-model breakdown.",
             "content": {
               "application/json": {
                 "schema": {
@@ -115,7 +116,11 @@
                             "example": 500
                           }
                         },
-                        "required": ["model", "spend", "requests"]
+                        "required": [
+                          "model",
+                          "spend",
+                          "requests"
+                        ]
                       }
                     }
                   },
