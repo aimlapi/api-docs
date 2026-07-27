@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # 3 Pi
 
 {% columns %}
