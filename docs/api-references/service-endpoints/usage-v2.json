@@ -57,6 +57,7 @@
         ],
         "responses": {
           "200": {
+            "description": "Total spend for the key over the requested window.",
             "content": {
               "application/json": {
                 "schema": {
