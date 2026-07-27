@@ -22,12 +22,12 @@ The response always echoes `start` and `end` resolved to UTC, so you can see exa
 
 ## Choosing the key
 
-| Your key | `key_prefix` | Result |
-| ---------------- | ------------------------ | ---------------- |
-| any key | omitted | its own spend |
-| management key | provided | that key's spend |
-| regular key | provided, its own prefix | its own spend |
-| regular key | provided, another prefix | `403` |
+| Your key       | `key_prefix`             | Result           |
+| -------------- | ------------------------ | ---------------- |
+| any key        | omitted                  | its own spend    |
+| management key | provided                 | that key's spend |
+| regular key    | provided, its own prefix | its own spend    |
+| regular key    | provided, another prefix | `403`            |
 
 Any key can read its own spend. Reading the spend of a **different** key requires a management key.
 
@@ -46,20 +46,3 @@ Returns the same total plus a per-model breakdown, sorted by spend.
 {% openapi-operation spec="usage-detail-v2" path="/v2/usage/detail" method="get" %}
 [OpenAPI usage-detail-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/service-endpoints/usage-detail-v2.json)
 {% endopenapi-operation %}
-
-## Good to know
-
-* **`spend` is the authoritative total.** In the detailed response it is computed from the total rather than by adding up `models`, so the two can differ by a few nano-dollars. That is expected.
-* **Unfinished work is not counted.** A video generation that is still running is excluded until it completes.
-* **This is not your balance.** These endpoints answer "what did this key cost", which is useful for cost attribution and budgeting. For your current balance use [Account Balance](account-balance.md).
-* **Polling?** Prefer `period`. Responses are cached briefly per exact window, and a hand-built timestamp that changes on every call never reuses that cache.
-
-## Errors
-
-| Code | Meaning |
-| ----- | ---------------------------------------------------------------------------------------------------------------------- |
-| `400` | No window given, both window forms given at once, a malformed date or period, `end` earlier than `start`, or over 92 days |
-| `401` | Missing or invalid API key |
-| `403` | A regular key asked for another key's prefix |
-| `404` | The prefix does not belong to your account |
-| `429` | Too many requests |
