@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Laguna M.1
 
 {% columns %}
