@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Gpt 5 Codex
 
 {% columns %}
