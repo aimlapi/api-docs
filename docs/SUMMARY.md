@@ -765,6 +765,7 @@
 * [Our Integration List](integrations/our-integration-list.md)
 * [Agno](integrations/agno.md)
 * [Aider](integrations/aider.md)
+* [⚛️ Atomic Agent](integrations/atomic-agent.md)
 * [AutoGPT](integrations/autogpt.md)
 * [Browser Use](integrations/browser-use.md)
 * [Cline](integrations/cline.md)
