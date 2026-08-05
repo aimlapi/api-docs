@@ -1,7 +1,5 @@
 # ⚛️ Atomic Agent
 
-<div align="left" data-with-frame="false"><figure><img src="../.gitbook/assets/atomic-agent-logo.png" alt="Atomic Agent logo" width="188"><figcaption></figcaption></figure></div>
-
 ## About
 
 Atomic Agent is an open-source, local-first AI agent that runs on your computer. It plans multi-step tasks and executes them with real tools: shell, files, browser automation, skills, and MCP servers. All agent state, memory, and configuration live on your machine in `~/.atomic-agent`.
@@ -24,43 +22,75 @@ Atomic Agent is MIT-licensed and available for macOS, Linux, and Windows.
 * Telegram connector and an OpenAI-compatible local HTTP server
 * MIT license, installs without an account
 
+## Prerequisites
+
+* An AIMLAPI key obtained from your [account dashboard](https://aimlapi.com/app/keys)
+
 ***
 
-## Quick Install
+{% stepper %}
+{% step %}
+### Step 1 — Install Atomic Agent
 
-One command, no account or key required:
+One command, no account or key required.
 
-```sh
-# macOS / Linux
+macOS / Linux:
+
+```bash
 curl -fsSL https://atomicagent.io/install | sh
 ```
 
+Windows:
+
 ```powershell
-# Windows
 irm https://atomicagent.io/install.ps1 | iex
 ```
+{% endstep %}
 
-***
+{% step %}
+### Step 2 — Open the Provider Panel
 
-## Configuration
+Launch the TUI and open the LLM Local/Cloud panel:
 
-You will need an AIMLAPI key from your [account dashboard](https://aimlapi.com/app/keys).
+```bash
+atomic-agent tui
+```
 
-### Option 1: Built-in provider wizard (recommended)
+Then type:
 
-Atomic Agent ships with a native AI/ML API provider, so there is nothing to configure by hand.
+```
+/model
+```
+{% endstep %}
 
-1. Run `atomic-agent tui`.
-2. Type `/model` to open the LLM Local/Cloud panel.
-3. Select **AI/ML API (aimlapi.com — 500+ models, OpenAI-compatible)**.
-4. Paste your API key when prompted.
-5. Pick a chat model. The list is fetched live from the AI/ML API, so new models appear as soon as they are released.
+{% step %}
+### Step 3 — Connect AI/ML API
 
-The wizard stores the key as `AIMLAPI_API_KEY` in `~/.atomic-agent/.env` and writes the provider entry to `~/.atomic-agent/config.json`.
+Select **AI/ML API (aimlapi.com — 500+ models, OpenAI-compatible)** from the provider list and paste your API key when prompted.
 
-### Option 2: Manual configuration
+The wizard stores the key as `AIMLAPI_API_KEY` in `~/.atomic-agent/.env` and writes the provider entry to `~/.atomic-agent/config.json`. The base URL is built into the provider, so there is nothing else to configure.
+{% endstep %}
 
-Add the provider to the `llm` block of `~/.atomic-agent/config.json`:
+{% step %}
+### Step 4 — Pick a Model
+
+Choose a chat model from the list. Atomic Agent fetches the current model catalog live from the AI/ML API, so new models appear as soon as they are released.
+
+The default chat model is `openai/gpt-5.5-2026-04-23`. Any model ID from the [AI/ML API catalog](https://aimlapi.com/models) works, for example `anthropic/claude-sonnet-4-5` or `alibaba/qwen3.8-max-preview` — the configured ID is sent to the API as-is.
+{% endstep %}
+
+{% step %}
+### Step 5 — Run Your First Task
+
+Ask for something that requires a tool call, for example: "list the files in this folder and summarize them". If the model responds and tools execute, the integration is working.
+
+You can return to `/model` at any time to switch the provider or the model. No restart is required.
+{% endstep %}
+{% endstepper %}
+
+## Manual Configuration
+
+If you prefer editing files over the wizard, add the provider to the `llm` block of `~/.atomic-agent/config.json`:
 
 ```json
 {
@@ -81,38 +111,18 @@ Add the provider to the `llm` block of `~/.atomic-agent/config.json`:
 
 Then put your key in `~/.atomic-agent/.env`:
 
-```sh
+```bash
 AIMLAPI_API_KEY=your_key_here
 ```
-
-The base URL (`https://api.aimlapi.com`) is built into the provider; you do not need to set it.
 
 {% hint style="info" %}
 If you prefer the generic `"kind": "openai-compatible"` provider instead, set `"baseUrl": "https://api.aimlapi.com"` **without** the `/v1` suffix. Atomic Agent appends `/v1/chat/completions` itself, and a doubled path returns 404. That provider kind reads its key from `OPENAI_COMPAT_API_KEY`.
 {% endhint %}
 
-***
+## Model Notes
 
-## Model Selection
-
-* Default chat model for the AI/ML API provider: `openai/gpt-5.5-2026-04-23`.
-* Any model ID from the [AI/ML API catalog](https://aimlapi.com/models) works, for example `anthropic/claude-sonnet-4-5` or `alibaba/qwen3.8-max-preview`. The configured model ID is sent to the API as-is, so you are not limited to the bundled list.
 * Embedding models from the AI/ML API catalog can be selected too, or embeddings can stay on the local llama-server daemon.
 * For cloud models, Atomic Agent uses native function calling, so tool use works out of the box.
-
-***
-
-## Verification
-
-Start a session:
-
-```sh
-atomic-agent tui
-```
-
-Ask for something that requires a tool call, for example: "list the files in this folder and summarize them". If the model responds and tools execute, the integration is working.
-
-***
 
 ## Use Cases
 
@@ -120,8 +130,6 @@ Ask for something that requires a tool call, for example: "list the files in thi
 * **Claude and Gemini in Atomic Agent.** These model families are only reachable through an aggregator; AI/ML API is the supported path.
 * **One key, many models.** Switch between model families without separate accounts and billing per provider.
 * **Mixed setups.** Run embeddings locally and chat in the cloud, or the other way around.
-
-***
 
 ## Troubleshooting
 
@@ -156,8 +164,6 @@ Verify the exact model ID against the [AI/ML API models list](https://aimlapi.co
 Open `/model` in the TUI at any time to change the provider or the chat model. No restart is required.
 
 </details>
-
-***
 
 ## Links
 
