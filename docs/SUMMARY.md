@@ -162,6 +162,7 @@
     * [Ling 2.6 1T](api-references/text-models-llm/inclusionAI/ling-2.6-1t.md)
     * [Ling 2.6 Flash](api-references/text-models-llm/inclusionAI/ling-2.6-flash.md)
     * [Ring 2.6 1T](api-references/text-models-llm/inclusionAI/ring-2.6-1t.md)
+    * [Ling-3.0-flash](api-references/text-models-llm/inclusionAI/ling-3.0-flash-free.md)
   * [Inflection](api-references/text-models-llm/Inflection/README.md)
     * [3 Pi](api-references/text-models-llm/Inflection/inflection-3-pi.md)
     * [3 Productivity](api-references/text-models-llm/Inflection/inflection-3-productivity.md)
