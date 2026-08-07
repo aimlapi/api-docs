@@ -6,6 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `bytedance/dreamina-seedance-2-5`
+* `bytedance/seedance-2-5`
 {% endhint %}
 {% endcolumn %}
 

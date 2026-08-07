@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Seedance 2.5
 
 {% columns %}
