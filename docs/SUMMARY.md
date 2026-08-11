@@ -317,6 +317,7 @@
     * [ReMM SLERP 13B](api-references/text-models-llm/undi95/remm-slerp-l2-13b.md)
   * [Upstage](api-references/text-models-llm/Upstage/README.md)
     * [Solar Pro 3](api-references/text-models-llm/Upstage/solar-pro-3.md)
+    * [Solar Pro 4](api-references/text-models-llm/Upstage/solar-pro4.md)
   * [Venice](api-references/text-models-llm/Venice/README.md)
     * [Venice Uncensored](api-references/text-models-llm/Venice/dolphin-mistral-24b-venice-edition.md)
   * [Writer](api-references/text-models-llm/Writer/README.md)
