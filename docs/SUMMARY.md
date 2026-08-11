@@ -743,7 +743,7 @@
 
 ***
 
-* [📞 Contact Sales](https://calendly.com/valeriyb-aimlapi/30min)
+* [📞 Contact Sales](https://calendar.app.google/FMJpK9nbDkFHqGm78)
 
 ## Solutions
 
