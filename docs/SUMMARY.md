@@ -477,6 +477,7 @@
     * [Switchx Video To Video](api-references/video-models/Beeble/switchx-video-to-video.md)
   * [Black Forest Labs](api-references/video-models/Black-Forest-Labs/README.md)
     * [FLUX 3 Video Draft Image to Video](api-references/video-models/Black-Forest-Labs/flux-3-video-draft-i2v.md)
+    * [FLUX 3 Video Draft Text to Video](api-references/video-models/Black-Forest-Labs/flux-3-video-draft-t2v.md)
   * [ByteDance](api-references/video-models/bytedance/README.md)
     * [Seedance 1.0 Lite (Image-to-Video)](api-references/video-models/bytedance/seedance-1.0-lite-image-to-video.md)
     * [Seedance 1.0 Pro (Text-to-Video)](api-references/video-models/bytedance/seedance-1.0-pro-text-to-video.md)
