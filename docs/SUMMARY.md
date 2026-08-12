@@ -131,6 +131,8 @@
     * [DeepSeek V3.2 Exp Thinking](api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-thinking.md)
     * [DeepSeek V4 Pro](api-references/text-models-llm/deepseek/deepseek-v4-pro.md)
     * [DeepSeek V4 Flash](api-references/text-models-llm/deepseek/deepseek-v4-flash.md)
+  * [DeepSeek AI](api-references/text-models-llm/DeepSeek-AI/README.md)
+    * [Deepseek V4 Pro 0813](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-pro-0813.md)
   * [Google](api-references/text-models-llm/Google/README.md)
     * [Gemini 2.5 Flash lite](api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
     * [Gemini 2.5 Flash](api-references/text-models-llm/google/gemini-2.5-flash.md)
