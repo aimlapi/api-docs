@@ -1,4 +1,4 @@
-# Flux SRPO Image to Image
+# Flux Srpo Image To Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,9 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-[flux/dev/image-to-image](flux-dev-image-to-image.md) model upgraded with Tencent’s SRPO technique.
-
-<table data-full-width="true"><thead><tr><th width="233.8665771484375" valign="top">Model</th><th>Generated image properties</th></tr></thead><tbody><tr><td valign="top"><code>flux/srpo/image-to-image</code></td><td>Format: <strong>JPEG</strong>, <strong>PNG</strong><br>Fixed size: Matches the dimensions of the reference image.</td></tr></tbody></table>
+FLUX.1 SRPO image-to-image model for advanced image transformation and editing.
 
 ## Setup your API Key
 
