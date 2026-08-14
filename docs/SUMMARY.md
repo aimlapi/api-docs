@@ -114,6 +114,7 @@
     * [Dola Seed 2.0 Lite](api-references/text-models-llm/bytedance/dola-seed-2.0-lite.md)
     * [Dola Seed 2.0 Pro](api-references/text-models-llm/bytedance/dola-seed-2.0-pro.md)
     * [Dola Seed 2.0 Code](api-references/text-models-llm/bytedance/dola-seed-2.0-code.md)
+    * [Seed 2.1 Turbo](api-references/text-models-llm/ByteDance/seed-2-1-turbo.md)
   * [ByteDance Seed](api-references/text-models-llm/ByteDance-Seed/README.md)
     * [Seed 2.0 Lite](api-references/text-models-llm/ByteDance-Seed/seed-2.0-lite.md)
     * [Seed 2.0 Mini](api-references/text-models-llm/ByteDance-Seed/seed-2.0-mini.md)
