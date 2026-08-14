@@ -561,6 +561,7 @@
     * [V3 Turbo Pro text-to-video](api-references/video-models/kling-ai/v3-turbo-pro-text-to-video.md)
     * [Kling 3.0 Omni 1080p Image to Video](api-references/video-models/Kling-AI/v3-omni-1080p-image-to-video.md)
     * [Kling 3.0 Omni 1080p Text to Video](api-references/video-models/Kling-AI/v3-omni-1080p-text-to-video.md)
+    * [Kling 3.0 Omni 720p Image to Video](api-references/video-models/Kling-AI/v3-omni-720p-image-to-video.md)
   * [Krea](api-references/video-models/krea/README.md)
     * [Krea Wan 14b text-to-video](api-references/video-models/krea/krea-wan-14b-text-to-video.md)
     * [Krea Wan 14b video-to-video](api-references/video-models/krea/krea-wan-14b-video-to-video.md)
