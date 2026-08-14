@@ -1,4 +1,4 @@
-# flux-2-edit
+# Flux 2 Edit
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A 4MP photorealistic, production-grade editor with advanced multi-reference control capabilities.
+FLUX 2 Edit is an image editing model from Black Forest Labs for precise text-guided image modifications.
 
 ## Setup your API Key
 
