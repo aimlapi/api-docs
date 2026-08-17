@@ -1,4 +1,8 @@
-# GPT-5 Chat
+---
+hidden: true
+---
+
+# GPT 5 Chat
 
 {% columns %}
 {% column width="66.66666666666666%" %}

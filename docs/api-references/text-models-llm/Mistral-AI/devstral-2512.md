@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Devstral 2 2512
 
 {% columns %}

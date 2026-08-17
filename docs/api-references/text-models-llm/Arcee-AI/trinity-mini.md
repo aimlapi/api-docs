@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Trinity Mini
 
 {% columns %}
@@ -35,7 +39,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="trinity-mini" path="/v1/chat/completions" method="post" %}
-[Broken link](/broken/openapi/trinity-mini)
+[OpenAPI trinity-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Arcee-AI/trinity-mini.json)
 {% endopenapi-operation %}
 
 ## Code Example

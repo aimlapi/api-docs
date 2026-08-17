@@ -1,4 +1,8 @@
-# gpt-5.1-chat-latest
+---
+hidden: true
+---
+
+# GPT 5.1 Chat Latest
 
 {% columns %}
 {% column width="66.66666666666666%" %}
