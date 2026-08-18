@@ -5,38 +5,14 @@ icon: list-tree
 
 # Model Catalogue API
 
-## List models
+`GET /v1/models` returns the live model catalogue — the machine-readable source for which models exist, what they're called, what they can do, and what they cost.\
+Use it instead of scraping the model pages. No API key is required for this request; you can also open [the endpoint](https://api.aimlapi.com/v1/models) directly in a browser.
 
-`GET /v1/models` returns the live catalogue. It is the machine-readable source for which models exist, what they are called, what they can do, and what they cost — use it instead of scraping the model pages.
-
-By default each entry carries only its identity. Pricing, modalities and capabilities are opt-in, so the default response stays small:
-
-```bash
-curl https://api.aimlapi.com/v1/models
-```
-
-```json
-{
-  "object": "list",
-  "data": [
-    {
-      "id": "deepgram/aura-2",
-      "aliases": ["aura-2", "aura-2-helena-en", "deepgram/aura-2-helena-en"],
-      "type": "internal/text-to-speech",
-      "info": { "name": "Aura-2", "developer": "Deepgram" },
-      "tags": ["playground:tts"]
-    }
-  ]
-}
-```
-
-{% openapi-operation spec="models-catalogue" path="/v1/models" method="get" %}
-[Broken link](/broken/openapi/models-catalogue)
-{% endopenapi-operation %}
+By default each entry carries only its identity. Pricing, modalities and capabilities are opt-in, so the default response stays small.
 
 ## Asking for more per model
 
-`include` attaches optional sections. Combine them freely, comma-separated:
+`include` attaches optional sections to each model. Combine values freely, comma-separated:
 
 ```bash
 curl 'https://api.aimlapi.com/v1/models?include=pricing'
@@ -55,7 +31,7 @@ Unknown values are ignored rather than rejected, so a typo returns a valid respo
 
 ## Filtering
 
-Every filter below narrows _which models_ come back. They are independent of `include`, so you can filter on capabilities without asking for the capabilities section.
+Every filter below narrows _which models_ come back. Filters are independent of `include`, so you can filter on capabilities without asking for the capabilities section.
 
 | Parameter           | Keeps models that…                           |
 | ------------------- | -------------------------------------------- |
@@ -66,8 +42,6 @@ Every filter below narrows _which models_ come back. They are independent of `in
 | `input_modalities`  | accept this input modality                   |
 | `output_modalities` | produce this output modality                 |
 | `capabilities`      | declare this capability                      |
-
-Rules that apply to all of them:
 
 * **Several values, one parameter — OR.** `?capabilities=text_to_video,image_to_video` returns models that do either.
 * **Several parameters — AND.** `?output_modalities=video&capabilities=audio_generation` returns models that do both.
@@ -82,10 +56,25 @@ curl 'https://api.aimlapi.com/v1/models?capabilities=image_to_video'
 curl 'https://api.aimlapi.com/v1/models?id=deepgram/aura-2&include=pricing'
 ```
 
+## Get the model catalogue
+
+Returns the full list of models matching the given filters, with the requested optional sections attached.
+
+## GET /v1/models
+
+>
+
+```json
+{"openapi":"3.0.0","info":{"title":"AIML API","version":"1.0.0"},"servers":[{"url":"https://api.aimlapi.com"}],"paths":{"/v1/models":{"get":{"operationId":"ModelsController_getModelsV2","parameters":[{"name":"id","in":"query","required":false,"description":"Keep models matching this id, or carrying it as an alias. Comma-separated or repeated values are OR'd together.","schema":{"type":"string"}},{"name":"type","in":"query","required":false,"description":"Keep models served through this endpoint type.","schema":{"type":"string"}},{"name":"tags","in":"query","required":false,"description":"Keep models carrying this tag, e.g. playground:video. Comma-separated or repeated values are OR'd together.","schema":{"type":"string"}},{"name":"modalities","in":"query","required":false,"description":"Keep models with this modality among either their input or output modalities.","schema":{"type":"string"}},{"name":"input_modalities","in":"query","required":false,"description":"Keep models accepting this input modality.","schema":{"type":"string"}},{"name":"output_modalities","in":"query","required":false,"description":"Keep models producing this output modality.","schema":{"type":"string"}},{"name":"capabilities","in":"query","required":false,"description":"Keep models declaring this capability, e.g. image_to_video. Comma-separated or repeated values are OR'd together; combining with other filter parameters is AND'd.","schema":{"type":"string"}},{"name":"include","in":"query","required":false,"description":"Attach optional sections to each model: pricing, modalities, capabilities, or all (?details=true is a synonym for all). Comma-separated. Unknown values are ignored rather than rejected.","schema":{"type":"string"}}],"responses":{"200":{"description":"The live model catalogue, filtered and expanded as requested. Responses carry an ETag; see Caching below.","content":{"application/json":{"schema":{"type":"object","properties":{"object":{"type":"string","description":"Always \"list\"."},"data":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"Canonical unique identifier of the model."},"aliases":{"type":"array","nullable":true,"description":"Other names this model can still be requested under.","items":{"type":"string"}},"type":{"type":"string","description":"Endpoint type this model is served through."},"info":{"type":"object","description":"Model identity.","properties":{"name":{"type":"string","description":"Human-readable model name."},"developer":{"type":"string","description":"Organization or company that developed the model."}},"required":["name","developer"]},"tags":{"type":"array","description":"Free-form tags, e.g. playground:tts.","items":{"type":"string"}},"pricing":{"type":"object","nullable":true,"description":"Present only with ?include=pricing or all. See Reading prices below."},"modalities":{"type":"object","nullable":true,"description":"Present only with ?include=modalities or all. Input and output modalities the model handles."},"capabilities":{"type":"array","nullable":true,"description":"Present only with ?include=capabilities or all. Declared capabilities, e.g. image_to_video.","items":{"type":"string"}}},"required":["id","type","info","tags"]}}},"required":["object","data"]}}}}}}}}}}
+```
+
 ## Checking whether a model is still available
 
-Match against **`id` and `aliases` together**. A model may be published under a canonical id while the name you integrated against lives on as an alias — the alias keeps working, but it is not the `id` any more, so an `id`-only comparison reports a live model as gone.
+{% hint style="warning" %}
+Match against **`id` and `aliases` together**, not `id` alone. A model may be published under a canonical id while the name you integrated against lives on as an alias — the alias keeps working, but it is not the `id` any more, so an `id`-only comparison reports a live model as gone.
+{% endhint %}
 
+{% code overflow="wrap" %}
 ```js
 const res = await fetch('https://api.aimlapi.com/v1/models');
 const { data } = await res.json();
@@ -98,6 +87,7 @@ for (const model of data) {
 
 const canonical = byName.get(myModelId); // undefined ⇒ genuinely unavailable
 ```
+{% endcode %}
 
 The same map de-duplicates your list: two names resolving to one canonical id are one model, not two.
 
@@ -111,7 +101,9 @@ With `?include=pricing`, each model carries a `pricing` block. Read `kind` first
 | `variants` | the rate depends on request parameters — `dimensions` names them, `variants[]` quotes a rate per combination |
 | `variable` | the rate cannot be quoted ahead of the request                                                               |
 
-**Always read `per` together with `price`.** `price` is the charge for `per` units, and `per` is not the same across models — `1000000` for most token rates, `1000` for some, `1` for per-second and per-megapixel rates. Comparing bare `price` values across models compares different bases and will be wrong by orders of magnitude.
+{% hint style="warning" %}
+Always read `per` together with `price`. `price` is the charge for `per` units, and `per` is not the same across models — `1000000` for most token rates, `1000` for some, `1` for per-second and per-megapixel rates. Comparing bare `price` values across models compares different bases and will be wrong by orders of magnitude.
+{% endhint %}
 
 ```json
 {
@@ -141,4 +133,6 @@ curl -H 'If-None-Match: W/"1440a0-uH6NONsG/9An5njw3kqMcYY5k8w"' \
 # 304
 ```
 
+{% hint style="info" %}
 The ETag covers the whole response, so it changes on any catalogue edit — a new model or a reworded description, not only a price change. Treat it as "something moved, re-read and diff", not as a price-change feed.
+{% endhint %}
