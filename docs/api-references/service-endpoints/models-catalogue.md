@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Model Catalogue API
 
 `GET /v1/models` returns the live model catalogue — the machine-readable source for which models exist, what they're called, what they can do, and what they cost.\
@@ -32,15 +28,7 @@ Unknown values are ignored rather than rejected, so a typo returns a valid respo
 
 Every filter below narrows _which models_ come back. Filters are independent of `include`, so you can filter on capabilities without asking for the capabilities section.
 
-| Parameter           | Keeps models that…                           |
-| ------------------- | -------------------------------------------- |
-| `id`                | match this id **or carry it as an alias**    |
-| `type`              | are served through this endpoint type        |
-| `tags`              | carry this tag, e.g. `playground:video`      |
-| `modalities`        | have it among input **or** output modalities |
-| `input_modalities`  | accept this input modality                   |
-| `output_modalities` | produce this output modality                 |
-| `capabilities`      | declare this capability                      |
+<table data-search="false"><thead><tr><th>Parameter</th><th>Keeps models that…</th></tr></thead><tbody><tr><td><code>id</code></td><td>match this id <strong>or carry it as an alias</strong></td></tr><tr><td><code>type</code></td><td>are served through this endpoint type</td></tr><tr><td><code>tags</code></td><td>carry this tag, e.g. <code>playground:video</code></td></tr><tr><td><code>modalities</code></td><td>have it among input <strong>or</strong> output modalities</td></tr><tr><td><code>input_modalities</code></td><td>accept this input modality</td></tr><tr><td><code>output_modalities</code></td><td>produce this output modality</td></tr><tr><td><code>capabilities</code></td><td>declare this capability</td></tr></tbody></table>
 
 * **Several values, one parameter — OR.** `?capabilities=text_to_video,image_to_video` returns models that do either.
 * **Several parameters — AND.** `?output_modalities=video&capabilities=audio_generation` returns models that do both.
