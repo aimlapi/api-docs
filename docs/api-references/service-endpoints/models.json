@@ -10,121 +10,307 @@
     }
   ],
   "paths": {
-    "/models": {
+    "/v1/models": {
       "get": {
         "operationId": "ModelsController_getModels_v1",
+        "parameters": [
+          {
+            "name": "include",
+            "in": "query",
+            "required": false,
+            "description": "Attach optional sections to each model: `pricing`, `modalities`, `capabilities`, or `all` for every section. Comma-separated and repeated values are both accepted. Unknown values are ignored rather than rejected.",
+            "schema": {
+              "type": "string",
+              "example": "pricing,capabilities"
+            }
+          },
+          {
+            "name": "details",
+            "in": "query",
+            "required": false,
+            "description": "Shorthand for `include=all`.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "true",
+                "1"
+              ],
+              "example": "true"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": "Keep models matching this id, or carrying it as an alias. Comma-separated or repeated values are combined with OR.",
+            "schema": {
+              "type": "string",
+              "example": "gpt-4o"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Keep models served through this endpoint type, for example `openai/chat-completions`.",
+            "schema": {
+              "type": "string",
+              "example": "openai/chat-completions"
+            }
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "description": "Keep models carrying this tag, for example `playground:video`. Comma-separated or repeated values are combined with OR.",
+            "schema": {
+              "type": "string",
+              "example": "playground:chat"
+            }
+          },
+          {
+            "name": "modalities",
+            "in": "query",
+            "required": false,
+            "description": "Keep models with this modality among either their input or output modalities.",
+            "schema": {
+              "type": "string",
+              "example": "image"
+            }
+          },
+          {
+            "name": "input_modalities",
+            "in": "query",
+            "required": false,
+            "description": "Keep models accepting this input modality.",
+            "schema": {
+              "type": "string",
+              "example": "text"
+            }
+          },
+          {
+            "name": "output_modalities",
+            "in": "query",
+            "required": false,
+            "description": "Keep models producing this output modality.",
+            "schema": {
+              "type": "string",
+              "example": "video"
+            }
+          },
+          {
+            "name": "capabilities",
+            "in": "query",
+            "required": false,
+            "description": "Keep models declaring this capability, for example `image_to_video`. Comma-separated or repeated values are combined with OR; combining with other filter parameters is AND.",
+            "schema": {
+              "type": "string",
+              "example": "streaming"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "A list of available models.",
+            "description": "The live model catalogue, filtered and expanded as requested. Responses carry an ETag.",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string",
-                        "description": "Unique identifier of the model.",
-                        "example": "o3-mini"
-                      },
-                      "type": {
-                        "type": "string",
-                        "description": "Model interaction type.",
-                        "example": "chat-completion"
-                      },
-                      "info": {
+                  "type": "object",
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "description": "Always \"list\".",
+                      "example": "list"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
                         "type": "object",
-                        "description": "Metadata describing the model.",
                         "properties": {
-                          "name": {
+                          "id": {
                             "type": "string",
-                            "description": "Human-readable model name.",
-                            "example": "o3 mini"
+                            "description": "Canonical unique identifier of the model.",
+                            "example": "openai/gpt-4o"
                           },
-                          "developer": {
+                          "aliases": {
+                            "type": "array",
+                            "description": "Other names this model can still be requested under.",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "gpt-4o"
+                            ]
+                          },
+                          "type": {
                             "type": "string",
-                            "description": "Organization or company that developed the model.",
-                            "example": "Open AI"
+                            "description": "Endpoint type this model is served through.",
+                            "example": "openai/chat-completions"
                           },
-                          "description": {
-                            "type": "string",
-                            "description": "Short description of the model and its primary capabilities.",
-                            "example": "OpenAI o3-mini excels in reasoning tasks with advanced features like deliberative alignment and extensive context support."
+                          "info": {
+                            "type": "object",
+                            "description": "Model identity. Which keys are present varies by model type: context and output limits appear on text models, not on image or video ones.",
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "description": "Human-readable model name.",
+                                "example": "GPT-4o"
+                              },
+                              "developer": {
+                                "type": "string",
+                                "description": "Organization or company that developed the model.",
+                                "example": "Open AI"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Short description of the model and its primary capabilities.",
+                                "example": "Multimodal AI model by OpenAI enhancing human-computer interaction."
+                              },
+                              "releasedAt": {
+                                "type": "string",
+                                "description": "Release date of the model.",
+                                "example": "2025-08-07"
+                              },
+                              "contextLength": {
+                                "type": "integer",
+                                "description": "Maximum supported context window size in tokens. Text models only.",
+                                "example": 128000
+                              },
+                              "outputMax": {
+                                "type": "integer",
+                                "description": "Maximum number of tokens that can be generated in a single response. Text models only.",
+                                "example": 16384
+                              },
+                              "cutoffAt": {
+                                "type": "string",
+                                "description": "Training data cutoff date, where the developer publishes one.",
+                                "example": "2023-10-01"
+                              },
+                              "url": {
+                                "type": "string",
+                                "description": "Public model landing page on the AIML API website. May be an empty string.",
+                                "example": "https://aimlapi.com/models/gpt-4o-2024-08-06-api"
+                              },
+                              "docsUrl": {
+                                "type": "string",
+                                "description": "Link to this model's page in the documentation portal.",
+                                "example": "https://docs.aimlapi.com/api-references/text-models-llm/openai/gpt-4o"
+                              },
+                              "docsJson": {
+                                "type": "string",
+                                "description": "Machine-readable OpenAPI description of this model's endpoint.",
+                                "example": "https://api.aimlapi.com/docs-json?model=openai%2Fgpt-4o&endpoint=openai%2Fchat-completions"
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "developer"
+                            ]
                           },
-                          "contextLength": {
-                            "type": "integer",
-                            "description": "Maximum supported context window size in tokens.",
-                            "example": 200000
+                          "tags": {
+                            "type": "array",
+                            "description": "Free-form tags, for example `playground:chat` or `tier:tier_2`.",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "playground:chat",
+                              "tier:tier_2"
+                            ]
                           },
-                          "maxTokens": {
-                            "type": "integer",
-                            "description": "Maximum number of tokens that can be generated in a single response.",
-                            "example": 100000
+                          "modalities": {
+                            "type": "object",
+                            "description": "Present only with `?include=modalities` or `all`. Input and output modalities the model handles.",
+                            "properties": {
+                              "input": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "image",
+                                  "text"
+                                ]
+                              },
+                              "output": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "example": [
+                                  "text"
+                                ]
+                              }
+                            }
                           },
-                          "url": {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "Public model landing page on AIML API website.",
-                            "example": "https://aimlapi.com/models/openai-o3-mini-api"
+                          "capabilities": {
+                            "type": "array",
+                            "description": "Present only with `?include=capabilities` or `all`. Declared capabilities.",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "streaming",
+                              "structured_output",
+                              "tools",
+                              "vision"
+                            ]
                           },
-                          "docs_url": {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "Link to the official API documentation for this model.",
-                            "example": "https://docs.aimlapi.com/api-references/text-models-llm/openai/o3-mini"
+                          "pricing": {
+                            "type": "object",
+                            "description": "Present only with `?include=pricing` or `all`. Read `kind` first: `fixed` quotes one rate per unit, `variants` quotes a rate per parameter combination, `variable` cannot be quoted ahead of the request.",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "enum": [
+                                  "fixed",
+                                  "variants",
+                                  "variable"
+                                ],
+                                "example": "fixed"
+                              },
+                              "currency": {
+                                "type": "string",
+                                "example": "USD"
+                              },
+                              "units": {
+                                "type": "array",
+                                "description": "Rates for a `fixed` price. Always read `price` together with `per`.",
+                                "items": {
+                                  "type": "object"
+                                }
+                              },
+                              "dimensions": {
+                                "type": "array",
+                                "description": "Request parameters the rate depends on, for a `variants` price.",
+                                "items": {
+                                  "type": "string"
+                                }
+                              },
+                              "variants": {
+                                "type": "array",
+                                "description": "One quoted rate per parameter combination, for a `variants` price.",
+                                "items": {
+                                  "type": "object"
+                                }
+                              }
+                            }
                           }
                         },
                         "required": [
-                          "name",
-                          "developer",
-                          "description",
-                          "url",
-                          "docs_url"
-                        ]
-                      },
-                      "features": {
-                        "type": "array",
-                        "description": "List of supported features and API capabilities for the model.",
-                        "items": {
-                          "type": "string"
-                        },
-                        "example": [
-                          "openai/chat-completion",
-                          "openai/response-api",
-                          "openai/chat-assistant",
-                          "openai/chat-completion.function",
-                          "openai/chat-completion.message.refusal",
-                          "openai/chat-completion.message.system",
-                          "openai/chat-completion.message.developer",
-                          "openai/chat-completion.message.assistant",
-                          "openai/chat-completion.stream",
-                          "openai/chat-completion.max-completion-tokens",
-                          "openai/chat-completion.seed",
-                          "openai/chat-completion.reasoning",
-                          "openai/chat-completion.response-format"
-                        ]
-                      },
-                      "endpoints": {
-                        "type": "array",
-                        "description": "API endpoints through which this model can be accessed.",
-                        "items": {
-                          "type": "string"
-                        },
-                        "example": [
-                          "/v1/chat/completions",
-                          "/v1/responses"
+                          "id",
+                          "aliases",
+                          "type",
+                          "info",
+                          "tags"
                         ]
                       }
-                    },
-                    "required": [
-                      "id",
-                      "type",
-                      "info",
-                      "features",
-                      "endpoints"
-                    ]
-                  }
+                    }
+                  },
+                  "required": [
+                    "object",
+                    "data"
+                  ]
                 }
               }
             }
@@ -134,15 +320,15 @@
         "x-codeSamples": [
           {
             "lang": "cURL",
-            "source": "curl -L \\\n  --url 'https://api.aimlapi.com/models'"
+            "source": "curl -L \\\n  --url 'https://api.aimlapi.com/v1/models'"
           },
           {
             "lang": "JavaScript",
-            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/models\");\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+            "source": "async function main() {\n  const response = await fetch(\"https://api.aimlapi.com/v1/models\");\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
           },
           {
             "lang": "Python",
-            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\"https://api.aimlapi.com/models\")\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\"https://api.aimlapi.com/v1/models\")\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
           }
         ]
       }
