@@ -53,6 +53,31 @@
               "type": "string",
               "example": "abcd1234"
             }
+          },
+          {
+            "name": "group_by",
+            "in": "query",
+            "required": false,
+            "description": "Add a `groups` array to the response, grouped by `day`, by `model`, or by both (`day,model`). Omit it and the response keeps its original shape. Accepted on `/v2/usage/detail` only: `/v2/usage` returns a flat total with nowhere to put a breakdown and answers 400.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "day",
+                "model",
+                "day,model"
+              ],
+              "example": "day,model"
+            }
+          },
+          {
+            "name": "tz",
+            "in": "query",
+            "required": false,
+            "description": "Time zone that defines the day boundary for `group_by=day`. Must be a canonical IANA zone name matched exactly, for example `Europe/Berlin` or `UTC`. Offset forms (`+05:00`) and other-case spellings (`utc`) are rejected with 400. Defaults to UTC. The top-level `start` and `end` stay UTC regardless.",
+            "schema": {
+              "type": "string",
+              "example": "Europe/Berlin"
+            }
           }
         ],
         "responses": {
@@ -119,6 +144,86 @@
                         "required": [
                           "model",
                           "spend",
+                          "requests"
+                        ]
+                      }
+                    },
+                    "groups": {
+                      "type": "array",
+                      "description": "Present only when `group_by` is supplied. One entry per group, carrying spend, tokens and request counts. Reconcile the top-level `requests` against `requests.charged`, never against `requests.total`.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "day": {
+                            "type": "string",
+                            "description": "Present when grouping by day. The day boundary follows `tz`, defaulting to UTC.",
+                            "example": "2026-07-21"
+                          },
+                          "model": {
+                            "type": "string",
+                            "description": "Present when grouping by model.",
+                            "example": "openai/gpt-5"
+                          },
+                          "spend": {
+                            "type": "number",
+                            "description": "Spend for this group, in USD.",
+                            "example": 3.41
+                          },
+                          "tokens": {
+                            "type": "object",
+                            "description": "Token counts for this group.",
+                            "properties": {
+                              "input": {
+                                "type": "integer",
+                                "example": 128400
+                              },
+                              "output": {
+                                "type": "integer",
+                                "example": 51200
+                              },
+                              "total": {
+                                "type": "integer",
+                                "example": 179600
+                              }
+                            },
+                            "required": [
+                              "input",
+                              "output",
+                              "total"
+                            ]
+                          },
+                          "requests": {
+                            "type": "object",
+                            "description": "Request counts for this group. `total` counts every inference; `charged` counts only the billed ones. Failed inferences are billed nothing, so they appear in `total` and `failed` but not in `charged`.",
+                            "properties": {
+                              "total": {
+                                "type": "integer",
+                                "example": 220
+                              },
+                              "charged": {
+                                "type": "integer",
+                                "example": 214
+                              },
+                              "succeeded": {
+                                "type": "integer",
+                                "example": 214
+                              },
+                              "failed": {
+                                "type": "integer",
+                                "example": 6
+                              }
+                            },
+                            "required": [
+                              "total",
+                              "charged",
+                              "succeeded",
+                              "failed"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "spend",
+                          "tokens",
                           "requests"
                         ]
                       }

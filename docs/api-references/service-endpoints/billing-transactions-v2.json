@@ -1,0 +1,235 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/billing/transactions": {
+      "get": {
+        "operationId": "_v2_billing_transactions",
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "required": false,
+            "description": "Only return entries created at or after this moment, ISO-8601 with an offset.",
+            "schema": {
+              "type": "string",
+              "example": "2026-08-01T00:00:00Z"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "required": false,
+            "description": "Only return entries created before this moment, ISO-8601 with an offset. Must be later than `from`.",
+            "schema": {
+              "type": "string",
+              "example": "2026-08-18T00:00:00Z"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "query",
+            "required": false,
+            "description": "Keep only money coming in (`TOPUP`) or money going out (`CHARGE`).",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "TOPUP",
+                "CHARGE"
+              ],
+              "example": "CHARGE"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Keep only entries of this kind.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PAYMENT",
+                "BONUS",
+                "REFUND",
+                "ADJUSTMENT",
+                "MODEL_USAGE",
+                "CREDITS_EXPIRED",
+                "INIT"
+              ],
+              "example": "MODEL_USAGE"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Entries per page, 1-100.",
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "minimum": 1,
+              "maximum": 100,
+              "example": 50
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Position to continue from, taken verbatim from the previous response's `pagination.next_cursor`. The value is opaque and is accepted only in the exact form we issued.",
+            "schema": {
+              "type": "string",
+              "example": "eyJ2IjoxLCJjIjoiMjAyNi0wOC0xN1QxMDowMDowMC4wMDBaIn0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "One entry per balance movement, newest first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "description": "The requested page of ledger entries.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "created_at": {
+                            "type": "string",
+                            "description": "When the entry was recorded, in UTC.",
+                            "example": "2026-08-17T10:00:00.000Z"
+                          },
+                          "direction": {
+                            "type": "string",
+                            "enum": [
+                              "TOPUP",
+                              "CHARGE"
+                            ],
+                            "description": "Which way the money moved. `amount` is always positive, so this is what carries the sign.",
+                            "example": "CHARGE"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "PAYMENT",
+                              "BONUS",
+                              "REFUND",
+                              "ADJUSTMENT",
+                              "MODEL_USAGE",
+                              "CREDITS_EXPIRED",
+                              "INIT"
+                            ],
+                            "description": "What produced the entry.",
+                            "example": "MODEL_USAGE"
+                          },
+                          "amount": {
+                            "type": "object",
+                            "description": "How much moved, always as a positive number.",
+                            "properties": {
+                              "usd": {
+                                "type": "number",
+                                "example": 1.56
+                              },
+                              "credits": {
+                                "type": "integer",
+                                "example": 3120000
+                              }
+                            },
+                            "required": [
+                              "usd",
+                              "credits"
+                            ]
+                          },
+                          "model": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Model that produced the charge. Null on top-ups, on charges that are not model usage, and when the model could not be resolved.",
+                            "example": "openai/gpt-5"
+                          },
+                          "reference_id": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Handle that ties the entry back to something you have. For `MODEL_USAGE` it is the inference id, for a payment it is the payment transaction id. Null when the entry has no caller-side handle, such as a bonus, an expiry or a manual adjustment.",
+                            "example": "V1StGXR8Z5jdHi6BmyT8k"
+                          }
+                        },
+                        "required": [
+                          "created_at",
+                          "direction",
+                          "type",
+                          "amount",
+                          "model",
+                          "reference_id"
+                        ]
+                      }
+                    },
+                    "pagination": {
+                      "type": "object",
+                      "properties": {
+                        "next_cursor": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Pass this back as `cursor` to fetch the next page. Null on the last page.",
+                          "example": "eyJ2IjoxLCJjIjoiMjAyNi0wOC0xN1QxMDowMDowMC4wMDBaIn0"
+                        },
+                        "has_more": {
+                          "type": "boolean",
+                          "description": "Whether another page follows this one.",
+                          "example": true
+                        }
+                      },
+                      "required": [
+                        "next_cursor",
+                        "has_more"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "pagination"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v2/billing/transactions?direction=CHARGE&limit=50' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const url = new URL(\"https://api.aimlapi.com/v2/billing/transactions\");\n  url.searchParams.set(\"direction\", \"CHARGE\");\n  url.searchParams.set(\"limit\", \"50\");\n\n  const response = await fetch(url, {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v2/billing/transactions\",\n        headers={\n            # Insert your AIML API key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        },\n        params={\"direction\": \"CHARGE\", \"limit\": 50},\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

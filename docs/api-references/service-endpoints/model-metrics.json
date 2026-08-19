@@ -1,0 +1,189 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/models/metrics": {
+      "get": {
+        "operationId": "_models_metrics",
+        "parameters": [
+          {
+            "name": "aliases",
+            "in": "query",
+            "required": false,
+            "description": "Keep only these models. Repeat the parameter once per model (`?aliases=openai/gpt-5&aliases=google/veo-3`), up to 100 values. Values are matched exactly, so a comma-separated list is read as one long name and matches nothing. Omit the parameter to get every measured model. Any other query parameter is rejected with 400.",
+            "schema": {
+              "type": "string",
+              "example": "openai/gpt-5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Latency percentiles per model over the current window.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "window_seconds": {
+                      "type": "integer",
+                      "description": "Length of the sliding window the percentiles were computed over.",
+                      "example": 300
+                    },
+                    "generated_at": {
+                      "type": "string",
+                      "description": "When the aggregation was computed, in UTC.",
+                      "example": "2026-08-19T12:00:05.000Z"
+                    },
+                    "models": {
+                      "type": "array",
+                      "description": "One entry per model that completed at least one successful request inside the window. Only successful requests are measured. Models with no such requests are absent from the list rather than reported as zero.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "alias": {
+                            "type": "string",
+                            "description": "Model name, matching an `id` or an alias from the model catalogue.",
+                            "example": "openai/gpt-5"
+                          },
+                          "endpoint": {
+                            "type": "string",
+                            "description": "Endpoint the measurements were taken on.",
+                            "example": "/v1/chat/completions"
+                          },
+                          "metrics": {
+                            "type": "object",
+                            "description": "Only the metrics that apply to this model type and are backed by data in the window are present. A missing key means the metric does not apply, not that it is zero.",
+                            "properties": {
+                              "ttft_ms": {
+                                "type": "object",
+                                "description": "Time to first token, in milliseconds. Streaming text models only.",
+                                "properties": {
+                                  "p50": {
+                                    "type": "number",
+                                    "example": 412
+                                  },
+                                  "p75": {
+                                    "type": "number",
+                                    "example": 588
+                                  },
+                                  "p90": {
+                                    "type": "number",
+                                    "example": 910
+                                  },
+                                  "p99": {
+                                    "type": "number",
+                                    "example": 2140
+                                  }
+                                },
+                                "required": [
+                                  "p50",
+                                  "p75",
+                                  "p90",
+                                  "p99"
+                                ]
+                              },
+                              "tps": {
+                                "type": "object",
+                                "description": "Output tokens per second. Text models only. Note that these are percentiles of the throughput value itself, so a higher percentile is a faster request, not a slower one.",
+                                "properties": {
+                                  "p50": {
+                                    "type": "number",
+                                    "example": 51.7
+                                  },
+                                  "p75": {
+                                    "type": "number",
+                                    "example": 64.1
+                                  },
+                                  "p90": {
+                                    "type": "number",
+                                    "example": 78.4
+                                  },
+                                  "p99": {
+                                    "type": "number",
+                                    "example": 96.2
+                                  }
+                                },
+                                "required": [
+                                  "p50",
+                                  "p75",
+                                  "p90",
+                                  "p99"
+                                ]
+                              },
+                              "duration_ms": {
+                                "type": "object",
+                                "description": "End-to-end request duration, in milliseconds.",
+                                "properties": {
+                                  "p50": {
+                                    "type": "number",
+                                    "example": 1830
+                                  },
+                                  "p75": {
+                                    "type": "number",
+                                    "example": 2450
+                                  },
+                                  "p90": {
+                                    "type": "number",
+                                    "example": 3900
+                                  },
+                                  "p99": {
+                                    "type": "number",
+                                    "example": 9100
+                                  }
+                                },
+                                "required": [
+                                  "p50",
+                                  "p75",
+                                  "p90",
+                                  "p99"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "alias",
+                          "endpoint",
+                          "metrics"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "window_seconds",
+                    "generated_at",
+                    "models"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --url 'https://api.aimlapi.com/models/metrics?aliases=openai/gpt-5&aliases=google/veo-3'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const url = new URL(\"https://api.aimlapi.com/models/metrics\");\n  url.searchParams.append(\"aliases\", \"openai/gpt-5\");\n  url.searchParams.append(\"aliases\", \"google/veo-3\");\n\n  const response = await fetch(url);\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/models/metrics\",\n        params=[(\"aliases\", \"openai/gpt-5\"), (\"aliases\", \"google/veo-3\")],\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  }
+}

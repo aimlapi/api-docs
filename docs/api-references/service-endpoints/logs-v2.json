@@ -1,0 +1,288 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/logs": {
+      "get": {
+        "operationId": "_v2_logs",
+        "parameters": [
+          {
+            "name": "period",
+            "in": "query",
+            "required": false,
+            "description": "Relative window: a positive integer followed by `h` or `d`, for example `24h` or `7d`. Provide either `period` or both `start` and `end`, never both.",
+            "schema": {
+              "type": "string",
+              "example": "7d"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": false,
+            "description": "Window start, ISO-8601. A value without a UTC offset is read as UTC. Must be used together with `end`.",
+            "schema": {
+              "type": "string",
+              "example": "2026-07-01T00:00:00Z"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "required": false,
+            "description": "Window end, ISO-8601. Must not be earlier than `start`, and the window must not exceed 92 days.",
+            "schema": {
+              "type": "string",
+              "example": "2026-07-28T00:00:00Z"
+            }
+          },
+          {
+            "name": "key_prefix",
+            "in": "query",
+            "required": false,
+            "description": "Prefix of the key to report on. Omit it to list the requests made with the key you are authenticating with. Listing the requests of a different key requires a management key.",
+            "schema": {
+              "type": "string",
+              "example": "abcd1234"
+            }
+          },
+          {
+            "name": "model",
+            "in": "query",
+            "required": false,
+            "description": "Keep only requests made to this model. Accepts `source/alias` (`openai/gpt-5`) or a bare alias (`gpt-5`), matched exactly. Repeat the parameter once per model to pass several, up to 50 values; a comma-separated list is read as one long name and matches nothing.",
+            "schema": {
+              "type": "string",
+              "example": "openai/gpt-5"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "description": "Keep only requests with this outcome. Repeat the parameter to accept both (`?status=succeeded&status=failed`); a comma-separated value is not a valid status and returns 400.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "succeeded",
+                "failed"
+              ],
+              "example": "succeeded"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Rows per page, 1-100.",
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "minimum": 1,
+              "maximum": 100,
+              "example": 50
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "description": "Rows to skip before the page starts.",
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "minimum": 0,
+              "example": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "One row per request made in the window, newest first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "description": "The requested page of request rows.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "created": {
+                            "type": "string",
+                            "description": "When the request was made, in UTC.",
+                            "example": "2026-07-02T03:04:05.000Z"
+                          },
+                          "status": {
+                            "type": "string",
+                            "enum": [
+                              "succeeded",
+                              "failed"
+                            ],
+                            "description": "Outcome of the request. A failed request is billed nothing, so its cost is zero.",
+                            "example": "succeeded"
+                          },
+                          "origin": {
+                            "type": "string",
+                            "enum": [
+                              "api",
+                              "playground"
+                            ],
+                            "description": "Where the request came from.",
+                            "example": "api"
+                          },
+                          "model": {
+                            "type": "string",
+                            "description": "Model the request was made to, as `source/alias`.",
+                            "example": "openai/gpt-5"
+                          },
+                          "cost": {
+                            "type": "object",
+                            "description": "What the request was charged.",
+                            "properties": {
+                              "usd": {
+                                "type": "number",
+                                "example": 0.25
+                              },
+                              "credits": {
+                                "type": "integer",
+                                "example": 500000
+                              }
+                            },
+                            "required": [
+                              "usd",
+                              "credits"
+                            ]
+                          },
+                          "tokens": {
+                            "type": "object",
+                            "description": "Token counts for the request. Zero for models that are not billed per token.",
+                            "properties": {
+                              "input": {
+                                "type": "integer",
+                                "example": 10
+                              },
+                              "output": {
+                                "type": "integer",
+                                "example": 20
+                              },
+                              "total": {
+                                "type": "integer",
+                                "example": 30
+                              }
+                            },
+                            "required": [
+                              "input",
+                              "output",
+                              "total"
+                            ]
+                          },
+                          "request_id": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Identifier of the individual HTTP call.",
+                            "example": "req-1"
+                          },
+                          "inference_id": {
+                            "type": "string",
+                            "description": "Identifier of the inference. This is the value returned in the `x-inference-id` response header, and the `reference_id` of the matching charge in `GET /v2/billing/transactions`.",
+                            "example": "inf-1"
+                          },
+                          "client_request_id": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The `X-Client-Request-Id` you sent with the request. Null when you sent none, and on rows recorded before this field existed.",
+                            "example": "customer-42"
+                          }
+                        },
+                        "required": [
+                          "created",
+                          "status",
+                          "origin",
+                          "model",
+                          "cost",
+                          "tokens",
+                          "request_id",
+                          "inference_id",
+                          "client_request_id"
+                        ]
+                      }
+                    },
+                    "pagination": {
+                      "type": "object",
+                      "properties": {
+                        "limit": {
+                          "type": "integer",
+                          "example": 50
+                        },
+                        "offset": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "total": {
+                          "type": "integer",
+                          "description": "Total rows matching the query across all pages.",
+                          "example": 1
+                        },
+                        "has_more": {
+                          "type": "boolean",
+                          "description": "Whether another page follows this one.",
+                          "example": false
+                        }
+                      },
+                      "required": [
+                        "limit",
+                        "offset",
+                        "total",
+                        "has_more"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "pagination"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request GET \\\n  --url 'https://api.aimlapi.com/v2/logs?period=7d&model=openai/gpt-5&status=failed&limit=50' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const url = new URL(\"https://api.aimlapi.com/v2/logs\");\n  url.searchParams.set(\"period\", \"7d\");\n  url.searchParams.set(\"model\", \"openai/gpt-5\");\n  url.searchParams.set(\"status\", \"failed\");\n  url.searchParams.set(\"limit\", \"50\");\n\n  const response = await fetch(url, {\n    headers: {\n      \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v2/logs\",\n        headers={\n            # Insert your AIML API key instead of <YOUR_AIMLAPI_KEY>:\n            \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        },\n        params={\n            \"period\": \"7d\",\n            \"model\": \"openai/gpt-5\",\n            \"status\": \"failed\",\n            \"limit\": 50,\n        },\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

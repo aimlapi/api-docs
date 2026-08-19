@@ -53,6 +53,22 @@ Returns the full list of models matching the given filters, with the requested o
 {"openapi":"3.0.0","info":{"title":"AIML API","version":"1.0.0"},"servers":[{"url":"https://api.aimlapi.com"}],"paths":{"/v1/models":{"get":{"operationId":"ModelsController_getModelsV2","parameters":[{"name":"id","in":"query","required":false,"description":"Keep models matching this id, or carrying it as an alias. Comma-separated or repeated values are OR'd together.","schema":{"type":"string"}},{"name":"type","in":"query","required":false,"description":"Keep models served through this endpoint type.","schema":{"type":"string"}},{"name":"tags","in":"query","required":false,"description":"Keep models carrying this tag, e.g. playground:video. Comma-separated or repeated values are OR'd together.","schema":{"type":"string"}},{"name":"modalities","in":"query","required":false,"description":"Keep models with this modality among either their input or output modalities.","schema":{"type":"string"}},{"name":"input_modalities","in":"query","required":false,"description":"Keep models accepting this input modality.","schema":{"type":"string"}},{"name":"output_modalities","in":"query","required":false,"description":"Keep models producing this output modality.","schema":{"type":"string"}},{"name":"capabilities","in":"query","required":false,"description":"Keep models declaring this capability, e.g. image_to_video. Comma-separated or repeated values are OR'd together; combining with other filter parameters is AND'd.","schema":{"type":"string"}},{"name":"include","in":"query","required":false,"description":"Attach optional sections to each model: pricing, modalities, capabilities, or all (?details=true is a synonym for all). Comma-separated. Unknown values are ignored rather than rejected.","schema":{"type":"string"}}],"responses":{"200":{"description":"The live model catalogue, filtered and expanded as requested. Responses carry an ETag; see Caching below.","content":{"application/json":{"schema":{"type":"object","properties":{"object":{"type":"string","description":"Always \"list\"."},"data":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"Canonical unique identifier of the model."},"aliases":{"type":"array","nullable":true,"description":"Other names this model can still be requested under.","items":{"type":"string"}},"type":{"type":"string","description":"Endpoint type this model is served through."},"info":{"type":"object","description":"Model identity.","properties":{"name":{"type":"string","description":"Human-readable model name."},"developer":{"type":"string","description":"Organization or company that developed the model."}},"required":["name","developer"]},"tags":{"type":"array","description":"Free-form tags, e.g. playground:tts.","items":{"type":"string"}},"pricing":{"type":"object","nullable":true,"description":"Present only with ?include=pricing or all. See Reading prices below."},"modalities":{"type":"object","nullable":true,"description":"Present only with ?include=modalities or all. Input and output modalities the model handles."},"capabilities":{"type":"array","nullable":true,"description":"Present only with ?include=capabilities or all. Declared capabilities, e.g. image_to_video.","items":{"type":"string"}}},"required":["id","type","info","tags"]}}},"required":["object","data"]}}}}}}}}}}
 ```
 
+## Looking up one model
+
+`GET /model/{id}` returns a single model in the same projection, wrapped as `{"object": "model", "data": {…}}` instead of a list. It takes the same `include` and `details` parameters.
+
+```bash
+curl 'https://api.aimlapi.com/model/openai/gpt-4o?include=pricing'
+```
+
+Model ids containing slashes go into the path as they are — no escaping. The lookup matches **aliases as well as ids**, and is case-insensitive. A name that matches neither returns `404`.
+
+{% hint style="info" %}
+Note the two differences from the catalogue route. The path is singular — `/model/`, not `/models/` — and it is **not** registered under `/v1`, so it is `https://api.aimlapi.com/model/…` while the catalogue is `https://api.aimlapi.com/v1/models`.
+
+`GET /v1/models?id=openai/gpt-4o` answers the same question and stays on the catalogue route. Use whichever fits: the filter returns a list, possibly empty; the lookup returns one model or a `404`.
+{% endhint %}
+
 ## Checking whether a model is still available
 
 {% hint style="warning" %}

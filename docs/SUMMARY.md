@@ -14,8 +14,10 @@
 * [🟡 Service Endpoints](api-references/service-endpoints/README.md)
   * [Account Balance](api-references/service-endpoints/account-balance.md)
   * [Model Catalogue API](api-references/service-endpoints/models-catalogue.md)
+  * [Model Performance Metrics](api-references/service-endpoints/model-metrics.md)
   * [API Key Management](api-references/service-endpoints/api-key-management.md)
   * [API Key Usage](api-references/service-endpoints/api-key-usage.md)
+  * [Usage Logs](api-references/service-endpoints/usage-logs.md)
   * [Complete Model List](api-references/service-endpoints/complete-model-list.md)
 * [All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
@@ -760,6 +762,7 @@
 * [Vision in Text Models](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
 * [Batch Processing](capabilities/batch-processing.md)
+* [Request Tracing and Cost Headers](capabilities/request-tracing-and-cost.md)
 * [Model comparison](capabilities/models-comparsion.md)
 
 ***
