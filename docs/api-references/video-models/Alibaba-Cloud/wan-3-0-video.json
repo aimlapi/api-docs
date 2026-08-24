@@ -1,0 +1,277 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "alibaba/wan-3-0-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 20000,
+                    "description": "The text description of the scene, subject, or action to generate in the video."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL of the image strictly used as the first frame of the video. Cannot be used together with reference media, file_url, or link_url."
+                  },
+                  "last_image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL of the image strictly used as the last frame of the video. Requires image_url."
+                  },
+                  "reference_image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "maxItems": 10,
+                    "description": "Array of image URLs for multi-image-to-video generation."
+                  },
+                  "video_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "maxItems": 5,
+                    "description": "Reference video URLs. Up to 5 clips with a total duration of no more than 15 seconds."
+                  },
+                  "audio_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "maxItems": 5,
+                    "description": "Reference audio URLs. Up to 5 clips with a total duration of no more than 15 seconds."
+                  },
+                  "file_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL of a document (docx, doc, xlsx, xls, pptx, ppt, pdf, txt, key, pages, numbers, md) the model uses to generate the video. Cannot be used together with link_url."
+                  },
+                  "link_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL of a publicly accessible web page the model uses to generate the video. Cannot be used together with file_url."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "adaptive",
+                      "16:9",
+                      "4:3",
+                      "1:1",
+                      "3:4",
+                      "9:16"
+                    ],
+                    "default": "adaptive",
+                    "description": "The aspect ratio of the generated video."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "480p",
+                      "720p",
+                      "1080p"
+                    ],
+                    "default": "1080p",
+                    "description": "An enumeration where the short side of the video frame determines the resolution."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The length of the output video in seconds, from 2 to 30. When reference videos are provided, the total input video duration plus the output video duration must not exceed 30 seconds.",
+                    "default": 5
+                  },
+                  "generate_audio": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specifies whether the output video contains audio."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "description": "Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen."
+                  },
+                  "watermark": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Whether the video contains a watermark."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt"
+                ],
+                "title": "alibaba/wan-3-0-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "format": "uri",
+                              "description": "The URL where the file can be downloaded from.",
+                              "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                            }
+                          },
+                          "required": [
+                            "url"
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL where the file can be downloaded from.",
+                                "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        },
+                        {
+                          "nullable": true
+                        }
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"alibaba/wan-3-0-video\", \"prompt\": \"Describe what you want the model to generate.\", \"image_url\": \"https://example.com/input.jpg\", \"duration\": 5}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"alibaba/wan-3-0-video\",\n  \"prompt\": \"Describe what you want the model to generate.\",\n  \"image_url\": \"https://example.com/input.jpg\",\n  \"duration\": 5\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'alibaba/wan-3-0-video', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg', 'duration': 5},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
