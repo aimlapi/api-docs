@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Ring 2.6 1T
 
 {% columns %}
