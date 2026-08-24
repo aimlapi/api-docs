@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Ling 2.6 Flash
 
 {% columns %}
