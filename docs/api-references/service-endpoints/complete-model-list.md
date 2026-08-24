@@ -178,11 +178,15 @@ for (const model of data) {
   for (const alias of model.aliases ?? []) byName.set(alias, model.id);
 }
 
-const canonical = byName.get(myModelId); // undefined ⇒ genuinely unavailable
+const canonical = byName.get(myModelId); // undefined ⇒ not in the catalogue
 ```
 {% endcode %}
 
 The same map de-duplicates your list: two names resolving to one canonical id are one model, not two.
+
+{% hint style="info" %}
+A name missing from this map is not necessarily a model that went away — it may also be one that never existed here. [`GET /v1/models/deprecations`](model-deprecations.md) tells the two apart, and names the id to migrate to where there is one.
+{% endhint %}
 
 ## Reading prices
 

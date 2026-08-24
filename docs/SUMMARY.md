@@ -19,6 +19,7 @@
   * [API Key Usage](api-references/service-endpoints/api-key-usage.md)
   * [Usage Logs](api-references/service-endpoints/usage-logs.md)
   * [Complete Model List](api-references/service-endpoints/complete-model-list.md)
+  * [Model Deprecations](api-references/service-endpoints/model-deprecations.md)
 * [All Model IDs](api-references/model-database.md)
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21](api-references/text-models-llm/AI21/README.md)

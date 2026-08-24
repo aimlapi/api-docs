@@ -1,0 +1,160 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/models/deprecations": {
+      "get": {
+        "operationId": "_v1_models_deprecations",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "description": "Keep only entries in these states: `deprecated`, `superseded` or `withdrawn`. Values are case-insensitive and may be comma-separated (`?status=superseded,withdrawn`) or repeated (`?status=superseded&status=withdrawn`). Unknown values are ignored rather than rejected — a parameter holding no recognised value filters nothing and returns the whole feed.",
+            "schema": {
+              "type": "string",
+              "example": "withdrawn"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "description": "Keep only entries whose `deprecated_at` or `shutdown_at` falls on or after this date. Plain `YYYY-MM-DD`, no time part. Entries carrying neither date are dropped, because there is nothing to compare against. A malformed value is ignored rather than rejected, so a broken poll returns the whole feed instead of a 400.",
+            "schema": {
+              "type": "string",
+              "example": "2026-08-01"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The deprecation feed, newest first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "description": "Always `list`.",
+                      "example": "list"
+                    },
+                    "generated_at": {
+                      "type": "string",
+                      "description": "When this response was built, in UTC. It moves on every call and is deliberately excluded from the ETag.",
+                      "example": "2026-08-24T13:59:21.643Z"
+                    },
+                    "data": {
+                      "type": "array",
+                      "description": "One entry per model, ordered newest-first by the most recent date the entry carries (`shutdown_at`, else `deprecated_at`), then by `id`. A model published under several endpoint types still appears once.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "The canonical public id the model was reachable under.",
+                            "example": "openai/gpt-5-codex"
+                          },
+                          "aliases": {
+                            "type": "array",
+                            "description": "Every other public id that used to reach it. Match your integrated model name against `id` and `aliases` together.",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "gpt-5-codex"
+                            ]
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "`deprecated` — still serving, retirement announced. `superseded` — folded into another model, the id still resolves. `withdrawn` — gone, requests return 404.",
+                            "enum": [
+                              "deprecated",
+                              "superseded",
+                              "withdrawn"
+                            ],
+                            "example": "withdrawn"
+                          },
+                          "deprecated_at": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "ISO date the retirement was announced, or the date we learned of it when the provider gave no notice. `null` when unknown.",
+                            "example": "2026-07-30"
+                          },
+                          "shutdown_at": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "ISO date the model stopped, or is scheduled to stop, serving. Always `null` for `superseded` — those never stop — and `null` for a `deprecated` model whose provider has named no date yet.",
+                            "example": "2026-07-30"
+                          },
+                          "replaced_by": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Canonical id that supersedes this one, where one exists. For a `superseded` entry this is the model the old id now resolves to. `null` when there is no successor.",
+                            "example": "deepgram/aura-2"
+                          },
+                          "reason": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "`provider_delisted` — the model developer stopped serving it. `consolidated` — several ids were folded into one family model. `unknown` — no reason recorded. `null` on an entry read from a live model card.",
+                            "enum": [
+                              "provider_delisted",
+                              "consolidated",
+                              "unknown"
+                            ],
+                            "example": "provider_delisted"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "aliases",
+                          "status",
+                          "deprecated_at",
+                          "shutdown_at",
+                          "replaced_by",
+                          "reason"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "object",
+                    "generated_at",
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Not Modified — the ETag you sent as If-None-Match still matches. Empty body."
+          }
+        },
+        "x-hideTryItPanel": false,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --url 'https://api.aimlapi.com/v1/models/deprecations?status=withdrawn&since=2026-08-01'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const url = new URL(\"https://api.aimlapi.com/v1/models/deprecations\");\n  url.searchParams.set(\"status\", \"withdrawn\");\n  url.searchParams.set(\"since\", \"2026-08-01\");\n\n  const response = await fetch(url);\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\nimport json\n\ndef main():\n    response = requests.get(\n        \"https://api.aimlapi.com/v1/models/deprecations\",\n        params={\"status\": \"withdrawn\", \"since\": \"2026-08-01\"},\n    )\n\n    data = response.json()\n    print(json.dumps(data, indent=2, ensure_ascii=False))\n\nif __name__ == \"__main__\":\n    main()"
+          }
+        ]
+      }
+    }
+  }
+}
