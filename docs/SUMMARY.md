@@ -492,7 +492,6 @@
     * [Wan 2.7 (Image-to-Video)](api-references/video-models/alibaba-cloud/wan-2.7-image-to-video.md)
     * [Wan 2.7 (Reference-to-Video)](api-references/video-models/alibaba-cloud/wan-2.7-reference-to-video.md)
     * [Wan 3.0 Video](api-references/video-models/Alibaba-Cloud/wan-3-0-video.md)
-    * [Wan 3.0 Video](api-references/video-models/Alibaba-Cloud/wan3.0-video.md)
   * [Beeble](api-references/video-models/Beeble/README.md)
     * [Switchx Video To Video](api-references/video-models/Beeble/switchx-video-to-video.md)
   * [Black Forest Labs](api-references/video-models/Black-Forest-Labs/README.md)
