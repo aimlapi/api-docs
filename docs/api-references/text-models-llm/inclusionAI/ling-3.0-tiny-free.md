@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Ling-3.0-tiny
 
 {% columns %}
