@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Ox Alpha
 
 {% columns %}
