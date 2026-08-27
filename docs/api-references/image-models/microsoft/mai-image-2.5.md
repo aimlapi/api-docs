@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # MAI-Image 2.5
 
 {% columns %}
