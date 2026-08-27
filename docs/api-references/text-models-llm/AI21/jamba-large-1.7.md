@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Jamba Large 1.7
 
 {% columns %}
