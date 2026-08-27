@@ -444,6 +444,7 @@
     * [Luma Uni-1 Max](api-references/image-models/Luma-AI/uni-1-max.md)
   * [meta](api-references/image-models/meta/README.md)
     * [Meta Muse Image](api-references/image-models/meta/muse-image.md)
+    * [Meta Muse Image Edit](api-references/image-models/meta/muse-image-edit.md)
   * [OpenAI](api-references/image-models/OpenAI/README.md)
     * [DALL·E 2](api-references/image-models/OpenAI/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/OpenAI/dall-e-3.md)
