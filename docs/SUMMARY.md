@@ -327,6 +327,7 @@
     * [Hy-MT2-1.8B](api-references/text-models-llm/tencent/hy-mt2-1.8b.md)
     * [Hy-MT2-30B-A3B](api-references/text-models-llm/tencent/hy-mt2-30b-a3b.md)
     * [Hy-MT2-7B](api-references/text-models-llm/tencent/hy-mt2-7b.md)
+    * [Hy4 Preview](api-references/text-models-llm/tencent/hy4-preview.md)
   * [TheDrummer](api-references/text-models-llm/TheDrummer/README.md)
     * [Cydonia 24B V4.1](api-references/text-models-llm/TheDrummer/cydonia-24b-v4.1.md)
     * [Rocinante 12B](api-references/text-models-llm/TheDrummer/rocinante-12b.md)
