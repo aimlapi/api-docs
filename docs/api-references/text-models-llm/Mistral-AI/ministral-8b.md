@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Ministral 8B
 
 {% columns %}
