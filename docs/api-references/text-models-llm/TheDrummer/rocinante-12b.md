@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Rocinante 12B
 
 {% columns %}
