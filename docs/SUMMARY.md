@@ -825,6 +825,7 @@
 * [Hermes](integrations/hermes.md)
 * [Hermes Desktop](integrations/hermes-desktop.md)
 * [Kilo Code](integrations/kilo-code.md)
+* [LangChain](integrations/langchain.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
 * [Make](integrations/make.md)
