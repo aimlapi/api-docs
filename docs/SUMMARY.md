@@ -819,11 +819,13 @@
 * [Claude Code](integrations/claude-code.md)
 * [continue.dev](integrations/continue.dev.md)
 * [⭐ Cursor-HIDDEN](integrations/cursor.md)
+* [Dify](integrations/dify.md)
 * [ElizaOS](integrations/elizaos.md)
 * [GPT Researcher (gptr)](integrations/gpt-researcher-gptr.md)
 * [Hermes](integrations/hermes.md)
 * [Hermes Desktop](integrations/hermes-desktop.md)
 * [Kilo Code](integrations/kilo-code.md)
+* [LangChain](integrations/langchain.md)
 * [Langflow](integrations/langflow.md)
 * [LiteLLM](integrations/litellm.md)
 * [Make](integrations/make.md)
@@ -832,11 +834,14 @@
 * [Money Printer Turbo](integrations/money-printer-turbo.md)
 * [⭐ n8n](integrations/n8n.md)
 * [Oh My Pi](integrations/oh-my-pi.md)
+* [OpenClaude](integrations/openclaude.md)
 * [🦞 OpenClaw AI/ML](integrations/openclaw.md)
+* [RAGFlow](integrations/ragflow.md)
 * [Roo Code](integrations/roo-code.md)
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
 * [Toolhouse](integrations/toolhouse.md)
+* [Zero](integrations/zero.md)
 
 ***
 

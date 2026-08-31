@@ -119,9 +119,15 @@ For more details, see: [ClawHub tool docs](https://docs.openclaw.ai/tools/clawhu
 #### Install the skills
 
 ```sh
-clawhub install aiml-image-video
 clawhub install aiml-llm-reasoning
+clawhub install aiml-image-video
+clawhub install aiml-music-generator
+clawhub install aiml-voice
+clawhub install aiml-embeddings
+clawhub install aiml-safety
 ```
+
+Install only the ones you need — each skill is independent.
 
 #### How it fits into OpenClaw
 
@@ -155,6 +161,42 @@ export AIMLAPI_API_KEY="sk-aimlapi-..."
 python3 ./skills/aiml-llm-reasoning/scripts/run_chat.py \
   --model aimlapi/openai/gpt-5-nano-2025-08-07 \
   --user "Summarize this in 3 bullets."
+```
+
+**`aiml-music-generator`** — **Our music models**
+
+Generate music and songs via `gen_music.py` (ElevenLabs, MiniMax, and other music models).
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-music-generator/scripts/gen_music.py   --prompt "lo-fi hip hop, rainy night, mellow piano"
+```
+
+**`aiml-voice`** — **Speech-to-text**
+
+Transcribe audio files (ogg, mp3, wav, and more) via `transcribe.py`. Useful when OpenClaw receives voice messages from a chat connector.
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-voice/scripts/transcribe.py path/to/audio.ogg
+```
+
+**`aiml-embeddings`** — **Embeddings**
+
+Turn text into vectors via `gen_embeddings.py` — for semantic search, clustering, and retrieval.
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-embeddings/scripts/gen_embeddings.py --input "Laura is a DJ."
+```
+
+**`aiml-safety`** — **Content moderation**
+
+Classify text or images as safe or unsafe via `check_safety.py`, using guard models.
+
+```sh
+export AIMLAPI_API_KEY="sk-aimlapi-..."
+python3 ./skills/aiml-safety/scripts/check_safety.py   --content "I want to learn about security"   --model meta-llama/Llama-Guard-3-8B
 ```
 
 {% hint style="info" %}
