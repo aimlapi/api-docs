@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Olmo 3 32B Think
 
 {% columns %}
