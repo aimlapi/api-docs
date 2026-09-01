@@ -785,7 +785,7 @@
 
 ***
 
-* [📞 Contact Sales](https://calendar.app.google/FMJpK9nbDkFHqGm78)
+* [📞 Contact Sales](mailto:kristinao@aimlapi.com)
 
 ## Solutions
 
