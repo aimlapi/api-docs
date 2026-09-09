@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Nex N2 Pro
 
 {% columns %}
