@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Kat Coder Air V2.5
 
 {% columns %}
