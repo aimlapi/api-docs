@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Claude Opus 4.8 Fast
 
 {% columns %}
