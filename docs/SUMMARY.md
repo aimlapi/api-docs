@@ -172,6 +172,7 @@
   * [IBM](api-references/text-models-llm/IBM/README.md)
     * [Granite 4.0 Micro](api-references/text-models-llm/IBM/granite-4.0-h-micro.md)
     * [Granite 4.1 8B](api-references/text-models-llm/IBM/granite-4.1-8b.md)
+    * [Granite 4.2 8B](api-references/text-models-llm/IBM/granite-4.2-8b.md)
   * [Inception](api-references/text-models-llm/Inception/README.md)
     * [Mercury 2](api-references/text-models-llm/Inception/mercury-2.md)
   * [inclusionAI](api-references/text-models-llm/inclusionAI/README.md)
