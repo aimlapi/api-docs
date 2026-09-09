@@ -175,6 +175,7 @@
     * [Granite 4.2 8B](api-references/text-models-llm/IBM/granite-4.2-8b.md)
   * [Inception](api-references/text-models-llm/Inception/README.md)
     * [Mercury 2](api-references/text-models-llm/Inception/mercury-2.md)
+    * [Mercury 2.5](api-references/text-models-llm/Inception/mercury-2.5.md)
   * [inclusionAI](api-references/text-models-llm/inclusionAI/README.md)
     * [Ling 2.6 1T](api-references/text-models-llm/inclusionAI/ling-2.6-1t.md)
     * [Ling 2.6 Flash](api-references/text-models-llm/inclusionAI/ling-2.6-flash.md)
