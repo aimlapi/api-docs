@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Hermes 4 70B
 
 {% columns %}
