@@ -144,6 +144,7 @@
     * [Deepseek V4 Pro 0813](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-pro-0813.md)
     * [V4 Flash Latest](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-flash-latest.md)
     * [Deepseek V4 Flash Vision Exp](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-flash-vision-exp.md)
+    * [DeepSeek V4.1 Flash](api-references/text-models-llm/DeepSeek-AI/deepseek-flash.md)
   * [Google](api-references/text-models-llm/Google/README.md)
     * [Gemini 2.5 Flash lite](api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.md)
     * [Gemini 2.5 Flash](api-references/text-models-llm/google/gemini-2.5-flash.md)
