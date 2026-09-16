@@ -332,6 +332,7 @@
     * [Fugu Ultra V2](api-references/text-models-llm/Sakana-AI/fugu-ultra-v2.md)
   * [Stealth](api-references/text-models-llm/Stealth/README.md)
     * [Ox Alpha](api-references/text-models-llm/Stealth/ox-alpha.md)
+    * [Union Alpha](api-references/text-models-llm/Stealth/union-alpha.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
   * [switchpoint](api-references/text-models-llm/switchpoint/README.md)
