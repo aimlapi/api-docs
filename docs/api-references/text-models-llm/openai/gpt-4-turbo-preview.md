@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Gpt 4 Turbo Preview
 
 {% columns %}
