@@ -91,6 +91,10 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 ***
 
+### Decision Models
+
+<table data-header-hidden="false" data-header-sticky data-full-width="true"><thead><tr><th width="274.20001220703125">Model ID + API Reference link</th><th width="124.20001220703125">Developer</th><th width="103.60009765625">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="decision-models/TypeSafe/jev.md">typesafe/jev</a></td><td>TypeSafe AI</td><td>32 000</td><td>-</td></tr></tbody></table>
+
 ### <img src="../.gitbook/assets/offline-label.png" alt="" data-size="line"> Deprecated / No Longer Supported Models
 
 {% hint style="danger" %}

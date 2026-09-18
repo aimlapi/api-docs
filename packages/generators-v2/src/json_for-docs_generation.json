@@ -1,18 +1,36 @@
 [
   {
-    "name": "x-ai/grok-imagine-video-1.5-preview",
-    "alias": "grok-imagine-video-1.5-preview",
-    "category": "video-models",
-    "vendor": "xAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video-1.5-preview",
-    "codeSamples": "video:video"
-  },
-  {
-    "name": "x-ai/grok-imagine-video",
-    "alias": "grok-imagine-video",
-    "category": "video-models",
-    "vendor": "xAI",
-    "url": "https://ai.aimlapi.com/docs-json?endpoint=internal/video-generations/submit&model=x-ai/grok-imagine-video",
-    "codeSamples": "video:video"
+    "name": "typesafe/jev",
+    "alias": "jev",
+    "category": "decision-models",
+    "vendor": "TypeSafe",
+    "url": "https://api-staging.aimlapi.com/docs-json?endpoint=internal/decisions&model=typesafe/jev",
+    "codeSamples": "custom",
+    "customUrlApi": "https://api.aimlapi.com/v1/decisions",
+    "customParams": {
+      "model": "typesafe/jev",
+      "state": "Help! My payments have been failing for 3 days and nobody answers support.",
+      "questions": {
+        "is_urgent": {
+          "type": "noul",
+          "instructions": "Does this convey urgency?"
+        },
+        "department": {
+          "type": "choice",
+          "instructions": "Which team should handle this?",
+          "criteria": {
+            "billing": "Payments, invoicing, refunds",
+            "technical": "Bugs, outages, integrations",
+            "sales": "Pricing, upgrades, new accounts"
+          }
+        },
+        "frustration": {
+          "type": "score",
+          "instructions": "How frustrated is the customer?",
+          "criteria": ["Calm", "Frustrated", "Very angry"]
+        }
+      }
+    },
+    "hideTryItPanel": true
   }
 ]
