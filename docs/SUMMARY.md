@@ -761,6 +761,9 @@
     * [Text Embedding 3 Small](api-references/embedding-models/OpenAI/text-embedding-3-small.md)
     * [Text Embedding 3 Large](api-references/embedding-models/OpenAI/text-embedding-3-large.md)
     * [Text Embedding ada 002](api-references/embedding-models/OpenAI/text-embedding-ada-002.md)
+* [Decision Models](api-references/decision-models/README.md)
+  * [TypeSafe](api-references/decision-models/TypeSafe/README.md)
+    * [Jev](api-references/decision-models/TypeSafe/jev.md)
 
 ## FAQ
 

@@ -1,0 +1,384 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/decisions": {
+      "post": {
+        "operationId": "_v1_decisions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "typesafe/jev"
+                    ]
+                  },
+                  "state": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": {
+                          "nullable": true
+                        }
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "nullable": true
+                        }
+                      }
+                    ],
+                    "description": "The content to evaluate: a string, a JSON object, or an array of texts. Text only.",
+                    "example": "Help! My payments have been failing for 3 days."
+                  },
+                  "questions": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "noul"
+                              ],
+                              "description": "A yes/no question; the answer is the probability of \"yes\"."
+                            },
+                            "instructions": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "nullable": true
+                                  }
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "nullable": true
+                                  }
+                                }
+                              ],
+                              "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array."
+                            },
+                            "criteria": {
+                              "type": "object",
+                              "properties": {
+                                "true": {
+                                  "type": "string",
+                                  "description": "When the answer is \"yes\"."
+                                },
+                                "false": {
+                                  "type": "string",
+                                  "description": "When the answer is \"no\"."
+                                }
+                              },
+                              "description": "Optional descriptions of what \"true\" and \"false\" mean for this question."
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "instructions"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "choice"
+                              ],
+                              "description": "Pick exactly one option from `criteria`."
+                            },
+                            "instructions": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "nullable": true
+                                  }
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "nullable": true
+                                  }
+                                }
+                              ],
+                              "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array."
+                            },
+                            "criteria": {
+                              "type": "object",
+                              "additionalProperties": {
+                                "type": "string"
+                              },
+                              "description": "Option key \u2192 description. The answer is one of these keys plus a probability for each.",
+                              "example": {
+                                "billing": "Payments, invoicing, refunds",
+                                "technical": "Bugs, outages, integrations"
+                              }
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "instructions",
+                            "criteria"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "score"
+                              ],
+                              "description": "Rate the state against an ordered scale of levels."
+                            },
+                            "instructions": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "nullable": true
+                                  }
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "nullable": true
+                                  }
+                                }
+                              ],
+                              "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array."
+                            },
+                            "criteria": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              },
+                              "minItems": 2,
+                              "description": "Ordered level descriptions, lowest first. The answer is an expected level index (may be fractional) plus a probability per level.",
+                              "example": [
+                                "Calm",
+                                "Frustrated",
+                                "Very angry"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "instructions",
+                            "criteria"
+                          ]
+                        }
+                      ]
+                    },
+                    "description": "Map of question key \u2192 typed question. Every key comes back in `answers` with a typed result."
+                  }
+                },
+                "required": [
+                  "model",
+                  "state",
+                  "questions"
+                ],
+                "title": "typesafe/jev"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "model": {
+                      "type": "string",
+                      "description": "Resolved model version that answered.",
+                      "example": "typesafe/jev"
+                    },
+                    "answers": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "noul"
+                                ]
+                              },
+                              "noul": {
+                                "type": "number",
+                                "description": "Probability that the answer is \"yes\" (0\u20131)."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "noul"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "choice"
+                                ]
+                              },
+                              "choice": {
+                                "type": "string",
+                                "description": "The selected option key from `criteria`."
+                              },
+                              "confidence": {
+                                "type": "number",
+                                "description": "Calibrated confidence in the choice (0\u20131)."
+                              },
+                              "probabilities": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "number"
+                                },
+                                "description": "Probability of each option; sums to 1."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "choice",
+                              "confidence",
+                              "probabilities"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "score"
+                                ]
+                              },
+                              "score": {
+                                "type": "number",
+                                "description": "Expected level on the ordered scale (may be fractional, e.g. 1.34)."
+                              },
+                              "confidence": {
+                                "type": "number",
+                                "description": "Calibrated confidence in the score (0\u20131)."
+                              },
+                              "legend": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "string"
+                                },
+                                "description": "Level index \u2192 level description."
+                              },
+                              "probabilities": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "number"
+                                },
+                                "description": "Probability of each option; sums to 1."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "score",
+                              "confidence",
+                              "legend",
+                              "probabilities"
+                            ]
+                          }
+                        ]
+                      },
+                      "description": "One typed answer per question key from the request."
+                    },
+                    "usage": {
+                      "type": "object",
+                      "properties": {
+                        "input_tokens": {
+                          "type": "integer"
+                        },
+                        "output_tokens": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "input_tokens",
+                        "output_tokens"
+                      ],
+                      "description": "Token usage reported by the provider."
+                    }
+                  },
+                  "required": [
+                    "model",
+                    "answers",
+                    "usage"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl -L \\\n  --request POST \\\n  --url 'https://api.aimlapi.com/v1/decisions' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n      \"model\": \"typesafe/jev\",\n      \"state\": \"Help! My payments have been failing for 3 days and nobody answers support.\",\n      \"questions\": {\n        \"is_urgent\": {\n          \"type\": \"noul\",\n          \"instructions\": \"Does this convey urgency?\"\n        },\n        \"department\": {\n          \"type\": \"choice\",\n          \"instructions\": \"Which team should handle this?\",\n          \"criteria\": {\n            \"billing\": \"Payments, invoicing, refunds\",\n            \"technical\": \"Bugs, outages, integrations\",\n            \"sales\": \"Pricing, upgrades, new accounts\"\n          }\n        },\n        \"frustration\": {\n          \"type\": \"score\",\n          \"instructions\": \"How frustrated is the customer?\",\n          \"criteria\": [\n            \"Calm\",\n            \"Frustrated\",\n            \"Very angry\"\n          ]\n        }\n      }\n    }'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "async function main() {\n  const response = await fetch('https://api.aimlapi.com/v1/decisions', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      \"model\": \"typesafe/jev\",\n      \"state\": \"Help! My payments have been failing for 3 days and nobody answers support.\",\n      \"questions\": {\n        \"is_urgent\": {\n          \"type\": \"noul\",\n          \"instructions\": \"Does this convey urgency?\"\n        },\n        \"department\": {\n          \"type\": \"choice\",\n          \"instructions\": \"Which team should handle this?\",\n          \"criteria\": {\n            \"billing\": \"Payments, invoicing, refunds\",\n            \"technical\": \"Bugs, outages, integrations\",\n            \"sales\": \"Pricing, upgrades, new accounts\"\n          }\n        },\n        \"frustration\": {\n          \"type\": \"score\",\n          \"instructions\": \"How frustrated is the customer?\",\n          \"criteria\": [\n            \"Calm\",\n            \"Frustrated\",\n            \"Very angry\"\n          ]\n        }\n      }\n    }),\n  });\n\n  const data = await response.json();\n  console.log(JSON.stringify(data, null, 2));\n}\n\nmain();"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/decisions\",\n    headers={\n        \"Content-Type\": \"application/json\",\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n    },\n    json={\n      \"model\": \"typesafe/jev\",\n      \"state\": \"Help! My payments have been failing for 3 days and nobody answers support.\",\n      \"questions\": {\n        \"is_urgent\": {\n          \"type\": \"noul\",\n          \"instructions\": \"Does this convey urgency?\"\n        },\n        \"department\": {\n          \"type\": \"choice\",\n          \"instructions\": \"Which team should handle this?\",\n          \"criteria\": {\n            \"billing\": \"Payments, invoicing, refunds\",\n            \"technical\": \"Bugs, outages, integrations\",\n            \"sales\": \"Pricing, upgrades, new accounts\"\n          }\n        },\n        \"frustration\": {\n          \"type\": \"score\",\n          \"instructions\": \"How frustrated is the customer?\",\n          \"criteria\": [\n            \"Calm\",\n            \"Frustrated\",\n            \"Very angry\"\n          ]\n        }\n      }\n    }\n)\n\ndata = response.json()\nprint(data)"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
