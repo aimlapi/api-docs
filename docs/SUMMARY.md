@@ -326,6 +326,8 @@
   * [Poolside](api-references/text-models-llm/Poolside/README.md)
     * [Laguna M.1](api-references/text-models-llm/Poolside/laguna-m.1.md)
     * [Laguna S 2.1](api-references/text-models-llm/Poolside/laguna-s-2.1.md)
+  * [PrismML](api-references/text-models-llm/PrismML/README.md)
+    * [Ternary Bonsai 2 27B](api-references/text-models-llm/PrismML/ternary-bonsai-2-27b.md)
   * [Sakana AI](api-references/text-models-llm/Sakana-AI/README.md)
     * [Fugu Ultra](api-references/text-models-llm/Sakana-AI/fugu-ultra.md)
     * [Sakana Namazu](api-references/text-models-llm/Sakana-AI/sakana-namazu.md)
