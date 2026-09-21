@@ -380,6 +380,7 @@
     * [Grok 4.3](api-references/text-models-llm/xai/grok-4-3.md)
     * [Grok 4.5](api-references/text-models-llm/xai/grok-4-5.md)
     * [Grok 4.6](api-references/text-models-llm/xai/grok-4-6.md)
+    * [Grok 4.7](api-references/text-models-llm/xai/grok-4-7.md)
   * [Xiaomi](api-references/text-models-llm/xiaomi/README.md)
     * [mimo-v2-flash](api-references/text-models-llm/xiaomi/mimo-v2-flash.md)
     * [Mimo v2.5](api-references/text-models-llm/xiaomi/mimo-v2.5.md)
