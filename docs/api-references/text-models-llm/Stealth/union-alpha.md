@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Union Alpha
 
 {% columns %}
