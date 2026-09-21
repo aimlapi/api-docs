@@ -351,6 +351,8 @@
   * [Thinking Machines](api-references/text-models-llm/Thinking-Machines/README.md)
     * [Inkling](api-references/text-models-llm/Thinking-Machines/inkling.md)
     * [Inkling Small](api-references/text-models-llm/Thinking-Machines/inkling-small.md)
+  * [Unbiased](api-references/text-models-llm/Unbiased/README.md)
+    * [Pareto](api-references/text-models-llm/Unbiased/pareto.md)
   * [undi95](api-references/text-models-llm/undi95/README.md)
     * [ReMM SLERP 13B](api-references/text-models-llm/undi95/remm-slerp-l2-13b.md)
   * [Upstage](api-references/text-models-llm/Upstage/README.md)
