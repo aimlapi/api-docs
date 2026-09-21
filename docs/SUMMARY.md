@@ -865,6 +865,7 @@
 * [793](integrations/793.md)
 * [SillyTavern](integrations/sillytavern.md)
 * [Toolhouse](integrations/toolhouse.md)
+* [ZCode](integrations/zcode.md)
 * [Zero](integrations/zero.md)
 
 ***
