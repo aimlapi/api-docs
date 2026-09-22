@@ -253,6 +253,7 @@
   * [Nex AGI](api-references/text-models-llm/Nex-AGI/README.md)
     * [Nex N2 Mini](api-references/text-models-llm/Nex-AGI/nex-n2-mini.md)
     * [Nex N2 Pro](api-references/text-models-llm/Nex-AGI/nex-n2-pro.md)
+    * [Nex N2.5 Mini](api-references/text-models-llm/Nex-AGI/nex-n2.5-mini.md)
   * [NousResearch](api-references/text-models-llm/nousresearch/README.md)
     * [Hermes 4 405b](api-references/text-models-llm/nousresearch/hermes-4-405b.md)
     * [Hermes 3 405B Instruct](api-references/text-models-llm/nousresearch/hermes-3-llama-3.1-405b.md)
