@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Kat Coder Pro V2
 
 {% columns %}
