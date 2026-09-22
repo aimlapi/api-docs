@@ -388,6 +388,7 @@
     * [Mimo v2.5](api-references/text-models-llm/xiaomi/mimo-v2.5.md)
     * [Mimo v2.5 Pro](api-references/text-models-llm/xiaomi/mimo-v2.5-pro.md)
     * [Mimo V2.6 Flash](api-references/text-models-llm/xiaomi/mimo-v2.6-flash.md)
+    * [Mimo V2.6 Pro](api-references/text-models-llm/xiaomi/mimo-v2.6-pro.md)
   * [Zhipu](api-references/text-models-llm/zhipu/README.md)
     * [Glm 4.5 Air](api-references/text-models-llm/zhipu/glm-4.5-air.md)
     * [Glm 4.5](api-references/text-models-llm/zhipu/glm-4.5.md)
