@@ -93,6 +93,7 @@
     * [Claude Sonnet 4](api-references/text-models-llm/Anthropic/claude-sonnet-4.md)
     * [Claude Opus 5](api-references/text-models-llm/Anthropic/claude-opus-5.md)
     * [Claude Fable 5.1](api-references/text-models-llm/Anthropic/claude-fable-5.1.md)
+    * [Claude Opus 5.5](api-references/text-models-llm/Anthropic/claude-opus-5.5.md)
   * [Arcee AI](api-references/text-models-llm/Arcee-AI/README.md)
     * [Coder Large](api-references/text-models-llm/Arcee-AI/coder-large.md)
     * [Trinity Large Thinking](api-references/text-models-llm/Arcee-AI/trinity-large-thinking.md)
