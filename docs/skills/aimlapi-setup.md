@@ -9,7 +9,7 @@ hidden: true
 
 You are a coding agent. The user wants you (or another agent on this machine)
 to use [AI/ML API](https://aimlapi.com) models. The `aimlapi` CLI
-(npm package `@aimlapi/cli`) does the work: it signs the user in, stores an API
+(npm package `aimlapi`) does the work: it signs the user in, stores an API
 key on this machine, and edits the agent's own config files. Your job is to
 run it in the right order, show the user what will change, and never handle
 the API key yourself.
@@ -40,15 +40,19 @@ step says "ask the user", stop and wait for an answer.
 - [ ] **Always pass `--model <id>` to every `--config` command** (dry run,
   apply and verify), with the same id each time. Without it, in a terminal the
   CLI opens an interactive model picker that you cannot answer and the command
-  hangs; and a later run without `--model` would compare against a different
-  model.
+  hangs; otherwise it takes the model remembered from an earlier run (or the
+  default), which may not be the one the user confirmed.
 - [ ] **Never run `aimlapi <agent>` without `--config`, `--dry-run` or
   `--undo`.** Plain `aimlapi claude` (etc.) *launches* an interactive agent
   session, which would hang your shell tool.
 - [ ] Run every `aimlapi` command with `AIMLAPI_NO_UPDATE_CHECK=1` (as in
   the examples) so a new-version notice cannot interrupt setup. The examples
-  use POSIX shell syntax; in PowerShell run `$env:AIMLAPI_NO_UPDATE_CHECK=1`
-  first and drop the prefix and the `</dev/null`.
+  use POSIX shell syntax. In PowerShell set the variable in the same command
+  line (your shell tool may start a new shell per command) and replace a
+  trailing `</dev/null` with a leading `$null |`, e.g.
+  `$env:AIMLAPI_NO_UPDATE_CHECK=1; $null | aimlapi <agent> --config --model <id>`.
+  Keep stdin closed like this: without a stored key, `--config` then exits
+  `3` instead of starting an interactive login you cannot answer.
 - [ ] Do not use `sudo`, change system settings, or install other software
   (Node.js, the agent itself) without asking the user.
 - [ ] Do not commit or share the files this changes. If the user keeps their
@@ -140,7 +144,7 @@ continue with it or have them unset it in their own shell profile first.
 Then:
 
 ```sh
-AIMLAPI_NO_UPDATE_CHECK=1 npx -y @aimlapi/cli@latest status
+AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest status
 ```
 
 - Exit `0`: the user is signed in. The output shows the environment, the
@@ -160,7 +164,7 @@ the aimlapi CLI. The CLI stores the API key on this computer; I never see it."
 Then run:
 
 ```sh
-AIMLAPI_NO_UPDATE_CHECK=1 npx -y @aimlapi/cli@latest login
+AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest login
 ```
 
 - The command waits until the user approves (up to 10 minutes). Run it with a
@@ -174,7 +178,8 @@ AIMLAPI_NO_UPDATE_CHECK=1 npx -y @aimlapi/cli@latest login
   user the link while it waits.
 - If you cannot keep a command running that long, ask the user to run the same
   command in their own terminal (in Claude Code they can type
-  `! npx -y @aimlapi/cli@latest login` in the prompt), then continue.
+  `! AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest login` in the
+  prompt), then continue.
 - Exit `3` here means the request was denied, expired or timed out: show the
   message and ask whether to try again.
 
@@ -193,13 +198,13 @@ path, but a global install is still the way to keep using `aimlapi`). Install
 it:
 
 ```sh
-npm install -g @aimlapi/cli
+npm install -g aimlapi
 aimlapi --version
 ```
 
 - If npm fails with `EACCES` (permission denied), do **not** retry with
   `sudo` on your own. Explain the error and ask the user whether they want to
-  run `sudo npm install -g @aimlapi/cli` themselves or fix their npm prefix
+  run `sudo npm install -g aimlapi` themselves or fix their npm prefix
   (https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally).
 - If `aimlapi` is not found after install, the npm global `bin` directory is
   not on `PATH`: show the user `npm prefix -g` and ask them to add its `bin`
@@ -221,6 +226,16 @@ The row whose `PRESET` column says `default` is the recommended model (with
 the list only if they ask for one. Write the chosen id down: steps 6, 7 and
 8 must all pass exactly this `--model <id>`.
 
+If no row says `default`:
+
+- Exit `0`, and stderr has `note: preset <id> (the default) is not listed …`:
+  the catalog does not list the recommended model for this agent right now.
+  Tell the user, and offer that `<id>` (it may not work until the catalog
+  lists it again) or a model from the list; use what they choose.
+- Exit `1` (the catalog could not be loaded): show the error, then ask the
+  user for the model id to use (https://aimlapi.com/models lists them) or
+  whether to try again later. Do not guess an id.
+
 ```sh
 AIMLAPI_NO_UPDATE_CHECK=1 aimlapi <agent> --config --dry-run --model <id> </dev/null
 ```
@@ -237,9 +252,10 @@ output if they ask. What each agent gets:
 | `opencode` | provider `aimlapi-cli` in OpenCode's global `opencode.json`; sets `model` only if the user has none | OpenCode's `auth.json` (mode 0600) |
 | `cline` | provider `openai-compatible` in `~/.cline/data/settings/providers.json`, made the default (shared by the Cline CLI, VS Code and JetBrains) | in `providers.json` (Cline's own store) |
 
-For `claude`, `opencode` and `cline` the dry run also shows a `create` of
+For every agent the dry run also shows a `create` of
 `~/.aimlapi/agents/<agent>/previous/<hash>.json`: aimlapi's own record of the
-values it replaces, which `--undo` uses to restore them. Every file the CLI
+values (for Codex: the profile file) it replaces, which `--undo` uses to
+restore them. Every file the CLI
 changes is backed up first, under `~/.aimlapi/backups/<agent>/<timestamp>/`.
 
 Codex older than 0.131 cannot load profile files: the dry run already fails
@@ -299,16 +315,28 @@ AIMLAPI_NO_UPDATE_CHECK=1 aimlapi <agent> --undo </dev/null
 
 `--undo` removes exactly what `--config` added and restores the values it
 replaced; the user's other settings are kept (Codex: deletes the `aimlapi`
-profile; Cline: restores the previous OpenAI Compatible provider). A file in
-which the user has since replaced aimlapi's settings by hand is left as it
-is. Every file `--undo` changes is backed up too.
+profile, or puts back a profile of the user's that `--config` replaced;
+Cline: restores the previous OpenAI Compatible provider). A file in which the
+user has since replaced aimlapi's settings by hand is left as it is; a Codex
+profile edited since `--config` makes `--undo` exit `1` without changing it
+(show the message to the user). Every file `--undo` changes is backed up too.
 
 Optional, after `--undo` for every configured agent:
 
-- `aimlapi logout` revokes the CLI's API key and removes it from this computer,
-  including the copies aimlapi wrote into OpenCode and Cline configs and the
-  agent config backups of that environment.
-- `npm uninstall -g @aimlapi/cli` removes the CLI. Do this only after
+- Sign out: revokes the CLI's API key and removes it from this computer,
+  including the copies aimlapi wrote into OpenCode and Cline configs at their
+  usual locations, and the agent config backups taken for that environment or
+  holding the key:
+
+  ```sh
+  AIMLAPI_NO_UPDATE_CHECK=1 aimlapi logout
+  ```
+
+  Copies written to a non-default location (Cline with `$CLINE_DIR`,
+  `$CLINE_DATA_DIR` or `--data-dir`, OpenCode with another
+  `$XDG_DATA_HOME`) are only reported in a warning, not removed: run
+  `aimlapi <agent> --undo` with the same settings first.
+- `npm uninstall -g aimlapi` removes the CLI. Do this only after
   `--undo`: Claude Code and Codex configs point at the `aimlapi` binary.
 
 ## Troubleshooting
