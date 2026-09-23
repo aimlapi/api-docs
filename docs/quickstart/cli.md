@@ -11,7 +11,7 @@ hidden: true
 `aimlapi` is the AI/ML API command-line tool. It signs you in through the browser, creates an API key for you, and starts your coding agent (**Claude Code, Codex, OpenCode** or **Cline**) already connected to AI/ML API:
 
 ```bash
-npx @aimlapi/cli claude
+npx aimlapi claude
 ```
 
 You don't copy a key or edit config files by hand. Usage is billed to your AI/ML API account like any other API request.
@@ -29,25 +29,25 @@ Supported platforms: macOS and Linux (x64 and arm64). Windows builds (x64 and ar
 {% tabs %}
 {% tab title="Run without installing" %}
 ```bash
-npx @aimlapi/cli <command>
+npx aimlapi <command>
 ```
 {% endtab %}
 
 {% tab title="Install globally" %}
 ```bash
-npm i -g @aimlapi/cli
+npm i -g aimlapi
 aimlapi <command>
 ```
 {% endtab %}
 {% endtabs %}
 
-The command is called `aimlapi`. The examples on this page use `aimlapi`. If you run the CLI through npx, use `npx @aimlapi/cli` in its place.
+The command is called `aimlapi`. The examples on this page use `aimlapi`. If you run the CLI through npx, use `npx aimlapi` in its place. The npm package `aimlapi-cli` is an alias of `aimlapi` with the same `aimlapi` command (`npx aimlapi-cli claude`, `npm i -g aimlapi-cli`); install only one of the two globally.
 
 {% hint style="info" %}
-`--config` (see [Agent commands](cli.md#agent-commands)) needs the global install. It saves the path of the `aimlapi` binary into the agent's config, and a binary run through npx sits in a temporary cache that npm can delete at any time. Under npx, `--config` stops with exit code `2` and asks you to run `npm i -g @aimlapi/cli` first.
+`--config` (see [Agent commands](cli.md#agent-commands)) needs the global install. It saves the path of the `aimlapi` binary into the agent's config, and a binary run through npx sits in a temporary cache that npm can delete at any time. Under npx, `--config` stops with exit code `2` and asks you to run `npm i -g aimlapi` first.
 {% endhint %}
 
-**Updates.** Once a day, the CLI checks npm for a new release and prints a one-line notice when there is one. `aimlapi update` installs the latest version globally (`npm i -g @aimlapi/cli@latest`). To turn the check off, set `AIMLAPI_NO_UPDATE_CHECK=1`. The check is also off when `CI=true`.
+**Updates.** Once a day, the CLI checks npm for a new release and prints a one-line notice when there is one. `aimlapi update` installs the latest version globally (`npm i -g aimlapi@latest`, or `npm i -g aimlapi-cli@latest` if you installed the alias). To turn the check off, set `AIMLAPI_NO_UPDATE_CHECK=1`. The check is also off when `CI=true`.
 
 ## Quick start
 
