@@ -279,10 +279,17 @@ The CLI finds the provider store the way Cline does: it respects `CLINE_PROVIDER
 You can also let your coding agent set itself up. Paste this into Claude Code, Codex, OpenCode or Cline:
 
 ```
-Read https://cdn.jsdelivr.net/npm/@aimlapi/cli@latest/skills/aimlapi-setup/SKILL.md and follow it to connect this agent to AI/ML API.
+Read https://docs.aimlapi.com/skills/aimlapi-setup.md and follow it to connect this agent to AI/ML API.
 ```
 
 The skill walks the agent through the `aimlapi` CLI. You only approve the sign-in in your browser.
+
+To install it as a Claude Code skill instead, download the file with its frontmatter:
+
+```bash
+mkdir -p ~/.claude/skills/aimlapi-setup
+curl -fsSL https://raw.githubusercontent.com/aimlapi/api-docs/main/skills/aimlapi-setup/SKILL.md -o ~/.claude/skills/aimlapi-setup/SKILL.md
+```
 
 ## Troubleshooting
 
