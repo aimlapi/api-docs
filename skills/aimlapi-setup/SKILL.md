@@ -79,7 +79,7 @@ the user the command's stderr when it is not 0.
 - [ ] 2. Check Node.js
 - [ ] 3. Check sign-in
 - [ ] 4. Sign in (only if step 3 exits 3)
-- [ ] 5. Install the CLI globally
+- [ ] 5. Install the CLI globally (or offer to update it)
 - [ ] 6. Choose the model and preview the change (`--dry-run`)
 - [ ] 7. Apply it (`--config`) after the user confirms
 - [ ] 8. Verify and tell the user how to restart
@@ -185,7 +185,7 @@ When it succeeds it prints `Logged in to AI/ML API (prod). API key <prefix>…
 saved to …` (only a short prefix of the key). Run the `status` command from
 step 3 again and expect exit `0`.
 
-### 5. Install the CLI globally
+### 5. Install the CLI globally (or update it)
 
 `--config` writes settings that stay after this session. For Claude Code and
 Codex they include the absolute path of the `aimlapi` binary (the agent runs
@@ -201,8 +201,31 @@ aimlapi --version
 
 If it prints a version, the `aimlapi` command is installed already — from the
 npm package `aimlapi` or from its alias `aimlapi-cli`, which installs the same
-`aimlapi` command. Keep it: skip the install and go to step 6. Do not install
-the other package next to it and do not uninstall anything.
+`aimlapi` command. Keep it: skip the install. Do not install the other package
+next to it and do not uninstall anything.
+
+An installed `aimlapi` may be older than the one these steps describe. Look up
+the latest version:
+
+```sh
+npx -y aimlapi@latest --version
+```
+
+Both commands print `aimlapi <version> (commit …, built …)`. Compare the two
+versions (`X.Y.Z`, compared number by number). If the installed one is older,
+tell the user both versions and ask whether to update it. Run the update only
+if the user agrees:
+
+```sh
+AIMLAPI_NO_UPDATE_CHECK=1 aimlapi update
+aimlapi --version
+```
+
+`aimlapi update` reinstalls the same package it came from (`aimlapi` or
+`aimlapi-cli`) with npm. If it fails with `EACCES`, handle it as in the install
+below (no `sudo` on your own). If the user declines, if the installed version
+is not `X.Y.Z` (e.g. `dev`, a local build), or if the latest version cannot be
+looked up (offline), keep the installed one. Then go to step 6.
 
 Only if `aimlapi` is not found, install it:
 
