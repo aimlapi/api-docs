@@ -8,6 +8,7 @@
     * [Page 1](quickstart/simple-model/requesting-more-advanced-models/page-1.md)
 * [MCP](quickstart/mcp.md)
 * [CLI](quickstart/cli.md)
+  * [Agent setup skill](skills/aimlapi-setup.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 
 ## API REFERENCES
