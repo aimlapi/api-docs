@@ -194,14 +194,29 @@ Codex they include the absolute path of the `aimlapi` binary (the agent runs
 `aimlapi key print` to get the key). A binary started by `npx` lives in a
 temporary cache that can be deleted, so the CLI refuses `--config` for Claude
 Code and Codex from `npx` with exit `2` (OpenCode and Cline store no binary
-path, but a global install is still the way to keep using `aimlapi`). Install
-it:
+path, but a global install is still the way to keep using `aimlapi`). First
+check whether it is installed already:
+
+```sh
+aimlapi --version
+```
+
+If it prints a version, the `aimlapi` command is installed already — from the
+npm package `aimlapi` or from its alias `aimlapi-cli`, which installs the same
+`aimlapi` command. Keep it: skip the install and go to step 6. Do not install
+the other package next to it and do not uninstall anything.
+
+Only if `aimlapi` is not found, install it:
 
 ```sh
 npm install -g aimlapi
 aimlapi --version
 ```
 
+- If npm fails with `EEXIST` (a file `aimlapi` already exists, usually from
+  `aimlapi-cli`), an `aimlapi` is installed already: keep the existing install
+  and continue. Do not retry with `--force`. If `aimlapi --version` still
+  cannot find it, see the `PATH` item below.
 - If npm fails with `EACCES` (permission denied), do **not** retry with
   `sudo` on your own. Explain the error and ask the user whether they want to
   run `sudo npm install -g aimlapi` themselves or fix their npm prefix
@@ -336,8 +351,9 @@ Optional, after `--undo` for every configured agent:
   `$CLINE_DATA_DIR` or `--data-dir`, OpenCode with another
   `$XDG_DATA_HOME`) are only reported in a warning, not removed: run
   `aimlapi <agent> --undo` with the same settings first.
-- `npm uninstall -g aimlapi` removes the CLI. Do this only after
-  `--undo`: Claude Code and Codex configs point at the `aimlapi` binary.
+- `npm uninstall -g aimlapi` removes the CLI (`npm uninstall -g aimlapi-cli`
+  if it came from the alias, see step 5). Do this only after `--undo`:
+  Claude Code and Codex configs point at the `aimlapi` binary.
 
 ## Troubleshooting
 
