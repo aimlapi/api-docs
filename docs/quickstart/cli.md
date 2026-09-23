@@ -3,6 +3,7 @@ description: >-
   Connect Claude Code, Codex, OpenCode or Cline to AI/ML API with one command
   using the aimlapi CLI.
 icon: terminal
+hidden: true
 ---
 
 # CLI
