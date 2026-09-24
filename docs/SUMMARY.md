@@ -63,6 +63,7 @@
     * [Qwen3.8 27B](api-references/text-models-llm/Alibaba-Cloud/qwen3.8-27b.md)
     * [Qwen3.8 Flash](api-references/text-models-llm/Alibaba-Cloud/qwen3.8-flash.md)
     * [Qwen3.8 Omni Flash](api-references/text-models-llm/Alibaba-Cloud/qwen3.8-omni-flash.md)
+    * [Qwen3.8 Max Prime](api-references/text-models-llm/Alibaba-Cloud/qwen3.8-max-prime.md)
   * [AllenAI](api-references/text-models-llm/AllenAI/README.md)
     * [Olmo 3 32B Think](api-references/text-models-llm/AllenAI/olmo-3-32b-think.md)
   * [Amazon](api-references/text-models-llm/Amazon/README.md)
