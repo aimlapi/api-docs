@@ -12,6 +12,10 @@ description: >-
 
 AI/ML API is a **built-in provider preset** in OpenClaude — it ships upstream, so a plain install already has it. OpenClaude can also create an AI/ML API account for you, top it up, and save the issued key, so you can start with no key at all.
 
+{% hint style="info" %}
+Prefer one command? `npx aimlapi openclaude` signs you in through the browser and starts OpenClaude already connected to AI/ML API (over the Anthropic-compatible route), with no key to paste. See [CLI](../quickstart/cli.md#openclaude).
+{% endhint %}
+
 ## Quick start
 
 {% stepper %}

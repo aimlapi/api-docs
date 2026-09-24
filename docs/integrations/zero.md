@@ -12,6 +12,10 @@ description: >-
 
 AI/ML API is a **built-in, recommended provider preset** in Zero — it ships upstream, so there is nothing to patch or build from source. Zero also offers guided onboarding: you can create an AI/ML API account, top it up, and get a key without leaving the terminal.
 
+{% hint style="info" %}
+Prefer one command? `npx aimlapi zero` signs you in through the browser and starts zero already connected to AI/ML API, with no key to copy. It uses its own `aimlapi-cli` provider profile instead of the built-in preset. See [CLI](../quickstart/cli.md#zero).
+{% endhint %}
+
 ## Quick start
 
 {% stepper %}

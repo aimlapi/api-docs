@@ -6,6 +6,10 @@ OpenClaw is an AI platform for building AI agents and assistants. It runs on you
 
 Developers use OpenClaw to build multi-channel AI assistants with streaming responses, browser automation, vision, and voice features. It includes a local Gateway service, a CLI for management, and support for 12+ messaging platforms.
 
+{% hint style="info" %}
+Prefer one command? `npx aimlapi openclaw` signs you in through the browser, adds AI/ML API as a provider to OpenClaw's `openclaw.json` (upstream `openclaw` from npm) and starts it, with no key to paste. See [CLI](../quickstart/cli.md#openclaw).
+{% endhint %}
+
 {% hint style="success" %}
 **Data privacy:** OpenClaw stores data locally by default.\
 Nothing is sent externally unless you configure it.

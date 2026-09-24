@@ -2,6 +2,10 @@
 
 This guide explains how to configure **Claude Code** to work with Claude models available through AIML API.
 
+{% hint style="info" %}
+Prefer one command? `npx aimlapi claude` signs you in through the browser and starts Claude Code already connected to AI/ML API, with no key to copy or variables to export. See [CLI](../quickstart/cli.md#claude-code).
+{% endhint %}
+
 ## Overview
 
 Claude Code is a powerful coding agent by Anthropic that can analyze codebases, generate code, and assist with development workflows. By pointing it to AIML API, you can use Claude models available on our platform without connecting directly to Anthropic.
