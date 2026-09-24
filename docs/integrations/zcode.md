@@ -15,7 +15,9 @@ AI/ML API is not one of the built-in presets, so you add it once as a custom pro
 Everything on this page was verified against ZCode 3.14 with real requests through AI/ML API, including the full agent loop with tool calls.
 
 {% hint style="info" %}
-Prefer one command? If you have ZCode's `zcode` terminal command, `npx aimlapi zcode` signs you in through the browser and starts it already connected to AI/ML API, with no key to paste; `aimlapi zcode --config` also sets up the desktop app. See [CLI](../quickstart/cli.md#zcode).
+Prefer one command? `npx aimlapi zcode` signs you in through the browser and starts ZCode already connected to AI/ML API, with no key to paste; `aimlapi zcode --config` also sets up the desktop app. See [CLI](../quickstart/cli.md#zcode).
+
+The CLI needs ZCode's `zcode` terminal command (built from source), also for `--config`: the desktop app alone is not enough. Its provider sends no reasoning parameters, so the reasoning-level steps below don't apply to it.
 {% endhint %}
 
 ## Quick start

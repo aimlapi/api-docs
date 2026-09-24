@@ -8,6 +8,8 @@ Developers use OpenClaw to build multi-channel AI assistants with streaming resp
 
 {% hint style="info" %}
 Prefer one command? `npx aimlapi openclaw` signs you in through the browser, adds AI/ML API as a provider to OpenClaw's `openclaw.json` (upstream `openclaw` from npm) and starts it, with no key to paste. See [CLI](../quickstart/cli.md#openclaw).
+
+The CLI configures upstream `openclaw` with its own provider `aimlapi-cli` (models `aimlapi-cli/<model>`, made the default model) and reads the key from aimlapi's credentials file. This is separate from the `openclaw-aimlapi` fork and its `aimlapi` provider described below: use one setup or the other.
 {% endhint %}
 
 {% hint style="success" %}

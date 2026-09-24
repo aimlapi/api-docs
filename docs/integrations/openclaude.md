@@ -14,6 +14,8 @@ AI/ML API is a **built-in provider preset** in OpenClaude — it ships upstream,
 
 {% hint style="info" %}
 Prefer one command? `npx aimlapi openclaude` signs you in through the browser and starts OpenClaude already connected to AI/ML API (over the Anthropic-compatible route), with no key to paste. See [CLI](../quickstart/cli.md#openclaude).
+
+`aimlapi openclaude --config` switches OpenClaude to AI/ML API's Anthropic-compatible route and sets `AIMLAPI_API_KEY` to empty in its `settings.json`, so the manual setup below no longer applies; `aimlapi openclaude --undo` restores it.
 {% endhint %}
 
 ## Quick start
