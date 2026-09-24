@@ -12,6 +12,12 @@ description: >-
 
 This guide covers both setup paths.
 
+{% hint style="info" %}
+Prefer one command? With Hermes Agent installed, `npx aimlapi hermes` signs you in through the browser, adds AI/ML API as a provider to Hermes' `config.yaml` and starts Hermes, with no key to copy. See [CLI](../quickstart/cli.md#hermes-agent).
+
+The CLI adds its own providers (`custom:aimlapi-cli-run` for a single run, `custom:aimlapi-cli` with `--config`) rather than the options below. `aimlapi hermes --config` makes `custom:aimlapi-cli` the default and replaces the `model:` keys (for example, those from Option 1 or 2); `aimlapi hermes --undo` puts them back.
+{% endhint %}
+
 ## Quick start
 
 Use the AI/ML API fork if you want the fastest setup:
