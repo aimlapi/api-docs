@@ -1,7 +1,8 @@
 ---
 description: >-
-  Instructions for a coding agent (Claude Code, Codex, OpenCode or Cline) to
-  install the aimlapi CLI and connect itself to AI/ML API.
+  Instructions for a coding agent (Claude Code, Codex, OpenCode, Cline,
+  OpenClaude, OpenClaw, Hermes Agent, zero or ZCode) to install the aimlapi CLI
+  and connect itself to AI/ML API.
 hidden: true
 ---
 
@@ -27,7 +28,8 @@ step says "ask the user", stop and wait for an answer.
 - [ ] **Never print, read or copy the key.** Do not run `aimlapi key print`.
   Do not open or `cat` the credentials file (`~/.aimlapi/credentials`, on
   Windows `%APPDATA%\aimlapi\credentials`) or the agent files that hold the
-  key after setup (OpenCode `auth.json`, Cline `providers.json`). Do not dump
+  key after setup (OpenCode `auth.json`, Cline `providers.json`, OpenClaude
+  `settings.json`, ZCode `provider_config.json`). Do not dump
   the environment (`env`, `printenv`, `set`) — `AIMLAPI_API_KEY` may be in it.
   Use only the CLI's own output, which never shows the whole key (only a
   masked form or a short prefix).
@@ -54,7 +56,9 @@ step says "ask the user", stop and wait for an answer.
   Keep stdin closed like this: without a stored key, `--config` then exits
   `3` instead of starting an interactive login you cannot answer.
 - [ ] Do not use `sudo`, change system settings, or install other software
-  (Node.js, the agent itself) without asking the user.
+  (Node.js, the agent itself) without asking the user. Once the user has
+  agreed to install a missing agent, pass `--yes` so that aimlapi installs it
+  (step 6, exit `4`).
 - [ ] Do not commit or share the files this changes. If the user keeps their
   home directory or dotfiles in git, warn them before applying.
 - [ ] If your sandbox blocks network access or writes outside the workspace,
@@ -73,7 +77,7 @@ the user the command's stderr when it is not 0.
 | `1` | general error (network, file, server, agent too old) | show the error, stop, ask the user |
 | `2` | usage error, or `--config` run from `npx` | fix the command; for `--config` see step 5 |
 | `3` | not signed in, or the server rejected the key | run step 4 (login) |
-| `4` | the agent is not installed | show the printed install command, ask the user |
+| `4` | the agent is not installed (or its install failed) | show the printed install command, ask the user; see step 6 |
 
 ## Workflow
 
@@ -89,25 +93,29 @@ the user the command's stderr when it is not 0.
 ### 1. Pick the agent
 
 The agent ids are `claude` (Claude Code), `codex` (Codex), `opencode`
-(OpenCode) and `cline` (Cline). If the user named an agent, use it. Otherwise
+(OpenCode), `cline` (Cline), `openclaude` (OpenClaude), `zcode` (ZCode, Z.ai's agent for GLM
+models) and `hermes` (Hermes Agent); `openclaw` (OpenClaw) and `zero` (zero by Gitlawb) are configured only when the user names them. If the user named an agent, use it. Otherwise
 configure the agent you are running in: you normally know it from your own
 instructions. These environment variables confirm it (check only these names;
 do not print the whole environment):
 
 ```sh
-env | grep -E '^(CLAUDECODE|CODEX_THREAD_ID|CODEX_SANDBOX|OPENCODE)='
+env | grep -E '^(CLAUDECODE|CODEX_THREAD_ID|CODEX_SANDBOX|OPENCODE|HERMES_AGENT)='
 ```
 
 ```powershell
-Get-ChildItem Env: | Where-Object Name -in 'CLAUDECODE','CODEX_THREAD_ID','CODEX_SANDBOX','OPENCODE' | Select-Object Name, Value
+Get-ChildItem Env: | Where-Object Name -in 'CLAUDECODE','CODEX_THREAD_ID','CODEX_SANDBOX','OPENCODE','HERMES_AGENT' | Select-Object Name, Value
 ```
 
 | Variable present | Agent id |
 | ---------------- | -------- |
 | `CLAUDECODE=1` | `claude` |
+| `CLAUDECODE=1`, and you are OpenClaude (it sets the same variable) | `openclaude` |
 | `CODEX_THREAD_ID` or `CODEX_SANDBOX` | `codex` |
 | `OPENCODE=1` | `opencode` |
+| `HERMES_AGENT=true` | `hermes` |
 | none of these, and you are Cline | `cline` |
+| none of these, and you are ZCode | `zcode` |
 
 If you are not sure, ask the user which agent to configure. Tell the user
 which one you picked before going on.
@@ -137,8 +145,8 @@ if ($env:AIMLAPI_API_KEY) { 'set' } else { 'unset' }
 ```
 
 If it is `set`, tell the user: `AIMLAPI_API_KEY` overrides the key stored by
-`aimlapi login` for every `aimlapi` command, and for `opencode` and `cline`,
-`--config` writes **that** key into the agent's config files. Ask whether to
+`aimlapi login` for every `aimlapi` command, and for `opencode`, `cline`,
+`openclaude` and `zcode`, `--config` writes **that** key into the agent's config files. Ask whether to
 continue with it or have them unset it in their own shell profile first.
 
 Then:
@@ -183,8 +191,8 @@ AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest login
 - Exit `3` here means the request was denied, expired or timed out: show the
   message and ask whether to try again.
 
-When it succeeds it prints `Logged in to AI/ML API (prod). API key <prefix>…
-saved to …` (only a short prefix of the key). Run the `status` command from
+When it succeeds it prints `Logged in to AI/ML API. API key <prefix>… saved
+to …` (only a short prefix of the key). Run the `status` command from
 step 3 again and expect exit `0`.
 
 ### 5. Install the CLI globally (or update it)
@@ -193,7 +201,7 @@ step 3 again and expect exit `0`.
 Codex they include the absolute path of the `aimlapi` binary (the agent runs
 `aimlapi key print` to get the key). A binary started by `npx` lives in a
 temporary cache that can be deleted, so the CLI refuses `--config` for Claude
-Code and Codex from `npx` with exit `2` (OpenCode and Cline store no binary
+Code, Codex and Hermes Agent from `npx` with exit `2` (OpenCode, Cline, OpenClaude and ZCode store no binary
 path, but a global install is still the way to keep using `aimlapi`). First
 check whether it is installed already:
 
@@ -289,6 +297,11 @@ output if they ask. What each agent gets:
 | `codex` | new profile `~/.codex/aimlapi.config.toml` (or `$CODEX_HOME`); `config.toml` is **not** touched | none in the file: Codex runs `aimlapi key print` |
 | `opencode` | provider `aimlapi-cli` in OpenCode's global `opencode.json`; sets `model` only if the user has none | OpenCode's `auth.json` (mode 0600) |
 | `cline` | provider `openai-compatible` in `~/.cline/data/settings/providers.json`, made the default (shared by the Cline CLI, VS Code and JetBrains) | in `providers.json` (Cline's own store) |
+| `openclaude` | `env` of `~/.openclaude/settings.json` (or `$OPENCLAUDE_CONFIG_DIR/settings.json`): base URL, models, headers | `ANTHROPIC_AUTH_TOKEN` in that `settings.json` (mode 0600) |
+| `openclaw` | provider `aimlapi-cli`, secret provider `aimlapi-cli` and `agents.defaults.model` in `~/.openclaw/openclaw.json` | none in the file: OpenClaw reads aimlapi's credentials file (needs `aimlapi login`, not only `AIMLAPI_API_KEY`) |
+| `zero` | profile `aimlapi-cli` (`aimlapi-cli-dev` for `--env dev`) in `~/.config/zero/config.json` (or `$XDG_CONFIG_HOME/zero/config.json`), made the default provider | none in the file: zero reads `$AIMLAPI_CLI_KEY` (`$AIMLAPI_CLI_DEV_KEY` for dev), never `AIMLAPI_API_KEY` |
+| `zcode` | provider `aimlapi-cli` (shown as "AI/ML API") in `~/.zcode/v2/provider_config.json` (or `$ZCODE_DATA_BASE_DIR/.zcode/v2`), its model made ZCode's default; shared by the ZCode desktop app, `zcode` and `zcode --web` | in `provider_config.json` (ZCode's own store, mode 0600) |
+| `hermes` | provider `aimlapi-cli` under `providers:` in `~/.hermes/config.yaml` (or `$HERMES_HOME`, or the active Hermes profile), and `model.default` / `model.provider` pointed at it (`model.base_url` and similar keys removed); a plain `aimlapi hermes` run adds its own entry `aimlapi-cli-run` and never changes these | none in the file: Hermes runs `aimlapi key print` (`key_cmd`) |
 
 For every agent the dry run also shows a `create` of
 `~/.aimlapi/agents/<agent>/previous/<hash>.json`: aimlapi's own record of the
@@ -299,6 +312,24 @@ changes is backed up first, under `~/.aimlapi/backups/<agent>/<timestamp>/`.
 Codex older than 0.131 cannot load profile files: the dry run already fails
 with exit `1` and asks to update Codex (`npm install -g @openai/codex@latest`).
 Tell the user; update only if they agree.
+
+Exit `4`: the agent is not installed, so there is nothing to preview yet.
+stderr names the install command. If it is `npm install -g <package>` (every
+agent except `hermes` and `zcode`), describe the change from the table above
+and ask one question: "<Agent> is not installed. Install it with
+`npm install -g <package>` and apply this setup?" On a clear yes, run the
+step 7 command with `--yes` instead of step 7:
+
+```sh
+AIMLAPI_NO_UPDATE_CHECK=1 aimlapi <agent> --config --yes --model <id> </dev/null
+```
+
+aimlapi runs exactly that npm command (never with `sudo`), shows npm's output,
+and then applies the config; go on with step 8, whose dry run shows the result. If it still
+exits `4`, relay its message (an `EACCES` fix for npm's global directory, or
+the npm `bin` directory to add to `PATH`) and stop. `--yes` does nothing with
+`--dry-run`, and nothing for `hermes` (install script) or `zcode` (built from
+source): show their command and let the user install them.
 
 Then ask: "Apply these changes?" Continue only on a clear yes.
 
@@ -316,7 +347,7 @@ Relay the notes and the backup directory to the user.
 - Exit `3`: there are no stored credentials (`--config` only checks that a
   key exists; it does not contact the server). Go back to step 4.
 - Exit `4`: the agent is not installed. Show the printed install command and
-  ask the user.
+  ask the user; with their yes, run the command again with `--yes` (step 6).
 
 ### 8. Verify and restart
 
@@ -338,6 +369,11 @@ Then tell the user how to pick it up:
 | `codex` | Start Codex with the profile: `codex --profile aimlapi`. Plain `codex` keeps the previous provider. | — |
 | `opencode` | Restart OpenCode. If the user already had a default model, pick an `aimlapi-cli/…` model with `/models`. | `opencode models aimlapi-cli` lists AI/ML API models. |
 | `cline` | The Cline CLI uses it on the next run. In VS Code: Command Palette → "Developer: Reload Window". | — |
+| `openclaude` | Quit OpenClaude and start it again. Picking another provider with `/provider` later deletes only part of the AI/ML API settings; to remove them, run `aimlapi openclaude --undo`. | In the new session, `/status` shows the AI/ML API base URL. |
+| `openclaw` | A running Gateway reloads the config by itself; start a new session (`/new`) or run `openclaw`. | `openclaw config validate` |
+| `zero` | `aimlapi zero` starts it with the key. Plain `zero` needs `AIMLAPI_CLI_KEY` (dev: `AIMLAPI_CLI_DEV_KEY`) in the user's shell: tell them they can add `export AIMLAPI_CLI_KEY="$(aimlapi key print)"` to their shell profile themselves (do not run it); without it, zero silently uses another provider it has a key for. Never suggest exporting `AIMLAPI_API_KEY` for this. | `zero providers list` shows `aimlapi-cli` as active. |
+| `zcode` | A running ZCode (desktop app or `zcode`) picks it up by itself; start a new session to use the AI/ML API model. | The model picker lists the "AI/ML API" provider. |
+| `hermes` | Start a new `hermes` session. A running Hermes gateway (messaging) needs `hermes gateway restart`. | In the new session, `/model` lists "AI/ML API (aimlapi CLI)" (`custom:aimlapi-cli`) as the current provider; a plain `aimlapi hermes` run adds a second entry, "AI/ML API (aimlapi CLI, last launch)", for its own runs. |
 
 This session keeps running on its current provider until the user restarts;
 say so.
@@ -362,9 +398,10 @@ profile edited since `--config` makes `--undo` exit `1` without changing it
 Optional, after `--undo` for every configured agent:
 
 - Sign out: revokes the CLI's API key and removes it from this computer,
-  including the copies aimlapi wrote into OpenCode and Cline configs at their
+  including the copies aimlapi wrote into OpenCode, Cline, OpenClaude and ZCode configs at their
   usual locations, and the agent config backups taken for that environment or
-  holding the key:
+  holding the key (`logout --env dev` leaves a setup made for prod alone, and
+  the other way round):
 
   ```sh
   AIMLAPI_NO_UPDATE_CHECK=1 aimlapi logout
