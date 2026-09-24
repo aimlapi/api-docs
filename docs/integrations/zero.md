@@ -15,7 +15,7 @@ AI/ML API is a **built-in, recommended provider preset** in Zero — it ships up
 {% hint style="info" %}
 Prefer one command? `npx aimlapi zero` signs you in through the browser and starts zero already connected to AI/ML API, with no key to copy. It uses its own `aimlapi-cli` provider profile instead of the built-in preset. See [CLI](../quickstart/cli.md#zero).
 
-If you use `aimlapi zero`, don't export `AIMLAPI_API_KEY` as described below: it overrides the key from `aimlapi login` for every `aimlapi` command. After `aimlapi zero --config`, a plain `zero` reads the key from `AIMLAPI_CLI_KEY`, so add the line the CLI prints to your shell profile: `export AIMLAPI_CLI_KEY="$(aimlapi key print)"`.
+If you use `aimlapi zero`, don't export `AIMLAPI_API_KEY` as described below: it overrides the key from `aimlapi login` for every `aimlapi` command. After `aimlapi zero --config`, a plain `zero` reads the key from `AIMLAPI_CLI_KEY`, so add the line the CLI prints to your shell profile (this needs an installed `aimlapi`: `npm i -g aimlapi` or the install script, not npx): `export AIMLAPI_CLI_KEY="$(aimlapi key print)"`.
 {% endhint %}
 
 ## Quick start

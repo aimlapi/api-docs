@@ -74,9 +74,9 @@ Installs `aimlapi` into `%LOCALAPPDATA%\aimlapi\bin` and adds that directory to 
 
 The command is called `aimlapi`, and the examples on this page use it. If you run the CLI through npx, use `npx aimlapi` in its place.
 
-* **Install scripts.** They download the same binary that `npm i -g aimlapi` installs from the npm registry, check its sha512 and install it without `sudo`. Settings (environment variables): `AIMLAPI_INSTALL_DIR` (another directory), `AIMLAPI_VERSION` (a specific version, default `latest`), `AIMLAPI_NPM_REGISTRY`, and on Windows `AIMLAPI_INSTALL_NO_MODIFY_PATH=1` (don't touch `PATH`). If the short URL doesn't answer, use the same files at `https://aimlapi.com/app/cli/install.sh` and `https://aimlapi.com/app/cli/install.ps1`.
+* **Install scripts.** They download the same binary that `npm i -g aimlapi` installs from the npm registry, check its sha512 and install it without `sudo`. Settings (environment variables): `AIMLAPI_INSTALL_DIR` (another directory), `AIMLAPI_VERSION` (a specific version, default `latest`), `AIMLAPI_NPM_REGISTRY`, and on Windows `AIMLAPI_INSTALL_NO_MODIFY_PATH=1` (don't touch `PATH`).
 * **Alias.** The npm package `aimlapi-cli` is an alias of `aimlapi` with the same `aimlapi` command (`npx aimlapi-cli claude`, `npm i -g aimlapi-cli`). Install only one of the two globally.
-* **Updates.** Once a day the CLI checks for a new release and prints a one-line notice (outside agent sessions it may also offer to update right away). `aimlapi update` updates it the way it was installed: with `npm i -g aimlapi@latest` (or `aimlapi-cli@latest`) for an npm install, or by downloading, verifying and replacing the binary for a script install. It only moves to a newer release. To turn the check off, set `AIMLAPI_NO_UPDATE_CHECK=1`; it is also off when `CI=true`.
+* **Updates.** Once a day the CLI checks for a new release and prints a one-line notice (outside agent sessions it may also offer to update right away). `aimlapi update` updates it the way it was installed: with `npm i -g aimlapi@latest` (or `aimlapi-cli@latest`) for an npm install, or by downloading, verifying and replacing the binary for a script install. It only moves to a newer release. Through npx there is nothing to update; run `npx aimlapi@latest <command>` to get the newest version. To turn the check off, set `AIMLAPI_NO_UPDATE_CHECK=1`; it is also off when `CI=true`.
 
 {% hint style="info" %}
 For **Claude Code, Codex** and **Hermes Agent**, `--config` (see [Agent commands](cli.md#agent-commands)) saves the path of the `aimlapi` binary into the agent's config, so it needs an installed `aimlapi` (npm global or install script). A binary run through npx sits in a temporary cache that npm can delete at any time: under npx, `--config` for these agents stops with exit code `2` and asks you to run `npm i -g aimlapi` first.
@@ -106,15 +106,15 @@ See [Missing agents](cli.md#missing-agents).
 {% endstep %}
 
 {% step %}
-### Sign in (first run only)
-
-If no key is stored yet, the CLI opens your browser. **Sign in to AI/ML API** and **approve the aimlapi CLI**. On that page you can also set an optional **USD limit** for the new key. The key is created and saved on your computer. The CLI also prints the link, in case the browser doesn't open.
-{% endstep %}
-
-{% step %}
 ### Pick a model
 
 In an interactive terminal, the CLI shows a model picker with the agent's default preselected. To skip it, pass `--model <id>`. Later runs reuse the model you picked last (the CLI tells you so); pass `--model` to choose another.
+{% endstep %}
+
+{% step %}
+### Sign in (first run only)
+
+If no key is stored yet, the CLI opens your browser. **Sign in to AI/ML API** and **approve the aimlapi CLI**. On that page you can also set an optional **USD limit** for the new key. The key is created and saved on your computer. The CLI also prints the link, in case the browser doesn't open.
 {% endstep %}
 
 {% step %}
@@ -145,7 +145,7 @@ aimlapi <agent> [--model <id>] [--config | --undo] [--dry-run] [--yes] [-- <agen
 
 **What the CLI changes and keeps safe:**
 
-* The API key never appears on a command line. The agent gets it from a credential helper (`aimlapi key print`), from an environment variable of the agent process only, or from the agent's own config or credential store (mode `0600`).
+* The API key never appears on a command line. The agent gets it from a credential helper (`aimlapi key print`), from an environment variable of the agent process only, or from the agent's own config or credential store (mode `0600`), or, for OpenClaw, from aimlapi's credentials file.
 * Before writing any agent file, the CLI copies the original to `~/.aimlapi/backups/<agent>/<timestamp>/`. A repeated run that changes nothing writes nothing.
 * The CLI only changes the settings it owns. Other settings in the file stay as they are, and a value it replaces is restored by `--undo`.
 
@@ -226,7 +226,7 @@ aimlapi opencode -- run "explain this repo"
 
 **Launch.** Runs `opencode` with an inline config in `OPENCODE_CONFIG_CONTENT` (provider `aimlapi-cli`, shown as **AIMLAPI**, OpenAI-compatible at `https://api.aimlapi.com/v1`, the preset models) and the key in `AIMLAPI_API_KEY` of the OpenCode process only. No file is written. Models appear as `aimlapi-cli/<model id>`, for example `aimlapi-cli/anthropic/claude-sonnet-5`.
 
-**`--config`.** Adds the provider (without the key) to OpenCode's global config (`~/.config/opencode/opencode.json`, or `opencode.jsonc`, or `$OPENCODE_CONFIG`) and stores the key in OpenCode's credential store `auth.json` (mode `0600`). It sets the default `model` only if you have none; otherwise pick an `aimlapi-cli/…` model with `/models`.
+**`--config`.** Adds the provider (without the key) to OpenCode's global config (`~/.config/opencode/opencode.json`, or `opencode.jsonc`, or `$OPENCODE_CONFIG`) and stores the key in OpenCode's credential store `auth.json` (mode `0600`). It sets the default `model` only if you have none; otherwise pick an `aimlapi-cli/…` model with `/models`. After `--config`, a launch keeps the stored key current.
 
 ### Cline
 
@@ -253,7 +253,7 @@ aimlapi openclaude --model opus
 
 **Launch.** Connects [OpenClaude](../integrations/openclaude.md) over AI/ML API's Anthropic-compatible route (`/v1/messages`): the base URL, model slots (the same as for [Claude Code](cli.md#claude-code)) and tracking headers are set in its environment, and the key in `ANTHROPIC_AUTH_TOKEN` of the OpenClaude process only. No file is written. OpenClaude's built-in `aimlapi.com` preset is not used, and `AIMLAPI_API_KEY` is removed from the session.
 
-**`--config`.** Writes the same variables, with the key, into the `env` of `~/.openclaude/settings.json` (or `$OPENCLAUDE_CONFIG_DIR/settings.json`, mode `0600`). Picking another provider with `/provider` later removes only part of these settings; to remove them, run `aimlapi openclaude --undo`.
+**`--config`.** Writes the same variables, with the key, into the `env` of `~/.openclaude/settings.json` (or `$OPENCLAUDE_CONFIG_DIR/settings.json`, mode `0600`); after `--config`, a launch keeps the stored key current. Picking another provider with `/provider` later removes only part of these settings; to remove them, run `aimlapi openclaude --undo`.
 
 ### OpenClaw
 
@@ -289,7 +289,7 @@ aimlapi zero --config
 [zero](../integrations/zero.md) has no flag for a provider, so **every run** writes the OpenAI-compatible provider profile `aimlapi-cli` into zero's config (`~/.config/zero/config.json`, or `$XDG_CONFIG_HOME/zero/config.json`; on Windows `%AppData%\zero\config.json`). zero's built-in `aimlapi` preset is not used. The profile reads the key from `AIMLAPI_CLI_KEY`, so no key is written: a launch sets it for the zero process only. `--config` also makes the profile zero's default provider.
 
 {% hint style="warning" %}
-After `aimlapi zero --config`, `aimlapi zero` works as is, but a **plain `zero`** needs `AIMLAPI_CLI_KEY` in your shell. Add this line to your shell profile:
+After `aimlapi zero --config`, `aimlapi zero` works as is, but a **plain `zero`** needs `AIMLAPI_CLI_KEY` in your shell. With an installed `aimlapi` (not npx), add this line to your shell profile:
 
 ```bash
 export AIMLAPI_CLI_KEY="$(aimlapi key print)"
