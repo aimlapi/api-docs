@@ -89,8 +89,10 @@ For **Claude Code, Codex** and **Hermes Agent**, `--config` (see [Agent commands
 ### Start your agent
 
 ```bash
-aimlapi claude      # or codex, opencode, cline, openclaude, openclaw, hermes, zero, zcode
+aimlapi claude
 ```
+
+Other agents work the same way: `codex`, `opencode`, `cline`, `openclaude`, `openclaw`, `hermes`, `zero`, `zcode`.
 {% endstep %}
 
 {% step %}
@@ -443,10 +445,15 @@ Agents started by `aimlapi` inherit your environment; check your agent's documen
 
 <summary>Restoring an agent's configuration</summary>
 
-To revert what the CLI wrote into an agent's config, run:
+To revert what the CLI wrote into an agent's config, preview it first:
 
 ```bash
-aimlapi claude --undo --dry-run   # preview
+aimlapi claude --undo --dry-run
+```
+
+Then restore it:
+
+```bash
 aimlapi claude --undo
 ```
 
