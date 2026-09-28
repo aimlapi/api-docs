@@ -26,6 +26,8 @@
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI21](api-references/text-models-llm/AI21/README.md)
     * [Jamba Large 1.7](api-references/text-models-llm/AI21/jamba-large-1.7.md)
+  * [AIMLAPI](api-references/text-models-llm/AIMLAPI/README.md)
+    * [Jev Router](api-references/text-models-llm/AIMLAPI/jev-router.md)
   * [AionLabs](api-references/text-models-llm/AionLabs/README.md)
     * [Aion 1.0](api-references/text-models-llm/AionLabs/aion-1.0.md)
     * [Aion 1.0 Mini](api-references/text-models-llm/AionLabs/aion-1.0-mini.md)
