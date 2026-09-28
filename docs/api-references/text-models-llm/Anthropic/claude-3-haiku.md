@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Claude 3 Haiku
 
 {% columns %}
