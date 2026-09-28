@@ -334,6 +334,8 @@
     * [Gpt 6 Astra](api-references/text-models-llm/openai/gpt-6-astra.md)
     * [Gpt 6 Luna](api-references/text-models-llm/openai/gpt-6-luna.md)
     * [Gpt 6 Sol](api-references/text-models-llm/openai/gpt-6-sol.md)
+  * [Perceptron](api-references/text-models-llm/Perceptron/README.md)
+    * [Mk1.5](api-references/text-models-llm/Perceptron/perceptron-mk1.5.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
     * [Sonar](api-references/text-models-llm/perplexity/sonar.md)
     * [Sonar Pro](api-references/text-models-llm/perplexity/sonar-pro.md)
