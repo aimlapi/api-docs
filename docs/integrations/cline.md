@@ -7,7 +7,7 @@ Cline is an open-source AI coding assistant with two working modes (Plan/Act), t
 You can find the Cline repository and community on [GitHub](https://github.com/cline).
 
 {% hint style="info" %}
-Using the Cline CLI? `npx aimlapi cline` signs you in through the browser and sets AI/ML API as Cline's OpenAI Compatible provider for you. The Cline VS Code extension shares that setting too. See [CLI](../quickstart/cli.md#cline). Every run makes it Cline's default and replaces an OpenAI Compatible provider you set up by hand; `aimlapi cline --undo` puts it back.
+Faster: run `npx aimlapi cline`. It signs you in through the browser and makes AI/ML API Cline's default provider, in both the CLI and the VS Code extension. It replaces an OpenAI Compatible provider you set up by hand; `aimlapi cline --undo` restores it. See [CLI](../quickstart/cli.md#cline).
 {% endhint %}
 
 ## Installing Cline in VS Code
