@@ -28,7 +28,11 @@ Use them when a model needs **fresh or external data**, or needs to **act**, bey
 
 ## REST: search → inspect → run
 
-<figure><img src="../.gitbook/assets/our-tools-rest.png" alt="REST request flow: search, inspect, run"><figcaption></figcaption></figure>
+```
+Your code → POST /v1/tools/search   → list of tools
+          → POST /v1/tools/inspect  → input_schema, price
+          → POST /v1/tools/run      → 200 result  |  202 run_id → GET /v1/tools/runs/{id}
+```
 
 **1. Find a tool.** Describe what you need in plain words.
 
@@ -76,7 +80,12 @@ curl https://tools.aimlapi.com/v1/tools/run \
 
 Every tool can be exported as a ready function definition in the format your model expects: `openai` (chat/completions), `openai-responses`, `anthropic` or `gemini`. The model decides when to call the tool, and your code runs it.
 
-<figure><img src="../.gitbook/assets/our-tools-fc.png" alt="Function calling flow with chat/completions and /v1/tools/run"><figcaption></figcaption></figure>
+```
+Your code → tools.aimlapi.com  GET definition?format=openai  → definition
+          → api.aimlapi.com    chat/completions + tools[]   → tool_calls
+          → tools.aimlapi.com  POST /v1/tools/run           → output
+          → api.aimlapi.com    chat/completions + tool msg  → final answer
+```
 
 ```python
 import json, requests
@@ -115,7 +124,9 @@ Tips:
 
 Give the model our MCP server, and it will search, run tools and answer in a single request:
 
-<figure><img src="../.gitbook/assets/our-tools-resp.png" alt="/v1/responses with the AI/ML API MCP server"><figcaption></figcaption></figure>
+```
+Your code → api.aimlapi.com /v1/responses → model ⇄ mcp.aimlapi.com (tools_search, tools_run) → final answer
+```
 
 ```json
 {
@@ -138,7 +149,9 @@ Send it to `POST https://api.aimlapi.com/v1/responses`. The `output` array shows
 
 Connect our MCP server as described in [MCP](mcp.md). Four tools give the agent the whole catalog:
 
-<figure><img src="../.gitbook/assets/our-tools-mcp.png" alt="MCP client flow with tools_search and tools_run"><figcaption></figcaption></figure>
+```
+MCP client ⇄ model:  tool_use tools_*   →   MCP client → mcp.aimlapi.com → result → back to the model
+```
 
 | MCP tool | What it does |
 | --- | --- |
