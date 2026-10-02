@@ -198,6 +198,7 @@
     * [Ling-3.0-tiny](api-references/text-models-llm/inclusionAI/ling-3.0-tiny-free.md)
     * [Ling 3.0 Flash Fin](api-references/text-models-llm/inclusionAI/ling-3.0-flash-fin-free.md)
     * [Ling 3.0 Flash VL](api-references/text-models-llm/inclusionAI/ling-3.0-flash-vl-free.md)
+    * [Ling 3.1 Flash](api-references/text-models-llm/inclusionAI/ling-3.1-flash.md)
   * [Inference.net](api-references/text-models-llm/Inference.net/README.md)
     * [Schematron V2 Small](api-references/text-models-llm/Inference.net/schematron-v2-small.md)
   * [Inflection](api-references/text-models-llm/Inflection/README.md)
