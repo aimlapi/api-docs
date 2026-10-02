@@ -151,6 +151,5 @@ Results come back under `result` with `"untrusted": true`, so the agent treats t
 | `400 invalid_input` | `input` does not match the tool's `input_schema`; the message names the field |
 | `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd` |
 | `403 insufficient_funds` | top up your balance |
-| `403 tool_blocked` | Our Tools are not enabled for this key |
 | `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative |
 | `429 rate_limited` | slow down and retry after `Retry-After` |
