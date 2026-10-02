@@ -28,12 +28,6 @@ Use them when a model needs **fresh or external data**, or needs to **act**, bey
 
 ## REST: search → inspect → run
 
-```
-Your code → POST /v1/tools/search   → list of tools
-          → POST /v1/tools/inspect  → input_schema, price
-          → POST /v1/tools/run      → 200 result  |  202 run_id → GET /v1/tools/runs/{id}
-```
-
 **1. Find a tool.** Describe what you need in plain words.
 
 ```bash
@@ -80,13 +74,6 @@ curl https://tools.aimlapi.com/v1/tools/run \
 
 Every tool can be exported as a ready function definition in the format your model expects: `openai` (chat/completions), `openai-responses`, `anthropic` or `gemini`. The model decides when to call the tool, and your code runs it.
 
-```
-Your code → tools.aimlapi.com  GET definition?format=openai  → definition
-          → api.aimlapi.com    chat/completions + tools[]   → tool_calls
-          → tools.aimlapi.com  POST /v1/tools/run           → output
-          → api.aimlapi.com    chat/completions + tool msg  → final answer
-```
-
 ```python
 import json, requests
 from openai import OpenAI
@@ -124,10 +111,6 @@ Tips:
 
 Give the model our MCP server, and it will search, run tools and answer in a single request:
 
-```
-Your code → api.aimlapi.com /v1/responses → model ⇄ mcp.aimlapi.com (tools_search, tools_run) → final answer
-```
-
 ```json
 {
   "model": "gpt-4.1",
@@ -148,10 +131,6 @@ Send it to `POST https://api.aimlapi.com/v1/responses`. The `output` array shows
 ## In MCP clients
 
 Connect our MCP server as described in [MCP](mcp.md). Four tools give the agent the whole catalog:
-
-```
-MCP client ⇄ model:  tool_use tools_*   →   MCP client → mcp.aimlapi.com → result → back to the model
-```
 
 | MCP tool | What it does |
 | --- | --- |
