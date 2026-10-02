@@ -13,8 +13,6 @@ hidden: true
 
 Use them when a model needs **fresh or external data**, or needs to **act**, beyond what it already knows. Typical cases: a research agent that searches and cites sources, a support bot that reads a customer's page, or an app that builds a report with a live screenshot.
 
-> Our Tools are in **beta**. Access is enabled per API key.
-
 ## Ways to use them
 
 | You are building… | Use | Who runs the tool |
