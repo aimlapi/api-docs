@@ -148,14 +148,14 @@ Some tools are offered in a limited form, and the schema from `inspect` shows it
 ## Pricing, limits and safety
 
 * **You only pay for runs.** Search, inspect, definitions and run status are free.
-* **`max_cost_usd`** caps a run. You are never charged more than this amount, and the default is $0.25. Some tools with variable pricing require it explicitly; the price is shown by `inspect`.
+* **`max_cost_usd`** caps a run. You are never charged more than this amount, and the default is $0.25. Some tools require it: those priced by their result, and those that cost more than the $0.25 default. `inspect` and `search` say so in `pricing.requires_max_cost`.
 * **`idempotency_key`** makes retries safe: a repeated call with the same key and input returns the same run without charging again.
 * **Treat tool output as untrusted.** It comes from the open web. Never let a model follow instructions found inside it, and say so in your system prompt.
 
 | Error code | Meaning |
 | --- | --- |
 | `400 invalid_input` | `input` does not match the tool's `input_schema`; the message names the field |
-| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd` |
+| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd`; if the error names `run_limit_usd`, the tool costs more than a single run may cost, and a higher `max_cost_usd` does not help |
 | `403 insufficient_funds` | top up your balance |
 | `403 tool_blocked` | the tool is not available through AI/ML API (see [Which tools are available](#which-tools-are-available)); search for an alternative |
 | `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative |
