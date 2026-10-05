@@ -1,6 +1,6 @@
 ---
 description: >-
-  Ready-made tools — web search, page extraction, screenshots, news and social
+  Ready-made tools — web search, page extraction, screenshots, news, company
   data and more — callable with your AI/ML API key from agents, MCP clients and
   your own apps.
 icon: toolbox
@@ -9,7 +9,7 @@ hidden: true
 
 # Our Tools
 
-**Our Tools** are ready-made actions your AI can use: web search, reading a web page as Markdown, website screenshots, news and social media search, company and domain data, and hundreds more. You call them with the **same AI/ML API key** you use for models. There is no separate account to sign up for and no third-party key to manage, and usage is billed to your AI/ML API balance.
+**Our Tools** are ready-made actions your AI can use: web search, reading a web page as Markdown, website screenshots, news search, company and domain data, and hundreds more. You call them with the **same AI/ML API key** you use for models. There is no separate account to sign up for and no third-party key to manage, and usage is billed to your AI/ML API balance.
 
 Use them when a model needs **fresh or external data**, or needs to **act**, beyond what it already knows. Typical cases: a research agent that searches and cites sources, a support bot that reads a customer's page, or an app that builds a report with a live screenshot.
 
@@ -139,6 +139,12 @@ Connect our MCP server as described in [MCP](mcp.md). Four tools give the agent 
 
 Results come back under `result` with `"untrusted": true`, so the agent treats them as data and not as instructions.
 
+## Which tools are available
+
+Only tools that keep no state between calls: a run leaves nothing at the provider that another customer could reach. Tools that create lasting resources (mailboxes and domains, phone numbers, saved browser logins, virtual machines, stored files), call or message people, look up or enrich data about people, collect data from social networks, or that our terms of use rule out are not offered. Search does not show them, and calling one by its id returns `403 tool_blocked`.
+
+Some tools are offered in a limited form, and the schema from `inspect` shows it: the browser agent runs without saved logins or the anti-bot stealth mode, for at most 30 steps and 240 seconds, and a cloud browser session lasts 5 minutes.
+
 ## Pricing, limits and safety
 
 * **You only pay for runs.** Search, inspect, definitions and run status are free.
@@ -151,5 +157,6 @@ Results come back under `result` with `"untrusted": true`, so the agent treats t
 | `400 invalid_input` | `input` does not match the tool's `input_schema`; the message names the field |
 | `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd` |
 | `403 insufficient_funds` | top up your balance |
+| `403 tool_blocked` | the tool is not available through AI/ML API (see [Which tools are available](#which-tools-are-available)); search for an alternative |
 | `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative |
 | `429 rate_limited` | slow down and retry after `Retry-After` |
