@@ -25,7 +25,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "provider": {
@@ -1137,7 +1137,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -1145,7 +1145,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "provider": {
@@ -2153,7 +2153,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -2161,7 +2161,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "provider": {
@@ -3464,7 +3464,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -3472,7 +3472,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "provider": {
@@ -4761,7 +4761,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -4769,7 +4769,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "messages": {
@@ -9774,7 +9774,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -9782,7 +9782,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "messages": {
@@ -14775,7 +14775,7 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   },
                   {
                     "type": "object",
@@ -14783,7 +14783,7 @@
                       "model": {
                         "type": "string",
                         "enum": [
-                          "aimlapi/jev-router"
+                          "typesafe/jev-router"
                         ]
                       },
                       "provider": {
@@ -15895,10 +15895,10 @@
                       "model",
                       "messages"
                     ],
-                    "title": "aimlapi/jev-router"
+                    "title": "typesafe/jev-router"
                   }
                 ],
-                "title": "aimlapi/jev-router"
+                "title": "typesafe/jev-router"
               }
             }
           }
@@ -16282,8 +16282,8 @@
                     },
                     "model": {
                       "type": "string",
-                      "description": "The model used for the chat completion.",
-                      "example": "aimlapi/jev-router"
+                      "description": "The model that actually produced this completion — the one the router picked, not the router itself. Short form; `meta.model` carries its canonical id.",
+                      "example": "gpt-6-luna"
                     },
                     "usage": {
                       "type": "object",
@@ -16361,6 +16361,16 @@
                       "type": "object",
                       "nullable": true,
                       "properties": {
+                        "model": {
+                          "type": "string",
+                          "description": "Canonical id of the model the router picked. This is the model you are billed for; it is also returned in the `x-aimlapi-model` response header on non-streaming requests.",
+                          "example": "openai/gpt-6-luna"
+                        },
+                        "provider": {
+                          "type": "string",
+                          "description": "Upstream provider that served the request.",
+                          "example": "openai"
+                        },
                         "usage": {
                           "type": "object",
                           "nullable": true,
