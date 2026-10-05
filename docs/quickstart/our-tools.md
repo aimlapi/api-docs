@@ -59,15 +59,15 @@ curl https://tools.aimlapi.com/v1/tools/run \
 ```
 
 ```json
-{ "id": "7lC_vqHA6L8m2TloNMJZQ", "tool": "web/search", "status": "completed", "is_error": false,
+{ "id": "7lC_vqHA6L8m2TloNMJZQ", "tool": "web/search", "status": "completed", "is_error": false, "untrusted": true,
   "cost": { "quoted_usd": 0.0091, "actual_usd": 0.0091, "credits": 18200, "over_max": false },
   "output": { "results": [{ "url": "https://…", "title": "…", "snippet": "…", "published_at": "…" }] } }
 ```
 
-* **`200`**: the run is finished, and the result is in `output`.
-* **`202`**: the run is still working (`"status": "queued"`). Poll `GET /v1/tools/runs/{id}` after `next_poll_hint_ms` milliseconds until the status is `completed`, `failed`, `stopped` or `timed_out`.
+* **`200`**: the run is finished, and the result is in `output`. A run with output carries `"untrusted": true`: the output is data from a third party, never instructions.
+* **`202`**: the run is still working (`"status": "queued"` or `"running"`). Poll `GET /v1/tools/runs/{id}` after `next_poll_hint_ms` milliseconds until the status is `completed`, `failed`, `stopped` or `timed_out`.
 * A run that executed but failed returns `"is_error": true` with `error.message`, and it is not charged. If `error.retryable` is `true`, it is worth trying again.
-* `wait_ms` is how long we wait before answering `202` for a tool that runs in the background. A quick tool answers when it finishes, which can take up to about 65 seconds whatever `wait_ms` says, so set your client timeout above that.
+* `wait_ms` is how long we wait before answering `202` for a tool that runs in the background. A tool that runs in one call answers when it finishes, whatever `wait_ms` says. If it is still working after about 110 seconds, you get `202` with `"status": "running"`: the call keeps going, it is charged when it ends, and you poll for the result. Set your client timeout above 120 seconds.
 * Retry with the same `idempotency_key` (see below); keys are scoped to your API key.
 
 ## Function calling in chat/completions
@@ -143,21 +143,21 @@ Results come back under `result` with `"untrusted": true`, so the agent treats t
 
 ## Which tools are available
 
-Only tools that keep no state between calls: a run leaves nothing at the provider that another customer could reach. Tools that create lasting resources (mailboxes and domains, phone numbers, saved browser logins, virtual machines, stored files), call or message people, look up or enrich data about people, collect data from social networks, or that our terms of use rule out are not offered. Search does not show them, and calling one by its id returns `403 tool_blocked`.
+Only tools that keep no state between calls: a run leaves nothing at the provider that another customer could reach. Tools that create lasting resources (mailboxes and domains, phone numbers, saved browser logins, virtual machines, stored files), call or message people, look up or enrich data about people, collect data from social networks, or that our terms of use rule out are not offered. Neither are tools whose cheapest call costs more than a single run may cost. Search does not show them, and calling one by its id returns `403 tool_blocked`.
 
-Some tools are offered in a limited form, and the schema from `inspect` shows it: the browser agent runs without saved logins or the anti-bot stealth mode, with a limit of 30 steps, and you pay for the steps it actually takes (at most $0.624 a run). The provider ends a run on its own time budget, so a long task can take several minutes: use `wait_ms` and poll. A cloud browser session lasts 5 minutes.
+Some tools are offered in a limited form, and the schema from `inspect` shows it: the browser agent runs without saved logins or the anti-bot stealth mode, with a limit of 30 steps, and you pay for the steps it actually takes (at most $0.624 a run). The provider ends a run on its own time budget, so a long task can take several minutes: use `wait_ms` and poll. A cloud browser session lasts 5 minutes. Its connection details are only in that run's answer and are never stored, so a later `GET` of the run does not return them.
 
 ## Pricing, limits and safety
 
 * **You only pay for runs.** Search, inspect, definitions and run status are free.
 * **`max_cost_usd`** caps a run. You are never charged more than this amount, and the default is $0.25. Some tools require it: those priced by their result, and those that cost more than the $0.25 default. `inspect` and `search` say so in `pricing.requires_max_cost`.
 * **`idempotency_key`** makes retries safe: a repeated call with the same key and input returns the same run without charging again.
-* **Treat tool output as untrusted.** It comes from the open web. Never let a model follow instructions found inside it, and say so in your system prompt.
+* **Treat tool output as untrusted.** It comes from the open web, and every run with output says so (`"untrusted": true`). Never let a model follow instructions found inside it, and say so in your system prompt.
 
 | Error code | Meaning |
 | --- | --- |
 | `400 invalid_input` | `input` does not match the tool's `input_schema`; the message names the field |
-| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd`; if the error names `run_limit_usd`, the tool costs more than a single run may cost, and a higher `max_cost_usd` does not help |
+| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd`; if the error names `run_limit_usd`, this input costs more than a single run may cost: a higher `max_cost_usd` does not help, so ask for less (for example, fewer results) |
 | `403 insufficient_funds` | top up your balance |
 | `403 tool_blocked` | the tool is not available through AI/ML API (see [Which tools are available](#which-tools-are-available)); search for an alternative |
 | `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative |
