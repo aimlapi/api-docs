@@ -66,7 +66,9 @@ curl https://tools.aimlapi.com/v1/tools/run \
 
 * **`200`**: the run is finished, and the result is in `output`.
 * **`202`**: the run is still working (`"status": "queued"`). Poll `GET /v1/tools/runs/{id}` after `next_poll_hint_ms` milliseconds until the status is `completed`, `failed`, `stopped` or `timed_out`.
-* A run that executed but failed returns `"is_error": true` with `error.message`. If `error.retryable` is `true`, it is worth trying again.
+* A run that executed but failed returns `"is_error": true` with `error.message`, and it is not charged. If `error.retryable` is `true`, it is worth trying again.
+* `wait_ms` is how long we wait before answering `202` for a tool that runs in the background. A quick tool answers when it finishes, which can take up to about 65 seconds whatever `wait_ms` says, so set your client timeout above that.
+* Retry with the same `idempotency_key` (see below); keys are scoped to your API key.
 
 ## Function calling in chat/completions
 
@@ -143,7 +145,7 @@ Results come back under `result` with `"untrusted": true`, so the agent treats t
 
 Only tools that keep no state between calls: a run leaves nothing at the provider that another customer could reach. Tools that create lasting resources (mailboxes and domains, phone numbers, saved browser logins, virtual machines, stored files), call or message people, look up or enrich data about people, collect data from social networks, or that our terms of use rule out are not offered. Search does not show them, and calling one by its id returns `403 tool_blocked`.
 
-Some tools are offered in a limited form, and the schema from `inspect` shows it: the browser agent runs without saved logins or the anti-bot stealth mode, for at most 30 steps and 240 seconds, and a cloud browser session lasts 5 minutes.
+Some tools are offered in a limited form, and the schema from `inspect` shows it: the browser agent runs without saved logins or the anti-bot stealth mode, with a limit of 30 steps, and you pay for the steps it actually takes (at most $0.624 a run). The provider ends a run on its own time budget, so a long task can take several minutes: use `wait_ms` and poll. A cloud browser session lasts 5 minutes.
 
 ## Pricing, limits and safety
 
