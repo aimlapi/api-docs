@@ -764,6 +764,8 @@
 * [3D-Generating Models](api-references/3d-generating-models/README.md)
   * [Magic](api-references/3d-generating-models/magic/README.md)
     * [magic/image-to-3d](api-references/3d-generating-models/magic/image-to-3d.md)
+  * [meshy](api-references/3d-generating-models/meshy/README.md)
+    * [Meshy 6 Image To 3D](api-references/3d-generating-models/meshy/meshy-6-image-to-3d.md)
   * [Stability AI](api-references/3d-generating-models/Stability-AI/README.md)
     * [Triposr](api-references/3d-generating-models/Stability-AI/triposr.md)
   * [Tencent](api-references/3d-generating-models/tencent/README.md)

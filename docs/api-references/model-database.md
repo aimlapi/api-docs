@@ -83,7 +83,7 @@ Can't find the model you need? Join our [Discord community](https://discord.gg/8
 
 ### 3D-Generating Models
 
-<table data-header-hidden="false" data-header-sticky data-full-width="true"><thead><tr><th width="265.4000244140625">Model ID + API Reference link</th><th width="134.39996337890625">Developer</th><th width="104">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="3d-generating-models/Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr><tr><td><a href="3d-generating-models/tencent/hunyuan-part.md">tencent/hunyuan-part</a></td><td>Tencent</td><td></td><td><a href="https://aimlapi.com/models/hunyuan-part">Hunyuan Part</a></td></tr></tbody></table>
+<table data-header-hidden="false" data-header-sticky data-full-width="true"><thead><tr><th width="265.4000244140625">Model ID + API Reference link</th><th width="134.39996337890625">Developer</th><th width="104">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="3d-generating-models/Stability-AI/triposr.md">triposr</a></td><td>Tripo AI</td><td></td><td><a href="https://aimlapi.com/models/stable-tripo-sr-api">Stable TripoSR 3D</a></td></tr><tr><td><a href="3d-generating-models/meshy/meshy-6-image-to-3d.md">meshy/meshy-6-image-to-3d</a></td><td>Meshy</td><td></td><td>-</td></tr><tr><td><a href="3d-generating-models/tencent/hunyuan-part.md">tencent/hunyuan-part</a></td><td>Tencent</td><td></td><td><a href="https://aimlapi.com/models/hunyuan-part">Hunyuan Part</a></td></tr></tbody></table>
 
 ### Embedding Models
 
