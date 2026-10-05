@@ -23,7 +23,8 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "meshy/meshy-6-image-to-3d"
+                      "meshy/meshy-6-image-to-3d",
+                      "meshy/v6/image-to-3d"
                     ]
                   },
                   "image_url": {
@@ -113,75 +114,403 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "data": {
+                    "model_glb": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "The generated mesh in GLB format — the main output.",
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "description": "Direct download URL.",
+                          "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                        },
+                        "content_type": {
+                          "type": "string",
+                          "example": "model/gltf-binary"
+                        },
+                        "file_name": {
+                          "type": "string",
+                          "example": "model.glb"
+                        },
+                        "file_size": {
+                          "type": "integer",
+                          "description": "Size in bytes.",
+                          "example": 4788316
+                        }
+                      }
+                    },
+                    "thumbnail": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "Rendered preview of the generated mesh.",
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "description": "Direct download URL.",
+                          "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                        },
+                        "content_type": {
+                          "type": "string",
+                          "example": "image/png"
+                        },
+                        "file_name": {
+                          "type": "string",
+                          "example": "preview.png"
+                        },
+                        "file_size": {
+                          "type": "integer",
+                          "description": "Size in bytes.",
+                          "example": 90966
+                        }
+                      }
+                    },
+                    "model_urls": {
+                      "type": "object",
+                      "description": "The same mesh in every format it was exported to. `blend` is null unless requested.",
+                      "properties": {
+                        "glb": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "GLB export.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "model/gltf-binary"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.glb"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 4788316
+                            }
+                          }
+                        },
+                        "fbx": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "FBX export.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "application/octet-stream"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.fbx"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 4512748
+                            }
+                          }
+                        },
+                        "obj": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "OBJ export.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "text/plain"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.obj"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 3328531
+                            }
+                          }
+                        },
+                        "usdz": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "USDZ export.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "model/vnd.usdz+zip"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.usdz"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 5195846
+                            }
+                          }
+                        },
+                        "blend": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "Blender export, when available.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "application/octet-stream"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.blend"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 0
+                            }
+                          }
+                        },
+                        "stl": {
+                          "type": "object",
+                          "nullable": true,
+                          "description": "STL export.",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "Direct download URL.",
+                              "example": "https://s3.aimlapi.com/files/file-01a10cc8-472f-75a4-bdd8-c97e46dcdd1f"
+                            },
+                            "content_type": {
+                              "type": "string",
+                              "example": "application/octet-stream"
+                            },
+                            "file_name": {
+                              "type": "string",
+                              "example": "model.stl"
+                            },
+                            "file_size": {
+                              "type": "integer",
+                              "description": "Size in bytes.",
+                              "example": 1529634
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "texture_urls": {
                       "type": "array",
                       "nullable": true,
+                      "description": "Texture maps for the mesh. `metallic`, `normal` and `roughness` are only filled when `enable_pbr` is true.",
                       "items": {
                         "type": "object",
                         "properties": {
-                          "url": {
-                            "type": "string",
+                          "base_color": {
+                            "type": "object",
                             "nullable": true,
-                            "description": "The URL where the file can be downloaded from.",
-                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                            "description": "Base colour map. Only base_color is produced unless `enable_pbr` is true.",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              },
+                              "content_type": {
+                                "type": "string",
+                                "example": "image/png"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "texture_0.png"
+                              },
+                              "file_size": {
+                                "type": "integer"
+                              }
+                            }
                           },
-                          "b64_json": {
-                            "type": "string",
+                          "metallic": {
+                            "type": "object",
                             "nullable": true,
-                            "description": "The base64-encoded JSON of the generated image.",
-                            "example": null
+                            "description": "Metallic map. Only base_color is produced unless `enable_pbr` is true.",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              },
+                              "content_type": {
+                                "type": "string",
+                                "example": "image/png"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "texture_0.png"
+                              },
+                              "file_size": {
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "normal": {
+                            "type": "object",
+                            "nullable": true,
+                            "description": "Normal map. Only base_color is produced unless `enable_pbr` is true.",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              },
+                              "content_type": {
+                                "type": "string",
+                                "example": "image/png"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "texture_0.png"
+                              },
+                              "file_size": {
+                                "type": "integer"
+                              }
+                            }
+                          },
+                          "roughness": {
+                            "type": "object",
+                            "nullable": true,
+                            "description": "Roughness map. Only base_color is produced unless `enable_pbr` is true.",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              },
+                              "content_type": {
+                                "type": "string",
+                                "example": "image/png"
+                              },
+                              "file_name": {
+                                "type": "string",
+                                "example": "texture_0.png"
+                              },
+                              "file_size": {
+                                "type": "integer"
+                              }
+                            }
                           }
                         }
-                      },
-                      "description": "The list of generated images."
+                      }
+                    },
+                    "seed": {
+                      "type": "integer",
+                      "description": "Seed used for this generation.",
+                      "example": 107751191
+                    },
+                    "animation_glb": {
+                      "nullable": true,
+                      "description": "Animated GLB, when an animation was requested. Null otherwise.",
+                      "example": null
+                    },
+                    "animation_fbx": {
+                      "nullable": true,
+                      "description": "Animated FBX, when an animation was requested. Null otherwise.",
+                      "example": null
+                    },
+                    "rigged_character_glb": {
+                      "nullable": true,
+                      "description": "Rigged character GLB, when rigging was requested. Null otherwise.",
+                      "example": null
+                    },
+                    "rigged_character_fbx": {
+                      "nullable": true,
+                      "description": "Rigged character FBX, when rigging was requested. Null otherwise.",
+                      "example": null
+                    },
+                    "basic_animations": {
+                      "nullable": true,
+                      "description": "Basic animation set, when requested. Null otherwise.",
+                      "example": null
+                    },
+                    "rig_task_id": {
+                      "nullable": true,
+                      "description": "Id of the rigging task, when one was created. Null otherwise.",
+                      "example": null
+                    },
+                    "requestId": {
+                      "type": "string",
+                      "example": "01a10cc3-589e-7993-b964-3fe08ef2b484"
                     },
                     "meta": {
                       "type": "object",
                       "nullable": true,
+                      "description": "Additional details about the generation.",
                       "properties": {
+                        "model": {
+                          "type": "string",
+                          "example": "meshy/v6/image-to-3d"
+                        },
+                        "provider": {
+                          "type": "string",
+                          "example": "falai"
+                        },
                         "usage": {
                           "type": "object",
-                          "nullable": true,
                           "properties": {
                             "credits_used": {
                               "type": "number",
-                              "description": "The number of tokens consumed during generation.",
-                              "example": 120000
+                              "example": 2080000
                             },
                             "usd_spent": {
                               "type": "number",
-                              "description": "The total amount of money spent by the user in USD.",
-                              "example": 0.06
+                              "example": 1.04
                             }
-                          },
-                          "required": [
-                            "credits_used",
-                            "usd_spent"
-                          ]
+                          }
+                        },
+                        "metrics": {
+                          "type": "object",
+                          "properties": {
+                            "duration_ms": {
+                              "type": "integer",
+                              "description": "Wall-clock time of the generation. Minutes, not seconds — set your client timeout accordingly.",
+                              "example": 323751
+                            }
+                          }
                         }
-                      },
-                      "description": "Additional details about the generation."
+                      }
                     }
                   }
                 }
               }
             },
-            "description": "Successful response."
+            "description": "The generated 3D model, with its textures and exports."
           }
         },
         "x-hideTryItPanel": true,
         "x-codeSamples": [
           {
             "lang": "cURL",
-            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"meshy/meshy-6-image-to-3d\", \"image_url\": \"https://example.com/input.jpg\"}'"
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --max-time 900 \\\n  --data '{\"model\": \"meshy/meshy-6-image-to-3d\", \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/.gitbook/assets/576px-Fly_Agaric_mushroom_05.jpg\"}'"
           },
           {
             "lang": "JavaScript",
-            "source": "const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"meshy/meshy-6-image-to-3d\",\n  \"image_url\": \"https://example.com/input.jpg\"\n}),\n});\n\nconsole.log(await response.json());"
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/images/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"meshy/meshy-6-image-to-3d\",\n  \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/.gitbook/assets/576px-Fly_Agaric_mushroom_05.jpg\"\n}),\n});\n\nconsole.log(await response.json());"
           },
           {
             "lang": "Python",
-            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'meshy/meshy-6-image-to-3d', 'image_url': 'https://example.com/input.jpg'},\n)\n\nprint(response.json())"
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={\n        \"model\": \"meshy/meshy-6-image-to-3d\",\n        \"image_url\": \"https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/.gitbook/assets/576px-Fly_Agaric_mushroom_05.jpg\"\n    },\n    timeout=900,  # generation takes minutes\n)\n\nprint(response.json())"
           }
         ]
       }
