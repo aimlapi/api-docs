@@ -1,1 +1,4 @@
 root: ./docs/
+
+redirects:
+  quickstart/our-tools: quickstart/toolbox.md

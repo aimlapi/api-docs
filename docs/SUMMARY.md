@@ -10,7 +10,7 @@
 * [CLI](quickstart/cli.md)
   * [Agent setup skill](skills/aimlapi-setup.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
-* [Toolbox](quickstart/our-tools.md)
+* [Toolbox](quickstart/toolbox.md)
 
 ## API REFERENCES
 
