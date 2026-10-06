@@ -493,6 +493,7 @@
     * [Nano Banana Pro Edit (Gemini 3 Pro Image Edit)](api-references/image-models/google/gemini-3-pro-image-preview-edit.md)
     * [Nano Banana 2 (Gemini 3.1 Flash Image)](api-references/image-models/google/gemini-3.1-flash-image.md)
     * [Nano Banana 2 Lite](api-references/image-models/Google/gemini-3.1-flash-lite-image.md)
+    * [Nano Banana 2.1](api-references/image-models/Google/nano-banana-2.1.md)
   * [Kling AI](api-references/image-models/kling-ai/README.md)
     * [Image o1](api-references/image-models/kling-ai/image-o1.md)
   * [Luma AI](api-references/image-models/Luma-AI/README.md)
