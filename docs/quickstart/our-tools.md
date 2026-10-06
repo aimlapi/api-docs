@@ -7,9 +7,9 @@ icon: toolbox
 hidden: true
 ---
 
-# Our Tools
+# Toolbox
 
-**Our Tools** are ready-made actions your AI can use: web search, reading a web page as Markdown, website screenshots, news and social media search, company and domain data, and hundreds more. You call them with the **same AI/ML API key** you use for models. There is no separate account to sign up for and no third-party key to manage, and usage is billed to your AI/ML API balance.
+**Toolbox** is a set of ready-made actions your LLM can use: web search, reading a web page as Markdown, website screenshots, news and social media search, company and domain data, and hundreds more. You call them with the **same AI/ML API key** you use for models. There is no separate account to sign up for and no third-party key to manage, and usage is billed to your AI/ML API balance.
 
 Use them when a model needs **fresh or external data**, or needs to **act**, beyond what it already knows. Typical cases: a research agent that searches and cites sources, a support bot that reads a customer's page, or an app that builds a report with a live screenshot.
 
@@ -23,6 +23,62 @@ Use them when a model needs **fresh or external data**, or needs to **act**, bey
 | A one-call agent on **/v1/responses** (OpenAI models) | our MCP server as a `{"type": "mcp"}` tool | the model |
 
 **Base URL:** `https://tools.aimlapi.com`. **Auth:** `Authorization: Bearer <YOUR_AIMLAPI_KEY>`.
+
+## Quickstart: MCP
+
+The fastest way in. One command, no API key to paste, and the whole Toolbox shows up in your agent.
+
+{% tabs %}
+{% tab title="Claude Code" %}
+```bash
+claude mcp add --transport http --scope user aimlapi https://mcp.aimlapi.com/mcp
+```
+
+Then, in a Claude Code session, run `/mcp`, pick **aimlapi** and choose **Authenticate** — a browser opens for you to sign in to AI/ML API.
+
+`--scope user` makes the server available in every project; drop it to add it to the current folder only. Do not pass `--header` — that switches the client to API-key auth instead of the browser sign-in.
+{% endtab %}
+
+{% tab title="Cursor" %}
+Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (project), with no `headers` block — leaving it out is what triggers the sign-in:
+
+```json
+{
+  "mcpServers": {
+    "aimlapi": {
+      "url": "https://mcp.aimlapi.com/mcp"
+    }
+  }
+}
+```
+
+Then open **Cursor Settings → Tools & Integrations**, find **aimlapi**, click **···→ Enable**, then **Login**.
+{% endtab %}
+
+{% tab title="Claude Desktop" %}
+**Settings → Connectors → Add custom connector**, name it `AIMLAPI` and point it at:
+
+```
+https://mcp.aimlapi.com/mcp
+```
+
+Click **Add**, then **Connect** on the new connector and sign in. Adding alone does not authenticate it — the tools stay inactive until you click **Connect**.
+{% endtab %}
+{% endtabs %}
+
+**What you get.** Four tools that hand the agent the whole catalog — it searches for what it needs, checks the price, and runs it:
+
+```
+tools_search → tools_inspect → tools_run → tools_run_status
+```
+
+Ask for something that needs live data and the agent works it out by itself:
+
+> _"Find three fresh news items about the Model Context Protocol and give me the links."_
+
+It calls `tools_search` to find a news tool, `tools_inspect` to see the input it takes, then `tools_run`. You pay only for the run; the other three calls are free. Results arrive marked `"untrusted": true`, so the agent treats them as data rather than instructions.
+
+The same connection also exposes the model tools — chat, images, embeddings, balance. See [MCP](mcp.md) for the full client list, OAuth details and troubleshooting.
 
 ## REST: search → inspect → run
 
@@ -126,9 +182,9 @@ Give the model our MCP server, and it will search, run tools and answer in a sin
 
 Send it to `POST https://api.aimlapi.com/v1/responses`. The `output` array shows each `mcp_call` and ends with the model's message.
 
-## In MCP clients
+## The four MCP tools
 
-Connect our MCP server as described in [MCP](mcp.md). Four tools give the agent the whole catalog:
+Set up in [Quickstart: MCP](#quickstart-mcp) above. These are the tools your agent gets:
 
 | MCP tool | What it does |
 | --- | --- |
