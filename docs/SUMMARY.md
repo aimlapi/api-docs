@@ -10,7 +10,7 @@
 * [CLI](quickstart/cli.md)
   * [Agent setup skill](skills/aimlapi-setup.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
-* [Our Tools](quickstart/our-tools.md)
+* [Toolbox](quickstart/toolbox.md)
 
 ## API REFERENCES
 
@@ -430,7 +430,7 @@
     * [Glm 5.3 Flash](api-references/text-models-llm/zhipu/glm-5.3-flash.md)
   * [Zhipu AI](api-references/text-models-llm/zhipu-ai.md)
   * [Zhipu AI](api-references/text-models-llm/Zhipu-AI/README.md)
-    * [Glm 5.3 Flashx](api-references/text-models-llm/Zhipu-AI/glm-5.3-flashx.md)
+    * [GLM 5.3 FlashX](api-references/text-models-llm/Zhipu-AI/glm-5.3-flashx.md)
 * [Image Models](api-references/image-models/README.md)
   * [Alibaba Cloud](api-references/image-models/alibaba-cloud/README.md)
     * [Qwen Image](api-references/image-models/alibaba-cloud/qwen-image.md)
@@ -764,6 +764,8 @@
 * [3D-Generating Models](api-references/3d-generating-models/README.md)
   * [Magic](api-references/3d-generating-models/magic/README.md)
     * [magic/image-to-3d](api-references/3d-generating-models/magic/image-to-3d.md)
+  * [Meshy](api-references/3d-generating-models/meshy/README.md)
+    * [Meshy 6 Image to 3D](api-references/3d-generating-models/meshy/meshy-6-image-to-3d.md)
   * [Stability AI](api-references/3d-generating-models/Stability-AI/README.md)
     * [Triposr](api-references/3d-generating-models/Stability-AI/triposr.md)
   * [Tencent](api-references/3d-generating-models/tencent/README.md)
