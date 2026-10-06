@@ -254,6 +254,7 @@
     * [Mixtral 8X22B Instruct](api-references/text-models-llm/Mistral-AI/mixtral-8x22b-instruct.md)
     * [Voxtral Small 24B 2507](api-references/text-models-llm/Mistral-AI/voxtral-small-24b-2507.md)
     * [Ministral 8B](api-references/text-models-llm/Mistral-AI/ministral-8b.md)
+    * [Large 4 4.0](api-references/text-models-llm/Mistral-AI/mistral-large-4-0.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
