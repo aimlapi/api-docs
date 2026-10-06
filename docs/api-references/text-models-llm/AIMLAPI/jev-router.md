@@ -16,9 +16,25 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Routes each chat request to a model picked for it. TypeSafe Jev judges how hard the request is, and the request goes to the cheapest model of the matching tier that can take it — light: GPT-6 Luna, DeepSeek V4.1 Flash, Gemini Flash-Lite; standard: GPT-6.1 Sol, Claude Sonnet 5.5; heavy: Claude Opus 5.5, GPT-6 Astra — falling back to a pricier one of the same tier if it fails. Light models do not reason unless you ask (`reasoning_effort`); standard and heavy ones may think before they answer. You pay the rate of the model that answers, named in `meta.model` (and the `x-aimlapi-model` header when not streaming), plus the judgement: one `typesafe/jev` decision at its catalogue price, listed as its own request in your usage (a turn that returns tool results goes back to the model that made the calls and needs none).
+Routes each chat request to a model picked for it. TypeSafe Jev judges how hard the request is, and the request goes to the cheapest model of the matching tier that can take it — light: GPT-6 Luna, DeepSeek V4.1 Flash, Gemini 3.1 Flash-Lite, Gemini 3.5 Flash-Lite; standard: GPT-6.1 Sol, Claude Sonnet 5.5; heavy: Claude Opus 5.5, GPT-6 Astra — falling back to a pricier one of the same tier if it fails. Light models do not reason unless you ask (`reasoning_effort`); standard and heavy ones may think before they answer. You pay the rate of the model that answers, named in `meta.model` (and the `x-aimlapi-model` header when not streaming), plus the judgement: one `typesafe/jev` decision at its catalogue price, listed as its own request in your usage (a turn that returns tool results goes back to the model that made the calls and needs none).
 
 Context window is 1,050,000 tokens, with up to 384,000 tokens of output. The router accepts text, images, files and audio, and supports tools, parallel tool calls, streaming and structured output — the request shape is the same as any other chat model here.
+
+## Which models it routes to
+
+Eight models, in three tiers. Within a tier they are comparable in quality and listed **cheapest first**: a request lands on the cheapest one that can take it, and falls back **up** in price, never down.
+
+| Tier | Models, cheapest first |
+| --- | --- |
+| **light** | `openai/gpt-6-luna` · `deepseek/deepseek-v4.1-flash` · `google/gemini-3-1-flash-lite` · `google/gemini-3-5-flash-lite` |
+| **standard** | `openai/gpt-6.1-sol` · `anthropic/claude-sonnet-5.5` |
+| **heavy** | `anthropic/claude-opus-5.5` · `openai/gpt-6-astra` |
+
+TypeSafe Jev scores how much capability the request needs, on a scale from *trivial* to *frontier*. Below 1.5 the request goes to the light tier, below 2.5 to standard, otherwise to heavy; if the judgement does not come back, it defaults to **standard**. A candidate that cannot take the request — tools, images, a JSON schema, the context size — is skipped for the next one in its tier, and each request carries **one** fallback: the model chosen and the next eligible one.
+
+Within a conversation the choice sticks for 30 minutes, so a follow-up does not get re-judged or jump models mid-thread.
+
+The reasoning rule follows the tier. Light models are sent with their thinking off, so a small `max_tokens` is an answer rather than an empty, paid-for reasoning trace; standard and heavy ones may think before they answer. Either way, if **you** set `reasoning_effort`, `reasoning` or `thinking`, the router passes your value through untouched.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
