@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `nvidia/nemotron-3.5-content-safety-small`
+* `nvidia/nemotron-3.5-content-safety`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/nvidia/nemotron-3.5-content-safety-small" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/nvidia/nemotron-3.5-content-safety" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'nvidia/nemotron-3.5-content-safety-small', 'messages': ['<message>']},
+    json={'model': 'nvidia/nemotron-3.5-content-safety', 'messages': ['<message>']},
 )
 
 print(response.json())

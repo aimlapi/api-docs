@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `klingai/v2-master-image-to-video`
+* `klingai/v2-master-text-to-video`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/klingai/v2-master-image-to-video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/klingai/v2-master-text-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 

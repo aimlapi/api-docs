@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `veed/fabric-1.0-fast`
+* `veed/fabric-1.0/fast`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/veed/fabric-1-0-fast" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/veed/fabric-1.0/fast" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -81,7 +81,7 @@ def generate_video():
     }
 
     data = {
-        "model": "veed/fabric-1.0-fast",
+        "model": "veed/fabric-1.0/fast",
         "image_url": "https://v3.fal.media/files/koala/NLVPfOI4XL1cWT2PmmqT3_Hope.png",
         "audio_url": "https://v3.fal.media/files/elephant/Oz_g4AwQvXtXpUHL3Pa7u_Hope.mp3",
         "resolution": "720p"
@@ -161,7 +161,7 @@ const { URL } = require("url");
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
     const data = JSON.stringify({
-        model: 'veed/fabric-1.0-fast',
+        model: 'veed/fabric-1.0/fast',
         image_url: 'https://v3.fal.media/files/koala/NLVPfOI4XL1cWT2PmmqT3_Hope.png',
         audio_url: 'https://v3.fal.media/files/elephant/Oz_g4AwQvXtXpUHL3Pa7u_Hope.mp3',
         resolution: '720p'
@@ -284,7 +284,7 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-{'id': 'd7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0-fast', 'status': 'queued', 'meta': {'usage': {'tokens_used': 3150000}}}
+{'id': 'd7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0/fast', 'status': 'queued', 'meta': {'usage': {'tokens_used': 3150000}}}
 Generation ID:   1fe4344e-3d44-4bf8-9f04-0ac4bb312eec:pixverse/v5/text-to-video
 Status: generating
 Still waiting... Checking again in 10 seconds.
@@ -301,7 +301,7 @@ Still waiting... Checking again in 10 seconds.
 Status: generating
 Still waiting... Checking again in 10 seconds.
 Status: completed
-Processing complete:\n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0-fast","status":"completed","video":{"url":"https://v3b.fal.media/files/b/monkey/P9C2_0yfMZxn68-HPgKNX_tmp5g5n20s9.mp4"}}
+Processing complete:\n {"id":"d7c67219-2cd8-4bed-9c3c-960c17eb4c2d:veed/fabric-1.0/fast","status":"completed","video":{"url":"https://v3b.fal.media/files/b/monkey/P9C2_0yfMZxn68-HPgKNX_tmp5g5n20s9.mp4"}}
 ```
 {% endcode %}
 

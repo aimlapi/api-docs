@@ -9,7 +9,8 @@ noIndex: true
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `moonshotai/kimi-k3-thinking`
+* `moonshot/kimi-k3`
+* `moonshotai/kimi-k3`
 {% endhint %}
 {% endcolumn %}
 
@@ -59,7 +60,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"moonshotai/kimi-k3",
+        "model":"moonshot/kimi-k3",
         "messages":[
             {
                 "role":"user",
@@ -87,7 +88,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'moonshotai/kimi-k3-thinking',
+      model: 'moonshot/kimi-k3',
       messages:[
           {
               role:'user',
@@ -117,7 +118,7 @@ main();
   "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
   "created": 1777366507,
-  "model": "moonshotai/kimi-k3",
+  "model": "moonshot/kimi-k3",
   "system_fingerprint": null,
   "choices": [
     {

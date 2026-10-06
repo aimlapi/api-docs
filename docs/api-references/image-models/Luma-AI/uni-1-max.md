@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `luma/uni-1-max-max`
+* `luma/uni-1-max`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/luma/uni-1-max-max" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/luma/uni-1-max" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'luma/uni-1-max-max', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg'},
+    json={'model': 'luma/uni-1-max', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg'},
 )
 
 print(response.json())

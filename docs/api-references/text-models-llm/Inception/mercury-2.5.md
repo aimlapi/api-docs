@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `inception/mercury-2.5.5`
+* `inception/mercury-2.5`
 {% endhint %}
 {% endcolumn %}
 
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'inception/mercury-2.5.5',
+      model: 'inception/mercury-2.5',
       messages:[
           {
               role:'user',
