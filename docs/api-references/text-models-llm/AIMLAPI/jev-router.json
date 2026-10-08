@@ -30,7 +30,7 @@
                       },
                       "provider": {
                         "type": "string",
-                        "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                        "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                         "example": "auto"
                       },
                       "messages": {
@@ -1150,7 +1150,7 @@
                       },
                       "provider": {
                         "type": "string",
-                        "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                        "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                         "example": "auto"
                       },
                       "messages": {
@@ -2166,7 +2166,7 @@
                       },
                       "provider": {
                         "type": "string",
-                        "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                        "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                         "example": "auto"
                       },
                       "messages": {
@@ -3477,7 +3477,7 @@
                       },
                       "provider": {
                         "type": "string",
-                        "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                        "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                         "example": "auto"
                       },
                       "messages": {
@@ -14788,7 +14788,7 @@
                       },
                       "provider": {
                         "type": "string",
-                        "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                        "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                         "example": "auto"
                       },
                       "messages": {

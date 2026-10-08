@@ -28,7 +28,7 @@
                   },
                   "provider": {
                     "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `openrouter`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to pin that one provider and use it alone; `auto` (default) walks the whole chain. Case-insensitive.",
                     "example": "auto"
                   },
                   "messages": {
@@ -1187,7 +1187,7 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "OpenRouter provider slugs to try first, in this order, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Sub-provider slugs the fallback provider should try first, in this order, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that sub-provider."
                       },
                       "only": {
                         "type": "array",
@@ -1198,7 +1198,7 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "OpenRouter provider slugs to allow — every other OpenRouter upstream is excluded, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Sub-provider slugs to allow — every other upstream of the fallback provider is excluded, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that sub-provider."
                       },
                       "ignore": {
                         "type": "array",
@@ -1209,11 +1209,11 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "OpenRouter provider slugs to skip, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Sub-provider slugs the fallback provider should skip, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that sub-provider."
                       },
                       "allow_fallbacks": {
                         "type": "boolean",
-                        "description": "Whether OpenRouter may fall back to an upstream outside `order`/`only` when the preferred ones are unavailable. Default true; set false to fail instead."
+                        "description": "Whether the fallback provider may use an upstream outside `order`/`only` when the preferred ones are unavailable. Default true; set false to fail instead."
                       },
                       "require_parameters": {
                         "type": "boolean",
@@ -1248,7 +1248,7 @@
                           "throughput",
                           "latency"
                         ],
-                        "description": "Upstream ordering when `order` is not set. OpenRouter defaults to a price/uptime blend."
+                        "description": "Upstream ordering when `order` is not set. The fallback provider defaults to a price/uptime blend."
                       },
                       "data_collection": {
                         "type": "string",
@@ -1264,7 +1264,7 @@
                       }
                     },
                     "additionalProperties": false,
-                    "description": "OpenRouter sub-provider routing. Applies only when the request is served through OpenRouter (pin `provider: \"openrouter\"` to be sure); every other provider refuses it rather than ignore it. Forwarded to OpenRouter as its `provider` object."
+                    "description": "Sub-provider routing for the fallback provider. Applies only when the request is served through it (pin `provider: \"fallback\"` to be sure); every other provider refuses it rather than ignore it. Forwarded upstream as its `provider` object."
                   }
                 },
                 "required": [
