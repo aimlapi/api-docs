@@ -23,7 +23,7 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "veed/fabric-1.0"
+                      "veed/fabric-1.0/fast"
                     ]
                   },
                   "image_url": {
@@ -51,7 +51,7 @@
                   "image_url",
                   "audio_url"
                 ],
-                "title": "veed/fabric-1.0"
+                "title": "veed/fabric-1.0/fast"
               }
             }
           }
