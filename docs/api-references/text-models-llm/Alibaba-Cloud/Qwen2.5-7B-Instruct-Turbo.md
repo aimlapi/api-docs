@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Qwen2.5 7B Instruct Turbo
 
 {% columns %}
