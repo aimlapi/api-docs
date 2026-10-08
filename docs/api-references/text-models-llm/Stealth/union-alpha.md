@@ -21,7 +21,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Union Alpha is a multimodal model built for research, coding and agentic workflows, delivering frontier-level performance across general-purpose tasks. It accepts text and image input over a 262K-token context and is served anonymously from the OpenRouter stealth slot, free while cloaked.
+Union Alpha is a multimodal model built for research, coding and agentic workflows, delivering frontier-level performance across general-purpose tasks. It accepts text and image input over a 262K-token context and is served anonymously from the fallback provider's stealth slot, free while cloaked.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

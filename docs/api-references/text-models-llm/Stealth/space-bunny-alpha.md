@@ -26,7 +26,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Space Bunny Alpha is an anonymous large model with fast inference, strong coding capabilities and native multimodal input. It always reasons, with adjustable reasoning effort, over a 1M-token context, and is served anonymously from the OpenRouter stealth slot, free while cloaked.
+Space Bunny Alpha is an anonymous large model with fast inference, strong coding capabilities and native multimodal input. It always reasons, with adjustable reasoning effort, over a 1M-token context, and is served anonymously from the fallback provider's stealth slot, free while cloaked.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

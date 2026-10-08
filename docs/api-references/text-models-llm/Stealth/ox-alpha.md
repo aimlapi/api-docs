@@ -21,7 +21,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Ox Alpha is a reasoning model built for coding, sustained agentic work and production workloads. It targets long-horizon software engineering and complex reasoning, accepts text, image and video input over a 1M-token context, and is served anonymously from the OpenRouter stealth slot.
+Ox Alpha is a reasoning model built for coding, sustained agentic work and production workloads. It targets long-horizon software engineering and complex reasoning, accepts text, image and video input over a 1M-token context, and is served anonymously from the fallback provider's stealth slot.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
