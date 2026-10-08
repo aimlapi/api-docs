@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Kling 1.0 Standard Text to Video
 
 {% columns %}
