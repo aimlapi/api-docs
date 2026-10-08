@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Gen4 Aleph
 
 {% columns %}
