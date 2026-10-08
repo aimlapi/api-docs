@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Kimi K2 0711
 
 {% columns %}
