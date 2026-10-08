@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `unbiased/pareto-26.10-preview-26.10-preview`
+* `unbiased/pareto-26.10-preview`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/unbiased/pareto-26.10-preview-26.10-preview" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/unbiased/pareto-26.10-preview" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -101,7 +101,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'unbiased/pareto-26.10-preview-26.10-preview',
+      model: 'unbiased/pareto-26.10-preview',
       messages:[
           {
               role:'user',

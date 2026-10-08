@@ -10,7 +10,7 @@ noIndex: true
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `aion-labs/aion-3.5-mini`
+* `aion-labs/aion-3.5`
 {% endhint %}
 {% endcolumn %}
 
@@ -88,7 +88,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'aion-labs/aion-3.5-mini',
+      model: 'aion-labs/aion-3.5',
       messages:[
           {
               role:'user',

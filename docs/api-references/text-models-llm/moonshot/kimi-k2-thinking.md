@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `moonshotai/kimi-k2-thinking-thinking`
+* `moonshotai/kimi-k2-thinking`
 {% endhint %}
 {% endcolumn %}
 
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'moonshotai/kimi-k2-thinking-thinking',
+      model: 'moonshotai/kimi-k2-thinking',
       messages:[
           {
               role:'user',

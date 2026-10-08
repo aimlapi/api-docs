@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `xiaomi/mimo-v2.6-pro-ultraspeed-ultraspeed`
+* `xiaomi/mimo-v2.6-pro-ultraspeed`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/xiaomi/mimo-v2.6-pro-ultraspeed-ultraspeed" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/xiaomi/mimo-v2.6-pro-ultraspeed" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'xiaomi/mimo-v2.6-pro-ultraspeed-ultraspeed', 'messages': ['<message>']},
+    json={'model': 'xiaomi/mimo-v2.6-pro-ultraspeed', 'messages': ['<message>']},
 )
 
 print(response.json())

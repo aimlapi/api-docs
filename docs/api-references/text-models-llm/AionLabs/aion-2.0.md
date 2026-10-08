@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `aion-labs/aion-2.0-mini`
+* `aion-labs/aion-2.0`
 {% endhint %}
 {% endcolumn %}
 
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'aion-labs/aion-2.0-mini',
+      model: 'aion-labs/aion-2.0',
       messages:[
           {
               role:'user',

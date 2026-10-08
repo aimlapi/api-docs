@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `aion-labs/aion-rp-llama-3.1-8b-mini`
+* `aion-labs/aion-rp-llama-3.1-8b`
 {% endhint %}
 {% endcolumn %}
 
@@ -83,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'aion-labs/aion-rp-llama-3.1-8b-mini',
+      model: 'aion-labs/aion-rp-llama-3.1-8b',
       messages:[
           {
               role:'user',

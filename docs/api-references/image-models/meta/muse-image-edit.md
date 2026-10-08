@@ -5,12 +5,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `meta/muse-image-edit-edit`
+* `meta/muse-image-edit`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/meta/muse-image-edit-edit" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/meta/muse-image-edit" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'meta/muse-image-edit-edit', 'prompt': 'Describe what you want the model to generate.'},
+    json={'model': 'meta/muse-image-edit', 'prompt': 'Describe what you want the model to generate.'},
 )
 
 print(response.json())
