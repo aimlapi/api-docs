@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Nova Premier 1.0
 
 {% columns %}
