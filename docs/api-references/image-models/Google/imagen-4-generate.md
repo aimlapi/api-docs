@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Imagen 4.0 Generate
 
 {% columns %}
