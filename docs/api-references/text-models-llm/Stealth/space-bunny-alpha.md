@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Space Bunny Alpha
 hidden: true
 noIndex: true
