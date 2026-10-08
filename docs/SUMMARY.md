@@ -365,6 +365,7 @@
     * [Space Bunny Alpha](api-references/text-models-llm/Stealth/space-bunny-alpha.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
+    * [Step 5 Preview](api-references/text-models-llm/StepFun/step-5-preview.md)
   * [switchpoint](api-references/text-models-llm/switchpoint/README.md)
     * [Switchpoint Router](api-references/text-models-llm/switchpoint/router.md)
   * [Tencent](api-references/text-models-llm/tencent/README.md)
