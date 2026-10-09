@@ -31,14 +31,9 @@
                     "format": "uri",
                     "description": "A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation."
                   },
-                  "audio_url": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "A direct link to an online audio file or a Base64-encoded local to an audio file used for lip-syncing in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."
-                  },
                   "lip_sync_tts_content": {
                     "type": "string",
-                    "description": "The text content to be lip-synced in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."
+                    "description": "The text content to be lip-synced in the video. Required together with lip_sync_tts_speaker."
                   },
                   "lip_sync_tts_speaker": {
                     "type": "string",
@@ -59,7 +54,7 @@
                       "Ethan",
                       "Auto"
                     ],
-                    "description": "A predefined system voice used for generating speech in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."
+                    "description": "A predefined system voice used for generating speech in the video. Required together with lip_sync_tts_content."
                   }
                 },
                 "required": [
