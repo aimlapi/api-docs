@@ -16,11 +16,11 @@ This documentation is valid for the following list of our models:
 
 This model generates videos with synchronized audio. For lip-sync input, you may either supply text with a predefined voice, or pass a URL to an external audio file containing speech.
 
-### Setup your API Key
+## Setup your API Key
 
 If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-### How to Make a Call
+## How to Make a Call
 
 <details>
 
@@ -35,34 +35,26 @@ Below, you can find both corresponding API schemas.
 
 </details>
 
-### API Schemas
+## API Schemas
 
-#### Create a video generation task and send it to the server
+### Create a video generation task and send it to the server
 
 You can generate a video using this API. In the basic setup, you only need a reference video and a prompt. This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
-### POST /v2/video/generations
+{% openapi-operation spec="lip-sync" path="/v2/video/generations" method="post" %}
+[OpenAPI lip-sync](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/lip-sync.json)
+{% endopenapi-operation %}
 
->
-
-```json
-{"openapi":"3.0.0","info":{"title":"AIML API","version":"1.0.0"},"servers":[{"url":"https://api.aimlapi.com"}],"paths":{"/v2/video/generations":{"post":{"operationId":"_v2_video_generations","requestBody":{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"model":{"type":"string","enum":["pixverse/lip-sync"]},"video_url":{"type":"string","format":"uri","description":"A HTTPS URL pointing to a video or a data URI containing a video. This video will be used as a reference during generation."},"audio_url":{"type":"string","format":"uri","description":"A direct link to an online audio file or a Base64-encoded local to an audio file used for lip-syncing in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."},"lip_sync_tts_content":{"type":"string","description":"The text content to be lip-synced in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."},"lip_sync_tts_speaker":{"type":"string","enum":["Harper","Ava","Isabella","Sophia","Emily","Chloe","Julia","Mason","Jack","Liam","James","Oliver","Adrian","Ethan","Auto"],"description":"A predefined system voice used for generating speech in the video. Use either audio_url or (lip_sync_tts_speaker together with lip_sync_tts_content), but not both."}},"required":["model","video_url"],"title":"pixverse/lip-sync"}}}},"responses":{"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"The ID of the generated video."},"status":{"type":"string","enum":["queued","generating","completed","error"],"description":"The current status of the generation task."},"video":{"type":"object","nullable":true,"properties":{"url":{"type":"string","format":"uri","description":"The URL where the file can be downloaded from."}},"required":["url"]},"error":{"type":"object","nullable":true,"properties":{"name":{"type":"string"},"message":{"type":"string"}},"required":["name","message"],"description":"Description of the error, if any."},"meta":{"type":"object","nullable":true,"properties":{"usage":{"type":"object","nullable":true,"properties":{"credits_used":{"type":"number","description":"The number of tokens consumed during generation."}},"required":["credits_used"]}},"description":"Additional details about the generation."}},"required":["id","status"]}}}}}}}}}
-```
-
-#### Retrieve the generated video from the server
+### Retrieve the generated video from the server
 
 After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `id`, obtained from the endpoint described above.\
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
-### GET /v2/video/generations
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
+{% endopenapi-operation %}
 
->
-
-```json
-{"openapi":"3.0.0","info":{"title":"AIML API","version":"1.0.0"},"servers":[{"url":"https://api.aimlapi.com"}],"security":[{"access-token":[]}],"components":{"securitySchemes":{"access-token":{"scheme":"bearer","bearerFormat":"<YOUR_AIMLAPI_KEY>","type":"http","description":"Bearer key","in":"header"}}},"paths":{"/v2/video/generations":{"get":{"operationId":"_v2_video_generations","parameters":[{"name":"generation_id","required":true,"in":"query","schema":{"type":"string"}}],"responses":{"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"The ID of the generated video."},"status":{"type":"string","enum":["queued","generating","completed","error"],"description":"The current status of the generation task."},"video":{"type":"object","nullable":true,"properties":{"url":{"type":"string","format":"uri","description":"The URL where the file can be downloaded from."}},"required":["url"]},"error":{"type":"object","nullable":true,"properties":{"name":{"type":"string"},"message":{"type":"string"}},"required":["name","message"],"description":"Description of the error, if any."},"meta":{"type":"object","nullable":true,"properties":{"usage":{"type":"object","nullable":true,"properties":{"credits_used":{"type":"number","description":"The number of tokens consumed during generation."}},"required":["credits_used"]}},"description":"Additional details about the generation."}},"required":["id","status"]}}}}}}}}}
-```
-
-### Full Example: Generating and Retrieving the Video From the Server
+## Full Example: Generating and Retrieving the Video From the Server
 
 The code below creates a video generation task, then automatically polls the server every **15** seconds until it finally receives the video URL.
 
