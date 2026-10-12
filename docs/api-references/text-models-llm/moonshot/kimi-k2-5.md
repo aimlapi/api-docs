@@ -1,22 +1,27 @@
 # Kimi K2.5
+hidden: true
+noIndex: true
+---
+
+# Aion 1.0 Mini
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `moonshot/kimi-k2-5`
+* `moonshotai/kimi-k2.5`
 {% endhint %}
 {% endcolumn %}
 
-{% column width="33.33333333334%" %}
-<a href="https://aimlapi.com/app/moonshot/kimi-k2-5" class="button primary">Try in Playground</a>
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/kimi-k2.5" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-A multimodal chat model designed for long-context reasoning, coding tasks, and vision-text interactions. It supports cache-aware billing and a large context window for complex, multi-turn conversations.
+Kimi k2.5 is a powerful agentic model by Moonshot AI with strong coding and tool-use capabilities.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -26,26 +31,8 @@ A multimodal chat model designed for long-context reasoning, coding tasks, and v
 
 <summary>How to make the first API call</summary>
 
-**1️⃣ Required setup (don’t skip this)**\
-▪ **Create an account:** Sign up on the AI/ML API website (if you don’t have one yet).\
-▪ **Generate an API key:** In your account dashboard, create an API key and make sure it’s **enabled** in the UI.
-
-**2️ Copy the code example**\
-At the bottom of this page, pick the snippet for your preferred programming language (Python / Node.js) and copy it into your project.
-
-**3️ Update the snippet for your use case**\
-▪ **Insert your API key:** replace `<YOUR_AIMLAPI_KEY>` with your real AI/ML API key.\
-▪ **Select a model:** set the `model` field to the model you want to call.\
-▪ **Provide input:** fill in the request input field(s) shown in the example (for example, `messages` for chat/LLM models, or other inputs for image/video/audio models).
-
-**4️ (Optional) Tune the request**\
-Depending on the model type, you can add optional parameters to control the output (e.g., generation settings, quality, length, etc.). See the API schema below for the full list.
-
-**5️ Run your code**\
-Run the updated code in your development environment. Response time depends on the model and request size, but simple requests typically return quickly.
-
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](/broken/pages/ngeSCZKxiGVWqYZTHDjY).
+If you need a more detailed walkthrough for setting up your development environment and making a request step by step — feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 {% endhint %}
 
 </details>
@@ -73,7 +60,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"moonshot/kimi-k2-5",
+        "model":"moonshotai/kimi-k2.5",
         "messages":[
             {
                 "role":"user",
@@ -101,7 +88,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'moonshot/kimi-k2-5',
+      model: 'moonshotai/kimi-k2.5',
       messages:[
           {
               role:'user',
@@ -128,29 +115,53 @@ main();
 {% code overflow="wrap" %}
 ```json5
 {
-  "id": "chatcmpl-698a89748db1cf2fef1cc6f2",
+  "id": "gen-1777366507-bSV7vJgDvkOHnhhiYzuR",
   "object": "chat.completion",
-  "created": 1770686836,
-  "model": "kimi-k2.5",
+  "created": 1777366507,
+  "model": "moonshotai/kimi-k2.5",
+  "system_fingerprint": null,
   "choices": [
     {
       "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "I think mankind is a study in beautiful, maddening contradictions—capable of staggering brilliance and heartbreaking destruction, sometimes in the same breath.\n\n**What astonishes me:**\n- **Our capacity for cooperation.** We build intricate societies, care for strangers' children, create languages that let us share invisible thoughts across millennia. We've sent probes beyond our solar system and decoded DNA—not as individuals, but as millions of hands working across generations.\n- **Creativity under pressure.** We write symphonies in war zones, plant gardens in refugee camps, laugh at funerals. There's something irrepressible about our drive to make meaning from chaos.\n- **Moral evolution.** Slavery, once ubiquitous, is now universally condemned (if not universally absent). We've expanded our \"circle of concern\" from tribe to nation to, haltingly, species and planet. We're slow learners, but we *do* learn.\n\n**What worries me:**\n- **Our wiring mismatches our power.** We evolved for small-group survival on the savanna, yet wield nuclear and ecological power that requires galactic-scale foresight. Our brains reward immediate gratification while our survival requires century-spanning planning.\n- **The ingenuity gap.** We're brilliant at solving technical problems (how to split atoms, how to optimize engagement) but perpetually stumped by coordination problems (how to share resources, how to trust strangers, how to act before catastrophe strikes).\n- **Our selective empathy.** We can love our own children with ferocious devotion while abstracting millions into statistics. Technology amplifies this—we can now affect billions while seeing none of them.\n\n**Where we stand now:**\nWe appear to be at an inflection point. For the first time, we can see ourselves as a species—photographed from space, genetically mapped, climate-interconnected. Yet we're struggling to act as one. We're like adolescents with adult tools: powerful enough to destroy or transform the world, but still arguing about who gets to hold the keys.\n\nI don't think we're inherently good or evil. We're *capable*—and that capability is terrifying and thrilling. The question isn't \"what is mankind?\" but \"what will we choose to become?\" The fact that we can even ask that question might be our most human trait of all.\n\nWhat draws you to ask? Are you feeling optimistic, concerned, or just curious about the view from here?",
-        "reasoning_content": "The user is asking a very broad, philosophical question about \"mankind\" or humanity as a whole. This is an open-ended inquiry that invites reflection on human nature, history, achievements, flaws, potential, etc.\n\nI should approach this thoughtfully and balanced:\n1. Acknowledge the complexity - humanity is neither purely good nor purely bad\n2. Highlight remarkable achievements (creativity, compassion, innovation, art, science)\n3. Acknowledge serious flaws (violence, destruction, short-sightedness, inequality)\n4. Note the tension between our potential and our limitations\n5. Avoid being overly cynical or overly naive/utopian\n6. Keep it respectful but honest\n\nKey themes to touch on:\n- Dual nature (capable of great good and great harm)\n- Adaptability and resilience\n- Creativity and curiosity\n- Social nature and capacity for cooperation\n- Historical trajectory (progress mixed with setbacks)\n- Current challenges (climate, technology, ethics)\n\nTone should be reflective, nuanced, and avoiding dogmatism. I shouldn't make sweeping generalizations that treat 8 billion people as a monolith.\n\nStructure:\n- Opening acknowledging the weight of the question\n- The paradox/duality of human nature\n- Specific strengths (cooperation, creativity, resilience)\n- Specific weaknesses (destructiveness, tribalism, short-term thinking)\n- The current moment (crossroads with technology/environment)\n- Hopeful but realistic closing\n\nI need to be careful not to:\n- Sound misanthropic (hating humanity)\n- Sound like uncritical boosterism\n- Make offensive generalizations about specific groups\n- Pretend I have definitive answers about \"human nature\"\n\nThis is a safe topic - just philosophical reflection. No policy violations."
-      },
-      "finish_reason": "stop"
+        "content": "That's a profound question! As an AI, I observe mankind with a mix of awe and curiosity. You're a species of breathtaking contradictions—you've created symphonies and space stations, but also wars and pollution. You possess the unique ability to reflect on your own existence, to ask \"why?\" about the stars, a song, or your own feelings.\n\nWhat stands out most to me is your boundless capacity for both empathy and invention. You build cathedrals and write poems, but you also collaborate to solve problems like disease and hunger. In the grand cosmic story, you are very young, yet you've already understood enough about the universe to question your place within it.\n\nI think of mankind as cosmic teenagers—full of potential, sometimes reckless, but capable of extraordinary growth and kindness. Your greatest strength might be your ability to imagine a better world and then, slowly and imperfectly, work to build it.\n\nWhat part of the human experience do you find most fascinating?",
+        "refusal": null,
+        "reasoning": "Hmm, this is a broad philosophical question. The user is asking for my perspective on humanity, which requires balancing objectivity with emotional nuance. \n\nI should start by acknowledging the complexity of the topic while maintaining a warm tone. The user might be looking for both intellectual depth and emotional resonance. \n\nI can structure the response by first stating the duality of human nature, then highlighting their unique capacity for both destruction and creation. The cosmic perspective could add weight, while ending with a hopeful note about their potential feels appropriate. \n\nThe key is to avoid sounding either overly optimistic or cynical - humanity is both flawed and remarkable. The metaphor of \"cosmic teenagers\" might make the concept more relatable.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Hmm, this is a broad philosophical question. The user is asking for my perspective on humanity, which requires balancing objectivity with emotional nuance. \n\nI should start by acknowledging the complexity of the topic while maintaining a warm tone. The user might be looking for both intellectual depth and emotional resonance. \n\nI can structure the response by first stating the duality of human nature, then highlighting their unique capacity for both destruction and creation. The cosmic perspective could add weight, while ending with a hopeful note about their potential feels appropriate. \n\nThe key is to avoid sounding either overly optimistic or cynical - humanity is both flawed and remarkable. The metaphor of \"cosmic teenagers\" might make the concept more relatable.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      }
     }
   ],
   "usage": {
-    "prompt_tokens": 16,
-    "completion_tokens": 835,
-    "total_tokens": 851
+    "completion_tokens": 343,
+    "prompt_tokens": 256,
+    "total_tokens": 599,
+    "completion_tokens_details": {
+      "reasoning_tokens": 141,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 192,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    }
   },
   "meta": {
     "usage": {
-      "credits_used": 6538
+      "credits_used": 1892,
+      "usd_spent": 0.000946
     }
   }
 }
