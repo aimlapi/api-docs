@@ -361,6 +361,8 @@
     * [Sakana Namazu](api-references/text-models-llm/Sakana-AI/sakana-namazu.md)
     * [Fugu Max](api-references/text-models-llm/Sakana-AI/fugu-max.md)
     * [Fugu Ultra V2](api-references/text-models-llm/Sakana-AI/fugu-ultra-v2.md)
+  * [ScaleDown](api-references/text-models-llm/ScaleDown/README.md)
+    * [Summarize](api-references/text-models-llm/ScaleDown/summarize.md)
   * [Stealth](api-references/text-models-llm/Stealth/README.md)
     * [Ox Alpha](api-references/text-models-llm/Stealth/ox-alpha.md)
     * [Union Alpha](api-references/text-models-llm/Stealth/union-alpha.md)
