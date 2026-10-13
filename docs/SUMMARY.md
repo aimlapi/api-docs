@@ -217,6 +217,7 @@
     * [D1 Router](api-references/text-models-llm/Liquid-AI/d1-router.md)
   * [LiquidAI](api-references/text-models-llm/LiquidAI/README.md)
     * [LFM2-24B-A2B](api-references/text-models-llm/LiquidAI/lfm-2-24b-a2b.md)
+    * [LFM2.5-24B-A2B](api-references/text-models-llm/LiquidAI/lfm-2.5-24b-a2b.md)
   * [Mancer](api-references/text-models-llm/Mancer/README.md)
     * [Weaver (alpha)](api-references/text-models-llm/Mancer/weaver.md)
   * [Meituan](api-references/text-models-llm/Meituan/README.md)
