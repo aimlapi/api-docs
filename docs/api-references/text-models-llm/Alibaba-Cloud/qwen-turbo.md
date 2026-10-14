@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Qwen Turbo
 
 {% columns %}
