@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/stt/create": {
+      "post": {
+        "operationId": "_v1_stt_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "elevenlabs/scribe_v2"
+                    ]
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the input audio file. Provide either url or audio — exactly one is required, not both.",
+                    "example": "https://example.com/audio/sample.mp3"
+                  },
+                  "audio": {
+                    "type": "string",
+                    "description": "The audio file to transcribe. Provide either url or audio — exactly one is required, not both.",
+                    "format": "binary"
+                  },
+                  "language_code": {
+                    "type": "string",
+                    "description": "The language of the audio as an ISO-639-1 or ISO-639-3 code, for example \"en\" or \"heb\". Omit it to detect the language automatically.",
+                    "example": "en"
+                  },
+                  "diarize": {
+                    "type": "boolean",
+                    "description": "Label which speaker says each word (speaker_0, speaker_1, …)."
+                  },
+                  "num_speakers": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 32,
+                    "description": "The maximum number of speakers in the audio, from 1 to 32. Helps speaker labelling; by default the model decides."
+                  },
+                  "timestamps_granularity": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "word",
+                      "character"
+                    ],
+                    "description": "Timing detail in the answer: \"word\" (the default) or \"character\" timings for every word, or \"none\"."
+                  },
+                  "tag_audio_events": {
+                    "type": "boolean",
+                    "description": "Tag non-speech sounds such as (laughter) or (applause) in the transcript. On by default."
+                  },
+                  "no_verbatim": {
+                    "type": "boolean",
+                    "description": "Leave out filler words, false starts and non-speech sounds."
+                  },
+                  "temperature": {
+                    "type": "number",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 2,
+                    "description": "Randomness of the transcription, from 0 to 2. By default the model picks it (usually 0)."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 2147483647,
+                    "description": "Best-effort deterministic sampling: repeated requests with the same seed and parameters should return the same transcript."
+                  }
+                },
+                "required": [
+                  "model"
+                ],
+                "title": "elevenlabs/scribe_v2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "generation_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "generation_id"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/stt/create' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"elevenlabs/scribe_v2\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/stt/create', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"elevenlabs/scribe_v2\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/stt/create\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'elevenlabs/scribe_v2'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
