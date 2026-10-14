@@ -718,6 +718,8 @@
   * [Speech-to-Text](api-references/speech-models/speech-to-text/README.md)
     * [Elevenlabs](api-references/speech-models/speech-to-text/Elevenlabs/README.md)
       * [Scribe v2](api-references/speech-models/speech-to-text/Elevenlabs/scribe_v2.md)
+    * [Google](api-references/speech-models/speech-to-text/Google/README.md)
+      * [Gemini 3.5 Transcribe](api-references/speech-models/speech-to-text/Google/gemini-3.5-transcribe.md)
     * [stt \[legacy\]](api-references/speech-models/speech-to-text/stt-legacy.md)
     * [Assembly AI](api-references/speech-models/speech-to-text/assembly-ai/README.md)
       * [Slam 1](api-references/speech-models/speech-to-text/assembly-ai/slam-1.md)
