@@ -28,7 +28,7 @@
                   },
                   "provider": {
                     "type": "string",
-                    "description": "Provider routing override. Use a source key such as `openai`, `fallback`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
+                    "description": "Provider routing override. Use a source key such as `openai`, `opentree`, `xai`, `google`, `alibaba`, `minimax`, `moonshot`, `baidu`, or `togetherai` to run that provider with no fallback; `auto` (default) uses the full fallback chain. Case-insensitive.",
                     "example": "auto"
                   },
                   "messages": {
@@ -992,7 +992,7 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "Upstream provider slugs of the fallback provider to try first, in this order, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Upstream provider slugs of the opentree provider to try first, in this order, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
                       },
                       "only": {
                         "type": "array",
@@ -1003,7 +1003,7 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "Upstream provider slugs of the fallback provider to allow — every other upstream is excluded, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Upstream provider slugs of the opentree provider to allow — every other upstream is excluded, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
                       },
                       "ignore": {
                         "type": "array",
@@ -1014,11 +1014,11 @@
                         },
                         "minItems": 1,
                         "maxItems": 32,
-                        "description": "Upstream provider slugs of the fallback provider to skip, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
+                        "description": "Upstream provider slugs of the opentree provider to skip, e.g. [\"deepinfra/bf16\", \"together\"]. A bare slug matches every variant of that provider."
                       },
                       "allow_fallbacks": {
                         "type": "boolean",
-                        "description": "Whether the fallback provider may fall back to an upstream outside `order`/`only` when the preferred ones are unavailable. Default true; set false to fail instead."
+                        "description": "Whether the opentree provider may fall back to an upstream outside `order`/`only` when the preferred ones are unavailable. Default true; set false to fail instead."
                       },
                       "require_parameters": {
                         "type": "boolean",
@@ -1053,7 +1053,7 @@
                           "throughput",
                           "latency"
                         ],
-                        "description": "Upstream ordering when `order` is not set. The fallback provider defaults to a price/uptime blend."
+                        "description": "Upstream ordering when `order` is not set. The opentree provider defaults to a price/uptime blend."
                       },
                       "data_collection": {
                         "type": "string",
@@ -1069,7 +1069,7 @@
                       }
                     },
                     "additionalProperties": false,
-                    "description": "Upstream routing for the fallback provider. Applies only when the request is served through the fallback provider (pin `provider: \"fallback\"` to be sure); every other provider refuses it rather than ignore it."
+                    "description": "Upstream routing for the opentree provider. Applies only when the request is served through the opentree provider (pin `provider: \"opentree\"` to be sure); every other provider refuses it rather than ignore it."
                   }
                 },
                 "required": [
