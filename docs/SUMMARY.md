@@ -534,6 +534,8 @@
   * [Topaz Labs](api-references/image-models/topaz-labs/README.md)
     * [Sharpen](api-references/image-models/topaz-labs/sharpen.md)
     * [Sharpen Generative](api-references/image-models/topaz-labs/sharpen-generative.md)
+  * [X AI](api-references/image-models/X-AI/README.md)
+    * [Grok Imagine Image 2.0](api-references/image-models/X-AI/grok-imagine-image-2.0.md)
   * [xAI](api-references/image-models/xai/README.md)
     * [Grok Imagine Image](api-references/image-models/xai/grok-imagine-image.md)
     * [Grok Imagine Image Pro](api-references/image-models/xai/grok-imagine-image-pro.md)
