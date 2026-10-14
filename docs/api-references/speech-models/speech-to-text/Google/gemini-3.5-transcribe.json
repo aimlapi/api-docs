@@ -1,0 +1,138 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/stt/create": {
+      "post": {
+        "operationId": "_v1_stt_create",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "google/gemini-3.5-transcribe"
+                    ]
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the input audio file. Provide either url or audio — exactly one is required, not both.",
+                    "example": "https://example.com/audio/sample.mp3"
+                  },
+                  "audio": {
+                    "type": "string",
+                    "description": "The audio file to transcribe. Provide either url or audio — exactly one is required, not both. Up to 20 MB.",
+                    "format": "binary"
+                  },
+                  "language_codes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 100,
+                    "description": "BCP-47 codes of the languages spoken in the audio, for example [\"he-IL\"] or [\"en-US\", \"es-ES\"]. Omit them to detect the language automatically (85+ languages, mixed-language speech included).",
+                    "example": [
+                      "en-US"
+                    ]
+                  },
+                  "custom_vocabulary": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 1000,
+                    "description": "Up to 1,000 names, acronyms or terms to bias recognition toward (best results with up to 100). Cannot be combined with diarization or word_timestamps.",
+                    "example": [
+                      "Gemini",
+                      "BigQuery"
+                    ]
+                  },
+                  "diarization": {
+                    "type": "boolean",
+                    "description": "Split the transcript into speaker turns labelled spk_1, spk_2, … (up to 8 speakers; 3 or more is experimental). Audio is then limited to 30 minutes."
+                  },
+                  "word_timestamps": {
+                    "type": "boolean",
+                    "description": "Return start and end times for every word. May lower accuracy; audio is then limited to 30 minutes."
+                  },
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "verbatim",
+                      "smart"
+                    ],
+                    "description": "\"verbatim\" (the default) keeps every spoken word, fillers included. \"smart\" removes fillers and false starts, applies self-corrections and formats lists, numbers and dates; it cannot be combined with diarization or word_timestamps."
+                  }
+                },
+                "required": [
+                  "model"
+                ],
+                "title": "google/gemini-3.5-transcribe"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "generation_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "generation_id"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/stt/create' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"google/gemini-3.5-transcribe\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/stt/create', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"google/gemini-3.5-transcribe\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/stt/create\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'google/gemini-3.5-transcribe'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
