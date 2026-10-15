@@ -230,6 +230,7 @@
     * [Muse Glimmer 30B](api-references/text-models-llm/meta/muse-glimmer-30b.md)
     * [Muse Spark 1.3](api-references/text-models-llm/meta/muse-spark-1.3.md)
     * [Muse Wonder](api-references/text-models-llm/meta/muse-wonder.md)
+    * [Muse Spark Open](api-references/text-models-llm/meta/muse-spark-open.md)
   * [MiniMax](api-references/text-models-llm/MiniMax/README.md)
     * [Text 01](api-references/text-models-llm/MiniMax/text-01.md)
     * [M1](api-references/text-models-llm/minimax/m1.md)
