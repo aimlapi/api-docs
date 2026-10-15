@@ -4,7 +4,6 @@ description: >-
   data and more — callable with your AI/ML API key from agents, MCP clients and
   your own apps.
 icon: toolbox
-hidden: true
 ---
 
 # Toolbox
@@ -15,12 +14,12 @@ Use them when a model needs **fresh or external data**, or needs to **act**, bey
 
 ## Ways to use them
 
-| You are building… | Use | Who runs the tool |
-| --- | --- | --- |
-| An agent in **Claude Code, Cursor, Claude Desktop** | [MCP](mcp.md) — the `tools_*` tools appear automatically | your MCP client |
-| Your **own app or pipeline** | the REST API below | your code |
-| An app on **chat/completions** with function calling | tool definitions in `tools[]` + `/v1/tools/run` | your code |
-| A one-call agent on **/v1/responses** (OpenAI models) | our MCP server as a `{"type": "mcp"}` tool | the model |
+| You are building…                                     | Use                                                      | Who runs the tool |
+| ----------------------------------------------------- | -------------------------------------------------------- | ----------------- |
+| An agent in **Claude Code, Cursor, Claude Desktop**   | [MCP](mcp.md) — the `tools_*` tools appear automatically | your MCP client   |
+| Your **own app or pipeline**                          | the REST API below                                       | your code         |
+| An app on **chat/completions** with function calling  | tool definitions in `tools[]` + `/v1/tools/run`          | your code         |
+| A one-call agent on **/v1/responses** (OpenAI models) | our MCP server as a `{"type": "mcp"}` tool               | the model         |
 
 **Base URL:** `https://tools.aimlapi.com`. **Auth:** `Authorization: Bearer <YOUR_AIMLAPI_KEY>`.
 
@@ -184,14 +183,14 @@ Send it to `POST https://api.aimlapi.com/v1/responses`. The `output` array shows
 
 ## The four MCP tools
 
-Set up in [Quickstart: MCP](#quickstart-mcp) above. These are the tools your agent gets:
+Set up in [Quickstart: MCP](toolbox.md#quickstart-mcp) above. These are the tools your agent gets:
 
-| MCP tool | What it does |
-| --- | --- |
-| `tools_search` | finds tools for a task |
-| `tools_inspect` | returns a tool's input schema and price |
-| `tools_run` | runs the tool: returns the result, or a `run_id` for long runs |
-| `tools_run_status` | checks a long run |
+| MCP tool           | What it does                                                   |
+| ------------------ | -------------------------------------------------------------- |
+| `tools_search`     | finds tools for a task                                         |
+| `tools_inspect`    | returns a tool's input schema and price                        |
+| `tools_run`        | runs the tool: returns the result, or a `run_id` for long runs |
+| `tools_run_status` | checks a long run                                              |
 
 Results come back under `result` with `"untrusted": true`, so the agent treats them as data and not as instructions.
 
@@ -202,10 +201,10 @@ Results come back under `result` with `"untrusted": true`, so the agent treats t
 * **`idempotency_key`** makes retries safe: a repeated call with the same key and input returns the same run without charging again.
 * **Treat tool output as untrusted.** It comes from the open web. Never let a model follow instructions found inside it, and say so in your system prompt.
 
-| Error code | Meaning |
-| --- | --- |
-| `400 invalid_input` | `input` does not match the tool's `input_schema`; the message names the field |
-| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd` |
-| `403 insufficient_funds` | top up your balance |
-| `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative |
-| `429 rate_limited` | slow down and retry after `Retry-After` |
+| Error code                                    | Meaning                                                                       |
+| --------------------------------------------- | ----------------------------------------------------------------------------- |
+| `400 invalid_input`                           | `input` does not match the tool's `input_schema`; the message names the field |
+| `400 max_cost_required` / `max_cost_exceeded` | set or raise `max_cost_usd`                                                   |
+| `403 insufficient_funds`                      | top up your balance                                                           |
+| `404 tool_not_found` / `410 tool_unavailable` | search again for an alternative                                               |
+| `429 rate_limited`                            | slow down and retry after `Retry-After`                                       |
