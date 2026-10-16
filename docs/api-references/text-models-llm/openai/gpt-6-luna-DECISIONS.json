@@ -1,0 +1,819 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/decisions": {
+      "post": {
+        "operationId": "_v1_decisions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "openai/gpt-6-luna"
+                    ]
+                  },
+                  "input": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1048576
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "message"
+                                  ]
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "enum": [
+                                    "user"
+                                  ]
+                                },
+                                "content": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "oneOf": [
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "input_text"
+                                                ]
+                                              },
+                                              "text": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "text"
+                                            ]
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "input_image"
+                                                ]
+                                              },
+                                              "image_url": {
+                                                "type": "string",
+                                                "description": "A base64 `data:` URL (`data:image/png;base64,…`) or an http(s) URL; we pass it to OpenAI inline."
+                                              },
+                                              "detail": {
+                                                "type": "string",
+                                                "description": "Image detail, as OpenAI reads it (`low`, `high`, `auto`)."
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "image_url"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "minItems": 1
+                                    }
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "role",
+                                "content"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "message"
+                                  ]
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "enum": [
+                                    "system",
+                                    "developer"
+                                  ]
+                                },
+                                "content": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "input_text"
+                                            ]
+                                          },
+                                          "text": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "type",
+                                          "text"
+                                        ]
+                                      },
+                                      "minItems": 1
+                                    }
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "role",
+                                "content"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "message"
+                                  ]
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "enum": [
+                                    "assistant"
+                                  ]
+                                },
+                                "content": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "oneOf": [
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "output_text"
+                                                ]
+                                              },
+                                              "text": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "text"
+                                            ]
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "refusal"
+                                                ]
+                                              },
+                                              "refusal": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "refusal"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "minItems": 1
+                                    }
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "role",
+                                "content"
+                              ]
+                            }
+                          ]
+                        },
+                        "minItems": 1
+                      }
+                    ],
+                    "description": "Shared evidence for every question: a text string, or user/system/developer/assistant messages. User messages may combine `input_text` and `input_image` parts.",
+                    "example": "I was charged twice for my order."
+                  },
+                  "questions": {
+                    "type": "array",
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "predicate"
+                              ],
+                              "description": "Check a condition; the answer is the probability that it is true."
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "A unique name; the answer echoes it."
+                            },
+                            "instructions": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "What to evaluate: the condition, the routing rule, the rubric."
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "name",
+                            "instructions"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "choice"
+                              ],
+                              "description": "Select one of `choices`."
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "A unique name; the answer echoes it."
+                            },
+                            "instructions": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "What to evaluate: the condition, the routing rule, the rubric."
+                            },
+                            "choices": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "value": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "value"
+                                ]
+                              },
+                              "minItems": 1,
+                              "description": "The options: a distinct `value` each, and when it applies. Include a fallback like `other` when the options do not cover every input.",
+                              "example": [
+                                {
+                                  "value": "billing",
+                                  "description": "Payments, invoices, and refunds."
+                                },
+                                {
+                                  "value": "other",
+                                  "description": "Requests outside these categories."
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "name",
+                            "instructions",
+                            "choices"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "score"
+                              ],
+                              "description": "Rate against ordered `levels`; the answer is the probability-weighted level index (0-based)."
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "A unique name; the answer echoes it."
+                            },
+                            "instructions": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "What to evaluate: the condition, the routing rule, the rubric."
+                            },
+                            "levels": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "label": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "label"
+                                ]
+                              },
+                              "minItems": 2,
+                              "description": "Ordered levels, lowest first.",
+                              "example": [
+                                {
+                                  "label": "Cosmetic",
+                                  "description": "Appearance only."
+                                },
+                                {
+                                  "label": "Fully blocked",
+                                  "description": "No workaround."
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "name",
+                            "instructions",
+                            "levels"
+                          ]
+                        }
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 200,
+                    "description": "1–200 independent questions about the input; answers come back in the same order."
+                  },
+                  "prompt_cache_key": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "description": "Partitions prompt cache reuse by a key you choose."
+                  }
+                },
+                "required": [
+                  "model",
+                  "input",
+                  "questions"
+                ],
+                "title": "openai/gpt-6-luna"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "model": {
+                          "type": "string",
+                          "description": "Resolved model version that answered."
+                        },
+                        "answers": {
+                          "type": "object",
+                          "additionalProperties": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "noul"
+                                    ]
+                                  },
+                                  "noul": {
+                                    "type": "number",
+                                    "description": "Probability that the answer is \"yes\" (0–1)."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "noul"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "choice"
+                                    ]
+                                  },
+                                  "choice": {
+                                    "type": "string",
+                                    "description": "The selected option key from `criteria`."
+                                  },
+                                  "confidence": {
+                                    "type": "number",
+                                    "description": "Calibrated confidence in the choice (0–1)."
+                                  },
+                                  "probabilities": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                      "type": "number"
+                                    },
+                                    "description": "Probability of each option; sums to 1."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "choice",
+                                  "confidence",
+                                  "probabilities"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "score"
+                                    ]
+                                  },
+                                  "score": {
+                                    "type": "number",
+                                    "description": "Expected level on the ordered scale (may be fractional, e.g. 1.34)."
+                                  },
+                                  "confidence": {
+                                    "type": "number",
+                                    "description": "Calibrated confidence in the score (0–1)."
+                                  },
+                                  "legend": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string"
+                                        },
+                                        {
+                                          "type": "object",
+                                          "additionalProperties": {
+                                            "nullable": true
+                                          }
+                                        },
+                                        {
+                                          "type": "array",
+                                          "items": {
+                                            "nullable": true
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "description": "Level index → level description, as the request gave it (text, or a JSON object/array)."
+                                  },
+                                  "probabilities": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                      "type": "number"
+                                    },
+                                    "description": "Probability of each option; sums to 1."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "score",
+                                  "confidence",
+                                  "legend",
+                                  "probabilities"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "box"
+                                    ]
+                                  },
+                                  "box": {
+                                    "type": "object",
+                                    "properties": {
+                                      "top": {
+                                        "type": "number"
+                                      },
+                                      "bottom": {
+                                        "type": "number"
+                                      },
+                                      "left": {
+                                        "type": "number"
+                                      },
+                                      "right": {
+                                        "type": "number"
+                                      }
+                                    },
+                                    "required": [
+                                      "top",
+                                      "bottom",
+                                      "left",
+                                      "right"
+                                    ],
+                                    "description": "The edges of the box around the target, each a fraction (0–1) from the top-left corner: `left` and `right` of the width, `top` and `bottom` of the height."
+                                  },
+                                  "confidence": {
+                                    "type": "number",
+                                    "description": "How sure the model is of the box (0–1)."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "box",
+                                  "confidence"
+                                ]
+                              }
+                            ]
+                          },
+                          "description": "One typed answer per question key from the request."
+                        },
+                        "usage": {
+                          "type": "object",
+                          "properties": {
+                            "input_tokens": {
+                              "type": "integer"
+                            },
+                            "output_tokens": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "input_tokens",
+                            "output_tokens"
+                          ],
+                          "description": "Token usage reported by the provider."
+                        }
+                      },
+                      "required": [
+                        "model",
+                        "answers",
+                        "usage"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "model": {
+                          "type": "string",
+                          "description": "The model that answered."
+                        },
+                        "answers": {
+                          "type": "array",
+                          "items": {
+                            "oneOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "predicate"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The question’s `name`."
+                                  },
+                                  "probability": {
+                                    "type": "number",
+                                    "description": "Probability that the condition is true (0–1)."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "name",
+                                  "probability"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "choice"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The question’s `name`."
+                                  },
+                                  "choice": {
+                                    "type": "string",
+                                    "description": "The selected `value` from `choices`."
+                                  },
+                                  "confidence": {
+                                    "type": "number",
+                                    "description": "Confidence (0–1)."
+                                  },
+                                  "probabilities": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "string"
+                                        },
+                                        "probability": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "probability"
+                                      ]
+                                    },
+                                    "description": "Probability of each choice."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "name",
+                                  "choice",
+                                  "confidence",
+                                  "probabilities"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "score"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The question’s `name`."
+                                  },
+                                  "score": {
+                                    "type": "number",
+                                    "description": "Probability-weighted average of the level indices (0-based; may fall between levels)."
+                                  },
+                                  "confidence": {
+                                    "type": "number",
+                                    "description": "Confidence (0–1)."
+                                  },
+                                  "probabilities": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "integer"
+                                        },
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "probability": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "label",
+                                        "probability"
+                                      ]
+                                    },
+                                    "description": "Probability of each level."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "name",
+                                  "score",
+                                  "confidence",
+                                  "probabilities"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "refusal"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "description": "The question’s `name`."
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "name"
+                                ]
+                              }
+                            ]
+                          },
+                          "description": "One answer per question, in request order."
+                        },
+                        "usage": {
+                          "type": "object",
+                          "properties": {
+                            "input_tokens": {
+                              "type": "integer"
+                            },
+                            "input_tokens_details": {
+                              "type": "object",
+                              "properties": {
+                                "cached_tokens": {
+                                  "type": "integer"
+                                },
+                                "cache_write_tokens": {
+                                  "type": "integer"
+                                }
+                              }
+                            },
+                            "output_tokens": {
+                              "type": "integer"
+                            },
+                            "total_tokens": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "input_tokens",
+                            "output_tokens",
+                            "total_tokens"
+                          ],
+                          "description": "Token usage reported by the provider."
+                        }
+                      },
+                      "required": [
+                        "model",
+                        "answers",
+                        "usage"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
