@@ -831,6 +831,8 @@
     * [Jev 1.13](api-references/decision-models/TypeSafe/jev-1.13.md)
   * [Liquid AI](api-references/decision-models/Liquid-AI/README.md)
     * [d1](api-references/decision-models/Liquid-AI/d1.md)
+  * [OpenAI](api-references/decision-models/OpenAI/README.md)
+    * [GPT-6 Luna](api-references/decision-models/OpenAI/gpt-6-luna.md)
 
 ## FAQ
 
