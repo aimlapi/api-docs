@@ -261,6 +261,8 @@
     * [Voxtral Small 24B 2507](api-references/text-models-llm/Mistral-AI/voxtral-small-24b-2507.md)
     * [Ministral 8B](api-references/text-models-llm/Mistral-AI/ministral-8b.md)
     * [Large 4 4.0](api-references/text-models-llm/Mistral-AI/mistral-large-4-0.md)
+  * [Moondream](api-references/text-models-llm/Moondream/README.md)
+    * [Moondream 3 Preview](api-references/text-models-llm/Moondream/moondream3-preview.md)
   * [Moonshot](api-references/text-models-llm/moonshot/README.md)
     * [kimi-k2-preview](api-references/text-models-llm/moonshot/kimi-k2-preview.md)
     * [Kimi k2.5](api-references/text-models-llm/moonshot/kimi-k2-5.md)
