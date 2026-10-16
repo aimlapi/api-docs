@@ -824,6 +824,10 @@
 * [Decision Models](api-references/decision-models/README.md)
   * [TypeSafe](api-references/decision-models/TypeSafe/README.md)
     * [Jev](api-references/decision-models/TypeSafe/jev.md)
+    * [Jev 1.14](api-references/decision-models/TypeSafe/jev-1.14.md)
+    * [Jev 1.13](api-references/decision-models/TypeSafe/jev-1.13.md)
+  * [Liquid AI](api-references/decision-models/Liquid-AI/README.md)
+    * [d1](api-references/decision-models/Liquid-AI/d1.md)
 
 ## FAQ
 
