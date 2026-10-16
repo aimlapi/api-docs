@@ -1,0 +1,821 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/decisions": {
+      "post": {
+        "operationId": "_v1_decisions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "model": {
+                        "type": "string",
+                        "enum": [
+                          "typesafe/jev-1.13"
+                        ]
+                      },
+                      "state": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": {
+                              "nullable": true
+                            }
+                          },
+                          {
+                            "type": "array",
+                            "items": {
+                              "nullable": true
+                            }
+                          }
+                        ],
+                        "description": "The content to evaluate: a string, a JSON object, or an array of texts.",
+                        "example": "Help! My payments have been failing for 3 days."
+                      },
+                      "questions": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "noul"
+                                  ],
+                                  "description": "A yes/no question; the answer is the probability of \"yes\"."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "object",
+                                  "properties": {
+                                    "true": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string"
+                                        },
+                                        {
+                                          "type": "object",
+                                          "additionalProperties": {
+                                            "nullable": true
+                                          }
+                                        },
+                                        {
+                                          "type": "array",
+                                          "items": {
+                                            "nullable": true
+                                          }
+                                        }
+                                      ],
+                                      "description": "When the answer is \"yes\"."
+                                    },
+                                    "false": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string"
+                                        },
+                                        {
+                                          "type": "object",
+                                          "additionalProperties": {
+                                            "nullable": true
+                                          }
+                                        },
+                                        {
+                                          "type": "array",
+                                          "items": {
+                                            "nullable": true
+                                          }
+                                        }
+                                      ],
+                                      "description": "When the answer is \"no\"."
+                                    }
+                                  },
+                                  "description": "Optional descriptions of what \"true\" and \"false\" mean for this question: text, or a JSON object/array."
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "choice"
+                                  ],
+                                  "description": "Pick exactly one option from `criteria`."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "nullable": true
+                                      }
+                                    ]
+                                  },
+                                  "description": "Option key → description: text, a JSON object/array, or `null` when the key says it all. The answer is one of these keys plus a probability for each.",
+                                  "minProperties": 1,
+                                  "maxProperties": 255,
+                                  "example": {
+                                    "billing": "Payments, invoicing, refunds",
+                                    "technical": "Bugs, outages, integrations"
+                                  }
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions",
+                                "criteria"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "score"
+                                  ],
+                                  "description": "Rate the state against an ordered scale of levels."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "array",
+                                  "items": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "nullable": true
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "minItems": 2,
+                                  "maxItems": 10,
+                                  "description": "Ordered level descriptions (text or a JSON object/array each), lowest first. The answer is an expected level index (may be fractional) plus a probability per level.",
+                                  "example": [
+                                    "Calm",
+                                    "Frustrated",
+                                    "Very angry"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions",
+                                "criteria"
+                              ]
+                            }
+                          ]
+                        },
+                        "description": "Map of question key → typed question. Every key comes back in `answers` with a typed result.",
+                        "minProperties": 1
+                      },
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "nullable": true
+                        },
+                        "maxItems": 0,
+                        "description": "Not supported: This model takes images in `assets` (TypeSafe’s format), not in `images`. A non-empty list is refused."
+                      },
+                      "assets": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "image"
+                              ],
+                              "description": "The kind of asset. Optional; when sent, `image`."
+                            },
+                            "format": {
+                              "type": "string",
+                              "enum": [
+                                "png",
+                                "jpg",
+                                "jpeg"
+                              ],
+                              "description": "The image format, lowercase; `jpeg` is `jpg`."
+                            },
+                            "data_base64": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "The PNG or JPEG file, base64-encoded: the standard alphabet with `=` padding, no line breaks or whitespace, no `data:` prefix."
+                            }
+                          },
+                          "required": [
+                            "format",
+                            "data_base64"
+                          ]
+                        },
+                        "description": "Images, keyed by a reference string (a new UUID per image is safest). Write the reference wherever the image belongs — as a whole string value, or inside a longer string of the state, an instruction or a criterion — and the model reads the image there; refer to an image in the state by its path in backticks, e.g. `photo`. Every asset must be referenced; each use adds the image again. PNG or JPEG stills, 256–1568 pixels a side, at most 16 MiB each; image tokens are billed as input tokens. Experimental (TypeSafe: not production-ready yet).",
+                        "example": {
+                          "a3f1c2e8-door": {
+                            "type": "image",
+                            "format": "jpg",
+                            "data_base64": "/9j/4AAQSkZJRg..."
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "model",
+                      "state",
+                      "questions"
+                    ],
+                    "title": "typesafe/jev-1.13"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "model": {
+                        "type": "string",
+                        "enum": [
+                          "typesafe/jev-1.13"
+                        ]
+                      },
+                      "state": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": {
+                              "nullable": true
+                            }
+                          },
+                          {
+                            "type": "array",
+                            "items": {
+                              "nullable": true
+                            }
+                          }
+                        ],
+                        "description": "The content to evaluate: a string, a JSON object, or an array of texts.",
+                        "example": "Help! My payments have been failing for 3 days."
+                      },
+                      "questions": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "oneOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "noul"
+                                  ],
+                                  "description": "A yes/no question; the answer is the probability of \"yes\"."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "object",
+                                  "properties": {
+                                    "true": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string"
+                                        },
+                                        {
+                                          "type": "object",
+                                          "additionalProperties": {
+                                            "nullable": true
+                                          }
+                                        },
+                                        {
+                                          "type": "array",
+                                          "items": {
+                                            "nullable": true
+                                          }
+                                        }
+                                      ],
+                                      "description": "When the answer is \"yes\"."
+                                    },
+                                    "false": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string"
+                                        },
+                                        {
+                                          "type": "object",
+                                          "additionalProperties": {
+                                            "nullable": true
+                                          }
+                                        },
+                                        {
+                                          "type": "array",
+                                          "items": {
+                                            "nullable": true
+                                          }
+                                        }
+                                      ],
+                                      "description": "When the answer is \"no\"."
+                                    }
+                                  },
+                                  "description": "Optional descriptions of what \"true\" and \"false\" mean for this question: text, or a JSON object/array."
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "choice"
+                                  ],
+                                  "description": "Pick exactly one option from `criteria`."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "object",
+                                  "additionalProperties": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "nullable": true
+                                      }
+                                    ]
+                                  },
+                                  "description": "Option key → description: text, a JSON object/array, or `null` when the key says it all. The answer is one of these keys plus a probability for each.",
+                                  "minProperties": 1,
+                                  "maxProperties": 255,
+                                  "example": {
+                                    "billing": "Payments, invoicing, refunds",
+                                    "technical": "Bugs, outages, integrations"
+                                  }
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions",
+                                "criteria"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "score"
+                                  ],
+                                  "description": "Rate the state against an ordered scale of levels."
+                                },
+                                "instructions": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ],
+                                  "description": "What to decide about the state. A plain question, or structured guidance as a JSON object/array (the question in one field, data it refers to in others)."
+                                },
+                                "criteria": {
+                                  "type": "array",
+                                  "items": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                          "nullable": true
+                                        }
+                                      },
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "nullable": true
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "minItems": 2,
+                                  "maxItems": 10,
+                                  "description": "Ordered level descriptions (text or a JSON object/array each), lowest first. The answer is an expected level index (may be fractional) plus a probability per level.",
+                                  "example": [
+                                    "Calm",
+                                    "Frustrated",
+                                    "Very angry"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "type",
+                                "instructions",
+                                "criteria"
+                              ]
+                            }
+                          ]
+                        },
+                        "description": "Map of question key → typed question. Every key comes back in `answers` with a typed result.",
+                        "minProperties": 1
+                      },
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "nullable": true
+                        },
+                        "maxItems": 0,
+                        "description": "Not supported: This model takes images in `assets` (TypeSafe’s format), not in `images`. A non-empty list is refused."
+                      },
+                      "assets": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "nullable": true
+                        },
+                        "description": "Not supported here: Images in `assets` reach this model only through its own provider’s API, and this request reached a fallback that would drop them. Retry shortly. A non-empty map is refused."
+                      }
+                    },
+                    "required": [
+                      "model",
+                      "state",
+                      "questions"
+                    ],
+                    "title": "typesafe/jev-1.13"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "model": {
+                      "type": "string",
+                      "description": "Resolved model version that answered."
+                    },
+                    "answers": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "noul"
+                                ]
+                              },
+                              "noul": {
+                                "type": "number",
+                                "description": "Probability that the answer is \"yes\" (0–1)."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "noul"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "choice"
+                                ]
+                              },
+                              "choice": {
+                                "type": "string",
+                                "description": "The selected option key from `criteria`."
+                              },
+                              "confidence": {
+                                "type": "number",
+                                "description": "Calibrated confidence in the choice (0–1)."
+                              },
+                              "probabilities": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "number"
+                                },
+                                "description": "Probability of each option; sums to 1."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "choice",
+                              "confidence",
+                              "probabilities"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "score"
+                                ]
+                              },
+                              "score": {
+                                "type": "number",
+                                "description": "Expected level on the ordered scale (may be fractional, e.g. 1.34)."
+                              },
+                              "confidence": {
+                                "type": "number",
+                                "description": "Calibrated confidence in the score (0–1)."
+                              },
+                              "legend": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "nullable": true
+                                      }
+                                    },
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "nullable": true
+                                      }
+                                    }
+                                  ]
+                                },
+                                "description": "Level index → level description, as the request gave it (text, or a JSON object/array)."
+                              },
+                              "probabilities": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "number"
+                                },
+                                "description": "Probability of each option; sums to 1."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "score",
+                              "confidence",
+                              "legend",
+                              "probabilities"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "box"
+                                ]
+                              },
+                              "box": {
+                                "type": "object",
+                                "properties": {
+                                  "top": {
+                                    "type": "number"
+                                  },
+                                  "bottom": {
+                                    "type": "number"
+                                  },
+                                  "left": {
+                                    "type": "number"
+                                  },
+                                  "right": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "top",
+                                  "bottom",
+                                  "left",
+                                  "right"
+                                ],
+                                "description": "The edges of the box around the target, each a fraction (0–1) from the top-left corner: `left` and `right` of the width, `top` and `bottom` of the height."
+                              },
+                              "confidence": {
+                                "type": "number",
+                                "description": "How sure the model is of the box (0–1)."
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "box",
+                              "confidence"
+                            ]
+                          }
+                        ]
+                      },
+                      "description": "One typed answer per question key from the request."
+                    },
+                    "usage": {
+                      "type": "object",
+                      "properties": {
+                        "input_tokens": {
+                          "type": "integer"
+                        },
+                        "output_tokens": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "input_tokens",
+                        "output_tokens"
+                      ],
+                      "description": "Token usage reported by the provider."
+                    }
+                  },
+                  "required": [
+                    "model",
+                    "answers",
+                    "usage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

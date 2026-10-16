@@ -16,7 +16,11 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Jev is TypeSafe's first "System One" model: a structured decision model that returns typed answers (yes/no, choice, score) with calibrated probabilities instead of generated text. It is built for routing, classification, triage and other in-app decision points where a fast, predictable verdict matters more than prose — typically answering in well under a second. Text input only, 32K context.
+Jev is TypeSafe's "System One" model: a structured decision model that returns typed answers (yes/no, choice, score, box) with calibrated probabilities instead of generated text. It is built for routing, classification, triage and other in-app decision points where a fast, predictable verdict matters more than prose — typically answering in well under a second. Context window is 262,144 tokens.
+
+`typesafe/jev` is the **floating id**: it always resolves to the current release, today [Jev 1.14](jev-1.14.md), and moves with each new one. Pin [`typesafe/jev-1.14`](jev-1.14.md) or [`typesafe/jev-1.13`](jev-1.13.md) when you need the behaviour to stay put.
+
+Version 1.14 reads experimental images and adds the `box` question — where something is in an image. See [Jev 1.14](jev-1.14.md#images-and-the-box-question) for how to send them.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -39,7 +43,7 @@ At the bottom of this page, pick the snippet for your preferred programming lang
 ▪ **Provide input:** put the content to evaluate in `state` and describe what to decide in `questions`.
 
 **4️ (Optional) Tune the request**\
-See the API schema below for the three question types (`noul`, `choice`, `score`) and their `criteria`.
+See the API schema below for the four question types (`noul`, `choice`, `score`, `box`) and their `criteria`.
 
 **5️ Run your code**\
 Run the updated code in your development environment.
@@ -149,7 +153,7 @@ console.log(await response.json());
 {% code overflow="wrap" %}
 ```json
 {
-  "model": "typesafe/jev-1.13-20260917",
+  "model": "jev-1.14.0",
   "answers": {
     "is_urgent": {
       "type": "noul",
@@ -158,17 +162,17 @@ console.log(await response.json());
     "department": {
       "type": "choice",
       "choice": "billing",
-      "confidence": 0.97,
+      "confidence": 0.98,
       "probabilities": {
-        "billing": 0.98,
-        "technical": 0.02,
+        "billing": 0.99,
+        "technical": 0.01,
         "sales": 0
       }
     },
     "frustration": {
       "type": "score",
-      "score": 1.3,
-      "confidence": 0.55,
+      "score": 1.21,
+      "confidence": 0.69,
       "legend": {
         "0": "Calm",
         "1": "Frustrated",
@@ -176,19 +180,24 @@ console.log(await response.json());
       },
       "probabilities": {
         "0": 0,
-        "1": 0.7,
-        "2": 0.3
+        "1": 0.79,
+        "2": 0.21
       }
     }
   },
   "usage": {
-    "input_tokens": 403,
+    "input_tokens": 406,
     "output_tokens": 73
   },
   "meta": {
+    "model": "typesafe/jev-1.14",
+    "provider": "typesafe",
     "usage": {
-      "credits_used": 47,
-      "usd_spent": 0.0000235
+      "credits_used": 45,
+      "usd_spent": 2.25e-05
+    },
+    "metrics": {
+      "duration_ms": 96
     }
   }
 }

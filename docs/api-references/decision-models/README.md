@@ -15,8 +15,9 @@ Compared with prompting an LLM for JSON, a decision model answers in a fraction 
 | `noul`   | A yes/no question.                         | `noul` — probability that the answer is "yes" (0–1).                   |
 | `choice` | Pick exactly one option from `criteria`.   | `choice` — the selected key, plus a probability for every option and a `confidence`. |
 | `score`  | Rate the state against ordered levels.     | `score` — expected level index (may be fractional), a probability per level, the `legend` and a `confidence`. |
+| `box`    | Where something is in an image.            | `box` — the four edges as fractions of the width and height, plus a `confidence`. Jev 1.14 only; experimental. |
 
-The `state` can be a plain string, a JSON object, or an array of texts. Text only — images, audio and video are not supported.
+The `state` can be a plain string, a JSON object, or an array of texts. Images are supported by [Jev 1.14](TypeSafe/jev-1.14.md) and [d1](Liquid-AI/d1.md), passed in `assets` rather than in `state`; audio and video are not supported.
 
 ## Pricing
 
@@ -45,19 +46,19 @@ Every key from `questions` comes back under `answers` with a typed result:
 
 ```json
 {
-  "model": "typesafe/jev-1.13-20260917",
+  "model": "jev-1.14.0",
   "answers": {
     "is_urgent":   { "type": "noul",   "noul": 0.96 },
-    "department":  { "type": "choice", "choice": "billing", "confidence": 0.97,
-                     "probabilities": { "billing": 0.98, "technical": 0.02, "sales": 0 } },
-    "frustration": { "type": "score",  "score": 1.3, "confidence": 0.55,
+    "department":  { "type": "choice", "choice": "billing", "confidence": 0.98,
+                     "probabilities": { "billing": 0.99, "technical": 0.01, "sales": 0 } },
+    "frustration": { "type": "score",  "score": 1.21, "confidence": 0.69,
                      "legend": { "0": "Calm", "1": "Frustrated", "2": "Very angry" },
-                     "probabilities": { "0": 0, "1": 0.7, "2": 0.3 } }
+                     "probabilities": { "0": 0, "1": 0.79, "2": 0.21 } }
   },
-  "usage": { "input_tokens": 403, "output_tokens": 73 }
+  "usage": { "input_tokens": 406, "output_tokens": 73 }
 }
 ```
 
 ## All Available Decision Models
 
-<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="typesafe/jev.md">typesafe/jev</a></td><td>TypeSafe AI</td><td>32 000</td><td>-</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="TypeSafe/jev.md">typesafe/jev</a></td><td>TypeSafe AI</td><td>262 144</td><td>Floating — always the current Jev</td></tr><tr><td><a href="TypeSafe/jev-1.14.md">typesafe/jev-1.14</a></td><td>TypeSafe AI</td><td>262 144</td><td>Current; adds images and <code>box</code></td></tr><tr><td><a href="TypeSafe/jev-1.13.md">typesafe/jev-1.13</a></td><td>TypeSafe AI</td><td>262 144</td><td>Previous release, pinned</td></tr><tr><td><a href="Liquid-AI/d1.md">liquid/d1</a></td><td>Liquid AI</td><td>32 768</td><td>No output tokens; reads images</td></tr></tbody></table>
