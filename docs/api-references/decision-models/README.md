@@ -19,6 +19,10 @@ Compared with prompting an LLM for JSON, a decision model answers in a fraction 
 
 The `state` can be a plain string, a JSON object, or an array of texts. Images are supported by [Jev 1.14](TypeSafe/jev-1.14.md) and [d1](Liquid-AI/d1.md), passed in `assets` rather than in `state`; audio and video are not supported.
 
+{% hint style="warning" %}
+The question types above are the ones Jev and d1 take. [GPT-6 Luna](../text-models-llm/openai/gpt-6-luna.md#using-it-as-a-decision-model) answers on the same endpoint but with **a different request shape**: the content goes in `input` rather than `state`, `questions` is an array of named items rather than an object, and its yes/no type is `predicate` rather than `noul`. Sending one model the other's shape is a `400`, so check the model's page before you switch `model`.
+{% endhint %}
+
 ## Pricing
 
 Decision models are billed by input tokens only; output tokens are reported in `usage` but are free. See the [pricing page](https://aimlapi.com/ai-ml-api-pricing) and the model card for current rates.
@@ -61,4 +65,4 @@ Every key from `questions` comes back under `answers` with a typed result:
 
 ## All Available Decision Models
 
-<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="TypeSafe/jev.md">typesafe/jev</a></td><td>TypeSafe AI</td><td>262 144</td><td>Floating — always the current Jev</td></tr><tr><td><a href="TypeSafe/jev-1.14.md">typesafe/jev-1.14</a></td><td>TypeSafe AI</td><td>262 144</td><td>Current; adds images and <code>box</code></td></tr><tr><td><a href="TypeSafe/jev-1.13.md">typesafe/jev-1.13</a></td><td>TypeSafe AI</td><td>262 144</td><td>Previous release, pinned</td></tr><tr><td><a href="Liquid-AI/d1.md">liquid/d1</a></td><td>Liquid AI</td><td>32 768</td><td>No output tokens; reads images</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="266.20001220703125">Model ID + API Reference link</th><th width="132.79998779296875">Developer</th><th width="103.5999755859375">Context</th><th>Model Card</th></tr></thead><tbody><tr><td><a href="TypeSafe/jev.md">typesafe/jev</a></td><td>TypeSafe AI</td><td>262 144</td><td>Floating — always the current Jev</td></tr><tr><td><a href="TypeSafe/jev-1.14.md">typesafe/jev-1.14</a></td><td>TypeSafe AI</td><td>262 144</td><td>Current; adds images and <code>box</code></td></tr><tr><td><a href="TypeSafe/jev-1.13.md">typesafe/jev-1.13</a></td><td>TypeSafe AI</td><td>262 144</td><td>Previous release, pinned</td></tr><tr><td><a href="Liquid-AI/d1.md">liquid/d1</a></td><td>Liquid AI</td><td>32 768</td><td>No output tokens; reads images</td></tr><tr><td><a href="../text-models-llm/openai/gpt-6-luna.md#using-it-as-a-decision-model">openai/gpt-6-luna</a></td><td>Open AI</td><td>1 050 000</td><td>Different request shape; also a chat model</td></tr></tbody></table>
