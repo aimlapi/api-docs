@@ -402,6 +402,7 @@
   * [Unbiased](api-references/text-models-llm/Unbiased/README.md)
     * [Pareto](api-references/text-models-llm/Unbiased/pareto.md)
     * [Pareto 26.10 Preview](api-references/text-models-llm/Unbiased/pareto-26.10-preview.md)
+    * [Pareto 26.10](api-references/text-models-llm/Unbiased/pareto-26.10.md)
   * [undi95](api-references/text-models-llm/undi95/README.md)
     * [ReMM SLERP 13B](api-references/text-models-llm/undi95/remm-slerp-l2-13b.md)
   * [Upstage](api-references/text-models-llm/Upstage/README.md)
