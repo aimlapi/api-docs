@@ -243,6 +243,8 @@
     * [M2.7](api-references/text-models-llm/minimax/m2-7.md)
     * [M2.7 Highspeed](api-references/text-models-llm/minimax/m2.7-highspeed.md)
     * [M3](api-references/text-models-llm/minimax/m3.md)
+  * [Minimax AI](api-references/text-models-llm/Minimax-AI/README.md)
+    * [Minimax M3.1 Flash](api-references/text-models-llm/Minimax-AI/minimax-m3.1-flash.md)
   * [Mistral AI](api-references/text-models-llm/Mistral-AI/README.md)
     * [Mistral Nemo](api-references/text-models-llm/Mistral-AI/mistral-nemo.md)
     * [Leanstral 1.5](api-references/text-models-llm/Mistral-AI/labs-leanstral-1-5.md)
