@@ -159,6 +159,8 @@
     * [V4 Flash Latest](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-flash-latest.md)
     * [Deepseek V4 Flash Vision Exp](api-references/text-models-llm/DeepSeek-AI/deepseek-v4-flash-vision-exp.md)
     * [DeepSeek V4.1 Flash](api-references/text-models-llm/DeepSeek-AI/deepseek-flash.md)
+  * [Elorian](api-references/text-models-llm/Elorian/README.md)
+    * [Glimpse](api-references/text-models-llm/Elorian/glimpse.md)
   * [Fireworks](api-references/text-models-llm/Fireworks/README.md)
     * [Ember 1](api-references/text-models-llm/Fireworks/ember-1.md)
   * [Google](api-references/text-models-llm/Google/README.md)
