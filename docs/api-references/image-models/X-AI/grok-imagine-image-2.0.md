@@ -121,5 +121,3 @@ main();
 </details>
 
 We obtained the following 2816x1536 image by running this code example:
-
-<div align="left"><figure><img src="../../../.gitbook/assets/x-ai-grok-imagine-image-2.0_output.png" alt=""><figcaption><p><code>"A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."</code></p></figcaption></figure></div>
