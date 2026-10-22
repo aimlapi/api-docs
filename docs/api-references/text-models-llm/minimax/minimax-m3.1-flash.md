@@ -1,14 +1,4 @@
 # Minimax M3.1 Flash
-hidden: true
-noIndex: true
----
-
-# Space Bunny Alpha
-hidden: true
-noIndex: true
----
-
-# Union Alpha
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -24,9 +14,9 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-## Model Overview
+### Model Overview
 
-MiniMax M3.1 Flash is MiniMax's fast, low-cost M-series reasoning model with a 1M-token context window. It accepts text, image and video input, always reasons (reasoning_effort low to max, max by default), and is built for coding, multi-step agent workflows and visual understanding.
+MiniMax M3.1 Flash is MiniMax's fast, low-cost M-series reasoning model with a 1M-token context window. It accepts text, image and video input, always reasons (reasoning\_effort low to max, max by default), and is built for coding, multi-step agent workflows and visual understanding.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -60,13 +50,13 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
+### API Schema
 
 {% openapi-operation spec="minimax-m3-1-flash" path="/v1/chat/completions" method="post" %}
 [OpenAPI minimax-m3-1-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Minimax-AI/minimax-m3.1-flash.json)
 {% endopenapi-operation %}
 
-## Code Example
+### Code Example
 
 {% tabs %}
 {% tab title="Python" %}
