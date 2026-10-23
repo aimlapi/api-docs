@@ -1,0 +1,282 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "kling-video/v4/reference-to-video"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2500,
+                    "description": "Text prompt for video generation. Refer to the references as @Image1, @Image2, … and @Element1, @Element2, …. Mutually exclusive with multi_prompt."
+                  },
+                  "multi_prompt": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "prompt": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 512,
+                          "description": "Text prompt for this shot."
+                        },
+                        "duration": {
+                          "type": "integer",
+                          "description": "Shot duration in seconds.",
+                          "default": 5
+                        }
+                      },
+                      "required": [
+                        "prompt"
+                      ]
+                    },
+                    "minItems": 1,
+                    "description": "Per-shot prompts for multi-shot generation. Mutually exclusive with prompt. The video length is the sum of the shot durations (3-30 seconds in total)."
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Optional first frame of the video. It counts toward the 10-image limit of image_urls."
+                  },
+                  "image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "description": "Reference images, referred to in the prompt as @Image1, @Image2, … (up to 10). Max 30MB each, at least 300px per side, aspect ratio 0.4-2.5."
+                  },
+                  "elements": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "frontal_image_url": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "Frontal (main) view of the element."
+                        },
+                        "reference_image_urls": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "minItems": 1,
+                          "maxItems": 3,
+                          "description": "Additional views of the element from other angles (1-3)."
+                        }
+                      },
+                      "required": [
+                        "frontal_image_url",
+                        "reference_image_urls"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 7,
+                    "description": "Characters or objects to keep consistent, referred to in the prompt as @Element1, @Element2, … (up to 7)."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "Video duration in seconds (3-30). With multi_prompt the video length is the sum of the shot durations instead.",
+                    "default": 5
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "720p",
+                      "1080p"
+                    ],
+                    "default": "1080p",
+                    "description": "The resolution of the output video, where the number refers to the short side in pixels."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "auto",
+                      "16:9",
+                      "9:16",
+                      "1:1",
+                      "21:9"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated video. `auto` follows the references."
+                  }
+                },
+                "required": [
+                  "model"
+                ],
+                "title": "kling-video/v4/reference-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "format": "uri",
+                              "description": "The URL where the file can be downloaded from.",
+                              "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                            }
+                          },
+                          "required": [
+                            "url"
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL where the file can be downloaded from.",
+                                "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        },
+                        {
+                          "nullable": true
+                        }
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"kling-video/v4/reference-to-video\", \"prompt\": \"Describe what you want the model to generate.\", \"image_url\": \"https://example.com/input.jpg\", \"duration\": 5}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"kling-video/v4/reference-to-video\",\n  \"prompt\": \"Describe what you want the model to generate.\",\n  \"image_url\": \"https://example.com/input.jpg\",\n  \"duration\": 5\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'kling-video/v4/reference-to-video', 'prompt': 'Describe what you want the model to generate.', 'image_url': 'https://example.com/input.jpg', 'duration': 5},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
