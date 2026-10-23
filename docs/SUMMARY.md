@@ -665,6 +665,7 @@
     * [Kling 4.0 Image to Video](api-references/video-models/Kling-AI/v4-image-to-video.md)
     * [Kling 4.0 Reference to Video](api-references/video-models/Kling-AI/v4-reference-to-video.md)
     * [Kling 4.0 Text to Video](api-references/video-models/Kling-AI/v4-text-to-video.md)
+    * [Kling 4.0 Video Editing](api-references/video-models/Kling-AI/v4-video-to-video-edit.md)
   * [Krea](api-references/video-models/krea/README.md)
     * [Krea Wan 14b text-to-video](api-references/video-models/krea/krea-wan-14b-text-to-video.md)
     * [Krea Wan 14b video-to-video](api-references/video-models/krea/krea-wan-14b-video-to-video.md)
