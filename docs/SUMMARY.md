@@ -27,7 +27,7 @@
 * [Text Models (LLM)](api-references/text-models-llm/README.md)
   * [AI/ML API](api-references/text-models-llm/AI/ML-API/README.md)
     * [Jev Router](api-references/text-models-llm/ml-api/jev-router.md)
-    * [Dynamic Router](api-references/text-models-llm/AI/ML-API/dynamic-router.md)
+    * [Dynamic Router (LLM Router)](api-references/text-models-llm/AI/ML-API/dynamic-router.md)
   * [AI21](api-references/text-models-llm/AI21/README.md)
     * [Jamba Large 1.7](api-references/text-models-llm/AI21/jamba-large-1.7.md)
   * [AIMLAPI](api-references/text-models-llm/aimlapi.md)

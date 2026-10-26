@@ -1138,10 +1138,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -1166,7 +1170,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -1182,10 +1186,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -1197,7 +1201,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -1211,13 +1215,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -2258,10 +2272,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -2286,7 +2304,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -2302,10 +2320,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -2317,7 +2335,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -2331,13 +2349,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -3673,10 +3701,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -3701,7 +3733,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -3717,10 +3749,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -3732,7 +3764,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -3746,13 +3778,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -5074,10 +5116,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -5102,7 +5148,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -5118,10 +5164,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -5133,7 +5179,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -5147,13 +5193,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -6297,10 +6353,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -6325,7 +6385,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -6341,10 +6401,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -6356,7 +6416,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -6370,13 +6430,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -11414,10 +11484,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -11442,7 +11516,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -11458,10 +11532,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -11473,7 +11547,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -11487,13 +11561,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
@@ -12638,10 +12722,14 @@
                           "decision_model": {
                             "type": "string",
                             "enum": [
+                              "typesafe/jev-1.14",
+                              "typesafe/jev-1.13",
                               "typesafe/jev",
-                              "liquid/d1"
+                              "liquid/d1",
+                              "liquid/d1.1",
+                              "liquid/d1-ultra"
                             ],
-                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev`. Only decision models are accepted here, never a chat model. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it."
+                            "description": "The decision model that picks each request's bucket. Default `typesafe/jev-1.14`. `typesafe/jev` is always the newest Jev; name a version to stay on it. Only decision models are accepted here, never a model that answers. Every judgement is billed at that model's catalogue price and listed as its own request in your usage; turns that need none (tool results, a forced bucket, a single bucket) pay nothing for it. It is shown the request's images, up to 8 — billed as its input tokens — and never resizes one: Jev reads PNG or JPEG of 280 to 1568 px a side; the Liquid models JPEG, PNG or WebP, up to 10,000 patches of 32 × 32 px in all and 4.5 MiB per request. A request whose own images do not fit is refused with a 400 that says what to change, before anything is charged."
                           },
                           "buckets": {
                             "type": "array",
@@ -12666,7 +12754,7 @@
                                     "anyOf": [
                                       {
                                         "type": "string",
-                                        "description": "A chat model id, as you would pass it in `model` (see `GET /v1/models`)."
+                                        "description": "A model id, as you would pass it in `model` (see `GET /v1/models`): a chat, image or video model."
                                       },
                                       {
                                         "type": "object",
@@ -12682,10 +12770,10 @@
                                         "description": "The same model id, as an object: `{ \"model\": \"<id>\" }`."
                                       }
                                     ],
-                                    "description": "A chat model this bucket may answer with."
+                                    "description": "A model this bucket may answer with."
                                   },
-                                  "maxItems": 5,
-                                  "description": "1 to 5 chat models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size) answers, and if it fails the next one does. Only chat models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is an empty assistant message (`content: \"\"`, `finish_reason: \"stop\"`) whose `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
+                                  "maxItems": 10,
+                                  "description": "1 to 10 models, in the order to try them: the first one that can take the request (its tools, images, JSON schema and context size; on image and video generation, every input image field it sets) answers, and if it fails the next one does. Chat, image and video models side by side: a request takes the bucket's models of its own kind — a chat completion its chat models, an image generation its image models — and a bucket with none of its kind sends it on to the next bucket that has one (`meta.router.spilled_from`). Only models we serve — not routers, not decision models. Models you list run with your request's own settings, reasoning included. Or none (`[]`): a request the decision model puts in this bucket ends at the decision — no model is called, and the response is empty in its endpoint's shape (an assistant message with `content: \"\"` and `finish_reason: \"stop\"`; `data: []` for images; a video generation `completed` with `video: null`) and its `meta.router` says `\"routed\": false` and names the bucket, so your code acts on it. Only the judgement is charged. Not on a single bucket, which is never judged."
                                 }
                               },
                               "required": [
@@ -12697,7 +12785,7 @@
                             },
                             "minItems": 1,
                             "maxItems": 10,
-                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra`."
+                            "description": "Your buckets, 1 to 10: they replace the default buckets entirely. With two or more, each needs a `when`, and the decision model picks the one that fits each request. A single bucket is a fallback chain — every request goes to it, with no judgement. Left out: the default buckets — `light` (\"Needs little capability: greetings and small talk, one-line or lookup answers, common knowledge, short routine tasks such as a short piece of writing, a quick rewrite or simple arithmetic — a small, fast model answers it well\"): `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`, `google/gemini-3-1-flash-lite`, `google/gemini-3-5-flash-lite`; `standard` (\"Needs a capable model: multi-step tasks that need care and accuracy\"): `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5.5`; `heavy` (\"Needs the strongest model: complex reasoning, hard math or proofs, large or tricky code, expert-level or research-grade knowledge\"): `anthropic/claude-opus-5.5`, `openai/gpt-6-astra` — which route conversations only (chat completions, the Responses API, the Messages API: on each, the models of a bucket served there); image and video requests need buckets of your own."
                           },
                           "default_bucket": {
                             "type": "string",
@@ -12711,13 +12799,23 @@
                             "type": "number",
                             "minimum": 0,
                             "maximum": 1,
-                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for."
+                            "description": "Below this confidence in its answer (0 to 1), a request goes to `default_bucket` instead (`meta.router.reason`: `unsure`) — for example, send what the decision model is unsure about to your strongest bucket. The judgement is still paid for. On a ladder an unsure turn never moves the conversation up, so a high value keeps conversations on the first rung: measured at 0.9, 40–45% of explicit conversations stayed there."
+                          },
+                          "ladder": {
+                            "type": "boolean",
+                            "description": "Your buckets are a ladder's rungs: the first is the strictest, each next one more relaxed, and a last one may list no models (`models: []`), where a conversation ends. A conversation only moves down: each new turn — the previous reply and the new message — is judged against every rung, and the conversation goes to the lowest one it needs, and stays — never up: a rung above it keeps it where it is. It climbs back only once what moved it is gone from its history. Send each answer's `meta.router.state` back as `router.state`: with it only what is new is judged, and the conversation stays on its rung's model; without it, or when it does not fit the conversation, the whole conversation is judged again, two windows of 2,000 characters at a time, the newest first, at most 24 judgements — each billed as its own request; a conversation takes up to 5,000 messages, and a turn up to about 288,000 characters of new text. An unsure or failed judgement takes `default_bucket` but never moves a conversation up: name your last rung as `default_bucket` to fail closed. A turn returning tool results goes back to the model that made the calls, unjudged, while nothing new but the model's own calls comes with it. A model that cannot take a turn is passed over for one of a rung below, never above. `force_bucket` is not allowed. Only the user’s and the assistant’s messages are judged — their text and images — never your instructions (`system`) or tool results; an image the decision model cannot be shown (past its limits, or a link we could not store) takes `default_bucket`. A judgement that fails moves nothing for good: what it was to judge is judged again with the next turns, and given up on, at `default_bucket`, only after failing on its own three turns running.",
+                            "example": true
+                          },
+                          "state": {
+                            "type": "string",
+                            "maxLength": 1024,
+                            "description": "With `ladder: true`: the previous answer's `meta.router.state`, unchanged. A Responses turn that continues a stored response (`previous_response_id`) needs none: the response keeps its own."
                           }
                         },
                         "additionalProperties": false,
-                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, it routes like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. A conversation stays on its model while its turns land in the same bucket; a turn returning tool results always goes back to the model that made the calls. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement and its charge) and which model answered in `meta.model` — the router itself when the bucket lists no models. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged.",
+                        "description": "How `aimlapi/dynamic-router` routes this request. Every setting is optional: left out, or `{}`, a conversation — chat completions, Responses, Messages — routes by the default buckets, like `typesafe/jev-router`; a setting you leave out keeps its default, and `buckets`, when given, are the whole table. The same `router` serves chat completions, the Responses API, the Messages API, image generation and editing, and video generation: the decision model judges the request's text — on media, its prompt — and its images, and the request takes the models of its own kind from the bucket. A conversation stays on its model while its turns land in the same bucket, and a turn returning tool results always goes back to the model that made the calls. A Responses turn that continues a stored response (`previous_response_id`) is judged like any other turn and runs only on a model served where that response is kept: it stays with the model that wrote it while it lands in that model's bucket, and a bucket with no models ends it at the decision. The response says where the request went in `meta.router` (`routed`, bucket, reason, the decision model's choice and confidence, the judgement, its charge and the images it was shown) and which model answered in `meta.model` — the router itself when the bucket lists no models; on video, on the submit's response; on a Messages stream, on its `message_stop` event. An invalid configuration is answered with a 400 that names each setting to fix, before anything is charged. In a multipart request (an image edit sending its picture as a file), send `router` as its JSON, in one text field.",
                         "example": {
-                          "decision_model": "typesafe/jev",
+                          "decision_model": "typesafe/jev-1.14",
                           "buckets": [
                             {
                               "name": "check",
