@@ -883,6 +883,7 @@
 * [Web Search](capabilities/web-search.md)
 * [Batch Processing](capabilities/batch-processing.md)
 * [Request Tracing and Cost Headers](capabilities/request-tracing-and-cost.md)
+* [Safety Guidance](capabilities/safety-guidance.md)
 * [Model comparison](capabilities/models-comparsion.md)
 
 ***
