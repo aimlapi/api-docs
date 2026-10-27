@@ -1,0 +1,69 @@
+name: Notify documentation deploys in Slack
+
+on:
+  workflow_run:
+    workflows: ["Deploy Chat Assets", "Deploy Openapi Assets", "Deploy Snippets Assets"]
+    types: [in_progress, completed]
+  status:
+
+permissions: {}
+
+jobs:
+  notify:
+    if: >-
+      github.event_name == 'workflow_run' ||
+      github.event.context == 'GitBook - docs.aimlapi.com/'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      # These events can access secrets. No upstream code or artifacts are executed.
+      - name: Send documentation notification
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ vars.SLACK_CHANNEL_DOCS }}
+        with:
+          script: |
+            const repository = `${context.repo.owner}/${context.repo.repo}`;
+            let lines;
+            if (context.eventName === 'status') {
+              const event = context.payload;
+              // GitBook emits a second generic sync status; use only the site publish status.
+              if (event.context !== 'GitBook - docs.aimlapi.com/') return;
+              const state = { pending: 'publishing', success: 'published', failure: 'publish failed', error: 'publish error' }[event.state];
+              if (!state) return;
+              const icon = event.state === 'success' ? '✅' : event.state === 'pending' ? '🚀' : '❌';
+              lines = [`${icon} Documentation site: ${state}`, 'Site: https://docs.aimlapi.com/',
+                `Commit: ${event.sha.slice(0, 9)}`, `https://github.com/${repository}/commit/${event.sha}`];
+            } else {
+              const run = context.payload.workflow_run;
+              if (run.repository.full_name !== repository) return;
+              const state = context.payload.action === 'completed' ? run.conclusion : 'started';
+              const icon = state === 'success' ? '✅' : state === 'started' ? '🚀' : state === 'cancelled' ? '⏹️' : '❌';
+              lines = [`${icon} Documentation asset pipeline: ${state}`, `Workflow: ${run.name}`,
+                `Ref: ${run.head_branch} · Commit: ${run.head_sha.slice(0, 9)}`, `Attempt: ${run.run_attempt}`, run.html_url];
+            }
+            const token = process.env.SLACK_BOT_TOKEN;
+            const channel = process.env.SLACK_CHANNEL;
+            if (!token || !channel) {
+              core.setFailed('Configure SLACK_BOT_TOKEN and SLACK_CHANNEL_DOCS in Actions settings.');
+              return;
+            }
+            try {
+              const response = await fetch('https://slack.com/api/chat.postMessage', {
+                method: 'POST',
+                headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json; charset=utf-8' },
+                body: JSON.stringify({ channel, text: lines.join('\n'), mrkdwn: false, parse: 'none', unfurl_links: false, unfurl_media: false }),
+                signal: AbortSignal.timeout(15000),
+              });
+              const result = await response.json();
+              if (!response.ok || result.ok !== true) {
+                const code = typeof result.error === 'string' && /^[a-z0-9_]{1,64}$/.test(result.error) && !result.error.includes(token)
+                  ? result.error : 'unknown_error';
+                core.setFailed(`Slack notification failed: HTTP ${response.status}, ${code}.`);
+                return;
+              }
+              core.info('Documentation deploy notification delivered.');
+            } catch {
+              core.setFailed('Slack notification request failed or timed out.');
+            }
