@@ -29,11 +29,11 @@ jobs:
           node-version: 20
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@12.15.0
 
       - name: Install dependencies
         working-directory: ./packages/snippets
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build project
         working-directory: ./packages/snippets
