@@ -1,5 +1,18 @@
 # Code Snippets
 
+## Legacy bundle publishing
+
+This guide describes the custom CDN snippets bundle. Normal documentation pages and
+their uploaded media are published by GitBook. The custom Chat and Snippets asset
+workflows run manually from GitHub Actions; pushing documentation changes to `main`
+does not publish these bundles.
+
+Keep these manual workflows available for legacy integrations, including the custom
+chat plugin referenced by the hidden `docs/integrations/793.md` test page. Before
+running either publisher, configure valid matching MinIO/S3 credentials in the
+repository's `production` environment. The existing CDN bundles are left in place.
+GitBook publication and its Slack notifications are independent of these workflows.
+
 ## How to Use
 
 ### Presequences
@@ -118,4 +131,14 @@ Examples of written scripts can be found in the [/shared/snippets](/shared/snipp
 > **Warning**: Ensure you use kebab-case notation for folders and files. Preferably use camel case notation for templating values to avoid conflicts when they are converted automatically from data attributes.
 > 
 ## Deploying
-After pushing changes to the `main` branch, they automatically propagate and are applied. In some cases, there might be a delay in seeing the results due to script caching by Cloudflare.
+
+After merging a legacy bundle change into `main`:
+
+1. Confirm that the legacy integration is still needed and that the `production`
+   environment has valid matching MinIO/S3 credentials.
+2. In GitHub Actions, select **Deploy Snippets Assets** (or **Deploy Chat Assets**
+   for the custom chat bundle), then **Run workflow** on the `main` branch.
+3. Wait for the build, upload and Cloudflare cache-purge steps to succeed. In some
+   cases cached scripts may take time to refresh.
+
+Normal GitBook content publication does not require running either legacy publisher.
