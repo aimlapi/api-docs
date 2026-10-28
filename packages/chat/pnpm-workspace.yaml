@@ -1,0 +1,4 @@
+# Keep dependency install scripts reviewed and reproducible in CI.
+strictDepBuilds: true
+allowBuilds:
+  esbuild@0.21.5: true
