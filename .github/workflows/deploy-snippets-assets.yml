@@ -1,9 +1,9 @@
 name: Deploy Snippets Assets
 
 on:
-  push:
-    branches:
-      - main
+  # Legacy custom snippets bundle. GitBook publishes the documentation site separately.
+  # Run manually only when this integration needs publishing and storage credentials are valid.
+  workflow_dispatch:
 
 jobs:
   # dumps:
