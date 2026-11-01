@@ -695,6 +695,8 @@
     * [Hailuo 2.3 Fast](api-references/video-models/minimax/hailuo-2.3-fast.md)
     * [MiniMax H3](api-references/video-models/MiniMax/h3.md)
     * [MiniMax H3 Max](api-references/video-models/MiniMax/h3-max.md)
+  * [Minimax AI](api-references/video-models/Minimax-AI/README.md)
+    * [Minimax H3 Highspeed](api-references/video-models/Minimax-AI/minimax-h3-highspeed.md)
   * [OpenAI](api-references/video-models/openai/README.md)
     * [Sora 2 t2v](api-references/video-models/openai/sora-2-t2v.md)
     * [Sora 2 i2v](api-references/video-models/openai/sora-2-i2v.md)
