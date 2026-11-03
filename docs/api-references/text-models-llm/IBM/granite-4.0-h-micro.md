@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Granite 4.0 Micro
 
 {% columns %}
