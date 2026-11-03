@@ -6,8 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `openai/gpt-realtime-2.1`
-
-Alias: `gpt-realtime-2.1`
+* `gpt-realtime-2.1`
 {% endhint %}
 {% endcolumn %}
 
@@ -16,34 +15,23 @@ Alias: `gpt-realtime-2.1`
 {% endcolumn %}
 {% endcolumns %}
 
-## Model Overview
-
 OpenAI's speech-to-speech model for live voice agents: it listens to streamed audio, detects the end of the user's turn, and answers with speech and text in the same session, with function calling. For a cheaper, faster variant see [GPT Realtime 2.1 Mini](gpt-realtime-2.1-mini.md).
 
-General information about realtime sessions (authentication, client secrets, billing, limits, close codes) is on the [Realtime Models](../) overview page.
+## Setup your API Key
 
-{% hint style="success" %}
-[Create AI/ML API Key](https://aimlapi.com/app/keys)
-{% endhint %}
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Protocol and endpoint
+## API Schema
+
+The model is served over a WebSocket in the OpenAI Realtime protocol. Client events, billing, limits and errors are described in [Realtime Sessions](../../../capabilities/realtime-sessions.md#openai-realtime).
 
 | | |
 | --- | --- |
-| Protocol | OpenAI Realtime (GA event names), compatible with the official OpenAI SDKs (`client.realtime.connect` in Python, `OpenAIRealtimeWS` in Node.js) |
-| Server endpoint | `wss://api.aimlapi.com/v1/realtime?model=openai/gpt-realtime-2.1` with `Authorization: Bearer <YOUR_AIMLAPI_KEY>` |
-| Browser endpoint | The same URL, with subprotocols `realtime` and `openai-insecure-api-key.<client secret>` |
+| Connection URL | `wss://api.aimlapi.com/v1/realtime?model=openai/gpt-realtime-2.1` |
+| Authentication | Server: `Authorization: Bearer <YOUR_AIMLAPI_KEY>`. Browser: subprotocols `realtime` and `openai-insecure-api-key.<client secret>` ([client secrets](../../../capabilities/realtime-sessions.md#browsers-client-secrets)) |
 | SDK base URL | `https://api.aimlapi.com/v1` |
-| Max session length | 60 minutes |
-| Idle timeout | 300 seconds |
 
-### Client events
-
-`session.update`, `input_audio_buffer.append`, `input_audio_buffer.commit`, `input_audio_buffer.clear`, `conversation.item.create`, `conversation.item.retrieve`, `conversation.item.truncate`, `conversation.item.delete`, `response.create`, `response.cancel`.
-
-All server events from the model (`session.created`, `response.output_audio.delta`, `response.output_text.delta`, `response.done`, and so on) are passed to you as OpenAI sends them, except `rate_limits.updated`.
-
-### Session options
+Session options (`session.update`):
 
 | Option | Values |
 | --- | --- |
@@ -58,32 +46,7 @@ All server events from the model (`session.created`, `response.output_audio.delt
 | `tools` | Up to 32 `function` tools, each JSON schema up to 64 KiB |
 | `tool_choice` | `auto`, `none`, `required`, or a named function |
 
-A `conversation.item.create` accepts `message` items (`input_text`, `input_audio`, `output_text` parts) and `function_call_output` items.
-
-### Platform rules
-
-* **Responses are reserved before they start.** With turn detection on, the model still answers every turn automatically; the platform starts each response as soon as its worst-case cost has been reserved. Only one response runs at a time: a second `response.create` while one is in progress gets `conversation_already_has_active_response`.
-* **Output and context caps.** Each response produces at most 4,096 output tokens, and the conversation is truncated once it passes 32,000 tokens after the instructions.
-* **Not available:** input audio transcription (`audio.input.transcription` with a model), image input, stored prompts (`prompt`), `tracing`, `truncation`, `include`, `turn_detection.idle_timeout_ms`, out-of-band responses (`response.input`, `conversation: "none"`), custom voices, and tools other than `function` (remote MCP, hosted tools). Such a field is refused with an `error` event that names it.
-
-## Pricing
-
-Billed **per response**, from the token usage OpenAI reports in `response.done`. Idle time is free.
-
-| Token type | USD per 1M tokens |
-| --- | --- |
-| Input text | 4.00 |
-| Input text, cached | 0.40 |
-| Output text | 24.00 |
-| Input audio | 32.00 |
-| Input audio, cached | 0.40 |
-| Output audio | 64.00 |
-
-Every response re-reads the conversation so far, the instructions and the tool definitions as input. If a response ends without a usage report, it is charged by estimate: 10 tokens per second of user audio and 20 tokens per second of model audio. The live price is in [`GET /v1/realtime/models`](../#listing-models-and-prices).
-
 ## Code Example
-
-A spoken reply to a text message: the model's audio arrives as base64 PCM16 (24 kHz) in `response.output_audio.delta` events, its transcript in `response.output_audio_transcript.delta`.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -210,6 +173,19 @@ ws.on("unexpected-response", (_req, res) => {
 {% endtab %}
 {% endtabs %}
 
-To stream a microphone instead, send `input_audio_buffer.append` events with base64 PCM16 chunks (up to 256 KiB each). With the default `server_vad` turn detection the model answers when the user stops speaking.
+<details>
 
-The official OpenAI SDKs work too: set the base URL to `https://api.aimlapi.com/v1` (see the [overview example](../#code-example)).
+<summary>Response</summary>
+
+The example prints the transcript of the spoken reply (`response.output_audio_transcript.delta`), then the token usage from `response.done`, and saves the audio (`response.output_audio.delta`, base64 PCM16 at 24 kHz) to `reply.pcm`. Values in angle brackets are placeholders.
+
+{% code overflow="wrap" %}
+```
+<transcript of the spoken reply>
+Usage: <the usage object of response.done>
+```
+{% endcode %}
+
+</details>
+
+The official OpenAI SDKs work too: set the base URL to `https://api.aimlapi.com/v1` (see the [SDK example](../../../capabilities/realtime-sessions.md#code-example-with-the-openai-sdks)).

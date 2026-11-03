@@ -6,8 +6,9 @@
 This documentation is valid for the following list of our models:
 
 * `x-ai/grok-voice-think-fast-2.0`
-
-Aliases: `grok-voice-think-fast-2.0`, `x-ai/grok-voice-latest`, `grok-voice-latest`
+* `grok-voice-think-fast-2.0`
+* `x-ai/grok-voice-latest`
+* `grok-voice-latest`
 {% endhint %}
 {% endcolumn %}
 
@@ -16,35 +17,22 @@ Aliases: `grok-voice-think-fast-2.0`, `x-ai/grok-voice-latest`, `grok-voice-late
 {% endcolumn %}
 {% endcolumns %}
 
-## Model Overview
+xAI's voice agent model. It speaks the OpenAI Realtime event names with xAI's own session shape and is billed by session duration; `x-ai/grok-voice-latest` and `grok-voice-latest` always open a session on `x-ai/grok-voice-think-fast-2.0`.
 
-xAI's voice agent model. It speaks the OpenAI Realtime event names with xAI's own session shape: a top-level `voice` and `turn_detection`, a choice of JSON or raw binary audio transport, a reasoning effort switch, pronunciation replacements, and scripted lines (`force_message`). It is billed by session duration.
+## Setup your API Key
 
-`x-ai/grok-voice-latest` and `grok-voice-latest` are accepted as aliases and always open a session on `x-ai/grok-voice-think-fast-2.0`.
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-General information about realtime sessions (authentication, client secrets, billing, limits, close codes) is on the [Realtime Models](../) overview page.
+## API Schema
 
-{% hint style="success" %}
-[Create AI/ML API Key](https://aimlapi.com/app/keys)
-{% endhint %}
-
-## Protocol and endpoint
+The model is served over a WebSocket in the xAI realtime voice protocol. Client events, billing, limits and errors are described in [Realtime Sessions](../../../capabilities/realtime-sessions.md#xai-realtime-voice).
 
 | | |
 | --- | --- |
-| Protocol | xAI realtime voice (OpenAI Realtime event names, xAI session shape) |
-| Server endpoint | `wss://api.aimlapi.com/v1/realtime?model=x-ai/grok-voice-think-fast-2.0` with `Authorization: Bearer <YOUR_AIMLAPI_KEY>` |
-| Browser endpoint | The same URL, with subprotocols `realtime` and `openai-insecure-api-key.<client secret>` |
-| Max session length | 60 minutes |
-| Idle timeout | 120 seconds without any client message (a warning arrives at 100 seconds) |
+| Connection URL | `wss://api.aimlapi.com/v1/realtime?model=x-ai/grok-voice-think-fast-2.0` |
+| Authentication | Server: `Authorization: Bearer <YOUR_AIMLAPI_KEY>`. Browser: subprotocols `realtime` and `openai-insecure-api-key.<client secret>` ([client secrets](../../../capabilities/realtime-sessions.md#browsers-client-secrets)) |
 
-### Client events
-
-`session.update`, `input_audio_buffer.append`, `input_audio_buffer.commit`, `input_audio_buffer.clear`, `conversation.item.create`, `conversation.item.delete`, `conversation.item.truncate`, `response.create`, `response.cancel`.
-
-A `conversation.item.create` accepts `message` items (text and audio parts), `function_call`, `function_call_output` (only as the answer to a function call of the session, once) and `force_message` (one assistant `output_text` line of up to 1,000 characters, spoken verbatim).
-
-### Session options (`session.update`)
+Session options (`session.update`):
 
 | Option | Values |
 | --- | --- |
@@ -59,26 +47,7 @@ A `conversation.item.create` accepts `message` items (text and audio parts), `fu
 | `audio.output.speed` | 0.7 – 1.5 |
 | `tools` | Up to 32 function tools in xAI's shape: `{"type": "function", "function": {"name", "description", "parameters"}}` |
 
-To send binary audio frames, first set `session.audio.input.transport` to `binary`; events are always JSON text frames.
-
-### Platform rules
-
-* **Server VAD only.** Push-to-talk (`turn_detection: null` or another type) is refused with `turn_detection_locked`, because it would change how xAI bills the session.
-* **Not available:** xAI's server tools (`web_search`, `x_search`, `file_search`, remote `mcp`), session resumption (`resumption_not_supported`), custom voices (`unsupported_voice`), and changing the model of a running session (`model_locked`).
-* **Text items per window.** Each 30-second billing window covers up to 10 text items; past that, a `conversation.item.create` gets an `error` event `text_item_limit` until the next window starts.
-
-## Pricing
-
-| What | Price |
-| --- | --- |
-| Session time | **$0.08 per minute**, charged per second of open session, idle time included |
-| Each `conversation.item.create` you send (a `function_call_output` excepted) | **$0.004** |
-
-The session time is measured by our clock from connection to close. The live price is in [`GET /v1/realtime/models`](../#listing-models-and-prices).
-
 ## Code Example
-
-Sends one text message (billed as one text item) and prints the event types of the reply. A little audio is appended every few seconds as well, where a real client would stream the microphone.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -199,3 +168,20 @@ ws.on("message", (data) => {
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+The example sends one text message (billed as one text item), appends a little audio every few seconds where a real client would stream the microphone, and prints the type of every server event until `response.done`. Values in angle brackets are placeholders.
+
+{% code overflow="wrap" %}
+```
+<event type>
+<event type>
+...
+response.done
+```
+{% endcode %}
+
+</details>

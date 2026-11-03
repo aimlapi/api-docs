@@ -891,6 +891,7 @@
 
 * [Completion and Chat Completion](capabilities/completion-or-chat-models.md)
 * [Streaming Mode](capabilities/streaming-mode.md)
+* [Realtime Sessions](capabilities/realtime-sessions.md)
 * [Code Generation](capabilities/code-generation.md)
 * [Function Calling](capabilities/function-calling.md)
 * [Thinking / Reasoning](capabilities/thinking-reasoning.md)
