@@ -6,8 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `openai/gpt-live-1`
-
-Alias: `gpt-live-1`
+* `gpt-live-1`
 {% endhint %}
 {% endcolumn %}
 
@@ -16,35 +15,23 @@ Alias: `gpt-live-1`
 {% endcolumn %}
 {% endcolumns %}
 
-## Model Overview
-
 OpenAI's live voice model for continuous spoken conversations. A GPT-Live session takes a continuous audio stream, is configured once in its first event, and is billed by its duration rather than by tokens.
 
-General information about realtime sessions (authentication, client secrets, billing, limits, close codes) is on the [Realtime Models](../) overview page.
+## Setup your API Key
 
-{% hint style="success" %}
-[Create AI/ML API Key](https://aimlapi.com/app/keys)
-{% endhint %}
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Protocol and endpoint
+## API Schema
+
+The model is served over a WebSocket in the OpenAI GPT-Live protocol. The session flow, client events, billing, limits and errors are described in [Realtime Sessions](../../../capabilities/realtime-sessions.md#gpt-live).
 
 | | |
 | --- | --- |
-| Protocol | OpenAI GPT-Live, compatible with the official OpenAI Node.js SDK (`LiveWS`) |
-| Server endpoint | `wss://api.aimlapi.com/v1/live/sessions` with `Authorization: Bearer <YOUR_AIMLAPI_KEY>` (no `?model=`: the model is named in `session.start`) |
-| Browser endpoint | The same URL, with subprotocols `realtime` and `openai-insecure-api-key.<client secret>`; mint the secret with `"session": {"type": "live", "model": "openai/gpt-live-1"}` |
+| Connection URL | `wss://api.aimlapi.com/v1/live/sessions` (no `?model=`: the model is named in `session.start`) |
+| Authentication | Server: `Authorization: Bearer <YOUR_AIMLAPI_KEY>`. Browser: subprotocols `realtime` and `openai-insecure-api-key.<client secret>` ([client secrets](../../../capabilities/realtime-sessions.md#browsers-client-secrets)) |
 | SDK base URL | `https://api.aimlapi.com/v1` |
-| Max session length | 60 minutes |
-| Idle timeout | 120 seconds without any client message (a warning arrives at 100 seconds) |
 
-### Session flow
-
-1. Open the socket and send **`session.start`** as the first event, within 10 seconds. Its `session.model` must be `openai/gpt-live-1` or `gpt-live-1`; any other first event closes the session with `1008 invalid_first_frame`. A `session.start` with a refused option gets an `error` event, and you can send a corrected one.
-2. Wait for **`session.started`**, then stream input audio continuously with `session.input_audio.append`.
-3. Receive the model's speech in `session.output_audio.delta` and cumulative billed seconds in `session.usage.updated`.
-4. Send **`session.close`**; the session ends with `session.closed`, which carries the final usage.
-
-### `session.start` options
+Session options (`session.start`, the first event, sent once):
 
 | Option | Values |
 | --- | --- |
@@ -56,22 +43,7 @@ General information about realtime sessions (authentication, client secrets, bil
 | `delegation` | `{"type": "client"}` only (applied automatically) |
 | `store` | `false` only (applied automatically) |
 
-### Client events after the start
-
-`session.input_audio.append`, `session.input_audio.mute`, `session.input_audio.unmute`, `session.instructions.append`, `session.thinking.append`, `session.commentary.append` (up to 4,096 characters of `content` each), `session.close`.
-
-### Platform rules
-
-* **The session cannot be changed once started**: `session.update` is refused (`session_immutable`), and a second `session.start` too (`session_already_started`).
-* **Not available:** Responses delegation (`delegation.type: "responses"`, `response.create`, `response.item.create`: `delegation_not_supported`), stored sessions (`store: true`: `store_not_supported`), custom voices (`unsupported_voice`), and binary WebSocket frames (closes with `1003`).
-
-## Pricing
-
-**$0.05 per minute** of open session, charged per second from the session seconds OpenAI reports. Idle and muted time is billed; close the session when the conversation ends. The live price is in [`GET /v1/realtime/models`](../#listing-models-and-prices).
-
 ## Code Example
-
-Starts a session, streams 10 seconds of audio (silence here, in 100 ms chunks), then closes it in order and prints the billed seconds.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -187,5 +159,19 @@ ws.on("close", (code, reason) => console.log("Closed", code, reason.toString()))
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+The example streams 10 seconds of audio (silence, in 100 ms chunks), closes the session with `session.close`, and prints the final usage that `session.closed` carries. Values in angle brackets are placeholders.
+
+{% code overflow="wrap" %}
+```
+Final usage: <the usage object of session.closed>
+```
+{% endcode %}
+
+</details>
 
 With the official OpenAI Node.js SDK, create the client with `baseURL: "https://api.aimlapi.com/v1"` and open the session with its `LiveWS` class; the events are the same.

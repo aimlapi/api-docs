@@ -6,8 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `google/gemini-3.8-live`
-
-Alias: `gemini-3.8-live`
+* `gemini-3.8-live`
 {% endhint %}
 {% endcolumn %}
 
@@ -16,46 +15,24 @@ Alias: `gemini-3.8-live`
 {% endcolumn %}
 {% endcolumns %}
 
-## Model Overview
-
 Google's Live API model for real-time voice and video conversations: it takes streamed speech, text and camera or screen frames, and answers with speech or text, with function calling. Sessions speak Google's Gemini Live protocol, so the official Google GenAI SDKs work with only the base URL changed.
 
-General information about realtime sessions (authentication, client secrets, billing, limits, close codes) is on the [Realtime Models](../) overview page.
+## Setup your API Key
 
-{% hint style="success" %}
-[Create AI/ML API Key](https://aimlapi.com/app/keys)
-{% endhint %}
+If you don’t have an API key for the AI/ML API yet, feel free to use our [Quickstart guide](https://docs.aimlapi.com/quickstart/setting-up).
 
-## Protocol and endpoint
+## API Schema
+
+The model is served over a WebSocket in the Gemini Live protocol. Client messages, billing, limits and errors are described in [Realtime Sessions](../../../capabilities/realtime-sessions.md#gemini-live).
 
 | | |
 | --- | --- |
-| Protocol | Gemini Live (`BidiGenerateContent`), compatible with the official Google GenAI SDKs (`client.aio.live.connect` in Python, `ai.live.connect` in JavaScript) |
+| Connection URL (API key) | `wss://api.aimlapi.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent` (`v1alpha` also works), with the key in `x-goog-api-key` or `Authorization: Bearer` |
+| Connection URL (client secret) | `wss://api.aimlapi.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContentConstrained` (`v1beta` also works), with the secret as `access_token` or in `Authorization: Token` ([client secrets](../../../capabilities/realtime-sessions.md#browsers-client-secrets)) |
 | SDK base URL | `https://api.aimlapi.com` |
-| Server endpoint (API key) | `wss://api.aimlapi.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent` (`v1alpha` also works), with the key in `x-goog-api-key` or `Authorization: Bearer` |
-| Client secret endpoint | `wss://api.aimlapi.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContentConstrained` (`v1beta` also works), with the secret as `access_token` or in `Authorization: Token` |
-| Max session length | 10 minutes |
-| Idle timeout | 300 seconds without any client message |
+| JavaScript SDK | `@google/genai` sends a plain API key in the URL, which is refused (`400 credential_in_query`): pass a client secret as its API key with `apiVersion: "v1alpha"`, as in the example below |
 
-The model is named in the first `setup` message, which must arrive within 10 seconds of connecting. Accepted forms: `gemini-3.8-live`, `google/gemini-3.8-live`, `models/gemini-3.8-live`, `models/google/gemini-3.8-live`. Another model, or another first message, closes the session with `1008 invalid_first_frame`. The `setup` is sent once.
-
-{% hint style="warning" %}
-**JavaScript SDK:** with a plain API key, `@google/genai` sends the key in the URL (`?key=`), which is refused (`400 credential_in_query`). From JavaScript, mint a [client secret](../#browsers-client-secrets) on your server and pass it to the SDK as its API key with `apiVersion: "v1alpha"`, as in the example below. The Python SDK sends the key in a header and works with either.
-{% endhint %}
-
-Client secrets for this model are minted with `{"session": {"model": "google/gemini-3.8-live"}}`, come in the form `auth_tokens/aiml_ek_…`, and are valid for at most 60 seconds.
-
-### Client messages
-
-`setup` (first message only), `clientContent` (`turns`, `turnComplete`), `realtimeInput` (`audio`, `video`, `text`, `activityStart`, `activityEnd`, `audioStreamEnd`), `toolResponse` (`functionResponses`). Field names may be camelCase or snake_case.
-
-| Input | Accepted |
-| --- | --- |
-| Audio | Raw 16-bit PCM at 16 kHz (`audio/pcm` or `audio/pcm;rate=16000`), up to 256 KiB per message |
-| Images / video frames | `image/jpeg`, `image/png`, `image/webp`, up to 1 MiB each |
-| Text | Up to 32,768 characters per part |
-
-### `setup` options
+Session options (`setup`, the first message, sent once within 10 seconds of connecting; `model` is `gemini-3.8-live`, `google/gemini-3.8-live`, `models/gemini-3.8-live` or `models/google/gemini-3.8-live`):
 
 | Option | Values |
 | --- | --- |
@@ -70,29 +47,7 @@ Client secrets for this model are minted with `{"session": {"model": "google/gem
 | `outputAudioTranscription` | Transcript of the model's speech |
 | `historyConfig.initialHistoryInClientContent` | `true` or `false` |
 
-### Platform rules
-
-* **Context compression.** Past 32,000 tokens the conversation is compressed down to 16,000 tokens (your own `contextWindowCompression` is replaced).
-* **No resumption.** A session ends at its 10-minute limit; resuming with a `sessionResumption.handle` is refused (`session_resumption_not_supported`). Open a new session instead.
-* **Not available:** input audio transcription (`input_transcription_not_supported`), Google Search and every tool other than function declarations, `thinkingConfig`, avatar video and the `VIDEO` response modality, cloned or multi-speaker voices, `safetySettings`, `labels`, proactive audio, and `fileData` parts.
-
-## Pricing
-
-Billed **per turn**, from the token usage Google reports when the turn completes. Each turn is charged for the whole conversation context it re-reads plus its new input. There is no discount for cached input.
-
-| Token type | USD per 1M tokens |
-| --- | --- |
-| Input text | 0.75 |
-| Input audio | 3.00 |
-| Input image / video | 1.00 |
-| Output text (the answer, its reasoning and the output transcription) | 4.50 |
-| Output audio | 12.00 |
-
-If a turn ends without a usage report, it is charged by estimate: 25 tokens per second of audio in each direction. The live price is in [`GET /v1/realtime/models`](../#listing-models-and-prices).
-
 ## Code Example
-
-One typed turn with a spoken answer, through the official Google GenAI SDKs.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -186,3 +141,18 @@ session.close();
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+The example sends one typed turn and collects the spoken answer (raw PCM16 audio) until the turn is complete. The Python version prints the token usage Google reports and the size of the received audio. Values in angle brackets are placeholders.
+
+{% code overflow="wrap" %}
+```
+Usage: <the usage_metadata of the turn>
+Received <N> bytes of audio
+```
+{% endcode %}
+
+</details>
