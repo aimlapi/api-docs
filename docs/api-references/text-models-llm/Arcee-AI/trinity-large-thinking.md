@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Trinity Large Thinking
 
 {% columns %}
