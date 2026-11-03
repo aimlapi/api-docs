@@ -21,6 +21,10 @@ We support multiple voice/speech models. You can find the [complete list](./#all
 [voice-chat](voice-chat/)
 {% endcontent-ref %}
 
+{% hint style="info" %}
+For live, two-way voice conversations over a WebSocket (speech in, speech out, with interruptions), see [Realtime Models](../realtime-models/).
+{% endhint %}
+
 ## All Available Voice/Speech Models
 
 ### [Speech-to-Text](speech-to-text/)
