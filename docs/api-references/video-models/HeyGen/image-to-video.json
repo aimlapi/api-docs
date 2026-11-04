@@ -1,0 +1,271 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "heygen/image-to-video"
+                    ]
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the image to animate. Allowed formats: JPEG, PNG. The image must show a clear human face."
+                  },
+                  "script": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 5000,
+                    "description": "Text the avatar speaks (max 5000 characters). Provide either script or audio_url."
+                  },
+                  "voice_id": {
+                    "type": "string",
+                    "description": "HeyGen voice ID. Required with script."
+                  },
+                  "audio_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the audio the avatar lip-syncs to. Allowed formats: MP3, WAV; up to 30 minutes. The video lasts as long as the audio. Provide either script or audio_url."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "16:9",
+                      "9:16",
+                      "1:1",
+                      "4:5",
+                      "5:4",
+                      "auto"
+                    ],
+                    "default": "auto",
+                    "description": "\"auto\" keeps the aspect ratio of the source (16:9 when it cannot be read)."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "720p",
+                      "1080p"
+                    ],
+                    "default": "720p",
+                    "description": "Output resolution. Does not change the price."
+                  },
+                  "voice_settings": {
+                    "type": "object",
+                    "properties": {
+                      "speed": {
+                        "type": "number",
+                        "minimum": 0.5,
+                        "maximum": 1.5,
+                        "default": 1,
+                        "description": "Speech speed multiplier, from 0.5 to 1.5."
+                      },
+                      "pitch": {
+                        "type": "number",
+                        "minimum": -50,
+                        "maximum": 50,
+                        "default": 0,
+                        "description": "Pitch shift, from -50 to 50."
+                      },
+                      "volume": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "default": 1,
+                        "description": "Volume, from 0 to 1."
+                      },
+                      "locale": {
+                        "type": "string",
+                        "description": "Accent locale of the voice, for example \"en-US\"."
+                      }
+                    },
+                    "description": "Voice tuning for script. Ignored with audio_url."
+                  },
+                  "motion_prompt": {
+                    "type": "string",
+                    "maxLength": 1000,
+                    "description": "Natural-language direction for body motion and hand gestures (max 1000 characters)."
+                  },
+                  "expressiveness": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ],
+                    "default": "low",
+                    "description": "Energy and range of facial and body movement."
+                  }
+                },
+                "required": [
+                  "model",
+                  "image_url"
+                ],
+                "title": "heygen/image-to-video"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "format": "uri",
+                              "description": "The URL where the file can be downloaded from.",
+                              "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                            }
+                          },
+                          "required": [
+                            "url"
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL where the file can be downloaded from.",
+                                "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        },
+                        {
+                          "nullable": true
+                        }
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"heygen/image-to-video\", \"image_url\": \"https://example.com/input.jpg\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"heygen/image-to-video\",\n  \"image_url\": \"https://example.com/input.jpg\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'heygen/image-to-video', 'image_url': 'https://example.com/input.jpg'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
