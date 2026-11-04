@@ -634,6 +634,7 @@
     * [HeyGen Image to Video](api-references/video-models/HeyGen/image-to-video.md)
     * [HeyGen Lipsync Precision](api-references/video-models/HeyGen/lipsync-precision.md)
     * [HeyGen Lipsync Speed](api-references/video-models/HeyGen/lipsync-speed.md)
+    * [HeyGen Video 1 Image to Video](api-references/video-models/HeyGen/video-1-image-to-video.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [V1 Standard text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
     * [V1 Standard image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
