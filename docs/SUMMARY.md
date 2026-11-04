@@ -639,6 +639,7 @@
     * [HeyGen Video 1 Text to Video](api-references/video-models/HeyGen/video-1-text-to-video.md)
     * [HeyGen Video Translation Audio Only](api-references/video-models/HeyGen/video-translation-audio-only.md)
     * [HeyGen Video Translation Precision](api-references/video-models/HeyGen/video-translation-precision.md)
+    * [HeyGen Video Translation Speed](api-references/video-models/HeyGen/video-translation-speed.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [V1 Standard text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
     * [V1 Standard image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
