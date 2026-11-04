@@ -387,6 +387,7 @@
     * [Ox Alpha](api-references/text-models-llm/Stealth/ox-alpha.md)
     * [Union Alpha](api-references/text-models-llm/Stealth/union-alpha.md)
     * [Space Bunny Alpha](api-references/text-models-llm/Stealth/space-bunny-alpha.md)
+    * [Crouton Alpha](api-references/text-models-llm/Stealth/crouton-alpha.md)
   * [StepFun](api-references/text-models-llm/stepfun/README.md)
     * [Step3.7 Flash](api-references/text-models-llm/stepfun/step3.7-flash.md)
     * [Step 5 Preview](api-references/text-models-llm/StepFun/step-5-preview.md)
