@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # LFM2.5-2.6B
 hidden: true
 noIndex: true
