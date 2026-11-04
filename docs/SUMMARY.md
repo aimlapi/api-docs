@@ -630,6 +630,7 @@
   * [HeyGen](api-references/video-models/HeyGen/README.md)
     * [HeyGen Avatar III](api-references/video-models/HeyGen/avatar-iii.md)
     * [HeyGen Avatar IV](api-references/video-models/HeyGen/avatar-iv.md)
+    * [HeyGen Avatar V](api-references/video-models/HeyGen/avatar-v.md)
   * [Kling AI](api-references/video-models/Kling-AI/README.md)
     * [V1 Standard text-to-video](api-references/video-models/Kling-AI/v1-standard-text-to-video.md)
     * [V1 Standard image-to-video](api-references/video-models/Kling-AI/v1-standard-image-to-video.md)
