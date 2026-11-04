@@ -795,6 +795,7 @@
       * [Eleven v4 Turbo](api-references/speech-models/text-to-speech/elevenlabs/eleven_v4_turbo.md)
     * [HeyGen](api-references/speech-models/text-to-speech/HeyGen/README.md)
       * [HeyGen Voice 1](api-references/speech-models/text-to-speech/HeyGen/voice-1.md)
+      * [HeyGen Voice 1 Turbo](api-references/speech-models/text-to-speech/HeyGen/voice-1-turbo.md)
     * [Hume AI](api-references/speech-models/text-to-speech/hume-ai/README.md)
       * [Octave 2](api-references/speech-models/text-to-speech/hume-ai/octave-2.md)
     * [Inworld](api-references/speech-models/text-to-speech/inworld/README.md)
