@@ -1,0 +1,359 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/edits": {
+      "post": {
+        "operationId": "_v1_images_edits",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "openai/gpt-image-2.6-sunburst"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 32000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
+                  },
+                  "image": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "buffer": {
+                            "nullable": true
+                          },
+                          "mimetype": {
+                            "type": "string"
+                          },
+                          "size": {
+                            "type": "integer"
+                          },
+                          "originalname": {
+                            "type": "string"
+                          },
+                          "encoding": {
+                            "type": "string"
+                          },
+                          "fieldname": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mimetype",
+                          "originalname",
+                          "encoding",
+                          "fieldname"
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "buffer": {
+                              "nullable": true
+                            },
+                            "mimetype": {
+                              "type": "string"
+                            },
+                            "size": {
+                              "type": "integer"
+                            },
+                            "originalname": {
+                              "type": "string"
+                            },
+                            "encoding": {
+                              "type": "string"
+                            },
+                            "fieldname": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "mimetype",
+                            "originalname",
+                            "encoding",
+                            "fieldname"
+                          ]
+                        },
+                        "minItems": 1,
+                        "maxItems": 16
+                      }
+                    ],
+                    "description": "The image(s) to edit. Must be a supported image file or an array of images. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images."
+                  },
+                  "mask": {
+                    "type": "object",
+                    "properties": {
+                      "buffer": {
+                        "nullable": true
+                      },
+                      "mimetype": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "integer"
+                      },
+                      "originalname": {
+                        "type": "string"
+                      },
+                      "encoding": {
+                        "type": "string"
+                      },
+                      "fieldname": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "mimetype",
+                      "originalname",
+                      "encoding",
+                      "fieldname"
+                    ],
+                    "description": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image."
+                  },
+                  "markup": {
+                    "type": "object",
+                    "properties": {
+                      "buffer": {
+                        "nullable": true
+                      },
+                      "mimetype": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "integer"
+                      },
+                      "originalname": {
+                        "type": "string"
+                      },
+                      "encoding": {
+                        "type": "string"
+                      },
+                      "fieldname": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "mimetype",
+                      "originalname",
+                      "encoding",
+                      "fieldname"
+                    ],
+                    "description": "Transparent PNG with circles, arrows or notes over the first image, the same size as that image; describe the change in prompt. Not with mask."
+                  },
+                  "size": {
+                    "type": "string",
+                    "description": "Size of each image as WIDTHxHEIGHT, or auto. Width and height are multiples of 16, the aspect ratio is between 1:3 and 3:1, no edge exceeds 3840 pixels and the image has at most 8,294,400 pixels (at least 655,360 except for GIF frames). For GIF output, the size of one frame. Defaults to 1024x1024, or to auto for GIF output.",
+                    "example": "1536x1024"
+                  },
+                  "quality": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high",
+                      "xhigh",
+                      "max",
+                      "auto"
+                    ],
+                    "default": "medium",
+                    "description": "Rendering quality. xhigh and max cost more output tokens; auto lets the model choose."
+                  },
+                  "complexity": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ],
+                    "default": "high",
+                    "description": "How much the model plans the image before rendering, independently of quality. Higher complexity helps dense text and complex layouts and can add latency."
+                  },
+                  "background": {
+                    "type": "string",
+                    "enum": [
+                      "transparent",
+                      "opaque",
+                      "auto"
+                    ],
+                    "default": "auto",
+                    "description": "Background of the image. transparent needs output_format png or webp."
+                  },
+                  "moderation": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "auto"
+                    ],
+                    "default": "auto",
+                    "description": "Control the content-moderation level for images."
+                  },
+                  "response_format": {
+                    "type": "string",
+                    "enum": [
+                      "url",
+                      "b64_json"
+                    ],
+                    "default": "url",
+                    "description": "The format in which the generated images are returned."
+                  },
+                  "n": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10,
+                    "default": 1,
+                    "description": "Number of images to generate, from 1 to 10."
+                  },
+                  "frame_count": {
+                    "type": "integer",
+                    "minimum": 2,
+                    "maximum": 16,
+                    "description": "Number of GIF frames, from 2 to 16. Only with output_format gif. Defaults to 9."
+                  },
+                  "frame_duration_ms": {
+                    "type": "integer",
+                    "minimum": 20,
+                    "maximum": 655350,
+                    "description": "Delay per GIF frame in milliseconds, rounded to 10 ms. Only with output_format gif. Defaults to 200."
+                  },
+                  "output_compression": {
+                    "type": "integer",
+                    "nullable": true,
+                    "minimum": 0,
+                    "maximum": 100,
+                    "default": 100,
+                    "description": "Compression level (0-100%), applies to JPEG and WebP only."
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "png",
+                      "jpeg",
+                      "webp",
+                      "gif"
+                    ],
+                    "default": "png",
+                    "description": "Output format. gif returns an animation (see frame_count)."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image"
+                ],
+                "title": "openai/gpt-image-2.6-sunburst"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v1/images/edits' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"openai/gpt-image-2.6-sunburst\", \"prompt\": \"Describe what you want the model to generate.\", \"image\": \"<image>\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v1/images/edits', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"openai/gpt-image-2.6-sunburst\",\n  \"prompt\": \"Describe what you want the model to generate.\",\n  \"image\": \"<image>\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v1/images/edits\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'openai/gpt-image-2.6-sunburst', 'prompt': 'Describe what you want the model to generate.', 'image': '<image>'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}

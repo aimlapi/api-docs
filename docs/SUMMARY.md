@@ -541,6 +541,7 @@
     * [Gpt Image 2.5 Flare](api-references/image-models/openai/gpt-image-2.5-flare.md)
     * [Gpt Image 2.5 Sunburst](api-references/image-models/openai/gpt-image-2.5-sunburst.md)
     * [Gpt Image 2.6 Flare](api-references/image-models/openai/gpt-image-2.6-flare.md)
+    * [Gpt Image 2.6 Sunburst](api-references/image-models/openai/gpt-image-2.6-sunburst.md)
   * [RecraftAI](api-references/image-models/RecraftAI/README.md)
     * [Recraft v3](api-references/image-models/RecraftAI/recraft-v3.md)
   * [Reve](api-references/image-models/reve/README.md)
