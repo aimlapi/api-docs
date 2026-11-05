@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # HeyGen Video Translation Audio Only
 
 {% columns %}
