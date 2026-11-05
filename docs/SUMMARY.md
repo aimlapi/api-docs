@@ -630,6 +630,7 @@
     * [Veo 3.1 Lite Generate](api-references/video-models/google/veo-3.1-lite-generate.md)
     * [Gemini Omni Flash Preview](api-references/video-models/Google/gemini-omni-flash-preview.md)
     * [Gemini Omni 1.1 Flash](api-references/video-models/Google/gemini-omni-1-1-flash.md)
+    * [Gemini Omni 1.2 Flash](api-references/video-models/Google/gemini-omni-1.2-flash.md)
   * [HeyGen](api-references/video-models/HeyGen/README.md)
     * [HeyGen Avatar III](api-references/video-models/HeyGen/avatar-iii.md)
     * [HeyGen Avatar IV](api-references/video-models/HeyGen/avatar-iv.md)
