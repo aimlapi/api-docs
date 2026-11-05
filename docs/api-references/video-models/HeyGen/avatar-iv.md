@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # HeyGen Avatar IV
 
 {% columns %}
