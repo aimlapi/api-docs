@@ -1,0 +1,11 @@
+{
+  "title": "AI/ML API Documentation",
+  "url": "https://docs.aimlapi.com",
+  "links": [
+    { "title": "API Key", "url": "https://aimlapi.com/app/keys" },
+    { "title": "Models", "url": "https://aimlapi.com/models" },
+    { "title": "Playground", "url": "https://aimlapi.com/app/" },
+    { "title": "GitHub", "url": "https://github.com/aimlapi/api-docs" },
+    { "title": "Get Support", "url": "https://help.aimlapi.com" }
+  ]
+}
