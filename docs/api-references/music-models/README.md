@@ -13,7 +13,7 @@ We support multiple music models. You can find the [complete list](./#all-availa
 
 ## Quick Code Example
 
-Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](MiniMax/minimax-music-\[legacy].md) from MiniMax.
+Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](minimax/minimax-music-\[legacy].md) from MiniMax.
 
 <details>
 

@@ -42,7 +42,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="wan2-2-i2v-plus" path="/v2/generate/video/alibaba/generation" method="post" %}
-[OpenAPI wan2-2-i2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-i2v-plus.json)
+[OpenAPI wan2-2-i2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.2-i2v-plus.json)
 {% endopenapi-operation %}
 
 ### Fetch the video
@@ -51,7 +51,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="alibaba-fetch" path="/v2/generate/video/alibaba/generation" method="get" %}
-[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-turbo-pair.json)
+[OpenAPI alibaba-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.1-t2v-turbo-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

@@ -49,7 +49,7 @@ This endpoint creates and sends a video generation task to the server — and re
 For lip-sync input, you may supply text (`lip_sync_tts_content`) with a predefined voice (`lip_sync_tts_speaker`).
 
 {% openapi-operation spec="pixverse-v5-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI pixverse-v5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-text-to-video.json)
+[OpenAPI pixverse-v5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/pixverse/v5-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

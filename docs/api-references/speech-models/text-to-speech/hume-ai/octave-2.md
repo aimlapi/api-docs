@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="octave-2" path="/v1/tts" method="post" %}
-[OpenAPI octave-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Hume-AI/octave-2.json)
+[OpenAPI octave-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/hume-ai/octave-2.json)
 {% endopenapi-operation %}
 
 ## Code Example

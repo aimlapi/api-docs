@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="ltxv-2" path="/v2/video/generations" method="post" %}
-[OpenAPI ltxv-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/LTXV/ltxv-2.json)
+[OpenAPI ltxv-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ltxv/ltxv-2.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

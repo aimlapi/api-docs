@@ -54,5 +54,5 @@ Click the small speaker icon below any message to hear it read aloud:
 
 In the environment variables for ElizaOS, you can specify almost any of our [text models](../api-references/text-models-llm/#complete-text-model-list), including:
 
-* OpenAI ChatGPT ([openai/gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md), [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md), ...),
+* OpenAI ChatGPT ([openai/gpt-3.5-turbo](../api-references/text-models-llm/openai/gpt-3.5-turbo.md), [gpt-4-turbo](../api-references/text-models-llm/openai/gpt-4-turbo.md), ...),
 * Google Gemini ([google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET), ...)

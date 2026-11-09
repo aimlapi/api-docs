@@ -329,10 +329,10 @@ I'm an AI language model created by OpenAI, designed to assist with a wide range
 
 ## Supported models
 
-* OpenAI models ([gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md), [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md), [o1](../api-references/text-models-llm/OpenAI/o1.md), and others)
-* [Google models](../api-references/text-models-llm/Google/)
-* [Anthropic models](../api-references/text-models-llm/Anthropic/)
-* Many others, including [Qwen](../api-references/text-models-llm/Alibaba-Cloud/) and [DeepSeek](../api-references/text-models-llm/DeepSeek/)
+* OpenAI models ([gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/openai/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/openai/gpt-4-turbo.md), [o3-mini](../api-references/text-models-llm/openai/o3-mini.md), [o1](../api-references/text-models-llm/openai/o1.md), and others)
+* [Google models](../api-references/text-models-llm/google/)
+* [Anthropic models](../api-references/text-models-llm/anthropic/)
+* Many others, including [Qwen](../api-references/text-models-llm/alibaba-cloud/) and [DeepSeek](../api-references/text-models-llm/deepseek/)
 
 ***
 

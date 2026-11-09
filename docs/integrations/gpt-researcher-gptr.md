@@ -96,12 +96,12 @@ You can also use GPT Researcher to gather information about code documentation, 
 
 ## Our Supported Models
 
-* [OpenAI ChatGPT](../api-references/text-models-llm/OpenAI/)
-* [Google Gemini](../api-references/text-models-llm/Google/)
-* [Claude (Anthropic)](../api-references/text-models-llm/Anthropic/)
-* [Llama 3](../api-references/text-models-llm/Meta/)
-* [Grok](../api-references/text-models-llm/xAI/)
-* [Mistral](../api-references/text-models-llm/Mistral-AI/)
+* [OpenAI ChatGPT](../api-references/text-models-llm/openai/)
+* [Google Gemini](../api-references/text-models-llm/google/)
+* [Claude (Anthropic)](../api-references/text-models-llm/anthropic/)
+* [Llama 3](../api-references/text-models-llm/meta/)
+* [Grok](../api-references/text-models-llm/xai/)
+* [Mistral](../api-references/text-models-llm/mistral-ai/)
 * [Embedding models](../api-references/embedding-models/)
 
 To learn more about GPT Researcher, check out the [documentation page](https://docs.gptr.dev/docs/gpt-researcher/getting-started/introduction).

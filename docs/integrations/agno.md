@@ -64,9 +64,9 @@ agent.print_response("Tell me, why is the sky blue in 2 sentences")
 
 ## **Our Supported models**
 
-* All OpenAI-compatible models ([gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/OpenAI/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md), [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md), [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md), [o1](../api-references/text-models-llm/OpenAI/o1.md), etc),
-* [Google models](../api-references/text-models-llm/Google/),
-* [Anthropic models](../api-references/text-models-llm/Anthropic/) is only partially supported and only via `api.aimlapi.com/v2` base URL,
+* All OpenAI-compatible models ([gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/openai/gpt-4o-mini.md), [gpt-4-turbo](../api-references/text-models-llm/openai/gpt-4-turbo.md), [gpt-3.5-turbo](../api-references/text-models-llm/openai/gpt-3.5-turbo.md), [o3-mini](../api-references/text-models-llm/openai/o3-mini.md), [o1](../api-references/text-models-llm/openai/o1.md), etc),
+* [Google models](../api-references/text-models-llm/google/),
+* [Anthropic models](../api-references/text-models-llm/anthropic/) is only partially supported and only via `api.aimlapi.com/v2` base URL,
 * and some other models (the list is constantly being updated).
 
 ## **Supported features**

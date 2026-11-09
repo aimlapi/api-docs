@@ -44,7 +44,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 </details>
 
 {% openapi-operation spec="gemini-2-5-flash-image-edit" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-2.5-flash-image-edit.json)
+[OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/gemini-2.5-flash-image-edit.json)
 {% endopenapi-operation %}
 
 ## Quick Example

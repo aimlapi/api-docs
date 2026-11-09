@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="seed-1-8" path="/v1/chat/completions" method="post" %}
-[OpenAPI seed-1-8](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ByteDance/seed-1-8.json)
+[OpenAPI seed-1-8](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/bytedance/seed-1-8.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -74,7 +74,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="step-3-7-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI step-3-7-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/StepFun/step-3.7-flash.json)
+[OpenAPI step-3-7-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stepfun/step-3.7-flash.json)
 {% endopenapi-operation %}
 
 ## Code Example

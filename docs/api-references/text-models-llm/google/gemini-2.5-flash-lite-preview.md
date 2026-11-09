@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemini-2-5-flash-lite-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-2-5-flash-lite-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-2.5-flash-lite-preview.json)
+[OpenAPI gemini-2-5-flash-lite-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-2.5-flash-lite-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

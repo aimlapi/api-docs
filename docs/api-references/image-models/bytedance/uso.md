@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="uso" path="/v1/images/generations" method="post" %}
-[OpenAPI uso](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/uso.json)
+[OpenAPI uso](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/bytedance/uso.json)
 {% endopenapi-operation %}
 
 ## Quick Example

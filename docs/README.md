@@ -12,7 +12,7 @@ Open the API reference and copy a working example to integrate it into your code
 
 **Trending Models**
 
-<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Pro-Grade Image Model</td><td><a href=".gitbook/assets/nano_banana_2_cover_v3.png">nano_banana_2_cover_v3.png</a></td><td><a href="api-references/image-models/google/gemini-3.1-flash-image.md">gemini-3.1-flash-image.md</a></td></tr><tr><td align="center">Frontier AI Reasoning Model</td><td><a href=".gitbook/assets/ChatGPT Image Sep 2, 2026, 06_52_40 PM.png">ChatGPT Image Sep 2, 2026, 06_52_40 PM.png</a></td><td><a href="api-references/text-models-llm/Anthropic/claude-fable-5.1.md">claude-fable-5.1.md</a></td></tr><tr><td align="center">Fast Video Generation</td><td><a href=".gitbook/assets/seedance-2-5-cover.png">seedance-2-5-cover.png</a></td><td><a href="api-references/video-models/ByteDance/dreamina-seedance-2-5.md">dreamina-seedance-2-5.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Pro-Grade Image Model</td><td><a href=".gitbook/assets/nano_banana_2_cover_v3.png">nano_banana_2_cover_v3.png</a></td><td><a href="api-references/image-models/google/gemini-3.1-flash-image.md">gemini-3.1-flash-image.md</a></td></tr><tr><td align="center">Frontier AI Reasoning Model</td><td><a href=".gitbook/assets/ChatGPT Image Sep 2, 2026, 06_52_40 PM.png">ChatGPT Image Sep 2, 2026, 06_52_40 PM.png</a></td><td><a href="api-references/text-models-llm/anthropic/claude-fable-5.1.md">claude-fable-5.1.md</a></td></tr><tr><td align="center">Fast Video Generation</td><td><a href=".gitbook/assets/seedance-2-5-cover.png">seedance-2-5-cover.png</a></td><td><a href="api-references/video-models/bytedance/dreamina-seedance-2-5.md">dreamina-seedance-2-5.md</a></td></tr></tbody></table>
 
 ***
 
@@ -72,11 +72,11 @@ If you've already made your choice and know the model ID, use the [Search panel]
 {% endtab %}
 
 {% tab title="Models by DEVELOPER" %}
-**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/Alibaba-Cloud/) [Image](api-references/video-models/alibaba-cloud/) [Video](api-references/image-models/alibaba-cloud/) [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/) [Embedding](api-references/embedding-models/alibaba-cloud/)
+**Alibaba Cloud**: [Text/Chat](api-references/text-models-llm/alibaba-cloud/) [Image](api-references/video-models/alibaba-cloud/) [Video](api-references/image-models/alibaba-cloud/) [Text-to-Speech](api-references/speech-models/text-to-speech/alibaba-cloud/) [Embedding](api-references/embedding-models/alibaba-cloud/)
 
-**Anthracite**: [Text/Chat](api-references/text-models-llm/Anthracite/)
+**Anthracite**: [Text/Chat](api-references/text-models-llm/anthracite/)
 
-<mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/Anthropic/) [Embedding](api-references/embedding-models/Anthropic/)
+<mark style="background-color:green;">**Anthropic**</mark>: [Text/Chat](api-references/text-models-llm/anthropic/) [Embedding](api-references/embedding-models/anthropic/)
 
 **Assembly AI:** [Speech-To-Text](api-references/speech-models/speech-to-text/assembly-ai/)
 
@@ -84,17 +84,17 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **ByteDance**: [Text/Chat](api-references/text-models-llm/bytedance/) [Image](api-references/video-models/bytedance/) [Video](api-references/image-models/bytedance/)
 
-**Cohere**: [Text/Chat](api-references/text-models-llm/Cohere/)
+**Cohere**: [Text/Chat](api-references/text-models-llm/cohere/)
 
-<mark style="background-color:green;">**DeepSeek**</mark>: [Text/Chat](api-references/text-models-llm/DeepSeek/)
+<mark style="background-color:green;">**DeepSeek**</mark>: [Text/Chat](api-references/text-models-llm/deepseek/)
 
-**Deepgram**: [Speech-To-Text](api-references/speech-voice-models/stt/Deepgram/) [Text-to-Speech](api-references/speech-voice-models/tts/Deepgram/)
+**Deepgram**: [Speech-To-Text](api-references/speech-voice-models/stt/deepgram/) [Text-to-Speech](api-references/speech-voice-models/tts/deepgram/)
 
 <mark style="background-color:green;">**ElevenLabs**</mark>**:** [Text-to-Speech](api-references/speech-models/text-to-speech/elevenlabs/) [Voice Chat](api-references/speech-models/voice-chat/elevenlabs/) [Music](api-references/music-models/elevenlabs/)
 
 <mark style="background-color:green;">**Flux**</mark>: [Image](api-references/image-models/flux/)
 
-**Google**: [Text/Chat](api-references/text-models-llm/Google/) [Image](api-references/image-models/google/) [Video](api-references/video-models/google/) [Music](api-references/vision-models/ocr-optical-character-recognition/google/) [Vision(OCR)](api-references/music-models/google/) [Embedding](api-references/embedding-models/Google/)
+**Google**: [Text/Chat](api-references/text-models-llm/google/) [Image](api-references/image-models/google/) [Video](api-references/video-models/google/) [Music](api-references/vision-models/ocr-optical-character-recognition/google/) [Vision(OCR)](api-references/music-models/google/) [Embedding](api-references/embedding-models/google/)
 
 **Gryphe**: [Text/Chat](api-references/text-models-llm/gryphe/)
 
@@ -102,33 +102,33 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Inworld**: [Text-to-Speech](api-references/speech-models/text-to-speech/inworld/)
 
-<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/) [Video](api-references/video-models/Kling-AI/)
+<mark style="background-color:green;">**Kling AI**</mark>: [Image](api-references/image-models/kling-ai/) [Video](api-references/video-models/kling-ai/)
 
 **Krea**: [Video](api-references/video-models/krea/)
 
 **LTXV**: [Video](api-references/video-models/ltxv/)
 
-**Meta**: [Text/Chat](api-references/text-models-llm/Meta/)
+**Meta**: [Text/Chat](api-references/text-models-llm/meta/)
 
 **Microsoft**: [Text-to-Speech](api-references/speech-models/text-to-speech/microsoft/)
 
-<mark style="background-color:green;">**MiniMax**</mark>: [Text/Chat](api-references/text-models-llm/MiniMax/) [Video](api-references/video-models/MiniMax/) [Music](api-references/music-models/MiniMax/) [Voice-Chat](api-references/speech-models/voice-chat/)
+<mark style="background-color:green;">**MiniMax**</mark>: [Text/Chat](api-references/text-models-llm/minimax/) [Video](api-references/video-models/minimax/) [Music](api-references/music-models/minimax/) [Voice-Chat](api-references/speech-models/voice-chat/)
 
-**Mistral AI**: [Text/Chat](api-references/text-models-llm/Mistral-AI/) [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
+**Mistral AI**: [Text/Chat](api-references/text-models-llm/mistral-ai/) [Vision(OCR)](api-references/vision-models/ocr-optical-character-recognition/mistral-ai/)
 
 **Moonshot**: [Text/Chat](api-references/text-models-llm/moonshot/)
 
 **NousResearch**: [Text/Chat](api-references/text-models-llm/nousresearch/)
 
-**NVIDIA**: [Text/Chat](api-references/text-models-llm/NVIDIA/)
+**NVIDIA**: [Text/Chat](api-references/text-models-llm/nvidia/)
 
-<mark style="background-color:green;">**OpenAI**</mark>: [Text/Chat](api-references/text-models-llm/OpenAI/) [Image](api-references/image-models/OpenAI/) [Speech-To-Text](api-references/speech-voice-models/stt/OpenAI/) [Embedding](api-references/embedding-models/OpenAI/)
+<mark style="background-color:green;">**OpenAI**</mark>: [Text/Chat](api-references/text-models-llm/openai/) [Image](api-references/image-models/openai/) [Speech-To-Text](api-references/speech-voice-models/stt/openai/) [Embedding](api-references/embedding-models/openai/)
 
 **Perplexity**: [Text/Chat](api-references/text-models-llm/perplexity/)
 
 **PixVerse:** [Video](api-references/video-models/pixverse/)
 
-**RecraftAI**: [Image](api-references/image-models/RecraftAI/)
+**RecraftAI**: [Image](api-references/image-models/recraftai/)
 
 **Reve**: [Image](api-references/image-models/reve/)
 
@@ -136,7 +136,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **Sber AI**: [Video](api-references/video-models/sber-ai/)
 
-<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/Stability-AI/) [Music](api-references/music-models/Stability-AI/) [3D-Generation](api-references/3d-generating-models/Stability-AI/)
+<mark style="background-color:green;">**Stability AI**</mark>: [Image](api-references/image-models/stability-ai/) [Music](api-references/music-models/stability-ai/) [3D-Generation](api-references/3d-generating-models/stability-ai/)
 
 **StepFun**: [Text/Chat](api-references/text-models-llm/stepfun/)
 
@@ -144,7 +144,7 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 **VEED**: [Video](api-references/video-models/veed/)
 
-**xAI**: [Text/Chat](api-references/text-models-llm/xAI/) [Image](api-references/image-models/xai/) [Video](api-references/video-models/xai/)
+**xAI**: [Text/Chat](api-references/text-models-llm/xai/) [Image](api-references/image-models/xai/) [Video](api-references/video-models/xai/)
 
 **Zhipu**: [Text/Chat](api-references/text-models-llm/zhipu/)
 {% endtab %}
@@ -184,4 +184,4 @@ If you've already made your choice and know the model ID, use the [Search panel]
 
 ## Going Deeper
 
-<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/glossary">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/errors-and-messages">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/faq">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="api-references/text-models-llm/Anthropic/">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="409.4000244140625"></th><th valign="top"></th></tr></thead><tbody><tr><td><p><strong>Use more text model capabilities in your project:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/completion-or-chat-models.md">​Completion and Chat Completion</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/function-calling.md">Function Calling</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/streaming-mode.md">Streaming Mode</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/image-to-text-vision.md">Vision in Text Models (Image-to-Text)</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/code-generation.md">Code Generation</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/thinking-reasoning.md">Thinking / Reasoning</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="capabilities/web-search.md">Web Search</a><br><br></p></td><td valign="top"><p><strong>Miscellaneous</strong>:<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f517">🔗</span> <a href="integrations/our-integration-list.md">Integrations</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d7">📗</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/glossary">Glossary</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/errors-and-messages">Errors and Messages</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="2753">❓</span> <a href="https://app.gitbook.com/s/ROMd1X5PuqtikJ48n2N9/faq">FAQ </a>​</p><p><br></p></td></tr><tr><td><strong>Learn more about developer-specific features:</strong><br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="api-references/text-models-llm/anthropic/">Features of Anthropic Models</a><br></td><td valign="top"></td></tr></tbody></table>

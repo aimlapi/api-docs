@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen3-vl-32b-thinking" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-vl-32b-thinking](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3-vl-32b-thinking.json)
+[OpenAPI qwen3-vl-32b-thinking](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.json)
 {% endopenapi-operation %}
 
 ## Code Example

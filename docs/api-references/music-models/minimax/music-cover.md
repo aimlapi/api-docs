@@ -46,7 +46,7 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 This endpoint generates a music piece based on the prompt (which includes style instructions) and the provided lyrics. It returns a generation task ID, its status, and related metadata.
 
 {% openapi-operation spec="music-cover" path="/v2/generate/audio" method="post" %}
-[OpenAPI music-cover](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-cover.json)
+[OpenAPI music-cover](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/minimax/music-cover.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>

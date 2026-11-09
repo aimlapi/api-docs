@@ -40,7 +40,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 
 
 {% openapi-operation spec="video-v3-standard-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v3-standard-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v3-standard-image-to-video.json)
+[OpenAPI video-v3-standard-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/video-v3-standard-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

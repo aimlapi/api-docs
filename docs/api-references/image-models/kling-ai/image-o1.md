@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="image-o1" path="/v1/images/generations" method="post" %}
-[OpenAPI image-o1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Kling-AI/image-o1.json)
+[OpenAPI image-o1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/kling-ai/image-o1.json)
 {% endopenapi-operation %}
 
 ## Quick Example

@@ -67,8 +67,8 @@ Accepted values are `low`, `medium`, and `high`. Lower levels prioritize speed a
 
 Supported models:
 
-* [o1](../api-references/text-models-llm/OpenAI/o1.md)
-* [o3-mini](../api-references/text-models-llm/OpenAI/o3-mini.md)
+* [o1](../api-references/text-models-llm/openai/o1.md)
+* [o3-mini](../api-references/text-models-llm/openai/o3-mini.md)
 * [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
 * [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
 * [openai/o3-2025-04-16](../api-references/text-models-llm/openai/o3.md)

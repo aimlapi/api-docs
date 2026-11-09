@@ -49,7 +49,7 @@ _So next time you see a raccoon, remember: it’s not just a fluffy animal—it�
 
 </details>
 
-We use [gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md) model to extract text from the document, sending the PDF as base64. Here's the code:
+We use [gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md) model to extract text from the document, sending the PDF as base64. Here's the code:
 
 <details>
 
@@ -143,7 +143,7 @@ Raccoons are very social. Young raccoons love to play—tumbling in the grass, h
 
 We decided to implement two Text-to-Speech processing options to let our models compete!
 
-We compared a specialized TTS model ([Aura](../api-references/speech-voice-models/tts/Deepgram/aura.md) by Deepgram) with a chat model that has audio capabilities ([GPT-4o Audio Preview](/broken/pages/sm6uVrlNwwgMyBoKqoU3) by OpenAI).
+We compared a specialized TTS model ([Aura](../api-references/speech-voice-models/tts/deepgram/aura.md) by Deepgram) with a chat model that has audio capabilities ([GPT-4o Audio Preview](/broken/pages/sm6uVrlNwwgMyBoKqoU3) by OpenAI).
 
 For the chat model, we had to tweak the settings — like increasing [`max_completion_tokens`](#user-content-fn-1)[^1] — and come up with a smart prompt that left no room for the model to creatively rephrase the original text: _"You are just a speaker. You read text aloud without any distortions or additions. Read from the very beginning, including all the headers"_.
 
@@ -165,7 +165,7 @@ Audio saved to: c:\Users\user\Documents\Python Scripts\What Are Raccoons.pdf.wav
 
 ## Full Code Example
 
-### TTS model: [Aura](../api-references/speech-voice-models/tts/Deepgram/aura.md)
+### TTS model: [Aura](../api-references/speech-voice-models/tts/deepgram/aura.md)
 
 :white\_check\_mark: Advantages of the model: it's more affordable and provides a total of 12 voices, covering both male and female types.
 

@@ -91,7 +91,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="nemotron-3-ultra-550b-a55b" path="/v1/chat/completions" method="post" %}
-[OpenAPI nemotron-3-ultra-550b-a55b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/NVIDIA/nemotron-3-ultra-550b-a55b.json)
+[OpenAPI nemotron-3-ultra-550b-a55b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/nvidia/nemotron-3-ultra-550b-a55b.json)
 {% endopenapi-operation %}
 
 ## Code Example

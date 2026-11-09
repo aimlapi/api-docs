@@ -46,7 +46,7 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 ## API Schema
 
 {% openapi-operation spec="dreamina-creative-upscale" path="/v1/images/generations" method="post" %}
-[OpenAPI dreamina-creative-upscale](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/dreamina-creative-upscale.json)
+[OpenAPI dreamina-creative-upscale](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/bytedance/dreamina-creative-upscale.json)
 {% endopenapi-operation %}
 
 ## Quick Example

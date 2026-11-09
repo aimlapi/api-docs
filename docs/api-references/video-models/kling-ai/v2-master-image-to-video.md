@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-Compared to [v1.6](../Kling-AI/v1.6-pro-image-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
+Compared to [v1.6](../kling-ai/v1.6-pro-image-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
 
 ## Setup your API Key
 
@@ -45,7 +45,7 @@ However, you can still call this model using the legacy URL that includes the ve
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="kling-v2-master-i2v" path="/v2/video/generations" method="post" %}
-[OpenAPI kling-v2-master-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v2-master-image-to-video.json)
+[OpenAPI kling-v2-master-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/v2-master-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

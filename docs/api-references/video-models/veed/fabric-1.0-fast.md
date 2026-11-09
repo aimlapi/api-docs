@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="fabric-1-0-fast" path="/v2/video/generations" method="post" %}
-[OpenAPI fabric-1-0-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/VEED/ffabric-1.0-fast.json)
+[OpenAPI fabric-1-0-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/veed/ffabric-1.0-fast.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="m2-her" path="/v1/chat/completions" method="post" %}
-[OpenAPI m2-her](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/MiniMax/m2-her.json)
+[OpenAPI m2-her](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/minimax/m2-her.json)
 {% endopenapi-operation %}
 
 ## Code Example

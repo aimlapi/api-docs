@@ -17,7 +17,7 @@ Today, we’re going to bring a page from a children’s encyclopedia to life �
 Here’s the plan:
 
 1. Take an article from some free encyclopedia for children. (Of course, you can use a children's story, short illustrated tales, or any other suitable content.) To keep it simple, we’ll focus only on text and illustrations.
-2. Based on each illustration, a smart multimodal[^1] chat model [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) comes up with a short video idea — a little scene that matches the content. Model generates a video model prompt.
+2. Based on each illustration, a smart multimodal[^1] chat model [**gpt-4o**](../api-references/text-models-llm/openai/gpt-4o.md) comes up with a short video idea — a little scene that matches the content. Model generates a video model prompt.
 3. With this prompt, generate a 5-second video using video model and download the generated video from the server.
 4. Convert it to a GIF using any free online tool.
 5. Replace the original static image with the animated GIF.
@@ -60,7 +60,7 @@ _So next time you see a raccoon, remember: it’s not just a fluffy animal—it�
 
 <figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
 
-2. Let’s have the multimodal [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) model analyze the image and suggest a prompt for the video:
+2. Let’s have the multimodal [**gpt-4o**](../api-references/text-models-llm/openai/gpt-4o.md) model analyze the image and suggest a prompt for the video:
 
 <details>
 
@@ -136,7 +136,7 @@ The raccoon's paw gently ripples the stream as tiny leaves float by; the trees s
 
 </details>
 
-3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model [**kling-video/v1.6/pro/image-to-video**](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md) from Kling AI.
+3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model [**kling-video/v1.6/pro/image-to-video**](../api-references/video-models/kling-ai/v1.6-pro-image-to-video.md) from Kling AI.
 
 <details>
 
@@ -301,7 +301,7 @@ Processing complete:\n {'id': '9e4c45e7-5785-42f3-8271-ce8a8b31dd04:kling-video/
 
 <figure><img src="../.gitbook/assets/изображение (3).png" alt="" width="479"><figcaption></figcaption></figure>
 
-5. You can also ask any chat model (e.g., [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md)) to generate a web page with the original text and the GIF animations placed in the same spots as the original illustrations.
+5. You can also ask any chat model (e.g., [**gpt-4o**](../api-references/text-models-llm/openai/gpt-4o.md)) to generate a web page with the original text and the GIF animations placed in the same spots as the original illustrations.
 
 ## Results
 

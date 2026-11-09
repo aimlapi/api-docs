@@ -74,7 +74,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen3-7-plus" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-7-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3.7-plus.json)
+[OpenAPI qwen3-7-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/alibaba-cloud/qwen3.7-plus.json)
 {% endopenapi-operation %}
 
 ## Code Example

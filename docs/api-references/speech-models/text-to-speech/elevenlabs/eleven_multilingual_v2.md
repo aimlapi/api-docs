@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="eleven-multilingual-v2" path="/v1/tts" method="post" %}
-[OpenAPI eleven-multilingual-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/eleven_multilingual_v2.json)
+[OpenAPI eleven-multilingual-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/elevenlabs/eleven_multilingual_v2.json)
 {% endopenapi-operation %}
 
 ## Code Example

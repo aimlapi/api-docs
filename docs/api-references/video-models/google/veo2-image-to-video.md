@@ -43,7 +43,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API.
 
 {% openapi-operation spec="veo2-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI veo2-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/Veo2-Image-to-Video.json)
+[OpenAPI veo2-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/Veo2-Image-to-Video.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

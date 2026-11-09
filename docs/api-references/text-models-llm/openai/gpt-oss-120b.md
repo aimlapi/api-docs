@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gpt-oss-120b" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-oss-120b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-oss-120b.json)
+[OpenAPI gpt-oss-120b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-oss-120b.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="command-a" path="/v1/chat/completions" method="post" %}
-[OpenAPI command-a](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Cohere/command-a.json)
+[OpenAPI command-a](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/cohere/command-a.json)
 {% endopenapi-operation %}
 
 ## Code Example

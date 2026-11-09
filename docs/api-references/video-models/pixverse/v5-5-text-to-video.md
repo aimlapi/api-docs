@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="v5-5-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI v5-5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5.5-text-to-video.json)
+[OpenAPI v5-5-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/pixverse/v5.5-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

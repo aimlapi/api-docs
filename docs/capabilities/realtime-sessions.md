@@ -46,11 +46,11 @@ Realtime models are not listed by the general `GET /v1/models` endpoint. Use `GE
 
 | Model ID | Developer | Protocol | Billing | Max session |
 | --- | --- | --- | --- | --- |
-| [openai/gpt-realtime-2.1](../api-references/realtime-models/OpenAI/gpt-realtime-2.1.md) | OpenAI | OpenAI Realtime | Tokens, per response | 60 min |
-| [openai/gpt-realtime-2.1-mini](../api-references/realtime-models/OpenAI/gpt-realtime-2.1-mini.md) | OpenAI | OpenAI Realtime | Tokens, per response | 60 min |
-| [openai/gpt-live-1](../api-references/realtime-models/OpenAI/gpt-live-1.md) | OpenAI | GPT-Live | Per second of session | 60 min |
-| [x-ai/grok-voice-think-fast-2.0](../api-references/realtime-models/xAI/grok-voice-think-fast-2.0.md) | xAI | OpenAI Realtime (xAI dialect) | Per second of session + per text item | 60 min |
-| [google/gemini-3.8-live](../api-references/realtime-models/Google/gemini-3.8-live.md) | Google | Gemini Live | Tokens, per turn | 10 min |
+| [openai/gpt-realtime-2.1](../api-references/realtime-models/openai/gpt-realtime-2.1.md) | OpenAI | OpenAI Realtime | Tokens, per response | 60 min |
+| [openai/gpt-realtime-2.1-mini](../api-references/realtime-models/openai/gpt-realtime-2.1-mini.md) | OpenAI | OpenAI Realtime | Tokens, per response | 60 min |
+| [openai/gpt-live-1](../api-references/realtime-models/openai/gpt-live-1.md) | OpenAI | GPT-Live | Per second of session | 60 min |
+| [x-ai/grok-voice-think-fast-2.0](../api-references/realtime-models/xai/grok-voice-think-fast-2.0.md) | xAI | OpenAI Realtime (xAI dialect) | Per second of session + per text item | 60 min |
+| [google/gemini-3.8-live](../api-references/realtime-models/google/gemini-3.8-live.md) | Google | Gemini Live | Tokens, per turn | 10 min |
 
 Model IDs are case-sensitive. Each model also accepts the aliases listed on its page (for example, `gpt-realtime-2.1` for `openai/gpt-realtime-2.1`). `x-ai/grok-voice-latest` and `grok-voice-latest` always open a session on `x-ai/grok-voice-think-fast-2.0`.
 
@@ -280,7 +280,7 @@ The connection URL, authentication and session options of each model are on its 
 
 ### OpenAI Realtime
 
-Models: [GPT Realtime 2.1](../api-references/realtime-models/OpenAI/gpt-realtime-2.1.md), [GPT Realtime 2.1 Mini](../api-references/realtime-models/OpenAI/gpt-realtime-2.1-mini.md). GPT Realtime 2.1 Mini is the smaller, lower-cost version of GPT Realtime 2.1, with the same protocol, session options and platform rules.
+Models: [GPT Realtime 2.1](../api-references/realtime-models/openai/gpt-realtime-2.1.md), [GPT Realtime 2.1 Mini](../api-references/realtime-models/openai/gpt-realtime-2.1-mini.md). GPT Realtime 2.1 Mini is the smaller, lower-cost version of GPT Realtime 2.1, with the same protocol, session options and platform rules.
 
 | | |
 | --- | --- |
@@ -304,7 +304,7 @@ A `conversation.item.create` accepts `message` items (`input_text`, `input_audio
 
 ### GPT-Live
 
-Model: [GPT-Live](../api-references/realtime-models/OpenAI/gpt-live-1.md). A GPT-Live session takes a continuous audio stream, is configured once in its first event, and is billed by its duration rather than by tokens.
+Model: [GPT-Live](../api-references/realtime-models/openai/gpt-live-1.md). A GPT-Live session takes a continuous audio stream, is configured once in its first event, and is billed by its duration rather than by tokens.
 
 | | |
 | --- | --- |
@@ -332,7 +332,7 @@ With the official OpenAI Node.js SDK, create the client with `baseURL: "https://
 
 ### xAI realtime voice
 
-Model: [Grok Voice Think Fast 2.0](../api-references/realtime-models/xAI/grok-voice-think-fast-2.0.md). It speaks the OpenAI Realtime event names with xAI's own session shape: a top-level `voice` and `turn_detection`, a choice of JSON or raw binary audio transport, a reasoning effort switch, pronunciation replacements, and scripted lines (`force_message`).
+Model: [Grok Voice Think Fast 2.0](../api-references/realtime-models/xai/grok-voice-think-fast-2.0.md). It speaks the OpenAI Realtime event names with xAI's own session shape: a top-level `voice` and `turn_detection`, a choice of JSON or raw binary audio transport, a reasoning effort switch, pronunciation replacements, and scripted lines (`force_message`).
 
 | | |
 | --- | --- |
@@ -355,7 +355,7 @@ To send binary audio frames, first set `session.audio.input.transport` to `binar
 
 ### Gemini Live
 
-Model: [Gemini 3.8 Live](../api-references/realtime-models/Google/gemini-3.8-live.md). Google's Live API model takes streamed speech, text and camera or screen frames, and answers with speech or text, with function calling.
+Model: [Gemini 3.8 Live](../api-references/realtime-models/google/gemini-3.8-live.md). Google's Live API model takes streamed speech, text and camera or screen frames, and answers with speech or text, with function calling.
 
 | | |
 | --- | --- |

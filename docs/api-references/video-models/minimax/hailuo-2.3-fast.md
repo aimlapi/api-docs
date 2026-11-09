@@ -40,7 +40,7 @@ Below, you can find both corresponding API schemas.
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="hailuo-2-3-fast" path="/v2/video/generations" method="post" %}
-[OpenAPI hailuo-2-3-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/hailuo-2.3-fast.json)
+[OpenAPI hailuo-2-3-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/minimax/hailuo-2.3-fast.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

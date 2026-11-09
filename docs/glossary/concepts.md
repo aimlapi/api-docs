@@ -42,7 +42,7 @@ In the context of working with AI models, this means that if a model expects a p
 
 <summary>Code Example (Python): Providing an Image as a Base64 String</summary>
 
-We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
+We'll send an image file from the local disk to the chat model by passing it through the `image_url` parameter as a Base64-encoded string. Our prompt will ask [**gpt-4o**](../api-references/text-models-llm/openai/gpt-4o.md) chat model to describe the contents of the image with the question: `"What's in this image?"`
 
 <figure><img src="../.gitbook/assets/racoons_0.png" alt=""><figcaption></figcaption></figure>
 
@@ -103,7 +103,7 @@ The image depicts an illustrated raccoon by a stream, reaching into the water wi
 
 <summary>Code Example (Python): Providing a PDF file as a Base64 String</summary>
 
-We'll pass a local [PDF file](https://drive.google.com/file/d/1Lktn3GHw9zyfY7vhZqzQRa6kYCpgViI3/view?usp=sharing) to the chat model via the `file_data` parameter, encoding it as a Base64 string. The prompt will ask [**gpt-4o**](../api-references/text-models-llm/OpenAI/gpt-4o.md) chat model to extract and list all headers, one per line.
+We'll pass a local [PDF file](https://drive.google.com/file/d/1Lktn3GHw9zyfY7vhZqzQRa6kYCpgViI3/view?usp=sharing) to the chat model via the `file_data` parameter, encoding it as a Base64 string. The prompt will ask [**gpt-4o**](../api-references/text-models-llm/openai/gpt-4o.md) chat model to extract and list all headers, one per line.
 
 {% code overflow="wrap" %}
 ```python
@@ -181,7 +181,7 @@ Legacy and Influence
 
 Deprecation is the process where a provider marks a model, parameter, or feature as outdated and no longer recommended for use. Deprecated items may remain available for some time but are likely to be removed or unsupported in the future.
 
-Deprecation can apply to an entire model (see [our list of deprecated/no longer supported models](../api-references/model-database.md#deprecated-no-longer-supported-models)) or to individual parameters. For example, in a recent update to the video model [**v1.6-pro/image-to-video**](../api-references/video-models/Kling-AI/v1.6-pro-image-to-video.md) by Kling AI, the `aspect_ratio` parameter was deprecated: the model now automatically determines the aspect ratio based on the properties of the provided reference image, and explicit `aspect_ratio` input is no longer required.
+Deprecation can apply to an entire model (see [our list of deprecated/no longer supported models](../api-references/model-database.md#deprecated-no-longer-supported-models)) or to individual parameters. For example, in a recent update to the video model [**v1.6-pro/image-to-video**](../api-references/video-models/kling-ai/v1.6-pro-image-to-video.md) by Kling AI, the `aspect_ratio` parameter was deprecated: the model now automatically determines the aspect ratio based on the properties of the provided reference image, and explicit `aspect_ratio` input is no longer required.
 
 Users are encouraged to monitor deprecation notices carefully and update their integrations accordingly. We notify our users about such changes in our email newsletters.
 

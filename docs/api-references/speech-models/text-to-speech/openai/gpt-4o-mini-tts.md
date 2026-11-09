@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md), supporting up to 2,000 input tokens.
+A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/openai/gpt-4o-mini.md), supporting up to 2,000 input tokens.
 
 ## Setup your API Key
 
@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="gpt-4o-mini-tts" path="/v1/tts" method="post" %}
-[OpenAPI gpt-4o-mini-tts](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/gpt-4o-mini-tts.json)
+[OpenAPI gpt-4o-mini-tts](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/openai/gpt-4o-mini-tts.json)
 {% endopenapi-operation %}
 
 ## Code Example

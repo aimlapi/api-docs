@@ -47,7 +47,7 @@ However, you can still call this model using the legacy URL that includes the ve
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="wan2-1-t2v-plus" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-1-t2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.1-t2v-plus.json)
+[OpenAPI wan2-1-t2v-plus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.1-t2v-plus.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

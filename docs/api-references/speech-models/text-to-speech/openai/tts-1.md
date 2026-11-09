@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="tts-1" path="/v1/tts" method="post" %}
-[OpenAPI tts-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/tts-1.json)
+[OpenAPI tts-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/openai/tts-1.json)
 {% endopenapi-operation %}
 
 ## Code Example

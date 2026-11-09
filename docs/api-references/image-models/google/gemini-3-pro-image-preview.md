@@ -30,7 +30,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="gemini-3-pro-image-preview" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-3-pro-image-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-3-pro-image-preview.json)
+[OpenAPI gemini-3-pro-image-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/gemini-3-pro-image-preview.json)
 {% endopenapi-operation %}
 
 ## Quick Example

@@ -52,8 +52,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json" path="/v1/chat/completions" method="post" %}
-[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json)
+{% openapi src="https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xai/grok-3-mini-beta.json" path="/v1/chat/completions" method="post" %}
+[https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xai/grok-3-mini-beta.json](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xai/grok-3-mini-beta.json)
 {% endopenapi %}
 
 ## Code Example

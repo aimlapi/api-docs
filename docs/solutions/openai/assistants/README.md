@@ -93,7 +93,7 @@ run = client.beta.threads.runs.create_and_poll(
 
 <summary>Full Step-by-Step Explanation</summary>
 
-This Python script implements a **console-based chat** using OpenAI's Assistant API, with **gpt-4o** as the default model. However, you can replace it with any [OpenAI text model](../../../api-references/text-models-llm/OpenAI/) of your choice.
+This Python script implements a **console-based chat** using OpenAI's Assistant API, with **gpt-4o** as the default model. However, you can replace it with any [OpenAI text model](../../../api-references/text-models-llm/openai/) of your choice.
 
 Unlike the streaming version, this version **waits for the full response** before displaying it. Below is a detailed breakdown of its execution.
 
@@ -290,7 +290,7 @@ Assistant > 👋 Chat session ended. See you next time!
 
 <summary>Full Step-by-Step Explanation</summary>
 
-This Python script implements a **console-based chat** using OpenAI's Assistant API, with steaming mode and **gpt-4o** as the default model. However, you can replace it with any [OpenAI text model](../../../api-references/text-models-llm/OpenAI/) of your choice, except for `o1`, as it does not support streaming.\
+This Python script implements a **console-based chat** using OpenAI's Assistant API, with steaming mode and **gpt-4o** as the default model. However, you can replace it with any [OpenAI text model](../../../api-references/text-models-llm/openai/) of your choice, except for `o1`, as it does not support streaming.\
 Below is a detailed breakdown of what happens during execution.
 
 ### **1. Initialization Phase**

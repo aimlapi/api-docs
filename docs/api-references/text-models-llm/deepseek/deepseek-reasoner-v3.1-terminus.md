@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-reasoner-v3-1-terminus" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-reasoner-v3-1-terminus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-reasoner-v3.1-terminus.json)
+[OpenAPI deepseek-reasoner-v3-1-terminus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.1-terminus.json)
 {% endopenapi-operation %}
 
 ## Code Example

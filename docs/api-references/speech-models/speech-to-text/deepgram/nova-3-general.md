@@ -48,7 +48,7 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 ## API Schemas
 
 {% openapi-operation spec="deepgram-nova-3-general" path="/v1/stt/create" method="post" %}
-[OpenAPI deepgram-nova-3-general](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/nova-3-general.json)
+[OpenAPI deepgram-nova-3-general](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/deepgram/nova-3-general.json)
 {% endopenapi-operation %}
 
 ## Quick Example: Processing a Speech Audio File via URL

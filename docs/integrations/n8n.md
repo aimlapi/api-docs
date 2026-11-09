@@ -226,7 +226,7 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 ## 💬 Example Settings
 
-#### [GPT 4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)
+#### [GPT 4o](../api-references/text-models-llm/openai/gpt-4o.md)
 
 <table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>openai/gpt-4o</code></td></tr><tr><td>User Message</td><td><code>"Give me ideas for YouTube channels"</code></td></tr><tr><td>Temperature</td><td><code>0.7</code></td></tr></tbody></table>
 

@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="reve-remix-edit-image" path="/v1/images/generations" method="post" %}
-[OpenAPI reve-remix-edit-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Reve/reve-remix-edit-image.json)
+[OpenAPI reve-remix-edit-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/reve/reve-remix-edit-image.json)
 {% endopenapi-operation %}
 
 ## Quick Example

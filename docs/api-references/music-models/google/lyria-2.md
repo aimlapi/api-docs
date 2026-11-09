@@ -66,7 +66,7 @@ If you need a more detailed walkthrough for setting up your development environm
 This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
 
 {% openapi-operation spec="lyria2" path="/v2/generate/audio" method="post" %}
-[OpenAPI lyria2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Google/Lyria-2.json)
+[OpenAPI lyria2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/google/Lyria-2.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>
@@ -87,7 +87,7 @@ Here is an example of generation an audio file based on a prompt using the music
 
 As an example, we will generate a song using the new Google's model **Lyria 2**. As you can verify in its API Schemas above, this model accepts a prompt as input—extracting information about its vocals and instruments for use in the generation process.
 
-We generated our prompt in [Chat GPT](../../text-models-llm/OpenAI/gpt-4o.md):
+We generated our prompt in [Chat GPT](../../text-models-llm/openai/gpt-4o.md):
 
 `Majestic orchestral film score recorded in a top-tier London studio. A 100-piece orchestra delivers sweeping, cinematic music with rich emotional depth. The composition features soaring themes, dynamic contrasts, and complex harmonies. Expect powerful percussion, expressive strings, and prominent French horns and timpani. The arrangement emphasizes a dramatic narrative arc with intricate orchestrations and a profound, awe-inspiring atmosphere.`
 

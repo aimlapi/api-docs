@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="imagen-3" path="/v1/images/generations" method="post" %}
-[OpenAPI imagen-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/imagen-3.0.json)
+[OpenAPI imagen-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/imagen-3.0.json)
 {% endopenapi-operation %}
 
 ## Quick Example

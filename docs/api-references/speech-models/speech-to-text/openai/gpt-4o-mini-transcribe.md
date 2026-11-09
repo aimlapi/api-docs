@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A speech-to-text model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md) for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
+A speech-to-text model based on [GPT-4o mini](../../../text-models-llm/openai/gpt-4o-mini.md) for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
 
 {% hint style="success" %}
 OpenAI STT models are priced based on tokens, similar to chat models. In practice, this means the cost primarily depends on the duration of the input audio.
@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 #### Creating and sending a speech-to-text conversion task to the server
 
 {% openapi-operation spec="gpt-4o-mini-transcribe" path="/v1/stt/create" method="post" %}
-[OpenAPI gpt-4o-mini-transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/gpt-4o-mini-transcribe.json)
+[OpenAPI gpt-4o-mini-transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/openai/gpt-4o-mini-transcribe.json)
 {% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id

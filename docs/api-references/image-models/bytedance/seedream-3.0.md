@@ -29,7 +29,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="bytedance-seedream-3-0" path="/v1/images/generations" method="post" %}
-[OpenAPI bytedance-seedream-3-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/seedream-3.0.json)
+[OpenAPI bytedance-seedream-3-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/bytedance/seedream-3.0.json)
 {% endopenapi-operation %}
 
 ## Quick Example

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="sonar" path="/v1/chat/completions" method="post" %}
-[OpenAPI sonar](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Perplexity/sonar.json)
+[OpenAPI sonar](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/perplexity/sonar.json)
 {% endopenapi-operation %}
 
 ## Code Example

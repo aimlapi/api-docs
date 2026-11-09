@@ -55,7 +55,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gpt-image-1-mini" path="/v1/images/generations" method="post" %}
-[OpenAPI gpt-image-1-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/OpenAI/gpt-image-1-mini.json)
+[OpenAPI gpt-image-1-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/openai/gpt-image-1-mini.json)
 {% endopenapi-operation %}
 
 ## Code Example

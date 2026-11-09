@@ -38,7 +38,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="wan2-6-i2v" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-6-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.6-i2v.json)
+[OpenAPI wan2-6-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.6-i2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

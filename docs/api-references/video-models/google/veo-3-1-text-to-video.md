@@ -42,7 +42,7 @@ Below, you can find two corresponding API schemas and an example with both endpo
 You can generate a video using this API. In the basic setup, you only need a prompt.
 
 {% openapi-operation spec="veo-3-1-t2v" path="/v2/video/generations" method="post" %}
-[OpenAPI veo-3-1-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-t2v.json)
+[OpenAPI veo-3-1-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo-3.1-t2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

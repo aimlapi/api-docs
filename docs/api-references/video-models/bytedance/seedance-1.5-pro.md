@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="seedance-1-5-pro" path="/v2/video/generations" method="post" %}
-[OpenAPI seedance-1-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1-5-pro.json)
+[OpenAPI seedance-1-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/bytedance/seedance-1-5-pro.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

@@ -40,7 +40,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="video-v3-standard-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v3-standard-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v3-standard-text-to-video.json)
+[OpenAPI video-v3-standard-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/video-v3-standard-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

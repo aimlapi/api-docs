@@ -43,7 +43,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API. In the basic setup, you only need a prompt, the aspect ratio, and the desired duration (5, 6, 7, or 8 seconds).
 
 {% openapi-operation spec="veo2" path="/v2/video/generations" method="post" %}
-[OpenAPI veo2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo2.json)
+[OpenAPI veo2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo2.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

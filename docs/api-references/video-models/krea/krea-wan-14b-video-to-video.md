@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="krea-wan-14b-video-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI krea-wan-14b-video-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Krea/krea-wan-14b-video-to-video.json)
+[OpenAPI krea-wan-14b-video-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/krea/krea-wan-14b-video-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -52,7 +52,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
-[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/sber-ai/kandinsky5-t2v-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

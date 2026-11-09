@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-August 2025 update of [the DeepSeek R1](../DeepSeek/deepseek-r1.md) reasoning model. Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
+August 2025 update of [the DeepSeek R1](../deepseek/deepseek-r1.md) reasoning model. Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-reasoner-v3-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-reasoner-v3-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-reasoner-v3.1.json)
+[OpenAPI deepseek-reasoner-v3-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.1.json)
 {% endopenapi-operation %}
 
 ## Code Example

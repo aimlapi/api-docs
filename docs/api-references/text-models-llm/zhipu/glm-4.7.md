@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="glm-4-7" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-4-7](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu/glm-4.7.json)
+[OpenAPI glm-4-7](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/zhipu/glm-4.7.json)
 {% endopenapi-operation %}
 
 ## Code Example

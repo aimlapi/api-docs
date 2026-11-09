@@ -46,7 +46,7 @@ However, you can still call this model using the legacy URL that includes the ve
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-v3-turbo-pro-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v3-turbo-pro-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v3-turbo-pro-text-to-video.json)
+[OpenAPI video-v3-turbo-pro-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/v3-turbo-pro-text-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
