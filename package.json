@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preview": "pnpm --dir packages/preview install --frozen-lockfile --silent && node packages/preview/bin/preview.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

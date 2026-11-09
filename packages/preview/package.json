@@ -1,0 +1,24 @@
+{
+  "name": "@aimlapi/docs-preview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Renders the GitBook docs locally, in the docs.aimlapi.com look, with live reload",
+  "type": "module",
+  "bin": {
+    "docs-preview": "./bin/preview.js"
+  },
+  "scripts": {
+    "start": "node ./bin/preview.js ../..",
+    "check": "node ./bin/preview.js ../.. --check",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "highlight.js": "11.12.0",
+    "js-yaml": "4.3.2",
+    "markdown-it": "14.3.2",
+    "markdown-it-footnote": "4.0.0"
+  }
+}
