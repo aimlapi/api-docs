@@ -276,7 +276,7 @@ Without `router`, or with `router: {}`, conversations route by how much capabili
 * **Reasoning is kept low.** Luna, Haiku, DeepSeek and Sonnet run with reasoning off, Sol and Astra at `low`, and Opus with thinking disabled. When you send `reasoning_effort`, `reasoning` or `thinking` yourself, your value is used. A model that you list in your own buckets always runs exactly as you send it.
 
 {% hint style="info" %}
-**Jev Router, d1 Router or Dynamic Router?** The [Jev Router](../../ml-api/jev-router.md) (`typesafe/jev-router`) and the [d1 Router](../../Liquid-AI/d1-router.md) (`liquid/d1-router`) are presets of the Dynamic Router. They serve the same APIs and take the same `router` object. Only their decision model is fixed: Jev 1.14 or Liquid's d1. They refuse another one with a `400`. `aimlapi/dynamic-router` lets you choose.
+**Jev Router, d1 Router or Dynamic Router?** The [Jev Router](../../ml-api/jev-router.md) (`typesafe/jev-router`) and the [d1 Router](../../liquid-ai/d1-router.md) (`liquid/d1-router`) are presets of the Dynamic Router. They serve the same APIs and take the same `router` object. Only their decision model is fixed: Jev 1.14 or Liquid's d1. They refuse another one with a `400`. `aimlapi/dynamic-router` lets you choose.
 {% endhint %}
 
 ## Write bucket descriptions that route well

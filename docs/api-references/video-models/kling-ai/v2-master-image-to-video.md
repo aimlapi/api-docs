@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-Compared to [v1.6](../Kling-AI/v1.6-pro-image-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
+Compared to [v1.6](../kling-ai/v1.6-pro-image-to-video.md), this Kling model better aligns with the prompt and delivers more dynamic and visually appealing results.
 
 ## Setup your API Key
 

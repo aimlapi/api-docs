@@ -8,7 +8,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A speech-to-text model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md) for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
+A speech-to-text model based on [GPT-4o mini](../../../text-models-llm/openai/gpt-4o-mini.md) for audio transcription. It provides improved word error rates and more accurate language recognition compared to the original Whisper models. Recommended for use cases that require higher transcription accuracy.
 
 {% hint style="success" %}
 OpenAI STT models are priced based on tokens, similar to chat models. In practice, this means the cost primarily depends on the duration of the input audio.

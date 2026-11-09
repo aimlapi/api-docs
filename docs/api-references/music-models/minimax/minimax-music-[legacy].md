@@ -67,7 +67,7 @@ Here is an example of generation an audio file based on a sample and a prompt us
 
 As an example, we will generate a song using the popular **minimax-music** model from the Chinese company MiniMax. As you can verify in its API Schemas above, this model accepts an audio sample as input—extracting information about its vocals and instruments for use in the generation process—along with a text prompt where we can provide lyrics for our song.
 
-We used a publicly available sample from royalty-free sample database and generated some lyrics in [Chat GPT](../../text-models-llm/OpenAI/gpt-4o.md):
+We used a publicly available sample from royalty-free sample database and generated some lyrics in [Chat GPT](../../text-models-llm/openai/gpt-4o.md):
 
 _Side by side, through thick and thin,_\
 \&#xNAN;_With a laugh, we always win._\

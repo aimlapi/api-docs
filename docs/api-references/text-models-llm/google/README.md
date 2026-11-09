@@ -33,4 +33,4 @@ Other model categories from this provider are available as well.
 * [Video](../../video-models/google/)&#x20;
 * [Music](../../vision-models/ocr-optical-character-recognition/google/)&#x20;
 * [Vision(OCR)](../../music-models/google/)&#x20;
-* [Embedding](../../embedding-models/Google/)
+* [Embedding](../../embedding-models/google/)

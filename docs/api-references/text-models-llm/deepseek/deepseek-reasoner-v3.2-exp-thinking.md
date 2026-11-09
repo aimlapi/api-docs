@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-September 2025 update of [the DeepSeek R1](../DeepSeek/deepseek-r1.md) reasoning model. Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
+September 2025 update of [the DeepSeek R1](../deepseek/deepseek-r1.md) reasoning model. Skilled at complex problem-solving, mathematical reasoning, and programming assistance.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

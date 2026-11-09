@@ -34,6 +34,6 @@ Supported capabilities vary depending on the specific model, with different mode
 
 Other model categories from this provider are available as well.
 
-* [Image](../../image-models/OpenAI/)&#x20;
-* [Speech-To-Text](../../speech-voice-models/stt/OpenAI/)&#x20;
-* [Embedding](../../embedding-models/OpenAI/)
+* [Image](../../image-models/openai/)&#x20;
+* [Speech-To-Text](../../speech-voice-models/stt/openai/)&#x20;
+* [Embedding](../../embedding-models/openai/)

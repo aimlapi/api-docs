@@ -176,8 +176,8 @@ main();
 </details>
 ## Using it as a decision model
 
-On `/v1/decisions` Luna answers typed questions instead of generating text — a yes/no probability, one option out of a set, or a position on an ordered scale. Its schema is the third block above; the full treatment, with a worked example and how to read the answers, is on [GPT-6 Luna in Decision Models](../../decision-models/OpenAI/gpt-6-luna.md).
+On `/v1/decisions` Luna answers typed questions instead of generating text — a yes/no probability, one option out of a set, or a position on an ordered scale. Its schema is the third block above; the full treatment, with a worked example and how to read the answers, is on [GPT-6 Luna in Decision Models](../../decision-models/openai/gpt-6-luna.md).
 
 {% hint style="warning" %}
-**Luna's request shape is not the one Jev and d1 use.** `/v1/decisions` serves two contracts and gives no hint which it got — sending the wrong one is a plain `400`. On Luna the content goes in `input` rather than `state`, `questions` is an array of named items rather than an object, and the yes/no type is `predicate` rather than `noul`. [Full comparison](../../decision-models/OpenAI/gpt-6-luna.md).
+**Luna's request shape is not the one Jev and d1 use.** `/v1/decisions` serves two contracts and gives no hint which it got — sending the wrong one is a plain `400`. On Luna the content goes in `input` rather than `state`, `questions` is an array of named items rather than an object, and the yes/no type is `predicate` rather than `noul`. [Full comparison](../../decision-models/openai/gpt-6-luna.md).
 {% endhint %}

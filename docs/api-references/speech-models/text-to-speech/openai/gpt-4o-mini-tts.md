@@ -14,7 +14,7 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 {% endcolumns %}
 
-A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/OpenAI/gpt-4o-mini.md), supporting up to 2,000 input tokens.
+A text-to-speech model based on [GPT-4o mini](../../../text-models-llm/openai/gpt-4o-mini.md), supporting up to 2,000 input tokens.
 
 ## Setup your API Key
 

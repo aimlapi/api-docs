@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-August 2025 update of the [DeepSeek V3](../DeepSeek/deepseek-chat.md) non-reasoning model.
+August 2025 update of the [DeepSeek V3](../deepseek/deepseek-chat.md) non-reasoning model.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

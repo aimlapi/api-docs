@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-All models of the GPT-4.1 family outperform [GPT‑4o](../OpenAI/gpt-4o.md) and [GPT‑4o mini](../OpenAI/gpt-4o-mini.md) across the board, with major gains in coding and instruction following. They also have larger context windows—supporting up to 1 million tokens of context—and are able to better use that context with improved long-context comprehension. They feature a refreshed knowledge cutoff of <kbd>June 2024</kbd>.
+All models of the GPT-4.1 family outperform [GPT‑4o](../openai/gpt-4o.md) and [GPT‑4o mini](../openai/gpt-4o-mini.md) across the board, with major gains in coding and instruction following. They also have larger context windows—supporting up to 1 million tokens of context—and are able to better use that context with improved long-context comprehension. They feature a refreshed knowledge cutoff of <kbd>June 2024</kbd>.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)

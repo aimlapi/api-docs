@@ -23,7 +23,7 @@ It is the same model served on [`/v1/chat/completions` and `/v1/responses`](../.
 {% hint style="warning" %}
 **Luna's request shape is not the one Jev and d1 use.** The endpoint serves two contracts and gives no hint which it got — sending the wrong one is a plain `400`.
 
-| | Luna | [Jev](../TypeSafe/jev.md) / [d1](../Liquid-AI/d1.md) |
+| | Luna | [Jev](../typesafe/jev.md) / [d1](../liquid-ai/d1.md) |
 | --- | --- | --- |
 | content field | `input` | `state` |
 | `questions` | an **array**, each item with a `name` | an **object** keyed by name |
