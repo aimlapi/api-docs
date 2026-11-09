@@ -758,6 +758,8 @@
     * [Music 2.0](api-references/music-models/minimax/music-2.0.md)
     * [Music 2.6](api-references/music-models/minimax/music-2-6.md)
     * [Music Cover](api-references/music-models/minimax/music-cover.md)
+  * [Mureka](api-references/music-models/Mureka/README.md)
+    * [Mureka V9.5](api-references/music-models/Mureka/v9.5.md)
   * [Stability AI](api-references/music-models/stability-ai/README.md)
     * [Stable Audio](api-references/music-models/stability-ai/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
