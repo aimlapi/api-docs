@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="voxtral-small-24b-2507" path="/v1/chat/completions" method="post" %}
-[OpenAPI voxtral-small-24b-2507](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/voxtral-small-24b-2507.json)
+[OpenAPI voxtral-small-24b-2507](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/voxtral-small-24b-2507.json)
 {% endopenapi-operation %}
 
 ## Code Example

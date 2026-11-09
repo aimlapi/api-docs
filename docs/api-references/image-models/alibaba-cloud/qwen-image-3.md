@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="qwen-image-3" path="/v1/images/generations" method="post" %}
-[OpenAPI qwen-image-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/qwen-image-3.json)
+[OpenAPI qwen-image-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/alibaba-cloud/qwen-image-3.json)
 {% endopenapi-operation %}
 
 ## Code Example

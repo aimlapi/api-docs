@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="kat-coder-pro-v2-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI kat-coder-pro-v2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Kwaipilot/kat-coder-pro-v2.5.json)
+[OpenAPI kat-coder-pro-v2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/kwaipilot/kat-coder-pro-v2.5.json)
 {% endopenapi-operation %}
 
 ## Code Example

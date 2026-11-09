@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="v3-alpha" path="/v1/tts" method="post" %}
-[OpenAPI v3-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/ElevenLabs/v3_alpha.json)
+[OpenAPI v3-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/elevenlabs/v3_alpha.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example

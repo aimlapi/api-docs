@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="skyfall-36b-v2" path="/v1/chat/completions" method="post" %}
-[OpenAPI skyfall-36b-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/TheDrummer/skyfall-36b-v2.json)
+[OpenAPI skyfall-36b-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/thedrummer/skyfall-36b-v2.json)
 {% endopenapi-operation %}
 
 ## Code Example

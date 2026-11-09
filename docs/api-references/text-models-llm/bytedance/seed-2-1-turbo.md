@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="seed-2-1-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI seed-2-1-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ByteDance/seed-2-1-turbo.json)
+[OpenAPI seed-2-1-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/bytedance/seed-2-1-turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemini-3-1-pro-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-3-1-pro-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-3-1-pro-preview.json)
+[OpenAPI gemini-3-1-pro-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-3-1-pro-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

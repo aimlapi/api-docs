@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="jamba-large-1-7" path="/v1/chat/completions" method="post" %}
-[OpenAPI jamba-large-1-7](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AI21/jamba-large-1.7.json)
+[OpenAPI jamba-large-1-7](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ai21/jamba-large-1.7.json)
 {% endopenapi-operation %}
 
 ## Code Example

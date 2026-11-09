@@ -13,7 +13,7 @@ Providers also act against the accounts behind the traffic. An account that keep
 This guide explains how that works and how to keep your application clear of it. Three things matter:
 
 1. **Identify your end users** with `safety_identifier`. A refusal then counts against the person who caused it, not your whole account.
-2. **Route sensitive content** to models whose providers accept it. The [Dynamic Router](../api-references/text-models-llm/AI/ML-API/dynamic-router.md) can do this for you on every request.
+2. **Route sensitive content** to models whose providers accept it. The [Dynamic Router](../api-references/text-models-llm/ai/ml-api/dynamic-router.md) can do this for you on every request.
 3. **Keep prohibited content out** of the API entirely. No model or route makes it acceptable.
 
 {% hint style="info" %}
@@ -163,7 +163,7 @@ For any other model, read its provider's policy before you route sensitive conte
 A bucket with no models (`models: []`) ends the request at the decision, so your own code can handle it.
 
 {% hint style="info" %}
-**Jev Router, d1 Router or Dynamic Router?** All three take the same `router` object. The [Jev Router](../api-references/text-models-llm/ml-api/jev-router.md) (`typesafe/jev-router`) and the [d1 Router](../api-references/text-models-llm/Liquid-AI/d1-router.md) (`liquid/d1-router`) are presets of the Dynamic Router. Without a `router` object they route chat requests by how hard the task is. With one, they route by your buckets, and only their decision model is fixed: TypeSafe Jev or Liquid's d1. `aimlapi/dynamic-router` also lets you choose the decision model. This guide uses it, but the same buckets work on the Jev Router.
+**Jev Router, d1 Router or Dynamic Router?** All three take the same `router` object. The [Jev Router](../api-references/text-models-llm/ml-api/jev-router.md) (`typesafe/jev-router`) and the [d1 Router](../api-references/text-models-llm/liquid-ai/d1-router.md) (`liquid/d1-router`) are presets of the Dynamic Router. Without a `router` object they route chat requests by how hard the task is. With one, they route by your buckets, and only their decision model is fixed: TypeSafe Jev or Liquid's d1. `aimlapi/dynamic-router` also lets you choose the decision model. This guide uses it, but the same buckets work on the Jev Router.
 {% endhint %}
 
 The setup below uses three buckets:

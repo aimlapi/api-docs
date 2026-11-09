@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="codestral-2508" path="/v1/chat/completions" method="post" %}
-[OpenAPI codestral-2508](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/codestral-2508.json)
+[OpenAPI codestral-2508](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/codestral-2508.json)
 {% endopenapi-operation %}
 
 ## Code Example

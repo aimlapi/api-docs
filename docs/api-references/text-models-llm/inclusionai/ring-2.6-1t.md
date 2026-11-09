@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="ring-2-6-1t" path="/v1/chat/completions" method="post" %}
-[OpenAPI ring-2-6-1t](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionAI/ring-2.6-1t.json)
+[OpenAPI ring-2-6-1t](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionai/ring-2.6-1t.json)
 {% endopenapi-operation %}
 
 ## Code Example

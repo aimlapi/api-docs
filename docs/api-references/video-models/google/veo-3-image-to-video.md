@@ -47,7 +47,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API.
 
 {% openapi-operation spec="veo-3-0-i2v" path="/v2/video/generations" method="post" %}
-[OpenAPI veo-3-0-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.0-i2v.json)
+[OpenAPI veo-3-0-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo-3.0-i2v.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

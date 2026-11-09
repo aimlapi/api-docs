@@ -63,7 +63,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="crouton-alpha" path="/v1/chat/completions" method="post" %}
-[OpenAPI crouton-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Stealth/crouton-alpha.json)
+[OpenAPI crouton-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stealth/crouton-alpha.json)
 {% endopenapi-operation %}
 
 ## Code Example

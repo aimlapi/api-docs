@@ -67,7 +67,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 ### Responses Endpoint
 
 {% openapi-operation spec="gpt-5-3-codex" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-3-codex](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-3-codex-RESPONSES.json)
+[OpenAPI gpt-5-3-codex](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-5-3-codex-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example: Using /responses Endpoint

@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="lfm-2-24b-a2b" path="/v1/chat/completions" method="post" %}
-[OpenAPI lfm-2-24b-a2b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/LiquidAI/lfm-2-24b-a2b.json)
+[OpenAPI lfm-2-24b-a2b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/liquidai/lfm-2-24b-a2b.json)
 {% endopenapi-operation %}
 
 ## Code Example

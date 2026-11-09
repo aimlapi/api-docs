@@ -47,7 +47,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. This endpoint creates and sends a video generation task to the server — and returns a generation ID. For lip-sync input, you may supply text (`lip_sync_tts_content`) with a predefined voice (`lip_sync_tts_speaker`).
 
 {% openapi-operation spec="pixverse-v5-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI pixverse-v5-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/v5-image-to-video.json)
+[OpenAPI pixverse-v5-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/pixverse/v5-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

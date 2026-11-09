@@ -58,7 +58,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="union-alpha" path="/v1/chat/completions" method="post" %}
-[OpenAPI union-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Stealth/union-alpha.json)
+[OpenAPI union-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stealth/union-alpha.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="seedream-v4-edit" path="/v1/images/generations" method="post" %}
-[OpenAPI seedream-v4-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/seedream-v4-edit.json)
+[OpenAPI seedream-v4-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/bytedance/seedream-v4-edit.json)
 {% endopenapi-operation %}
 
 ## Quick Example

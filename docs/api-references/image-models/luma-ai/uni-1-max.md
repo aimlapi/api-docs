@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="uni-1-max" path="/v1/images/generations" method="post" %}
-[OpenAPI uni-1-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Luma-AI/uni-1-max.json)
+[OpenAPI uni-1-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/luma-ai/uni-1-max.json)
 {% endopenapi-operation %}
 
 ## Code Example

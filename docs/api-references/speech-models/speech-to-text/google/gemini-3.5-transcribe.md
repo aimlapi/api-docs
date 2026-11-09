@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-3-5-transcribe" path="/v1/stt/create" method="post" %}
-[OpenAPI gemini-3-5-transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/speech-to-text/Google/gemini-3.5-transcribe.json)
+[OpenAPI gemini-3-5-transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/speech-to-text/google/gemini-3.5-transcribe.json)
 {% endopenapi-operation %}
 
 ## Code Example

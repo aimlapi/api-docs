@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="aion-3-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI aion-3-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AionLabs/aion-3.5.json)
+[OpenAPI aion-3-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/aionlabs/aion-3.5.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -48,7 +48,7 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 #### Creating and sending a speech-to-text conversion task to the server
 
 {% openapi-operation spec="microsoft-mai-transcribe-1-5" path="/v1/stt/create" method="post" %}
-[OpenAPI microsoft-mai-transcribe-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/mai-transcribe-1.5.json)
+[OpenAPI microsoft-mai-transcribe-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/microsoft/mai-transcribe-1.5.json)
 {% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id

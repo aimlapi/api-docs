@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="solar-mini4" path="/v1/chat/completions" method="post" %}
-[OpenAPI solar-mini4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Upstage/solar-mini4.json)
+[OpenAPI solar-mini4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/upstage/solar-mini4.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -30,7 +30,7 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 ## API Schema
 
 {% openapi-operation spec="voice-1-turbo" path="/v1/tts" method="post" %}
-[OpenAPI voice-1-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/text-to-speech/HeyGen/voice-1-turbo.json)
+[OpenAPI voice-1-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/text-to-speech/heygen/voice-1-turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example

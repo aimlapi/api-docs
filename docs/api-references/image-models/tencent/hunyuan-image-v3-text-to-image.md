@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="hunyuan-image-v3-text-to-image" path="/v1/images/generations" method="post" %}
-[OpenAPI hunyuan-image-v3-text-to-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Tencent/hunyuan-image-v3-text-to-image.json)
+[OpenAPI hunyuan-image-v3-text-to-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/tencent/hunyuan-image-v3-text-to-image.json)
 {% endopenapi-operation %}
 
 ## Quick Example

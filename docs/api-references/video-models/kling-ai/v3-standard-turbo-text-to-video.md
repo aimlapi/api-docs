@@ -74,7 +74,7 @@ If the video generation task status is `completed`, the response will include th
 
 
 {% openapi-operation spec="video-v3-standard-turbo-text-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v3-standard-turbo-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v3-standard-turbo-text-to-video.json)
+[OpenAPI video-v3-standard-turbo-text-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/v3-standard-turbo-text-to-video.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

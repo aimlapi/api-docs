@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="llama-3-3-70b-versatile" path="/v1/chat/completions" method="post" %}
-[OpenAPI llama-3-3-70b-versatile](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/llama-3.3-70b-versatile.json)
+[OpenAPI llama-3-3-70b-versatile](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/meta/llama-3.3-70b-versatile.json)
 {% endopenapi-operation %}
 
 ## Code Example

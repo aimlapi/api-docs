@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="qwen-image" path="/v1/images/generations" method="post" %}
-[OpenAPI qwen-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/qwen-image.json)
+[OpenAPI qwen-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/alibaba-cloud/qwen-image.json)
 {% endopenapi-operation %}
 
 ## Quick Example

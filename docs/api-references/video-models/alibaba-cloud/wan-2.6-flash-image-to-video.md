@@ -40,7 +40,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="wan-2-6-image-to-video-flash" path="/v2/video/generations" method="post" %}
-[OpenAPI wan-2-6-image-to-video-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan-2-6-image-to-video-flash.json)
+[OpenAPI wan-2-6-image-to-video-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan-2-6-image-to-video-flash.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

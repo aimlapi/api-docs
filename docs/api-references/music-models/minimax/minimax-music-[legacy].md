@@ -46,7 +46,7 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 This endpoint creates and sends a music generation task to the server — and returns a generation ID and the task status.
 
 {% openapi-operation spec="minimax-music" path="/v2/generate/audio" method="post" %}
-[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/minimax-music.json)
+[OpenAPI minimax-music](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/minimax/minimax-music.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>

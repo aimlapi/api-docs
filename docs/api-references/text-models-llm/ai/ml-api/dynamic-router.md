@@ -75,7 +75,7 @@ Two shapes of bucket table change this:
 ## API Schema
 
 {% openapi-operation spec="dynamic-router" path="/v1/chat/completions" method="post" %}
-[OpenAPI dynamic-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AI/ML-API/dynamic-router.json)
+[OpenAPI dynamic-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ai/ml-api/dynamic-router.json)
 {% endopenapi-operation %}
 
 ## Code Example

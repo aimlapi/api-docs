@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 You can generate a video using this API. In the basic setup, you only need a reference video and a prompt. This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="lip-sync" path="/v2/video/generations" method="post" %}
-[OpenAPI lip-sync](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/PixVerse/lip-sync.json)
+[OpenAPI lip-sync](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/pixverse/lip-sync.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

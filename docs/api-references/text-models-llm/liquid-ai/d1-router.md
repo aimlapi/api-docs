@@ -75,7 +75,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="d1-router" path="/v1/chat/completions" method="post" %}
-[OpenAPI d1-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Liquid-AI/d1-router.json)
+[OpenAPI d1-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/liquid-ai/d1-router.json)
 {% endopenapi-operation %}
 
 ## Code Example

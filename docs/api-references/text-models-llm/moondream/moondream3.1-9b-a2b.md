@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="moondream3-1-9b-a2b" path="/v1/chat/completions" method="post" %}
-[OpenAPI moondream3-1-9b-a2b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Moondream/moondream3.1-9b-a2b.json)
+[OpenAPI moondream3-1-9b-a2b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/moondream/moondream3.1-9b-a2b.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="glm-5-3-flashx" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-5-3-flashx](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-5.3-flashx.json)
+[OpenAPI glm-5-3-flashx](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/zhipu-ai/glm-5.3-flashx.json)
 {% endopenapi-operation %}
 
 ## Code Example

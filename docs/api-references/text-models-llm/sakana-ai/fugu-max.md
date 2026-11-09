@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="fugu-max" path="/v1/chat/completions" method="post" %}
-[OpenAPI fugu-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Sakana-AI/fugu-max.json)
+[OpenAPI fugu-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/sakana-ai/fugu-max.json)
 {% endopenapi-operation %}
 
 ## Code Example

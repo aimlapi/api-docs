@@ -63,7 +63,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="claude-4-opus" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-4-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-4-opus.json)
+[OpenAPI claude-4-opus](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-4-opus.json)
 {% endopenapi-operation %}
 
 ## Code Example #1

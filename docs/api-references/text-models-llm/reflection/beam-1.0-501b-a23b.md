@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="beam-1-0-501b-a23b" path="/v1/chat/completions" method="post" %}
-[OpenAPI beam-1-0-501b-a23b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Reflection/beam-1.0-501b-a23b.json)
+[OpenAPI beam-1-0-501b-a23b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/reflection/beam-1.0-501b-a23b.json)
 {% endopenapi-operation %}
 
 ## Code Example

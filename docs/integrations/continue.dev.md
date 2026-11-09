@@ -92,7 +92,7 @@ continue.dev provides an intuitive graphical interface for interacting with a ch
 
 You can use any of [our text models](../api-references/text-models-llm/#complete-text-model-list), including:
 
-* [gpt-3.5-turbo](../api-references/text-models-llm/OpenAI/gpt-3.5-turbo.md)
-* [gpt-4-turbo](../api-references/text-models-llm/OpenAI/gpt-4-turbo.md)
+* [gpt-3.5-turbo](../api-references/text-models-llm/openai/gpt-3.5-turbo.md)
+* [gpt-4-turbo](../api-references/text-models-llm/openai/gpt-4-turbo.md)
 * [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
 * [and many others](../api-references/model-database.md).

@@ -40,7 +40,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="glm-ocr" path="/v1/ocr" method="post" %}
-[OpenAPI glm-ocr](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models/Zhipu/glm-ocr.json)
+[OpenAPI glm-ocr](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models/zhipu/glm-ocr.json)
 {% endopenapi-operation %}
 
 ## Example #1: Text Recognition From an Image

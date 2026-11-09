@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-4-argon" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-4-argon](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-4-argon.json)
+[OpenAPI gemini-4-argon](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-4-argon.json)
 {% endopenapi-operation %}
 
 ## Code Example

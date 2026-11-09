@@ -39,7 +39,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 #### Creating and sending a speech-to-text conversion task to the server
 
 {% openapi-operation spec="whisper-large-2025-05-28" path="/v1/stt/create" method="post" %}
-[OpenAPI whisper-large-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/OpenAI/whisper-large.json)
+[OpenAPI whisper-large-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/openai/whisper-large.json)
 {% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id

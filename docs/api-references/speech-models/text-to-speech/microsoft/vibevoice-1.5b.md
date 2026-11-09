@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="vibevoice-1-5b" path="/v1/tts" method="post" %}
-[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Microsoft/vibevoice-1.5b.json)
+[OpenAPI vibevoice-1-5b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/microsoft/vibevoice-1.5b.json)
 {% endopenapi-operation %}
 
 ## Code Example

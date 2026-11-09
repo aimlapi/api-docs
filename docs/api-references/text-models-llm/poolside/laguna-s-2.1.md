@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="laguna-s-2-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI laguna-s-2-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Poolside/laguna-s-2.1.json)
+[OpenAPI laguna-s-2-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/poolside/laguna-s-2.1.json)
 {% endopenapi-operation %}
 
 ## Code Example

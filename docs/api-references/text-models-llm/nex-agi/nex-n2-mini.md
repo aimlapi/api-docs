@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="nex-n2-mini" path="/v1/chat/completions" method="post" %}
-[OpenAPI nex-n2-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Nex-AGI/nex-n2-mini.json)
+[OpenAPI nex-n2-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/nex-agi/nex-n2-mini.json)
 {% endopenapi-operation %}
 
 ## Code Example

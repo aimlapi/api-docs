@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="morph-v3-large" path="/v1/chat/completions" method="post" %}
-[OpenAPI morph-v3-large](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Morph/morph-v3-large.json)
+[OpenAPI morph-v3-large](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/morph/morph-v3-large.json)
 {% endopenapi-operation %}
 
 ## Code Example

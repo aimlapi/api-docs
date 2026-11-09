@@ -40,11 +40,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schemas
 
 {% openapi-operation spec="claude-3-haiku" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-3-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-haiku.json)
+[OpenAPI claude-3-haiku](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-3-haiku.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="claude-3-haiku-MESSAGES" path="/v1/messages" method="post" %}
-[OpenAPI claude-3-haiku-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-3-haiku-MESSAGES.json)
+[OpenAPI claude-3-haiku-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-3-haiku-MESSAGES.json)
 {% endopenapi-operation %}
 
 ## Code Example

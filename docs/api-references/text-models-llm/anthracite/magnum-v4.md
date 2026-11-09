@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="magnum-v4" path="/v1/chat/completions" method="post" %}
-[OpenAPI magnum-v4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthracite/magnum-v4.json)
+[OpenAPI magnum-v4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthracite/magnum-v4.json)
 {% endopenapi-operation %}
 
 ## Code Example

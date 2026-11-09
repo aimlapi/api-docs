@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="wan-2-7-t2v" path="/v2/video/generations" method="post" %}
-[OpenAPI wan-2-7-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.7-t2v.json)
+[OpenAPI wan-2-7-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.7-t2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

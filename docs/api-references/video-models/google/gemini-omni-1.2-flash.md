@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="gemini-omni-1-2-flash" path="/v2/video/generations" method="post" %}
-[OpenAPI gemini-omni-1-2-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/gemini-omni-1.2-flash.json)
+[OpenAPI gemini-omni-1-2-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/gemini-omni-1.2-flash.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

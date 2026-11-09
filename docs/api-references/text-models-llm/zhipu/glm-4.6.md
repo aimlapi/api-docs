@@ -57,7 +57,7 @@ Please note that `thinking` mode is `enabled` by default.
 {% endhint %}
 
 {% openapi-operation spec="glm-4-6" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-4-6](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu/glm-4.6.json)
+[OpenAPI glm-4-6](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/zhipu/glm-4.6.json)
 {% endopenapi-operation %}
 
 ## Code Example

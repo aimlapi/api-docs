@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="wan-2-6-image" path="/v1/images/generations" method="post" %}
-[OpenAPI wan-2-6-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/wan-2-6-image.json)
+[OpenAPI wan-2-6-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/alibaba-cloud/wan-2-6-image.json)
 {% endopenapi-operation %}
 
 ## Quick Example

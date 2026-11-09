@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="text-01" path="/v1/chat/completions" method="post" %}
-[OpenAPI text-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/MiniMax/text-01.json)
+[OpenAPI text-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/minimax/text-01.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -25,7 +25,7 @@ If you don't have an API key for the AI/ML API yet, feel free to use our [Quicks
 ## API Schema
 
 {% openapi-operation spec="seed-audio-1-0" path="/v1/tts" method="post" %}
-[OpenAPI seed-audio-1-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/text-to-speech/ByteDance/seed-audio-1.0.json)
+[OpenAPI seed-audio-1-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/text-to-speech/bytedance/seed-audio-1.0.json)
 {% endopenapi-operation %}
 
 ## Code Example

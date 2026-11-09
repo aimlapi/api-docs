@@ -77,7 +77,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 ### Chat Completions Endpoint
 
 {% openapi-operation spec="gpt-4o" path="/v1/chat/completions" method="post" %}
-[OpenAPI gpt-4o](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o.json)
+[OpenAPI gpt-4o](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-4o.json)
 {% endopenapi-operation %}
 
 ### Responses Endpoint
@@ -85,7 +85,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
 {% openapi-operation spec="gpt-4o-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI gpt-4o-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-4o-RESPONSES.json)
+[OpenAPI gpt-4o-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-4o-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example

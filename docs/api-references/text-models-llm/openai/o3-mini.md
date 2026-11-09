@@ -67,7 +67,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 ### Chat Completions Endpoint
 
 {% openapi-operation spec="o3-mini" path="/v1/chat/completions" method="post" %}
-[OpenAPI o3-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-mini.json)
+[OpenAPI o3-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/o3-mini.json)
 {% endopenapi-operation %}
 
 ### Responses Endpoint
@@ -75,7 +75,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others support only one of them.
 
 {% openapi-operation spec="o3-mini-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI o3-mini-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-mini-RESPONSES.json)
+[OpenAPI o3-mini-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/o3-mini-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example

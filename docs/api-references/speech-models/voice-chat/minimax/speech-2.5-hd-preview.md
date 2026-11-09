@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="speech-2-5-hd-preview" path="/v1/tts" method="post" %}
-[OpenAPI speech-2-5-hd-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/MiniMax/speech-2.5-hd-preview.json)
+[OpenAPI speech-2-5-hd-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/minimax/speech-2.5-hd-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

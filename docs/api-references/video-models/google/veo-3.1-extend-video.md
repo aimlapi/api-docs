@@ -38,7 +38,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="veo3-1-extend-video" path="/v2/video/generations" method="post" %}
-[OpenAPI veo3-1-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo3-1-extend-video.json)
+[OpenAPI veo3-1-extend-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo3-1-extend-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

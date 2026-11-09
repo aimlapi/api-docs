@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="sora-2-pro-t2v" path="/v2/video/generations" method="post" %}
-[OpenAPI sora-2-pro-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/OpenAi/sora-2-pro-t2v.json)
+[OpenAPI sora-2-pro-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/openai/sora-2-pro-t2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

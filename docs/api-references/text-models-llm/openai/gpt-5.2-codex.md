@@ -73,7 +73,7 @@ Note: This model can ONLY be called via the `/responses` endpoint!
 {% endhint %}
 
 {% openapi-operation spec="gpt-5-2-codex-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-2-codex-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-codex-RESPONSES.json)
+[OpenAPI gpt-5-2-codex-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-5-2-codex-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example: Using /responses Endpoint

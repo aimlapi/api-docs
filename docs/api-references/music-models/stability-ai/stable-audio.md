@@ -42,7 +42,7 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 ## API Schemas
 
 {% openapi-operation spec="stable-audio" path="/v2/generate/audio" method="post" %}
-[OpenAPI stable-audio](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Stability-AI/stable-audio.json)
+[OpenAPI stable-audio](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/stability-ai/stable-audio.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated music sample from the server <a href="#retrieve-the-generated-video-from-the-server" id="retrieve-the-generated-video-from-the-server"></a>

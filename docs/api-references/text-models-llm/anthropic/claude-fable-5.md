@@ -56,7 +56,7 @@ For a detailed walkthrough of environment setup and API requests, see the [Quick
 ## API Schema
 
 {% openapi-operation spec="claude-fable-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-fable-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-fable-5.json)
+[OpenAPI claude-fable-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-fable-5.json)
 {% endopenapi-operation %}
 
 ## Code Example

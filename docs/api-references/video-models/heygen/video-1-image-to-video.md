@@ -45,7 +45,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-1-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-1-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/HeyGen/video-1-image-to-video.json)
+[OpenAPI video-1-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/video-1-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

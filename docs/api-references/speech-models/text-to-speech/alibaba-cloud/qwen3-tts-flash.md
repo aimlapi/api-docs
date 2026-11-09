@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="qwen3-tts-flash" path="/v1/tts" method="post" %}
-[OpenAPI qwen3-tts-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Alibaba-Cloud/qwen3-tts-flash.json)
+[OpenAPI qwen3-tts-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/alibaba-cloud/qwen3-tts-flash.json)
 {% endopenapi-operation %}
 
 ## Code Example

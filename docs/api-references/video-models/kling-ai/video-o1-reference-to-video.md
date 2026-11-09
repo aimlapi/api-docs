@@ -32,7 +32,7 @@ Below, you can find two corresponding API schemas and an example with both endpo
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-o1-reference-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-o1-reference-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-reference-to-video.json)
+[OpenAPI video-o1-reference-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/video-o1-reference-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

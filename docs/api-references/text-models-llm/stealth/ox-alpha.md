@@ -58,7 +58,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="ox-alpha" path="/v1/chat/completions" method="post" %}
-[OpenAPI ox-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Stealth/ox-alpha.json)
+[OpenAPI ox-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stealth/ox-alpha.json)
 {% endopenapi-operation %}
 
 ## Code Example

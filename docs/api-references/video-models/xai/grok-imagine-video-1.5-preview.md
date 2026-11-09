@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="grok-imagine-video-1-5-preview" path="/v2/video/generations" method="post" %}
-[OpenAPI grok-imagine-video-1-5-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/xAI/grok-imagine-video-1.5-preview.json)
+[OpenAPI grok-imagine-video-1-5-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/xai/grok-imagine-video-1.5-preview.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

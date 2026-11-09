@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="deepseek-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek-AI/deepseek-flash.json)
+[OpenAPI deepseek-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/deepseek-ai/deepseek-flash.json)
 {% endopenapi-operation %}
 
 ## Code Example

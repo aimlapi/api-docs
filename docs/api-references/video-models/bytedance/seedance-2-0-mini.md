@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="seedance-2-0-mini" path="/v2/video/generations" method="post" %}
-[OpenAPI seedance-2-0-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-2-0-mini.json)
+[OpenAPI seedance-2-0-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/bytedance/seedance-2-0-mini.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

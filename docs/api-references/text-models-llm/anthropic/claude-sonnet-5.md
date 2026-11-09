@@ -53,11 +53,11 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schemas
 
 {% openapi-operation spec="claude-sonnet-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-sonnet-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-5.json)
+[OpenAPI claude-sonnet-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-sonnet-5.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="claude-sonnet-5-MESSAGES" path="/v1/messages" method="post" %}
-[OpenAPI claude-sonnet-5-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-5-MESSAGES.json)
+[OpenAPI claude-sonnet-5-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-sonnet-5-MESSAGES.json)
 {% endopenapi-operation %}
 
 ## Code Example

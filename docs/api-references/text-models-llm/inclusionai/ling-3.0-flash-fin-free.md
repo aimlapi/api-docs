@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="ling-3-0-flash-fin-free" path="/v1/chat/completions" method="post" %}
-[OpenAPI ling-3-0-flash-fin-free](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionAI/ling-3.0-flash-fin-free.json)
+[OpenAPI ling-3-0-flash-fin-free](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionai/ling-3.0-flash-fin-free.json)
 {% endopenapi-operation %}
 
 ## Code Example

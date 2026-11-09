@@ -26,7 +26,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="z-image-turbo-lora" path="/v1/images/generations" method="post" %}
-[OpenAPI z-image-turbo-lora](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Alibaba-Cloud/z-image-turbo-lora.json)
+[OpenAPI z-image-turbo-lora](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/alibaba-cloud/z-image-turbo-lora.json)
 {% endopenapi-operation %}
 
 ## Example #1: Standard Text-to-Image

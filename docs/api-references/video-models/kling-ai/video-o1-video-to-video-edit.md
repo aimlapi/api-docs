@@ -62,7 +62,7 @@ Below, you can find two corresponding API schemas and an example with both endpo
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="kling-video-o1-video-to-video-edit" path="/v2/video/generations" method="post" %}
-[OpenAPI kling-video-o1-video-to-video-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-o1-video-to-video-edit.json)
+[OpenAPI kling-video-o1-video-to-video-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/video-o1-video-to-video-edit.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

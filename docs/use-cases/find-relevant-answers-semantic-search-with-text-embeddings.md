@@ -33,7 +33,7 @@ We have compiled the following list of FAQ headings:
 
 ### 2. Generate embeddings
 
-Let's save our headings as a list and pass them to the model. We chose the [text-embedding-3-large](../api-references/embedding-models/OpenAI/text-embedding-3-large.md) model — it has been trained on a large dataset and is powerful enough to build complex semantic connections.&#x20;
+Let's save our headings as a list and pass them to the model. We chose the [text-embedding-3-large](../api-references/embedding-models/openai/text-embedding-3-large.md) model — it has been trained on a large dataset and is powerful enough to build complex semantic connections.&#x20;
 
 Now each of our headings has a corresponding embedding vector.
 
@@ -142,7 +142,7 @@ Most similar items:
 
 </details>
 
-Here is the program output after we switched to the small version of the model, [text-embedding-3-small](../api-references/embedding-models/OpenAI/text-embedding-3-small.md):
+Here is the program output after we switched to the small version of the model, [text-embedding-3-small](../api-references/embedding-models/openai/text-embedding-3-small.md):
 
 <details>
 
@@ -167,7 +167,7 @@ Or maybe the difference is simply that the default embedding size is 1536 for `t
 We didn't notice much difference in speed, but the larger version is somewhat more expensive.
 
 {% hint style="info" %}
-If you're planning to perform semantic search over code snippets, a better choice might be the [voyage-code-2](../api-references/embedding-models/Anthropic/voyage-code-2.md) model, which is specifically trained to better distinguish between pieces of code.
+If you're planning to perform semantic search over code snippets, a better choice might be the [voyage-code-2](../api-references/embedding-models/anthropic/voyage-code-2.md) model, which is specifically trained to better distinguish between pieces of code.
 {% endhint %}
 
 ## Room for Improvement <a href="#room-for-improvement" id="room-for-improvement"></a>

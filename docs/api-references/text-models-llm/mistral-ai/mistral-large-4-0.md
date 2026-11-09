@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="mistral-large-4-0" path="/v1/chat/completions" method="post" %}
-[OpenAPI mistral-large-4-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mistral-large-4-0.json)
+[OpenAPI mistral-large-4-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/mistral-large-4-0.json)
 {% endopenapi-operation %}
 
 ## Code Example

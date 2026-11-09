@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="palmyra-x5" path="/v1/chat/completions" method="post" %}
-[OpenAPI palmyra-x5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Writer/palmyra-x5.json)
+[OpenAPI palmyra-x5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/writer/palmyra-x5.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 You can create a video with this API by providing a reference image of a character and an audio file. The character will deliver the audio with full lip-sync and natural gestures. This POST request creates and submits a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="avatar-standard" path="/v2/video/generations" method="post" %}
-[OpenAPI avatar-standard](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/avatar-standard.json)
+[OpenAPI avatar-standard](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/avatar-standard.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

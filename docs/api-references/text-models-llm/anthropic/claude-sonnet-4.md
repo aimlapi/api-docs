@@ -35,11 +35,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schemas
 
 {% openapi-operation spec="claude-sonnet-4" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-sonnet-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-4.json)
+[OpenAPI claude-sonnet-4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-sonnet-4.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="claude-sonnet-4-MESSAGES" path="/v1/messages" method="post" %}
-[OpenAPI claude-sonnet-4-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-4-MESSAGES.json)
+[OpenAPI claude-sonnet-4-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-sonnet-4-MESSAGES.json)
 {% endopenapi-operation %}
 
 ## Code Example

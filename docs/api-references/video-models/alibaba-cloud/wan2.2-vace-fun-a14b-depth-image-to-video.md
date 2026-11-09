@@ -42,7 +42,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="wan2-2-vace-fun-a14b-depth" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-2-vace-fun-a14b-depth](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.2-vace-fun-a14b-depth.json)
+[OpenAPI wan2-2-vace-fun-a14b-depth](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.2-vace-fun-a14b-depth.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

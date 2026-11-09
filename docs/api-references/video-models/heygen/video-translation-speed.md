@@ -45,7 +45,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-translation-speed" path="/v2/video/generations" method="post" %}
-[OpenAPI video-translation-speed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/HeyGen/video-translation-speed.json)
+[OpenAPI video-translation-speed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/video-translation-speed.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

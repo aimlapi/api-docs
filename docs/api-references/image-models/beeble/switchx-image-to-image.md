@@ -30,7 +30,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 
 ## Quick Example
 
-Let's generate a new image using the one from the [flux/dev Quick Example](https://github.com/aimlapi/api-docs/blob/main/docs/api-references/image-models/Beeble/flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
+Let's generate a new image using the one from the [flux/dev Quick Example](https://github.com/aimlapi/api-docs/blob/main/docs/api-references/image-models/beeble/flux-dev.md#quick-example) as a reference — and make a simple change to it with a prompt.
 
 {% tabs %}
 {% tab title="Python" %}

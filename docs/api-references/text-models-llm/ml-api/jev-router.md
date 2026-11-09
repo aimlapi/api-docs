@@ -71,7 +71,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="jev-router" path="/v1/chat/completions" method="post" %}
-[OpenAPI jev-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/AIMLAPI/jev-router.json)
+[OpenAPI jev-router](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/aimlapi/jev-router.json)
 {% endopenapi-operation %}
 
 ## Code Example

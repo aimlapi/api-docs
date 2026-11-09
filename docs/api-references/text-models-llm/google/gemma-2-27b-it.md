@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemma-2-27b-it" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemma-2-27b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-2-27b-it.json)
+[OpenAPI gemma-2-27b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemma-2-27b-it.json)
 {% endopenapi-operation %}
 
 ## Code Example

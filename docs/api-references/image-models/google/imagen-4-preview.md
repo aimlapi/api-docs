@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="imagen-4-preview" path="/v1/images/generations" method="post" %}
-[OpenAPI imagen-4-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/imagen-4-preview.json)
+[OpenAPI imagen-4-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/imagen-4-preview.json)
 {% endopenapi-operation %}
 
 ## Quick Example

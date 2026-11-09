@@ -45,7 +45,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-translation-audio-only" path="/v2/video/generations" method="post" %}
-[OpenAPI video-translation-audio-only](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/HeyGen/video-translation-audio-only.json)
+[OpenAPI video-translation-audio-only](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/video-translation-audio-only.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

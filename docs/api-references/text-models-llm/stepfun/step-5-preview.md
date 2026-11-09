@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="step-5-preview" path="/v1/chat/completions" method="post" %}
-[OpenAPI step-5-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/StepFun/step-5-preview.json)
+[OpenAPI step-5-preview](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stepfun/step-5-preview.json)
 {% endopenapi-operation %}
 
 ## Code Example

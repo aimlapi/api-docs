@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="claude-sonnet-latest" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-sonnet-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-sonnet-latest.json)
+[OpenAPI claude-sonnet-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-sonnet-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example

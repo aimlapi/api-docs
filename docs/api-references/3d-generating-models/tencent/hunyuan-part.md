@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="hunyuan-part" path="/v1/images/generations" method="post" %}
-[OpenAPI hunyuan-part](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/Tencent/hunyuan-part.json)
+[OpenAPI hunyuan-part](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/3d-generating-models/tencent/hunyuan-part.json)
 {% endopenapi-operation %}
 
 ## Quick Example

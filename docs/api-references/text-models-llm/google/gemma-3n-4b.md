@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gemma-3n-e4b-it" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemma-3n-e4b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemma-3n-e4b-it.json)
+[OpenAPI gemma-3n-e4b-it](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemma-3n-e4b-it.json)
 {% endopenapi-operation %}
 
 ## Code Example

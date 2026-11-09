@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="mixtral-8x22b-instruct" path="/v1/chat/completions" method="post" %}
-[OpenAPI mixtral-8x22b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/mixtral-8x22b-instruct.json)
+[OpenAPI mixtral-8x22b-instruct](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/mixtral-8x22b-instruct.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="nex-n2-5-pro" path="/v1/chat/completions" method="post" %}
-[OpenAPI nex-n2-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Nex-AGI/nex-n2.5-pro.json)
+[OpenAPI nex-n2-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/nex-agi/nex-n2.5-pro.json)
 {% endopenapi-operation %}
 
 ## Code Example

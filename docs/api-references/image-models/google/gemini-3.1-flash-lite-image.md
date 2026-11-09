@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-3-1-flash-lite-image" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-3-1-flash-lite-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-3.1-flash-lite-image.json)
+[OpenAPI gemini-3-1-flash-lite-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/gemini-3.1-flash-lite-image.json)
 {% endopenapi-operation %}
 
 ## Code Example

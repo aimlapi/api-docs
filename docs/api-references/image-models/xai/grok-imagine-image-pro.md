@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="grok-imagine-image-pro" path="/v1/images/generations" method="post" %}
-[OpenAPI grok-imagine-image-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/xAI/grok-imagine-image-pro.json)
+[OpenAPI grok-imagine-image-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/xai/grok-imagine-image-pro.json)
 {% endopenapi-operation %}
 
 ## Quick Example

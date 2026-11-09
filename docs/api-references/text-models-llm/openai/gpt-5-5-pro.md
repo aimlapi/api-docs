@@ -54,7 +54,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="gpt-5-5-pro" path="/v1/responses" method="post" %}
-[OpenAPI gpt-5-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/gpt-5-5-pro-RESPONSES.json)
+[OpenAPI gpt-5-5-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/gpt-5-5-pro-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example

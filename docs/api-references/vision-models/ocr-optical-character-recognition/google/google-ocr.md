@@ -15,5 +15,5 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="google-ocr-last" path="/v1/ocr" method="post" %}
-[OpenAPI google-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Google/google-ocr.json)
+[OpenAPI google-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/google/google-ocr.json)
 {% endopenapi-operation %}

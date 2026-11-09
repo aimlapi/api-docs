@@ -38,7 +38,7 @@ Generating a video using this model involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="happyhorse-1-1" path="/v2/video/generations" method="post" %}
-[OpenAPI happyhorse-1-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/happyhorse-1-1.json)
+[OpenAPI happyhorse-1-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/happyhorse-1-1.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

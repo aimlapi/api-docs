@@ -57,7 +57,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="dola-seedream-5-0-pro" path="/v1/images/generations" method="post" %}
-[OpenAPI dola-seedream-5-0-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/ByteDance/dola-seedream-5-0-pro.json)
+[OpenAPI dola-seedream-5-0-pro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/bytedance/dola-seedream-5-0-pro.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-3-1-flash-image" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-3-1-flash-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-3.1-flash-image.json)
+[OpenAPI gemini-3-1-flash-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-3.1-flash-image.json)
 {% endopenapi-operation %}
 
 ## Code Example

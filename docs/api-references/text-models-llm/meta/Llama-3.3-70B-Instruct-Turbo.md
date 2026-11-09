@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="llama-3-3-70b-instruct-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI llama-3-3-70b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meta/Llama-3.3-70B-Instruct-Turbo.json)
+[OpenAPI llama-3-3-70b-instruct-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/meta/Llama-3.3-70B-Instruct-Turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example

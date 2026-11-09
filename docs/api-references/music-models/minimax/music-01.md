@@ -59,7 +59,7 @@ This endpoint generates a new music piece based on the voice and/or instrumental
 The generation can be completed in 50-60 seconds or take a bit more.
 
 {% openapi-operation spec="music-01" path="/v2/generate/audio/minimax/generate" method="post" %}
-[OpenAPI music-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/MiniMax/music-01.json)
+[OpenAPI music-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/minimax/music-01.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example

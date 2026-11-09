@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="longcat-2-0" path="/v1/chat/completions" method="post" %}
-[OpenAPI longcat-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Meituan/longcat-2.0.json)
+[OpenAPI longcat-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/meituan/longcat-2.0.json)
 {% endopenapi-operation %}
 
 ## Code Example

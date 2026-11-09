@@ -63,7 +63,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="ling-3-0-flash-sante" path="/v1/chat/completions" method="post" %}
-[OpenAPI ling-3-0-flash-sante](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionAI/ling-3.0-flash-sante.json)
+[OpenAPI ling-3-0-flash-sante](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inclusionai/ling-3.0-flash-sante.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -43,7 +43,7 @@ You can generate a video using this API. In the basic setup, you only need a pro
 This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="wan2-5-t2v-preview-2" path="/v2/video/generations" method="post" %}
-[OpenAPI wan2-5-t2v-preview-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Alibaba-Cloud/wan2.5-t2v-preview.json)
+[OpenAPI wan2-5-t2v-preview-2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/alibaba-cloud/wan2.5-t2v-preview.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

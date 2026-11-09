@@ -19,7 +19,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="aura-2025-05-28" path="/v1/tts" method="post" %}
-[OpenAPI aura-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Deepgram/aura.json)
+[OpenAPI aura-2025-05-28](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/deepgram/aura.json)
 {% endopenapi-operation %}
 
 ## Code Example

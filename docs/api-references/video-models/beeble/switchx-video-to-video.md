@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="switchx-video-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI switchx-video-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Beeble/switchx-video-to-video.json)
+[OpenAPI switchx-video-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/beeble/switchx-video-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

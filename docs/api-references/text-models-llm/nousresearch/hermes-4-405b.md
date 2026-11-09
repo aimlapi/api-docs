@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="hermes-4-405b" path="/v1/chat/completions" method="post" %}
-[OpenAPI hermes-4-405b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/NousResearch/hermes-4-405b.json)
+[OpenAPI hermes-4-405b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/nousresearch/hermes-4-405b.json)
 {% endopenapi-operation %}
 
 ## Code Example

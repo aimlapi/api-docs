@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="pareto" path="/v1/chat/completions" method="post" %}
-[OpenAPI pareto](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Unbiased/pareto.json)
+[OpenAPI pareto](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/unbiased/pareto.json)
 {% endopenapi-operation %}
 
 ## Code Example

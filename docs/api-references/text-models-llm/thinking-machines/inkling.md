@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="inkling" path="/v1/chat/completions" method="post" %}
-[OpenAPI inkling](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Thinking-Machines/inkling.json)
+[OpenAPI inkling](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/thinking-machines/inkling.json)
 {% endopenapi-operation %}
 
 ## Code Example

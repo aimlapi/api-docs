@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="minimax-h3-highspeed" path="/v2/video/generations" method="post" %}
-[OpenAPI minimax-h3-highspeed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Minimax-AI/minimax-h3-highspeed.json)
+[OpenAPI minimax-h3-highspeed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/minimax-ai/minimax-h3-highspeed.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

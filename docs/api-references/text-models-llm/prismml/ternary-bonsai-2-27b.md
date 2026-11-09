@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="ternary-bonsai-2-27b" path="/v1/chat/completions" method="post" %}
-[OpenAPI ternary-bonsai-2-27b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/PrismML/ternary-bonsai-2-27b.json)
+[OpenAPI ternary-bonsai-2-27b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/prismml/ternary-bonsai-2-27b.json)
 {% endopenapi-operation %}
 
 ## Code Example

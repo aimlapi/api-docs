@@ -75,7 +75,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="v3-motion-control" path="/v2/video/generations" method="post" %}
-[OpenAPI v3-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/klingai-video-v3-motion-control-schema.json)
+[OpenAPI v3-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/klingai-video-v3-motion-control-schema.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

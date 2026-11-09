@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="v3-omni-720p-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI v3-omni-720p-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v3-omni-720p-image-to-video.json)
+[OpenAPI v3-omni-720p-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/v3-omni-720p-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

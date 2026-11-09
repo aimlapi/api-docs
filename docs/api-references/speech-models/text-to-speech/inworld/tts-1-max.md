@@ -23,7 +23,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="inworld-tts-1-max" path="/v1/tts" method="post" %}
-[OpenAPI inworld-tts-1-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/Inworld/tts-1-max.json)
+[OpenAPI inworld-tts-1-max](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/inworld/tts-1-max.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="mercury-3" path="/v1/chat/completions" method="post" %}
-[OpenAPI mercury-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Inception/mercury-3.json)
+[OpenAPI mercury-3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inception/mercury-3.json)
 {% endopenapi-operation %}
 
 ## Code Example

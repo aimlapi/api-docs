@@ -60,7 +60,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="ministral-8b" path="/v1/chat/completions" method="post" %}
-[OpenAPI ministral-8b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/ministral-8b.json)
+[OpenAPI ministral-8b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/ministral-8b.json)
 {% endopenapi-operation %}
 
 ## Code Example

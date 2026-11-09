@@ -35,11 +35,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schemas
 
 {% openapi-operation spec="claude-fable-5-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-fable-5-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-fable-5.1.json)
+[OpenAPI claude-fable-5-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-fable-5.1.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="claude-fable-5-1-MESSAGES" path="/v1/messages" method="post" %}
-[OpenAPI claude-fable-5-1-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-fable-5.1-MESSAGES.json)
+[OpenAPI claude-fable-5-1-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-fable-5.1-MESSAGES.json)
 {% endopenapi-operation %}
 
 ## Code Example

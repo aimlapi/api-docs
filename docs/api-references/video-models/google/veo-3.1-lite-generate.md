@@ -42,7 +42,7 @@ Below, you can find both corresponding API schemas.
 This endpoint creates and sends a video generation task to the server — and returns its ID.
 
 {% openapi-operation spec="veo-3-1-lite-generate-001" path="/v2/video/generations" method="post" %}
-[OpenAPI veo-3-1-lite-generate-001](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-lite-generate-001.json)
+[OpenAPI veo-3-1-lite-generate-001](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo-3.1-lite-generate-001.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="cydonia-24b-v4-1" path="/v1/chat/completions" method="post" %}
-[OpenAPI cydonia-24b-v4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/TheDrummer/cydonia-24b-v4.1.json)
+[OpenAPI cydonia-24b-v4-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/thedrummer/cydonia-24b-v4.1.json)
 {% endopenapi-operation %}
 
 ## Code Example

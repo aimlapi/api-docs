@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="nano-banana-2-1" path="/v1/images/generations" method="post" %}
-[OpenAPI nano-banana-2-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/nano-banana-2.1.json)
+[OpenAPI nano-banana-2-1](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/nano-banana-2.1.json)
 {% endopenapi-operation %}
 
 ## Code Example

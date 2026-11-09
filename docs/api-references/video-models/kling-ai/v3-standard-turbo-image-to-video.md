@@ -50,7 +50,7 @@ The aspect ratio of the generated video is solely determined by the aspect ratio
 {% endhint %}
 
 {% openapi-operation spec="video-v3-standard-turbo-image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v3-standard-turbo-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/v3-standard-turbo-image-to-video.json)
+[OpenAPI video-v3-standard-turbo-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/v3-standard-turbo-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

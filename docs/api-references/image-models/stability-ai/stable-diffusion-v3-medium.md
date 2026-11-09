@@ -25,7 +25,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="stable-diffusion-v3-medium" path="/v1/images/generations" method="post" %}
-[OpenAPI stable-diffusion-v3-medium](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Stability-AI/stable-diffusion-v3-medium.json)
+[OpenAPI stable-diffusion-v3-medium](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/stability-ai/stable-diffusion-v3-medium.json)
 {% endopenapi-operation %}
 
 ## Quick Example

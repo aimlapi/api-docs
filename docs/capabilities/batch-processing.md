@@ -7,7 +7,7 @@ To use batch processing, several endpoints are available:
 <table data-full-width="true"><thead><tr><th width="295.01666259765625"></th><th></th></tr></thead><tbody><tr><td>Create a message batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches</code></td></tr><tr><td>Get status or results of a batch</td><td><img src="/broken/files/vAXd7V6xv3QmKrLeptB1" alt="" data-size="line"> <code>https://api.aimlapi.com/batches?batch_id={batch_id}</code></td></tr><tr><td>Cancel a batch</td><td><img src="/broken/files/j1sGKuO2wS5fYyQZ5SGg" alt="" data-size="line"> <code>https://api.aimlapi.com/batches/cancel/{batch_id}</code></td></tr></tbody></table>
 
 {% hint style="success" %}
-This API supports all [Claude chat models](../api-references/text-models-llm/Anthropic/) available on our platform.
+This API supports all [Claude chat models](../api-references/text-models-llm/anthropic/) available on our platform.
 {% endhint %}
 
 ***

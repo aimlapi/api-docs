@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="mythomax-l2-13b" path="/v1/chat/completions" method="post" %}
-[OpenAPI mythomax-l2-13b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Gryphe/mythomax-l2-13b.json)
+[OpenAPI mythomax-l2-13b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/gryphe/mythomax-l2-13b.json)
 {% endopenapi-operation %}
 
 ## Code Example

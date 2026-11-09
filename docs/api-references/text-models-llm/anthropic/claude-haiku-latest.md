@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="claude-haiku-latest" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-haiku-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-haiku-latest.json)
+[OpenAPI claude-haiku-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-haiku-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example

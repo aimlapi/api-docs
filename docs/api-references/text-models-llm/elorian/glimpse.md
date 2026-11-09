@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="glimpse" path="/v1/chat/completions" method="post" %}
-[OpenAPI glimpse](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Elorian/glimpse.json)
+[OpenAPI glimpse](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/elorian/glimpse.json)
 {% endopenapi-operation %}
 
 ## Code Example

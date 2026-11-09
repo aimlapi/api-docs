@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-pro-latest" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-pro-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Google/gemini-pro-latest.json)
+[OpenAPI gemini-pro-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-pro-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example

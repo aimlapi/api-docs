@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="grok-3-beta" path="/v1/chat/completions" method="post" %}
-[OpenAPI grok-3-beta](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-beta.json)
+[OpenAPI grok-3-beta](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xai/grok-3-beta.json)
 {% endopenapi-operation %}
 
 ## Code Example

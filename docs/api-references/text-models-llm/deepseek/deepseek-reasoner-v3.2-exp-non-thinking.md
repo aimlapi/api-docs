@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-non-thinking-v3-2-exp" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-non-thinking-v3-2-exp](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek/deepseek-non-thinking-v3.2-exp.json)
+[OpenAPI deepseek-non-thinking-v3-2-exp](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/deepseek/deepseek-non-thinking-v3.2-exp.json)
 {% endopenapi-operation %}
 
 ## Code Example

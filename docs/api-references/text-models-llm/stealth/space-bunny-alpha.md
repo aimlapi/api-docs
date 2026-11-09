@@ -63,7 +63,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="space-bunny-alpha" path="/v1/chat/completions" method="post" %}
-[OpenAPI space-bunny-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Stealth/space-bunny-alpha.json)
+[OpenAPI space-bunny-alpha](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/stealth/space-bunny-alpha.json)
 {% endopenapi-operation %}
 
 ## Code Example

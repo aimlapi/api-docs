@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="fugu-ultra" path="/v1/chat/completions" method="post" %}
-[OpenAPI fugu-ultra](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Sakana-AI/fugu-ultra.json)
+[OpenAPI fugu-ultra](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/sakana-ai/fugu-ultra.json)
 {% endopenapi-operation %}
 
 ## Code Example

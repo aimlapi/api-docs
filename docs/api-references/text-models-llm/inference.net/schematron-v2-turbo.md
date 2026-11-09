@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="schematron-v2-turbo" path="/v1/chat/completions" method="post" %}
-[OpenAPI schematron-v2-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Inference.net/schematron-v2-turbo.json)
+[OpenAPI schematron-v2-turbo](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inference.net/schematron-v2-turbo.json)
 {% endopenapi-operation %}
 
 ## Code Example

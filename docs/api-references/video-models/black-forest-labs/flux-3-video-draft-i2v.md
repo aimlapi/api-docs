@@ -40,7 +40,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="flux-3-video-draft-i2v" path="/v2/video/generations" method="post" %}
-[OpenAPI flux-3-video-draft-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Black-Forest-Labs/flux-3-video-draft-i2v.json)
+[OpenAPI flux-3-video-draft-i2v](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/black-forest-labs/flux-3-video-draft-i2v.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

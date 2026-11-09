@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="granite-4-0-h-micro" path="/v1/chat/completions" method="post" %}
-[OpenAPI granite-4-0-h-micro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/IBM/granite-4.0-h-micro.json)
+[OpenAPI granite-4-0-h-micro](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ibm/granite-4.0-h-micro.json)
 {% endopenapi-operation %}
 
 ## Code Example

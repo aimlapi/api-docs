@@ -11,7 +11,7 @@ This workflow allows you to generate an illustration based on a piece of text.
 1. **Provide the Text Snippet**\
    Input a short descriptive or narrative passage.
 2. **Choose a Chat Model and Generate a Prompt for an Image Model**\
-   Select a language model (e.g., [GPT-4](../api-references/text-models-llm/OpenAI/gpt-4.md), [GPT-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md)) that will process the text and suggest a visual interpretation. Ask the chat model to prepare a visual prompt. If needed, tweak the generated prompt before sending it to the image model. Then, pass that prompt to an image generation model (e.g., [DALL·E](../api-references/image-models/OpenAI/dall-e-3.md)).
+   Select a language model (e.g., [GPT-4](../api-references/text-models-llm/openai/gpt-4.md), [GPT-4o](../api-references/text-models-llm/openai/gpt-4o.md)) that will process the text and suggest a visual interpretation. Ask the chat model to prepare a visual prompt. If needed, tweak the generated prompt before sending it to the image model. Then, pass that prompt to an image generation model (e.g., [DALL·E](../api-references/image-models/openai/dall-e-3.md)).
 3. **Generate the Image**\
    Use the selected image model to produce the final illustration and insert it into the text.
 

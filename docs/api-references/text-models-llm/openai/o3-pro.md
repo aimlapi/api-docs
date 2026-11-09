@@ -71,7 +71,7 @@ The _Responses_ API is the newer, unified interface used across OpenAI’s lates
 This endpoint is currently used _only_ with OpenAI models. Some models support both the `/chat/completions` and `/responses` endpoints, while others (like `openai/o3-pro`) support only one of them.
 
 {% openapi-operation spec="o3-pro-RESPONSES" path="/v1/responses" method="post" %}
-[OpenAPI o3-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/OpenAI/o3-pro-RESPONSES.json)
+[OpenAPI o3-pro-RESPONSES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/openai/o3-pro-RESPONSES.json)
 {% endopenapi-operation %}
 
 ## Code Example

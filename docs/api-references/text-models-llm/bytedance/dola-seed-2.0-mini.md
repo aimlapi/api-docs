@@ -54,7 +54,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="dola-seed-2-0-mini" path="/v1/chat/completions" method="post" %}
-[OpenAPI dola-seed-2-0-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ByteDance/dola-seed-2-0-mini.json)
+[OpenAPI dola-seed-2-0-mini](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/bytedance/dola-seed-2-0-mini.json)
 {% endopenapi-operation %}
 
 ## Code Example

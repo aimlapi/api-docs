@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="solar-pro4" path="/v1/chat/completions" method="post" %}
-[OpenAPI solar-pro4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Upstage/solar-pro4.json)
+[OpenAPI solar-pro4](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/upstage/solar-pro4.json)
 {% endopenapi-operation %}
 
 ## Code Example

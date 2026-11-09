@@ -51,7 +51,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="mistral-ocr-last" path="/v1/ocr" method="post" %}
-[OpenAPI mistral-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/Mistral-AI/mistral-ocr-latest.json)
+[OpenAPI mistral-ocr-last](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/vision-models-ocr/mistral-ai/mistral-ocr-latest.json)
 {% endopenapi-operation %}
 
 ## Example #1: Text Recognition From an Image

@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="perceptron-mk1-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI perceptron-mk1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Perceptron/perceptron-mk1.5.json)
+[OpenAPI perceptron-mk1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/perceptron/perceptron-mk1.5.json)
 {% endopenapi-operation %}
 
 ## Code Example

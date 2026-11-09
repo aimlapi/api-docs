@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="qwen3-8-27b" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-8-27b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3.8-27b.json)
+[OpenAPI qwen3-8-27b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/alibaba-cloud/qwen3.8-27b.json)
 {% endopenapi-operation %}
 
 ## Code Example

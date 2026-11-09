@@ -39,7 +39,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="devstral-2512" path="/v1/chat/completions" method="post" %}
-[OpenAPI devstral-2512](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/devstral-2512.json)
+[OpenAPI devstral-2512](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/devstral-2512.json)
 {% endopenapi-operation %}
 
 ## Code Example

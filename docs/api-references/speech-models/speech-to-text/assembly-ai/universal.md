@@ -29,7 +29,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 #### Creating and sending a speech-to-text conversion task to the server
 
 {% openapi-operation spec="aai-universal" path="/v1/stt/create" method="post" %}
-[OpenAPI aai-universal](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/AssemblyAI/universal.json)
+[OpenAPI aai-universal](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/assemblyai/universal.json)
 {% endopenapi-operation %}
 
 #### Requesting the result of the task from the server using the generation\_id

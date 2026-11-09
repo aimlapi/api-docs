@@ -41,7 +41,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="dreamina-seedance-2-5" path="/v2/video/generations" method="post" %}
-[OpenAPI dreamina-seedance-2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/dreamina-seedance-2-5.json)
+[OpenAPI dreamina-seedance-2-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/bytedance/dreamina-seedance-2-5.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

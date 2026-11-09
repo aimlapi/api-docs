@@ -45,7 +45,7 @@ Generating a video involves sequentially calling two endpoints:
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="lipsync-precision" path="/v2/video/generations" method="post" %}
-[OpenAPI lipsync-precision](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/HeyGen/lipsync-precision.json)
+[OpenAPI lipsync-precision](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/lipsync-precision.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

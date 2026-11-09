@@ -40,7 +40,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="inflection-3-productivity" path="/v1/chat/completions" method="post" %}
-[OpenAPI inflection-3-productivity](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Inflection/inflection-3-productivity.json)
+[OpenAPI inflection-3-productivity](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/inflection/inflection-3-productivity.json)
 {% endopenapi-operation %}
 
 ## Code Example

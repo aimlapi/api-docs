@@ -42,7 +42,7 @@ Below, you can find two corresponding API schemas and examples for both endpoint
 You can generate a video using this API.
 
 {% openapi-operation spec="veo-3-1-i2v-fast" path="/v2/video/generations" method="post" %}
-[OpenAPI veo-3-1-i2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Google/veo-3.1-i2v-fast.json)
+[OpenAPI veo-3-1-i2v-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/google/veo-3.1-i2v-fast.json)
 {% endopenapi-operation %}
 
 ### Fetch the video

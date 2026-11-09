@@ -58,7 +58,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="granite-4-2-8b" path="/v1/chat/completions" method="post" %}
-[OpenAPI granite-4-2-8b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/IBM/granite-4.2-8b.json)
+[OpenAPI granite-4-2-8b](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/ibm/granite-4.2-8b.json)
 {% endopenapi-operation %}
 
 ## Code Example

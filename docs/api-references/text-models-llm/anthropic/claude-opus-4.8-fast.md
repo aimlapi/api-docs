@@ -40,11 +40,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schemas
 
 {% openapi-operation spec="claude-opus-4-8-fast" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-opus-4-8-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4.8-fast.json)
+[OpenAPI claude-opus-4-8-fast](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-opus-4.8-fast.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="claude-opus-4-8-fast-MESSAGES" path="/v1/messages" method="post" %}
-[OpenAPI claude-opus-4-8-fast-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-opus-4.8-fast-MESSAGES.json)
+[OpenAPI claude-opus-4-8-fast-MESSAGES](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-opus-4.8-fast-MESSAGES.json)
 {% endopenapi-operation %}
 
 ## Code Example

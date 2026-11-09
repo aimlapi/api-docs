@@ -58,7 +58,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="nemotron-nano-9b-v2" path="/v1/chat/completions" method="post" %}
-[OpenAPI nemotron-nano-9b-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/NVIDIA/nemotron-nano-9b-v2.json)
+[OpenAPI nemotron-nano-9b-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.json)
 {% endopenapi-operation %}
 
 ## Code Example

@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ### API Schema
 
 {% openapi-operation spec="minimax-m3-1-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI minimax-m3-1-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Minimax-AI/minimax-m3.1-flash.json)
+[OpenAPI minimax-m3-1-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/minimax-ai/minimax-m3.1-flash.json)
 {% endopenapi-operation %}
 
 ### Code Example

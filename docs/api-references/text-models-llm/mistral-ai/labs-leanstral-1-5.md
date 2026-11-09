@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="labs-leanstral-1-5" path="/v1/chat/completions" method="post" %}
-[OpenAPI labs-leanstral-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Mistral-AI/labs-leanstral-1-5.json)
+[OpenAPI labs-leanstral-1-5](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/mistral-ai/labs-leanstral-1-5.json)
 {% endopenapi-operation %}
 
 ## Code Example

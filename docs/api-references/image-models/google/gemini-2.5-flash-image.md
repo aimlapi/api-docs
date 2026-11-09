@@ -29,7 +29,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="gemini-2-5-flash-image" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-2-5-flash-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-2.5-flash-image.json)
+[OpenAPI gemini-2-5-flash-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/gemini-2.5-flash-image.json)
 {% endopenapi-operation %}
 
 ## Quick Example

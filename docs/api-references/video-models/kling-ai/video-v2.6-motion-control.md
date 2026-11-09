@@ -57,7 +57,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-v2-6-pro-motion-control" path="/v2/video/generations" method="post" %}
-[OpenAPI video-v2-6-pro-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Kling-AI/video-v2-6-pro-motion-control.json)
+[OpenAPI video-v2-6-pro-motion-control](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/kling-ai/video-v2-6-pro-motion-control.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

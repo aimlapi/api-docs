@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="gemini-2-5-flash-image-edit" path="/v1/images/generations" method="post" %}
-[OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Google/gemini-2.5-flash-image-edit.json)
+[OpenAPI gemini-2-5-flash-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/google/gemini-2.5-flash-image-edit.json)
 {% endopenapi-operation %}
 
 ## Code Example

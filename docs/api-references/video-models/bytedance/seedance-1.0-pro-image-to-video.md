@@ -51,7 +51,7 @@ However, you can still call this model using the legacy URL that includes the ve
 You can generate a video using this API. In the basic setup, you only need a reference image and a prompt. This endpoint creates and sends a video generation task to the server — and returns a generation ID.
 
 {% openapi-operation spec="seedance-1-0-pro-image-to-video-v3" path="/v2/video/generations" method="post" %}
-[OpenAPI seedance-1-0-pro-image-to-video-v3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/ByteDance/seedance-1.0-pro-image-to-video.json)
+[OpenAPI seedance-1-0-pro-image-to-video-v3](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/bytedance/seedance-1.0-pro-image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server

@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="scribe-v2" path="/v1/stt/create" method="post" %}
-[OpenAPI scribe-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/speech-to-text/Elevenlabs/scribe_v2.json)
+[OpenAPI scribe-v2](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/speech-models/speech-to-text/elevenlabs/scribe_v2.json)
 {% endopenapi-operation %}
 
 ## Code Example

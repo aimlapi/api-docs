@@ -25,11 +25,11 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schemas
 
 {% openapi-operation spec="grok-imagine-image-2-0" path="/v1/images/generations" method="post" %}
-[OpenAPI grok-imagine-image-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/X-AI/grok-imagine-image-2.0.json)
+[OpenAPI grok-imagine-image-2-0](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/x-ai/grok-imagine-image-2.0.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="grok-imagine-image-2-0-EDIT" path="/v1/images/edits" method="post" %}
-[OpenAPI grok-imagine-image-2-0-EDIT](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/X-AI/grok-imagine-image-2.0-EDIT.json)
+[OpenAPI grok-imagine-image-2-0-EDIT](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/x-ai/grok-imagine-image-2.0-EDIT.json)
 {% endopenapi-operation %}
 
 ## Quick Example

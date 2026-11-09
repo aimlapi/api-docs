@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="claude-fable-latest" path="/v1/chat/completions" method="post" %}
-[OpenAPI claude-fable-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Anthropic/claude-fable-latest.json)
+[OpenAPI claude-fable-latest](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/anthropic/claude-fable-latest.json)
 {% endopenapi-operation %}
 
 ## Code Example

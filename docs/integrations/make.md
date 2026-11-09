@@ -48,4 +48,4 @@ You can find more details in the [official documentation](https://help.make.com/
 
 ## Our Supported Models
 
-Any of our [text models](../api-references/text-models-llm/#complete-text-model-list) can be used to process your requests — for instance, [gpt-4o](../api-references/text-models-llm/OpenAI/gpt-4o.md).
+Any of our [text models](../api-references/text-models-llm/#complete-text-model-list) can be used to process your requests — for instance, [gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md).

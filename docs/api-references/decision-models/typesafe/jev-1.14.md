@@ -57,7 +57,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="typesafe-jev-1-14" path="/v1/decisions" method="post" %}
-[OpenAPI typesafe-jev-1-14](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/decision-models/TypeSafe/jev-1.14.json)
+[OpenAPI typesafe-jev-1-14](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/decision-models/typesafe/jev-1.14.json)
 {% endopenapi-operation %}
 
 ## Code Example

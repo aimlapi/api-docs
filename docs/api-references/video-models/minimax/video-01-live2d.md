@@ -45,7 +45,7 @@ However, you can still call this model using the legacy URL that includes the ve
 ### Create a video generation task and send it to the server
 
 {% openapi-operation spec="video-01-live2d" path="/v2/video/generations" method="post" %}
-[OpenAPI video-01-live2d](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/video-01-live2d.json)
+[OpenAPI video-01-live2d](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/minimax/video-01-live2d.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
@@ -54,7 +54,7 @@ After sending a request for video generation, this task is added to the queue. T
 If the video generation task status is `completed`, the response will include the final result — with the generated video URL and additional metadata.
 
 {% openapi-operation spec="fetch-video-universal-endpoint" path="/v2/video/generations" method="get" %}
-[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/Sber-AI/kandinsky5-t2v-pair.json)
+[OpenAPI fetch-video-universal-endpoint](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/sber-ai/kandinsky5-t2v-pair.json)
 {% endopenapi-operation %}
 
 ## Full Example: Generating and Retrieving the Video From the Server

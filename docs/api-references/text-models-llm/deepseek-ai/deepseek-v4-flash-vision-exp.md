@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="deepseek-v4-flash-vision-exp" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-v4-flash-vision-exp](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/DeepSeek-AI/deepseek-v4-flash-vision-exp.json)
+[OpenAPI deepseek-v4-flash-vision-exp](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/deepseek-ai/deepseek-v4-flash-vision-exp.json)
 {% endopenapi-operation %}
 
 ## Code Example

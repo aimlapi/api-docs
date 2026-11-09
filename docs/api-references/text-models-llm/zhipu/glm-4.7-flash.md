@@ -35,7 +35,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="glm-4-7-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI glm-4-7-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Zhipu-AI/glm-4.7-flash.json)
+[OpenAPI glm-4-7-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/zhipu-ai/glm-4.7-flash.json)
 {% endopenapi-operation %}
 
 ## Code Example

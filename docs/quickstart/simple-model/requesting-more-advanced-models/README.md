@@ -4,7 +4,7 @@ hidden: true
 
 # Requesting more advanced models
 
-This guide uses a more advanced model, [GPT-4o](../../../api-references/text-models-llm/OpenAI/gpt-4o.md), and also explains how to use various chat model capabilities:
+This guide uses a more advanced model, [GPT-4o](../../../api-references/text-models-llm/openai/gpt-4o.md), and also explains how to use various chat model capabilities:
 
 * streaming mode
 * calling tools

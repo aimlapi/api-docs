@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="qwen3-5-omni-flash" path="/v1/chat/completions" method="post" %}
-[OpenAPI qwen3-5-omni-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Alibaba-Cloud/qwen3.5-omni-flash.json)
+[OpenAPI qwen3-5-omni-flash](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.json)
 {% endopenapi-operation %}
 
 ## Code Example

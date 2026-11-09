@@ -53,7 +53,7 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="sakana-namazu" path="/v1/chat/completions" method="post" %}
-[OpenAPI sakana-namazu](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/Sakana-AI/sakana-namazu.json)
+[OpenAPI sakana-namazu](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/sakana-ai/sakana-namazu.json)
 {% endopenapi-operation %}
 
 ## Code Example
