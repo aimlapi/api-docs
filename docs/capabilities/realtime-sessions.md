@@ -233,7 +233,7 @@ To start a session, your balance must be at least $1 and cover the first reserva
 
 ### Who can use realtime models
 
-Realtime sessions are available to accounts with at least **$10 of completed payments**, the first of them at least 24 hours old (or verified). Other accounts are refused with `403 realtime_not_eligible`.
+Realtime sessions become available 24 hours after your first top-up. Until then, realtime requests return `403 realtime_not_eligible`.
 
 ### Concurrent sessions and hourly spend
 
