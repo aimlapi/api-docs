@@ -237,6 +237,7 @@
     * [Muse Spark 1.3](api-references/text-models-llm/meta/muse-spark-1.3.md)
     * [Muse Wonder](api-references/text-models-llm/meta/muse-wonder.md)
     * [Muse Spark Open](api-references/text-models-llm/meta/muse-spark-open.md)
+    * [Muse Ember](api-references/text-models-llm/meta/muse-ember.md)
   * [MiniMax](api-references/text-models-llm/minimax/README.md)
     * [Text 01](api-references/text-models-llm/minimax/text-01.md)
     * [M1](api-references/text-models-llm/minimax/m1.md)
