@@ -748,6 +748,7 @@
 * [Music Models](api-references/music-models/README.md)
   * [ElevenLabs](api-references/music-models/elevenlabs/README.md)
     * [Eleven Music](api-references/music-models/elevenlabs/eleven_music.md)
+    * [Eleven Music v2.5](api-references/music-models/elevenlabs/eleven_music_v2_5.md)
   * [Google](api-references/music-models/google/README.md)
     * [Lyria 2](api-references/music-models/google/lyria-2.md)
   * [MiniMax](api-references/music-models/minimax/README.md)
