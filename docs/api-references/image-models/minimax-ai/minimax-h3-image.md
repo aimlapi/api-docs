@@ -1,22 +1,22 @@
-# Minimax H3 Image Highspeed
+# Minimax H3 Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/h3-image-highspeed-highspeed`
+* `minimax/h3-image`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/minimax/h3-image-highspeed-highspeed" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/h3-image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-MiniMax H3 Image Highspeed is the faster version of MiniMax H3 Image, with the same parameters and limits: up to 10 images per request at up to 20 MP, from a text prompt or from 1-16 reference images it can edit and combine.
+MiniMax H3 Image is an open-weight image generation and editing model: up to 10 images per request at up to 20 MP, from a text prompt or from 1-16 reference images it can edit and combine.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -52,8 +52,8 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 
 ## API Schema
 
-{% openapi-operation spec="minimax-h3-image-highspeed" path="/v1/images/generations" method="post" %}
-[OpenAPI minimax-h3-image-highspeed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Minimax-AI/minimax-h3-image-highspeed.json)
+{% openapi-operation spec="minimax-h3-image" path="/v1/images/generations" method="post" %}
+[OpenAPI minimax-h3-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/minimax-ai/minimax-h3-image.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'minimax/h3-image-highspeed-highspeed', 'prompt': 'Describe what you want the model to generate.'},
+    json={'model': 'minimax/h3-image', 'prompt': 'Describe what you want the model to generate.'},
 )
 
 print(response.json())
@@ -88,7 +88,7 @@ const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-  "model": "minimax/h3-image-highspeed",
+  "model": "minimax/h3-image",
   "prompt": "Describe what you want the model to generate."
 }),
 });
@@ -118,7 +118,7 @@ console.log(await response.json());
       "usd_spent": 0.06
     }
   },
-  "model": "minimax/h3-image-highspeed"
+  "model": "minimax/h3-image"
 }
 ```
 {% endcode %}

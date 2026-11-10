@@ -44,7 +44,7 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 ## API Schema
 
 {% openapi-operation spec="extend" path="/v2/generate/audio" method="post" %}
-[OpenAPI extend](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Mureka/extend.json)
+[OpenAPI extend](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/mureka/extend.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example

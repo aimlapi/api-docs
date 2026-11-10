@@ -1,20 +1,20 @@
-# Mureka Transcribe
+# Mureka V9.5 Instrumental
 
 ## Model Overview
 
-Mureka Transcribe turns a song into sheet music, returned as a zip. It takes a song URL, a song_id from an earlier Mureka result or an uploaded song.
+Mureka V9.5 Instrumental generates instrumental tracks without vocals from a text description or a reference track. The result lists the tracks in songs[], each with a song_id.
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `mureka/transcribe`
+* `mureka/v9.5/instrumental`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/mureka/transcribe" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/mureka/v9.5/instrumental" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -43,8 +43,8 @@ If you want to learn how to call AI models via API from the very basics, feel fr
 
 ## API Schema
 
-{% openapi-operation spec="transcribe" path="/v2/generate/audio" method="post" %}
-[OpenAPI transcribe](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/Mureka/transcribe.json)
+{% openapi-operation spec="instrumental" path="/v2/generate/audio" method="post" %}
+[OpenAPI instrumental](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/music-models/mureka/instrumental.json)
 {% endopenapi-operation %}
 
 ## Quick Code Example
@@ -65,7 +65,7 @@ aimlapi_key = '<YOUR_AIMLAPI_KEY>'
 def generate_audio():
     url = "https://api.aimlapi.com/v2/generate/audio"
     payload = {
-        "model": "mureka/transcribe",
+        "model": "mureka/v9.5/instrumental",
         "prompt": "A calm and soothing instrumental music with gentle piano and soft strings.",
         "lyrics": "[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way" 
     }
@@ -141,7 +141,7 @@ const API_KEY = '<YOUR_AIMLAPI_KEY>';
 async function generateAudio() {
   const url = 'https://api.aimlapi.com/v2/generate/audio';
   const payload = {
-        model: 'mureka/transcribe',
+        model: 'mureka/v9.5/instrumental',
         prompt: 'A calm and soothing instrumental music with gentle piano and soft strings.',
         lyrics: '[Verse]\nStreetlights flicker, the night breeze sighs\nShadows stretch as I walk alone\nAn old coat wraps my silent sorrow\nWandering, longing, where should I go\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way\n[Verse]\nRaindrops tap on the windowpane\nA melody plays, soft and low\nThe clink of cups, the murmur of dreams\nIn this haven, I find my home\n[Chorus]\nPushing the wooden door, the aroma spreads\nIn a familiar corner, a stranger gazes back\nWarm lights flicker, memories awaken\nIn this small cafe, I find my way'
   };
@@ -234,16 +234,16 @@ main();
 
 {% code overflow="wrap" %}
 ```json5
-Generation: {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/transcribe', 'status': 'queued'}
-{'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/transcribe', 'status': 'queued'}
-Generation ID:   e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/transcribe
+Generation: {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/v9.5/instrumental', 'status': 'queued'}
+{'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/v9.5/instrumental', 'status': 'queued'}
+Generation ID:   e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/v9.5/instrumental
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Status: generating. Checking again in 15 seconds.
 Processing complete:
- {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/transcribe', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260108200145-PyWuVGVLaIkSAOEp.mp3?Expires=1767960111&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=pTfbqVDKtdUdX1dr0iqEjSI4xnY%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
+ {'id': 'e84c6bd4-bb02-4702-a55d-9b73e170c110:mureka/v9.5/instrumental', 'status': 'completed', 'audio_file': {'url': 'https://cdn.aimlapi.com/moose/music%2Fprod%2Ftts-20260108200145-PyWuVGVLaIkSAOEp.mp3?Expires=1767960111&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=pTfbqVDKtdUdX1dr0iqEjSI4xnY%3D'}, 'extra_info': {'music_duration': 107102, 'music_sample_rate': 44100, 'music_channel': 2, 'bitrate': 25600, 'music_size': 0}, 'trace_id': '05ae21d02744d305c8493d77c5b96a26'}
 ```
 {% endcode %}
 

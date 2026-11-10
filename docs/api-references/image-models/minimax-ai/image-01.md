@@ -29,7 +29,7 @@ If you don’t have an API key for the AI/ML API yet, feel free to use our [Quic
 ## API Schema
 
 {% openapi-operation spec="image-01" path="/v1/images/generations" method="post" %}
-[OpenAPI image-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Minimax-AI/image-01.json)
+[OpenAPI image-01](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/minimax-ai/image-01.json)
 {% endopenapi-operation %}
 
 ## Quick Example
