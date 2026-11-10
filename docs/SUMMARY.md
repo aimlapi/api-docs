@@ -768,6 +768,7 @@
     * [Music Cover](api-references/music-models/minimax/music-cover.md)
   * [Mureka](api-references/music-models/Mureka/README.md)
     * [Mureka V9.5](api-references/music-models/Mureka/v9.5.md)
+    * [Mureka Describe](api-references/music-models/Mureka/describe.md)
   * [Stability AI](api-references/music-models/stability-ai/README.md)
     * [Stable Audio](api-references/music-models/stability-ai/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
