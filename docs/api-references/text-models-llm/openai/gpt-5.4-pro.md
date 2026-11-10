@@ -1,4 +1,4 @@
-# Gpt 5.4 Pro
+# GPT 5.4 Pro (Chat Completions)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
