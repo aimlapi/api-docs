@@ -773,6 +773,7 @@
     * [Mureka Stem Separation](api-references/music-models/Mureka/stem.md)
     * [Mureka Transcribe](api-references/music-models/Mureka/transcribe.md)
     * [Mureka 8 Extend](api-references/music-models/Mureka/extend.md)
+    * [Mureka 8 Remix](api-references/music-models/Mureka/remix.md)
   * [Stability AI](api-references/music-models/stability-ai/README.md)
     * [Stable Audio](api-references/music-models/stability-ai/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
