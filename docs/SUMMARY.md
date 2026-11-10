@@ -769,6 +769,7 @@
   * [Mureka](api-references/music-models/Mureka/README.md)
     * [Mureka V9.5](api-references/music-models/Mureka/v9.5.md)
     * [Mureka Describe](api-references/music-models/Mureka/describe.md)
+    * [Mureka Region Edit](api-references/music-models/Mureka/region-edit.md)
   * [Stability AI](api-references/music-models/stability-ai/README.md)
     * [Stable Audio](api-references/music-models/stability-ai/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
