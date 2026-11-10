@@ -4,6 +4,8 @@
 
 Mureka 8 Extend continues a song, or adds a new beginning, with new lyrics. It works on a song_id from an earlier Mureka result or on an uploaded song; the result lists the extended songs in songs[].
 
+{% columns %}
+{% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
@@ -12,11 +14,9 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/minimax/music-2-0" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/mureka/v8/extend" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
-
-A fast and cost-efficient music generator optimized for high-quality music production. The model creates full-length songs (up to 4 minutes) featuring natural-sounding vocals and detailed instrumental arrangements.
 
 ## How to Make a Call
 
