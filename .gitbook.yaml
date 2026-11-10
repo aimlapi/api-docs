@@ -2,3 +2,6 @@ root: ./docs/
 
 redirects:
   quickstart/our-tools: quickstart/toolbox.md
+  api-references/text-models-llm/anthropic/claude-fable-5.2: api-references/text-models-llm/anthropic/claude-fable-5-2.md
+  api-references/text-models-llm/anthropic/claude-haiku-5.5: api-references/text-models-llm/anthropic/claude-haiku-5-5.md
+  api-references/text-models-llm/google/gemini-3.5-flash-lite: api-references/text-models-llm/google/gemini-3-5-flash-lite.md
