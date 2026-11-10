@@ -1,26 +1,22 @@
----
-hidden: true
----
-
-# Gemini 3.5 Flash Lite
+# Minimax H3 Image
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/gemini-3.5-flash-lite`
+* `minimax/h3-image`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/google/gemini-3.5-flash-lite" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/h3-image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Gemini 3.5 Flash Lite is Google’s most cost-efficient GA model, optimized for high-volume agentic tasks, translation and simple data processing, with multimodal text, image, video and audio input.
+MiniMax H3 Image is an open-weight image generation and editing model: up to 10 images per request at up to 20 MP, from a text prompt or from 1-16 reference images it can edit and combine.
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -56,8 +52,8 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 
 ## API Schema
 
-{% openapi-operation spec="gemini-3-5-flash-lite" path="/v1/chat/completions" method="post" %}
-[OpenAPI gemini-3-5-flash-lite](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/google/gemini-3.5-flash-lite.json)
+{% openapi-operation spec="minimax-h3-image" path="/v1/images/generations" method="post" %}
+[OpenAPI minimax-h3-image](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/minimax-ai/minimax-h3-image.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -69,12 +65,12 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 import requests
 
 response = requests.post(
-    "https://api.aimlapi.com/v1/chat/completions",
+    "https://api.aimlapi.com/v1/images/generations",
     headers={
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'google/gemini-3.5-flash-lite', 'messages': ['<message>']},
+    json={'model': 'minimax/h3-image', 'prompt': 'Describe what you want the model to generate.'},
 )
 
 print(response.json())
@@ -85,17 +81,15 @@ print(response.json())
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 ```javascript
-const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-  "model": "google/gemini-3.5-flash-lite",
-  "messages": [
-    "<message>"
-  ]
+  "model": "minimax/h3-image",
+  "prompt": "Describe what you want the model to generate."
 }),
 });
 
@@ -112,38 +106,19 @@ console.log(await response.json());
 {% code overflow="wrap" %}
 ```json
 {
-  "id": "chatcmpl-CQ9FPg3osank0dx0k46Z53LTqtXMl",
-  "object": "chat.completion",
-  "created": 1762343744,
-  "choices": [
+  "data": [
     {
-      "index": 0,
-      "message": {
-        "role": "assistant",
-        "content": "Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?",
-        "refusal": null,
-        "annotations": null,
-        "audio": null,
-        "tool_calls": null
-      },
-      "finish_reason": "stop",
-      "logprobs": null
+      "url": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png",
+      "b64_json": null
     }
   ],
-  "model": "google/gemini-3.5-flash-lite",
-  "usage": {
-    "prompt_tokens": 137,
-    "completion_tokens": 914,
-    "total_tokens": 1051,
-    "completion_tokens_details": null,
-    "prompt_tokens_details": null
-  },
   "meta": {
     "usage": {
       "credits_used": 120000,
       "usd_spent": 0.06
     }
-  }
+  },
+  "model": "minimax/h3-image"
 }
 ```
 {% endcode %}

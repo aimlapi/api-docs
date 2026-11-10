@@ -53,7 +53,7 @@ For a detailed walkthrough, use our [Quickstart guide](https://docs.aimlapi.com/
 ## API Schema
 
 {% openapi-operation spec="minimax-h3-image-highspeed" path="/v1/images/generations" method="post" %}
-[OpenAPI minimax-h3-image-highspeed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/Minimax-AI/minimax-h3-image-highspeed.json)
+[OpenAPI minimax-h3-image-highspeed](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/image-models/minimax-ai/minimax-h3-image-highspeed.json)
 {% endopenapi-operation %}
 
 ## Code Example

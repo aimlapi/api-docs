@@ -1,4 +1,4 @@
-# gpt-5-4-pro
+# GPT 5.4 Pro (Responses API)
 
 {% columns %}
 {% column width="66.66666666666666%" %}
