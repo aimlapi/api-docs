@@ -537,6 +537,7 @@
     * [Meta Muse Image Edit](api-references/image-models/meta/muse-image-edit.md)
   * [Minimax AI](api-references/image-models/Minimax-AI/README.md)
     * [Minimax H3 Image](api-references/image-models/Minimax-AI/minimax-h3-image.md)
+    * [Minimax H3 Image Highspeed](api-references/image-models/Minimax-AI/minimax-h3-image-highspeed.md)
   * [OpenAI](api-references/image-models/openai/README.md)
     * [DALL·E 2](api-references/image-models/openai/dall-e-2.md)
     * [DALL·E 3](api-references/image-models/openai/dall-e-3.md)
