@@ -6,6 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `anthropic/claude-fable-5-2`
+* `anthropic/claude-fable-5.2`
 {% endhint %}
 {% endcolumn %}
 

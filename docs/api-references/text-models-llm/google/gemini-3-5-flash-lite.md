@@ -6,6 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `google/gemini-3-5-flash-lite`
+* `google/gemini-3.5-flash-lite`
 {% endhint %}
 {% endcolumn %}
 

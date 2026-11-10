@@ -6,6 +6,7 @@
 This documentation is valid for the following list of our models:
 
 * `anthropic/claude-haiku-5-5`
+* `anthropic/claude-haiku-5.5`
 {% endhint %}
 {% endcolumn %}
 
