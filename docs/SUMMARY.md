@@ -128,6 +128,7 @@
     * [ernie-x1-turbo-32k](api-references/text-models-llm/baidu/ernie-x1-turbo-32k.md)
     * [ernie-x1.1-preview](api-references/text-models-llm/baidu/ernie-x1.1-preview.md)
     * [Ernie 5.0](api-references/text-models-llm/baidu/ernie-5.0.md)
+    * [Ernie 5.5 Flash Preview](api-references/text-models-llm/baidu/ernie-5.5-flash-preview.md)
   * [ByteDance](api-references/text-models-llm/bytedance/README.md)
     * [Seed 1.6](api-references/text-models-llm/bytedance/seed-1.6.md)
     * [Seed 1.6 Flash](api-references/text-models-llm/bytedance/seed-1.6-flash.md)
