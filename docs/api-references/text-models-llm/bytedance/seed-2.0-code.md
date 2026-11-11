@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Seed 2.0 Code
 
 {% columns %}
