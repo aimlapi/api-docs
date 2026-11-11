@@ -288,6 +288,8 @@
   * [Morph](api-references/text-models-llm/morph/README.md)
     * [V3 Fast](api-references/text-models-llm/morph/morph-v3-fast.md)
     * [V3 Large](api-references/text-models-llm/morph/morph-v3-large.md)
+  * [Motif Technologies](api-references/text-models-llm/motif-technologies/README.md)
+    * [Motif 3](api-references/text-models-llm/motif-technologies/motif-3.md)
   * [Nex AGI](api-references/text-models-llm/nex-agi/README.md)
     * [Nex N2 Mini](api-references/text-models-llm/nex-agi/nex-n2-mini.md)
     * [Nex N2 Pro](api-references/text-models-llm/nex-agi/nex-n2-pro.md)
