@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # HeyGen Voice 1 Turbo
 
 {% columns %}

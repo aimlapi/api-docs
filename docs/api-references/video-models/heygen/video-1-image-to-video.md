@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # HeyGen Video 1 Image to Video
 
 {% columns %}

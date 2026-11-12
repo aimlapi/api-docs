@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # HeyGen Image to Video
 
 {% columns %}
@@ -44,8 +39,8 @@ Generating a video involves sequentially calling two endpoints:
 
 ### Create a video generation task and send it to the server
 
-{% openapi-operation spec="image-to-video" path="/v2/video/generations" method="post" %}
-[OpenAPI image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/image-to-video.json)
+{% openapi-operation spec="heygen-image-to-video" path="/v2/video/generations" method="post" %}
+[OpenAPI heygen-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/heygen/image-to-video.json)
 {% endopenapi-operation %}
 
 ### Retrieve the generated video from the server
