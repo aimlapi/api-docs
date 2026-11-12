@@ -189,6 +189,7 @@
     * [Gemini 3.8 Flash](api-references/text-models-llm/google/gemini-3-8-flash.md)
     * [Gemini 4 Argon](api-references/text-models-llm/google/gemini-4-argon.md)
     * [Gemini 4 Carbon](api-references/text-models-llm/google/gemini-4-carbon.md)
+    * [Gemini 4 Hydrogen](api-references/text-models-llm/google/gemini-4-hydrogen.md)
   * [Gryphe](api-references/text-models-llm/gryphe/README.md)
     * [MythoMax L2 (13B)](api-references/text-models-llm/gryphe/mythomax-l2-13b.md)
   * [IBM](api-references/text-models-llm/ibm/README.md)
