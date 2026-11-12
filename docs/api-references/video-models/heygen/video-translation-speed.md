@@ -1,8 +1,3 @@
----
-hidden: true
-noIndex: true
----
-
 # HeyGen Video Translation Speed
 
 {% columns %}
