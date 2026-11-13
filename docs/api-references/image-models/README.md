@@ -11,6 +11,10 @@ Our API features the capability to generate images. We support various models fo
 
 We support multiple image models. You can find the [complete list](./#all-available-image-models) along with API reference links at the end of the page.
 
+{% hint style="info" %}
+Some FLUX models can also run as a task: pass `webhook_url` with the request, get the generation ID at once, and receive the image in a signed HTTP request when it is ready. See [Webhooks](../../capabilities/webhooks.md#images) for the list of models.
+{% endhint %}
+
 ## How to Generate an Image
 
 ### Select a model

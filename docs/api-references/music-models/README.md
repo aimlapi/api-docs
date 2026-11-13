@@ -11,6 +11,10 @@ Our API features the capability to generate audio. With this API, you can create
 
 We support multiple music models. You can find the [complete list](./#all-available-music-models) along with API reference links at the end of the page.
 
+{% hint style="info" %}
+Instead of polling for the result, you can pass `webhook_url` with the request and get a signed HTTP request when the audio is ready. See [Webhooks](../../capabilities/webhooks.md).
+{% endhint %}
+
 ## Quick Code Example
 
 Here is an example of generation an audio file based on a sample and a prompt using the music model [**minimax-music**](minimax/minimax-music-\[legacy].md) from MiniMax.

@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/webhooks/events/{event_id}/retry": {
+      "post": {
+        "x-codeSamples": [],
+        "operationId": "_v1_webhooks_events_event_id_retry",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The ID of the event (`evt_` followed by 22 characters).",
+            "example": "<REPLACE_WITH_YOUR_EVENT_ID>"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The event is queued again, with the same `webhook-id` and the same body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "accepted": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "ID of the event."
+                    }
+                  },
+                  "required": [
+                    "accepted",
+                    "id"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No such event, or one you may not see."
+          },
+          "409": {
+            "description": "An attempt of this event is running. Nothing changed."
+          },
+          "410": {
+            "description": "The event is past its 7-day body retention, or the API key that started its task was revoked."
+          },
+          "429": {
+            "description": "Too many re-sends: 10 a minute and 200 a day per workspace, 5 a day per event."
+          }
+        }
+      }
+    }
+  }
+}
