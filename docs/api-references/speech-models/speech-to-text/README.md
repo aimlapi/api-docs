@@ -8,6 +8,10 @@ Speech-to-text models convert spoken language into written text, enabling voice-
 Generated audio transcriptions are stored on the server for 1 hour from the time of creation.
 {% endhint %}
 
+{% hint style="info" %}
+Instead of polling for the result, you can pass `webhook_url` with the request and get a signed HTTP request when the transcription is ready. See [Webhooks](../../../capabilities/webhooks.md).
+{% endhint %}
+
 ## Quick Code Examples
 
 Let's use the `#g1_whisper-large` model to transcribe the following audio fragment:
