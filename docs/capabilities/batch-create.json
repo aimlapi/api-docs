@@ -14,7 +14,6 @@
       "post": {
         "x-codeSamples":[],
         "operationId": "_v1_batches",
-        "description": "The legacy inline format (Anthropic models only). For new integrations, upload a JSONL file and create the batch with `input_file_id` instead.",
         "requestBody": {
           "required": true,
           "content": {
@@ -195,6 +194,7 @@
                   }
                 },
                 "required": [
+                  "model",
                   "requests"
                 ]
               }

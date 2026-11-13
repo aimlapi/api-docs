@@ -11,10 +11,6 @@ With our API you can generate videos from your prompt and imagination.
 
 We support multiple video models. You can find the [complete list](./#all-available-video-models-1) along with API reference links at the end of the page.
 
-{% hint style="info" %}
-Instead of polling for the result, you can pass `webhook_url` with the request and get a signed HTTP request when the video is ready. See [Webhooks](../../capabilities/webhooks.md).
-{% endhint %}
-
 ## Example
 
 <details>

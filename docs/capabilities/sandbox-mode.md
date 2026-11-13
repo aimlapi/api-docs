@@ -79,7 +79,6 @@ The text of every sandbox answer also says that it came from the sandbox. `x-aim
 | Speech-to-text             | `POST /v1/stt/create`, poll `GET /v1/stt/<generation_id>`                | Yes                     |
 | Message Batches            | `POST /v1/batches`, poll `GET /v1/batches?batch_id=<id>`, cancel `POST /v1/batches/cancel/<id>` | Yes |
 
-* Message Batches here means the [inline format](batch-processing.md#legacy-inline-format). A batch created from a file (`input_file_id`) is always live: a sandbox request returns `400 sandbox_unsupported`.
 * The Azure OpenAI-compatible chat route works like Chat Completions.
 * Routers work on Chat Completions only (`sandbox/<router id>`). The router does not choose a model; the answer comes from the chat sandbox. On other endpoints a router returns `400 sandbox_unsupported`.
 * Any other endpoint, and Text-to-speech with `"stream": true`, returns `400 sandbox_unsupported`.

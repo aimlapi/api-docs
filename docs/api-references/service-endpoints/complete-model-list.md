@@ -209,8 +209,6 @@ Always read `per` together with `price`. `price` is the charge for `per` units, 
 
 Here a 5-second 1080p generation costs `0.65 × 5 = $3.25`. Prices are in USD and are what you are charged.
 
-A model that can run in the [Batch API](../../capabilities/batch-processing.md) also carries `pricing.batch`: its own `units` and `thresholds`, the price of the same model in a batch. A model without `pricing.batch` cannot run in a batch.
-
 ## Caching
 
 Responses carry an `ETag`. Send it back as `If-None-Match` and you get `304 Not Modified` with an empty body when nothing changed:
