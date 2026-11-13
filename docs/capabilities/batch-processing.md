@@ -52,6 +52,8 @@ A batch price is set per model. For most providers it is 50% of the provider's l
 
 The exact batch price of a model is in the [model list](../api-references/service-endpoints/complete-model-list.md): with `?include=pricing`, a model that can run in a batch carries a `pricing.batch` block with its units and thresholds. A model without `pricing.batch` cannot run in a batch: creating one returns `400 model_not_supported_for_batch`.
 
+Use the model id exactly as the model list shows it with `pricing.batch`, for example `openai/gpt-5-5` or `gpt-5.5-2026-04-23`. A few short aliases, such as `gpt-5.5` and `o3`, are served by another provider and are refused in a batch with the same error.
+
 ***
 
 ## Prepare the input file
