@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-pro-latest. API reference for Gemini Pro Latest: request schema and code examples."
+---
+
 # Gemini Pro Latest
 
 {% columns %}

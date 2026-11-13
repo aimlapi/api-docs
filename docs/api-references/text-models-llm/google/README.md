@@ -1,3 +1,7 @@
+---
+description: "Chat and reasoning models from Google on AI/ML API: model ids and API references."
+---
+
 # Google
 
 Google develops multiple families of AI models focused on reasoning, coding, multimodal understanding, and long-context interaction across text, images, audio, and video. As part of the broader Google ecosystem, the company integrates frontier AI capabilities into developer platforms, productivity tools, search systems, and enterprise infrastructure.

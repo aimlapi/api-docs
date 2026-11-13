@@ -1,4 +1,5 @@
 ---
+description: "Model id: stealth/ox-alpha. GLM-5.3 Flash is the low-cost, high-throughput variant of Zhipu AI GLM-5.3, with a 1M-token context window and text, image and video understanding."
 hidden: true
 noIndex: true
 ---

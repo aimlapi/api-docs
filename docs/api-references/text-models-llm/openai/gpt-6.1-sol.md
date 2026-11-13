@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-6.1-sol. GPT-6.1 model from OpenAI with near-Astra performance at a lower cost for complex coding, computer use and professional work: text and image input over a 1.05M-token context, with reasoning, and…"
+---
+
 # Gpt 6.1 Sol
 
 {% columns %}

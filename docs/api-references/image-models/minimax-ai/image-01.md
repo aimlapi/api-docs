@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/image-01. MiniMax Image 01 generates up to 9 images per request from a text prompt in eight aspect ratios, and can keep a person from a reference photo in the picture."
+---
+
 # MiniMax Image 01
 
 ## Model Overview
@@ -9,12 +13,12 @@ MiniMax Image 01 generates up to 9 images per request from a text prompt in eigh
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `google/imagen-4.0-generate-001`
+* `minimax/image-01`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/google/imagen-4-0-generate-001" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/minimax/image-01" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -79,7 +83,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'google/imagen-4.0-generate-001',
+      model: 'minimax/image-01',
       prompt: 'Racoon eating ice-cream',
       aspect_ratio: '16:9'
     }),

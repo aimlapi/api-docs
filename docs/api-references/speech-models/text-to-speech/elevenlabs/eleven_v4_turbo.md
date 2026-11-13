@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_v4_turbo. ElevenLabs v4 Turbo is the low-latency variant of Eleven v4: the same expressive voices and audio tags in 90+ languages, tuned for real-time use."
+---
+
 # Eleven v4 Turbo
 
 {% columns %}
@@ -5,7 +9,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `elevenlabs/eleven_v4_turbo_turbo`
+* `elevenlabs/eleven_v4_turbo`
 {% endhint %}
 {% endcolumn %}
 
@@ -87,7 +91,7 @@ const fs = require("fs");
 const apiKey = "<YOUR_AIMLAPI_KEY>";
 
 const data = JSON.stringify({
-  model: "elevenlabs/eleven_v4_turbo_turbo",
+  model: "elevenlabs/eleven_v4_turbo",
   text: "Cities of the future promise to radically transform how people live, work, and move.",
   voice: "en-US-AvaNeural",
 });

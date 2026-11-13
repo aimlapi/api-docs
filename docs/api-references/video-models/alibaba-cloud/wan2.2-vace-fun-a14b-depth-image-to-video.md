@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-vace-fun-a14b-depth. Generate videos from depth maps using Alibaba WAN-2.2-VACE model."
+---
+
 # Wan 2.2 Vace Depth
 
 {% columns %}

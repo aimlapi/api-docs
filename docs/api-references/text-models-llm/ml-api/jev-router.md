@@ -1,3 +1,7 @@
+---
+description: "Model id: typesafe/jev-router. Routes each request to a model picked for it: TypeSafe Jev picks the bucket whose description fits the request — its text and its images — and the request goes to the first model of that bucket that…"
+---
+
 # Jev Router
 
 {% columns %}

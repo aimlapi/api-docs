@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.5-omni-plus. API reference for Qwen3.5 Omni Plus: request schema and code examples."
+---
+
 # Qwen3.5 Omni Plus
 
 {% columns %}

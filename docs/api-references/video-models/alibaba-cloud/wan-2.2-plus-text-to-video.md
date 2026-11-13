@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-t2v-plus. Wan 2.2 Plus Text-to-Video generates high-quality videos from text prompts with improved stability and coherence."
+---
+
 # Wan 2.2 Plus Text to Video
 
 {% columns %}

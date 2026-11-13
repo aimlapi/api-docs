@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/voxtral-small-24b-2507. API reference for Voxtral Small 24B 2507: request schema and code examples."
+---
+
 # Voxtral Small 24B 2507
 
 {% columns %}

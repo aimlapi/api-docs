@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-v4-pro-0813. DeepSeek V4 Pro 0813 is the GA release of DeepSeek V4 Pro — a large-scale mixture-of-experts model for chat and reasoning tasks with 1M context length, supporting both standard and thinking modes."
+---
+
 # Deepseek V4 Pro 0813
 
 {% columns %}

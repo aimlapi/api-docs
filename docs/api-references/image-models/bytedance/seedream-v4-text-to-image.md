@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedream-v4-text-to-image. Generate images using ByteDance's SeedDream 4 text-to-image model."
+---
+
 # Seedream v4 (Text-to-Image)
 
 {% columns %}

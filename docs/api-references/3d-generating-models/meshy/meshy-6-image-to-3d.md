@@ -1,3 +1,7 @@
+---
+description: "Model id: meshy/meshy-6-image-to-3d. Meshy 6 turns a single image into a textured 3D model, with a low-poly mode and a target polygon count for game-ready assets."
+---
+
 # Meshy 6 Image to 3D
 
 {% columns %}

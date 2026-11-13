@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-oss-20b. GPT OSS 20B is a powerful Open AI open weight model."
+---
+
 # GPT OSS 20B
 
 {% columns %}

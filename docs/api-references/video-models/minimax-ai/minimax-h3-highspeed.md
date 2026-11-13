@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/h3-highspeed. MiniMax H3 Highspeed balances quality and speed, generating 4-15 second videos at 480p or 768p with synchronized audio, from text, first/last frames, or image, video and audio references."
+---
+
 # Minimax H3 Highspeed
 
 {% columns %}

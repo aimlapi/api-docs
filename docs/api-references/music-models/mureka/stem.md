@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/stem. Mureka Stem Separation splits a song into up to 5 stems (instrumental, vocals, drums, bass and other) and returns them as a zip of WAV files."
+---
+
 # Mureka Stem Separation
 
 ## Model Overview

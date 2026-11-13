@@ -1,3 +1,7 @@
+---
+description: "Model id: prism-ml/ternary-bonsai-2-27b. Ternary Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3-27B."
+---
+
 # Ternary Bonsai 2 27B
 hidden: true
 noIndex: true

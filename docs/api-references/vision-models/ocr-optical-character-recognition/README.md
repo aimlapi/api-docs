@@ -1,3 +1,7 @@
+---
+description: "OCR models from OCR: Optical Character Recognition on AI/ML API: model ids and API references."
+---
+
 # OCR: Optical Character Recognition
 
 Optical Character Recognition (OCR) technology enables the extraction of text from images, scanned documents, and PDFs, transforming them into machine-readable formats. Modern OCR systems go beyond simple text recognition, interpreting complex layouts, tables, and even handwritten notes with high accuracy. This technology is widely used in document automation, digital archiving, and accessibility tools, making information more searchable and editable.

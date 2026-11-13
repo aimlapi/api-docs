@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-max. Qwen3.8-Max is Alibaba’s flagship reasoning and agentic LLM, positioned as its highest-capability tier for complex multi-step reasoning, coding and autonomous workflows."
+---
+
 # Qwen3.8 Max
 
 {% columns %}

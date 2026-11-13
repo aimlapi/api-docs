@@ -1,3 +1,7 @@
+---
+description: "Model id: luma/ray-2. Luma Ray-2 generates high-quality videos from text prompts or images with advanced AI techniques."
+---
+
 # Luma Dream Machine Ray-2
 
 {% columns %}

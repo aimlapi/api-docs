@@ -1,3 +1,7 @@
+---
+description: "Model id: claude-sonnet-4-5. Claude 4.5 Sonnet offers a balance of intelligence and speed for diverse enterprise and coding tasks."
+---
+
 # Claude 4.5 Sonnet
 
 {% columns %}

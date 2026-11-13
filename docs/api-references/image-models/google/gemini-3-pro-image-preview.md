@@ -1,3 +1,7 @@
+---
+description: "Model id: google/nano-banana-pro. Nano Banana Pro is a text-to-image model that generates images from text descriptions."
+---
+
 # Nano Banana Pro
 
 {% columns %}

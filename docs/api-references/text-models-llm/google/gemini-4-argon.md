@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-4-argon. Gemini 4 Argon is Google’s flagship reasoning model, built for complex software engineering, deep mathematical and scientific problem solving, and autonomous multi-step agents."
+---
+
 # Gemini 4 Argon
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/music-2.6. MiniMax Music 2.6 — a music generation model that creates up to 5-minute audio tracks from text prompts. Optimized for fast generation and consistent musical structure."
+---
+
 # MiniMax Music 2.6
 
 {% columns %}

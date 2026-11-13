@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-chat-latest. API reference for GPT Chat Latest: request schema and code examples."
+---
+
 # GPT Chat Latest
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: nvidia/nemotron-3.5-lightning. NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model with 3B active parameters out of 30B total, built for high-throughput agentic workloads and specialized task execution with up to 1M…"
+---
+
 # Nemotron 3.5 Lightning
 
 {% columns %}

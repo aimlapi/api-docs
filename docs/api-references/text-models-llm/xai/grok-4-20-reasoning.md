@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-20-0309-reasoning. Grok 4.20 Reasoning — a large language model designed for advanced reasoning tasks. It excels at multi-step problem solving, logical analysis, and complex instruction following."
+---
+
 # Grok 4.20 Reasoning
 
 {% columns %}

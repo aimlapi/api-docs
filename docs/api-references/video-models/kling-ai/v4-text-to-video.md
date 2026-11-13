@@ -1,3 +1,7 @@
+---
+description: "Model id: kling-video/v4/text-to-video. Kling 4.0 text-to-video generates 3-30 second videos at 720p or 1080p from a prompt or a multi-shot storyboard, with stable motion and complex camera moves."
+---
+
 # Kling 4.0 Text to Video
 
 {% columns %}

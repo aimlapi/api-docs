@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/hailuo-2.3. Hailuo 2.3 is an advanced video generation model from MiniMax with enhanced realism and prompt fidelity."
+---
+
 # Hailuo 2.3
 
 {% columns %}

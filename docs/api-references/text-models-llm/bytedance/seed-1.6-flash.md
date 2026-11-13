@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance-seed/seed-1.6-flash. API reference for Seed 1.6 Flash: request schema and code examples."
+---
+
 # Seed 1.6 Flash
 
 {% columns %}
@@ -5,7 +9,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `bytedance-seed/seed-1.6-flash-flash`
+* `bytedance-seed/seed-1.6-flash`
 {% endhint %}
 {% endcolumn %}
 
@@ -83,7 +87,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'bytedance-seed/seed-1.6-flash-flash',
+      model: 'bytedance-seed/seed-1.6-flash',
       messages:[
           {
               role:'user',

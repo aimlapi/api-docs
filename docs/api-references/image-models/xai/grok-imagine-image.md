@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-imagine-image. Grok Imagine Image is a lightweight image model by xAI optimized for fast and cost-efficient image generation and editing."
+---
+
 # Grok Imagine Image
 
 {% columns %}

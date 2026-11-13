@@ -111,7 +111,7 @@ More examples are available in the same directory:
 
 ## Tips
 
-* **Profiles:** use multiple configurations (default = [`openai/gpt-5-chat-latest`](../api-references/text-models-llm/openai/gpt-5-chat.md), budget = [`openai/o4-mini`](../api-references/text-models-llm/openai/o4-mini.md))
+* **Profiles:** use multiple configurations (default = `openai/gpt-5-chat-latest`, budget = `openai/o4-mini`)
 * **Structured results:** pass `result_type=...` for typed outputs
 * **Tools:** register Python functions via `Agent(tools=[...])`
 * **Token limits:** increase output size if needed

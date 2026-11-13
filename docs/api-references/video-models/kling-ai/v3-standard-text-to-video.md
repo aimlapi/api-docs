@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-standard-text-to-video. Kling 3.0 Standard text-to-video generates high-quality videos from text prompts with improved temporal consistency."
+---
+
 # Kling 3.0 Standard Text to Video
 
 {% columns %}

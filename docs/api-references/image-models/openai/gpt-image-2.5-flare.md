@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-image-2.5-flare. API reference for Gpt Image 2.5 Flare: request schema and code examples."
+---
+
 # Gpt Image 2.5 Flare
 
 {% columns %}

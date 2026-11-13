@@ -1,3 +1,7 @@
+---
+description: "Model id: prism-ml/ternary-bonsai-2-9b. Ternary Bonsai 2 9B is a compact open-weight model from PrismML built on Qwen3.5, with ternary weights packed into 2 bits."
+---
+
 # Ternary Bonsai 2 9B
 hidden: true
 noIndex: true

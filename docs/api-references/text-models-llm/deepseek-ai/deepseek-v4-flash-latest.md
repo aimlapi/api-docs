@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-v4-flash-latest. API reference for V4 Flash Latest: request schema and code examples."
+---
+
 # V4 Flash Latest
 
 {% columns %}

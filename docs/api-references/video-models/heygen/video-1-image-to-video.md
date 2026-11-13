@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-1-image-to-video. HeyGen Video 1 animates an image used as the first frame into a 5–30 second video with sound, guided by a text prompt. Does not support tools/function calling."
+---
+
 # HeyGen Video 1 Image to Video
 
 {% columns %}

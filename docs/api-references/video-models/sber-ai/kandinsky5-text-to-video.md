@@ -1,3 +1,7 @@
+---
+description: "Model id: sber-ai/kandinsky5-t2v. Kandinsky5 text-to-video model generates high-quality videos from text prompts. $0.10 for 5s, $0.20 for 10s."
+---
+
 # Kandinsky 5 (Text-to-Video)
 
 {% columns %}

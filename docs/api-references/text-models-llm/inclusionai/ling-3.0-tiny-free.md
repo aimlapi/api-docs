@@ -1,4 +1,5 @@
 ---
+description: "Model id: inclusionai/ling-3.0-tiny. API reference for Ling-3.0-tiny: request schema and code examples."
 hidden: true
 noIndex: true
 ---

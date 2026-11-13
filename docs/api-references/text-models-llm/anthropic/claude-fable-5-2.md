@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-fable-5-2. Claude Fable 5.2 is Anthropic's model for demanding reasoning and long-horizon agentic work: agent sessions that run for hours, multistep research, and analysis carried through to a finished…"
+---
+
 # Claude Fable 5.2
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: claude-haiku-4-5. Claude 4.5 Haiku is a fast, lightweight model optimized for quick responses and high-throughput applications."
+---
+
 # Claude 4.5 Haiku
 
 {% columns %}

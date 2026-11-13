@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshotai/kimi-k2.5. Kimi k2.5 is a powerful agentic model by Moonshot AI with strong coding and tool-use capabilities."
+---
+
 # Kimi K2.5
 hidden: true
 noIndex: true

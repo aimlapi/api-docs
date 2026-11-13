@@ -1,4 +1,5 @@
 ---
+description: "Model id: nvidia/nemotron-3-ultra-550b-a55b. NVIDIA Nemotron 3 Ultra is a reasoning and orchestration model built on a hybrid Transformer-Mamba Mixture-of-Experts architecture, optimized for complex reasoning, long-context analysis, and agent…"
 layout:
   width: wide
   title:

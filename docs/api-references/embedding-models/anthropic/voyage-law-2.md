@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-law-2. Voyage Law 2 is a domain-specific embedding model fine-tuned for legal document retrieval and similarity tasks."
+---
+
 # Voyage Law 2
 
 {% columns %}

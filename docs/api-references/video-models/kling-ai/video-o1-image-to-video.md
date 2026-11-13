@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-o1-image-to-video. Kling Video O1 applies reasoning-enhanced video generation from images for more accurate motion and scene understanding."
+---
+
 # Kling Video O1 Image to Video
 
 {% columns %}

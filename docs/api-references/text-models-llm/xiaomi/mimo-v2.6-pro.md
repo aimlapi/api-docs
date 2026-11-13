@@ -1,3 +1,7 @@
+---
+description: "Model id: xiaomi/mimo-v2.6-pro. MiMo-V2.6-Pro — Xiaomi’s flagship foundation model, built at a scale of over 1T parameters to push the ceiling of capability on the most demanding reasoning, agentic, and multimodal (text, image,…"
+---
+
 # Mimo V2.6 Pro
 
 {% columns %}

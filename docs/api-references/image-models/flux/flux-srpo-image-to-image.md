@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/srpo/image-to-image. FLUX.1 SRPO image-to-image model for advanced image transformation and editing."
+---
+
 # Flux Srpo Image To Image
 
 {% columns %}

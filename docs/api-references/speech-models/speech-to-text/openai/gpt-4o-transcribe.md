@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-4o-transcribe. Advanced speech-to-text model using GPT-4o for improved accuracy and language recognition. 16,000 context window, 2,000 max output tokens."
+---
+
 # GPT-4o Transcribe
 
 {% hint style="info" %}

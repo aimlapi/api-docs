@@ -1,3 +1,7 @@
+---
+description: "Model id: motif-technologies/motif-3. Motif 3 is a Mixture-of-Experts language model from Motif Technologies with 314B total and 13.2B active parameters."
+---
+
 # Motif 3
 
 {% columns %}

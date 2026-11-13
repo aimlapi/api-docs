@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-sonnet-5. Claude Sonnet 5 is a high-performance model for coding and agentic workflows, delivering near-Opus quality at Sonnet cost."
+---
+
 # Claude Sonnet 5
 
 {% columns %}

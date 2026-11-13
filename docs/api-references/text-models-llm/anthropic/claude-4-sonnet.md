@@ -1,4 +1,5 @@
 ---
+description: "Model id: anthropic/claude-sonnet-4. API reference for Claude 4 Sonnet: request schema and code examples."
 hidden: true
 ---
 
@@ -11,7 +12,6 @@ This documentation is valid for the following list of our models:
 
 * `anthropic/claude-sonnet-4`
 * `claude-sonnet-4`
-* `claude-sonnet-4-20250514`
 {% endhint %}
 {% endcolumn %}
 

@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemma-3-27b-it. Gemma 3 27B is Google's largest Gemma open model, delivering strong reasoning and text generation capabilities."
+---
+
 # Gemma 3 27B
 
 {% columns %}

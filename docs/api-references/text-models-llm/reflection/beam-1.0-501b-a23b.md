@@ -1,3 +1,7 @@
+---
+description: "Model id: reflection/beam-1.0-501b-a23b. Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows."
+---
+
 # Beam 1.0 501B A23B
 hidden: true
 noIndex: true

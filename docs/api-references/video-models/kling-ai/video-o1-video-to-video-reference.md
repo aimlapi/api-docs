@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-o1-video-to-video-reference. Kling Video O1 Video-to-Video Reference generates new videos guided by both an input video and reference images."
+---
+
 # Kling O1 Video to Video Reference
 
 {% columns %}

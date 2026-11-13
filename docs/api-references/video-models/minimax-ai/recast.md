@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/h3-max-recast. MiniMax H3 Max Recast replaces the main people in a 5-30 second video with the people from 1-4 reference photos, keeping the original motion, camera, cuts and sound, at 768p or 1080p."
+---
+
 # MiniMax H3 Max Recast
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-4-8. Claude 4.8 Opus is Anthropic's most capable model designed for complex reasoning and agentic coding workflows."
+---
+
 # Claude 4.8 Opus
 
 {% columns %}

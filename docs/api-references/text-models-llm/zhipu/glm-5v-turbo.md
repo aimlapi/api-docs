@@ -1,3 +1,7 @@
+---
+description: "Model id: z-ai/glm-5v-turbo. API reference for Glm 5V Turbo: request schema and code examples."
+---
+
 # Glm 5V Turbo
 
 {% columns %}

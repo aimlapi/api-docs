@@ -1,4 +1,5 @@
 ---
+description: "Model id: alibaba/qwen3.6-flash. Qwen3.6-Flash — a lightweight and cost-efficient model by Alibaba Cloud designed for simple tasks and high-throughput applications. It offers fast response times with lower cost."
 layout:
   width: wide
   title:

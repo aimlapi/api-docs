@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-v4.1-flash. DeepSeek V4.1 Flash is the current DeepSeek Flash build: a 1M-context chat and reasoning model with thinking mode enabled by default, image understanding, and up to 384K output tokens."
+---
+
 # DeepSeek V4.1 Flash
 
 {% columns %}

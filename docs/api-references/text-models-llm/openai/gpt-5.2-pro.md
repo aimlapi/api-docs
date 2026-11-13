@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.2-pro. GPT-5.2 Pro is the flagship GPT-5.2 variant offering maximum output size and reasoning depth."
+---
+
 # Gpt 5.2 Pro
 
 {% columns %}

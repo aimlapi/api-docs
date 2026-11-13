@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-v4-flash-vision-exp. DeepSeek V4 Flash Vision Exp is an experimental vision-enabled build of DeepSeek V4 Flash."
+---
+
 # Deepseek V4 Flash Vision Exp
 
 {% columns %}

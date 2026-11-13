@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-sonnet-4.6. Claude 4.6 Sonnet is a highly capable model balancing performance and efficiency for everyday AI tasks."
+---
+
 # Claude 4.6 Sonnet
 
 {% columns %}

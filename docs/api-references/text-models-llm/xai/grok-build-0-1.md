@@ -1,4 +1,5 @@
 ---
+description: "Model id: x-ai/grok-build-0-1. Grok Build 0.1 is a coding and agentic model from xAI for software development workflows, tool usage, structured reasoning, and multi-step task execution."
 layout:
   width: wide
   title:

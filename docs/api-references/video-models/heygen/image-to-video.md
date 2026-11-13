@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/image-to-video. HeyGen Image to Video animates the person in a photo into a lip-synced talking video from a script or an audio track. Does not support tools/function calling."
+---
+
 # HeyGen Image to Video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: aion-labs/aion-3.5-mini. API reference for Aion 3.5 Mini: request schema and code examples."
+---
+
 # Aion 3.5 Mini
 hidden: true
 noIndex: true

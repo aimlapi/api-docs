@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-image-edit. Meta Muse Image Edit is an image-to-image model that makes precise edits that change only what you ask, stays coherent across turns, and composes from multiple reference images."
+---
+
 # Meta Muse Image Edit
 
 {% columns %}

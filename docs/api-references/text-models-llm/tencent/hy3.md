@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy3. API reference for Hy3: request schema and code examples."
+---
+
 # Hy3
 
 {% columns %}

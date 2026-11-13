@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/kontext-pro/text-to-image. FLUX.1 Kontext Pro generates images from text with advanced contextual understanding for consistent character and style."
+---
+
 # flux/kontext-pro/text-to-image
 
 {% columns %}

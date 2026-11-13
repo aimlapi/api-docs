@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy4. Hy4 is the official release of Tencent’s Hy4 model, succeeding Hy4 preview with stronger agentic capabilities and better performance on long-horizon, real-world productivity tasks."
+---
+
 # Hy4
 
 {% columns %}

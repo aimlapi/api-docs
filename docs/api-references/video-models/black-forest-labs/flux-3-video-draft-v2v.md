@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-3-video-draft-v2v. Fast hd-only draft mode of FLUX 3 Video video-to-video, for previewing a continuation before paying for a full-quality render."
+---
+
 # FLUX 3 Video Draft Video to Video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: liquid/d1-router. Routes each request to a model picked for it: Liquid AI d1 picks the bucket whose description fits the request — its text and its images — and the request goes to the first model of that bucket that…"
+---
+
 # D1 Router
 
 {% columns %}

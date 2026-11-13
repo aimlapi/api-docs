@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/scribe_v2. ElevenLabs Scribe v2 is a high-accuracy speech-to-text model for recorded audio in 90+ languages, with automatic language detection, speaker labels for up to 32 speakers, word-level timestamps and…"
+---
+
 # Scribe v2
 
 {% columns %}

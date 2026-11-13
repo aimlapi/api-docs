@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/dola-seed-2-0-code. API reference for Dola Seed 2.0 Code: request schema and code examples."
+---
+
 # Dola Seed 2.0 Code
 
 {% columns %}

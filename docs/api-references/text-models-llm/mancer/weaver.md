@@ -1,3 +1,7 @@
+---
+description: "Model id: mancer/weaver. API reference for Weaver (alpha): request schema and code examples."
+---
+
 # Weaver (alpha)
 
 {% columns %}

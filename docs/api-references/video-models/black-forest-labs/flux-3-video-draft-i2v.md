@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-3-video-draft-i2v. Fast hd-only draft mode of FLUX 3 Video image-to-video, for previewing keyframe animation before paying for a full-quality render."
+---
+
 # FLUX 3 Video Draft Image to Video
 
 {% columns %}

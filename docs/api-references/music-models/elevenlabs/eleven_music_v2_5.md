@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_music_v2_5. ElevenLabs Music v2.5 composes studio-quality tracks up to 5 minutes long from a text prompt, with or without vocals."
+---
+
 # Eleven Music v2.5
 
 ## Model Overview
@@ -9,7 +13,7 @@ ElevenLabs Music v2.5 composes studio-quality tracks up to 5 minutes long from a
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `elevenlabs/eleven_music_v2_5_v2_5`
+* `elevenlabs/eleven_music_v2_5`
 {% endhint %}
 {% endcolumn %}
 
@@ -161,7 +165,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a audio generation task to the server
 function generateAudio(callback) {
   const data = JSON.stringify({
-      model: "elevenlabs/eleven_music_v2_5_v2_5",
+      model: "elevenlabs/eleven_music_v2_5",
       prompt: "lo-fi pop hip-hop ambient music, slow intro: 10 s, then faster and with loud bass: 10 s",
       music_length_ms: 20000,
   });

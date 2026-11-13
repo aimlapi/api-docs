@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/lipsync-speed. HeyGen Lipsync (speed mode) re-voices a video: the speaker’s lips follow a new audio track. Faster and cheaper than precision mode. Does not support tools/function calling."
+---
+
 # HeyGen Lipsync Speed
 
 {% columns %}

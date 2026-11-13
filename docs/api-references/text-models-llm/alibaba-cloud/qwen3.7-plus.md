@@ -1,4 +1,5 @@
 ---
+description: "Model id: alibaba/qwen3.7-plus. Qwen3.7-Plus is a multimodal agent model that unifies vision and language into a single agent foundation."
 layout:
   width: wide
   title:

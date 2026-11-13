@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/v5/transition. Create seamless transitions between images using PixVerse v5 with advanced AI techniques."
+---
+
 # Pixverse v5 Transition
 
 {% columns %}

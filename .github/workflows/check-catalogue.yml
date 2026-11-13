@@ -1,0 +1,29 @@
+name: Check docs against the model catalogue
+
+# Model pages must list ids that GET /v1/models serves, and every relative link
+# must resolve. Runs on docs PRs and once a day, because a model can be
+# withdrawn without any change to this repo.
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "scripts/check-catalogue.py"
+      - ".github/workflows/check-catalogue.yml"
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check
+        run: python3 scripts/check-catalogue.py

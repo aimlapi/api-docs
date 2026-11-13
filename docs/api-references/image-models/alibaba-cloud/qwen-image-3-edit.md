@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen-image-3-edit. Qwen Image 3 editing model that modifies up to three reference images from a text prompt."
+---
+
 # Qwen Image 3 Edit
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen-image. General-purpose image generation model with multiple artistic styles and strong complex text rendering."
+---
+
 # Qwen Image
 
 {% columns %}

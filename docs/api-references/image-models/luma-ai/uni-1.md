@@ -1,3 +1,7 @@
+---
+description: "Model id: luma/uni-1. Luma Uni-1 generates and edits images from text prompts with support for up to 9 reference images, styles, and web-search grounding."
+---
+
 # Luma Uni-1
 
 {% columns %}

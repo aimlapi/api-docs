@@ -136,7 +136,7 @@ The raccoon's paw gently ripples the stream as tiny leaves float by; the trees s
 
 </details>
 
-3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model [**kling-video/v1.6/pro/image-to-video**](../api-references/video-models/kling-ai/v1.6-pro-image-to-video.md) from Kling AI.
+3. Now it's time to generate a short video based on our image and the prompt prepared for us by the chat model in the previous step. We'll use a model **kling-video/v1.6/pro/image-to-video** from Kling AI.
 
 <details>
 

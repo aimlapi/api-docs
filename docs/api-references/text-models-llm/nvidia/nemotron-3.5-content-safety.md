@@ -1,3 +1,7 @@
+---
+description: "Model id: nvidia/nemotron-3.5-content-safety. NVIDIA Nemotron 3.5 Content Safety is a multimodal guard model from the Nemotron 3.5 family that classifies text and image content against safety policies, intended for moderating prompts and model…"
+---
+
 # Nemotron 3.5 Content Safety
 
 {% columns %}

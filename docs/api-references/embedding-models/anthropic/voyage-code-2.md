@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-code-2. Voyage Code 2 is an embedding model optimized for code retrieval, similarity search, and programming tasks."
+---
+
 # Voyage Code 2
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: anthracite-org/magnum-v4-72b. Magnum V4 is a powerful language model optimized for high-quality text generation tasks."
+---
+
 # Magnum v4 72B
 
 {% columns %}

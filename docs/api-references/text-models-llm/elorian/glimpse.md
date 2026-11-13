@@ -1,3 +1,7 @@
+---
+description: "Model id: elorian/glimpse. Glimpse is a multimodal visual reasoning model from Elorian, built for visual understanding and complex visual reasoning in the physical world."
+---
+
 # Glimpse
 hidden: true
 noIndex: true

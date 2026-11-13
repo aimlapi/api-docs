@@ -1,3 +1,7 @@
+---
+description: "Model id: stable-audio. Stable Audio generates high-quality audio from text prompts with innovative features like audio transformation and extensive creative control."
+---
+
 # Stable Audio
 
 {% columns %}

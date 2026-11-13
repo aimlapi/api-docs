@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-pro-image-to-video. Kling 3.0 Pro image-to-video generates premium videos from images with the highest quality in the Kling 3.0 series."
+---
+
 # Kling 3.0 Pro Image to Video
 
 {% columns %}

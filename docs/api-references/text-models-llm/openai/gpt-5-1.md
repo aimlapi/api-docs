@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-1. GPT-5.1 is an incremental update to GPT-5 with improved accuracy and instruction adherence."
+---
+
 # gpt-5.1
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/avatar-standard. Kling Avatar creates dynamic videos from avatar reference images with audio synchronization using standard mode for cost-effective generation."
+---
+
 # Kling Avatar Standard
 
 {% columns %}

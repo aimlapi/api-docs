@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/uso. USO is an advanced image-to-image model for style transfer and image transformation."
+---
+
 # USO Image to Image
 
 {% columns %}

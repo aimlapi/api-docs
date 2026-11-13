@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/omnihuman. Generate incredibly accurate videos of human beings speaking a dialogue using ByteDance's OmniHuman model."
+---
+
 # OmniHuman Image to Video
 
 {% columns %}

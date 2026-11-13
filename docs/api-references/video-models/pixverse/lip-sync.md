@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/lip-sync. PixVerse Lip Sync generates videos with synchronized lip movements from audio and face image inputs."
+---
+
 # Lip Sync
 
 {% columns %}

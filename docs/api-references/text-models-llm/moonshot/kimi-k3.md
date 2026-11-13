@@ -1,4 +1,5 @@
 ---
+description: "Model id: moonshot/kimi-k3. Kimi K3 is a multimodal model from Moonshot AI accepting text and image input."
 noIndex: true
 ---
 

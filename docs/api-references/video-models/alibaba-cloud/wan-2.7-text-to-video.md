@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-7-t2v. Wan 2.7 T2V — a text-to-video model by Alibaba Cloud that generates multi-shot videos from prompts. It supports cinematic visuals, prompt control, and audio integration."
+---
+
 # Wan 2.7 (Text-to-Video)
 
 {% columns %}

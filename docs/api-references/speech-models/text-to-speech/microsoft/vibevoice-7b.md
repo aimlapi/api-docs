@@ -1,3 +1,7 @@
+---
+description: "Model id: microsoft/vibevoice-7b. VibeVoice 7B is a high-quality text-to-speech model that supports multi-speaker dialogue generation with natural-sounding voices."
+---
+
 # vibevoice-7b
 
 {% columns %}

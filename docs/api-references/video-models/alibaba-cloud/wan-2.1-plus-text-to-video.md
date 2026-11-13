@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.1-t2v-plus. Wan 2.1 Plus is a high-quality text-to-video model from Alibaba Cloud for diverse creative video generation."
+---
+
 # Wan 2.1 Plus Text to Video
 
 {% columns %}

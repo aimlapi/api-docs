@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax-music. MiniMax Music generates original music tracks from text descriptions with diverse genre and style support."
+---
+
 # MiniMax Music
 
 {% columns %}

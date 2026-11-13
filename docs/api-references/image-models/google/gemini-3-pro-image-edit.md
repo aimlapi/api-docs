@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-pro-image-edit. Gemini 3 Pro Image Edit is an image-to-image model that edits images based on text prompts."
+---
+
 # Gemini 3 Pro Image Edit
 
 {% columns %}

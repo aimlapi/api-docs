@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/codestral-2508. API reference for Codestral 2508: request schema and code examples."
+---
+
 # Codestral 2508
 
 {% columns %}

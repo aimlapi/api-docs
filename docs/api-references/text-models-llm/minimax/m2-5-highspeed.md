@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/m2-5-highspeed-20260218. MiniMax-M2.5 Highspeed is a low-latency, high-throughput version of MiniMax-M2.5 optimized for real-time applications."
+---
+
 # MiniMax M2.5 Highspeed
 
 {% columns %}

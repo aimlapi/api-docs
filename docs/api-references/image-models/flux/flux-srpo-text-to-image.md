@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/srpo. FLUX.1 SRPO is an advanced image generation model optimized for superior quality and performance."
+---
+
 # Flux SRPO
 
 {% columns %}

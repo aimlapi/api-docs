@@ -1,3 +1,7 @@
+---
+description: "Model id: nvidia/nemotron-3-super-120b-a12b. NVIDIA Nemotron 3 Super 120B A12B is the high-capacity MoE variant of the Nemotron 3 family, delivering strong reasoning and long-context performance for demanding text generation and agent…"
+---
+
 # Nemotron 3 Super 120B A12B
 
 {% columns %}

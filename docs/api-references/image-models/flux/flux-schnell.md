@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/schnell. FLUX.1 [schnell] is a cutting-edge text-to-image model for developers."
+---
+
 # Flux Schnell
 
 {% columns %}

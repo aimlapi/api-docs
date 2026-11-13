@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-2.4t-a95b. Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of Qwen3.8 Max, with 95 billion active parameters out of 2.4 trillion total."
+---
+
 # Qwen3.8 2.4T A95B
 
 {% columns %}

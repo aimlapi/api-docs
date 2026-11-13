@@ -1,3 +1,7 @@
+---
+description: "Model id: thinkingmachines/inkling-small. Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total."
+---
+
 # Inkling Small
 
 {% columns %}

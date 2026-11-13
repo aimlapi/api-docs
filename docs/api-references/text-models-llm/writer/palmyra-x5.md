@@ -1,3 +1,7 @@
+---
+description: "Model id: writer/palmyra-x5. API reference for Palmyra X5: request schema and code examples."
+---
+
 # Palmyra X5
 
 {% columns %}

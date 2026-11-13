@@ -1,4 +1,5 @@
 ---
+description: "Model id: klingai/video-v3-motion-control. Kling 3.0 Motion Control transfers motion from a reference video onto a character image at Kling 3.0 fidelity, with selectable std/pro generation modes."
 layout:
   width: wide
   title:

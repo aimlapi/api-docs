@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-pro. GPT-5 Pro is the most powerful GPT-5 variant, offering extended output and superior performance for complex tasks."
+---
+
 # GPT-5 Pro
 
 {% columns %}

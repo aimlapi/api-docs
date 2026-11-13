@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v2-6-motion-control. Kling 2.6 Motion Control transfers motion from a reference video onto a character image, with selectable std/pro generation modes."
+---
+
 # v2.6-pro/motion-control
 
 {% columns %}
@@ -5,12 +9,12 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `klingai/video-v2-6-pro-motion-control`
+* `klingai/video-v2-6-motion-control`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=klingai/video-v2-6-pro-motion-control" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/?model=klingai/video-v2-6-motion-control" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -116,7 +120,7 @@ def generate_video():
     }
 
     data = {
-      "model": "klingai/video-v2-6-pro-motion-control",
+      "model": "klingai/video-v2-6-motion-control",
       "image_url": "https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png",
       "video_url": "https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4"       
     }
@@ -195,7 +199,7 @@ const baseUrl = "https://api.aimlapi.com/v2";
 // Creating and sending a video generation task to the server
 function generateVideo(callback) {
   const data = JSON.stringify({
-    model: "klingai/video-v2-6-pro-motion-control",
+    model: "klingai/video-v2-6-motion-control",
     image_url: "https://cdn.aimlapi.com/flamingo/files/b/0a875302/8NaxQrQxDNHppHtqcchMm.png",
     video_url: "https://cdn.aimlapi.com/flamingo/files/b/0a8752bc/2xrNS217ngQ3wzXqA7LXr_output.mp4"      
   });

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3-next-80b-a3b-instruct. Alibaba's Qwen 3 Next 80B A3B Instruct is a multilingual model with enhanced instruction-following capabilities."
+---
+
 # Qwen3 Next 80B A3B Thinking
 
 {% columns %}

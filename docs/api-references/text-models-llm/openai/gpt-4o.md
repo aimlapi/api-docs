@@ -1,9 +1,13 @@
+---
+description: "Model id: gpt-4o. Multimodal AI model by OpenAI enhancing human-computer interaction."
+---
+
 # GPT-4o
 
 {% hint style="warning" %}
 **Deprecation notice**\
 `chatgpt-4o-latest` was removed from the API on **February 17, 2026**. \
-Please migrate to [`gpt-5.1-chat-latest`](../openai/gpt-5-1-chat-latest.md).
+Please migrate to `gpt-5.1-chat-latest`.
 {% endhint %}
 
 {% columns %}

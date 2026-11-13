@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_turbo_v2_5. ElevenLabs Turbo v2.5 provides ultra-low-latency text-to-speech generation optimized for real-time conversational AI."
+---
+
 # Eleven Turbo v2.5
 
 {% columns %}

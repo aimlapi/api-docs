@@ -1,3 +1,7 @@
+---
+description: "Chat and reasoning models from DeepSeek on AI/ML API: model ids and API references."
+---
+
 # DeepSeek
 
 DeepSeek is an AI research company focused on developing high-performance large language models for reasoning, coding, mathematics, and agentic workflows. The company is best known for the DeepSeek model family, which emphasizes strong analytical capabilities, efficient inference architectures, and competitive performance across software engineering and complex reasoning benchmarks. DeepSeek places significant focus on scalable reasoning systems, long-context processing, and reinforcement-learning-based model improvement, while continuing to expand multimodal and tool-augmented AI capabilities.

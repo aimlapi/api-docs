@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedance-2-0. API reference for Seedance 2.0: request schema and code examples."
+---
+
 # Seedance 2.0
 
 {% columns %}

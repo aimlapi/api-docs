@@ -1,4 +1,5 @@
 ---
+description: "Model id: mistralai/devstral-2512. API reference for Devstral 2 2512: request schema and code examples."
 hidden: true
 ---
 

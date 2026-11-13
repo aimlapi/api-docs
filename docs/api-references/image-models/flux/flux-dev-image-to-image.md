@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/dev/image-to-image. FLUX.1 [dev] is an advanced image generation model by Black Forest Labs."
+---
+
 # Flux Dev Image to Image
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: undi95/remm-slerp-l2-13b. API reference for ReMM SLERP 13B: request schema and code examples."
+---
+
 # ReMM SLERP 13B
 
 {% columns %}

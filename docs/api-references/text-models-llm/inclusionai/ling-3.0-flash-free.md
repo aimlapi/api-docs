@@ -1,3 +1,7 @@
+---
+description: "Model id: inclusionai/ling-3.0-flash. API reference for Ling-3.0-flash: request schema and code examples."
+---
+
 # Ling-3.0-flash
 
 {% columns %}

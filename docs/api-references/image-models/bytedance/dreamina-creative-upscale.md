@@ -1,4 +1,5 @@
 ---
+description: "Model id: bytedance/dreamina-creative-upscale. Dreamina Creative Upscale is a Seedream-based super-resolution model that enhances AIGC and low-quality images, enriching texture and detail while preserving structure, with 2K/4K output."
 layout:
   width: wide
   title:

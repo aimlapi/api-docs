@@ -1,3 +1,7 @@
+---
+description: "Model id: inference-net/schematron-v2-turbo. Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net, tuned for throughput on high-volume extraction workloads."
+---
+
 # Schematron V2 Turbo
 hidden: true
 noIndex: true

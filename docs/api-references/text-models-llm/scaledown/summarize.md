@@ -1,3 +1,7 @@
+---
+description: "Model id: scaledown/summarize. Summarize is an abstractive summarization model from ScaleDown."
+---
+
 # Summarize
 
 {% columns %}

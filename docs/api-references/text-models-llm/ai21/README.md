@@ -1,2 +1,6 @@
+---
+description: "Chat and reasoning models from AI21 on AI/ML API: model ids and API references."
+---
+
 # AI21
 

@@ -1,3 +1,7 @@
+---
+description: "Model id: nvidia/nemotron-3-nano-30b-a3b. NVIDIA Nemotron 3 Nano 30B A3B is a lightweight MoE language model from the Nemotron 3 family, designed for efficient and scalable text generation and agent workflows with strong compute efficiency."
+---
+
 # Nemotron 3 Nano 30B A3B
 
 {% columns %}

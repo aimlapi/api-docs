@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-pro-text-to-video. Kling 3.0 Pro text-to-video generates premium videos from text prompts with the highest quality in the Kling 3.0 series."
+---
+
 # Kling 3.0 Pro Text to Video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-realtime-2.1-mini. API reference for GPT Realtime 2.1 Mini: request schema and code examples."
+---
+
 # GPT Realtime 2.1 Mini
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Chat and reasoning models from xAI on AI/ML API: model ids and API references."
+---
+
 # xAI
 
 **xAI** is an artificial intelligence company focused on developing the Grok family of large language models and multimodal AI systems. Founded by Elon Musk, the company positions Grok as a “maximally truth-seeking” AI assistant designed to provide direct, insightful, and real-time responses. xAI places strong emphasis on reasoning, large-context processing, web-connected generation, and agentic tool usage, while integrating its models across the broader X ecosystem and developer platforms.

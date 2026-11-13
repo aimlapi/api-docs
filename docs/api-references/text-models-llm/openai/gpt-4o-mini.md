@@ -1,3 +1,7 @@
+---
+description: "Model id: gpt-4o-mini. GPT-4o Mini: Cost-efficient, advanced model for diverse AI applications."
+---
+
 # GPT-4o Mini
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/music-2.0. MiniMax Music 2.0 delivers superior music generation quality and offers improved control over composition styles."
+---
+
 # MiniMax Music 2.0
 
 {% columns %}

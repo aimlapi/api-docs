@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-1-flash-lite. Gemini 3.1 Flash Lite is a cost-efficient multimodal model designed for high-volume tasks such as translation, lightweight reasoning, and simple agent workflows."
+---
+
 # gemini-3-1-flash-lite
 
 {% columns %}

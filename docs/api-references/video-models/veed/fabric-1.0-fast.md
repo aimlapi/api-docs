@@ -1,3 +1,7 @@
+---
+description: "Model id: veed/fabric-1.0/fast. Generate high-quality videos from image and audio inputs with faster processing using VEED Fabric-1.0 Fast model."
+---
+
 # fabric-1.0-fast
 
 {% columns %}

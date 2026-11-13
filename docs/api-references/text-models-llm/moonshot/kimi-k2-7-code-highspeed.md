@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshot/kimi-k2-7-code-highspeed. High-throughput variant of Kimi K2.7 Code from Moonshot — the same agentic coding model with extended reasoning and tool use, served at higher speed."
+---
+
 # Kimi K2.7 Code Highspeed
 
 {% columns %}

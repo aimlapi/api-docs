@@ -1,3 +1,7 @@
+---
+description: "GET /v2/usage and /v2/usage/detail return what an API key spent over a period."
+---
+
 # API Key Usage
 
 Query how much a given API key spent over a period of time.\

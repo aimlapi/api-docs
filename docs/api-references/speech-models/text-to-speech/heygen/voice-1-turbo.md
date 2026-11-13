@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/voice-1-turbo. HeyGen Voice 1 Turbo is the faster, cheaper HeyGen speech model: text to a WAV file with HeyGen public voices. Does not support tools/function calling."
+---
+
 # HeyGen Voice 1 Turbo
 
 {% columns %}
@@ -5,7 +9,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `heygen/voice-1-turbo-turbo`
+* `heygen/voice-1-turbo`
 {% endhint %}
 {% endcolumn %}
 
@@ -87,7 +91,7 @@ const fs = require("fs");
 const apiKey = "<YOUR_AIMLAPI_KEY>";
 
 const data = JSON.stringify({
-  model: "heygen/voice-1-turbo-turbo",
+  model: "heygen/voice-1-turbo",
   text: "Cities of the future promise to radically transform how people live, work, and move.",
   voice: "en-US-AvaNeural",
 });

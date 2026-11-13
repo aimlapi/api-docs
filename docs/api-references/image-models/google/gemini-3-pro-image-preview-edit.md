@@ -1,3 +1,7 @@
+---
+description: "Model id: google/nano-banana-pro-edit. Nano Banana Pro Edit is an image-to-image model that edits images based on text prompts."
+---
+
 # Nano Banana Pro Edit
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: qwen-plus. Qwen-Plus: Alibaba's advanced multilingual model with enhanced reasoning and instruction-following capabilities."
+---
+
 # Qwen Plus
 
 {% columns %}

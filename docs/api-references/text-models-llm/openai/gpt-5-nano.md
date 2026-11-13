@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-nano-2025-08-07. GPT-5 nano is the most lightweight GPT-5 variant, built for ultra-low latency use cases."
+---
+
 # GPT-5 Nano
 
 {% columns %}

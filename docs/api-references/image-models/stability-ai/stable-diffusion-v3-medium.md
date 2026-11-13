@@ -1,3 +1,7 @@
+---
+description: "Model id: stable-diffusion-v3-medium. Enhanced Stable Diffusion 3 text-to-image model with improved text quality, efficiency and understanding"
+---
+
 # Stable Diffusion v3 Medium
 
 {% columns %}

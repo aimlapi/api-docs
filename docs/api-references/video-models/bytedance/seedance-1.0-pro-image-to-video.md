@@ -1,5 +1,5 @@
 ---
-description: Coming Soon
+description: "Model id: bytedance/seedance-1-0-pro-i2v. ByteDance Seedance 1.0 Pro generates high-quality videos from text prompts with enhanced detail and consistency."
 ---
 
 # Seedance 1.0 pro (Image-to-Video)

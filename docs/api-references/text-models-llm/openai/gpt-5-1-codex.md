@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.1-codex. GPT-5.1 Codex is a coding-specialized model from the GPT-5.1 series for code generation and understanding."
+---
+
 # gpt-5.1-codex
 
 {% columns %}
@@ -5,7 +9,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `openai/gpt-5-1-codex`
+* `openai/gpt-5.1-codex`
 {% endhint %}
 {% endcolumn %}
 
@@ -95,7 +99,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"openai/gpt-5-1-codex",
+        "model":"openai/gpt-5.1-codex",
         "input":"Hello"  # Insert your question for the model here, instead of Hello   
     }
 )
@@ -119,7 +123,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'openai/gpt-5-1-codex',
+        model: 'openai/gpt-5.1-codex',
         input: 'Hello',  // Insert your question here, instead of Hello 
       }),
     });

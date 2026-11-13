@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-flash-latest. API reference for Gemini Flash Latest: request schema and code examples."
+---
+
 # Gemini Flash Latest
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/v8/remix. Mureka 8 Remix re-creates a song in a new style from a prompt and lyrics. It works on a song_id from an earlier Mureka result or on an uploaded song of 10 to 350 seconds."
+---
+
 # Mureka 8 Remix
 
 ## Model Overview

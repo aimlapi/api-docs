@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-image-1-mini. GPT Image 1 Mini is a compact image generation model offering faster and more affordable image creation."
+---
+
 # GPT Image 1 Mini
 
 {% columns %}
@@ -16,7 +20,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A cost-effective text-to-image variant of [GPT Image 1](gpt-image-1.md).
+A cost-effective text-to-image variant of GPT Image 1.
 
 ## How to Make a Call
 

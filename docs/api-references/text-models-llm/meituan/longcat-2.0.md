@@ -1,3 +1,7 @@
+---
+description: "Model id: meituan/longcat-2.0. LongCat-2.0 is Meituan's trillion-parameter agentic MoE model with a 1M-token context window and up to 128K output tokens. It supports native tool calling and multi-step reasoning."
+---
+
 # Longcat 2.0
 
 {% columns %}

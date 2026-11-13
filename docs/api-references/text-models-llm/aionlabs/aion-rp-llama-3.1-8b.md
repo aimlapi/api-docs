@@ -1,3 +1,7 @@
+---
+description: "Model id: aion-labs/aion-rp-llama-3.1-8b. API reference for Aion-RP 1.0 (8B): request schema and code examples."
+---
+
 # Aion-RP 1.0 (8B)
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-non-thinking-v3.2-exp. DeepSeek-V3.2-Exp is an experimental variant of DeepSeek-V3.2 with extended context and non-thinking mode for fast responses."
+---
+
 # DeepSeek V3.2 Exp
 
 {% columns %}

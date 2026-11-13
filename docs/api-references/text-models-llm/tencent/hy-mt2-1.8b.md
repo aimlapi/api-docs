@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy-mt2-1.8b. Hy-MT2-1.8B is a compact 1.8B-parameter translation model from Tencent."
+---
+
 # Hy-MT2-1.8B
 
 {% columns %}

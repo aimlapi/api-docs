@@ -1,4 +1,5 @@
 ---
+description: "Model id: zhipu/glm-5-2. GLM-5.2 is Zhipu AI flagship MoE LLM with a 1M-token context window, optimized for agentic coding, tool use, reasoning, and long-context tasks."
 layout:
   width: wide
   title:

@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-4o-mini-transcribe. Efficient speech-to-text model using GPT-4o mini with improved accuracy compared to Whisper. 16,000 context window, 2,000 max output tokens."
+---
+
 # GPT-4o Mini Transcribe
 
 {% hint style="info" %}

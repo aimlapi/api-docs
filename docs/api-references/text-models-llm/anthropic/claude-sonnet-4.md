@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-sonnet-4. API reference for Claude Sonnet 4: request schema and code examples."
+---
+
 # Claude Sonnet 4
 
 {% columns %}

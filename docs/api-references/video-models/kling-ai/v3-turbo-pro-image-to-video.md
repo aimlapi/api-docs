@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-turbo-pro-image-to-video. Kling 3.0 Turbo Pro image-to-video generates high-quality 1080p videos from images with improved lipsync and multishot generation capabilities."
+---
+
 # Kling 3.0 Turbo Pro Image to Video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-translation-speed. HeyGen Video Translation (speed mode) dubs a video into another language with lip sync, in 170+ languages. Does not support tools/function calling."
+---
+
 # HeyGen Video Translation Speed
 
 {% columns %}

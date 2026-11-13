@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/v8/extend. Mureka 8 Extend continues a song, or adds a new beginning, with new lyrics. It works on a song_id from an earlier Mureka result or on an uploaded song; the result lists the extended songs in songs[]."
+---
+
 # Mureka 8 Extend
 
 ## Model Overview

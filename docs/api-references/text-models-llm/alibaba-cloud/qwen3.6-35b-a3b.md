@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.6-35b-a3b. API reference for Qwen3.6 35B A3B: request schema and code examples."
+---
+
 # Qwen3.6 35B A3B
 
 {% columns %}

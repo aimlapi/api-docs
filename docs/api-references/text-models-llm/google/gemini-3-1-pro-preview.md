@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-1-pro-preview. A frontier reasoning model optimized for software engineering and agentic workflows with 1M token context."
+---
+
 # gemini-3-1-pro-preview
 
 {% columns %}

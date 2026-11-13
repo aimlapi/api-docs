@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-5. GLM-5 is Zhipu AI next-generation 745B MoE LLM for high-quality text generation and reasoning, optimized for chat, long-form content, and instruction-following tasks."
+---
+
 # GLM 5
 
 {% columns %}

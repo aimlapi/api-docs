@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshot/kimi-k2-6. API reference for Kimi K2.6: request schema and code examples."
+---
+
 # Kimi K2.6
 
 {% columns %}

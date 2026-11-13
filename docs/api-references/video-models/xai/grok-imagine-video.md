@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-imagine-video. Grok Imagine Video is an image-to-video generation model by xAI that transforms static images into short animated video clips with coherent motion and visual consistency."
+---
+
 # grok-imagine-video
 
 {% columns %}

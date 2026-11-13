@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mistral-saba. API reference for Saba: request schema and code examples."
+---
+
 # Saba
 
 {% columns %}

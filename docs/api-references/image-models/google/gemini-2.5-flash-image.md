@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-2.5-flash-image. Gemini 2.5 Flash Image is a text-to-image model powered by Gemini 2.5 Flash for fast, high-quality image generation."
+---
+
 # Gemini 2.5 Flash Image
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.1-codex-mini. GPT-5.1 Codex Mini is a lighter coding model optimized for fast code completions and suggestions."
+---
+
 # gpt-5.1-codex-mini
 
 {% columns %}
@@ -5,7 +9,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `openai/gpt-5-1-codex-mini`
+* `openai/gpt-5.1-codex-mini`
 {% endhint %}
 {% endcolumn %}
 
@@ -95,7 +99,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"openai/gpt-5-1-codex-mini",
+        "model":"openai/gpt-5.1-codex-mini",
         "input":"Hello"  # Insert your question for the model here, instead of Hello   
     }
 )
@@ -119,7 +123,7 @@ async function main() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'openai/gpt-5-1-codex-mini',
+        model: 'openai/gpt-5.1-codex-mini',
         input: 'Hello',  // Insert your question here, instead of Hello 
       }),
     });

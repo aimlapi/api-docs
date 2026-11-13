@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-6-luna. Fast, cost-efficient GPT-6 model from OpenAI, positioned below GPT-6 Sol for high-volume and latency-sensitive work: text and image input over a 1.05M-token context, with reasoning, function calling…"
+---
+
 # GPT-6 Luna
 
 {% columns %}

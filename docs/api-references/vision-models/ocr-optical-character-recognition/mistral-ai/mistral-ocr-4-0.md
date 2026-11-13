@@ -1,3 +1,7 @@
+---
+description: "Model id: mistral/mistral-ocr-4-0. Mistral OCR 4 is Mistral's most advanced document extraction and understanding model, adding native paragraph-level bounding box extraction and structural block labels on top of high-fidelity text,…"
+---
+
 # Mistral OCR 4
 
 {% columns %}

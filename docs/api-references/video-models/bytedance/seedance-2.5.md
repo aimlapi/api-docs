@@ -1,4 +1,5 @@
 ---
+description: "Model id: bytedance/seedance-2-5. Seedance 2.5 is a ByteDance video generation model with multi-reference conditioning and synchronized audio."
 hidden: true
 ---
 

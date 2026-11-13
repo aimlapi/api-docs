@@ -1,3 +1,7 @@
+---
+description: "Model id: topaz-labs/sharpen-gen. Topaz Sharpen Generative uses AI to intelligently recover fine detail and sharpness in images using generative techniques."
+---
+
 # Sharpen Generative
 
 {% columns %}

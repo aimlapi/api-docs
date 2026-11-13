@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-r1. DeepSeek Reasoner V3.1 excels in reasoning tasks with advanced chain-of-thought processing and the latest improvements in parameter activation."
+---
+
 # DeepSeek Reasoner V3.1
 
 {% columns %}

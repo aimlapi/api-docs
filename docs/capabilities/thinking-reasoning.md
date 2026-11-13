@@ -20,7 +20,6 @@ Special parameters, such as `thinking` in Claude models, provide transparency in
 
 Supported models:
 
-* [anthropic/claude-opus-4](../api-references/text-models-llm/anthropic/claude-4-opus.md)
 * [anthropic/claude-sonnet-4](../api-references/text-models-llm/anthropic/claude-4-sonnet.md)
 * [anthropic/claude-opus-4.1](../api-references/text-models-llm/anthropic/claude-opus-4.1.md)
 * [anthropic/claude-sonnet-4.5](../api-references/text-models-llm/anthropic/claude-4-5-sonnet.md)
@@ -67,12 +66,8 @@ Accepted values are `low`, `medium`, and `high`. Lower levels prioritize speed a
 
 Supported models:
 
-* [o1](../api-references/text-models-llm/openai/o1.md)
-* [o3-mini](../api-references/text-models-llm/openai/o3-mini.md)
 * [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
-* [openai/gpt-4.1-nano-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-nano.md)
 * [openai/o3-2025-04-16](../api-references/text-models-llm/openai/o3.md)
-* [openai/o4-mini-2025-04-16](../api-references/text-models-llm/openai/o4-mini.md)
 * [openai/gpt-oss-20b](../api-references/text-models-llm/openai/gpt-oss-20b.md)
 * [openai/gpt-oss-120b](../api-references/text-models-llm/openai/gpt-oss-120b.md)
 * [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md)
@@ -90,8 +85,6 @@ Supported models:
 * [alibaba/qwen3-32b](../api-references/text-models-llm/alibaba-cloud/qwen3-32b.md)
 * [alibaba/qwen3-coder-480b-a35b-instruct](../api-references/text-models-llm/alibaba-cloud/qwen3-coder-480b-a35b-instruct.md)
 * [alibaba/qwen3-235b-a22b-thinking-2507](../api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b-thinking-2507.md)
-* [alibaba/qwen3-next-80b-a3b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-thinking.md)
-* [alibaba/qwen3-vl-32b-thinking](../api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking.md)
 * [alibaba/qwen3.5-plus-20260218](../api-references/text-models-llm/alibaba-cloud/qwen3.5-plus.md)
 * [alibaba/qwen3.5-omni-plus](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-plus.md)
 * [alibaba/qwen3.5-omni-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.5-omni-flash.md)
@@ -103,9 +96,6 @@ Supported models:
 
 ***
 
-* [baidu/ernie-4.5-21b-a3b-thinking](../api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.md)
-* [baidu/ernie-5-0-thinking-preview](../api-references/text-models-llm/baidu/ernie-5.0-thinking-preview.md)
-* [baidu/ernie-5-0-thinking-latest](../api-references/text-models-llm/baidu/ernie-5.0-thinking-latest.md)
 
 ***
 
@@ -136,9 +126,7 @@ Supported models:
 
 ***
 
-* [nvidia/nemotron-nano-9b-v2](../api-references/text-models-llm/nvidia/nemotron-nano-9b-v2.md)
 * [nvidia/nemotron-3-nano-30b-a3b](../api-references/text-models-llm/nvidia/nemotron-3-nano-30b-a3b.md)
-* [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning](../api-references/text-models-llm/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning.md)
 * [nvidia/nemotron-3-super-120b-a12b](../api-references/text-models-llm/nvidia/nemotron-3-super-120b-a12b.md)
 
 ***
@@ -148,7 +136,6 @@ Supported models:
 ***
 
 * [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
-* [x-ai/grok-4-07-09](../api-references/text-models-llm/xai/grok-4.md)
 * [x-ai/grok-code-fast-1](../api-references/text-models-llm/xai/grok-code-fast-1.md)
 * [x-ai/grok-4-fast-reasoning](../api-references/text-models-llm/xai/grok-4-fast-reasoning.md)
 * [x-ai/grok-4-1-fast-reasoning](../api-references/text-models-llm/xai/grok-4-1-fast-reasoning.md)

@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-2. Voyage 2 is a general-purpose text embedding model for semantic search and similarity tasks."
+---
+
 # Voyage 2
 
 {% columns %}

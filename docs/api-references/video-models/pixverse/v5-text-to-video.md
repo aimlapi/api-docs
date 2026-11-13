@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/v5/text-to-video. Create dynamic videos from text prompts using PixVerse v5 advanced text-to-video AI technology."
+---
+
 # Pixverse v5 Text to Video
 
 {% columns %}

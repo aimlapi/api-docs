@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/image-o1. Kling Image O1 applies reasoning-enhanced AI to generate highly accurate and detailed images from text prompts."
+---
+
 # Kling Image O1
 
 {% columns %}

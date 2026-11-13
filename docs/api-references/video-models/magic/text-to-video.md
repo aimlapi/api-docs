@@ -1,3 +1,7 @@
+---
+description: "Model id: magic/text-to-video. Magic Inc text-to-video model generates dynamic videos from text descriptions using advanced AI techniques."
+---
+
 # Magic Text to Video
 
 {% columns %}

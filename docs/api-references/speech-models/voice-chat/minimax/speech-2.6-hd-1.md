@@ -1,4 +1,5 @@
 ---
+description: "Model id: minimax/speech-2.6-hd. MiniMax Speech 2.6 HD delivers ultra-high-quality text-to-speech audio with superior naturalness and voice similarity."
 hidden: true
 noIndex: true
 ---

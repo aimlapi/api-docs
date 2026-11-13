@@ -1,3 +1,7 @@
+---
+description: "Model id: fireworks/ember-1. Ember-1 is a specialized reasoning model from Fireworks Research, built on Kimi K3. It is designed to make every token go further by producing shorter reasoning traces."
+---
+
 # Ember 1
 hidden: true
 noIndex: true

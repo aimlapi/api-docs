@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/describe. Mureka Describe listens to a song and returns its instruments, genres, tags and a short text description."
+---
+
 # Mureka Describe
 
 ## Model Overview

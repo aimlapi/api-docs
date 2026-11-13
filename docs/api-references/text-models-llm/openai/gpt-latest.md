@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-latest. API reference for Gpt Latest: request schema and code examples."
+---
+
 # Gpt Latest
 
 {% columns %}

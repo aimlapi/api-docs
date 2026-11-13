@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-6-flash. Gemini 3.6 Flash is Google’s most intelligent Flash model, balancing speed with frontier intelligence for strong performance on agentic, coding and multimodal tasks, with superior search and…"
+---
+
 # Gemini 3.6 Flash
 
 {% columns %}

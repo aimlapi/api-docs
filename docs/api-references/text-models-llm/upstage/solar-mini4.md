@@ -1,3 +1,7 @@
+---
+description: "Model id: upstage/solar-mini4. Solar Mini 4 is Upstage's compact, cost-efficient language model — a 35B-parameter mixture-of-experts with 3B active parameters and a 524K-token context window, built for agentic use cases."
+---
+
 # Solar Mini 4
 
 {% columns %}

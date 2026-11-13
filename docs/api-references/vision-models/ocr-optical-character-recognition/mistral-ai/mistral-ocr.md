@@ -1,3 +1,7 @@
+---
+description: "Model id: mistral-ocr-latest. Mistral OCR is a document understanding model for extracting text and structured content from PDFs and images."
+---
+
 # Mistral OCR
 
 {% hint style="info" %}

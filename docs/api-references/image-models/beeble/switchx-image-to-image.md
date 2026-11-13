@@ -1,3 +1,7 @@
+---
+description: "Model id: beeble/switchx-image-to-image. SwitchX is an image-to-image compositing model by Beeble that replaces a scene element while preserving the original subject, with automatic subject detection and seamless relighting to match a…"
+---
+
 # Switchx Image To Image
 
 {% columns %}

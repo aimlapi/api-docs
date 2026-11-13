@@ -1,4 +1,5 @@
 ---
+description: "Moved: the model catalogue GET /v1/models is documented in Complete Model List."
 hidden: true
 noIndex: true
 ---

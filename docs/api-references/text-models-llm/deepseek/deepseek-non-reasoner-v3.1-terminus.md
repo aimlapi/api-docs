@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-non-reasoner-v3.1-terminus. DeepSeek-V3.1 is the latest advanced LLM with improved architecture and performance across various natural language tasks."
+---
+
 # DeepSeek V3.1
 
 {% columns %}

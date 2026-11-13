@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/o3-pro. OpenAI o3-pro is an enhanced reasoning model designed for the most demanding tasks requiring deep deliberation."
+---
+
 # o3 Pro
 
 {% columns %}

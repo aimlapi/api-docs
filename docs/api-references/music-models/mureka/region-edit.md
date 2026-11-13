@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/region-edit. Mureka Region Edit regenerates a span of a song, at least 3 seconds long, with new lyrics and keeps the rest. It works on a song_id from an earlier Mureka result or on an uploaded song."
+---
+
 # Mureka Region Edit
 
 ## Model Overview

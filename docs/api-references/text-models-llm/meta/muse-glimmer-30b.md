@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-glimmer-30b. API reference for Muse Glimmer 30B: request schema and code examples."
+---
+
 # Muse Glimmer 30B
 
 {% columns %}

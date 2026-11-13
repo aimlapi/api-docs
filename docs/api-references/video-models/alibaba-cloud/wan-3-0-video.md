@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-3-0-video. Wan 3.0 — an all-in-one reference-based video generation model by Alibaba Cloud."
+---
+
 # Wan 3.0 Video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_music. ElevenLabs Music v1 generates original music tracks from text prompts with diverse style and genre support."
+---
+
 # Eleven Music v1
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: thedrummer/skyfall-36b-v2. API reference for Skyfall 36B V2: request schema and code examples."
+---
+
 # Skyfall 36B V2
 
 {% columns %}

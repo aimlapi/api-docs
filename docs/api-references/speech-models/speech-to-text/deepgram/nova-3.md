@@ -1,4 +1,5 @@
 ---
+description: "Model id: nova-3. Nova-3: Deepgram next-generation ASR model with improved accuracy and multilingual support."
 layout:
   width: wide
   title:

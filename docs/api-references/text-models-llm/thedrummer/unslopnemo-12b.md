@@ -1,3 +1,7 @@
+---
+description: "Model id: thedrummer/unslopnemo-12b. API reference for Unslopnemo 12B: request schema and code examples."
+---
+
 # Unslopnemo 12B
 
 {% columns %}

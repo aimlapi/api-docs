@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-fast-reasoning. Grok 4 Fast with always-on reasoning for complex problem-solving tasks."
+---
+
 # Grok 4 Fast Reasoning
 
 {% columns %}

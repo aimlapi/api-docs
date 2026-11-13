@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3-coder-480b-a35b-instruct. Alibaba's Qwen 3 Coder is a powerful coding agent."
+---
+
 # Qwen3 Coder
 
 {% columns %}

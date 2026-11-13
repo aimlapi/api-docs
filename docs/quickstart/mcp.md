@@ -1,4 +1,5 @@
 ---
+description: "Connect Claude Desktop, Claude Code, Cursor and other MCP clients to AI/ML API over OAuth, with no API key to copy: discover models and run inference."
 icon: plug
 ---
 

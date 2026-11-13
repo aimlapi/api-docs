@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-6-i2v. Wan 2.6 Image-to-Video animates still images into smooth, high-quality videos with advanced motion modeling."
+---
+
 # Wan 2.6 (Image-to-Video)
 
 {% columns %}

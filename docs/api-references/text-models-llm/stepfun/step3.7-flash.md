@@ -1,4 +1,5 @@
 ---
+description: "Model id: stepfun/step-3.7-flash. Step 3.7 Flash is a multimodal Mixture-of-Experts model from StepFun with text, image, and video understanding."
 layout:
   width: wide
   title:

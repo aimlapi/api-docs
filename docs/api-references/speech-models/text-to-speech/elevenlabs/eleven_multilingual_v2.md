@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_multilingual_v2. ElevenLabs Multilingual v2 delivers natural-sounding text-to-speech in 29 languages with expressive voice cloning."
+---
+
 # Eleven Multilingual v2
 
 {% columns %}

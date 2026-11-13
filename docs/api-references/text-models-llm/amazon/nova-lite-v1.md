@@ -1,3 +1,7 @@
+---
+description: "Model id: amazon/nova-lite-v1. API reference for Nova Lite 1.0: request schema and code examples."
+---
+
 # Nova Lite 1.0
 
 {% columns %}

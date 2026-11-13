@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-multilingual-2. Voyage Multilingual 2 is an embedding model supporting 30+ languages for cross-lingual semantic search and retrieval."
+---
+
 # Voyage Multilingual 2
 
 {% columns %}

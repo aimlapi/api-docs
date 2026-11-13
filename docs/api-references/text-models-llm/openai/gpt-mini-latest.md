@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-mini-latest. API reference for Gpt Mini Latest: request schema and code examples."
+---
+
 # Gpt Mini Latest
 
 {% columns %}

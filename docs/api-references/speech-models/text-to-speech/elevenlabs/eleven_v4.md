@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_v4. ElevenLabs v4 is the most expressive ElevenLabs text-to-speech model, with inline audio tags for emotion and delivery in 90+ languages."
+---
+
 # Eleven v4
 
 {% columns %}

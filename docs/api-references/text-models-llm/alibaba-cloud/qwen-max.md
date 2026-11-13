@@ -1,4 +1,5 @@
 ---
+description: "Model id: qwen-max. Qwen Max: powerful AI, excels in stability, competes globally."
 hidden: true
 ---
 
@@ -10,7 +11,6 @@ hidden: true
 This documentation is valid for the following list of our models:
 
 * `qwen-max`
-* `qwen-max-2025-01-25`
 {% endhint %}
 {% endcolumn %}
 

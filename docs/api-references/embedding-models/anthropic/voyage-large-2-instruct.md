@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-large-2-instruct. Voyage Large 2 Instruct excels in text embedding tasks."
+---
+
 # Voyage Large 2 instruct
 
 {% columns %}

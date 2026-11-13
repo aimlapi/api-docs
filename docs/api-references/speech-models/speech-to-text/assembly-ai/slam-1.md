@@ -1,3 +1,7 @@
+---
+description: "Model id: aai/slam-1. AssemblyAI's most customizable model for transcription (English only)."
+---
+
 # Slam 1
 
 {% columns %}

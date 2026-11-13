@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-voice-think-fast-2.0. API reference for Grok Voice Think Fast 2.0: request schema and code examples."
+---
+
 # Grok Voice Think Fast 2.0
 
 {% columns %}

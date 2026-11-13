@@ -1,3 +1,7 @@
+---
+description: "Model id: inception/mercury-3. API reference for Mercury 3: request schema and code examples."
+---
+
 # Mercury 3
 
 {% columns %}

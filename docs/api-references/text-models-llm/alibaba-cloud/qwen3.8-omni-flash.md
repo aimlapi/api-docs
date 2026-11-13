@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-omni-flash. Qwen3.8-Omni-Flash is the speed- and cost-optimized omni tier of the Qwen3.8 family."
+---
+
 # Qwen3.8 Omni Flash
 
 {% columns %}

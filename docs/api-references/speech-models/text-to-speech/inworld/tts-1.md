@@ -1,3 +1,7 @@
+---
+description: "Model id: inworld/tts-1. High-quality text-to-speech model with natural-sounding voices"
+---
+
 # Inworld TTS 1
 
 {% columns %}

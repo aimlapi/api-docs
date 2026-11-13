@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/hailuo-02. Hailuo 02 is MiniMax's second-generation video model offering improved visual quality and motion coherence."
+---
+
 # Hailuo 02
 
 {% columns %}

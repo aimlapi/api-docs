@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/h3-lite. MiniMax H3 Lite generates lower-cost 4-15 second videos at 480p or 768p with synchronized audio, from text, first/last frames, or image, video and audio references."
+---
+
 # Minimax H3 Lite
 
 {% columns %}

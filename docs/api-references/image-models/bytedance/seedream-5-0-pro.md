@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedream-5-0-pro. Seedream 5.0 Pro is ByteDance flagship text-to-image model with high-resolution output up to 2048x2048 (up to ~2.7K at 16:9) and multi-image reference support."
+---
+
 # Seedream 5.0 Pro
 
 {% columns %}

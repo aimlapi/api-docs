@@ -1,3 +1,7 @@
+---
+description: "Model id: recraft-v3. State-of-the-art AI image generator with superior text and vector capabilities."
+---
+
 # Recraft v3
 
 {% columns %}

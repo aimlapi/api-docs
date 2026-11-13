@@ -1,3 +1,7 @@
+---
+description: "Model id: text-embedding-ada-002. Reliable embedding model offering solid performance for various tasks."
+---
+
 # Text Embedding ada 002
 
 {% columns %}

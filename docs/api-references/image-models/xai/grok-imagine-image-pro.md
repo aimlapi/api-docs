@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-imagine-image-pro. Grok Imagine Image Pro is an advanced image model by xAI designed for high-quality image generation and editing with improved detail and prompt fidelity."
+---
+
 # Grok Imagine Image Pro
 
 {% columns %}

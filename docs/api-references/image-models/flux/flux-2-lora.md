@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2-lora. FLUX 2 with LoRA support for custom style and subject fine-tuning in text-to-image generation."
+---
+
 # flux-2-lora
 
 {% columns %}

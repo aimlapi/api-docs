@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-omni-flash-preview. Gemini Omni Flash Preview is Google's multimodal video generation and editing model for text-to-video, image-to-video, reference-to-video, and edit workflows."
+---
+
 # Gemini Omni Flash Preview
 
 {% columns %}

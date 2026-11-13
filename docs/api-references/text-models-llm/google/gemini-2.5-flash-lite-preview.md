@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-2.5-flash-lite-preview. Gemini 2.5 Flash Lite is a lightweight AI model developed by Google, optimized for quick responses and efficient processing, making it ideal for tasks requiring minimal latency and resource…"
+---
+
 # gemini-2.5-flash-lite-preview
 
 {% columns %}

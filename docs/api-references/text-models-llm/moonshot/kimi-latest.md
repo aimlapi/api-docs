@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshotai/kimi-latest. API reference for Kimi Latest: request schema and code examples."
+---
+
 # Kimi Latest
 
 {% columns %}

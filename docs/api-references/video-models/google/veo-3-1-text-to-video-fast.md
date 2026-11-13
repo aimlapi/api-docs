@@ -1,3 +1,7 @@
+---
+description: "Model id: google/veo-3.1-t2v-fast. API reference for Veo 3.1 Fast (Text-to-Video): request schema and code examples."
+---
+
 # Veo 3.1 Fast (Text-to-Video)
 
 {% columns %}

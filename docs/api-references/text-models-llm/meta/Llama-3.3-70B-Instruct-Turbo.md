@@ -1,3 +1,7 @@
+---
+description: "Model id: meta-llama/Llama-3.3-70B-Instruct-Turbo. Meta Llama 3.3 70B Instruct Turbo is an advanced language model optimized for instruction-following tasks with high efficiency and performance."
+---
+
 # Llama 3.3 70B Instruct Turbo
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: krea/krea-wan-14b/video-to-video. Krea WAN 14B Video to Video transforms and re-renders existing videos with AI-driven style and motion control."
+---
+
 # krea-wan-14b/video-to-video
 
 {% columns %}

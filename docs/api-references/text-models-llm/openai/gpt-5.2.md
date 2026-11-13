@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-2. GPT-5.2 is OpenAI's next-generation language model with extended context and enhanced performance."
+---
+
 # gpt-5.2
 
 {% columns %}

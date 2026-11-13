@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-5-flash. Gemini 3.5 Flash is a multimodal reasoning model from Google optimized for fast inference and agentic workflows."
+---
+
 # gemini-3-5-flash
 
 {% columns %}

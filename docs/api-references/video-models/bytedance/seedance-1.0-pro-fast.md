@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedance-1-0-pro-fast. ByteDance Seedance 1.0 Pro Fast delivers high-quality video generation with reduced processing time."
+---
+
 # Seedance 1.0 Pro Fast
 
 {% columns %}

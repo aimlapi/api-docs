@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-6-t2v. Wan 2.6 Text-to-Video generates high-quality videos from text descriptions with advanced motion modeling."
+---
+
 # Wan 2.6 (Text-to-Video)
 
 {% columns %}

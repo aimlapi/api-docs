@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-large-2. Voyage Large 2 is a high-capacity embedding model offering strong performance across general-purpose retrieval tasks."
+---
+
 # Voyage Large 2
 
 {% columns %}

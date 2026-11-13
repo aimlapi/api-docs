@@ -1,3 +1,7 @@
+---
+description: "Model id: perplexity/sonar-pro. Perplexity Sonar Pro is an advanced search-augmented language model with deeper reasoning and broader web coverage."
+---
+
 # Sonar Pro
 
 {% columns %}

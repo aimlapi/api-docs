@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3.8-live. API reference for Gemini 3.8 Live: request schema and code examples."
+---
+
 # Gemini 3.8 Live
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance-seed/seed-2.0-lite. API reference for Seed 2.0 Lite: request schema and code examples."
+---
+
 # Seed 2.0 Lite
 
 {% columns %}

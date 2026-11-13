@@ -1,4 +1,5 @@
 ---
+description: "Model id: alibaba/qwen3.6-plus. Qwen3.6-Plus — a balanced general-purpose model by Alibaba Cloud optimized for performance, cost, and speed. Suitable for a wide range of chat and generation tasks."
 layout:
   width: wide
   title:

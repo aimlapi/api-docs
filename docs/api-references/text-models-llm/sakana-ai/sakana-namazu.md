@@ -1,3 +1,7 @@
+---
+description: "Model id: sakana/sakana-namazu. Sakana Namazu is a Japanese-specialized reasoning model from Sakana AI, based on Kimi K2.6 with additional training for Japanese language and business contexts."
+---
+
 # Sakana Namazu
 
 {% columns %}

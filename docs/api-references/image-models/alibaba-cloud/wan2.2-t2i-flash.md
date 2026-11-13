@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-t2i-flash. Wan 2.2 Flash Edition text-to-image model - 50% faster than the 2.1 model."
+---
+
 # Wan 2.2 Flash
 
 {% columns %}

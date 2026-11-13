@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3.1-pro-preview-customtools. API reference for Gemini 3.1 Pro Preview Custom Tools: request schema and code examples."
+---
+
 # Gemini 3.1 Pro Preview Custom Tools
 
 {% columns %}

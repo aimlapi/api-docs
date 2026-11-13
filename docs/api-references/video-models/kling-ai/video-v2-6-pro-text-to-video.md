@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v2-6-pro-text-to-video. Kling 2.6 Pro text-to-video delivers next-generation video quality from text prompts with advanced motion control."
+---
+
 # Kling 2.6 Pro Text to Video
 
 {% columns %}

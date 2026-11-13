@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-wonder. Muse Wonder is a frontier reasoning model from Meta, designed for complex personal and professional agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text."
+---
+
 # Muse Wonder
 hidden: true
 noIndex: true

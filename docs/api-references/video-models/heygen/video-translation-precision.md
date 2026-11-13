@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-translation-precision. HeyGen Video Translation (precision mode) dubs a video into another language with higher-accuracy lip sync driven by avatar inference. Does not support tools/function calling."
+---
+
 # HeyGen Video Translation Precision
 
 {% columns %}

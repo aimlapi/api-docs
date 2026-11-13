@@ -1,3 +1,7 @@
+---
+description: "Model id: #g1_nova-2-automotive. Nova-2: Advanced, versatile ASR model for diverse transcription needs."
+---
+
 # nova-2
 
 {% hint style="info" %}

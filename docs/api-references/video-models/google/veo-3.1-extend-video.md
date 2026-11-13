@@ -1,3 +1,7 @@
+---
+description: "Model id: google/veo3-1-extend-video. API reference for Veo 3.1 Extend Video: request schema and code examples."
+---
+
 # Veo 3.1 Extend Video
 
 {% columns %}

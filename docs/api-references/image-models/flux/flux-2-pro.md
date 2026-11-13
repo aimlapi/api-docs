@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2-pro. Professional FLUX.2 image generation and editing with strong prompt adherence."
+---
+
 # Flux 2 Pro
 
 {% columns %}

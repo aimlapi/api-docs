@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-5-flash-lite. Gemini 3.5 Flash Lite is Google’s most cost-efficient GA model, optimized for high-volume agentic tasks, translation and simple data processing, with multimodal text, image, video and audio input."
+---
+
 # Gemini 3.5 Flash Lite
 
 {% columns %}

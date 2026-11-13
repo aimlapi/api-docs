@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/v5/image-to-video. Generate high-quality videos from images using PixVerse v5 with advanced AI video generation."
+---
+
 # Pixverse v5 Image to Video
 
 {% columns %}

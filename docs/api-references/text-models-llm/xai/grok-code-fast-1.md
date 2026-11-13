@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-code-fast-1. A speedy and economical reasoning model that excels at agentic coding with function calling and structured outputs."
+---
+
 # Grok Code Fast 1
 
 {% columns %}
