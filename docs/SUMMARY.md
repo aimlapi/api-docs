@@ -414,6 +414,7 @@
   * [Thinking Machines](api-references/text-models-llm/thinking-machines/README.md)
     * [Inkling](api-references/text-models-llm/thinking-machines/inkling.md)
     * [Inkling Small](api-references/text-models-llm/thinking-machines/inkling-small.md)
+    * [Inkling 2 Small](api-references/text-models-llm/thinking-machines/inkling-2-small.md)
   * [Unbiased](api-references/text-models-llm/unbiased/README.md)
     * [Pareto](api-references/text-models-llm/unbiased/pareto.md)
     * [Pareto 26.10 Preview](api-references/text-models-llm/unbiased/pareto-26.10-preview.md)
