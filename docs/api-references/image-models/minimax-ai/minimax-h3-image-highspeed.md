@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/h3-image-highspeed-highspeed`
+* `minimax/h3-image-highspeed`
 {% endhint %}
 {% endcolumn %}
 
@@ -70,7 +70,7 @@ response = requests.post(
         "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
         "Content-Type": "application/json",
     },
-    json={'model': 'minimax/h3-image-highspeed-highspeed', 'prompt': 'Describe what you want the model to generate.'},
+    json={'model': 'minimax/h3-image-highspeed', 'prompt': 'Describe what you want the model to generate.'},
 )
 
 print(response.json())

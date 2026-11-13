@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `minimax/speech-2-5-hd-preview`
+* `minimax/speech-2.5-hd-preview`
 {% endhint %}
 {% endcolumn %}
 

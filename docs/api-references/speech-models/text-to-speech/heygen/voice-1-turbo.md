@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `heygen/voice-1-turbo-turbo`
+* `heygen/voice-1-turbo`
 {% endhint %}
 {% endcolumn %}
 
@@ -87,7 +87,7 @@ const fs = require("fs");
 const apiKey = "<YOUR_AIMLAPI_KEY>";
 
 const data = JSON.stringify({
-  model: "heygen/voice-1-turbo-turbo",
+  model: "heygen/voice-1-turbo",
   text: "Cities of the future promise to radically transform how people live, work, and move.",
   voice: "en-US-AvaNeural",
 });

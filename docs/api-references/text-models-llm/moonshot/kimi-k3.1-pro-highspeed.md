@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `moonshot/kimi-k3-1-pro-highspeed-highspeed`
+* `moonshot/kimi-k3-1-pro-highspeed`
 {% endhint %}
 {% endcolumn %}
 

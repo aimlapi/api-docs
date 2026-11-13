@@ -5,9 +5,8 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `gpt-3.5-turbo`
-* `gpt-3.5-turbo-0125`
-* `gpt-3.5-turbo-1106`
+* `openai/gpt-3.5-turbo-16k`
+* `openai/gpt-3.5-turbo-0613`
 {% endhint %}
 {% endcolumn %}
 
@@ -178,7 +177,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"gpt-3.5-turbo",
+        "model":"openai/gpt-3.5-turbo-16k",
         "input":"Hello"  # Insert your question for the model here, instead of Hello   
     }
 )
@@ -239,7 +238,7 @@ main();
   "incomplete_details": null,
   "instructions": null,
   "max_output_tokens": 512,
-  "model": "gpt-3.5-turbo",
+  "model": "openai/gpt-3.5-turbo-16k",
   "output": [
     {
       "id": "rs_686ba463d18481a29dde85cfd7b055bf02a1cc22f1a1bcf1",

@@ -11,7 +11,6 @@ This documentation is valid for the following list of our models:
 
 * `anthropic/claude-sonnet-4`
 * `claude-sonnet-4`
-* `claude-sonnet-4-20250514`
 {% endhint %}
 {% endcolumn %}
 

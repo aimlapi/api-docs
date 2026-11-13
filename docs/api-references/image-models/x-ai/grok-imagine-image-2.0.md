@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `x-ai/grok-imagine-image-2.0-2.0`
+* `x-ai/grok-imagine-image-2.0`
 {% endhint %}
 {% endcolumn %}
 
@@ -79,7 +79,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'x-ai/grok-imagine-image-2.0-2.0',
+      model: 'x-ai/grok-imagine-image-2.0',
       prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
       aspect_ratio: '16:9'
     }),

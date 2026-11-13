@@ -7,7 +7,6 @@ This documentation is valid for the following list of our models:
 
 * `anthropic/claude-opus-4.1`
 * `claude-opus-4-1`
-* `claude-opus-4-1-20250805`
 {% endhint %}
 {% endcolumn %}
 
@@ -26,7 +25,7 @@ As of February 13, 2026, the streaming response format for Anthropic models has 
 
 ## Model Overview
 
-An upgrade to [Claude Opus 4](claude-4-opus.md) on agentic tasks, real-world coding, and thinking.
+An upgrade to Claude Opus 4 on agentic tasks, real-world coding, and thinking.
 
 ## How to Make a Call
 

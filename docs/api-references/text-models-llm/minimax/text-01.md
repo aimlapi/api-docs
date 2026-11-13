@@ -5,7 +5,7 @@
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `MiniMax-Text-01`
+* `minimax/MiniMax-Text-01`
 {% endhint %}
 {% endcolumn %}
 
@@ -73,7 +73,7 @@ response = requests.post(
         "Content-Type":"application/json"
     },
     json={
-        "model":"MiniMax-Text-01",
+        "model":"minimax/MiniMax-Text-01",
         "messages":[
             {
                 "role":"user",
@@ -101,7 +101,7 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'MiniMax-Text-01',
+      model: 'minimax/MiniMax-Text-01',
       messages:[
           {
               role:'user',
@@ -141,7 +141,7 @@ main();
     }
   ],
   "created": 1750764981,
-  "model": "MiniMax-Text-01",
+  "model": "minimax/MiniMax-Text-01",
   "usage": {
     "prompt_tokens": 299,
     "completion_tokens": 67,
