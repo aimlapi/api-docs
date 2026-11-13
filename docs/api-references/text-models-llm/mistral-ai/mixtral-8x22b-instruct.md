@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mixtral-8x22b-instruct. API reference for Mixtral 8X22B Instruct: request schema and code examples."
+---
+
 # Mixtral 8X22B Instruct
 
 {% columns %}

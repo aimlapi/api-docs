@@ -1,4 +1,5 @@
 ---
+description: "Model id: qwen-max. Qwen Max: powerful AI, excels in stability, competes globally."
 hidden: true
 ---
 

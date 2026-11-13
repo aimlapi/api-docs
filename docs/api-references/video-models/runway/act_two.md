@@ -1,3 +1,7 @@
+---
+description: "Model id: runway/act_two. Runway Act Two creates expressive, full-body performance videos by transferring motion from a driving video to a subject."
+---
+
 # Runway Act Two
 
 {% columns %}

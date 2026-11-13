@@ -1,3 +1,7 @@
+---
+description: "Model id: #g1_whisper-large. Whisper: Multilingual speech recognition model, robust, versatile, open-source."
+---
+
 # whisper-large
 
 {% hint style="info" %}

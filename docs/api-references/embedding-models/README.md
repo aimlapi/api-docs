@@ -1,4 +1,5 @@
 ---
+description: "Embedding models turn text into vectors for search, clustering and recommendations, through POST /v1/embeddings."
 icon: binary
 ---
 

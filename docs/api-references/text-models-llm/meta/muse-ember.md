@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-ember. Muse Ember is the smallest and most efficient reasoning model from Meta, built for the work agents repeat all day: tool calls, coding-agent subtasks and routing."
+---
+
 # Muse Ember
 hidden: true
 noIndex: true

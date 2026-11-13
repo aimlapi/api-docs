@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2-lora-edit. FLUX 2 Edit with LoRA support for fine-tuned, style-consistent image editing."
+---
+
 # flux-2-lora-edit
 
 {% columns %}

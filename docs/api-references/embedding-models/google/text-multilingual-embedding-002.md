@@ -1,3 +1,7 @@
+---
+description: "Model id: text-multilingual-embedding-002. Google's multilingual embedding model 002 supports cross-lingual semantic search and similarity across multiple languages."
+---
+
 # Text Multilingual Embedding 002
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-3-mini-beta. Grok 3 Beta Mini is a compact, efficient variant of Grok 3 optimized for speed and cost-effective inference."
+---
+
 # Grok 3 Beta Mini
 
 {% columns %}

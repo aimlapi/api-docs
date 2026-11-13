@@ -1,3 +1,7 @@
+---
+description: "Model id: video-01-live2d. Minimax Video-01 generates high-quality videos from text prompts or image using advanced AI techniques for diverse creative applications."
+---
+
 # Video 01 Live2D
 
 {% columns %}

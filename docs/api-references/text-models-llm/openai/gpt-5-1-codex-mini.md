@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.1-codex-mini. GPT-5.1 Codex Mini is a lighter coding model optimized for fast code completions and suggestions."
+---
+
 # gpt-5.1-codex-mini
 
 {% columns %}

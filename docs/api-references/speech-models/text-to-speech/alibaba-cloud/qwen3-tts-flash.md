@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3-tts-flash. Qwen3-TTS offers 17 voices and supports multiple languages and dialects including Chinese. The system can adapt its tone and smoothly process complex text."
+---
+
 # Qwen3 TTS Flash
 
 {% columns %}

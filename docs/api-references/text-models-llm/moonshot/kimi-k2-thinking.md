@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshotai/kimi-k2-thinking. API reference for Kimi K2 Thinking: request schema and code examples."
+---
+
 # Kimi K2 Thinking
 
 {% columns %}

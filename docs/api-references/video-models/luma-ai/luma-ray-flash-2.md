@@ -1,3 +1,7 @@
+---
+description: "Model id: luma/ray-flash-2. Luma Ray-Flash-2 is a faster, more cost-effective model for video generation."
+---
+
 # Luma Dream Machine Ray-Flash-2
 
 {% columns %}

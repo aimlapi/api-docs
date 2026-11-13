@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance-seed/seed-1.6-flash. API reference for Seed 1.6 Flash: request schema and code examples."
+---
+
 # Seed 1.6 Flash
 
 {% columns %}

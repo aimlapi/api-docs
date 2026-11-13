@@ -1,3 +1,7 @@
+---
+description: "Model id: stable-diffusion-v35-large. Stable Diffusion 3.5 Large enhances image generation with advanced architecture and diverse outputs."
+---
+
 # Stable Diffusion v3.5 Large
 
 {% columns %}

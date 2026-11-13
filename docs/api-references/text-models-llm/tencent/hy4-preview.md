@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy4-preview. Hy4 preview is a mixture-of-experts model from Tencent with 49B active parameters out of 770B total, built for coding agents, complex tool-use workflows and productivity tasks."
+---
+
 # Hy4 Preview
 
 {% columns %}

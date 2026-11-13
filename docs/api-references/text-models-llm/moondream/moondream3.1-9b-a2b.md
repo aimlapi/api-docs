@@ -1,3 +1,7 @@
+---
+description: "Model id: moondream/moondream3.1-9b-a2b. Moondream 3.1 is a vision-language model from Moondream, the successor to Moondream 3 Preview, with 9B total parameters and 2B active (mixture-of-experts)."
+---
+
 # Moondream 3.1
 
 {% columns %}

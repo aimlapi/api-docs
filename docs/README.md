@@ -1,5 +1,5 @@
 ---
-description: Learn how to get started with the AI/ML API
+description: "Map of the AI/ML API docs: find the model for a task and open its API reference. One API key, OpenAI-compatible base URL https://api.aimlapi.com/v1."
 icon: map
 ---
 

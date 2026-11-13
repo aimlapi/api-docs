@@ -1,3 +1,7 @@
+---
+description: "Image generation and editing models from Flux on AI/ML API: model ids and API references."
+---
+
 # Flux
 
 Flux, a subsidiary project of Black Forest Labs, is represented in our API by the following models:

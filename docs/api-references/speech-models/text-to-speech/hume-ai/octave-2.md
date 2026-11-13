@@ -1,3 +1,7 @@
+---
+description: "Model id: hume/octave-2. High-quality text-to-speech model with emotional expression capabilities"
+---
+
 # Octave 2
 
 {% columns %}

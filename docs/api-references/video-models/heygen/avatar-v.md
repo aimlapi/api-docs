@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/avatar-v. HeyGen Avatar V is the highest-fidelity HeyGen engine: a talking-avatar video from a script or an audio track, using a HeyGen photo avatar or digital twin. Does not support tools/function calling."
+---
+
 # HeyGen Avatar V
 
 {% columns %}

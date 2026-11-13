@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedream-v4-edit. Edit images using ByteDance's SeedDream 4 model."
+---
+
 # Seedream 4.0 Edit (Image-to-image)
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-6-image. Wan 2.6 is a next-generation text-to-image model from Alibaba Cloud with enhanced visual quality and detail."
+---
+
 # wan2.6-image
 
 {% columns %}

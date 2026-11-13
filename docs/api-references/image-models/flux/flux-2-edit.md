@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2-edit. FLUX 2 Edit is an image editing model from Black Forest Labs for precise text-guided image modifications."
+---
+
 # Flux 2 Edit
 
 {% columns %}

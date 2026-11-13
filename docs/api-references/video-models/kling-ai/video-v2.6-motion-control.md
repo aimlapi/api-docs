@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v2-6-motion-control. Kling 2.6 Motion Control transfers motion from a reference video onto a character image, with selectable std/pro generation modes."
+---
+
 # v2.6-pro/motion-control
 
 {% columns %}

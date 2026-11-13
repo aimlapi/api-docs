@@ -1,3 +1,7 @@
+---
+description: "Model id: flux-pro. FLUX.1 [pro]: The ultimate AI image generation model for professionals."
+---
+
 # Flux Pro
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-3-video-v2v. FLUX 3 Video — a video-to-video model by Black Forest Labs that continues an existing clip from its final frames in hd or fhd, with a synchronized audio track."
+---
+
 # FLUX 3 Video Video to Video
 
 {% columns %}

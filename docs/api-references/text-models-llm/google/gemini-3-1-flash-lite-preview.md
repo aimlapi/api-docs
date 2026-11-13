@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-1-flash-lite-preview. API reference for gemini-3-1-flash-lite-preview: request schema and code examples."
+---
+
 # gemini-3-1-flash-lite-preview
 
 {% columns %}

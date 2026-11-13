@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_music_v2_5. ElevenLabs Music v2.5 composes studio-quality tracks up to 5 minutes long from a text prompt, with or without vocals."
+---
+
 # Eleven Music v2.5
 
 ## Model Overview

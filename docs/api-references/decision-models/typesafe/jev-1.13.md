@@ -1,3 +1,7 @@
+---
+description: "Model id: typesafe/jev-1.13. Jev is a System One decision model from TypeSafe: instead of generating text it returns typed answers (yes/no, choice, score) with calibrated probabilities for routing, classification and other…"
+---
+
 # Jev 1.13
 
 {% columns %}

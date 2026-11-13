@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-oss-120b. GPT OSS 120B is the most powerful Open AI open weight model."
+---
+
 # GPT OSS 120B
 
 {% columns %}

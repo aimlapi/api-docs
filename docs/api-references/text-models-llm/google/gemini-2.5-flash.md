@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-2.5-flash. Gemini 2.5 Flash is a powerful AI model developed by Google, designed to handle complex tasks with high accuracy and efficiency and has thinking capabilities."
+---
+
 # Gemini 2.5 Flash
 
 {% columns %}

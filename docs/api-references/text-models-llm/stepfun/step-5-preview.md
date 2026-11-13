@@ -1,3 +1,7 @@
+---
+description: "Model id: stepfun/step-5-preview. Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters)."
+---
+
 # Step 5 Preview
 
 {% columns %}

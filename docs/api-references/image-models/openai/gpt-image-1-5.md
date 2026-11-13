@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-image-1-5. GPT-Image-1.5 is an updated image generation model with improved visual quality and prompt adherence."
+---
+
 # gpt-image-1-5
 
 {% columns %}

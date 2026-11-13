@@ -1,3 +1,7 @@
+---
+description: "Model id: kling-video/v4/reference-to-video. Kling 4.0 reference-to-video keeps characters, objects and scenes from up to 10 reference images and 7 elements consistent across 3-30 second videos."
+---
+
 # Kling 4.0 Reference to Video
 
 {% columns %}

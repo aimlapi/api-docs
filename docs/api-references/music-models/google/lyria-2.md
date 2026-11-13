@@ -1,3 +1,7 @@
+---
+description: "Model id: google/lyria2. Lyria 2 is Google's advanced music generation model capable of creating high-quality, diverse musical compositions from text."
+---
+
 # Lyria 2
 
 {% columns %}

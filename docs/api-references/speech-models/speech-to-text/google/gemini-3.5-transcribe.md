@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3.5-transcribe. Gemini 3.5 Transcribe is Google’s speech-to-text model for recorded audio: automatic detection of 85+ languages including mixed-language speech, speaker labels for up to 8 speakers, word-level…"
+---
+
 # Gemini 3.5 Transcribe
 
 {% columns %}

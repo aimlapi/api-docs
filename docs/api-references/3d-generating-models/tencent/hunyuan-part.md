@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hunyuan-part. Tencent Hunyuan Part is a 3D generation model for creating detailed 3D assets from text or image inputs."
+---
+
 # Hunyuan Part
 
 {% columns %}

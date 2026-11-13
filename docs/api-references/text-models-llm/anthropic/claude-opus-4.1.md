@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-4.1. Claude 4.1 Opus is an enhanced version of Claude 4 Opus with improved reasoning and instruction-following capabilities."
+---
+
 # Claude 4.1 Opus
 
 {% columns %}

@@ -1,7 +1,5 @@
 ---
-description: >-
-  Access leading AI models (GPT-4o, Gemini, and others) through a single unified
-  API. Initial setup takes just a few minutes.
+description: "Make a first request to any model with the OpenAI SDK, Python requests or curl: base URL https://api.aimlapi.com/v1, header Authorization: Bearer <AIMLAPI_KEY>."
 icon: hand-wave
 ---
 

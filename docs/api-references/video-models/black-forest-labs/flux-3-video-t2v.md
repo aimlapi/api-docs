@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-3-video-t2v. FLUX 3 Video — a text-to-video model by Black Forest Labs that generates clips of 5 to 20 seconds in hd or fhd, with a synchronized audio track."
+---
+
 # FLUX 3 Video Text to Video
 
 {% columns %}

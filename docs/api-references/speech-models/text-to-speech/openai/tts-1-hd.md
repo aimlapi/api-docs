@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/tts-1-hd. TTS-1 HD is a high-quality text-to-speech model that provides superior audio quality compared to TTS-1."
+---
+
 # TTS-1 HD
 
 {% columns %}

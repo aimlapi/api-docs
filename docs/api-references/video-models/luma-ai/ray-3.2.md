@@ -1,3 +1,7 @@
+---
+description: "Model id: luma/ray-3.2. Luma Ray-3.2 generates, edits, and reframes videos from text or images with HDR output, multi-keyframe control, and seamless looping."
+---
+
 # Luma Ray-3.2
 
 {% columns %}

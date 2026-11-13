@@ -1,4 +1,5 @@
 ---
+description: "Model id: nova-3-medical. Nova-3 Medical: Deepgram next-generation ASR specialized for medical and healthcare terminology."
 layout:
   width: wide
   title:

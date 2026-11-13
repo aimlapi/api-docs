@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-1-reference-to-video. HeyGen Video 1 builds a 5–15 second video with sound around up to 9 reference images of people, objects or style, guided by a text prompt. Does not support tools/function calling."
+---
+
 # HeyGen Video 1 Reference to Video
 
 {% columns %}

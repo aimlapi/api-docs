@@ -1,3 +1,7 @@
+---
+description: "Model id: moondream/moondream3-preview. Moondream 3 Preview is a vision-language model from Moondream with 9B total parameters and 2B active (mixture-of-experts)."
+---
+
 # Moondream 3 Preview
 
 {% columns %}

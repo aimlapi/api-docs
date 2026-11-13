@@ -1,3 +1,7 @@
+---
+description: "Model id: ibm-granite/granite-4.2-8b. Granite 4.2 8B is a dense reasoning model from IBM, fine-tuned from Granite 4.1 8B for mathematics, code generation, multilingual dialogue and agentic workflows that need multi-step reasoning."
+---
+
 # Granite 4.2 8B
 hidden: true
 noIndex: true

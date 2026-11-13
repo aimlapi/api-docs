@@ -1,3 +1,7 @@
+---
+description: "Model id: sakana/fugu-ultra. Fugu Ultra is the higher-performance model in Sakana AI's Fugu family."
+---
+
 # Fugu Ultra
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/dreamina-seedance-2-0-mini. API reference for Seedance 2.0 Mini: request schema and code examples."
+---
+
 # Seedance 2.0 Mini
 
 {% columns %}

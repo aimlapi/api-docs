@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-5-1. API reference for glm-5.1: request schema and code examples."
+---
+
 # glm-5.1
 
 {% columns %}

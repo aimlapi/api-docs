@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2. FLUX 2 is the next-generation text-to-image model from Black Forest Labs with improved quality and prompt adherence."
+---
+
 # Flux 2
 
 {% columns %}

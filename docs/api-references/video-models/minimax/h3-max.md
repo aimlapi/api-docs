@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/h3-max. MiniMax H3 Max is a post-trained H3 video model tuned for faster generation and closer prompt adherence, producing 5-15 second clips at 480p or 768p and 24 fps with native stereo audio, from text, a…"
+---
+
 # MiniMax H3 Max
 
 {% columns %}

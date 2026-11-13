@@ -1,3 +1,7 @@
+---
+description: "Model id: inference-net/schematron-v2-small. Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages."
+---
+
 # Schematron V2 Small
 hidden: true
 noIndex: true

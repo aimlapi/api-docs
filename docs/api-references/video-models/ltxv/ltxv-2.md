@@ -1,3 +1,7 @@
+---
+description: "Model id: ltxv/ltxv-2. Generate high-quality videos from text prompts or images using LTXV 2 model with support for multiple resolutions and frame rates."
+---
+
 # LTXV 2
 
 {% columns %}

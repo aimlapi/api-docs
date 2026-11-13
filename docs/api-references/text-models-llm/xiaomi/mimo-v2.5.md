@@ -1,3 +1,7 @@
+---
+description: "Model id: xiaomi/mimo-v2.5. MiMo-V2.5 — a native omnimodal model by Xiaomi for text, image, audio, and video understanding."
+---
+
 # MiMo V2.5
 
 {% columns %}

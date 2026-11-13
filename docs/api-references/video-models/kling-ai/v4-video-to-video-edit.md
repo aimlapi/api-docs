@@ -1,3 +1,7 @@
+---
+description: "Model id: kling-video/v4/video-to-video/edit. Kling 4.0 video editing changes expressions, motion, style or backgrounds of a 3-30 second clip from an instruction, keeping the rest of the scene stable."
+---
+
 # Kling 4.0 Video Editing
 
 {% columns %}

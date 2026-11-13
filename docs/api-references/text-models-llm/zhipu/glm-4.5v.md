@@ -1,3 +1,7 @@
+---
+description: "Model id: z-ai/glm-4.5v. API reference for Glm 4.5V: request schema and code examples."
+---
+
 # Glm 4.5V
 
 {% columns %}

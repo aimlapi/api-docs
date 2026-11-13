@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.5-t2v-preview. Generate high-quality videos from text prompts using Alibaba Cloud's WAN 2.5 text-to-video model with support for 480p, 720p, and 1080p resolutions."
+---
+
 # Wan 2.5 Preview Text to Video
 
 {% columns %}

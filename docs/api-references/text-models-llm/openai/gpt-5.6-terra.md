@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.6-terra. API reference for GPT 5.6 Terra: request schema and code examples."
+---
+
 # GPT 5.6 Terra
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/z-image-turbo-lora. Z-Image Turbo LoRA extends the Z-Image Turbo model with custom style and subject fine-tuning via LoRA adapters."
+---
+
 # Z-Image Turbo LoRA
 
 {% columns %}

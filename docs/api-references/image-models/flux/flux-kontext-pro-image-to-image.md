@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/kontext-pro/image-to-image. FLUX.1 Kontext Pro image-to-image model for context-aware editing while preserving subject identity and style."
+---
+
 # flux/kontext-pro/image-to-image
 
 {% columns %}

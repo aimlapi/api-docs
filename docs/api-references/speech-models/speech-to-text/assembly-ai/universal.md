@@ -1,3 +1,7 @@
+---
+description: "Model id: aai/universal. AssemblyAI's fastest, most robust model with broad language support."
+---
+
 # Universal
 
 {% columns %}

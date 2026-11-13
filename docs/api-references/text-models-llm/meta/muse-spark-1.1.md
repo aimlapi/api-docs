@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-spark-1.1. API reference for Muse Spark 1.1: request schema and code examples."
+---
+
 # Muse Spark 1.1
 
 {% columns %}

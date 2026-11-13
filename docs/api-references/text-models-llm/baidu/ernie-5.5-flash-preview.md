@@ -1,3 +1,7 @@
+---
+description: "Model id: baidu/ernie-5.5-flash-preview. ERNIE 5.5 Flash Preview is the latest foundation model in the ERNIE family, with improvements in coding, agentic capabilities, knowledge work and deep research."
+---
+
 # Ernie 5.5 Flash Preview
 hidden: true
 noIndex: true

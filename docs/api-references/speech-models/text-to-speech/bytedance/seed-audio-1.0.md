@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seed-audio-1-0. Seed Audio 1.0 is a non-streaming audio generation model for speech, sound effects, timbre control, and reference-guided audio creation."
+---
+
 # Seed Audio 1.0
 
 {% columns %}

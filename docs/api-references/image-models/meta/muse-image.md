@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-image. Meta Muse Image is a text-to-image model with faithful instruction-following and exceptional visual fidelity — fine details like text, plots, and QR codes render accurately."
+---
+
 # Meta Muse Image
 
 {% columns %}

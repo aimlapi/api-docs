@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-max-prime. Qwen3.8 Max Prime is a higher-throughput variant of Qwen3.8 Max from Qwen, served as a separate SKU. It accepts text, image and video inputs and produces text. Reasoning is always on."
+---
+
 # Qwen3.8 Max Prime
 hidden: true
 noIndex: true

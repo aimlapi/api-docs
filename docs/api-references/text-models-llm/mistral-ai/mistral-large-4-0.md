@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mistral-large-4-0. API reference for Mistral Large 4.0: request schema and code examples."
+---
+
 # Mistral Large 4.0
 
 {% columns %}

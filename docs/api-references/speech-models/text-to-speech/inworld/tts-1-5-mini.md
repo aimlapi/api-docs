@@ -1,3 +1,7 @@
+---
+description: "Model id: inworld/tts-1-5-mini. Low-latency text-to-speech model optimized for real-time and high-throughput scenarios while maintaining high audio quality."
+---
+
 # Inworld TTS 1.5 Mini
 
 {% columns %}

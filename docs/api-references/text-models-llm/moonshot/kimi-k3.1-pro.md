@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshot/kimi-k3-1-pro. Kimi K3.1 Pro is a multimodal reasoning model from Moonshot AI for coding, research, and agentic tool use, with a 1M-token context window."
+---
+
 # Kimi K3.1 Pro
 
 {% columns %}

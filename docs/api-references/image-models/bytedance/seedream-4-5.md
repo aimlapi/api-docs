@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedream-4-5. ByteDance Seedream 4.5 is an advanced text-to-image model with improved prompt adherence and visual quality."
+---
+
 # Seedream 4.5
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "GET /v1/models, no key needed: every model you can call now, with ids, aliases, endpoint types and request schemas; add include=pricing for prices."
+---
+
 # Complete Model List
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="220" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="complete-model-list.md#get-the-model-catalogue">Get the model catalogue</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v1/models</code></td></tr><tr><td valign="top"><a href="complete-model-list.md#looking-up-one-model">Look up one model</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/model/{id}</code></td></tr></tbody></table>

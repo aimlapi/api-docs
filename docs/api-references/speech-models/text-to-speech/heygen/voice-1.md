@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/voice-1. HeyGen Voice 1 turns text into natural speech with HeyGen public voices and returns a WAV file. Does not support tools/function calling."
+---
+
 # HeyGen Voice 1
 
 {% columns %}

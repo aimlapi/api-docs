@@ -1,3 +1,7 @@
+---
+description: "Model id: liquid/lfm-2.5-24b-a2b. LFM2.5-24B-A2B is a mixture-of-experts reasoning model from Liquid AI with 24B total and 2.45B active parameters. It always reasons before answering and is built for agents that call tools."
+---
+
 # LFM2.5-24B-A2B
 
 {% columns %}

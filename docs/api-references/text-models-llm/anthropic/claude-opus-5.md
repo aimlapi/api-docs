@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-5. Claude Opus 5 is ideal for complex agentic coding and enterprise work."
+---
+
 # Claude Opus 5
 
 {% columns %}

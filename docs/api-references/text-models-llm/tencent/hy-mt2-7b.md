@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy-mt2-7b. Hy-MT2-7B is a 7B-parameter translation model from Tencent."
+---
+
 # Hy-MT2-7B
 
 {% columns %}

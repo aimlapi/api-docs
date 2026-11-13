@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/minimax-m3.1-flash. MiniMax M3.1 Flash is MiniMax's fast, low-cost M-series reasoning model with a 1M-token context window."
+---
+
 # Minimax M3.1 Flash
 
 {% columns %}

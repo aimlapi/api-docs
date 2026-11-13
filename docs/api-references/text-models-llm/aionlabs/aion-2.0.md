@@ -1,3 +1,7 @@
+---
+description: "Model id: aion-labs/aion-2.0. API reference for Aion 2.0: request schema and code examples."
+---
+
 # Aion 2.0
 
 {% columns %}

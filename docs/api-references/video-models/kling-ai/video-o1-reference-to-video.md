@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-o1-reference-to-video. Kling Video O1 Reference-to-Video creates videos that maintain consistent appearance from reference images using AI reasoning."
+---
+
 # Kling Video O1 Reference to Video
 
 {% columns %}

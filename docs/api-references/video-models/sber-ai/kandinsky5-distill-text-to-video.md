@@ -1,3 +1,7 @@
+---
+description: "Model id: sber-ai/kandinsky5-distill-t2v. Kandinsky5 distilled text-to-video model for faster generation. $0.05 for 5s, $0.10 for 10s."
+---
+
 # Kandinsky 5 Distill (Text-to-Video)
 
 {% columns %}

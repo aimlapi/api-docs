@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-3. Grok 4.3 is a large language model by xAI for text generation and reasoning tasks. Supports up to 1M context tokens and is optimized for conversational AI and analytical workflows."
+---
+
 # Grok 4.3
 
 {% columns %}

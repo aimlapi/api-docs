@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-haiku-latest. API reference for Claude Haiku Latest: request schema and code examples."
+---
+
 # Claude Haiku Latest
 
 {% columns %}

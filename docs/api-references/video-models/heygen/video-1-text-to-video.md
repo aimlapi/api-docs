@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-1-text-to-video. HeyGen Video 1 generates a 5–30 second video with its own soundtrack (dialogue, ambience, effects) from a text prompt, at 480p to 2K. Does not support tools/function calling."
+---
+
 # HeyGen Video 1 Text to Video
 
 {% columns %}

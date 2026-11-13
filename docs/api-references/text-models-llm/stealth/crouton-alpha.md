@@ -1,3 +1,7 @@
+---
+description: "Model id: stealth/crouton-alpha. Crouton Alpha is an anonymous lightweight model built for scalable coding, agentic and multimodal workflows such as agentic sub-tasks, tool use and document analysis."
+---
+
 # Crouton Alpha
 hidden: true
 noIndex: true

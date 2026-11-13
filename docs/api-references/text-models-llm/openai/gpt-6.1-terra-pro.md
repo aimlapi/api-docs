@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-6.1-terra-pro. GPT-6.1 Terra served in pro reasoning mode for higher-quality answers on complex tasks, with text, image and file input over a 1.05M-token context."
+---
+
 # Gpt 6.1 Terra Pro
 
 {% columns %}

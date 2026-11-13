@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.1-t2v-turbo. Wan 2.1 Turbo is a fast text-to-video model from Alibaba Cloud optimized for speed without sacrificing quality."
+---
+
 # Wan 2.1 Turbo Text to Video
 
 {% columns %}

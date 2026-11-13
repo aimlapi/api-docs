@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/avatar-iii. HeyGen Avatar III renders a talking-avatar video from a script or an audio track, using a HeyGen photo or studio avatar. The fastest and cheapest HeyGen engine."
+---
+
 # HeyGen Avatar III
 
 {% columns %}

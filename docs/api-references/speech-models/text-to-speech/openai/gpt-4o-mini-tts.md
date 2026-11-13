@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-4o-mini-tts. GPT-4o mini TTS is a text-to-speech model built on GPT-4o mini, a fast and powerful language model."
+---
+
 # GPT-4o Mini TTS
 
 {% columns %}

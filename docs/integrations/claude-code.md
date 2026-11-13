@@ -1,3 +1,7 @@
+---
+description: "Run Claude Code on AI/ML API: npx aimlapi claude, or set ANTHROPIC_BASE_URL=https://api.aimlapi.com and ANTHROPIC_API_KEY to your AI/ML API key."
+---
+
 # Claude Code
 
 This guide explains how to configure **Claude Code** to work with Claude models available through AIML API.

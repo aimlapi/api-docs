@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-6-image-to-video-flash. Wan 2.6 Image-to-Video Flash is a faster variant of Wan 2.6 I2V for rapid video generation."
+---
+
 # Wan 2.6 Flash (Image-to-Video)
 
 {% columns %}

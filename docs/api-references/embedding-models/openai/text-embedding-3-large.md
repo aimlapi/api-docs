@@ -1,3 +1,7 @@
+---
+description: "Model id: text-embedding-3-large. High-performance embedding model with flexible dimensions and superior accuracy."
+---
+
 # Text Embedding 3 Large
 
 {% columns %}

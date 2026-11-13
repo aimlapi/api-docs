@@ -1,3 +1,7 @@
+---
+description: "Model id: thedrummer/cydonia-24b-v4.1. API reference for Cydonia 24B V4.1: request schema and code examples."
+---
+
 # Cydonia 24B V4.1
 
 {% columns %}

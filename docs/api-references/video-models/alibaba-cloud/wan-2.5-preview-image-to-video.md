@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.5-i2v-preview. Generate high-quality videos from images using Alibaba Cloud's WAN 2.5 image-to-video model with support for 480p, 720p, and 1080p resolutions."
+---
+
 # Wan 2.5 Preview Image to Video
 
 {% columns %}

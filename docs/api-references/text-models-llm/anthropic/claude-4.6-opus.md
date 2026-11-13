@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-4-6. Claude 4.6 Opus delivers Anthropic's highest intelligence with extended output for complex, long-horizon tasks."
+---
+
 # Claude 4.6 Opus
 
 {% columns %}

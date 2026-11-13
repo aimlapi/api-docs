@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-omni-720p-text-to-video. Kling 3.0 Omni text-to-video generates 720p videos from text prompts with optional native audio."
+---
+
 # Kling 3.0 Omni 720p Text to Video
 
 {% columns %}

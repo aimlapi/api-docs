@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/avatar-iv. HeyGen Avatar IV renders a talking-avatar video from a script or an audio track, using a HeyGen photo avatar, with control over gestures and expressiveness. Does not support tools/function calling."
+---
+
 # HeyGen Avatar IV
 
 {% columns %}

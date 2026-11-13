@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/h3-image-highspeed. MiniMax H3 Image Highspeed is the faster version of MiniMax H3 Image, with the same parameters and limits: up to 10 images per request at up to 20 MP, from a text prompt or from 1-16 reference…"
+---
+
 # Minimax H3 Image Highspeed
 
 {% columns %}

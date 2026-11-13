@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-ocr. GLM-OCR is a document understanding model for extracting text and structured content from images and documents."
+---
+
 # GLM-OCR
 
 {% hint style="info" %}

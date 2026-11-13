@@ -1,3 +1,7 @@
+---
+description: "Model id: xiaomi/mimo-v2.6-pro-ultraspeed. MiMo-V2.6-Pro-UltraSpeed — the fast-speed edition of Xiaomi's flagship MiMo-V2.6-Pro."
+---
+
 # Mimo V2.6 Pro Ultraspeed
 
 {% columns %}

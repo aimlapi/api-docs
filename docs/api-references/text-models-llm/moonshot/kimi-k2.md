@@ -1,4 +1,5 @@
 ---
+description: "Model id: moonshotai/kimi-k2. API reference for Kimi K2 0711: request schema and code examples."
 hidden: true
 noIndex: true
 ---

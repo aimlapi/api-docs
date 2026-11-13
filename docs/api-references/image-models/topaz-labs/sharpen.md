@@ -1,3 +1,7 @@
+---
+description: "Model id: topaz-labs/sharpen. Sharpening model for enhancing image clarity and reducing blur"
+---
+
 # Sharpen
 
 {% columns %}

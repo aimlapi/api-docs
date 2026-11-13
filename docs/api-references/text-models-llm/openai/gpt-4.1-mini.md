@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-4.1-mini-2025-04-14. GPT-4.1 mini is a cost-effective variant of GPT-4.1 with 1M token context, optimized for speed and efficiency."
+---
+
 # GPT-4.1 Mini
 
 {% columns %}

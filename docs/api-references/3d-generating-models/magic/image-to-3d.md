@@ -1,4 +1,5 @@
 ---
+description: "Model id: magic/image-to-3d. Magic Inc image-to-3D model generates 3D assets from single 2D images for game, VR, and design workflows."
 hidden: true
 noIndex: true
 ---

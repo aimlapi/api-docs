@@ -1,3 +1,7 @@
+---
+description: "Model id: krea/krea-wan-14b/text-to-video. Krea WAN 14B Text to Video generates high-quality videos from text using the 14B parameter WAN model."
+---
+
 # krea-wan-14b/text-to-video
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "GET /models/metrics, no key needed: live time to first token, tokens per second and duration per model, as p50 to p99."
+---
+
 # Model Performance Metrics
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="220" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="model-metrics.md#get-model-performance-metrics">Get model performance metrics</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/models/metrics</code></td></tr></tbody></table>

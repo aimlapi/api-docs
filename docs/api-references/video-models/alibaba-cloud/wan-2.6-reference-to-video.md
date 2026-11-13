@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-6-r2v. Wan 2.6 Reference-to-Video generates videos guided by reference images for consistent character and scene appearance."
+---
+
 # Wan 2.6 (Reference-to-Video)
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/image-01. MiniMax Image 01 generates up to 9 images per request from a text prompt in eight aspect ratios, and can keep a person from a reference photo in the picture."
+---
+
 # MiniMax Image 01
 
 ## Model Overview

@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-4.7. GLM-4.7 is Zhipu AI flagship text LLM optimized for agentic coding and stable multi-step reasoning, supporting long-context workflows."
+---
+
 # GLM 4.7
 
 {% columns %}

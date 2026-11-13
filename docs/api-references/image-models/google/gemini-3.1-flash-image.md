@@ -1,3 +1,7 @@
+---
+description: "Model id: google/nano-banana-2. API reference for Nano Banana 2 (Gemini 3.1 Flash Image): request schema and code examples."
+---
+
 # Nano Banana 2 (Gemini 3.1 Flash Image)
 
 {% columns %}

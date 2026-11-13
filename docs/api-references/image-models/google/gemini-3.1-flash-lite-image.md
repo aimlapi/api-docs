@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-1-flash-lite-image. Nano Banana 2 Lite is a cost-efficient text-to-image model from Google, a lighter and cheaper variant of Nano Banana 2 for high-volume image generation."
+---
+
 # Nano Banana 2 Lite
 
 {% columns %}

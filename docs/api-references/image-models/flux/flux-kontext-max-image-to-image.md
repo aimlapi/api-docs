@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/kontext-max/image-to-image. FLUX.1 Kontext Max image-to-image model for high-fidelity context-aware image editing and transformation."
+---
+
 # Flux Kontext Max image-to-image
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mistral-medium-3.1. API reference for Medium 3.1: request schema and code examples."
+---
+
 # Medium 3.1
 
 {% columns %}

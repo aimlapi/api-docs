@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedance-1-0-pro-t2v. ByteDance Seedance 1.0 Pro generates high-quality videos from text prompts with enhanced detail and consistency."
+---
+
 # Seedance 1.0 pro (Text-to-Video)
 
 {% columns %}

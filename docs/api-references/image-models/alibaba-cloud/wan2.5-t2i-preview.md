@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.5-t2i-preview. Wan 2.5 preview text-to-image model with no single-side length limit."
+---
+
 # Wan 2.5 Preview
 
 {% columns %}

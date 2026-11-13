@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.6-luna. API reference for Gpt 5.6 Luna: request schema and code examples."
+---
+
 # Gpt 5.6 Luna
 
 {% columns %}

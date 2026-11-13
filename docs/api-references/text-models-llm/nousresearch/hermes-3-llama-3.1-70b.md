@@ -1,3 +1,7 @@
+---
+description: "Model id: nousresearch/hermes-3-llama-3.1-70b. API reference for Hermes 3 70B Instruct: request schema and code examples."
+---
+
 # Hermes 3 70B Instruct
 
 {% columns %}

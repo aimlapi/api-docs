@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/z-image-turbo. Lightweight image model for fast generation with Chinese and English text rendering."
+---
+
 # Z-Image Turbo
 
 {% columns %}

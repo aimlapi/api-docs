@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-omni-720p-image-to-video. Kling 3.0 Omni image-to-video animates images into 720p videos with optional native audio."
+---
+
 # Kling 3.0 Omni 720p Image to Video
 
 {% columns %}

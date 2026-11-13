@@ -1,3 +1,7 @@
+---
+description: "Model id: inclusionai/ling-3.1-flash. API reference for Ling 3.1 Flash: request schema and code examples."
+---
+
 # Ling 3.1 Flash
 hidden: true
 noIndex: true

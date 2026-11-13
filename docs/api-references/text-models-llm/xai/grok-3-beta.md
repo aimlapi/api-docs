@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-3-beta. Grok 3 Beta is xAI's advanced language model with strong reasoning and broad knowledge capabilities."
+---
+
 # Grok 3 Beta
 
 {% columns %}

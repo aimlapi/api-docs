@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-image-2.6-sunburst. API reference for Gpt Image 2.6 Sunburst: request schema and code examples."
+---
+
 # Gpt Image 2.6 Sunburst
 
 {% columns %}

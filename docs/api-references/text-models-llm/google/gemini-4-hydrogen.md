@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-4-hydrogen. Gemini 4 Hydrogen is a fast, efficient Gemini 4 model from Google for everyday coding and agentic workflows, with a 1M-token context window."
+---
+
 # Gemini 4 Hydrogen
 
 {% columns %}

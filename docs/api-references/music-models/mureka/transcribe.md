@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/transcribe. Mureka Transcribe turns a song into sheet music, returned as a zip. It takes a song URL, a song_id from an earlier Mureka result or an uploaded song."
+---
+
 # Mureka Transcribe
 
 ## Model Overview

@@ -1,3 +1,7 @@
+---
+description: "Model id: tencent/hy-mt2-30b-a3b. Hy-MT2-30B-A3B is Tencent's flagship translation model in the Hy-MT2 family."
+---
+
 # Hy-MT2-30B-A3B
 
 {% columns %}

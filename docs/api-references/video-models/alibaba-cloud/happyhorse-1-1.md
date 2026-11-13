@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/happyhorse-1-1. Happy Horse 1.1 is Alibaba Cloud's video generation family with highly realistic, fluid, and detailed motion."
+---
+
 # Happy Horse 1.1
 
 {% columns %}

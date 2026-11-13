@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/speech-2.8-hd. MiniMax Speech 2.8 — text-to-speech model for generating natural-sounding speech from text. Supports multiple quality modes (turbo and hd) optimized for latency or audio fidelity."
+---
+
 # Speech 2.8 HD
 
 {% columns %}

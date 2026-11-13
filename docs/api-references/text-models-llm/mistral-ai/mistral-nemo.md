@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mistral-nemo. Mistral-Nemo is a powerful multilingual language model with advanced capabilities."
+---
+
 # Mistral NeMo
 
 {% columns %}

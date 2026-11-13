@@ -1,3 +1,7 @@
+---
+description: "Video generation models from Kling AI on AI/ML API: model ids and API references."
+---
+
 # Kling AI
 
 Kling AI is a Chinese startup focused on developing AI models for video generation, owned by Kuaishou Technology. Since its launch in June 2024, Kling AI has attracted attention for its ability to generate videos with resolutions up to 1080p and 30 frames per second.

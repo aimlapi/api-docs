@@ -1,4 +1,5 @@
 ---
+description: "Decision models answer typed questions about a piece of content with calibrated probabilities, through POST /v1/decisions."
 icon: scale-balanced
 ---
 

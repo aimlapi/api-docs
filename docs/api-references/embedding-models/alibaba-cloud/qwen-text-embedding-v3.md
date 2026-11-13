@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen-text-embedding-v3. High-quality text embedding model with support for custom dimensions (512-1024) and over 50 languages. Suitable for semantic search, recommendation systems, and text analysis."
+---
+
 # qwen-text-embedding-v3
 
 {% columns %}

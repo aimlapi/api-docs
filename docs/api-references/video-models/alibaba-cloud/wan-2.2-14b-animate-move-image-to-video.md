@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-14b-animate-move. Generate animated videos from video and image using Alibaba WAN-2.2-14B move model."
+---
+
 # Wan 2.2 14B Animate Move
 
 {% columns %}

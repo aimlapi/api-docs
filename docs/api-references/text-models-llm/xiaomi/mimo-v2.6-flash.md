@@ -1,3 +1,7 @@
+---
+description: "Model id: xiaomi/mimo-v2.6-flash. MiMo-V2.6-Flash — an open-source omnimodal foundation model by Xiaomi built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token."
+---
+
 # Mimo V2.6 Flash
 
 {% columns %}

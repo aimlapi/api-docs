@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3-32b. Alibaba's Qwen 3 32B is a multilingual model with instruction-following capabilities and enhanced reasoning."
+---
+
 # Qwen3 32B
 
 {% columns %}

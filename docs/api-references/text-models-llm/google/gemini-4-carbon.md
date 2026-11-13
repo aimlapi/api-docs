@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-4-carbon. Gemini 4 Carbon is a frontier Gemini 4 model from Google for coding, agentic and complex reasoning work, with text, image, audio, video and file input."
+---
+
 # Gemini 4 Carbon
 
 {% columns %}

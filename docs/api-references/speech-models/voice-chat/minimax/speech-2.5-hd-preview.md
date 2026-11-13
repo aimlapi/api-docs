@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/speech-2.5-hd-preview. The brand new HD model. Ultimate Similarity, Ultra-High Quality - supports synchronous text-to-speech audio generation with superior rhythm and stability."
+---
+
 # Speech 2.5 HD Preview
 
 {% columns %}

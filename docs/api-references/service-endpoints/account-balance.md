@@ -1,3 +1,7 @@
+---
+description: "GET /v2/billing returns the account balance in USD; /v2/billing/detail and /v2/billing/transactions add settings and history. Header: Authorization: Bearer <AIMLAPI_KEY>."
+---
+
 # Account Balance
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="220" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="account-balance.md#get-balance-info">Get balance info</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v2/billing</code></td></tr><tr><td valign="top"><a href="account-balance.md#get-detailed-billing-info">Get detailed billing info</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v2/billing/detail</code></td></tr><tr><td valign="top"><a href="account-balance.md#get-account-transactions">Get account transactions</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v2/billing/transactions</code></td></tr><tr><td valign="top"><a href="account-balance.md#get-account-balance-info">Get account balance info</a> <em>(legacy)</em></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v1/billing/balance</code></td></tr></tbody></table>

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-27b. Qwen3.8 27B is an open-weight dense vision-language model from Qwen."
+---
+
 # Qwen3.8 27B
 
 {% columns %}

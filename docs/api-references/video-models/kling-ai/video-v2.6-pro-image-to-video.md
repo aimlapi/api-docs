@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v2-6-pro-image-to-video. Kling 2.6 Pro image-to-video delivers next-generation video quality from images with advanced motion control."
+---
+
 # Kling 2.6 Pro Image to Video
 
 {% columns %}

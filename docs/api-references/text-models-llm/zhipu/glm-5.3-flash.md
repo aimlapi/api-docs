@@ -1,3 +1,7 @@
+---
+description: "Model id: z-ai/glm-5.3-flash. GLM-5.3 Flash is the low-cost, high-throughput variant of Zhipu AI GLM-5.3, with a 1M-token context window and text, image and video understanding."
+---
+
 # Glm 5.3 Flash
 
 {% columns %}

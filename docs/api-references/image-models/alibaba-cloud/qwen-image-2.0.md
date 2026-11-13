@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen-image-2-0. API reference for qwen-image-2.0: request schema and code examples."
+---
+
 # qwen-image-2.0
 
 {% columns %}

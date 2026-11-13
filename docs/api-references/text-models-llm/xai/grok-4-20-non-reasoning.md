@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-20-0309-non-reasoning. Grok 4.20 Non-Reasoning — a general-purpose language model optimized for standard text generation and conversational tasks, without extended reasoning capabilities."
+---
+
 # Grok 4.20 Non-Reasoning
 
 {% columns %}

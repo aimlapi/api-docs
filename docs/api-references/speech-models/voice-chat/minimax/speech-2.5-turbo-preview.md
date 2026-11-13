@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/speech-2.5-turbo-preview. The brand new Turbo model. Ultimate Value, 40 Languages - supports synchronous text-to-speech audio generation with 100+ existing voices and multiple audio specifications."
+---
+
 # Speech 2.5 Turbo Preview
 
 {% columns %}

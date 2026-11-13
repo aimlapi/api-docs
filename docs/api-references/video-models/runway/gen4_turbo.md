@@ -1,3 +1,7 @@
+---
+description: "Model id: runway/gen4_turbo. Runway Gen-4 Turbo generates high-quality videos from images and text with fast processing and improved motion consistency."
+---
+
 # Gen 4 Turbo
 
 {% columns %}

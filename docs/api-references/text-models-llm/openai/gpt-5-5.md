@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-5. API reference for gpt-5-5: request schema and code examples."
+---
+
 # gpt-5-5
 
 {% columns %}

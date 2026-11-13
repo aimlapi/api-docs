@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.2-codex. GPT-5.2 Codex is a coding-specialized model from the GPT-5.2 series for advanced code generation."
+---
+
 # gpt-5.2-codex
 
 {% columns %}

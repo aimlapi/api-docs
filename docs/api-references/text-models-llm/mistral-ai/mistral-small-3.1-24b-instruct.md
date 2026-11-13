@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/mistral-small-3.1-24b-instruct. API reference for Small 3.1 24B: request schema and code examples."
+---
+
 # Small 3.1 24B
 
 {% columns %}

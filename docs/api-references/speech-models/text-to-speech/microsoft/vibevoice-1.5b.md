@@ -1,3 +1,7 @@
+---
+description: "Model id: microsoft/vibevoice-1.5b. VibeVoice 1.5B is an efficient text-to-speech model that supports multi-speaker dialogue generation with natural-sounding voices."
+---
+
 # vibevoice-1.5b
 
 {% columns %}

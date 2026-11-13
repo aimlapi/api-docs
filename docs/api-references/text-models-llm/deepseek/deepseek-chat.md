@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek-chat. The floating `deepseek-chat` id."
+---
+
 # DeepSeek V3
 
 {% columns %}

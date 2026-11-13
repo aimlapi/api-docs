@@ -1,3 +1,7 @@
+---
+description: "Model id: kling-video/v4/image-to-video. Kling 4.0 image-to-video animates a first frame, optionally toward a last frame, into 3-30 second videos at 720p or 1080p."
+---
+
 # Kling 4.0 Image to Video
 
 {% columns %}

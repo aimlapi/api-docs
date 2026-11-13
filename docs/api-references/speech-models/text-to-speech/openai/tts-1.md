@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/tts-1. TTS-1 is a real-time text-to-speech model optimized for speed. Provides lower latency but at a lower quality than TTS-1 HD."
+---
+
 # TTS-1
 
 {% columns %}

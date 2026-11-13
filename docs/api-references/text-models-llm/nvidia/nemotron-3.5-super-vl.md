@@ -1,3 +1,7 @@
+---
+description: "Model id: nvidia/nemotron-3.5-super-vl. NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model with 12B active parameters out of 120B total."
+---
+
 # Nemotron 3.5 Super Vl
 hidden: true
 noIndex: true

@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seed-1-8. ByteDance Seed 1.8 is a large language model with a 256K context window optimized for long-context reasoning and generation."
+---
+
 # Seed 1.8
 
 {% columns %}

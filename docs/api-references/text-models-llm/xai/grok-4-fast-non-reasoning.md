@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-fast-non-reasoning. Grok 4 Fast without reasoning for faster responses and lower latency."
+---
+
 # Grok 4 Fast Non-Reasoning
 
 {% columns %}

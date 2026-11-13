@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-latest. API reference for Claude Opus Latest: request schema and code examples."
+---
+
 # Claude Opus Latest
 
 {% columns %}

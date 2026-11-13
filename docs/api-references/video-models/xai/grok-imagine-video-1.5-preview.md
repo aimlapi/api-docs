@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-imagine-video-1.5-preview. Grok Imagine Video 1.5 Preview is an image-to-video generation model by xAI for transforming images into animated video sequences, suited for social content, visual concepts and motion generation."
+---
+
 # grok-imagine-video-1.5-preview
 
 {% columns %}

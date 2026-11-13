@@ -1,5 +1,5 @@
 ---
-description: Temporarily unavailable
+description: "Model id: alibaba/wan2.2-i2v-plus. Wan 2.2 Plus Image-to-Video generates high-quality videos from input images with improved stability."
 hidden: true
 noIndex: true
 ---

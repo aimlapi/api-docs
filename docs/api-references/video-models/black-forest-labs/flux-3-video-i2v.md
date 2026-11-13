@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-3-video-i2v. FLUX 3 Video — an image-to-video model by Black Forest Labs that animates one keyframe or interpolates between a first and a last frame."
+---
+
 # FLUX 3 Video Image to Video
 
 {% columns %}

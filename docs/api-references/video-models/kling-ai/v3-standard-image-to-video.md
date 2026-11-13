@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-standard-image-to-video. Kling 3.0 Standard image-to-video animates images into smooth, high-quality videos with improved temporal consistency."
+---
+
 # Kling 3.0 Standard Image to Video
 
 {% columns %}

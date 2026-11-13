@@ -1,3 +1,7 @@
+---
+description: "Model id: magic/image-to-video. Magic Inc image-to-video model animates still images into smooth, coherent videos."
+---
+
 # Magic Image to Video
 
 {% columns %}

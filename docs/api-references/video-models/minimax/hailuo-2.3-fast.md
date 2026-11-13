@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/hailuo-2.3-fast. Hailuo 2.3 Fast is a speed-optimized variant of Hailuo 2.3 for rapid video generation workflows."
+---
+
 # Hailuo 2.3 Fast
 
 {% columns %}

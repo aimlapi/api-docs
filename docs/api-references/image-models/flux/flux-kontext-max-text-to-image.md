@@ -1,3 +1,7 @@
+---
+description: "Model id: flux/kontext-max/text-to-image. FLUX.1 Kontext Max is the highest-capability Kontext model for complex text-to-image tasks with maximum fidelity."
+---
+
 # flux/kontext-max/text-to-image
 
 {% columns %}

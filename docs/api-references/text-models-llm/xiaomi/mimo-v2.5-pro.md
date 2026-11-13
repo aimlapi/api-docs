@@ -1,3 +1,7 @@
+---
+description: "Model id: xiaomi/mimo-v2.5-pro. MiMo-V2.5-Pro — a flagship reasoning model by Xiaomi designed for complex agentic workflows, long-horizon tasks, and advanced software engineering scenarios with a 1M token context window."
+---
+
 # MiMo V2.5 Pro
 
 {% columns %}

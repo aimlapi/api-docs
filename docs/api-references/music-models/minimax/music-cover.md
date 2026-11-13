@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/music-cover. MiniMax Music Cover — an audio-to-audio music generation model that creates cover versions from reference audio. Supports style transformation while preserving the original structure and melody."
+---
+
 # MiniMax Music Cover
 
 {% columns %}

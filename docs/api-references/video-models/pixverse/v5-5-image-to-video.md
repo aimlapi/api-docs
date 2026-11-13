@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/v5-5-image-to-video. Generate high-quality videos from images using PixVerse v5.5 with audio-visual synchronization and multi-shot camera control."
+---
+
 # v5.5/image-to-video
 
 {% columns %}

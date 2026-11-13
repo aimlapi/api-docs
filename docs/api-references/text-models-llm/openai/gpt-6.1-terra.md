@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-6.1-terra. Fast, efficient GPT-6.1 model from OpenAI for visual reasoning, computer use and natural writing, with text and image input over a 1.05M-token context. Tool calling uses the Responses API."
+---
+
 # GPT-6.1 Terra
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-flash-preview. Gemini 3 Flash Preview is a fast, efficient variant of Gemini 3 designed for low-latency multimodal applications."
+---
+
 # Gemini 3 Flash Preview
 
 {% columns %}

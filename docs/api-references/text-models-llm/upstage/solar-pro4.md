@@ -1,3 +1,7 @@
+---
+description: "Model id: upstage/solar-pro4. Solar Pro 4 is a large language model from Upstage. It is suited for agentic workflows, office productivity, document-intensive work, and coding."
+---
+
 # Solar Pro 4
 
 {% columns %}

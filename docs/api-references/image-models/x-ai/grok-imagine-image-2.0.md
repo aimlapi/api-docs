@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-imagine-image-2.0. Grok Imagine Image 2.0 is the second generation of the xAI image model, for image generation and editing."
+---
+
 # Grok Imagine Image 2.0
 
 {% columns %}

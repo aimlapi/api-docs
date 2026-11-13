@@ -1,3 +1,7 @@
+---
+description: "Model id: google/veo-3-1-lite-generate-preview. API reference for Veo 3.1 Lite Generate Preview: request schema and code examples."
+---
+
 # Veo 3.1 Lite Generate Preview
 
 {% columns %}

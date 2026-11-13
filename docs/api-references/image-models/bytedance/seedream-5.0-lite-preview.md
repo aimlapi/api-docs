@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/seedream-5-0-lite-preview. Seedream 5.0 Lite Preview is a text-to-image model by ByteDance optimized for fast image generation with API-friendly workflows."
+---
+
 # Seedream 5.0 Lite Preview
 
 {% columns %}

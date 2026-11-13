@@ -1,3 +1,7 @@
+---
+description: "Model id: text-embedding-3-small. OpenAI's efficient text embedding model for semantic search and similarity tasks at lower cost."
+---
+
 # Text Embedding 3 Small
 
 {% columns %}

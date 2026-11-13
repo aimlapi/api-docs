@@ -1,3 +1,7 @@
+---
+description: "Model id: google/nano-banana-edit. API reference for Nano Banana Edit: request schema and code examples."
+---
+
 # Nano Banana Edit
 
 {% columns %}

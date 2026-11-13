@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-6-sol. GPT-6 model from OpenAI built for complex coding and agentic workflows: text and image input over a 1.05M-token context, with reasoning, function calling and the Responses server tools."
+---
+
 # Gpt 6 Sol
 
 {% columns %}

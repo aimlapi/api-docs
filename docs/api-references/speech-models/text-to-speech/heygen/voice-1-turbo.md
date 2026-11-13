@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/voice-1-turbo. HeyGen Voice 1 Turbo is the faster, cheaper HeyGen speech model: text to a WAV file with HeyGen public voices. Does not support tools/function calling."
+---
+
 # HeyGen Voice 1 Turbo
 
 {% columns %}

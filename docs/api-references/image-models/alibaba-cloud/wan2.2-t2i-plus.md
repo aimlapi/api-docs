@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-t2i-plus. Wan 2.2 Professional Edition text-to-image model with improved stability and success rate compared to the 2.1 model."
+---
+
 # Wan 2.2 Plus
 
 {% columns %}

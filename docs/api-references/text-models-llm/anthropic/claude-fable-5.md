@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-fable-5. Claude Fable 5 is Anthropic's model designed for complex reasoning and agentic coding workflows."
+---
+
 # Claude Fable 5
 
 {% columns %}

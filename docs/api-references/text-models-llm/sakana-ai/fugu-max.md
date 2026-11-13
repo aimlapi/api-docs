@@ -1,3 +1,7 @@
+---
+description: "Model id: sakana/fugu-max. Fugu Max is the cost-performance model in Sakana AI's Fugu family."
+---
+
 # Fugu Max
 
 {% columns %}

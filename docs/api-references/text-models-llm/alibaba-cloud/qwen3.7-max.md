@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.7-max. Qwen3.7-Max is Alibaba’s flagship reasoning and agentic LLM optimized for coding, productivity, long-context understanding and autonomous workflows. Text input and text output only."
+---
+
 # Qwen3.7 Max
 
 {% columns %}

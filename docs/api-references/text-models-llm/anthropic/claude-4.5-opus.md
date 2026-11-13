@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-4-5. Claude 4.5 Opus is Anthropic's flagship model for the most demanding reasoning and analysis tasks."
+---
+
 # Claude 4.5 Opus
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: z-ai/glm-5.3-flashx. GLM-5.3 FlashX is the high-speed variant of Zhipu AI GLM-5.3 Flash, a native multimodal model reaching up to 200 tokens/s on the same hybrid sparse and linear attention architecture, with a 1M-token…"
+---
+
 # Glm 5.3 Flashx
 
 {% columns %}

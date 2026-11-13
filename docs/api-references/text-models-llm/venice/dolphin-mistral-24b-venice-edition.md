@@ -1,3 +1,7 @@
+---
+description: "Model id: cognitivecomputations/dolphin-mistral-24b-venice-edition. Venice Uncensored (Dolphin Mistral 24B Venice Edition) is an uncensored, instruction-tuned chat model built on Mistral Small 24B by Cognitive Computations in partnership with Venice.ai."
+---
+
 # Venice Uncensored
 
 {% columns %}

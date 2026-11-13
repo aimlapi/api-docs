@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-4.5. Advanced version of GLM-4.5 with enhanced capabilities and web search integration"
+---
+
 # GLM 4.5
 
 {% columns %}

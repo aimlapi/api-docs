@@ -1,3 +1,7 @@
+---
+description: "GET /v2/logs returns one row per request with cost, tokens, status and ids for tracing."
+---
+
 # Usage Logs
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="220" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="usage-logs.md#get-request-logs">Get request logs</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v2/logs</code></td></tr></tbody></table>

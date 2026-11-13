@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen-image-3. Qwen Image 3 text-to-image model with strong Chinese and English text rendering and automatic prompt expansion."
+---
+
 # Qwen Image 3
 
 {% columns %}

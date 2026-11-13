@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshot/kimi-k2-7-code. Agentic coding model from Moonshot with extended reasoning and tool use."
+---
+
 # Kimi K2.7 Code
 
 {% columns %}

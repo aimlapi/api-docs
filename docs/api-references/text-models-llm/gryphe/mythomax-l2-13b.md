@@ -1,3 +1,7 @@
+---
+description: "Model id: gryphe/mythomax-l2-13b. One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay."
+---
+
 # MythoMax 13B
 
 {% columns %}

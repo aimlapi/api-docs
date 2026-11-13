@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.5-flash. Qwen Max: powerful AI, excels in stability, competes globally."
+---
+
 # Qwen3.5 Flash
 
 {% columns %}

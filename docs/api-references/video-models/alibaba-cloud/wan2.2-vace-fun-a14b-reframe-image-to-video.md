@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-vace-fun-a14b-reframe. Generate reframed videos using Alibaba WAN-2.2-VACE model."
+---
+
 # Wan 2.2 Vace Reframe
 
 {% columns %}

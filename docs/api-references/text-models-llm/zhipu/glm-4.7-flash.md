@@ -1,3 +1,7 @@
+---
+description: "Model id: z-ai/glm-4.7-flash. API reference for Glm 4.7 Flash: request schema and code examples."
+---
+
 # Glm 4.7 Flash
 
 {% columns %}

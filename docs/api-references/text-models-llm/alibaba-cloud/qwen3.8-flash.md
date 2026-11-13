@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.8-flash. Qwen3.8-Flash is the speed- and cost-optimized tier of the Qwen3.8 family, pairing hybrid thinking with high throughput for coding assistance, agentic workflows and visual understanding."
+---
+
 # Qwen3.8 Flash
 
 {% columns %}

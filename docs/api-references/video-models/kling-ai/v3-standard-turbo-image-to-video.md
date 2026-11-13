@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-v3-standard-turbo-image-to-video. Kling 3.0 Turbo Standard image-to-video animates first and last frame reference images into fast, cost-efficient 720p videos with native audio."
+---
+
 # Kling 3.0 Standard Turbo Image to Video
 
 {% columns %}

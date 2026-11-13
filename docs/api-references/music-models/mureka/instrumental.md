@@ -1,3 +1,7 @@
+---
+description: "Model id: mureka/v9.5/instrumental. Mureka V9.5 Instrumental generates instrumental tracks without vocals from a text description or a reference track. The result lists the tracks in songs[], each with a song_id."
+---
+
 # Mureka V9.5 Instrumental
 
 ## Model Overview

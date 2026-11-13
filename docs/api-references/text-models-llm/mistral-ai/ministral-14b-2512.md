@@ -1,3 +1,7 @@
+---
+description: "Model id: mistralai/ministral-14b-2512. API reference for Ministral 3 14B 2512: request schema and code examples."
+---
+
 # Ministral 3 14B 2512
 
 {% columns %}

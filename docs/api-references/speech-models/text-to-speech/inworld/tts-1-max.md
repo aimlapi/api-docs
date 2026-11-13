@@ -1,3 +1,7 @@
+---
+description: "Model id: inworld/tts-1-max. Premium text-to-speech model with ultra-realistic speech generation"
+---
+
 # Inworld TTS 1 Max
 
 {% columns %}

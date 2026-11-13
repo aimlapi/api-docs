@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/speech-2.6-turbo. MiniMax Speech 2.6 Turbo is a low-latency text-to-speech model for real-time voice applications across 40 languages."
+---
+
 # Speech 2.6 Turbo
 
 {% columns %}

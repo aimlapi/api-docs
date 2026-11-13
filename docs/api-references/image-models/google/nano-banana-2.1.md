@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-nano-banana-2.1. Nano Banana 2.1 is an update to Nano Banana 2 (Gemini 3.1 Flash Image) for fast image generation and conversational editing, with improved visual quality, text rendering, multi-turn consistency and…"
+---
+
 # Nano Banana 2.1
 
 {% columns %}

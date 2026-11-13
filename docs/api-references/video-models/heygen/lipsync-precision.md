@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/lipsync-precision. HeyGen Lipsync (precision mode) re-voices a video with higher-accuracy lip movement driven by avatar inference. Does not support tools/function calling."
+---
+
 # HeyGen Lipsync Precision
 
 {% columns %}

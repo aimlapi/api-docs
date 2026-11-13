@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/avatar-pro. Kling Avatar creates dynamic videos from avatar reference images with audio synchronization using professional mode for higher quality and longer duration."
+---
+
 # Kling Avatar Professional
 
 {% columns %}

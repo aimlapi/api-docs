@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-2025-08-07. GPT-5 is OpenAI's most advanced language model with a 400K token context window and superior reasoning capabilities."
+---
+
 # GPT-5
 
 {% columns %}

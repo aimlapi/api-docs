@@ -1,3 +1,7 @@
+---
+description: "Model id: pixverse/v6-max/text-to-video. Generate 1 to 15 second videos from text prompts with PixVerse V6 Max, at up to 1080p, with optional native audio."
+---
+
 # Pixverse V6 Max Text to Video
 
 {% columns %}

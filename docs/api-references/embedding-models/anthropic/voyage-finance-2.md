@@ -1,3 +1,7 @@
+---
+description: "Model id: voyage-finance-2. Voyage Finance 2 is a domain-specific embedding model optimized for financial text retrieval and semantic search."
+---
+
 # Voyage Finance 2
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-7. Grok 4.7 is the flagship large language model by xAI for text generation, coding and reasoning tasks, with a 500K token context window and prompt caching support."
+---
+
 # Grok 4.7
 
 {% columns %}

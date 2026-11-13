@@ -1,3 +1,7 @@
+---
+description: "Model id: google/veo-3.1-first-last-image-to-video. API reference for Veo 3.1 (First-Last-Image-to-Video): request schema and code examples."
+---
+
 # Veo 3.1 (First-Last-Image-to-Video)
 
 {% columns %}

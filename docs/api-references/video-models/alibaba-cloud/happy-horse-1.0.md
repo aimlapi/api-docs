@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/happyhorse-1-0. API reference for Happy Horse 1.0: request schema and code examples."
+---
+
 # Happy Horse 1.0
 
 {% columns %}

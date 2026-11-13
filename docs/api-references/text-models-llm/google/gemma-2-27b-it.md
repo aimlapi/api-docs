@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemma-2-27b-it. API reference for Gemma 2 27B: request schema and code examples."
+---
+
 # Gemma 2 27B
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: flux-realism. FLUX Realism LoRA generates photorealistic images from text prompts, enhancing creative possibilities."
+---
+
 # Flux Realism
 
 {% columns %}

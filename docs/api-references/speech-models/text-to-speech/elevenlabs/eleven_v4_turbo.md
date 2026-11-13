@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/eleven_v4_turbo. ElevenLabs v4 Turbo is the low-latency variant of Eleven v4: the same expressive voices and audio tags in 90+ languages, tuned for real-time use."
+---
+
 # Eleven v4 Turbo
 
 {% columns %}

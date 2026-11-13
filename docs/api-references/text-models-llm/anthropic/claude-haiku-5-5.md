@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-haiku-5-5. Claude Haiku 5.5 is Anthropic's fastest model for high-volume, latency-sensitive work such as classification, extraction and routing, succeeding Claude Haiku 4.5."
+---
+
 # Claude Haiku 5.5
 
 {% columns %}

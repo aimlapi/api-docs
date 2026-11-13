@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-5.3. GLM-5.3 is Zhipu AI flagship MoE LLM with a 1M-token context window, built for advanced text generation and deep reasoning."
+---
+
 # Glm 5.3
 
 {% columns %}

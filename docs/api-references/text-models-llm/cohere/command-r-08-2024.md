@@ -1,3 +1,7 @@
+---
+description: "Model id: cohere/command-r-08-2024. API reference for Command R 08 2024 08.2024: request schema and code examples."
+---
+
 # Command R 08 2024 08.2024
 
 {% columns %}

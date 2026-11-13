@@ -1,3 +1,7 @@
+---
+description: "Model id: meta/muse-spark-open. Muse Spark Open is a coding-optimized open-weight model from Meta, trained for agentic coding workflows with reliable tool calling and deep codebase understanding."
+---
+
 # Muse Spark Open
 
 {% columns %}

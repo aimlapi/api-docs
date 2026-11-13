@@ -1,3 +1,7 @@
+---
+description: "Model id: magic/video-to-video. Magic Inc video-to-video model transforms and enhances existing videos using AI-driven style and motion editing."
+---
+
 # Magic Video to Video
 
 {% columns %}

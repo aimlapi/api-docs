@@ -1,3 +1,7 @@
+---
+description: "Model id: luma/uni-1-max. Luma Uni-1 Max is the higher-quality image generation and editing variant of Uni-1 with the same parameters."
+---
+
 # Luma Uni-1 Max
 
 {% columns %}

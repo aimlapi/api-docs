@@ -1,3 +1,7 @@
+---
+description: "Model id: zhipu/glm-4.5-air. Lightweight version of GLM-4.5 for cost-effective applications"
+---
+
 # GLM 4.5 Air
 
 {% columns %}

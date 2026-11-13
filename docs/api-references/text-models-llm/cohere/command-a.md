@@ -1,3 +1,7 @@
+---
+description: "Model id: cohere/command-a. Command A is a powerful LLM with advanced capabilities for enterprise applications."
+---
+
 # Command A
 
 {% columns %}

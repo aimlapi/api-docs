@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemma-4-26b-a4b-it-maas. Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts open model from Google."
+---
+
 # Gemma 4 26B A4B IT
 
 {% columns %}

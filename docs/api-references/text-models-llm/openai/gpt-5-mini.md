@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-mini-2025-08-07. GPT-5 mini delivers GPT-5 capabilities in a smaller, faster package optimized for cost-sensitive applications."
+---
+
 # GPT-5 Mini
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance/omnihuman/v1.5. OmniHuman v1.5 generates realistic videos of human figures with improved motion naturalness and facial accuracy."
+---
+
 # OmniHuman v1.5
 
 {% columns %}

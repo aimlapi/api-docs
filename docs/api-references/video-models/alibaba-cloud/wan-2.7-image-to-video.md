@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-7-i2v. Wan 2.7 I2V — an image-to-video model by Alibaba Cloud that generates videos from input images. It supports first-frame, first-and-last-frame, and continuation workflows."
+---
+
 # Wan 2.7 (Image-to-Video)
 
 {% columns %}

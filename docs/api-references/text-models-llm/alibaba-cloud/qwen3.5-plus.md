@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3.5-plus-20260218. Qwen3.5-Plus is a commercial large language model by Alibaba Cloud designed for long-context text generation and enterprise-grade conversational AI."
+---
+
 # qwen3.5-plus
 
 {% columns %}

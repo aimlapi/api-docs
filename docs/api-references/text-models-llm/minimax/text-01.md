@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/MiniMax-Text-01. MiniMax-Text-01 excels in long-context processing with advanced features like hybrid attention mechanisms and open-source accessibility."
+---
+
 # text-01
 
 {% columns %}

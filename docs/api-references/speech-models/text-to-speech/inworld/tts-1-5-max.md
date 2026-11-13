@@ -1,3 +1,7 @@
+---
+description: "Model id: inworld/tts-1-5-max. Text-to-speech model focused on maximum voice stability and expressiveness, suitable for high-quality production and narrative use cases."
+---
+
 # Inworld TTS 1.5 Max
 
 {% columns %}

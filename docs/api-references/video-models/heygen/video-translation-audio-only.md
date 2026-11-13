@@ -1,3 +1,7 @@
+---
+description: "Model id: heygen/video-translation-audio-only. HeyGen Video Translation (audio only) dubs a video into another language and keeps the original picture, without lip sync. Does not support tools/function calling."
+---
+
 # HeyGen Video Translation Audio Only
 
 {% columns %}

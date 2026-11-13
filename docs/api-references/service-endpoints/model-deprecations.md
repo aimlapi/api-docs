@@ -1,3 +1,7 @@
+---
+description: "GET /v1/models/deprecations, no key needed: models that are retiring, withdrawn (404) or folded into another id, with dates and the replacement id."
+---
+
 # Model Deprecations
 
 <table data-header-hidden data-full-width="true"><thead><tr><th width="220" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><a href="model-deprecations.md#get-the-deprecation-feed">Get the deprecation feed</a></td><td valign="top"><mark style="color:$success;"><strong><code>GET</code></strong></mark> <code>https://api.aimlapi.com/v1/models/deprecations</code></td></tr></tbody></table>

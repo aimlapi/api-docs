@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-4.1-2025-04-14. GPT-4.1 is OpenAI's large-context language model with up to 1M token input and improved instruction following."
+---
+
 # GPT-4.1
 
 {% columns %}

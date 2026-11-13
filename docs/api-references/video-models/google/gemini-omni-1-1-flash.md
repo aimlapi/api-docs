@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-omni-1.1-flash. Gemini Omni 1.1 Flash is the generally available release of Google's conversational video generation and editing model, adding video extension, first/last frame interpolation and 360p-4K output…"
+---
+
 # Gemini Omni 1.1 Flash
 
 {% columns %}

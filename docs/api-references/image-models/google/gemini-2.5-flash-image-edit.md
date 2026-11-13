@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-2.5-flash-image-edit. Gemini 2.5 Flash Image Edit enables text-guided image editing powered by Google's Gemini 2.5 Flash model."
+---
+
 # Gemini 2.5 Flash Image Edit
 
 {% columns %}

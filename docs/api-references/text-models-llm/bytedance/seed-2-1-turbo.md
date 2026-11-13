@@ -1,3 +1,7 @@
+---
+description: "Model id: bytedance-seed/seed-2-1-turbo. ByteDance Seed 2.1 Turbo is a multimodal model for coding and long-horizon agent workflows, accepting text, image and video input across a 256K context window."
+---
+
 # Seed 2.1 Turbo
 
 {% columns %}

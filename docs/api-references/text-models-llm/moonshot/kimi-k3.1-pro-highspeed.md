@@ -1,3 +1,7 @@
+---
+description: "Model id: moonshot/kimi-k3-1-pro-highspeed. High-speed variant of Kimi K3.1 Pro from Moonshot AI, with multimodal reasoning, agentic tool use, and a 1M-token context window."
+---
+
 # Kimi K3.1 Pro Highspeed
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-8-flash. Gemini 3.8 Flash is Google’s most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents and complex enterprise workflows, at Flash speed and cost efficiency."
+---
+
 # Gemini 3.8 Flash
 
 {% columns %}

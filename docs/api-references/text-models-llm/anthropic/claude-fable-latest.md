@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-fable-latest. API reference for Claude Fable Latest: request schema and code examples."
+---
+
 # Claude Fable Latest
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-3.5-turbo-16k. Fast and cost-efficient OpenAI model for a wide range of text generation and conversation tasks."
+---
+
 # GPT-3.5 Turbo
 
 {% columns %}

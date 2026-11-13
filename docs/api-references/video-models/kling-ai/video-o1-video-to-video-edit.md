@@ -1,3 +1,7 @@
+---
+description: "Model id: klingai/video-o1-video-to-video-edit. Kling Video O1 Video-to-Video Edit applies AI-driven edits to existing videos with reasoning-enhanced accuracy."
+---
+
 # Kling Video O1 Video to Video Edit
 
 {% columns %}

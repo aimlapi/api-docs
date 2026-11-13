@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-3-7-flash. Gemini 3.7 Flash is the high-efficiency Flash model of the Gemini 3 family, with Pro-level agentic capabilities, stronger code generation and terminal execution, and high token efficiency for…"
+---
+
 # Gemini 3.7 Flash
 
 {% columns %}

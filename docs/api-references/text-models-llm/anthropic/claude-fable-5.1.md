@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-fable-5-1. Claude Fable 5.1 is Anthropic's most capable model for demanding reasoning and long-horizon agentic work."
+---
+
 # Claude Fable 5.1
 
 {% columns %}

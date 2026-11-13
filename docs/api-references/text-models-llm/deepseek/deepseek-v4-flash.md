@@ -1,3 +1,7 @@
+---
+description: "Model id: deepseek/deepseek-v4-flash. DeepSeek V4 Flash and Pro are large language models for chat and reasoning tasks with up to 1M context length."
+---
+
 # DeepSeek V4 Flash
 
 {% columns %}

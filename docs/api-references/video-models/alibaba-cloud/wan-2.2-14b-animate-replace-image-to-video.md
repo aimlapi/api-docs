@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan2.2-14b-animate-replace. Generate animated videos from video and image using Alibaba WAN-2.2-14B replace model."
+---
+
 # Wan 2.2 14B Animate Replace
 
 {% columns %}

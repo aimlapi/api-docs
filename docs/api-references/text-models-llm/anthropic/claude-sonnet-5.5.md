@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-sonnet-5-5. Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade."
+---
+
 # Claude Sonnet 5.5
 
 {% columns %}

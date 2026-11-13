@@ -1,3 +1,7 @@
+---
+description: "Model id: gpt-4o. Multimodal AI model by OpenAI enhancing human-computer interaction."
+---
+
 # GPT-4o
 
 {% hint style="warning" %}

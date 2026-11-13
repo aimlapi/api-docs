@@ -1,3 +1,7 @@
+---
+description: "Model id: anthropic/claude-opus-5-5. Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5."
+---
+
 # Claude Opus 5.5
 
 {% columns %}

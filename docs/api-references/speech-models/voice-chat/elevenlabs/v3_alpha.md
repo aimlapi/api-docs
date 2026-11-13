@@ -1,3 +1,7 @@
+---
+description: "Model id: elevenlabs/v3_alpha. ElevenLabs v3 Alpha is an experimental next-generation TTS model with enhanced expressiveness and voice quality."
+---
+
 # Eleven v3 Alpha
 
 {% columns %}

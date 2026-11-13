@@ -1,3 +1,7 @@
+---
+description: "Model id: minimax/m2-her. API reference for MiniMax M2-her: request schema and code examples."
+---
+
 # MiniMax M2-her
 
 {% columns %}

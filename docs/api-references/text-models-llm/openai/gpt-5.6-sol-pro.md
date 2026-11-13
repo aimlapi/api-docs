@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5.6-sol-pro. API reference for GPT 5.6 Sol Pro: request schema and code examples."
+---
+
 # GPT 5.6 Sol Pro
 
 {% columns %}

@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/wan-2-7-r2v. Wan 2.7 R2V — a reference-to-video model by Alibaba Cloud that generates videos using reference images or videos. It enables character, motion, and style transfer."
+---
+
 # Wan 2.7 (Reference-to-Video)
 
 {% columns %}

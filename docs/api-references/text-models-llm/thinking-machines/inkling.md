@@ -1,3 +1,7 @@
+---
+description: "Model id: thinkingmachines/inkling. Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total."
+---
+
 # Inkling
 
 {% columns %}

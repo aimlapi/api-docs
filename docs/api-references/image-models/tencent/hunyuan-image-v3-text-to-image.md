@@ -1,3 +1,7 @@
+---
+description: "Model id: hunyuan/hunyuan-image-v3-text-to-image. Hunyuan Image V3 is an advanced text-to-image model that generates high-quality images from text prompts."
+---
+
 # Hunyuan Image v3
 
 {% columns %}

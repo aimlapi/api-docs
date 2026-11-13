@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-live-1. API reference for GPT-Live: request schema and code examples."
+---
+
 # GPT-Live
 
 {% columns %}

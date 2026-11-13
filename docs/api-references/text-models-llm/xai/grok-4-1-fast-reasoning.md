@@ -1,3 +1,7 @@
+---
+description: "Model id: x-ai/grok-4-1-fast-reasoning. Grok 4.1 Fast is a frontier multimodal model optimized for high-performance agentic tool calling with advanced reasoning capabilities."
+---
+
 # Grok 4.1 Fast Reasoning
 
 {% columns %}

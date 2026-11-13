@@ -1,3 +1,7 @@
+---
+description: "Model id: alibaba/qwen3-235b-a22b-thinking-2507. Alibaba's Qwen 3 thinking 2507 is a multilingual reasoning model with knowledge augmentation, and creative capabilities."
+---
+
 # Qwen3 Next 80B A3B Thinking
 
 {% columns %}

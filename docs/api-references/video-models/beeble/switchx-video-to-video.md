@@ -1,3 +1,7 @@
+---
+description: "Model id: beeble/switchx-video-to-video. SwitchX is a video-to-video compositing model by Beeble that replaces a scene element while preserving the original subject, with automatic subject detection and seamless relighting to match a…"
+---
+
 # Switchx Video To Video
 
 {% columns %}

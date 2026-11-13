@@ -1,4 +1,5 @@
 ---
+description: "Model id: klingai/video-v3-standard-turbo-text-to-video. Kling 3.0 Turbo Standard text-to-video turns prompts into fast, cost-efficient 720p videos with native audio."
 layout:
   width: wide
   title:

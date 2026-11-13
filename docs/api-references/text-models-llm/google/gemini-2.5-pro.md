@@ -1,3 +1,7 @@
+---
+description: "Model id: google/gemini-2.5-pro. Gemini Pro 2.5 is Google's most advanced reasoning AI model designed for complex tasks, showcasing strong reasoning and coding capabilities."
+---
+
 # Gemini 2.5 Pro
 
 {% columns %}

@@ -1,7 +1,5 @@
 ---
-description: >-
-  A description of the software development kits (SDKs) that can be used to
-  interact with the AIML API.
+description: "Use the OpenAI SDK (Python, JavaScript) and other SDKs with AI/ML API by setting base_url to https://api.aimlapi.com/v1."
 icon: hammer-brush
 ---
 

@@ -1,3 +1,7 @@
+---
+description: "Model id: openai/gpt-5-4-pro. API reference for GPT 5.4 Pro (Responses API): request schema and code examples."
+---
+
 # GPT 5.4 Pro (Responses API)
 
 {% columns %}

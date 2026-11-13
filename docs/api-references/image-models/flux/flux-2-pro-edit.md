@@ -1,3 +1,7 @@
+---
+description: "Model id: blackforestlabs/flux-2-pro-edit. FLUX 2 Pro Edit provides professional-grade image editing with precise text-guided control."
+---
+
 # flux-2-pro-edit
 
 {% columns %}
