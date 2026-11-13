@@ -16,7 +16,7 @@ Supported capabilities:
 * **Text completions:** Build advanced chat bots or text processors.
 * **Function Calling:** Utilize tools for specific tasks and API calling.
 * **Stream mode:** Get the text chat model responses as they are generated, rather than waiting for the entire response to be completed.
-* **Batch Processing:** Send multiple independent requests in a single API call.
+* **Batch Processing:** Send many independent requests as one batch, at a lower price.
 * **Vision Tasks:** Process and analyze images.
 
 ## Text Completions
@@ -196,7 +196,7 @@ payload = {
 
 ## **Batch Processing**
 
-Due to the complexity of its description, this capability has been placed on [a separate page](../../../capabilities/batch-processing.md).
+Batches are described on [a separate page](../../../capabilities/batch-processing.md). Claude models run in the file-based Batch API, the same as models of other providers; the older inline format of `/v1/batches` is available for Claude models only.
 
 ***
 

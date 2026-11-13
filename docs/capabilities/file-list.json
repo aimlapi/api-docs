@@ -1,0 +1,193 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/files": {
+      "get": {
+        "x-codeSamples": [],
+        "operationId": "_v1_files_list",
+        "parameters": [
+          {
+            "name": "purpose",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "batch",
+                "batch_output"
+              ]
+            },
+            "description": "Only files of this purpose. Without it, both purposes are listed."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20
+            },
+            "description": "Number of files per page."
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The `last_id` of the previous page."
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc"
+              ],
+              "default": "desc"
+            },
+            "description": "Newest first. `asc` is not supported."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "File": {
+        "type": "object",
+        "description": "A file of the Batch API.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "File ID.",
+            "example": "file-3f2b8c1e-7a4d-4e0b-9c55-1d2e3f4a5b6c"
+          },
+          "object": {
+            "type": "string",
+            "enum": [
+              "file"
+            ],
+            "description": "Always `file`."
+          },
+          "bytes": {
+            "type": "integer",
+            "description": "Size of the file in bytes.",
+            "example": 1874
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "Unix time (seconds) when the file was created.",
+            "example": 1794585600
+          },
+          "expires_at": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Unix time (seconds) when the file is deleted. Result files (`batch_output`) expire 30 days after they are created; `null` when the file has no expiry.",
+            "example": null
+          },
+          "filename": {
+            "type": "string",
+            "description": "File name.",
+            "example": "requests.jsonl"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "batch",
+              "batch_output"
+            ],
+            "description": "`batch` for an input file you uploaded, `batch_output` for an output or error file of a batch."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "processed"
+            ],
+            "description": "Deprecated OpenAI field. Always `processed`."
+          },
+          "status_details": {
+            "nullable": true,
+            "description": "Deprecated OpenAI field. Always `null`.",
+            "example": null
+          }
+        },
+        "required": [
+          "id",
+          "object",
+          "bytes",
+          "created_at",
+          "expires_at",
+          "filename",
+          "purpose",
+          "status",
+          "status_details"
+        ]
+      },
+      "FileList": {
+        "type": "object",
+        "properties": {
+          "object": {
+            "type": "string",
+            "enum": [
+              "list"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/File"
+            }
+          },
+          "first_id": {
+            "type": "string",
+            "nullable": true,
+            "description": "ID of the first file on this page."
+          },
+          "last_id": {
+            "type": "string",
+            "nullable": true,
+            "description": "ID of the last file on this page. Pass it as `after` to get the next page."
+          },
+          "has_more": {
+            "type": "boolean",
+            "description": "Whether there are more files after this page."
+          }
+        },
+        "required": [
+          "object",
+          "data",
+          "first_id",
+          "last_id",
+          "has_more"
+        ]
+      }
+    }
+  }
+}

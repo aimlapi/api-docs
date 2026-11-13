@@ -940,6 +940,7 @@
 * [Vision in Text Models](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
 * [Batch Processing](capabilities/batch-processing.md)
+* [Webhooks](capabilities/webhooks.md)
 * [Request Tracing and Cost Headers](capabilities/request-tracing-and-cost.md)
 * [Sandbox Mode](capabilities/sandbox-mode.md)
 * [Safety Guidance](capabilities/safety-guidance.md)
