@@ -61,7 +61,7 @@ If the video generation task status is `completed`, the response will include th
 
 <summary>How it works</summary>
 
-As the character reference, we will use a scan of a famous Leonardo da Vinci painting. For the motion reference, we will use a video of a cheerful woman dancing, generated with the [kling-video/v1.6/pro/text-to-video](../kling-ai/v1.6-pro-text-to-video.md) model.
+As the character reference, we will use a scan of a famous Leonardo da Vinci painting. For the motion reference, we will use a video of a cheerful woman dancing, generated with the kling-video/v1.6/pro/text-to-video model.
 
 | Character reference image                                                                                       | Motion reference video                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

@@ -14,7 +14,7 @@ Follow the steps and screenshots below.
 * **Provider:** OpenAI Compatible (inside Kilo Code)
 * **Base URL:** `https://api.aimlapi.com/v1`
 * **API Key:** from your AI/ML API dashboard
-* **Recommended Model IDs:** [openai/gpt-5-chat-latest](../api-references/text-models-llm/openai/gpt-5-chat.md), [openai/o4-mini](../api-references/text-models-llm/openai/o4-mini.md), [openai/gpt-4.1](../api-references/text-models-llm/openai/gpt-4.1.md) ( or any other supported model)
+* **Recommended Model IDs:** openai/gpt-5-chat-latest, openai/o4-mini, [openai/gpt-4.1](../api-references/text-models-llm/openai/gpt-4.1.md) ( or any other supported model)
 
 ***
 
@@ -66,9 +66,7 @@ Fill the form as follows:
 * **API Key**\
   Paste your key from [**https://aimlapi.com/app/keys**](https://aimlapi.com/app/keys)
 * **Model** (examples)
-  * [openai/gpt-5-chat-latest](../api-references/text-models-llm/openai/gpt-5-chat.md) ← recommended universal chat
   * [openai/gpt-5-2025-08-07](../api-references/text-models-llm/openai/gpt-5.md) ← pinned dated release
-  * [openai/o4-mini](../api-references/text-models-llm/openai/o4-mini.md) ← fast, low-cost
   * [openai/gpt-4.1](../api-references/text-models-llm/openai/gpt-4.1.md) ← stable classic
   * _any other supported model by your account_
 * **Use Azure**: `OFF`

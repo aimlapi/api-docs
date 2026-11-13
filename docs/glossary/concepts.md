@@ -181,7 +181,7 @@ Legacy and Influence
 
 Deprecation is the process where a provider marks a model, parameter, or feature as outdated and no longer recommended for use. Deprecated items may remain available for some time but are likely to be removed or unsupported in the future.
 
-Deprecation can apply to an entire model (see [our list of deprecated/no longer supported models](../api-references/model-database.md#deprecated-no-longer-supported-models)) or to individual parameters. For example, in a recent update to the video model [**v1.6-pro/image-to-video**](../api-references/video-models/kling-ai/v1.6-pro-image-to-video.md) by Kling AI, the `aspect_ratio` parameter was deprecated: the model now automatically determines the aspect ratio based on the properties of the provided reference image, and explicit `aspect_ratio` input is no longer required.
+Deprecation can apply to an entire model (see [our list of deprecated/no longer supported models](../api-references/model-database.md#deprecated-no-longer-supported-models)) or to individual parameters. For example, in a recent update to the video model **v1.6-pro/image-to-video** by Kling AI, the `aspect_ratio` parameter was deprecated: the model now automatically determines the aspect ratio based on the properties of the provided reference image, and explicit `aspect_ratio` input is no longer required.
 
 Users are encouraged to monitor deprecation notices carefully and update their integrations accordingly. We notify our users about such changes in our email newsletters.
 

@@ -16,7 +16,7 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-A cost-effective text-to-image variant of [GPT Image 1](gpt-image-1.md).
+A cost-effective text-to-image variant of GPT Image 1.
 
 ## How to Make a Call
 

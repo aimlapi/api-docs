@@ -84,7 +84,7 @@ Image preview:
 
 2. **Animating the Image**
 
-Not all video models are capable of creating looped videos (where the last frame matches the first one). We chose model [kling-video/v1.6/pro/image-to-video](../api-references/video-models/kling-ai/v1.6-pro-image-to-video.md). It accepts the first and last frames separately, using the parameters `image_url` and `tail_image_url` respectively.
+Not all video models are capable of creating looped videos (where the last frame matches the first one). We chose model kling-video/v1.6/pro/image-to-video. It accepts the first and last frames separately, using the parameters `image_url` and `tail_image_url` respectively.
 
 For the video generation prompt, we used _"slow fluid-like motion of patterns of the image."_\
 Feel free to experiment with effects, as long as they match the video looping!

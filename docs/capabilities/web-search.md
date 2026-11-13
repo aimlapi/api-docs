@@ -8,10 +8,5 @@ This capability of text chat models allows them to send search queries to the we
 
 * [alibaba/qwen3.6-flash](../api-references/text-models-llm/alibaba-cloud/qwen3.6-flash.md)
 * [alibaba/qwen3.6-plus](../api-references/text-models-llm/alibaba-cloud/qwen3.6-plus.md)
-* [alibaba/qwen3.6-max-preview](../api-references/text-models-llm/alibaba-cloud/qwen3.6-max-preview.md)
-* [gpt-4o-search-preview](../api-references/text-models-llm/openai/gpt-4o-search-preview.md)
-* [gpt-4o-mini-search-preview](../api-references/text-models-llm/openai/gpt-4o-mini-search-preview.md)
-* [moonshot/kimi-k2-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
-* [moonshot/kimi-k2-0905-preview](../api-references/text-models-llm/moonshot/kimi-k2-preview.md)
 * [perplexity/sonar](../api-references/text-models-llm/perplexity/sonar.md)
 * [perplexity/sonar-pro](../api-references/text-models-llm/perplexity/sonar-pro.md)
