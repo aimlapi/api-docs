@@ -727,6 +727,7 @@
   * [Minimax AI](api-references/video-models/minimax-ai/README.md)
     * [Minimax H3 Highspeed](api-references/video-models/minimax-ai/minimax-h3-highspeed.md)
     * [Minimax H3 Lite](api-references/video-models/minimax-ai/minimax-h3-lite.md)
+    * [MiniMax H3 Max Recast](api-references/video-models/minimax-ai/recast.md)
   * [OpenAI](api-references/video-models/openai/README.md)
     * [Sora 2 t2v](api-references/video-models/openai/sora-2-t2v.md)
     * [Sora 2 i2v](api-references/video-models/openai/sora-2-i2v.md)

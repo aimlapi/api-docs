@@ -1,0 +1,230 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AIML API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v2/video/generations": {
+      "post": {
+        "operationId": "_v2_video_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "minimax/h3-max-recast"
+                    ]
+                  },
+                  "video_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The source video, 5 to 30 seconds long, with no single shot longer than 15 seconds. The result keeps its length, motion, camera, cuts and sound."
+                  },
+                  "reference_image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 4,
+                    "description": "One photo per new person, 1 to 4 photos. By default they replace the main people in the video from left to right, in every shot they appear in."
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 2000,
+                    "description": "Who becomes whom, or what else to keep or change."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "768p",
+                      "1080p"
+                    ],
+                    "default": "1080p",
+                    "description": "The resolution of the output video, where the number refers to the short side in pixels."
+                  },
+                  "seed": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Varying the seed integer is a way to get different results for the same other request parameters. Using the same value for an identical request will produce similar results. If unspecified, a random number is chosen."
+                  },
+                  "enhance_realism": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "More natural skin textures and better blending of the new people into the scene."
+                  },
+                  "webhook_url": {
+                    "type": "string",
+                    "maxLength": 2048,
+                    "format": "uri",
+                    "description": "A public https address on port 443 or 8443 that gets a signed POST when the job ends. Needs a signing secret: POST /v1/webhooks/secret. On /v1/responses it needs `background: true` and does not work with `store: false`. On /v1/images/generations it runs the generation as a task on the models that support it (the others answer 400 webhook_url_not_supported): the answer is { id, status } and the result is read with GET /v1/images/generations/{id}.",
+                    "example": "https://client.example/hooks/aiml"
+                  }
+                },
+                "required": [
+                  "model",
+                  "video_url",
+                  "reference_image_urls"
+                ],
+                "title": "minimax/h3-max-recast"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The ID of the generated video.",
+                      "example": "60ac7c34-3224-4b14-8e7d-0aa0db708325"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "generating",
+                        "completed",
+                        "error"
+                      ],
+                      "description": "The current status of the generation task.",
+                      "example": "completed"
+                    },
+                    "video": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "format": "uri",
+                              "description": "The URL where the file can be downloaded from.",
+                              "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                            }
+                          },
+                          "required": [
+                            "url"
+                          ]
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL where the file can be downloaded from.",
+                                "example": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
+                              }
+                            },
+                            "required": [
+                              "url"
+                            ]
+                          }
+                        },
+                        {
+                          "nullable": true
+                        }
+                      ]
+                    },
+                    "error": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "message"
+                      ],
+                      "description": "Description of the error, if any."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            },
+                            "usd_spent": {
+                              "type": "number",
+                              "description": "The total amount of money spent by the user in USD.",
+                              "example": 0.06
+                            }
+                          },
+                          "required": [
+                            "credits_used",
+                            "usd_spent"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "Successful response."
+          }
+        },
+        "x-hideTryItPanel": true,
+        "x-codeSamples": [
+          {
+            "lang": "cURL",
+            "source": "curl --request POST \\\n  --url 'https://api.aimlapi.com/v2/video/generations' \\\n  --header 'Authorization: Bearer <YOUR_AIMLAPI_KEY>' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\"model\": \"minimax/h3-max-recast\", \"video_url\": \"https://example.com/input.jpg\", \"reference_image_urls\": [\"https://example.com/input.jpg\"], \"prompt\": \"Describe what you want the model to generate.\"}'"
+          },
+          {
+            "lang": "JavaScript",
+            "source": "const response = await fetch('https://api.aimlapi.com/v2/video/generations', {\n  method: 'POST',\n  headers: {\n    'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n  \"model\": \"minimax/h3-max-recast\",\n  \"video_url\": \"https://example.com/input.jpg\",\n  \"reference_image_urls\": [\n    \"https://example.com/input.jpg\"\n  ],\n  \"prompt\": \"Describe what you want the model to generate.\"\n}),\n});\n\nconsole.log(await response.json());"
+          },
+          {
+            "lang": "Python",
+            "source": "import requests\n\nresponse = requests.post(\n    \"https://api.aimlapi.com/v2/video/generations\",\n    headers={\n        \"Authorization\": \"Bearer <YOUR_AIMLAPI_KEY>\",\n        \"Content-Type\": \"application/json\",\n    },\n    json={'model': 'minimax/h3-max-recast', 'video_url': 'https://example.com/input.jpg', 'reference_image_urls': ['https://example.com/input.jpg'], 'prompt': 'Describe what you want the model to generate.'},\n)\n\nprint(response.json())"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "access-token": {
+        "scheme": "bearer",
+        "bearerFormat": "<YOUR_AIMLAPI_KEY>",
+        "type": "http",
+        "description": "Bearer key"
+      }
+    }
+  }
+}
