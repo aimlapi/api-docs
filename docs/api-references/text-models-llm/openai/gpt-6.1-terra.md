@@ -1,16 +1,16 @@
-# Gpt 6.1 Terra
+# GPT-6.1 Terra
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `z-ai/glm-5.3-flashx`
+* `openai/gpt-6.1-terra`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/z-ai/glm-5.3-flashx" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/openai/gpt-6.1-terra" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -152,7 +152,7 @@ console.log(await response.json());
   },
   "meta": {
     "model": "openai/gpt-6.1-terra",
-    "provider": "zhipu",
+    "provider": "openai",
     "usage": {
       "credits_used": 6408,
       "usd_spent": 0.003204

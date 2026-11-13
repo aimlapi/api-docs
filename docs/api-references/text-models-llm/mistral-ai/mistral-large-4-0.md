@@ -1,16 +1,16 @@
-# Large 4 4.0
+# Mistral Large 4.0
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `z-ai/glm-5.3-flashx`
+* `mistralai/mistral-large-4-0`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/z-ai/glm-5.3-flashx" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/mistralai/mistral-large-4-0" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -148,7 +148,7 @@ console.log(await response.json());
   },
   "meta": {
     "model": "mistralai/mistral-large-4-0",
-    "provider": "zhipu",
+    "provider": "mistral",
     "usage": {
       "credits_used": 6408,
       "usd_spent": 0.003204
