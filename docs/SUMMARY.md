@@ -740,6 +740,7 @@
     * [V5.5 text-to-video](api-references/video-models/pixverse/v5-5-text-to-video.md)
     * [V5.5 image-to-video](api-references/video-models/pixverse/v5-5-image-to-video.md)
     * [Lip Sync](api-references/video-models/pixverse/lip-sync.md)
+    * [Pixverse V6 Max Text to Video](api-references/video-models/pixverse/text-to-video.md)
   * [Runway](api-references/video-models/runway/README.md)
     * [Gen3a Turbo](api-references/video-models/runway/gen3a_turbo.md)
     * [Gen4 Turbo](api-references/video-models/runway/gen4_turbo.md)
