@@ -549,6 +549,7 @@
     * [HeyGen Video Translation Precision](api-references/video-models/heygen/video-translation-precision.md)
     * [HeyGen Video Translation Speed](api-references/video-models/heygen/video-translation-speed.md)
     * [HeyGen Avatar 6](api-references/video-models/heygen/avatar-6.md)
+    * [HeyGen Avatar 6 Turbo](api-references/video-models/heygen/avatar-6-turbo.md)
   * [Kling AI](api-references/video-models/kling-ai/README.md)
     * [V2.5 Turbo Pro text-to-video](api-references/video-models/kling-ai/v2.5-turbo-pro-text-to-video.md)
     * [V2.5 Turbo Pro image-to-video](api-references/video-models/kling-ai/v2.5-turbo-pro-image-to-video.md)
