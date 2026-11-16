@@ -59,6 +59,7 @@
     * [Qwen3.8 Flash](api-references/text-models-llm/alibaba-cloud/qwen3.8-flash.md)
     * [Qwen3.8 Omni Flash](api-references/text-models-llm/alibaba-cloud/qwen3.8-omni-flash.md)
     * [Qwen3.8 Max Prime](api-references/text-models-llm/alibaba-cloud/qwen3.8-max-prime.md)
+    * [Qwen4 Max](api-references/text-models-llm/alibaba-cloud/qwen4-max.md)
   * [AllenAI](api-references/text-models-llm/allenai/README.md)
   * [Amazon](api-references/text-models-llm/amazon/README.md)
     * [Nova 2 Lite](api-references/text-models-llm/amazon/nova-2-lite-v1.md)
