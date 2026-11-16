@@ -1,4 +1,5 @@
 ---
+noIndex: true
 description: "Model id: anthropic/claude-sonnet-4. API reference for Claude 4 Sonnet: request schema and code examples."
 hidden: true
 ---
