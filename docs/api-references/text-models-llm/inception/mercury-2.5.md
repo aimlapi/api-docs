@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: inception/mercury-2.5. API reference for Mercury 2.5: request schema and code examples."
 ---
 
