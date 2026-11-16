@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: baidu/ernie-4.5-vl-424b-a47b. High-capacity vision-language Ernie 4.5 VL 424B A47B for demanding multimodal workflows."
 ---
 
