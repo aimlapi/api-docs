@@ -649,6 +649,7 @@
     * [Mureka 8 Extend](api-references/music-models/mureka/extend.md)
     * [Mureka 8 Remix](api-references/music-models/mureka/remix.md)
     * [Mureka V9.5 Instrumental](api-references/music-models/mureka/instrumental.md)
+    * [Mureka Recognize](api-references/music-models/mureka/recognize.md)
   * [Stability AI](api-references/music-models/stability-ai/README.md)
     * [Stable Audio](api-references/music-models/stability-ai/stable-audio.md)
 * [Voice/Speech Models](api-references/speech-models/README.md)
