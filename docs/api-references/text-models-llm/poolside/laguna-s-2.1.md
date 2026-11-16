@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: poolside/laguna-s-2.1. API reference for Laguna S 2.1: request schema and code examples."
 ---
 
