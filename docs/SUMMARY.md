@@ -326,6 +326,7 @@
     * [Hy-MT2-7B](api-references/text-models-llm/tencent/hy-mt2-7b.md)
     * [Hy4 Preview](api-references/text-models-llm/tencent/hy4-preview.md)
     * [Hy4](api-references/text-models-llm/tencent/hy4.md)
+    * [Hy4 Flash](api-references/text-models-llm/tencent/hy4-flash.md)
   * [TheDrummer](api-references/text-models-llm/thedrummer/README.md)
     * [Cydonia 24B V4.1](api-references/text-models-llm/thedrummer/cydonia-24b-v4.1.md)
     * [Skyfall 36B V2](api-references/text-models-llm/thedrummer/skyfall-36b-v2.md)
