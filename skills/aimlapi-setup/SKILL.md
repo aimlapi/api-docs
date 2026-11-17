@@ -152,7 +152,7 @@ Then:
 AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest status
 ```
 
-- Exit `0`: the user is signed in. The output shows the environment, the
+- Exit `0`: the user is signed in. The output shows the API address, the
   masked key and the balance. Go to step 5.
 - Exit `3`: not signed in, or the stored key was rejected (revoked). Go to
   step 4.
@@ -172,8 +172,8 @@ Then run:
 AIMLAPI_NO_UPDATE_CHECK=1 npx -y aimlapi@latest login
 ```
 
-- The command waits until the user approves (up to 10 minutes). Run it with a
-  long timeout, or in the background and poll its output. It prints progress
+- The command waits until the user approves (up to 60 minutes: a new user may
+  have to sign up and top up first). Run it with a long timeout, or in the background and poll its output. It prints progress
   and any link on **stderr** — relay every link or code it prints to the user
   exactly as printed.
 - Over SSH, on Linux without a display, or when no browser can be opened, the
