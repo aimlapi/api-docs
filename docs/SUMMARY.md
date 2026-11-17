@@ -440,6 +440,7 @@
     * [Nano Banana 2.1](api-references/image-models/google/nano-banana-2.1.md)
   * [Kling AI](api-references/image-models/kling-ai/README.md)
     * [Image o1](api-references/image-models/kling-ai/image-o1.md)
+    * [Kling Image 4.0 Text to Image](api-references/image-models/kling-ai/image-v4-text-to-image.md)
   * [Luma AI](api-references/image-models/luma-ai/README.md)
     * [Luma Uni-1](api-references/image-models/luma-ai/uni-1.md)
     * [Luma Uni-1 Max](api-references/image-models/luma-ai/uni-1-max.md)
