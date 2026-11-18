@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: tencent/hunyuan-video-foley. Generate foley audio for videos using Tencent Hunyuan Video Foley model. Adds realistic sound effects synchronized with video content."
 ---
 
