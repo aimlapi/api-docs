@@ -1,5 +1,5 @@
 ---
-description: "Model id: heygen/decision-1. HeyGen Decision 1 answers typed questions about text and images in one request (yes/no, choice, score) with a calibrated probability for every answer and no generated text…"
+description: "Model id: heygen/decision-1. HeyGen Decision 1 answers typed questions about text, images, video and audio in one request (yes/no, choice, score) with a calibrated probability for every answer and no generated text…"
 ---
 
 # HeyGen Decision 1
@@ -20,11 +20,11 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-HeyGen Decision 1 is HeyGen's decision model: instead of generating text it returns typed answers (yes/no, choice, score) with a calibrated probability for every answer. One request can carry up to 400 named questions about the same text and up to 32 images, which makes it a fit for moderation, identity checks, routing, triage and QA. Context window is 131,072 tokens.
+HeyGen Decision 1 is HeyGen's decision model: instead of generating text it returns typed answers (yes/no, choice, score) with a calibrated probability for every answer. One request can carry up to 400 named questions about the same text, up to 100 images, 10 videos and 10 audio clips, which makes it a fit for moderation, identity checks, routing, triage and QA. Context window is 131,072 tokens.
 
-[HeyGen Decision 1 Turbo](decision-1-turbo.md) takes the same request and is the faster, cheaper option: on the support ticket below it used 765 input tokens against 1,002 here, and it takes up to 100 images instead of 32.
+[HeyGen Decision 1 Turbo](decision-1-turbo.md) takes the same request and is the faster, cheaper option: on the support ticket below it used 765 input tokens against 1,002 here.
 
-It uses the same `/v1/decisions` request as [Jev](../typesafe/jev.md) and [d1](../liquid-ai/d1.md) for text: `state` and an object of typed `questions`. Images differ: they go in **`images`**, not in `assets` (see [below](#images)).
+It uses the same `/v1/decisions` request as [Jev](../typesafe/jev.md) and [d1](../liquid-ai/d1.md) for text: `state` and an object of typed `questions`. Media differ: images go in **`images`**, videos in **`videos`** and audio in **`audios`**, not in `assets` (see [Images](#images) and [Video and audio](#video-and-audio)).
 
 {% hint style="success" %}
 [Create AI/ML API Key](https://aimlapi.com/app/keys)
@@ -47,7 +47,7 @@ At the bottom of this page, pick the snippet for your preferred programming lang
 ▪ **Provide input:** put the content to evaluate in `state` and describe what to decide in `questions`.
 
 **4️ (Optional) Tune the request**\
-See the API schema below for the three question types (`noul`, `choice`, `score`), their `criteria`, and the `images` field.
+See the API schema below for the three question types (`noul`, `choice`, `score`), their `criteria`, and the `images`, `videos` and `audios` fields.
 
 **5️ Run your code**\
 Run the updated code in your development environment.
@@ -218,7 +218,7 @@ Every key you send under `questions` comes back under `answers` with the matchin
 
 ## Images
 
-Send up to 32 images in **`images`**, in order. Each entry is a JPEG, PNG or WebP image as an http(s) URL or a base64 `data:` URL (`data:image/png;base64,…`). Every question sees all of them, so refer to an image by its position ("image 1", "image 2") in `instructions`. `assets`, which [Jev 1.14](../typesafe/jev-1.14.md) uses for images, is refused by this model, and there is no `box` question.
+Send up to 100 images in **`images`**, in order. Each entry is a JPEG, PNG or WebP image as an http(s) URL or a base64 `data:` URL (`data:image/png;base64,…`). Every question sees all of them, so refer to an image by its position ("image 1", "image 2") in `instructions`. `assets`, which [Jev 1.14](../typesafe/jev-1.14.md) uses for images, is refused by this model, and there is no `box` question.
 
 {% code overflow="wrap" %}
 ```python
@@ -295,4 +295,145 @@ A `choice` option can be `null` when its key says it all, as `cat`, `dog` and `b
 
 {% hint style="warning" %}
 Images are billed as input tokens: 1.5 tokens per 32×32-pixel patch (a 1024×1024 image is 1,536), counted again for every question. The request above billed 3,697 input tokens against 1,002 for the text-only one. Images are never resized: one outside the limits, or a request over 16 MiB once the images are inlined, is refused with a `400` that says what to change.
+{% endhint %}
+
+## Video and audio
+
+Send up to 10 videos in **`videos`** and up to 10 audio clips in **`audios`**, in order, next to `images` or on their own. Each entry is a public `https://` URL that answers without a redirect or a login, with a `video/*` or `audio/*` Content-Type (a video up to 50 MiB). Base64 `data:` URLs are not taken for video and audio. Refer to them by position ("video 1", "audio 1") in `instructions`. The model reads the images, then the videos, then `state`.
+
+{% code overflow="wrap" %}
+```python
+import json, requests
+
+response = requests.post(
+    "https://api.aimlapi.com/v1/decisions",
+    headers={
+        "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+        "Content-Type": "application/json",
+    },
+    json={
+        "model": "heygen/decision-1",
+        "state": "A clip uploaded to a nature channel.",
+        "videos": ["https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"],
+        "questions": {
+            "scene": {
+                "type": "choice",
+                "instructions": "What does video 1 mainly show?",
+                "criteria": {
+                    "flower": "A flower or plant up close",
+                    "animal": "A mammal or bird",
+                    "city": "Streets or buildings",
+                    "people": "People",
+                },
+            },
+            "safe": {"type": "noul", "instructions": "Is video 1 safe to show to all ages?"},
+        },
+    },
+)
+
+print(json.dumps(response.json(), indent=2, ensure_ascii=False))
+```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```json
+{
+  "model": "heygen-decision-1",
+  "answers": {
+    "safe": {
+      "type": "noul",
+      "noul": 0.98
+    },
+    "scene": {
+      "type": "choice",
+      "choice": "flower",
+      "confidence": 0.97,
+      "probabilities": {
+        "animal": 0.01,
+        "city": 0.0,
+        "flower": 0.98,
+        "people": 0.01
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 5448,
+    "output_tokens": 0
+  },
+  "meta": {
+    "model": "heygen/decision-1",
+    "provider": "heygen",
+    "usage": {
+      "credits_used": 1526,
+      "usd_spent": 0.0
+    }
+  }
+}
+```
+{% endcode %}
+
+Audio goes the same way, in `audios`:
+
+{% code overflow="wrap" %}
+```python
+json={
+    "model": "heygen/decision-1",
+    "state": "A sound uploaded to a sound-effects library.",
+    "audios": ["https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"],
+    "questions": {
+        "speech": {"type": "noul", "instructions": "Does someone speak in audio 1?"},
+        "sound": {
+            "type": "choice",
+            "instructions": "What is audio 1?",
+            "criteria": {
+                "speech": "A person talking",
+                "music": "Music",
+                "animal": "An animal or creature sound",
+                "noise": "Machine or background noise",
+            },
+        },
+    },
+}
+```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```json
+{
+  "model": "heygen-decision-1",
+  "answers": {
+    "sound": {
+      "type": "choice",
+      "choice": "animal",
+      "confidence": 0.92,
+      "probabilities": {
+        "animal": 0.94,
+        "music": 0.02,
+        "noise": 0.03,
+        "speech": 0.02
+      }
+    },
+    "speech": {
+      "type": "noul",
+      "noul": 0.06
+    }
+  },
+  "usage": {
+    "input_tokens": 261,
+    "output_tokens": 0
+  },
+  "meta": {
+    "model": "heygen/decision-1",
+    "provider": "heygen",
+    "usage": {
+      "credits_used": 74,
+      "usd_spent": 0.0
+    }
+  }
+}
+```
+{% endcode %}
+
+{% hint style="warning" %}
+Video and audio are billed as input tokens and, like images, counted again for every question: the 5-second clip above billed 5,448 input tokens for its two questions (a 16-second clip is about 11,000 per question), and the audio clip 261. A video or audio URL that is not `https://`, or more than 10 of either, is refused with a `400` before the request reaches HeyGen.
 {% endhint %}
