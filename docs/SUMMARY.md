@@ -812,6 +812,7 @@
 * [Realtime Sessions](capabilities/realtime-sessions.md)
 * [Code Generation](capabilities/code-generation.md)
 * [Function Calling](capabilities/function-calling.md)
+* [Messages and Responses APIs](capabilities/messages-and-responses.md)
 * [Thinking / Reasoning](capabilities/thinking-reasoning.md)
 * [Vision in Text Models](capabilities/image-to-text-vision.md)
 * [Web Search](capabilities/web-search.md)
