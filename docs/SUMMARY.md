@@ -778,6 +778,9 @@
     * [Jev 1.13](api-references/decision-models/typesafe/jev-1.13.md)
   * [Liquid AI](api-references/decision-models/liquid-ai/README.md)
     * [d1](api-references/decision-models/liquid-ai/d1.md)
+  * [HeyGen](api-references/decision-models/heygen/README.md)
+    * [HeyGen Decision 1](api-references/decision-models/heygen/decision-1.md)
+    * [HeyGen Decision 1 Turbo](api-references/decision-models/heygen/decision-1-turbo.md)
   * [OpenAI](api-references/decision-models/openai/README.md)
     * [GPT-6 Luna](api-references/decision-models/openai/gpt-6-luna.md)
 
