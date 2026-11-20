@@ -291,6 +291,26 @@
                       "nullable": true
                     },
                     "description": "Not supported here: This model takes no `assets`: send its images in `images`. A non-empty map is refused."
+                  },
+                  "videos": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "description": "Up to 10 videos of the state, in order, each a public https:// URL that answers without a redirect or authentication, with a `video/*` Content-Type — up to 50 MiB each; the model reads sampled frames (a 16-second clip is about 11,000 tokens). Every question sees all of them; their tokens are billed as input tokens."
+                  },
+                  "audios": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "description": "Up to 10 audio clips of the state, in order, each a public https:// URL that answers without a redirect or authentication, with a `audio/*` Content-Type — MP3 or WAV; a 5-second voice clip is about 300 tokens. Every question sees all of them; their tokens are billed as input tokens."
                   }
                 },
                 "required": [
