@@ -220,6 +220,7 @@
     * [Mixtral 8X22B Instruct](api-references/text-models-llm/mistral-ai/mixtral-8x22b-instruct.md)
     * [Voxtral Small 24B 2507](api-references/text-models-llm/mistral-ai/voxtral-small-24b-2507.md)
     * [Mistral Large 4.0](api-references/text-models-llm/mistral-ai/mistral-large-4-0.md)
+    * [Pixtral Large 2502](api-references/text-models-llm/mistral-ai/pixtral-large-2502.md)
   * [Moondream](api-references/text-models-llm/moondream/README.md)
     * [Moondream 3 Preview](api-references/text-models-llm/moondream/moondream3-preview.md)
     * [Moondream 3.1](api-references/text-models-llm/moondream/moondream3.1-9b-a2b.md)
