@@ -1,26 +1,30 @@
-# HeyGen Avatar 6 Turbo
-description: "Model id: heygen/avatar-6-turbo-turbo. HeyGen Avatar V is the highest-fidelity HeyGen engine: a talking-avatar video from a script or an audio track, using a HeyGen photo avatar or digital twin. Does not support tools/function calling."
+---
+description: "Model id: heygen/avatar-6-turbo. HeyGen Avatar 6 Turbo is the lower-cost Turbo variant of HeyGen Avatar 6, with the same inputs: a photo of a person and an audio track become a talking-avatar video at up to 2K. No HeyGen account or avatar needed. Does not support tools/function calling."
 ---
 
-# HeyGen Avatar V
+# HeyGen Avatar 6 Turbo
 
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
-* `heygen/avatar-6-turbo-turbo`
+* `heygen/avatar-6-turbo`
 {% endhint %}
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/heygen/avatar-6-turbo-turbo" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/heygen/avatar-6-turbo" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-HeyGen Avatar 6 Turbo is the lower-cost Turbo variant of HeyGen Avatar 6, with the same inputs: a talking-avatar video at up to 2K from a script or an audio track, using a HeyGen photo avatar or digital twin. Does not support tools/function calling.
+HeyGen Avatar 6 Turbo is the lower-cost Turbo variant of HeyGen Avatar 6, with the same inputs: a photo of a person and an audio track become a talking-avatar video at up to 2K. No HeyGen account or avatar needed. Does not support tools/function calling.
+
+The input is two URLs: `image_url`, a photo with one person and a clearly visible face (up to 32 MB), and `audio_url`, the speech the avatar performs (MP3 or WAV). The video keeps the photo's aspect ratio and lasts as long as the audio. `resolution` is `1080p` (default) or `2k`, and the price per second depends on it. `motion_prompt` (up to 1,200 characters) directs gestures, expression, posture and camera; `motion_expressiveness: "less"` keeps head and body motion calmer.
+
+The request is the same as for [HeyGen Avatar 6](avatar-6.md), so you can switch between them by changing `model`.
 
 ## Setup your API Key
 
@@ -57,7 +61,7 @@ Poll this endpoint with the `generation_id` returned by the submit request. When
 
 ## Code Example
 
-The examples submit a generation task and poll every **15 seconds** until the final result is available.
+The examples submit a generation task and poll every **15 seconds** until the final result is available. Replace `<PHOTO_URL>` and `<AUDIO_URL>` with public URLs of your photo and audio.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -73,7 +77,17 @@ headers = {
     "Content-Type": "application/json",
 }
 
-generation = requests.post(url, headers=headers, json={'model': 'heygen/avatar-6-turbo-turbo', 'avatar_id': '<avatar_id>'})
+generation = requests.post(
+    url,
+    headers=headers,
+    json={
+        "model": "heygen/avatar-6-turbo",
+        "image_url": "<PHOTO_URL>",
+        "audio_url": "<AUDIO_URL>",
+        "resolution": "1080p",
+        "motion_prompt": "Friendly, nods while speaking, small hand gestures.",
+    },
+)
 generation.raise_for_status()
 generation_id = generation.json()["id"]
 
@@ -107,9 +121,12 @@ const generation = await fetch(url, {
   method: "POST",
   headers,
   body: JSON.stringify({
-  "model": "heygen/avatar-6-turbo",
-  "avatar_id": "<avatar_id>"
-}),
+    model: "heygen/avatar-6-turbo",
+    image_url: "<PHOTO_URL>",
+    audio_url: "<AUDIO_URL>",
+    resolution: "1080p",
+    motion_prompt: "Friendly, nods while speaking, small hand gestures.",
+  }),
 });
 const { id: generationId } = await generation.json();
 
@@ -134,22 +151,20 @@ while (true) {
 
 <summary>Response</summary>
 
+The shape of a finished generation; `video.url` is the MP4 to download, and `meta.usage` is what the request cost.
+
 {% code overflow="wrap" %}
 ```json
 {
-  "id": "60ac7c34-3224-4b14-8e7d-0aa0db708325",
+  "id": "<generation_id>",
   "status": "completed",
   "video": {
-    "url": "https://cdn.aimlapi.com/generations/hedgehog/1759866285599-0cdfb138-c03a-49d4-a601-4f6413e27b15.mp4"
-  },
-  "error": {
-    "name": "<name>",
-    "message": "<message>"
+    "url": "<video_url>"
   },
   "meta": {
     "usage": {
-      "credits_used": 120000,
-      "usd_spent": 0.06
+      "credits_used": "<credits>",
+      "usd_spent": "<usd>"
     }
   },
   "model": "heygen/avatar-6-turbo"
