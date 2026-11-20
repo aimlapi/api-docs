@@ -7,7 +7,7 @@ description: >-
 
 # Webhooks
 
-Pass `webhook_url` with an asynchronous request, and when the job ends AI/ML API sends an HTTP `POST` with the result to that address. You do not have to poll for the status.
+Pass `webhook_url` with an asynchronous request, and when the job ends AI/ML API sends an HTTP `POST` with the result to that address. You do not have to poll for the status. `webhook_url` is an AI/ML API field: it is never passed to the provider, and an endpoint without webhook support refuses the request with `400 webhook_url_not_supported`.
 
 Events follow the [Standard Webhooks](https://github.com/standard-webhooks/standard-webhooks/blob/main/spec/standard-webhooks.md) specification: every request is signed with HMAC-SHA256, so you can check that it came from us and was not changed. The Standard Webhooks libraries, and `client.webhooks.unwrap()` in the OpenAI SDKs, can verify our events.
 
