@@ -549,7 +549,7 @@ Opens the dashboard's top-up page in your browser, where you pay as usual. The C
 * If the CLI couldn't read the balance before the wait, a wait without a rise ends as unknown: a payment that arrived before the first read wouldn't show. Check it with `aimlapi status`.
 * `--json` prints one machine-readable result.
 
-When you start an agent, the CLI also checks the balance (at most 1.5 seconds; if the check fails, the agent simply starts). If the balance is below $1, where the API refuses requests, then in a terminal it offers to top up and starts the agent afterwards without a restart, or lets you continue anyway. In a script or CI it prints one message and continues.
+When you start an agent, the CLI also checks the balance (at most 1.5 seconds; if the check fails, the agent starts anyway). If the balance is below $1, where the API refuses requests, then in a terminal it offers to top up and starts the agent afterwards without a restart, or lets you continue anyway. In a script or CI it prints one message and continues.
 
 ### `doctor`
 
@@ -611,7 +611,7 @@ Read https://docs.aimlapi.com/quickstart/cli/aimlapi-setup.md and follow it to c
 
 The agent signs you in through the browser (you approve; you never paste a key into the chat), shows what it will change with `--dry-run`, applies it after you confirm, and tells you how to undo it.
 
-To install it as a Claude Code skill instead (then just ask Claude Code to "set up AI/ML API"), download the file with its frontmatter. Create the skill directory:
+To install it as a Claude Code skill instead (then ask Claude Code to "set up AI/ML API"), download the file with its frontmatter. Create the skill directory:
 
 ```bash
 mkdir -p ~/.claude/skills/aimlapi-setup
