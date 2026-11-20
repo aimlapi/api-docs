@@ -7,7 +7,7 @@ description: "Run Claude Code on AI/ML API: npx aimlapi claude, or set ANTHROPIC
 This guide explains how to configure **Claude Code** to work with Claude models available through AIML API.
 
 {% hint style="info" %}
-Prefer one command? `npx aimlapi claude` signs you in through the browser and starts Claude Code already connected to AI/ML API, with no key to copy or variables to export. See [CLI](../quickstart/cli.md#claude-code).
+Prefer one command? `npx aimlapi claude` signs you in through the browser and starts Claude Code already connected to AI/ML API, with no key to copy or variables to export. It can also connect the AI/ML API tools (MCP) and skills, and cap the agent's spend with `--budget`. See [CLI](../quickstart/cli.md#claude-code).
 {% endhint %}
 
 ## Overview
@@ -114,7 +114,7 @@ https://api.aimlapi.com
 {% hint style="warning" %}
 Notes
 
-* Only Claude models available on AIML API can be used
+* Claude Code is not limited to Claude models: the API translates Anthropic Messages requests for any chat model on AI/ML API that can call tools (see [Messages and Responses](../capabilities/messages-and-responses.md)). `npx aimlapi models --agent claude` lists the models Claude Code can use
 * Performance and pricing depend on the selected model
 * No additional SDK setup is required
 {% endhint %}
