@@ -307,6 +307,8 @@
   * [PrismML](api-references/text-models-llm/prismml/README.md)
     * [Ternary Bonsai 2 27B](api-references/text-models-llm/prismml/ternary-bonsai-2-27b.md)
     * [Ternary Bonsai 2 9B](api-references/text-models-llm/prismml/ternary-bonsai-2-9b.md)
+  * [RadixArk](api-references/text-models-llm/radixark/README.md)
+    * [Daisyrose 27B](api-references/text-models-llm/radixark/daisyrose-27b.md)
   * [Reflection](api-references/text-models-llm/reflection/README.md)
     * [Beam 1.0 501B A23B](api-references/text-models-llm/reflection/beam-1.0-501b-a23b.md)
   * [Sakana AI](api-references/text-models-llm/sakana-ai/README.md)
