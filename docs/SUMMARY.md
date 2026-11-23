@@ -624,6 +624,7 @@
     * [V5.5 image-to-video](api-references/video-models/pixverse/v5-5-image-to-video.md)
     * [Lip Sync](api-references/video-models/pixverse/lip-sync.md)
     * [Pixverse V6 Max Text to Video](api-references/video-models/pixverse/text-to-video.md)
+    * [Pixverse Swap](api-references/video-models/pixverse/swap.md)
   * [Runway](api-references/video-models/runway/README.md)
     * [Gen4 Turbo](api-references/video-models/runway/gen4_turbo.md)
     * [Act Two](api-references/video-models/runway/act_two.md)
