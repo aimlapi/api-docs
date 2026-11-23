@@ -375,6 +375,14 @@ Then tell the user how to pick it up:
 This session keeps running on its current provider until the user restarts;
 say so.
 
+For `claude`, `codex`, `opencode`, `cline` and `hermes`, `--config` also installed
+the AI/ML API developer skills (npm package `@ai-ml.api/skills`) into the agent's
+skills folder: they teach it to write code against the API. Tell the user, and
+that later launches keep them up to date. If the user does not want them, add
+`--no-skills` to the step 7 command and run it again (it remembers that), then
+run `aimlapi skills remove --agent <agent>`. A skill folder of the user's with
+the same name is left alone.
+
 ## Roll back
 
 Preview, confirm with the user, then undo:
