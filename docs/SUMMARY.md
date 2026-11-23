@@ -9,6 +9,7 @@
 * [MCP](quickstart/mcp.md)
 * [CLI](quickstart/cli.md)
   * [Agent setup skill](skills/aimlapi-setup.md)
+* [Agent skills](quickstart/agent-skills.md)
 * [Supported SDKs](quickstart/supported-sdks.md)
 * [Toolbox](quickstart/toolbox.md)
 
