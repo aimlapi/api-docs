@@ -393,6 +393,7 @@
   * [Zhipu AI](api-references/text-models-llm/zhipu-ai.md)
   * [Zhipu AI](api-references/text-models-llm/zhipu-ai/README.md)
     * [GLM 5.3 FlashX](api-references/text-models-llm/zhipu-ai/glm-5.3-flashx.md)
+    * [Glm 5.4](api-references/text-models-llm/zhipu-ai/glm-5.4.md)
 * [Image Models](api-references/image-models/README.md)
   * [Alibaba Cloud](api-references/image-models/alibaba-cloud/README.md)
     * [Qwen Image](api-references/image-models/alibaba-cloud/qwen-image.md)
