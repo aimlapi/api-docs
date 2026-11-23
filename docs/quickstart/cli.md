@@ -15,9 +15,9 @@ npx aimlapi claude
 
 You don't copy a key or edit config files by hand. Usage is billed to your AI/ML API account like any other API request.
 
-The CLI can also give the agent the AI/ML API tools (an MCP server and four skills for images, video, speech and web search), run it on a separate key with a spending cap, show what your key spent, and take you to the top-up page.
+The CLI can also give the agent the AI/ML API tools (an MCP server and four skills for images, video, speech and web search), install the [developer skills](agent-skills.md) that teach the agent to write code against AI/ML API, run it on a separate key with a spending cap, show what your key spent, and take you to the top-up page.
 
-This page describes `aimlapi` 0.4.0. Run `aimlapi --version` to see yours.
+This page describes `aimlapi` 0.5.0. Run `aimlapi --version` to see yours.
 
 ## Supported agents
 
@@ -154,7 +154,7 @@ Before the agent starts, the CLI checks your balance. If it is below $1, the CLI
 Every agent takes the same flags (`--profile` only for Claude Code and OpenClaude):
 
 ```bash
-aimlapi <agent> [--model <id> | --model auto] [--profile cheap|balanced|max] [--budget <usd>] [--mcp | --no-mcp] [--config | --undo] [--dry-run] [--yes] [-- <agent arguments>]
+aimlapi <agent> [--model <id> | --model auto] [--profile cheap|balanced|max] [--budget <usd>] [--mcp | --no-mcp] [--skills | --no-skills] [--config | --undo] [--dry-run] [--yes] [-- <agent arguments>]
 ```
 
 | Flag                   | What it does                                                                                                                                                                                    |
@@ -166,8 +166,10 @@ aimlapi <agent> [--model <id> | --model auto] [--profile cheap|balanced|max] [--
 | `--budget <usd>`       | Runs the agent on a separate API key with a spending cap that never resets, for example `5` or `5.50`. See [Spending cap](cli.md#spending-cap).                                         |
 | `--mcp`                | Connects the AI/ML API MCP server and installs its skills without asking.                                                                                                                       |
 | `--no-mcp`             | Leaves the MCP server and skills out of this run. Your saved answer stays as it is.                                                                                                             |
+| `--skills`             | Installs or updates the [developer skills](cli.md#developer-skills) now, even if you turned them off or they were checked today. With `--config`, turns them back on for good. |
+| `--no-skills`          | Leaves the [developer skills](cli.md#developer-skills) out of this run. With `--config`, turns them off for this agent until `--skills --config`. |
 | `--config`             | Saves the configuration into the agent's own config files and exits, so the agent uses AI/ML API when you start it directly.                                                                   |
-| `--undo`               | Reverts what the CLI wrote into the agent's config files and puts back the values it replaced, and removes the MCP server and skills a launch added. Works even when the agent is no longer installed. |
+| `--undo`               | Reverts what the CLI wrote into the agent's config files and puts back the values it replaced, and removes the MCP server, the toolbox skills and the developer skills a launch added. Works even when the agent is no longer installed. |
 | `--force`              | With `--undo`: restore files even if they were edited after the CLI wrote them.                                                                                                                 |
 | `--dry-run`            | Prints what would happen (environment variables, file diffs, the command line, the model slots, the tools it would connect) with secrets masked, and changes nothing: it doesn't even create `~/.aimlapi`. Combine it with `--config` or `--undo` to preview them. |
 | `--yes`, `-y`          | Installs a missing agent with npm without asking, and asks nothing else either. With `--yes`, the MCP server is not connected until you answer the question once (or pass `--mcp`).            |
@@ -258,7 +260,7 @@ aimlapi claude --budget 5
 
 For Claude Code, Codex, OpenCode, Cline and Hermes Agent, the CLI can connect the AI/ML API MCP server, so the agent can generate media and use AI/ML API tools, not only models. In the agent's config the server is named `aimlapi-cli`.
 
-With the server, the CLI installs four skills: `aimlapi-images`, `aimlapi-video`, `aimlapi-speech` and `aimlapi-web-search`. They tell the agent how to use the tools for a plain request. They tell you the price before an expensive generation and end with what it cost, taken from the tool's answer; if the answer has no figure, they say so.
+With the server, the CLI installs four skills: `aimlapi-mcp-images`, `aimlapi-mcp-video`, `aimlapi-mcp-speech` and `aimlapi-mcp-web-search`. Before 0.5.0 they were called `aimlapi-images`, `aimlapi-video`, `aimlapi-speech` and `aimlapi-web-search`; the first launch of 0.5.0 removes the old-name copies the CLI installed and leaves any you edited, with a note. They tell the agent how to use the tools for a plain request. They tell you the price before an expensive generation and end with what it cost, taken from the tool's answer; if the answer has no figure, they say so.
 
 * The first run asks once per agent: `Connect the AI/ML API tools (MCP) and skills to <agent>? [Y/n]`, with a line that says what goes where. The CLI remembers the answer. An agent that an earlier version already connected counts as a yes.
 * Without a terminal, in CI or with `--yes`, nothing is connected until you answer at a terminal once, and a note says so. `--mcp` connects without asking.
@@ -277,7 +279,28 @@ With the server, the CLI installs four skills: `aimlapi-images`, `aimlapi-video`
 
 After `--config`, Codex, OpenCode and Hermes Agent started on their own have no key for the server until you set `AIMLAPI_CLI_MCP_KEY`; `aimlapi <agent>` sets it for its own launches.
 
-The toolbox has no text-to-speech tool yet: `aimlapi-speech` looks for one in the tool catalog and tells you if there is none. A video from a local file needs a URL, since there is no upload tool. OpenClaude, OpenClaw, zero and ZCode don't get the server or the skills yet.
+The toolbox has no text-to-speech tool yet: `aimlapi-mcp-speech` looks for one in the tool catalog and tells you if there is none. A video from a local file needs a URL, since there is no upload tool. OpenClaude, OpenClaw, zero and ZCode don't get the server or the skills yet.
+
+### Developer skills
+
+Since 0.5.0, `aimlapi claude`, `aimlapi codex`, `aimlapi opencode`, `aimlapi cline` and `aimlapi hermes` also install the AI/ML API [agent skills](agent-skills.md) into the agent's skills folder (the same folder as in the table above). These 13 skills teach the agent to write code against AI/ML API: picking a model, its parameters and price, long jobs, webhooks, batches, retries, costs and sandbox testing. They are separate from the toolbox skills and need no MCP server.
+
+* The CLI installs them on the first launch and keeps them up to date, asking the npm registry for the package `@ai-ml.api/skills` at most once a day. When there is nothing new, the launch prints nothing about them.
+* The CLI checks the package against the registry's sha512 before it writes anything.
+* If the registry can't be reached, the CLI prints one warning and the agent still starts.
+* A skill folder of yours with the same name, or one of these skills that you edited, is left alone. A skill you deleted stays deleted.
+* `--no-skills --config` turns them off for that agent, and `--skills --config` turns them back on. `--undo` removes the ones the CLI installed.
+
+You can also manage them yourself:
+
+```bash
+aimlapi skills install [skill ...] [--agent claude] [--scope user|project] [--dir <path>]
+aimlapi skills list [--available]
+aimlapi skills update
+aimlapi skills remove [skill ...]
+```
+
+`--scope project` installs into the current repository (`.claude/skills` for Claude Code, `.agents/skills` for the other agents) instead of your home folder. `--force` replaces a folder the CLI did not install and keeps the old one as a hidden `.<name>.aimlapi-backup-<time>` folder next to it.
 
 ### Claude Code
 
