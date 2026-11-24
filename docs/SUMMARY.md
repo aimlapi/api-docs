@@ -298,6 +298,7 @@
     * [Gpt 6.1 Terra Pro](api-references/text-models-llm/openai/gpt-6.1-terra-pro.md)
     * [Gpt 6.2 Astra](api-references/text-models-llm/openai/gpt-6.2-astra.md)
     * [Gpt 6.2 Sol](api-references/text-models-llm/openai/gpt-6.2-sol.md)
+    * [Gpt 6 Astra Healthcare](api-references/text-models-llm/openai/gpt-6-astra-healthcare.md)
   * [Perceptron](api-references/text-models-llm/perceptron/README.md)
     * [Mk1.5](api-references/text-models-llm/perceptron/perceptron-mk1.5.md)
   * [Perplexity](api-references/text-models-llm/perplexity/README.md)
