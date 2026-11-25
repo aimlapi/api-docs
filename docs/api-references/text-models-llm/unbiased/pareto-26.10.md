@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: unbiased/pareto-26.10. Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks."
 ---
 
