@@ -42,7 +42,8 @@
                     },
                     "id": {
                       "type": "string",
-                      "description": "ID of the event."
+                      "description": "ID of the event.",
+                      "example": "evt_3YpQx8Kq2LmN5rT7vW9zAb"
                     }
                   },
                   "required": [

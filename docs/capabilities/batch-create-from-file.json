@@ -59,7 +59,10 @@
                       "maxLength": 512
                     },
                     "maxProperties": 16,
-                    "description": "Up to 16 string pairs of your own. Keys are up to 64 characters, values up to 512. Returned on the batch object."
+                    "description": "Up to 16 string pairs of your own. Keys are up to 64 characters, values up to 512. Returned on the batch object.",
+                    "example": {
+                      "job": "catalog-translation"
+                    }
                   },
                   "webhook_url": {
                     "type": "string",
@@ -187,21 +190,25 @@
                   "properties": {
                     "code": {
                       "type": "string",
-                      "description": "Error code, for example `max_tokens_required` or `insufficient_credits`."
+                      "description": "Error code, for example `max_tokens_required` or `insufficient_credits`.",
+                      "example": "max_tokens_required"
                     },
                     "message": {
                       "type": "string",
-                      "description": "What went wrong."
+                      "description": "What went wrong.",
+                      "example": "Every line must set max_tokens or max_completion_tokens: the hold is priced from it."
                     },
                     "param": {
                       "type": "string",
                       "nullable": true,
-                      "description": "The field the error is about, if any."
+                      "description": "The field the error is about, if any.",
+                      "example": "body.max_tokens"
                     },
                     "line": {
                       "type": "integer",
                       "nullable": true,
-                      "description": "1-based line of the input file, if the error is about one line."
+                      "description": "1-based line of the input file, if the error is about one line.",
+                      "example": 2
                     }
                   },
                   "required": [
@@ -216,7 +223,8 @@
           },
           "input_file_id": {
             "type": "string",
-            "description": "ID of the input file."
+            "description": "ID of the input file.",
+            "example": "file-3f2b8c1e-7a4d-4e0b-9c55-1d2e3f4a5b6c"
           },
           "completion_window": {
             "type": "string",
@@ -235,17 +243,20 @@
               "cancelling",
               "cancelled"
             ],
-            "description": "Current status of the batch."
+            "description": "Current status of the batch.",
+            "example": "validating"
           },
           "output_file_id": {
             "type": "string",
             "nullable": true,
-            "description": "ID of the file with the successful results, once the batch has ended."
+            "description": "ID of the file with the successful results, once the batch has ended.",
+            "example": null
           },
           "error_file_id": {
             "type": "string",
             "nullable": true,
-            "description": "ID of the file with the lines that failed, once the batch has ended."
+            "description": "ID of the file with the lines that failed, once the batch has ended.",
+            "example": null
           },
           "created_at": {
             "type": "integer",
@@ -255,7 +266,8 @@
           "in_progress_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the provider accepted the batch."
+            "description": "Unix time (seconds) when the provider accepted the batch.",
+            "example": null
           },
           "expires_at": {
             "type": "integer",
@@ -265,32 +277,38 @@
           "finalizing_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the results started being collected."
+            "description": "Unix time (seconds) when the results started being collected.",
+            "example": null
           },
           "completed_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the batch completed."
+            "description": "Unix time (seconds) when the batch completed.",
+            "example": null
           },
           "failed_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the batch failed."
+            "description": "Unix time (seconds) when the batch failed.",
+            "example": null
           },
           "expired_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the batch expired."
+            "description": "Unix time (seconds) when the batch expired.",
+            "example": null
           },
           "cancelling_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the cancellation started."
+            "description": "Unix time (seconds) when the cancellation started.",
+            "example": null
           },
           "cancelled_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the batch was cancelled."
+            "description": "Unix time (seconds) when the batch was cancelled.",
+            "example": null
           },
           "request_counts": {
             "type": "object",
@@ -298,15 +316,18 @@
             "properties": {
               "total": {
                 "type": "integer",
-                "description": "Lines in the input file."
+                "description": "Lines in the input file.",
+                "example": 0
               },
               "completed": {
                 "type": "integer",
-                "description": "Lines that succeeded."
+                "description": "Lines that succeeded.",
+                "example": 0
               },
               "failed": {
                 "type": "integer",
-                "description": "Lines that failed, expired or were cancelled."
+                "description": "Lines that failed, expired or were cancelled.",
+                "example": 0
               }
             },
             "required": [
@@ -321,29 +342,34 @@
             "description": "Tokens of the whole batch, as the provider reported them. `null` until the results are read.",
             "properties": {
               "input_tokens": {
-                "type": "integer"
+                "type": "integer",
+                "example": 0
               },
               "input_tokens_details": {
                 "type": "object",
                 "properties": {
                   "cached_tokens": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 0
                   }
                 }
               },
               "output_tokens": {
-                "type": "integer"
+                "type": "integer",
+                "example": 0
               },
               "output_tokens_details": {
                 "type": "object",
                 "properties": {
                   "reasoning_tokens": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 0
                   }
                 }
               },
               "total_tokens": {
-                "type": "integer"
+                "type": "integer",
+                "example": 0
               }
             }
           },
@@ -353,7 +379,10 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "The metadata you set when creating the batch."
+            "description": "The metadata you set when creating the batch.",
+            "example": {
+              "job": "catalog-translation"
+            }
           }
         },
         "required": [
@@ -390,7 +419,8 @@
             "properties": {
               "message": {
                 "type": "string",
-                "description": "What went wrong, in plain words."
+                "description": "What went wrong, in plain words.",
+                "example": "Every line must set max_tokens or max_completion_tokens: the hold is priced from it."
               },
               "type": {
                 "type": "string",
@@ -406,11 +436,13 @@
               "param": {
                 "type": "string",
                 "nullable": true,
-                "description": "The field the error is about, if any."
+                "description": "The field the error is about, if any.",
+                "example": "body.max_tokens"
               },
               "code": {
                 "type": "string",
-                "description": "Machine-readable code, for example `unsupported_endpoint`."
+                "description": "Machine-readable code, for example `unsupported_endpoint`.",
+                "example": "max_tokens_required"
               }
             },
             "required": [
