@@ -19,6 +19,14 @@ The skills are open source: [github.com/aimlapi/skills](https://github.com/aimla
 
 Pick the route for your agent. Each one installs the same skills, and running it again updates them.
 
+### Any agent
+
+```bash
+npx skills add aimlapi/skills
+```
+
+The [skills](https://skills.sh) CLI asks which agent to install for (Claude Code, Cursor, Codex, Gemini CLI, OpenCode and others) and copies the skills into its folder. Requires Node.js 22.20 or later.
+
 ### Claude Code
 
 ```
@@ -77,6 +85,23 @@ gh skill install aimlapi/skills --all --agent claude-code
 ```
 
 Without `--all` or a skill name, a non-interactive shell only lists the skills.
+
+### Codex
+
+```bash
+codex plugin marketplace add aimlapi/skills
+codex plugin add aimlapi@aimlapi
+```
+
+Start a new Codex session after installing. `codex plugin marketplace upgrade` gets a new version.
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/aimlapi/skills
+```
+
+Gemini CLI asks for your AI/ML API key once and keeps it in the system keychain. `gemini extensions update aimlapi` gets a new version.
 
 ### Cursor
 
