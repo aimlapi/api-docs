@@ -95,7 +95,8 @@
                       }
                     },
                     "has_more": {
-                      "type": "boolean"
+                      "type": "boolean",
+                      "example": false
                     }
                   },
                   "required": [
@@ -132,11 +133,13 @@
           },
           "type": {
             "type": "string",
-            "description": "Event type, for example `video.completed` or `batch.completed`."
+            "description": "Event type, for example `video.completed` or `batch.completed`.",
+            "example": "batch.completed"
           },
           "task_id": {
             "type": "string",
-            "description": "ID of the generation, response or batch the event is about."
+            "description": "ID of the generation, response or batch the event is about.",
+            "example": "batch_V1StGXR8Z5jdHi6BmyT8k"
           },
           "state": {
             "type": "string",
@@ -147,34 +150,41 @@
               "gone",
               "dead"
             ],
-            "description": "`pending`: waiting for its next attempt. `delivering`: an attempt is running. `delivered`: your endpoint answered `2xx`. `gone`: your endpoint answered `410`. `dead`: no more attempts, see `dead_reason`."
+            "description": "`pending`: waiting for its next attempt. `delivering`: an attempt is running. `delivered`: your endpoint answered `2xx`. `gone`: your endpoint answered `410`. `dead`: no more attempts, see `dead_reason`.",
+            "example": "delivered"
           },
           "dead_reason": {
             "type": "string",
             "nullable": true,
-            "description": "Why delivery stopped, for example `attempts_exhausted`, `revoked`, `no_signing_secret`, `invalid_url` or `client_backlog`."
+            "description": "Why delivery stopped, for example `attempts_exhausted`, `revoked`, `no_signing_secret`, `invalid_url` or `client_backlog`.",
+            "example": null
           },
           "attempts": {
             "type": "integer",
-            "description": "Attempts made so far."
+            "description": "Attempts made so far.",
+            "example": 1
           },
           "url_host": {
             "type": "string",
-            "description": "Host name of the address the event goes to."
+            "description": "Host name of the address the event goes to.",
+            "example": "hooks.example.com"
           },
           "created_at": {
             "type": "integer",
-            "description": "Unix time (seconds) when the event was created."
+            "description": "Unix time (seconds) when the event was created.",
+            "example": 1794585722
           },
           "next_attempt_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) of the next attempt, if one is planned."
+            "description": "Unix time (seconds) of the next attempt, if one is planned.",
+            "example": null
           },
           "delivered_at": {
             "type": "integer",
             "nullable": true,
-            "description": "Unix time (seconds) when the event was delivered."
+            "description": "Unix time (seconds) when the event was delivered.",
+            "example": 1794585723
           }
         },
         "required": [
