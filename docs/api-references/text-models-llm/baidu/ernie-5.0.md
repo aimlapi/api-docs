@@ -1,4 +1,6 @@
 ---
+noIndex: true
+hidden: true
 description: "Model id: baidu/ernie-5.0. ERNIE 5.0 is Baidu’s unified foundation model supporting text generation, visual understanding, and deep-thinking reasoning, with a 128K context window."
 ---
 
