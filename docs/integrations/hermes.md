@@ -1,258 +1,191 @@
 ---
 description: >-
-  Connect Hermes Agent to AI/ML API through the native provider fork or a manual
-  OpenAI-compatible setup.
+  Connect Hermes Agent to AI/ML API through the official aimlapi.com provider
+  plugin, with optional AI/ML API MCP tools.
 ---
 
 # Hermes
 
 ## About
 
-[Hermes Agent](https://github.com/NousResearch/hermes-agent) is an agent framework for CLI and messaging workflows. It supports OpenAI-compatible providers and can use AI/ML API either through the AI/ML API fork or through manual OpenAI-compatible configuration in the official repository.
+[Hermes Agent](https://github.com/NousResearch/hermes-agent) is an agent framework for CLI and messaging workflows.
 
-This guide covers both setup paths.
+AI/ML API ships as the **aimlapi.com provider plugin** in the official Hermes plugin catalog ([PR #146493](https://github.com/NousResearch/hermes-agent/pull/146493), updated to v1.1.0 in [PR #156918](https://github.com/NousResearch/hermes-agent/pull/156918)). The plugin adds `aimlapi` as a model provider and can also connect the [AI/ML API MCP server](../quickstart/mcp.md), so the agent gets model discovery, media generation and Toolbox tools. Its source is [aimlapi/hermes-provider-aimlapi](https://github.com/aimlapi/hermes-provider-aimlapi).
 
 {% hint style="info" %}
 Prefer one command? With Hermes Agent installed, `npx aimlapi hermes` signs you in through the browser, adds AI/ML API as a provider to Hermes' `config.yaml` and starts Hermes, with no key to copy. See [CLI](../quickstart/cli.md#hermes-agent).
 
-The CLI adds its own providers (`custom:aimlapi-cli-run` for a single run, `custom:aimlapi-cli` with `--config`) rather than the options below. `aimlapi hermes --config` makes `custom:aimlapi-cli` the default and replaces the `model:` keys (for example, those from Option 1 or 2); `aimlapi hermes --undo` puts them back.
+The CLI adds its own providers (`custom:aimlapi-cli-run` for a single run, `custom:aimlapi-cli` with `--config`) rather than the plugin below. `aimlapi hermes --config` makes `custom:aimlapi-cli` the default and replaces the `model:` keys; `aimlapi hermes --undo` puts them back.
 {% endhint %}
 
 ## Quick start
 
-Use the AI/ML API fork if you want the fastest setup:
+{% stepper %}
+{% step %}
+## Install Hermes
 
-1. Clone the fork.
-2. Install Hermes from source.
-3. Export `AIMLAPI_API_KEY`.
-4. Run `hermes model`.
-5. Choose `AI/ML API`.
-6. Start chatting with `hermes chat`.
+```bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+```
+{% endstep %}
 
-Use the official Hermes repository if you want to stay on upstream Hermes and do not mind manual OpenAI-compatible configuration.
+{% step %}
+## Install the aimlapi.com plugin
 
-> On Windows, use WSL2 for the source install commands below. The Hermes setup script is a Unix shell script intended for Linux/macOS-style environments.
+```bash
+hermes plugins install aimlapi
+```
+{% endstep %}
+
+{% step %}
+## Pick the provider
+
+```bash
+hermes model
+```
+
+Choose **aimlapi.com**, paste your key (or create an account from the terminal), and pick a model. At the end Hermes asks whether to add the AI/ML API MCP server.
+{% endstep %}
+
+{% step %}
+## Start chatting
+
+```bash
+hermes
+```
+{% endstep %}
+{% endstepper %}
 
 ## When to use AI/ML API with Hermes
 
 AI/ML API works well with Hermes when you want:
 
-* one key for many model providers
-* an OpenAI-compatible endpoint
-* fast switching between coding, reasoning, and multimodal models
+* one key for many model providers behind an OpenAI-compatible endpoint
+* a model picker with live prices
+* MCP tools for image, video and audio generation, OCR and the AI/ML API Toolbox in the same agent
 
 ## Prerequisites
 
 Before you start, make sure you have:
 
-* Python 3.11 or newer
-* Git
-* an AI/ML API key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys)
-* a model ID from [aimlapi.com/models](https://aimlapi.com/models)
+* Hermes Agent v0.23.3 or later (the plugin itself needs Hermes 0.22.0 or later)
+* an interactive terminal for the guided `hermes model` step
+* an AI/ML API key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys), or an email to create an account during setup
 
-Use this base URL:
+The base URL is built into the plugin:
 
-```bash
+```
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use API Key Management.
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
-## Choose a setup path
+## Install the plugin
 
-### Option 1: AI/ML API fork
-
-Use the AI/ML API fork if you want the smoothest setup.
-
-Repository:
-
-* [aimlapi/hermes-agent-aimlapi](https://github.com/aimlapi/hermes-agent-aimlapi/tree/feature/add-aimlapi-provider)
-
-Benefits:
-
-* `AI/ML API` appears in `hermes model`
-* the endpoint is preconfigured
-* model discovery is tuned for chat models
-* the API key uses `AIMLAPI_API_KEY`
-
-### Option 2: Official Hermes repository
-
-Use the official Hermes repository if you want to stay on upstream Hermes.
-
-Repository:
-
-* [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
-
-This path uses Hermes' generic OpenAI-compatible provider flow.
-
-## Option 1: Set up the AI/ML API fork
-
-Clone the fork, install Hermes from source, then start provider setup:
+### From the plugin catalog
 
 ```bash
-git clone https://github.com/aimlapi/hermes-agent-aimlapi.git
-cd hermes-agent-aimlapi
-git checkout feature/add-aimlapi-provider
-./setup-hermes.sh
-export AIMLAPI_API_KEY=your_key_here
+hermes plugins install aimlapi
+```
+
+Hermes may ask `Enable now?`. Provider plugins work either way.
+
+### By hand
+
+Use this on any Hermes build that supports model-provider plugins:
+
+```bash
+git clone https://github.com/aimlapi/hermes-provider-aimlapi.git
+mkdir -p ~/.hermes/plugins/model-providers
+cp -r hermes-provider-aimlapi/aimlapi ~/.hermes/plugins/model-providers/aimlapi
+```
+
+## Set up the provider
+
+Run:
+
+```bash
 hermes model
 ```
 
-Then:
+and choose **aimlapi.com**. The guided step then:
 
-1. Choose `AI/ML API`.
-2. Pick a model.
-3. Start Hermes with `hermes` or `hermes chat`.
+1. **If you already have a key**, asks you to paste it and checks it before saving.
+2. **If you are a new user**, takes your email, a top-up amount and the auto top-up choice, opens checkout in the browser, and saves the issued key.
+3. **If the email already has an account**, asks for the 6-digit code sent by email and creates a key named "Hermes Agent".
 
-Hermes already knows the default endpoint. You do not need to enter it manually.
+If a saved key is found, Hermes first asks whether to keep it. The key is saved as `AIMLAPI_API_KEY` in `~/.hermes/.env`.
 
-### Saved configuration
+### Set the key yourself
 
-Hermes stores provider settings in `~/.hermes/config.yaml` and reads secrets from `~/.hermes/.env`.
+On builds without the guided step, or in scripts, set the key and pass the provider explicitly:
 
-Example `config.yaml`:
+```bash
+export AIMLAPI_API_KEY=your_key_here
+hermes --provider aimlapi --model anthropic/claude-sonnet-5
+```
+
+Under cron, the messaging gateway or a redirected stdin, the guided step prints how to set `AIMLAPI_API_KEY` and stops.
+
+## Connect AI/ML API MCP tools (optional)
+
+At the end of the guided `hermes model` step the plugin asks:
+
+```text
+Add the aimlapi.com MCP server to Hermes? [y/N]
+```
+
+The default is no. On `y` it adds this entry to `~/.hermes/config.yaml`:
 
 ```yaml
-model:
-  provider: aimlapi
-  base_url: https://api.aimlapi.com/v1
-  default: openai/gpt-5-chat-latest
+mcp_servers:
+  aimlapi:
+    url: https://mcp.aimlapi.com/mcp
+    headers:
+      Authorization: Bearer ${AIMLAPI_API_KEY}
+    trust: untrusted
 ```
 
-Example `.env`:
+* `${AIMLAPI_API_KEY}` is resolved from your Hermes `.env` when Hermes connects. The key itself is not written to `config.yaml`.
+* `trust: untrusted` makes Hermes ask before every tool call that is not read-only, which covers every billed call. Read-only tools such as model search and account balance run without a prompt.
+* If the provider points to another endpoint (through `AIMLAPI_INFERENCE_URL` or `model.base_url`), the entry gets `auth: oauth` instead of the key. Sign in with `hermes mcp login aimlapi`.
+* An existing `mcp_servers.aimlapi` entry is never changed.
+
+The tools load in your next session, or after `/reload-mcp`. To add the server on a build without the guided step, copy the same block into `config.yaml` by hand.
+
+Check and manage the server:
 
 ```bash
-AIMLAPI_API_KEY=your_key_here
-AIMLAPI_BASE_URL=https://api.aimlapi.com/v1
+hermes mcp list
+hermes mcp test aimlapi
+hermes mcp remove aimlapi
 ```
 
-`AIMLAPI_BASE_URL` is optional.
-
-### One-off run
-
-Use this when you want to test AI/ML API without changing your default provider:
-
-```bash
-hermes chat --provider aimlapi --model openai/gpt-5-chat-latest
-```
-
-### Verify the fork setup
-
-Run a quick health check:
-
-```bash
-hermes doctor
-```
-
-Then open a chat directly:
-
-```bash
-hermes chat --provider aimlapi --model openai/gpt-5-chat-latest
-```
-
-## Option 2: Set up official Hermes
-
-Clone the upstream repository and install Hermes from source:
-
-```bash
-git clone https://github.com/NousResearch/hermes-agent.git
-cd hermes-agent
-./setup-hermes.sh
-```
-
-Add your AI/ML API credentials to `~/.hermes/.env` using the OpenAI-compatible variables:
-
-```bash
-OPENAI_API_KEY=your_key_here
-OPENAI_BASE_URL=https://api.aimlapi.com/v1
-```
-
-Then set a model in `~/.hermes/config.yaml`:
-
-```yaml
-model:
-  provider: custom
-  base_url: https://api.aimlapi.com/v1
-  default: openai/gpt-5-chat-latest
-```
-
-Start Hermes:
-
-```bash
-hermes
-```
-
-### Verify the upstream setup
-
-Check that Hermes sees your configuration:
-
-```bash
-hermes doctor
-```
-
-Then start a chat and confirm the selected model answers normally:
-
-```bash
-hermes chat
-```
-
-### What changes in the upstream flow
-
-Compared with the fork:
-
-* `AI/ML API` does not appear as a native provider
-* Hermes treats the endpoint as a custom OpenAI-compatible backend
-* you may need to enter model IDs manually
-* credentials use `OPENAI_API_KEY` and `OPENAI_BASE_URL`
+Generation, chat and Toolbox runs through MCP are billed to your AI/ML API balance. See [MCP](../quickstart/mcp.md) for the tool list.
 
 ## Model selection
 
-Use exact AI/ML API model IDs in Hermes.
-
-Common examples:
-
-* `openai/gpt-5-chat-latest`
-* `anthropic/claude-sonnet-4.6`
-* `google/gemini-2.5-flash`
-
-The Hermes picker focuses on chat-completion models. Non-chat models are excluded from the interactive list.
+The picker loads the AI/ML API catalog and shows the most popular models first, then every other chat model that supports tool calling, with live input and output prices. If the catalog cannot be loaded, it shows a built-in fallback list.
 
 ### Good starting models
 
-Start with one of these:
+* `anthropic/claude-sonnet-5`: the plugin default
+* `anthropic/claude-opus-5`: for harder coding and long-form work
+* `google/gemini-3.6-flash`: lower latency and lower cost
 
-* `openai/gpt-5-chat-latest` for strong general use
-* `anthropic/claude-sonnet-4.6` for coding and long-form work
-* `google/gemini-2.5-flash` for lower latency and lower cost
-
-For the full catalog, use All Model IDs.
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Switch models later
 
-To change the saved model, run:
+To change the saved model, run `hermes model` again. For a single run, pass the provider and model:
 
 ```bash
-hermes model
-```
-
-To switch inside a session in the fork, use `/model`:
-
-```
-/model aimlapi:openai/gpt-5-chat-latest
-/model aimlapi:anthropic/claude-sonnet-4.6
-/model aimlapi:google/gemini-2.5-flash
+hermes --provider aimlapi --model google/gemini-3.6-flash
 ```
 
 ## CLI and gateway usage
 
-Once configured, the normal Hermes commands work as usual:
-
-```bash
-hermes
-hermes chat
-```
-
-If you use the Hermes gateway, it reuses the same default provider:
+Once configured, the normal Hermes commands use AI/ML API. The Hermes gateway reuses the same default provider:
 
 ```bash
 hermes gateway setup
@@ -263,91 +196,65 @@ hermes gateway start
 
 Make sure these values line up:
 
-* base URL: `https://api.aimlapi.com/v1`
-* provider: `aimlapi` in the fork, `custom` in upstream
-* model ID: exact AI/ML API model ID
-* API key variable: `AIMLAPI_API_KEY` in the fork or `OPENAI_API_KEY` in upstream
-
-## Diagnostics
-
-Check your setup with:
-
-```bash
-hermes doctor
-```
-
-This helps confirm:
-
-* your API key is present
-* Hermes can reach the models endpoint
-* the saved provider config is valid
+* plugin: `aimlapi` installed (`hermes plugins install aimlapi`)
+* provider: `aimlapi` (shown as **aimlapi.com**)
+* API key variable: `AIMLAPI_API_KEY` in `~/.hermes/.env`
+* base URL: `https://api.aimlapi.com/v1` (built in)
+* model ID: exact AI/ML API chat model ID
+* MCP (optional): `mcp_servers.aimlapi` in `~/.hermes/config.yaml`
 
 ## Troubleshooting
 
-### `hermes` command is not found
+<details>
 
-Make sure you ran the install script from the repository root:
+<summary>aimlapi.com is not in the `hermes model` picker</summary>
 
-```bash
-./setup-hermes.sh
-```
+Install the plugin with `hermes plugins install aimlapi`, or copy it by hand as shown above. Check that your Hermes version is 0.22.0 or later.
 
-Then restart your terminal and try again:
+</details>
 
-```bash
-hermes doctor
-```
+<details>
 
-If you are on Windows, run the setup through WSL2.
+<summary>`hermes model` asks for a plain API key instead of the guided step</summary>
 
-### Hermes does not ask for the endpoint
+Your Hermes build does not support guided provider setup yet. Paste your key, or update Hermes to v0.23.3 or later. You can also add the MCP block to `config.yaml` by hand.
 
-This is expected in the AI/ML API fork. The default endpoint is built in:
+</details>
 
-```bash
-https://api.aimlapi.com/v1
-```
+<details>
 
-### My model is missing from the picker
+<summary>MCP tools do not show up</summary>
 
-Usually one of these is true:
+Tools load in a new session. Start a new session or run `/reload-mcp`, then check the server with `hermes mcp test aimlapi`.
 
-* the model is not exposed as a chat-completion model
-* the live model list failed to load
-* the model is not in the starter list yet
+</details>
 
-Set the model manually in `config.yaml` if needed.
+<details>
 
-### Hermes selects another provider
+<summary>I want to use a proxy</summary>
 
-Force AI/ML API with one of these:
+Set `AIMLAPI_INFERENCE_URL` or `model.base_url` in `config.yaml` to your proxy URL. In that case connect MCP with `hermes mcp login aimlapi`.
 
-* run `hermes model` and choose `AI/ML API`
-* set `model.provider: aimlapi`
-* use `hermes chat --provider aimlapi --model ...`
+</details>
 
-### I want to use a proxy
+<details>
 
-Set a custom base URL:
+<summary>I get an auth error</summary>
 
-```bash
-AIMLAPI_BASE_URL=https://your-proxy.example/v1
-```
+Check that:
 
-### I get an auth error
+* `AIMLAPI_API_KEY` in `~/.hermes/.env` is a valid key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys)
+* a different `AIMLAPI_API_KEY` exported in your shell does not override it
+* your balance is sufficient at [aimlapi.com/app](https://aimlapi.com/app)
 
-Usually one of these is wrong:
+Run `hermes doctor` to see what Hermes resolved.
 
-* the key is missing from `~/.hermes/.env`
-* the variable name does not match your setup path
-* the saved provider points to another backend
-
-Run `hermes doctor` first. Then reopen `~/.hermes/.env` and verify the key name.
+</details>
 
 ## Links
 
-* All Model IDs
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
-* [AI/ML API models endpoint](https://api.aimlapi.com/models)
+* [aimlapi.com Hermes plugin](https://github.com/aimlapi/hermes-provider-aimlapi)
 * [Hermes repository](https://github.com/NousResearch/hermes-agent)

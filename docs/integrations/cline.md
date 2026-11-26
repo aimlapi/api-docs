@@ -32,15 +32,31 @@ Faster: run `npx aimlapi cline`. It signs you in through the browser and makes A
 
 <figure><img src="../.gitbook/assets/file-jxjkvunu8d.png" alt=""><figcaption></figcaption></figure>
 
-In the settings:
+In the settings, pick one of the two options below.
+
+### Option 1: AI/ML API provider (Cline v4.1.24 and later)
+
+Cline ships **AI/ML API** (provider ID `aimlapi`) in its provider list, generated from the [models.dev](models-dev.md) catalog.
+
+* In **API Provider**, search for **AI/ML API** and select it.
+* In **Base URL**, make sure the value is `https://api.aimlapi.com/v1`. Enter it if the field is empty.
+* In the API key field, enter your [AI/ML API key](https://aimlapi.com/app/keys).
+* In **Model ID**, enter an AI/ML API model ID, for example `anthropic/claude-sonnet-5`.
+* Click **Save**.
+
+Cline uses the same OpenAI-compatible settings form for this provider, so the API key field may be labeled **OpenAI Compatible API Key**.
+
+### Option 2: OpenAI Compatible provider
+
+Use this on Cline versions before v4.1.24:
 
 * Set **API Provider** to **OpenAI Compatible**.
-* In **Base URL**, enter one of our available endpoints.
+* In **Base URL**, enter `https://api.aimlapi.com/v1`.
 * In **API Key**, enter your [AI/ML API key](https://aimlapi.com/app/keys).
 * In **Model ID**, specify the model name. You can find some model selection tips in our [description of code generation as a capability](../capabilities/code-generation.md).
 * Click **Save**.
 
-All done — start coding with Cline!
+All done, start coding with Cline!
 
 ## Usage Example
 
@@ -62,47 +78,21 @@ To save the file, Cline asks for confirmation.
 
 Once the file is saved, a second API request appears with metadata, along with a notification that the task was successfully completed.
 
-## **Supported Models**
+## Model selection
 
-These models have been tested by our team for compatibility with Cline integration.
+Use exact AI/ML API chat model IDs, for example:
 
-<details>
+* `anthropic/claude-sonnet-5`: strong for coding
+* `openai/gpt-5-5`: strong general use
+* `google/gemini-3.6-flash`: lower latency and lower cost
 
-<summary>Supported Model List</summary>
-
-* [gpt-3.5-turbo](../api-references/text-models-llm/openai/gpt-3.5-turbo.md)
-* [gpt-3.5-turbo-0125](../api-references/text-models-llm/openai/gpt-3.5-turbo.md)
-* [gpt-3.5-turbo-1106](../api-references/text-models-llm/openai/gpt-3.5-turbo.md)
-* [gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md)
-* [gpt-4o-2024-05-13](../api-references/text-models-llm/openai/gpt-4o.md)
-* [gpt-4o-2024-08-06](../api-references/text-models-llm/openai/gpt-4o.md)
-* [gpt-4o-mini](../api-references/text-models-llm/openai/gpt-4o-mini.md)
-* [gpt-4o-mini-2024-07-18](../api-references/text-models-llm/openai/gpt-4o-mini.md)
-* [chatgpt-4o-latest](../api-references/text-models-llm/openai/gpt-4o.md)
-* [gpt-4o-2024-05-13](../api-references/text-models-llm/openai/gpt-4o.md)
-* [gpt-4o-2024-08-06](../api-references/text-models-llm/openai/gpt-4o.md)
-* [openai/gpt-4.1-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1.md)
-* [openai/gpt-4.1-mini-2025-04-14](../api-references/text-models-llm/openai/gpt-4.1-mini.md)
-* [deepseek/deepseek-chat](../api-references/text-models-llm/deepseek/deepseek-chat.md)
-* [deepseek/deepseek-r1](../api-references/text-models-llm/deepseek/deepseek-r1.md)
-* [meta-llama/Llama-3.3-70B-Instruct-Turbo](../api-references/text-models-llm/meta/Llama-3.3-70B-Instruct-Turbo.md)
-* [qwen-max](../api-references/text-models-llm/alibaba-cloud/qwen-max.md)
-* [qwen-max-2025-01-25](../api-references/text-models-llm/alibaba-cloud/qwen-max.md)
-* [qwen-plus](../api-references/text-models-llm/alibaba-cloud/qwen-plus.md)
-* [anthracite-org/magnum-v4-72b](../api-references/text-models-llm/anthracite/magnum-v4.md)
-* [google/gemini-2.0-flash](/broken/pages/CapOhTrzos7y9s3QTcET)
-* [mistralai/mistral-nemo](../api-references/text-models-llm/mistral-ai/mistral-nemo.md)
-* [MiniMax-Text-01](../api-references/text-models-llm/minimax/text-01.md)
-* [x-ai/grok-3-beta](../api-references/text-models-llm/xai/grok-3-beta.md)
-* [x-ai/grok-3-mini-beta](../api-references/text-models-llm/xai/grok-3-mini-beta.md)
-
-</details>
+With the AI/ML API provider, Cline suggests models from its copy of the models.dev catalog, which it refreshes at runtime. For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Troubleshooting
 
 Possible Issues:
 
 * **403 status code (no body)** — This is the most common error. Possible causes:
-  * You might need to use a different endpoint. Be sure to refer to the documentation for the specific model you've selected from our catalog!
+  * The Base URL is not `https://api.aimlapi.com/v1`.
   * The user may have run out of tokens or doesn’t have enough. Check your balance in your account dashboard.
-* **400 status code (no body)** — This error occurs when using models that are not compatible with the integration. See the previous section [Supported Models](cline.md#supported-models) :point\_up:
+* **400 status code (no body)**: this error usually means the model ID is wrong or the model is not a chat model. Check the ID in [Model selection](cline.md#model-selection).

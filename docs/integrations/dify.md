@@ -10,7 +10,10 @@ description: >-
 
 [Dify](https://dify.ai/) is an open-source platform for building LLM applications — chat apps, agents, and visual workflows — with a built-in RAG pipeline and a model-provider layer that any app in the workspace shares.
 
-AI/ML API ships as an official **Dify Marketplace plugin**, published as [aimlapi/aimlapi](https://marketplace.dify.ai/plugin/aimlapi/aimlapi). Install it from the Marketplace, paste one key, and every app in the workspace can use AI/ML API models.
+AI/ML API ships two official **Dify Marketplace plugins** that use the same key:
+
+* **aimlapi.com**, published as [aimlapi/aimlapi](https://marketplace.dify.ai/plugin/aimlapi/aimlapi): a model provider for chat and embedding models. Install it, paste one key, and every app in the workspace can use AI/ML API models.
+* **AI/ML API Media & Search**, published as [aimlapi/aimlapi\_media](https://marketplace.dify.ai/plugin/aimlapi/aimlapi_media): a tool plugin for image and video generation, text to speech, speech to text, OCR and web search. See [Media and search tools](dify.md#media-and-search-tools).
 
 ## Quick start
 
@@ -56,7 +59,7 @@ Before you start, make sure you have:
 * an AI/ML API key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys)
 * a model ID from [aimlapi.com/models](https://aimlapi.com/models)
 
-Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de41a1a02c07771cac9b).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Supported model types
 
@@ -65,7 +68,7 @@ Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de4
 | LLM | chat apps, agents, workflow LLM nodes |
 | Text Embedding | indexing knowledge into Dify's RAG pipeline |
 
-Image, video, and audio models are not exposed through this plugin.
+Image, video, and audio models are not exposed through the model provider plugin. Use the [AI/ML API Media & Search](dify.md#media-and-search-tools) tool plugin for them.
 
 ## Model selection
 
@@ -78,7 +81,34 @@ The plugin ships a generated snapshot of the AI/ML API chat catalog — over 300
 * `google/gemini-3.6-flash` — lower latency and lower cost
 * `openai/text-embedding-3-small` — embeddings
 
-For the full catalog, use [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
+
+## Media and search tools
+
+The **AI/ML API Media & Search** plugin ([aimlapi/aimlapi\_media](https://marketplace.dify.ai/plugin/aimlapi/aimlapi_media), v0.1.0, merged into the Dify plugin registry in [PR #3935](https://github.com/langgenius/dify-plugins/pull/3935)) adds AI/ML API tools that you can use in workflows, chatflows and agents. It is a regular Dify tool plugin and needs Dify 1.6.0 or later.
+
+| Tool | What it does | Default model |
+| --- | --- | --- |
+| Generate image | Text to image | `minimax/image-01` |
+| Generate video | Text to video: submits the job, waits, returns the file | `minimax/h3-lite` |
+| Get video result | Fetches a video by generation ID | n/a |
+| Text to speech | Text to audio | `openai/gpt-4o-mini-tts` |
+| Speech to text | Transcribes an uploaded audio file | `deepgram/nova-3` |
+| OCR | PDF or image to Markdown, page by page | `mistral/mistral-ocr-latest` |
+| Web search | AI/ML API Toolbox tool `web/search` | n/a |
+
+### Set up the tools
+
+1. In Dify, install **AI/ML API Media & Search** from the Marketplace.
+2. Open **Tools → AI/ML API Media & Search → Authorize** and paste your AI/ML API key (the same key as the model provider plugin).
+3. Add the tools to a workflow, chatflow or agent.
+
+### Notes
+
+* Each tool's **Model** dropdown is filled live from the AI/ML API catalog and lists only models of the matching type.
+* Video generation waits up to **Max wait** (default 300 seconds, maximum 540). If the video is not ready by then, the tool returns a generation ID: pass it to **Get video result** later.
+* Every tool call except key validation and the model list is billed to your AI/ML API balance. Web search is capped at $0.025 per run.
+* On self-hosted Dify, **Speech to text** and **OCR** need `FILES_URL` to be set, so the plugin can read uploaded files.
 
 ## Config checklist
 
@@ -87,6 +117,7 @@ Make sure these values are set:
 * plugin: **aimlapi.com** installed from the Dify Marketplace
 * API key: your AI/ML API key, saved in **Settings → Model Provider**
 * model: a predefined model, or a custom model with an exact AI/ML API model ID
+* tools (optional): **AI/ML API Media & Search** installed and authorized under **Tools**
 
 ## Troubleshooting
 
@@ -128,7 +159,7 @@ Check that:
 
 ## Links
 
-* [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [aimlapi.com plugin on the Dify Marketplace](https://marketplace.dify.ai/plugin/aimlapi/aimlapi)

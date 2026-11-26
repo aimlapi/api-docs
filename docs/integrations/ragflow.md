@@ -68,7 +68,7 @@ The base URL is:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de41a1a02c07771cac9b).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Supported model types
 
@@ -93,7 +93,7 @@ The provider ships a short preset list, and you can add any other AI/ML API mode
 * `google/gemini-2.5-flash` — lower latency and lower cost
 * `openai/text-embedding-3-small` — embeddings
 
-For the full catalog, use [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Config checklist
 
@@ -144,7 +144,7 @@ Changing the embedding model changes the vector space. Re-parse the affected kno
 
 ## Links
 
-* [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [RAGFlow repository](https://github.com/infiniflow/ragflow)

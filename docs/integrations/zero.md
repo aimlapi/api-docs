@@ -8,7 +8,7 @@ description: >-
 
 ## About
 
-[Zero](https://github.com/Gitlawb/zero) is an AI coding agent for your local terminal. It inspects a repository, edits files, and runs commands, either through its TUI or non-interactively with `zero exec` for scripts and CI.
+[Zero](https://github.com/Twigpine/zero) is an AI coding agent for your local terminal. It inspects a repository, edits files, and runs commands, either through its TUI or non-interactively with `zero exec` for scripts and CI.
 
 AI/ML API is a **built-in, recommended provider preset** in Zero — it ships upstream, so there is nothing to patch or build from source. Zero also offers guided onboarding: you can create an AI/ML API account, top it up, and get a key without leaving the terminal.
 
@@ -25,7 +25,7 @@ If you use `aimlapi zero`, don't export `AIMLAPI_API_KEY` as described below: it
 ## Install Zero
 
 ```bash
-npm install -g @gitlawb/zero
+npm install -g @twigpine/zero
 ```
 {% endstep %}
 
@@ -68,7 +68,7 @@ AI/ML API works well with Zero when you want:
 
 Before you start, make sure you have:
 
-* Zero installed (see [github.com/Gitlawb/zero](https://github.com/Gitlawb/zero))
+* Zero installed (see [github.com/Twigpine/zero](https://github.com/Twigpine/zero))
 * an AI/ML API key from [aimlapi.com/app/keys](https://aimlapi.com/app/keys) — or use the guided onboarding below
 * a model ID from [aimlapi.com/models](https://aimlapi.com/models)
 
@@ -78,7 +78,7 @@ The base URL is:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de41a1a02c07771cac9b).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Set up AI/ML API in Zero
 
@@ -98,7 +98,7 @@ Run `zero` and follow the setup wizard, or run it directly:
 zero setup
 ```
 
-AI/ML API is listed as **aimlapi.com** and sorts to the top of the picker as a recommended provider.
+AI/ML API is listed as **aimlapi.com** among the recommended providers near the top of the picker.
 
 ### Option 3 — Environment variable
 
@@ -115,19 +115,19 @@ If you have no key yet, the onboarding flow in the TUI takes an email, creates a
 
 ## Model selection
 
-Use exact AI/ML API model IDs. List what is available:
+Use exact AI/ML API model IDs. List the models AI/ML API serves:
 
 ```bash
-zero models list
+zero providers models aimlapi
 ```
 
 ### Good starting models
 
-* `anthropic/claude-sonnet-5` — the preset default, strong for coding
-* `openai/gpt-5-5` — strong general use
-* `google/gemini-3-7-flash` — lower latency and lower cost
+* `anthropic/claude-sonnet-5`: the preset default, strong for coding
+* `openai/gpt-5-5`: strong general use
+* `google/gemini-3.7-flash`: lower latency and lower cost
 
-For the full catalog, use [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Config checklist
 
@@ -166,7 +166,7 @@ zero providers list
 Update Zero to the latest version — the preset ships upstream:
 
 ```bash
-npm install -g @gitlawb/zero@latest
+npm install -g @twigpine/zero@latest
 ```
 
 </details>
@@ -187,13 +187,13 @@ Check that:
 
 <summary>I want to point Zero at a different endpoint</summary>
 
-`AIMLAPI_INFERENCE_URL` overrides the inference base URL. Leave it unset to use the default `https://api.aimlapi.com/v1`.
+`AIMLAPI_INFERENCE_URL` overrides the inference base URL used by the guided onboarding in the TUI. Leave it unset to use the default `https://api.aimlapi.com/v1`.
 
 </details>
 
 ## Links
 
-* [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
-* [Zero repository](https://github.com/Gitlawb/zero)
+* [Zero repository](https://github.com/Twigpine/zero)

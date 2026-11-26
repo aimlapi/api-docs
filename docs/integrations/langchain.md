@@ -73,14 +73,14 @@ import os
 os.environ["AIMLAPI_API_KEY"] = "your_key_here"
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de41a1a02c07771cac9b).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Available classes
 
 | Class | Use for |
 | ----- | ------- |
 | `ChatAimlapi` | chat completions |
-| `AimlapiLLM` | text completions |
+| `AimlapiLLM` | plain-text prompts (sent as a single chat message; `model` is required) |
 | `AimlapiEmbeddings` | embeddings |
 | `AimlapiImageModel` | image generation |
 | `AimlapiVideoModel` | video generation |
@@ -112,8 +112,8 @@ embeddings.embed_query("What is the meaning of life?")
 ```python
 from langchain_aimlapi import AimlapiImageModel
 
-img = AimlapiImageModel(model="stable-diffusion-v3-medium", size="512x512", n=1)
-img.invoke("A serene mountain lake at sunset")
+img = AimlapiImageModel(model="stable-diffusion-v3-medium")
+img.invoke("A serene mountain lake at sunset", size="512x512")
 ```
 
 ### Video generation
@@ -121,7 +121,7 @@ img.invoke("A serene mountain lake at sunset")
 ```python
 from langchain_aimlapi import AimlapiVideoModel
 
-vid = AimlapiVideoModel(model="google/veo-3.0-fast")
+vid = AimlapiVideoModel(model="google/veo-3.1-t2v-fast")
 vid.invoke("A timelapse of city lights at night")
 ```
 
@@ -136,7 +136,7 @@ Always pass `model=` explicitly and use the exact catalog ID, including the vend
 * `google/gemini-3.6-flash` — lower latency and lower cost
 * `openai/text-embedding-3-small` — embeddings
 
-For the full catalog, use [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Config checklist
 
@@ -144,7 +144,7 @@ Make sure these values are set:
 
 * package: `langchain-aimlapi`
 * API key variable: `AIMLAPI_API_KEY`
-* base URL: `https://api.aimlapi.com/v1` (built in; override with `AIMLAPI_API_BASE`)
+* base URL: `https://api.aimlapi.com/v1` (built in; `ChatAimlapi` and `AimlapiEmbeddings` can override it with `AIMLAPI_API_BASE`)
 * model ID: exact AI/ML API model ID, passed as `model=`
 
 ## Troubleshooting
@@ -173,13 +173,13 @@ Check that:
 
 <summary>I need a different endpoint</summary>
 
-Set `AIMLAPI_API_BASE` to override the base URL. Leave it unset to use `https://api.aimlapi.com/v1/`.
+Set `AIMLAPI_API_BASE` to override the base URL for `ChatAimlapi` and `AimlapiEmbeddings`. Leave it unset to use `https://api.aimlapi.com/v1/`. The other classes always call the AI/ML API endpoints.
 
 </details>
 
 ## Links
 
-* [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [langchain-aimlapi on PyPI](https://pypi.org/project/langchain-aimlapi/)

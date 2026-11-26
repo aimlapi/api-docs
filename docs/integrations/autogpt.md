@@ -4,7 +4,7 @@
 
 AutoGPT is an open-source platform designed to help you build, test, and run AI agents using a no-code visual interface. It allows users to link LLMs with tools, memory, planning modules, and action chains. By configuring block-based workflows, you can create custom agents that reason, plan, and act in multi-step environments.
 
-In this guide, you'll learn how to connect AutoGPT with high-performance language models from AI/ML API for use in AI-driven text generation tasks.
+In this guide, you'll learn how to connect AutoGPT with high-performance language models from AI/ML API for use in AI-driven text generation tasks, and how to connect the AI/ML API MCP server so your agents can use AI/ML API tools ([see below](autogpt.md#connect-ai-ml-api-mcp-tools)).
 
 ***
 
@@ -88,8 +88,8 @@ Click the block to configure it, then select one of the currently supported AIML
 In the **AI Text Generator** block:
 
 1. Set **Prompt**: Type any message you want the model to respond to.
-2. Set **API Key**:
-   * Enter your AI/ML API key.
+2. Set **Credentials**:
+   * Add your AI/ML API key as the credential for the AI/ML API provider.
 
 <div align="left"><figure><img src="../.gitbook/assets/Step 6.1 Key Placeholder.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -138,7 +138,8 @@ After saving, you can now launch the agent:
 
 #### 🧾 3. View the Output
 
-1. **Navigate to the "Output" Panel.** At your **AI/ML API block**, locate the **"Output"** panel below.2. You'll see the response returned by the AI/ML API model.
+1. **Navigate to the "Output" Panel.** At your **AI/ML API block**, locate the **"Output"** panel below.
+2. You'll see the response returned by the AI/ML API model.
 2. You can copy the result, export it, or pass it into further blocks (like analysis, memory, or a webhook).
 
 <div align="left"><figure><img src="../.gitbook/assets/Step 9 Output.png" alt=""><figcaption></figcaption></figure></div>
@@ -154,6 +155,27 @@ After saving, you can now launch the agent:
 > * 🔧 **Tools** – call external APIs, perform web scraping, manage files.
 > * 🧠 **Memory** – store and reuse past interactions for contextual reasoning.
 > * ⚙️ **Actions / Chains** – create complex behavior flows and intelligent pipelines.
+
+## Connect AI/ML API MCP tools
+
+AutoGPT lists AI/ML API in its MCP catalog ([PR #16771](https://github.com/Significant-Gravitas/AutoGPT/pull/16771), in AutoGPT Platform beta v0.12.0 and later). The catalog entry points to the hosted AI/ML API MCP server at `https://mcp.aimlapi.com/mcp` and supports two ways to sign in: OAuth with your AI/ML API account, or an API key sent as a Bearer token. Once connected, agents can use AI/ML API tools for model discovery, account balance, image, video and audio generation, chat, embeddings and the Toolbox. Billed tools are charged to your AI/ML API balance.
+
+### Option 1: Settings → Integrations
+
+1. Open **Settings → Integrations** and click **Connect a service**.
+2. Search for **AI/ML API**.
+3. Choose a sign-in method:
+   * **Sign in**: click **Connect**, then sign in to AI/ML API in the browser and approve access.
+   * **API token**: paste your AI/ML API key and click **Save token**.
+
+### Option 2: MCP Tool block in the builder
+
+1. Add the **MCP Tool** block to your agent.
+2. In the **Connect to MCP Server** dialog, enter the **Server URL** `https://mcp.aimlapi.com/mcp` and click **Discover Tools**.
+3. When the server asks for authentication, click **Sign in & Connect** and sign in to AI/ML API in the browser. To use a key instead, open **or enter an API credential manually**, paste your key into **API token**, and click **Connect & Discover**.
+4. Select the tool to add to your workflow from the list of discovered tools.
+
+For more about the server and its tools, see [MCP](../quickstart/mcp.md).
 
 ## More <a href="#more" id="more"></a>
 
