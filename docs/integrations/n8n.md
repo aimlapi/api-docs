@@ -230,7 +230,7 @@ Please note that this chat is intended for debugging purposes only. It does not 
 
 <table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>openai/gpt-4o</code></td></tr><tr><td>User Message</td><td><code>"Give me ideas for YouTube channels"</code></td></tr><tr><td>Temperature</td><td><code>0.7</code></td></tr></tbody></table>
 
-#### [Gemini 2.0 Flash](/broken/pages/CapOhTrzos7y9s3QTcET)
+#### Gemini 2.0 Flash
 
 <table><thead><tr><th width="240">Field</th><th>Value</th></tr></thead><tbody><tr><td>Model</td><td><code>google/gemini-2.0-flash</code></td></tr><tr><td>User Message</td><td><code>"Write a summary of the latest Apple event"</code></td></tr></tbody></table>
 

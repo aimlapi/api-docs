@@ -19,22 +19,22 @@ pip install -U agno
 
 ## How to Use AIML API with Agno
 
-A user of the Agno can&#x20;
+Agno ships an `AIMLAPI` model class (`agno.models.aimlapi`). It uses the OpenAI-compatible endpoint `https://api.aimlapi.com/v1` and reads your key from `AIMLAPI_API_KEY`, or from the `api_key` argument:
 
 {% code overflow="wrap" %}
 ```python
-from agno.models.aimlapi import AIMLApi
+from agno.agent import Agent
+from agno.models.aimlapi import AIMLAPI
 
 agent = Agent(
-    model=AIMLApi(
-        id="gpt-4o", 
+    model=AIMLAPI(
+        id="openai/gpt-5.6-luna",
         api_key="<YOUR_AIMLAPI_KEY>"
-    ), 
-    markdown=True, 
-    telemetry=False, 
-    monitoring=False
+    ),
+    markdown=True,
+    telemetry=False,
 )
-    
+
 agent.print_response("Tell me, why is the sky blue in 2 sentences")
 ```
 {% endcode %}
@@ -60,22 +60,30 @@ agent.print_response("Tell me, why is the sky blue in 2 sentences")
 
 </details>
 
+{% hint style="info" %}
+In Agno versions before 2.0 the class was named `AIMLApi`. Update Agno with `pip install -U agno` and import `AIMLAPI`.
+{% endhint %}
 
+## Model settings
+
+| Parameter | Default |
+| --- | --- |
+| `id` | `gpt-5.6-luna` |
+| `api_key` | value of `AIMLAPI_API_KEY` |
+| `base_url` | `https://api.aimlapi.com/v1` |
+| `max_tokens` | `4096` |
 
 ## **Our Supported models**
 
-* All OpenAI-compatible models ([gpt-4o](../api-references/text-models-llm/openai/gpt-4o.md), [gpt-4o-mini](../api-references/text-models-llm/openai/gpt-4o-mini.md), gpt-4-turbo, [gpt-3.5-turbo](../api-references/text-models-llm/openai/gpt-3.5-turbo.md), o3-mini, o1, etc),
-* [Google models](../api-references/text-models-llm/google/),
-* [Anthropic models](../api-references/text-models-llm/anthropic/) is only partially supported and only via `api.aimlapi.com/v2` base URL,
-* and some other models (the list is constantly being updated).
+Any AI/ML API chat model works with `AIMLAPI`. Pass its exact ID from [All Model IDs](../api-references/model-database.md) as `id`, for example `openai/gpt-5-5`, `anthropic/claude-sonnet-5` or `google/gemini-3.6-flash`.
 
 ## **Supported features**
 
-* Synchronous and asynchronous requests
-* Chain-of-thought reasoning
-* Built-in RAG and multimodal support
-* Collaborative agent workflows (Teams)
-* Access to built-in tools (DuckDuckGo, Docker, and many more)
+* Synchronous and asynchronous requests, with streaming
+* Tool use
+* Structured output
+* Image input with vision models
+* Retries with backoff
 
 ## Code Examples
 
@@ -99,7 +107,7 @@ export AIMLAPI_API_KEY=***
 3\. Install libraries
 
 ```bash
-pip install -U openai duckduckgo-search duckdb yfinance agno
+pip install -U openai ddgs duckdb yfinance agno
 ```
 
 </details>
@@ -110,15 +118,14 @@ pip install -U openai duckduckgo-search duckdb yfinance agno
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
-from agno.agent import Agent, RunResponse  # noqa
-from agno.models.aimlapi import AIMLApi
+from agno.agent import Agent, RunOutput  # noqa
+from agno.models.aimlapi import AIMLAPI
 
-agent = Agent(model=AIMLApi(id="gpt-4o-mini"), markdown=True)
+agent = Agent(model=AIMLAPI(id="openai/gpt-5.6-luna"), markdown=True)
 
 # Get the response in a variable
-# run_response: Iterator[RunResponse] = agent.run("Share a 2 sentence horror story", stream=True)
-# for chunk in run_response:
-#     print(chunk.content)
+# run: RunOutput = agent.run("Share a 2 sentence horror story")
+# print(run.content)
 
 # Print the response in the terminal
 agent.print_response("Share a 2 sentence horror story", stream=True)
@@ -135,10 +142,10 @@ agent.print_response("Share a 2 sentence horror story", stream=True)
 ```python
 from agno.agent import Agent
 from agno.media import Image
-from agno.models.aimlapi import AIMLApi
+from agno.models.aimlapi import AIMLAPI
 
 agent = Agent(
-    model=AIMLApi(id="meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo"),
+    model=AIMLAPI(id="openai/gpt-5.6-luna"),
     markdown=True,
 )
 
@@ -162,18 +169,16 @@ agent.print_response(
 {% tab title="Python" %}
 {% code overflow="wrap" %}
 ```python
-"""Run `pip install duckduckgo-search` to install dependencies."""
+"""Run `pip install ddgs` to install dependencies."""
 
 from agno.agent import Agent
-from agno.models.aimlapi import AIMLApi
-from agno.tools.duckduckgo import DuckDuckGoTools
+from agno.models.aimlapi import AIMLAPI
+from agno.tools.websearch import WebSearchTools
 
 agent = Agent(
-    model=AIMLApi(id="gpt-4o-mini"), markdown=True),
-    tools=[DuckDuckGoTools()],
-    show_tool_calls=True,
+    model=AIMLAPI(id="openai/gpt-5.6-luna"),
+    tools=[WebSearchTools()],
     markdown=True,
-    debug_mode=True,
 )
 
 agent.print_response("Whats happening in France?")
@@ -186,4 +191,4 @@ agent.print_response("Whats happening in France?")
 
 For further information about the framework, please check [the official Agno documentation](https://docs.agno.com/introduction).
 
-For additional examples, check out our [repo](https://github.com/D1m7asis/agno-aimlapi/tree/63522cb6c302f88d7a40ab734ee037ca8dc73d23/cookbook/models/aimlapi).
+For more examples (structured output, retries, image agent with memory), see the [AI/ML API cookbook in the Agno repository](https://github.com/agno-agi/agno/tree/main/cookbook/90_models/aimlapi).

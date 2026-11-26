@@ -37,7 +37,7 @@ The base URL is:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/cdd447f8b558d5268491de41a1a02c07771cac9b).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Set up AI/ML API in omp
 
@@ -78,7 +78,7 @@ Use exact AI/ML API model IDs. Common examples:
 * `anthropic/claude-sonnet-4-5` for coding and long-form work
 * `google/gemini-2.5-flash` for lower latency and lower cost
 
-For the full catalog, use [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Provider routing
 
@@ -149,7 +149,7 @@ Set a custom base URL in your omp provider config. The `aimlapi` registry entry 
 
 ## Links
 
-* [All Model IDs](/broken/pages/9db43b2a9ecf64fedb7fcfc447a3ace848669984)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [oh-my-pi repository](https://github.com/can1357/oh-my-pi)

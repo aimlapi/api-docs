@@ -58,7 +58,7 @@ The base URL is:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/5ba01981a4933a6256186cdeb80677bb1add0916).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Option 1: Configure via config.toml
 
@@ -100,7 +100,7 @@ Common examples for script and story generation:
 
 Start with `openai/gpt-4o-mini` for most video generation tasks. Switch to `openai/gpt-4o` or `anthropic/claude-sonnet-4.5` if you need richer, longer scripts.
 
-For the full catalog, use [All Model IDs](/broken/pages/8ed552f6e450f3fe9c63911687e8431a6635b5be).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Config checklist
 
@@ -137,7 +137,7 @@ Check that:
 
 <summary>Script generation returns an error about the model</summary>
 
-Make sure the model ID is a chat-completion model supported by AI/ML API. Check the full list at [aimlapi.com/models](https://aimlapi.com/models) or use [All Model IDs](/broken/pages/8ed552f6e450f3fe9c63911687e8431a6635b5be).
+Make sure the model ID is a chat-completion model supported by AI/ML API. Check the full list at [aimlapi.com/models](https://aimlapi.com/models) or use [All Model IDs](../api-references/model-database.md).
 
 </details>
 
@@ -156,7 +156,7 @@ aimlapi_base_url = "https://your-proxy.example/v1"
 
 ## Links
 
-* [All Model IDs](/broken/pages/8ed552f6e450f3fe9c63911687e8431a6635b5be)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [MoneyPrinterTurbo repository](https://github.com/harry0703/MoneyPrinterTurbo)

@@ -36,7 +36,7 @@ The base URL is:
 https://api.aimlapi.com/v1
 ```
 
-Need a key first? Use [API Key Management](/broken/pages/b1dbdf89b3ed7f9af9a90506fe3124b622cfc559).
+Need a key first? Use [API Key Management](../api-references/service-endpoints/api-key-management.md).
 
 ## Set up AI/ML API in Hermes Desktop
 
@@ -98,7 +98,7 @@ Common examples:
 * `anthropic/claude-sonnet-4-5` for coding and long-form work
 * `google/gemini-2.5-flash` for lower latency and lower cost
 
-For the full catalog, use [All Model IDs](/broken/pages/ec6db764340ce0627cef7e114fb5a65a73cafbf4).
+For the full catalog, use [All Model IDs](../api-references/model-database.md).
 
 ## Switch models
 
@@ -176,7 +176,7 @@ model:
 
 ## Links
 
-* [All Model IDs](/broken/pages/ec6db764340ce0627cef7e114fb5a65a73cafbf4)
+* [All Model IDs](../api-references/model-database.md)
 * [AI/ML API keys](https://aimlapi.com/app/keys)
 * [AI/ML API model catalog](https://aimlapi.com/models)
 * [Hermes Desktop repository](https://github.com/fathah/hermes-desktop)
