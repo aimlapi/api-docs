@@ -170,6 +170,7 @@
     * [Ling-3.0-tiny](api-references/text-models-llm/inclusionai/ling-3.0-tiny-free.md)
     * [Ling 3.0 Flash VL](api-references/text-models-llm/inclusionai/ling-3.0-flash-vl-free.md)
     * [Ling 3.1 Flash](api-references/text-models-llm/inclusionai/ling-3.1-flash.md)
+    * [Lingsante 3.1 Air Vl](api-references/text-models-llm/inclusionai/lingsante-3.1-air-vl.md)
   * [Inference.net](api-references/text-models-llm/inference.net/README.md)
     * [Schematron V2 Small](api-references/text-models-llm/inference.net/schematron-v2-small.md)
   * [Inflection](api-references/text-models-llm/inflection/README.md)
